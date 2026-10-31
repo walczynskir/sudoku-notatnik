@@ -16,7 +16,7 @@ Powtarzające się liczby w wierszu, kolumnie lub bloku są oznaczane na czerwon
 - **Cofnij ostatnią zmianę** przywraca liczby i kandydatów; obejmuje także import, czyszczenie i restart. Nie ma ustalonego limitu liczby kroków w bieżącej sesji. Historia zajmuje pamięć przeglądarki i znika po odświeżeniu strony.
 - **Wyczyść wybrane pole** usuwa z niego liczbę i notatki.
 - **Wyczyść kandydatów** usuwa wszystkie notatki i zachowuje liczby.
-- **Restartuj sudoku** przywraca liczby z ostatniego importu lub przykładu i usuwa kandydatów. Dla nowej planszy wpisywanej ręcznie punktem początkowym jest pusta plansza.
+- **Restartuj sudoku** przywraca liczby z ostatniego importu i usuwa kandydatów. Dla nowej planszy wpisywanej ręcznie punktem początkowym jest pusta plansza.
 - **Nowa, pusta plansza** rozpoczyna nowe sudoku. Wczytanie nowej planszy przy istniejących danych wymaga potwierdzenia.
 
 Dla danych zapisanych przed wprowadzeniem funkcji restartu stan przy pierwszym otwarciu aktualizacji jest traktowany jako początkowy.
@@ -49,14 +49,16 @@ Obsługiwane pliki: TXT, SDK, CSV zawierający taką siatkę oraz kopie JSON eks
 
 Następnie:
 
-1. Suwakami dopasuj zieloną ramkę do zewnętrznych krawędzi siatki.
-2. Kliknij **Rozpoznaj cyfry**.
-3. Porównaj wynik z obrazkiem i popraw liczby w podglądzie.
-4. Kliknij **Użyj tej planszy**.
+1. Przeciągnij środek zielonej ramki, aby ją przesunąć. Przeciągnij narożnik, aby zmienić rozmiar. Ramka ma obejmować dokładnie wszystkie 9 × 9 pól, bez marginesów. Suwaki **Rozmiar**, **Poziomo** i **Pionowo** pozwalają dopasować ją dokładniej.
+2. Lekkie pochylenie popraw suwakiem **Wyprostuj zdjęcie** (−15° do +15°, co 0,1°). **Wyzeruj obrót** przywraca 0°. Przy zdjęciu obróconym bokiem użyj **Obróć w lewo/prawo** (90°; resetuje kadr i drobną korektę).
+3. Jeśli zdjęcie jest niewyraźne, wybierz **Zrób zdjęcie ponownie** nad obrazem. Powrócisz do aparatu bez zmiany planszy. Przycisk jest dostępny przed rozpoznaniem i przy sprawdzaniu wyniku; podczas rozpoznawania pozostaje zablokowany.
+4. Kliknij **Rozpoznaj cyfry**. Analiza używa wyprostowanego obrazu. Każda zmiana kadru lub kąta unieważnia poprzedni wynik.
+5. Porównaj wynik z miniaturą zdjęcia nad rozpoznanymi liczbami i popraw liczby w podglądzie.
+6. Kliknij **Użyj tej planszy**. Dopiero ta czynność zastępuje planszę.
 
 Najlepiej działa wyraźna, kwadratowa plansza sfotografowana na wprost, bez wpisanych kandydatów. Aplikacja nie prostuje perspektywy zdjęcia. OCR może pomylić lub pominąć cyfry, zwłaszcza odręczne — sprawdzaj wynik.
 
-Pierwsze użycie OCR wymaga internetu do pobrania silnika i danych językowych. Zdjęcie jest przetwarzane lokalnie. Jeśli kamera nie działa w przeglądarce osadzonej, otwórz link bezpośrednio w Safari lub Chrome, sprawdź uprawnienia albo wczytaj gotowe zdjęcie.
+Pierwsze uruchomienie rozpoznawania wymaga połączenia z internetem i może chwilę potrwać. Zdjęcie jest przetwarzane lokalnie. Jeśli kamera nie działa w przeglądarce osadzonej, otwórz link bezpośrednio w Safari lub Chrome, sprawdź uprawnienia albo wczytaj gotowe zdjęcie.
 
 ## Zapis i przenoszenie między urządzeniami
 
@@ -77,6 +79,7 @@ Na telefonie przełącznik trybu, klawiatura i cofanie są przy planszy; pozosta
 | Strzałki | Zmiana wybranego pola |
 | Backspace, Delete, 0 lub kropka | Wyczyść wybrane pole |
 | Ctrl+Z / ⌘Z | Cofnij ostatnią zmianę |
+| Ctrl+Shift+Z / ⌘Shift+Z lub Ctrl+Y | Przywróć cofniętą zmianę |
 
 Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana plansza pozostaje, historia cofania się zeruje.
 
@@ -114,7 +117,7 @@ Po rozpoznaniu zdjęcie i suwaki zwijają się, a okno przechodzi do sprawdzania
 
 Gdy dana cyfra występuje już 9 razy w liczbach planszy, jej przycisk przestaje być aktywny w obu trybach; dotyczy to także wpisywania fizyczną klawiaturą. Poprawny komplet ma zielonkawe tło, przekreślenie i ✓. Wpisy z konfliktami nie dostają znaku poprawnego kompletu. Usunięcie, cofnięcie lub wczytanie innej planszy od razu aktualizuje dostępność cyfr. Kandydaci nie są liczeni jako wpisane liczby.
 
-## Zaawansowane techniki (Trener Sudoku 1.8.1)
+## Zaawansowane techniki
 
 Podpowiedzi obejmują nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, XYZ-Wing, W-Wing, Swordfish i Jellyfish. Każda technika ma zwijaną ogólną zasadę oraz osobno odsłaniany ruch na planszy. Niebieskie pola tworzą dowód, bursztynowe są celami eliminacji.
 

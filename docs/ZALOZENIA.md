@@ -27,7 +27,7 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 ## Zakres, którego obecnie nie ma
 
 - Automatyczne rozwiązanie całej planszy, dalsze warianty zaawansowanych technik (np. finned fish, grupowe AIC, forcing nets) i generator sudoku.
-- Sprawdzenie, czy plansza ma rozwiązanie lub czy rozwiązanie jest unikalne. Brak lokalnych konfliktów nie gwarantuje rozwiązywalności.
+- Osobny przycisk do sprawdzania rozwiązywalności lub jednoznaczności. Analizator sprawdza jednoznaczność wewnętrznie tylko do zabezpieczenia technik UR, z limitem wyszukiwania; nie jest to ogólna walidacja całej planszy. Brak lokalnych konfliktów nie gwarantuje rozwiązywalności.
 - Rozpoznawanie dowolnych perspektyw i pisma ręcznego z gwarantowaną skutecznością.
 - Konta, synchronizacja w chmurze, biblioteka wielu plansz i statystyki.
 - Trwała historia cofania oraz jej eksport do JSON.

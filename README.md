@@ -6,13 +6,14 @@ Prosta aplikacja internetowa po polsku do samodzielnego rozwiązywania sudoku 9 
 
 **GitHub Pages:** https://walczynskir.github.io/sudoku-notatnik/
 
-**Poprzednia publikacja (Sites):** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
+**Starsza kopia, nieaktualizowana automatycznie (Sites):** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
 
 Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy użytkownik ma własny stan na swoim urządzeniu.
 
 ## Dokumentacja
 
 - [Instrukcja użytkownika](docs/INSTRUKCJA.md) — wpisywanie, kandydaci, import, aparat, zapis i cofanie.
+- [Techniki i ich wyjaśnienia](docs/TECHNIKI.md) — obsługiwane warianty, zasady, ograniczenia i podział v1/v2.
 - [Założenia i ograniczenia](docs/ZALOZENIA.md) — zakres produktu, prywatność i dokładne zasady działania.
 - [Rozwój i publikacja](docs/ROZWOJ.md) — struktura kodu, testy, hosting i dalsze kierunki.
 
@@ -36,10 +37,13 @@ Nie potrzeba `npm install`, kompilacji ani kluczy API. OCR pobiera bibliotekę i
 node --check dist/app.js
 node --check dist/camera.js
 node --check dist/logic.js
+node --check dist/hints.js
+node --check dist/ocr.js
+node scripts/version.mjs --check
 node --test tests/*.test.cjs
 ```
 
-Testy obejmują reguły kandydatów, konflikty, import i cykl życia kamery z atrapą urządzenia. Rzeczywisty aparat, jakość OCR i układ na fizycznych telefonach wymagają testów ręcznych.
+Testy obejmują reguły kandydatów, konflikty, import, historię, techniki (również zaawansowane i jednoznaczność), przygotowanie obrazów do OCR, przegląd wyników, przeciąganie i zmianę rozmiaru kadru, prostowanie zdjęcia oraz cykl życia i przełączanie kamery z atrapą urządzenia. Rzeczywisty aparat, jakość OCR i układ na fizycznych telefonach wymagają testów ręcznych.
 
 ## Hosting
 

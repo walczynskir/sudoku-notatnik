@@ -11,6 +11,12 @@
 | `dist/hints.js` | Niezależna od notatek analiza technik; wynik z nazwą, polami źródłowymi, celami eliminacji i wyjaśnieniem |
 | `tests/hints.test.cjs` | Przykłady technik, X-Wing w obu orientacjach, kolejność, odtwarzanie eliminacji, poprawność względem znanego rozwiązania, stany błędów |
 | `dist/camera.js` | Sesja kamery, jej zwalnianie i zrobienie zdjęcia |
+| `dist/ocr.js` | Przygotowanie obrazu komórek i strategia ponawiania odczytów |
+| `tests/advanced-hints.test.cjs` | Czwórki, skrzydła, ryby, UR, kolorowanie, łańcuchy i poprawność względem znanych rozwiązań |
+| `tests/ocr.test.cjs` | Przetwarzanie pikseli oraz wybór wyniku OCR |
+| `tests/ocr-review.test.cjs` | Przegląd wyniku, ponowne zdjęcie, przesuwanie i rozmiar kadru, drobny obrót |
+| `tests/history.test.cjs` | Cofanie, przywracanie oraz migawki planszy i punktu restartu |
+| `scripts/version.mjs` | Spójny numer wersji i odświeżanie adresów zasobów |
 | `tests/logic.test.cjs` | Testy reguł i formatów danych |
 | `tests/camera.test.cjs` | Testy cyklu życia kamery z atrapą MediaDevices |
 | `.openai/hosting.json` | Tożsamość istniejącej strony Sites i katalog publikacji |
@@ -56,7 +62,9 @@ Testy kamery nie używają prawdziwego sprzętu. Test zapisu migawki nie zastęp
 
 Repozytorium: https://github.com/walczynskir/sudoku-notatnik (publiczne).
 
-Strona: https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/ (publiczna).
+Strona docelowa: https://rsudoku.pl/ (publiczna, GitHub Pages).
+
+Starsza kopia Sites: https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/ — oddzielna publikacja, może zawierać starszy kod.
 
 GitHub Pages: https://walczynskir.github.io/sudoku-notatnik/.
 
@@ -84,7 +92,7 @@ Na hostingu statycznym opublikuj zawartość `dist/`, tak aby `index.html` był 
 
 Zmiana adresu strony oznacza inną przestrzeń localStorage. Przed przeniesieniem wyeksportuj planszę do JSON i zaimportuj ją pod nowym adresem. Import nie przenosi historii cofania ani oryginalnego punktu restartu.
 
-Silnik `hints.js`: generator `deductions(notes)` emituje ruchy w ustalonej kolejności; eliminacje mają listę `removals: [{cell, digits}]`. `findHint(values, manualNotes)` buduje bazowe możliwości z liczb i filtruje cele według notatek. Całkowicie wykonane, udowodnione eliminacje odtwarza na roboczej kopii kandydatów, po czym ponawia analizę. Każdy taki krok usuwa co najmniej jednego kandydata; limit 730 przebiegów przekracza maksymalną liczbę 729 kandydatów. Pusty notatnik nie uruchamia odtwarzania. Dane użytkownika pozostają bez zmian.
+Silnik `hints.js`: generator `deductions(notes, options)` emituje ruchy w ustalonej kolejności; eliminacje mają listę `removals: [{cell, digits}]`. `findHint(values, manualNotes)` buduje bazowe możliwości z liczb i filtruje cele według notatek. Całkowicie wykonane, udowodnione eliminacje odtwarza na roboczej kopii kandydatów, po czym ponawia analizę. Każdy taki krok usuwa co najmniej jednego kandydata; limit 730 przebiegów przekracza maksymalną liczbę 729 kandydatów. Pusty notatnik nie uruchamia odtwarzania. Dane użytkownika pozostają bez zmian.
 
 ## Wersjonowanie
 
@@ -117,3 +125,10 @@ Generator `deductions(notes, options)` obsługuje techniki wymienione w TECHNIKI
 Łańcuchy budują graf słabych i silnych zależności kandydatów. BFS przeplata fałsz i prawdę do 11 połączeń; kandydaci wykluczający oba końce są eliminowani. XY-Chain wymaga tej samej cyfry na obu końcach. Regresje sprawdzają konkretne dowody i zachowanie znanych rozwiązań także po poprawnych redukcjach kandydatów.
 
 Dawna gałąź `codex/v2-techniques` pozostaje archiwalnym punktem odniesienia. Jej techniki są od 1.11.0 częścią 1.x; generowanie treningowe pozostaje na wersję 2.
+
+
+## Zdjęcie, kadr i prostowanie
+
+`originalPhoto` przechowuje bitmapę bazową, a `photo` obraz używany przez podgląd, miniaturę i OCR. Drobna korekta kąta rysuje oryginał na nowym canvasie o tych samych wymiarach (białe narożniki), bez kumulowania kolejnych obrotów. Obrót 90° tworzy nowy obraz bazowy i resetuje kadr. Korekta perspektywy nie jest zaimplementowana.
+
+Współrzędne gestu są przeliczane przez `photoPoint`, z uwzględnieniem pustych pasów wynikających z `object-fit: contain`. Przeciąganie narożnika zachowuje przeciwległy narożnik i ogranicza kwadrat do rozmiarów zdjęcia. Zmiany kadru lub kąta ukrywają poprzedni odczyt; podczas OCR edycja jest zablokowana. Wybór innej kamery zamyka poprzedni strumień, a numer żądania zapobiega przyjęciu opóźnionego strumienia.
