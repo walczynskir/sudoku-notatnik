@@ -1,5 +1,11 @@
 # Historia wydań
 
+## 1.6.4
+
+- Po OCR automatyczne przejście do sprawdzania cyfr: zwinięte zdjęcie i suwaki, przewinięcie okna do góry i fokus na nagłówku wyniku bez otwierania klawiatury.
+- Ponowne rozpoznawanie w zwijanej sekcji obrazu; osobny odnośnik powrotu do kadrowania.
+- Wyraźny, przyklejony do dolnej krawędzi przycisk użycia sprawdzonej planszy.
+
 ## 1.6.3
 
 - Dodatkowy silnik OCR uruchamiany wyłącznie dla niepewnych odczytów; wynik musi być zgodny w dwóch wariantach obrazu.
