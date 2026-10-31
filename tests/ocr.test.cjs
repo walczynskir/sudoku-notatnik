@@ -7,3 +7,11 @@ test('edge grid lines are discarded without removing the digit',()=>{const a=pix
 test('low confidence or blank readings retry alternate segmentation modes',async()=>{const modes=[],answers=[{text:'',confidence:0},{text:'6',confidence:89},{text:'6',confidence:93}];const worker={async setParameters(p){modes.push(p.tessedit_pageseg_mode);},async recognize(){return {data:answers.shift()};}};const r=await recognizeCell(worker,{binary:{},original:{}});assert.equal(r.digit,6);assert.equal(r.uncertain,false);assert.deepEqual(modes,['10','13','8']);});
 test('disagreeing readings are marked uncertain instead of silently trusted',async()=>{const answers=[{text:'6',confidence:80},{text:'9',confidence:87},{text:'6',confidence:81}];const worker={async setParameters(){},async recognize(){return {data:answers.shift()};}};const r=await recognizeCell(worker,{});assert.equal(r.digit,6);assert(r.uncertain);});
 test('unreadable ink is returned as an uncertain blank',async()=>{const w={async setParameters(){},async recognize(){return {data:{text:'',confidence:0}};}};assert.deepEqual(await recognizeCell(w,{}),{digit:0,uncertain:true});});
+test('alternate engine recovers a missed six only with agreeing image variants',async()=>{
+ const primary={async setParameters(){},async recognize(){return {data:{text:'5',confidence:0}};}},secondary={async setParameters(){},async recognize(){return {data:{text:'6',confidence:89}};}};
+ const r=await recognizeCell(primary,{},async()=>secondary);assert.equal(r.digit,6);assert.equal(r.uncertain,false);
+});
+test('alternate engine disagreement keeps the result uncertain',async()=>{
+ const primary={async setParameters(){},async recognize(){return {data:{text:'',confidence:0}};}},answers=['6','9'],secondary={async setParameters(){},async recognize(){return {data:{text:answers.shift(),confidence:95}};}};
+ const r=await recognizeCell(primary,{},async()=>secondary);assert.equal(r.digit,0);assert(r.uncertain);
+});

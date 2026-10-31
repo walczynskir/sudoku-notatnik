@@ -33,20 +33,29 @@ function prepareCell(photo,crop,index,makeCanvas=()=>document.createElement('can
  function normalized(source){const c=makeCanvas();c.width=c.height=160;const t=c.getContext('2d');t.fillStyle='white';t.fillRect(0,0,160,160);t.drawImage(source,b.left,b.top,b.width,b.height,(160-w)/2,(160-h)/2,w,h);return c;}
  return {binary:normalized(clean),original:normalized(raw)};
 }
-async function recognizeCell(worker,prepared){
+async function recognizeCell(worker,prepared,getFallback){
  const attempts=[];
  for(const [canvas,mode]of [[prepared.binary,'10'],[prepared.original,'13'],[prepared.binary,'8']]){
   await worker.setParameters({tessedit_pageseg_mode:mode});const {data}=await worker.recognize(canvas),text=data.text.trim();
   if(/^[1-9]$/.test(text))attempts.push({digit:Number(text),confidence:Number(data.confidence)||0});
   if(attempts.length===1&&attempts[0].confidence>=92)break;
  }
- if(!attempts.length)return {digit:0,uncertain:true};
+ if(!attempts.length){if(getFallback)return fallbackReading({digit:0,confidence:0,uncertain:true},prepared,getFallback);return {digit:0,uncertain:true};}
  const digits=[...new Set(attempts.map(a=>a.digit))];digits.sort((a,b)=>{
   const aa=attempts.filter(x=>x.digit===a),bb=attempts.filter(x=>x.digit===b);
   return bb.length-aa.length||Math.max(...bb.map(x=>x.confidence))-Math.max(...aa.map(x=>x.confidence));
  });
  const digit=digits[0],confidence=Math.max(...attempts.filter(a=>a.digit===digit).map(a=>a.confidence));
- return {digit,confidence,uncertain:digits.length>1||confidence<75};
+ const primary={digit,confidence,uncertain:digits.length>1||confidence<75};
+ return primary.uncertain&&getFallback?fallbackReading(primary,prepared,getFallback):primary;
+}
+async function fallbackReading(primary,prepared,getFallback){
+ try{
+  const worker=await getFallback();await worker.setParameters({tessedit_pageseg_mode:'10',tessedit_char_whitelist:'123456789'});
+  const results=[];for(const c of [prepared.original,prepared.binary]){const {data}=await worker.recognize(c);const t=data.text.trim();if(/^[1-9]$/.test(t))results.push({digit:Number(t),confidence:Number(data.confidence)||0});}
+  if(results.length===2&&results[0].digit===results[1].digit&&Math.max(...results.map(r=>r.confidence))>=75)return {digit:results[0].digit,confidence:Math.max(...results.map(r=>r.confidence)),uncertain:Math.min(...results.map(r=>r.confidence))<75};
+  return {...primary,uncertain:true};
+ }catch{return {...primary,uncertain:true};}
 }
 const api={analyzePixels,prepareCell,recognizeCell};root.SudokuOCR=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

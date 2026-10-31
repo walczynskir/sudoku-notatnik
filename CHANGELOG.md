@@ -1,5 +1,11 @@
 # Historia wydań
 
+## 1.6.3
+
+- Dodatkowy silnik OCR uruchamiany wyłącznie dla niepewnych odczytów; wynik musi być zgodny w dwóch wariantach obrazu.
+- Na dostarczonym przykładzie po dokładnym dopasowaniu siatki: 24/24 cyfr i wszystkie 57 pustych pól poprawnie; poprzednia wersja pierwotnego OCR odczytywała 18/24 cyfr.
+- Weryfikacja obejmuje wszystkie trzy szóstki oraz czwórki i dziewiątki w przykładzie. Wynik nie gwarantuje skuteczności na innych zdjęciach.
+
 ## 1.6.2
 
 - OCR: adaptacyjny próg jasności zamiast stałego progu 150, usuwanie resztek krawędzi siatki i większe, wycentrowane obrazy cyfr.
