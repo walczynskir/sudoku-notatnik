@@ -2,7 +2,7 @@
 const peers=(a,b)=>a!==b&&(Math.floor(a/9)===Math.floor(b/9)||a%9===b%9||(Math.floor(a/27)===Math.floor(b/27)&&Math.floor(a%9/3)===Math.floor(b%9/3)));
 function candidates(values,i){return values[i]?[]:[1,2,3,4,5,6,7,8,9].filter(n=>!values.some((v,j)=>v===n&&peers(i,j)));}
 function placeValue(state,i,n){state.values[i]=n;state.notes[i]=[];state.notes=state.notes.map((notes,j)=>peers(i,j)?notes.filter(v=>v!==n):notes);return state;}
-function fillSingles(state){
+function fillSinglesRound(state){
  if(conflicts(state.values).some(Boolean))return {error:'Najpierw popraw konflikty liczb na planszy.'};
  const singles=state.notes.flatMap((a,i)=>!state.values[i]&&a.length===1?[{cell:i,digit:a[0]}]:[]);
  if(!singles.length)return {count:0};
@@ -10,6 +10,16 @@ function fillSingles(state){
  for(const {cell,digit} of singles){if(!candidates(next.values,cell).includes(digit))return {error:'Pojedynczy kandydat jest sprzeczny z planszą lub innym wpisem. Sprawdź notatki; nic nie zmieniono.'};placeValue(next,cell,digit);}
  if(next.values.some((v,i)=>!v&&(!candidates(next.values,i).length||(state.notes[i].length>0&&!next.notes[i].length))))return {error:'Wpisanie pojedynczych kandydatów pozostawiłoby pole bez możliwości. Sprawdź notatki; nic nie zmieniono.'};
  return {count:singles.length,state:next};
+}
+function fillSingles(state){
+ let current=state,count=0;
+ for(let round=0;round<81;round++){
+  const result=fillSinglesRound(current);
+  if(result.error)return {error:result.error};
+  if(!result.count)return count?{count,state:current}:{count:0};
+  count+=result.count;current=result.state;
+ }
+ return {count,state:current};
 }
 function conflicts(values){return values.map((v,i)=>!!v&&values.some((w,j)=>w===v&&peers(i,j)));}
 function validate(data){if(!data||!Array.isArray(data.values)||data.values.length!==81||!data.values.every(v=>Number.isInteger(v)&&v>=0&&v<=9))throw Error('Nieprawidłowe dane planszy.');let notes=data.notes??Array.from({length:81},()=>[]);if(!Array.isArray(notes)||notes.length!==81||!notes.every(a=>Array.isArray(a)&&a.every(v=>Number.isInteger(v)&&v>=1&&v<=9)))throw Error('Nieprawidłowy format kandydatów.');return {values:[...data.values],notes:notes.map((a,i)=>data.values[i]?[]:[...new Set(a)].sort())};}

@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.5.0
+
+- Przycisk pojedynczych kandydatów wypełnia teraz kolejne pola aż do wyczerpania możliwości.
+- Cała kaskada pozostaje jednym krokiem cofania/przywracania; sprzeczność w dowolnej rundzie anuluje całość.
+
 ## 1.4.0
 
 - Przycisk wypełniający pola z jednym kandydatem w notatkach, w jednym kroku bez kaskady.
