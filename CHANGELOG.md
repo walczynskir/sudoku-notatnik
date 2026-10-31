@@ -1,5 +1,12 @@
 # Historia wydań
 
+## 1.6.0
+
+- Belka szybkich akcji nad planszą: Cofnij, Przywróć, Wczytaj, Zapisz i Więcej.
+- Rozwijany import tekstu/JSON, obrazka i aparatu oraz menu czyszczenia i restartu.
+- Wyraźniejsze przyciski eksportu i nowej planszy; usunięcie przykładu.
+- Układ mobilny zachowuje klawiaturę przy planszy.
+
 ## 1.5.2
 
 - Jawne, równe wysokości dziewięciu wierszy i szerokości kolumn planszy.

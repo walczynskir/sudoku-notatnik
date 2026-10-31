@@ -101,3 +101,7 @@ Przycisk **Przywróć ostatnią zmianę** obok Cofnij ponawia ostatnią cofnięt
 **Wypełnij pojedynczych kandydatów** wpisuje cyfry w puste pola z dokładnie jednym kandydatem w bieżących notatkach. Nie oblicza notatek od nowa. Powtarza wpisy i eliminacje aż nie będzie kolejnych pojedynczych pól. Cała kaskada jest jedną operacją; błąd także w późniejszej rundzie anuluje wszystkie jej wpisy. Ręczne notatki muszą być poprawne; kontrola zgodności z planszą nie gwarantuje poprawności arbitralnych ręcznych wykluczeń. W przypadku wykrytego konfliktu lub pozbawienia innego pola możliwości operacja nie zmienia planszy. Wszystkie wpisy i eliminacje z jednego kliknięcia można razem cofnąć i przywrócić.
 
 Po poprawnym wypełnieniu wszystkich 81 pól nad planszą pojawia się zielony baner **Sudoku rozwiązane!**. Pełna plansza z powtórzeniami nie wyświetla tego komunikatu. Cofnięcie lub usunięcie wpisu usuwa baner.
+
+## Belka szybkich akcji
+
+Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczytaj rozwija import tekstu/pliku JSON, obrazka i aparatu. Zapisz pobiera dotychczasową kopię JSON (nie synchronizuje jej w chmurze). Więcej zawiera czyszczenie kandydatów, restart i nową pustą planszę. Nowa plansza nadal wymaga potwierdzenia. Menu zamyka się po wyborze, kliknięciu poza belką lub Escape. Eksport i nowa plansza pozostają dostępne także niżej jako wyraźne przyciski. Usunięto Wczytaj przykład.

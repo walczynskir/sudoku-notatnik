@@ -27,7 +27,6 @@ function replace(data,label){const apply=()=>{change(()=>{state=structuredClone(
 $('clear-notes').onclick=()=>{change(()=>{state.notes=Array.from({length:81},()=>[]);});message('Wyczyszczono wszystkich kandydatów. Liczby pozostały na planszy.');};
 $('restart').onclick=()=>confirmAction('Rozpocząć sudoku od początku?','Przywrócisz liczby z ostatniego importu lub przykładu i usuniesz kandydatów. Na planszy rozpoczętej ręcznie usunięte zostaną wszystkie wpisy. Możesz cofnąć restart.',()=>{change(()=>{state=structuredClone(initial);});message('Przywrócono początkową planszę. Restart możesz cofnąć.');});
 $('reset').onclick=()=>replace(empty(),'Gotowe. Nowa plansza czeka na pierwszą liczbę.');
-$('example').onclick=()=>replace(Sudoku.parse('530070000600195000098000060800060003400803001700020006060000280000419005000080079'),'Wczytano przykład. Oblicz kandydatów lub wpisz własne notatki.');
 document.addEventListener('keydown',e=>{if(document.querySelector('dialog[open]')||/INPUT|TEXTAREA/.test(e.target.tagName)||e.altKey)return;if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();$(e.shiftKey?'redo':'undo').click();return;}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='y'){e.preventDefault();$('redo').click();return;}if(e.ctrlKey||e.metaKey)return;if(/^[1-9]$/.test(e.key)){e.preventDefault();enter(Number(e.key));}else if(['Backspace','Delete','0','.'].includes(e.key)){e.preventDefault();$('erase').click();}else if(e.key.toLowerCase()==='n'){e.preventDefault();setMode(mode==='value'?'note':'value');}else if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const r=Math.floor(selected/9),c=selected%9;selected=e.key==='ArrowUp'?Math.max(0,r-1)*9+c:e.key==='ArrowDown'?Math.min(8,r+1)*9+c:e.key==='ArrowLeft'?r*9+Math.max(0,c-1):r*9+Math.min(8,c+1);render();cells[selected].focus();}});
 $('import-text').onclick=()=>{$('text-error').textContent='';$('text-dialog').showModal();};$('choose-text').onclick=()=>$('text-file').click();$('apply-text').onclick=()=>{try{const data=Sudoku.parse($('text-input').value);$('text-dialog').close();replace(data,'Wczytano planszę z tekstu.');}catch(e){$('text-error').textContent=e.message;}};
 $('text-file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>1024*1024)throw Error('Plik tekstowy jest zbyt duży (maks. 1 MB).');const text=await f.text();const data=Sudoku.parse(text);$('text-dialog').close();replace(data,'Wczytano planszę z pliku.');}catch(err){$('text-error').textContent=err.message;}e.target.value='';};
@@ -50,9 +49,16 @@ render();
 // Keep a single set of editing controls; relocate it next to the board on phones.
 const phoneLayout=window.matchMedia('(max-width: 640px)');
 function positionEntryControls(){
- const entry=$('entry-controls'),undo=$('undo'),redo=$('redo');
- if(phoneLayout.matches){$('mobile-entry-slot').append(entry);entry.append(undo,redo);}
- else{$('desktop-entry-slot').append(entry);$('desktop-undo-slot').append(undo,redo);}
+ const entry=$('entry-controls');
+ if(phoneLayout.matches){$('mobile-entry-slot').append(entry);}
+ else{$('desktop-entry-slot').append(entry);}
 }
 phoneLayout.addEventListener('change',positionEntryControls);
 positionEntryControls();
+
+const toolbarMenus=[...document.querySelectorAll('.toolbar-menu')];
+function closeToolbarMenus(){toolbarMenus.forEach(menu=>menu.open=false);}
+for(const menu of toolbarMenus)menu.addEventListener('toggle',()=>{if(menu.open)toolbarMenus.filter(other=>other!==menu).forEach(other=>other.open=false);});
+document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>{closeToolbarMenus();$(button.dataset.action).click();}));
+document.addEventListener('click',event=>{if(!event.target.closest('.quick-toolbar'))closeToolbarMenus();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=toolbarMenus.find(menu=>menu.open);if(open){closeToolbarMenus();open.querySelector('summary').focus();}}});
