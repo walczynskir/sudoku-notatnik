@@ -114,12 +114,10 @@ Po rozpoznaniu zdjęcie i suwaki zwijają się, a okno przechodzi do sprawdzania
 
 Gdy dana cyfra występuje już 9 razy w liczbach planszy, jej przycisk przestaje być aktywny w obu trybach; dotyczy to także wpisywania fizyczną klawiaturą. Poprawny komplet ma zielonkawe tło, przekreślenie i ✓. Wpisy z konfliktami nie dostają znaku poprawnego kompletu. Usunięcie, cofnięcie lub wczytanie innej planszy od razu aktualizuje dostępność cyfr. Kandydaci nie są liczeni jako wpisane liczby.
 
-## Zaawansowane techniki (Szkoła Sudoku 1.8.0)
+## Zaawansowane techniki (Trener Sudoku 1.8.1)
 
-Podpowiedzi obejmują także nagie i ukryte czwórki, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle typy 1/2/4, proste kolorowanie (pułapka/sprzeczność), X-Chain, XY-Chain i AIC. Każda z nich ma zwijaną ogólną zasadę oraz osobno odsłaniany ruch na planszy.
+Podpowiedzi obejmują nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, XYZ-Wing, W-Wing, Swordfish i Jellyfish. Każda technika ma zwijaną ogólną zasadę oraz osobno odsłaniany ruch na planszy. Niebieskie pola tworzą dowód, bursztynowe są celami eliminacji.
 
-Dla łańcucha wyjaśnienie pokazuje kolejne pola z cyframi: `=` oznacza silne połączenie, `—` słabe. Podświetlenia zachowują poprzednie znaczenie: niebieskie pola tworzą dowód, bursztynowe są celami eliminacji. W kolorowaniu obie przeciwne grupy są wymienione w wyjaśnieniu; nie są malowane osobnymi kolorami.
+Obsługiwane są podstawowe ryby bez płetw (bez wariantów finned/sashimi). Ranking aplikacji jest stałą kolejnością wyszukiwania, nie obiektywną miarą trudności. Brak podpowiedzi nie stanowi dowodu nierozwiązywalności.
 
-Unique Rectangles są oferowane tylko wtedy, gdy niezależne wyszukiwanie potwierdzi dokładnie jedno rozwiązanie bieżących wpisanych liczb. Jeśli limit wyszukiwania zostanie osiągnięty, jednoznaczność jest nieznana i techniki UR zostają pominięte. Brak podpowiedzi nie stanowi dowodu nierozwiązywalności. Weryfikacja liczby rozwiązań służy tylko bezpieczeństwu UR, nie ujawnia odpowiedzi ani nie wypełnia planszy.
-
-Obsługiwane są podstawowe ryby bez płetw (finned/sashimi), proste kolorowanie oraz łańcuchy do 11 połączeń, bez węzłów grupowych i forcing nets. Nie jest to pełen katalog wszystkich wariantów technik. Ranking aplikacji jest stałą kolejnością wyszukiwania, nie obiektywną miarą trudności.
+Unique Rectangles, kolorowanie i łańcuchy są planowane na wersję 2.

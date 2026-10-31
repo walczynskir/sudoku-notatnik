@@ -1,3 +1,11 @@
+# Historia zmian
+
+## 1.8.1
+
+- Nazwa aplikacji: Trener Sudoku.
+- Docelowy zakres v1: czwórki, skrzydła i podstawowe ryby do Jellyfish.
+- Unique Rectangles, kolorowanie i łańcuchy przeniesione do zakresu v2; kod zachowany na `codex/v2-techniques`.
+
 # Historia wydań
 
 ## 1.8.0

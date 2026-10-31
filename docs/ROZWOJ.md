@@ -112,8 +112,6 @@ Dla niepewnych wyników OCR uruchamiany jest na żądanie drugi worker Tesseract
 
 ## Techniki i bezpieczeństwo jednoznaczności
 
-`logic.solutionCount(values, limit=2, maxNodes=200000)` liczy rozwiązania MRV/backtrackingiem, bez modyfikacji wejścia. Zwraca `count` i `complete`; tylko `count===1 && complete` pozwala na UR. Wynik dla ostatniej planszy jest buforowany w `hints.js`. Nieukończone wyszukiwanie nigdy nie oznacza jednoznaczności.
+Generator `deductions(notes)` obsługuje podzbiory do czwórek, podstawowe ryby do rozmiaru 4 i skrzydła XY/XYZ/W. Regresje sprawdzają konkretne eliminacje oraz zgodność z referencyjnymi rozwiązaniami przy permutacjach cyfr.
 
-Generator `deductions(notes, options)` rozszerza podzbiory do czwórek, podstawowe fish do rozmiaru 4, skrzydła, UR1/2/4 (opcja `isUnique` wywoływana leniwie), kolorowanie i ograniczone łańcuchy. Łańcuchy budują graf słabych połączeń (różne cyfry pola / ta sama cyfra sąsiadów) i silnych (dwucyfrowe pole / dwa miejsca cyfry w jednostce). BFS przeplata fałsz i prawdę, maksymalnie 11 połączeń. Eliminacja dotyczy kandydatów wykluczających oba końce. Nie ma grup ani sieci; ograniczenie może pomijać dłuższe poprawne dowody.
-
-Nowe testy `advanced-hints.test.cjs` obejmują dodatnie i ujemne wzorce, obie orientacje fish, gating UR, liczenie rozwiązań i zachowanie znanego rozwiązania przy wielu permutacjach cyfr. Opisy technik opracowano na podstawie referencji HoDoKu: https://hodoku.sourceforge.net/en/techniques.php .
+Zakres v2 (Unique Rectangles, kolorowanie i łańcuchy) zachowano na gałęzi `codex/v2-techniques`. Nie jest uruchamiany w wersji 1.8.1. Przed jego przyszłą integracją należy ponownie zweryfikować dowody, testy i obsługę jednoznaczności planszy.

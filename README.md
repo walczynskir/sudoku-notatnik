@@ -1,4 +1,4 @@
-# Szkoła Sudoku
+# Trener Sudoku
 
 Prosta aplikacja internetowa po polsku do samodzielnego rozwiązywania sudoku 9 × 9. Pozwala wpisywać liczby, obliczać i edytować kandydatów oraz wczytywać plansze z tekstu, plików i zdjęć. Podpowiedzi najpierw ujawniają tylko technikę, a na życzenie pola i wyjaśnienie. Aplikacja wcześniej nosiła nazwę Sudoku · Notatnik; adresy, repozytorium i zapisane dane pozostają takie same.
 
@@ -51,6 +51,6 @@ Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji n
 
 ## Wersje
 
-Aktualne wydanie: **1.8.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
+Aktualne wydanie: **1.8.1**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
 
-Wydanie 1.8.0 rozszerza analizę o czwórki, skrzydła, Swordfish/Jellyfish, Unique Rectangle (1/2/4), proste kolorowanie oraz łańcuchy X/XY/AIC do 11 połączeń. To zamknięcie zakresu funkcjonalnego serii 1.x; generowanie plansz treningowych pozostaje osobnym kolejnym etapem.
+Serię 1.x zamykają nagie i ukryte czwórki, skrzydła XY/XYZ/W oraz X-Wing, Swordfish i Jellyfish. Unique Rectangles, kolorowanie i łańcuchy pozostają na v2; ich kod zachowano na gałęzi `codex/v2-techniques`. Generator treningowy jest osobnym kolejnym etapem.
