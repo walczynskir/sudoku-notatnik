@@ -1,9 +1,10 @@
 const $=id=>document.getElementById(id),empty=()=>({values:Array(81).fill(0),notes:Array.from({length:81},()=>[])});
-let state=empty(),selected=0,mode='value',history=[],pendingConfirm=null,photo=null,ocrBusy=false;
+let initial=empty(),state=empty(),selected=0,mode='value',history=[],pendingConfirm=null,photo=null,ocrBusy=false;
 try{const saved=localStorage.getItem('sudoku-notatnik-v1');if(saved)state=Sudoku.validate(JSON.parse(saved));}catch{}
+try{const saved=localStorage.getItem('sudoku-notatnik-initial-v1');initial=saved?Sudoku.validate(JSON.parse(saved)):Sudoku.validate({values:state.values});}catch{initial=empty();}
 function message(text){$('status').textContent=text;}
-function save(){try{localStorage.setItem('sudoku-notatnik-v1',JSON.stringify(state));}catch{message('Nie udało się zapisać na urządzeniu. Możesz pobrać planszę do pliku.');}}
-function change(fn){history.push(JSON.stringify(state));fn();save();render();}
+function save(){try{localStorage.setItem('sudoku-notatnik-v1',JSON.stringify(state));localStorage.setItem('sudoku-notatnik-initial-v1',JSON.stringify(initial));}catch{message('Nie udało się zapisać na urządzeniu. Możesz pobrać planszę do pliku.');}}
+function change(fn){history.push(JSON.stringify({state,initial}));fn();save();render();}
 function confirmAction(title,description,action){$('confirm-title').textContent=title;$('confirm-description').textContent=description;pendingConfirm=action;$('confirm-dialog').showModal();}
 $('confirm-no').onclick=()=>$('confirm-dialog').close();$('confirm-yes').onclick=()=>{const fn=pendingConfirm;pendingConfirm=null;$('confirm-dialog').close();fn?.();};
 const cells=Array.from({length:81},(_,i)=>{const b=document.createElement('button');b.className='cell';b.onclick=()=>{selected=i;render();};b.onfocus=()=>{if(selected!==i){selected=i;render();}};$('board').append(b);return b;});
@@ -13,9 +14,11 @@ function enter(n){if(mode==='note'&&state.values[selected]){message('Aby dodać 
 for(let n=1;n<=9;n++){const b=document.createElement('button');b.textContent=n;b.setAttribute('aria-label',`Wpisz ${n}`);b.onclick=()=>enter(n);$('keypad').append(b);}
 $('value-mode').onclick=()=>setMode('value');$('note-mode').onclick=()=>setMode('note');
 $('erase').onclick=()=>{change(()=>{state.values[selected]=0;state.notes[selected]=[];});message('Wyczyszczono wybrane pole.');};
-$('undo').onclick=()=>{if(history.length){state=JSON.parse(history.pop());save();render();message('Cofnięto ostatnią zmianę.');}};
+$('undo').onclick=()=>{if(history.length){const previous=JSON.parse(history.pop());state=previous.state;initial=previous.initial;save();render();message('Cofnięto ostatnią zmianę.');}};
 $('calculate').onclick=()=>{change(()=>{state.notes=state.values.map((_,i)=>Sudoku.candidates(state.values,i));});const impossible=state.values.some((v,i)=>!v&&!state.notes[i].length);message(Sudoku.conflicts(state.values).some(Boolean)?'Obliczono kandydatów. Popraw zaznaczone na czerwono konflikty.':impossible?'Obliczono kandydatów. Co najmniej jedno puste pole nie ma możliwej cyfry — sprawdź wpisane liczby.':'Obliczono kandydatów. Możesz teraz edytować ich w trybie „Kandydaci”.');};
-function replace(data,label){const apply=()=>{change(()=>state=data);selected=0;render();message(label);};if(state.values.some(Boolean)||state.notes.some(a=>a.length))confirmAction('Zastąpić obecną planszę?','Bieżąca plansza i notatki zostaną zastąpione. Zmianę możesz cofnąć przyciskiem „Cofnij”.',apply);else apply();}
+function replace(data,label){const apply=()=>{change(()=>{state=structuredClone(data);initial=Sudoku.validate({values:data.values});});selected=0;render();message(label);};if(state.values.some(Boolean)||state.notes.some(a=>a.length))confirmAction('Zastąpić obecną planszę?','Bieżąca plansza i notatki zostaną zastąpione. Zmianę możesz cofnąć przyciskiem „Cofnij”.',apply);else apply();}
+$('clear-notes').onclick=()=>{change(()=>{state.notes=Array.from({length:81},()=>[]);});message('Wyczyszczono wszystkich kandydatów. Liczby pozostały na planszy.');};
+$('restart').onclick=()=>confirmAction('Rozpocząć sudoku od początku?','Przywrócisz liczby z ostatniego importu lub przykładu i usuniesz kandydatów. Na planszy rozpoczętej ręcznie usunięte zostaną wszystkie wpisy. Możesz cofnąć restart.',()=>{change(()=>{state=structuredClone(initial);});message('Przywrócono początkową planszę. Restart możesz cofnąć.');});
 $('reset').onclick=()=>replace(empty(),'Gotowe. Nowa plansza czeka na pierwszą liczbę.');
 $('example').onclick=()=>replace(Sudoku.parse('530070000600195000098000060800060003400803001700020006060000280000419005000080079'),'Wczytano przykład. Oblicz kandydatów lub wpisz własne notatki.');
 document.addEventListener('keydown',e=>{if(document.querySelector('dialog[open]')||/INPUT|TEXTAREA/.test(e.target.tagName)||e.altKey)return;if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();$('undo').click();return;}if(e.ctrlKey||e.metaKey)return;if(/^[1-9]$/.test(e.key)){e.preventDefault();enter(Number(e.key));}else if(['Backspace','Delete','0','.'].includes(e.key)){e.preventDefault();$('erase').click();}else if(e.key.toLowerCase()==='n'){e.preventDefault();setMode(mode==='value'?'note':'value');}else if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const r=Math.floor(selected/9),c=selected%9;selected=e.key==='ArrowUp'?Math.max(0,r-1)*9+c:e.key==='ArrowDown'?Math.min(8,r+1)*9+c:e.key==='ArrowLeft'?r*9+Math.max(0,c-1):r*9+Math.min(8,c+1);render();cells[selected].focus();}});

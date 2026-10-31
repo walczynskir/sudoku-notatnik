@@ -11,3 +11,5 @@ OCR: ręczne dopasowanie kwadratowej ramki, rozpoznawanie i sprawdzenie wyniku p
 Weryfikacja: `node --check dist/app.js` i `node --test tests/logic.test.cjs`.
 
 Cofanie obejmuje liczby i kandydatów, bez ustalonego limitu liczby zmian w bieżącej sesji. Odświeżenie strony rozpoczyna nową historię; aktualna plansza pozostaje zapisana.
+
+Wyczyść kandydatów usuwa wyłącznie notatki. Restartuj sudoku przywraca liczby z ostatniego importu/przykładu, bez kandydatów; nowa ręcznie tworzona plansza restartuje do pustej. Stan początkowy jest zapisany lokalnie. Przy pierwszym uruchomieniu po tej aktualizacji zastana plansza staje się punktem restartu. Obie operacje można cofnąć. Cofnij jest w panelu narzędzi, obsługuje również Ctrl+Z / ⌘Z.
