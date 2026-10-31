@@ -30,3 +30,5 @@ test('a conflict in a later round aborts the whole cascade',()=>{
 test('cascade stops when only multiple candidates remain',()=>{
  const state=S.parse('.'.repeat(81));state.notes[0]=[1];state.notes[1]=[1,2];state.notes[2]=[2,3];state.notes[3]=[3,4,5];const result=S.fillSingles(state);assert.equal(result.count,3);assert.equal(result.state.values[2],3);assert.deepEqual(result.state.notes[3],[4,5]);
 });
+test('digit completion counts values and unlocks after removal',()=>{const v=[...'534678912672195348198342567859761423426853791713924856961537284287419635345286179'].map(Number);assert.deepEqual(S.digitState(v,6),{count:9,disabled:true,complete:true});v[v.indexOf(6)]=0;assert.deepEqual(S.digitState(v,6),{count:8,disabled:false,complete:false});});
+test('nine conflicting entries are blocked but never marked as a correct complete digit',()=>{const v=Array(81).fill(0);for(let i=0;i<9;i++)v[i]=4;assert.deepEqual(S.digitState(v,4),{count:9,disabled:true,complete:false});assert.deepEqual(S.digitState(v,3),{count:0,disabled:false,complete:false});});

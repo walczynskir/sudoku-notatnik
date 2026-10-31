@@ -1,5 +1,11 @@
 # Historia wydań
 
+## 1.7.0
+
+- Cyfra wpisana 9 razy jest nieaktywna na klawiaturze ekranowej oraz blokowana przy wpisywaniu klawiaturą fizyczną.
+- Poprawny komplet oznaczony zielonym tłem, przekreśleniem i znakiem ✓.
+- Po usunięciu lub cofnięciu wpisu cyfra jest ponownie dostępna; konflikty nie są oznaczane jako poprawny komplet.
+
 ## 1.6.5
 
 - Miniatura przyciętego oryginału bezpośrednio nad edytowalnym wynikiem OCR, także na telefonie.

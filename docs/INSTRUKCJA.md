@@ -109,3 +109,7 @@ Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczyt
 OCR automatycznie dopasowuje próg kontrastu dla każdego pola i ponawia słabe odczyty różnymi trybami rozpoznawania. Bursztynowe pola w podglądzie oznaczają niepewny wynik lub wykryty znak bez rozpoznanej cyfry. Sprawdź również pozostałe pola — nawet odczyt z wysoką oceną pewności może być błędny.
 
 Po rozpoznaniu zdjęcie i suwaki zwijają się, a okno przechodzi do sprawdzania rozpoznanych cyfr. „Użyj tej planszy” pozostaje główną akcją u dołu okna. Aby porównać z obrazem, rozwiń „Obraz i kadrowanie”. Ponowne uruchomienie OCR wymaga rozwinięcia tej sekcji i kliknięcia „Rozpoznaj ponownie”; można też użyć odnośnika „Popraw kadr lub rozpoznaj ponownie”. Edycja kadru unieważnia poprzedni wynik.
+
+## Komplet dziewięciu cyfr
+
+Gdy dana cyfra występuje już 9 razy w liczbach planszy, jej przycisk przestaje być aktywny w obu trybach; dotyczy to także wpisywania fizyczną klawiaturą. Poprawny komplet ma zielonkawe tło, przekreślenie i ✓. Wpisy z konfliktami nie dostają znaku poprawnego kompletu. Usunięcie, cofnięcie lub wczytanie innej planszy od razu aktualizuje dostępność cyfr. Kandydaci nie są liczeni jako wpisane liczby.

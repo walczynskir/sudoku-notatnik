@@ -77,3 +77,5 @@
 @media(max-width:640px){#image-dialog .image-actions{bottom:-22px}#image-source{padding-left:10px;padding-right:10px}#image-dialog p{font-size:12px;margin:8px 0}#review-grid{width:min(100%,calc(92svh - 250px))}}
 
 .ocr-thumbnail{margin:10px auto 12px;text-align:center}.ocr-thumbnail canvas{display:block;width:min(100%,230px);height:auto;aspect-ratio:1;margin:auto;border:1px solid #ccd5c2;border-radius:5px}.ocr-thumbnail figcaption{font-size:10px;color:var(--muted);margin-top:5px}@media(max-width:640px){.ocr-thumbnail canvas{width:min(100%,180px)}.ocr-thumbnail{margin:8px auto}.ocr-thumbnail figcaption{font-size:10px}}
+
+.keypad button{position:relative}.keypad button.digit-complete:disabled{background:#e1ead8;color:#5c7652;border-color:#b7c9a7;opacity:.75;text-decoration:line-through}.keypad button.digit-complete::after{content:"✓";position:absolute;top:2px;right:3px;font-size:9px;line-height:1;color:#355e4c;text-decoration:none}.keypad button:disabled{cursor:default}
