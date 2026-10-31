@@ -95,3 +95,7 @@ Brak znalezionej techniki nie oznacza braku rozwiązania. Trudniejsze techniki n
 ## Przywracanie cofniętej zmiany
 
 Przycisk **Przywróć ostatnią zmianę** obok Cofnij ponawia ostatnią cofniętą zmianę. Można przywracać kolejne cofnięte kroki, również import, kandydatów i restart. Skróty: Ctrl+Shift+Z / ⌘Shift+Z lub Ctrl+Y. Nowa edycja usuwa możliwość przywrócenia poprzedniej ścieżki. Odświeżenie strony usuwa obie historie.
+
+## Wypełnianie pojedynczych kandydatów
+
+**Wypełnij pojedynczych kandydatów** wpisuje cyfry w puste pola z dokładnie jednym kandydatem w bieżących notatkach. Nie oblicza notatek od nowa i nie uruchamia kaskady: nowe pojedyncze pola powstałe po eliminacjach czekają na następne kliknięcie. Ręczne notatki muszą być poprawne; kontrola zgodności z planszą nie gwarantuje poprawności arbitralnych ręcznych wykluczeń. W przypadku wykrytego konfliktu lub pozbawienia innego pola możliwości operacja nie zmienia planszy. Wszystkie wpisy i eliminacje z jednego kliknięcia można razem cofnąć i przywrócić.

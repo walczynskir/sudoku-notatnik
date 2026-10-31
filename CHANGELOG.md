@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.4.0
+
+- Przycisk wypełniający pola z jednym kandydatem w notatkach, w jednym kroku bez kaskady.
+- Kontrola konfliktów przed zastosowaniem całej operacji, eliminacja wpisanych cyfr z notatek i wspólne cofanie/przywracanie.
+
 ## 1.3.0
 
 - Przywracanie cofniętych zmian liczb, kandydatów i punktu restartu, także wielokrotnie.
