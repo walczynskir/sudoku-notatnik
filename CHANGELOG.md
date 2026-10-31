@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.7.1
+
+- Zielona ikona siatki sudoku: SVG dla nowoczesnych przeglądarek, ICO 16/32/48 px i Apple Touch Icon 180 px.
+- Wersjonowane adresy ikon dla poprawnego odświeżania po kolejnych wydaniach.
+
 ## 1.7.0
 
 - Cyfra wpisana 9 razy jest nieaktywna na klawiaturze ekranowej oraz blokowana przy wpisywaniu klawiaturą fizyczną.
