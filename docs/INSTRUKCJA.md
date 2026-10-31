@@ -83,7 +83,7 @@ Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana 
 ## Podpowiedź w dwóch etapach
 
 1. Kliknij **Podpowiedz technikę**. Zobaczysz wyłącznie nazwę najłatwiejszej znalezionej techniki, bez cyfr, pól i ich podświetlania.
-2. Jeśli chcesz więcej pomocy, kliknij **Pokaż pola i wyjaśnienie**. Niebieska ramka oznacza aktualnie wybrane przez Ciebie pole. Zielone pola tworzą wskazówkę, a bursztynowa obwódka wskazuje miejsca do eliminacji kandydatów. Wyjaśnienie opisuje konkretny ruch.
+2. Jeśli chcesz więcej pomocy, kliknij **Pokaż pola i wyjaśnienie**. Ciemnozielona ramka oznacza aktualnie wybrane przez Ciebie pole. Niebieskie pola tworzą wskazówkę, a bursztynowa obwódka wskazuje miejsca do eliminacji kandydatów. Wyjaśnienie opisuje konkretny ruch.
 
 Wskazówkę można ukryć; każda edycja danych i cofnięcie automatycznie ją usuwa. Podpowiedź nie wpisuje liczb, nie zmienia notatek i nie trafia do historii cofania.
 
