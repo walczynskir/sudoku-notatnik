@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.5.1
+
+- Wyraźny baner „Sudoku rozwiązane!” i zielone wyróżnienie poprawnie ukończonej planszy, bez dialogu.
+- Komunikat znika po edycji lub cofnięciu; pełna plansza z konfliktem nie jest uznawana za rozwiązaną.
+
 ## 1.5.0
 
 - Przycisk pojedynczych kandydatów wypełnia teraz kolejne pola aż do wyczerpania możliwości.
