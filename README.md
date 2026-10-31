@@ -21,3 +21,5 @@ Wyczyść kandydatów usuwa wyłącznie notatki. Restartuj sudoku przywraca licz
 Na telefonie przycisk „Użyj aparatu telefonu” uruchamia pole plikowe `accept="image/*" capture="environment"`; zależnie od przeglądarki otworzy aparat lub wybór zdjęcia. W przeglądarkach osadzonych z ograniczeniami dostępu należy otworzyć stronę w Safari/Chrome. Po zdjęciu lub imporcie można poprawić rozpoznane cyfry przed zastąpieniem planszy. Zdjęcia nie są wysyłane na serwer.
 
 Testy aparatu: `node --test tests/*.test.cjs` (uruchomienie i zatrzymanie, opóźniona zgoda, odmowa i ponowienie). Fizyczny aparat i mobilny chooser wymagają ręcznej weryfikacji na urządzeniu.
+
+Układ mobilny (do 640 px szerokości): ten sam zestaw przełącznika trybu, klawiatury, czyszczenia pola i cofania przenosi się bezpośrednio pod planszę. Plansza dopasowuje szerokość do dostępnej wysokości ekranu (svh); nagłówek jest zwarty. Pozostałe narzędzia pozostają niżej. W małym poziomym widoku sterowanie znajduje się obok planszy. Sprawdzono podgląd 360 × 640.
