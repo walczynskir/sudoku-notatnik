@@ -52,11 +52,17 @@ Testy kamery nie używają prawdziwego sprzętu. Test zapisu migawki nie zastęp
 
 ## GitHub i obecna strona
 
-Repozytorium: https://github.com/walczynskir/sudoku-notatnik (prywatne).
+Repozytorium: https://github.com/walczynskir/sudoku-notatnik (publiczne).
 
 Strona: https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/ (publiczna).
 
-To dwa oddzielne miejsca. Obecnie nie ma automatycznego wdrażania z GitHuba. W lokalnym repozytorium remote `github` wskazuje GitHub; publikacja Sites korzysta z osobnego repozytorium zarządzanego przez Sites. Nie przełączaj ich automatycznie ani nie używaj force push.
+GitHub Pages: https://walczynskir.github.io/sudoku-notatnik/.
+
+Workflow `.github/workflows/pages.yml` uruchamia kontrolę składni i testy na Node.js 22 przy pushu na `main`, pull requestach do `main` i ręcznym uruchomieniu. Zadanie publikacji zależy od poprawnego zakończenia testów i działa wyłącznie dla `main`, poza zdarzeniem pull request. Publikuje tylko `dist/`; nie wymaga własnego tokenu ani sekretów. GitHub udostępnia krótkotrwałe uprawnienia Pages/OIDC.
+
+Postęp: zakładka Actions → Testy i publikacja. Ręcznie: Run workflow → main. Przy błędzie testów publikacja nie ruszy i dotychczasowa wersja zostanie dostępna. Testy nie gwarantują jakości OCR ani poprawności na wszystkich telefonach. Przywrócenie starszej wersji: revert odpowiedniego commita i push na `main`, co ponownie uruchomi testy i publikację.
+
+GitHub Pages i wcześniejsza strona Sites to dwa oddzielne miejsca. Automatyzacja aktualizuje tylko GitHub Pages. W lokalnym repozytorium remote `github` wskazuje GitHub; publikacja Sites korzysta z osobnego repozytorium zarządzanego przez Sites. Nie przełączaj ich automatycznie ani nie używaj force push.
 
 Kod po zmianie można zapisać do istniejącego repozytorium:
 

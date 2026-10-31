@@ -2,7 +2,9 @@
 
 Prosta aplikacja internetowa po polsku do samodzielnego rozwiązywania sudoku 9 × 9. Pozwala wpisywać liczby, obliczać i edytować kandydatów oraz wczytywać plansze z tekstu, plików i zdjęć.
 
-**Działająca strona:** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
+**GitHub Pages:** https://walczynskir.github.io/sudoku-notatnik/
+
+**Poprzednia publikacja (Sites):** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
 
 Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy użytkownik ma własny stan na swoim urządzeniu.
 
@@ -24,7 +26,7 @@ python3 -m http.server 5173 --directory dist
 
 Otwórz http://localhost:5173/. Zatrzymanie serwera: `Ctrl+C`.
 
-Nie potrzeba `npm install`, kompilacji ani kluczy API. OCR pobiera bibliotekę i dane z internetu przy pierwszym użyciu; fonty również są zewnętrzne. Dla dostępu do prywatnego repozytorium GitHub wymaga uprawnień.
+Nie potrzeba `npm install`, kompilacji ani kluczy API. OCR pobiera bibliotekę i dane z internetu przy pierwszym użyciu; fonty również są zewnętrzne. Repozytorium jest publiczne.
 
 ## Sprawdzenie kodu
 
@@ -39,7 +41,7 @@ Testy obejmują reguły kandydatów, konflikty, import i cykl życia kamery z at
 
 ## Hosting
 
-Do publikacji wystarcza **zawartość katalogu `dist/`**. Obecna wersja jest hostowana przez Sites; wyłączenie komputera właściciela nie wyłącza strony. GitHub przechowuje kod — samo przesłanie zmian do tego repozytorium nie aktualizuje obecnej strony. Szczegóły: [Rozwój i publikacja](docs/ROZWOJ.md).
+Do publikacji wystarcza **zawartość katalogu `dist/`**. GitHub Actions sprawdza składnię i testy przy zmianach na `main` i pull requestach. Po udanych testach zmiana na `main` jest automatycznie publikowana na GitHub Pages. Dostępne jest także ręczne uruchomienie w zakładce Actions. Obie publikacje działają niezależnie od komputera właściciela. Poprzednia strona Sites nie aktualizuje się automatycznie z GitHuba. Szczegóły: [Rozwój i publikacja](docs/ROZWOJ.md).
 
 ## Licencja
 

@@ -1,0 +1,61 @@
+name: Testy i publikacja
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Testy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Pobierz kod
+        uses: actions/checkout@v6
+      - name: Przygotuj Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sprawdź składnię JavaScript
+        run: |
+          for file in dist/*.js; do
+            node --check "$file"
+          done
+      - name: Uruchom testy
+        run: node --test tests/*.test.cjs
+
+  deploy:
+    name: Publikacja GitHub Pages
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pobierz przetestowany kod
+        uses: actions/checkout@v6
+      - name: Skonfiguruj Pages
+        uses: actions/configure-pages@v5
+      - name: Przygotuj pliki strony
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Opublikuj stronę
+        id: deployment
+        uses: actions/deploy-pages@v4
