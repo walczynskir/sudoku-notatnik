@@ -112,6 +112,8 @@ Dla niepewnych wyników OCR uruchamiany jest na żądanie drugi worker Tesseract
 
 ## Techniki i bezpieczeństwo jednoznaczności
 
-Generator `deductions(notes)` obsługuje podzbiory do czwórek, podstawowe ryby do rozmiaru 4 i skrzydła XY/XYZ/W. Regresje sprawdzają konkretne eliminacje oraz zgodność z referencyjnymi rozwiązaniami przy permutacjach cyfr.
+Generator `deductions(notes, options)` obsługuje techniki wymienione w TECHNIKI.md. UR są włączane przez leniwe `isUnique` po potwierdzeniu `solutionCount(values).count === 1 && complete`. Licznik MRV/backtracking ma limit 200 000 węzłów, nie modyfikuje wejścia i nie przekazuje rozwiązania do podpowiedzi. Wynik dla ostatniej planszy jest buforowany.
 
-Zakres v2 (Unique Rectangles, kolorowanie i łańcuchy) zachowano na gałęzi `codex/v2-techniques`. Nie jest uruchamiany w wersji 1.8.1. Przed jego przyszłą integracją należy ponownie zweryfikować dowody, testy i obsługę jednoznaczności planszy.
+Łańcuchy budują graf słabych i silnych zależności kandydatów. BFS przeplata fałsz i prawdę do 11 połączeń; kandydaci wykluczający oba końce są eliminowani. XY-Chain wymaga tej samej cyfry na obu końcach. Regresje sprawdzają konkretne dowody i zachowanie znanych rozwiązań także po poprawnych redukcjach kandydatów.
+
+Dawna gałąź `codex/v2-techniques` pozostaje archiwalnym punktem odniesienia. Jej techniki są od 1.11.0 częścią 1.x; generowanie treningowe pozostaje na wersję 2.

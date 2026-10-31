@@ -120,7 +120,7 @@ Podpowiedzi obejmują nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, 
 
 Obsługiwane są podstawowe ryby bez płetw (bez wariantów finned/sashimi). Ranking aplikacji jest stałą kolejnością wyszukiwania, nie obiektywną miarą trudności. Brak podpowiedzi nie stanowi dowodu nierozwiązywalności.
 
-Unique Rectangles, kolorowanie i łańcuchy są planowane na wersję 2.
+Od 1.11.0 dostępne są także Unique Rectangle typy 1/2/4, proste kolorowanie oraz X-Chain, XY-Chain i AIC. Szczegóły i ograniczenia: [Zakres technik](TECHNIKI.md). Wersja 2 jest przeznaczona na trening i generowanie plansz.
 
 ### Wygodniejsze zdjęcia z kamery
 

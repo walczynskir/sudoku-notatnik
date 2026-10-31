@@ -1,5 +1,12 @@
 # Historia zmian
 
+## 1.11.0
+
+- Unique Rectangles (1/2/4) z potwierdzaniem jednoznaczności, simple coloring, X-Chain, XY-Chain i AIC z wyjaśnieniami.
+- XY-Chain wymaga tej samej cyfry na obu końcach.
+- Opublikowany dokładny katalog technik i ograniczeń w docs/TECHNIKI.md.
+- Rozwój analizatora pozostaje w 1.x; generowanie treningowe i ewentualny płatny dostęp zaplanowane na v2.
+
 ## 1.10.0
 
 - Zmiana rozmiaru ramki przez przeciąganie narożników.

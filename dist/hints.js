@@ -10,7 +10,7 @@ const all=[1,2,3,4,5,6,7,8,9];
 const allCells=Array.from({length:81},(_,i)=>i);
 function* combinations(items,n,start=0,prefix=[]){if(!n){yield prefix;return;}for(let i=start;i<=items.length-n;i++)yield* combinations(items,n-1,i+1,[...prefix,items[i]]);}
 function elimination(technique,sources,removals,reason){return {kind:'hint',technique,sources,targets:removals.map(r=>r.cell),digits:[...new Set(removals.flatMap(r=>r.digits))].sort(),removals,explanation:reason+' Usuń wyłącznie wskazanych kandydatów: '+removals.map(r=>`${label(r.cell)} → ${r.digits.join(', ')}`).join('; ')+'.'};}
-function* deductions(notes){
+function* deductions(notes,options={}){
  for(let i=0;i<81;i++)if(notes[i].length===1)yield {kind:'hint',technique:'Jedyny kandydat',sources:[i],targets:[],digits:notes[i],explanation:`Pole ${label(i)} ma tylko jednego dozwolonego kandydata: ${notes[i][0]}. Możesz wpisać tę cyfrę.`};
  for(const u of units)for(const n of all){const places=u.cells.filter(i=>notes[i].includes(n));if(places.length===1)yield {kind:'hint',technique:'Jedyne miejsce dla cyfry',sources:places,targets:[],digits:[n],explanation:`W ${u.name} cyfra ${n} może znaleźć się tylko w polu: ${label(places[0])}. Możesz wpisać tam ${n}.`};}
  for(const u of units)for(const n of all){const places=u.cells.filter(i=>notes[i].includes(n));if(places.length<2)continue;for(const v of units){if(u===v||!places.every(i=>v.cells.includes(i)))continue;const removals=v.cells.filter(i=>!u.cells.includes(i)&&notes[i].includes(n)).map(cell=>({cell,digits:[n]}));if(removals.length)yield elimination('Zablokowani kandydaci',places,removals,`W ${u.name} wszystkie miejsca dla cyfry ${n} leżą także w ${v.name}.`);}}
@@ -31,7 +31,11 @@ function* deductions(notes){
  yield* wingDeductions(notes);
  yield* fishDeductions(notes,3);
  yield* fishDeductions(notes,4);
-
+ if(options.unique===true||options.isUnique?.())yield* rectangleDeductions(notes);
+ yield* coloringDeductions(notes);
+ yield* chainDeductions(notes,'X-Chain');
+ yield* chainDeductions(notes,'XY-Chain');
+ yield* chainDeductions(notes,'AIC');
 }
 function* fishDeductions(notes,size){
  const name={2:'X-Wing',3:'Swordfish',4:'Jellyfish'}[size];
@@ -69,6 +73,55 @@ function* wingDeductions(notes){
  }
 }
 
+function* rectangleDeductions(notes){
+ for(const [r1,r2]of combinations(all.map(n=>n-1),2))for(const [c1,c2]of combinations(all.map(n=>n-1),2)){
+  const corners=[r1*9+c1,r1*9+c2,r2*9+c1,r2*9+c2];
+  if(new Set(corners.map(i=>Math.floor(i/27)*3+Math.floor(i%9/3))).size!==2||corners.some(i=>notes[i].length<2))continue;
+  for(const digits of combinations(notes[corners[0]],2)){
+   if(!corners.every(i=>digits.every(n=>notes[i].includes(n))))continue;
+   const floors=corners.filter(i=>notes[i].length===2),roofs=corners.filter(i=>notes[i].length>2);
+   if(floors.length===3){const cell=roofs[0];yield elimination('Unique Rectangle typ 1',corners,[{cell,digits}],`Potwierdzono jedno rozwiązanie planszy. Trzy rogi prostokąta mają wyłącznie parę ${digits.join('/')}. Czwarty róg (${label(cell)}) nie może mieć tej samej pary, bo powstałyby dwa rozwiązania.`);}
+   if(floors.length!==2||roofs.length!==2||!S.peers(...roofs))continue;
+   const extras=[...new Set(roofs.flatMap(i=>notes[i].filter(n=>!digits.includes(n))))];
+   if(extras.length===1){const n=extras[0],removals=allCells.filter(i=>!corners.includes(i)&&notes[i].includes(n)&&roofs.every(r=>S.peers(i,r))).map(cell=>({cell,digits:[n]}));if(removals.length)yield elimination('Unique Rectangle typ 2',corners,removals,`Potwierdzono jedno rozwiązanie. Dwa dodatkowe rogi (${roofs.map(label).join('; ')}) mają oprócz pary ${digits.join('/')} tylko cyfrę ${n}. Co najmniej jeden z nich musi mieć tę dodatkową cyfrę.`);}
+   for(const u of units.filter(u=>roofs.every(i=>u.cells.includes(i))))for(const strong of digits){const places=u.cells.filter(i=>notes[i].includes(strong));if(places.length!==2||!roofs.every(i=>places.includes(i)))continue;const removed=digits.find(n=>n!==strong);yield elimination('Unique Rectangle typ 4',corners,roofs.map(cell=>({cell,digits:[removed]})),`Potwierdzono jedno rozwiązanie. Cyfra ${strong} w ${u.name} ma tylko dwa miejsca: dodatkowe rogi prostokąta. Drugą cyfrę pary (${removed}) trzeba z tych rogów wykluczyć, aby uniknąć dwóch rozwiązań.`);}
+  }
+ }
+}
+function strongDigitGraph(notes,n){const graph=Array.from({length:81},()=>new Set());for(const u of units){const p=u.cells.filter(i=>notes[i].includes(n));if(p.length===2){graph[p[0]].add(p[1]);graph[p[1]].add(p[0]);}}return graph;}
+function* coloringDeductions(notes){
+ for(const n of all){const graph=strongDigitGraph(notes,n),seen=new Set();
+  for(const root of allCells){if(!graph[root].size||seen.has(root))continue;const color=new Map([[root,0]]),queue=[root];let valid=true;
+   for(let k=0;k<queue.length;k++){const a=queue[k];seen.add(a);for(const b of graph[a]){if(!color.has(b)){color.set(b,1-color.get(a));queue.push(b);}else if(color.get(b)===color.get(a))valid=false;}}
+   if(!valid)continue;const groups=[queue.filter(i=>color.get(i)===0),queue.filter(i=>color.get(i)===1)];
+   for(const group of groups)if(group.some((a,k)=>group.slice(k+1).some(b=>S.peers(a,b))))yield elimination('Kolorowanie — sprzeczność',queue,group.map(cell=>({cell,digits:[n]})),`Silne połączenia cyfry ${n} tworzą dwie przeciwne grupy: [${groups[0].map(label).join('; ')}] i [${groups[1].map(label).join('; ')}]. Dwa pola jednej grupy widzą się wzajemnie, więc cała ta grupa musi być fałszywa.`);
+   const removals=allCells.filter(i=>!color.has(i)&&notes[i].includes(n)&&groups.every(g=>g.some(a=>S.peers(i,a)))).map(cell=>({cell,digits:[n]}));
+   if(removals.length)yield elimination('Kolorowanie — pułapka',queue,removals,`Silne połączenia cyfry ${n} tworzą przeciwne grupy: [${groups[0].map(label).join('; ')}] i [${groups[1].map(label).join('; ')}]. Pola docelowe widzą obie grupy. Jedna grupa musi być prawdziwa, więc cyfra odpada z tych pól.`);
+  }
+ }
+}
+function* chainDeductions(notes,technique){
+ const node=(i,n)=>i*9+n-1,cell=id=>Math.floor(id/9),digit=id=>id%9+1;
+ const ids=allCells.flatMap(i=>notes[i].map(n=>node(i,n))),weak=new Map(ids.map(id=>[id,new Set()])),strong=new Map(ids.map(id=>[id,new Set()]));
+ function edge(graph,a,b){graph.get(a).add(b);graph.get(b).add(a);}
+ for(const i of allCells)for(const [a,b]of combinations(notes[i],2)){if(technique!=='X-Chain'){edge(weak,node(i,a),node(i,b));if(notes[i].length===2)edge(strong,node(i,a),node(i,b));}}
+ for(const n of all){const positions=allCells.filter(i=>notes[i].includes(n));for(const [a,b]of combinations(positions,2))if(S.peers(a,b))edge(weak,node(a,n),node(b,n));if(technique!=='XY-Chain')for(const u of units){const p=u.cells.filter(i=>notes[i].includes(n));if(p.length===2)edge(strong,node(p[0],n),node(p[1],n));}}
+ // Bounded alternating inference chains, at most 11 links; no grouped nodes.
+ for(const start of ids){if(!strong.get(start).size)continue;const queue=[{id:start,truth:false,path:[start]}],visited=new Set([start*2]);let emitted=false;
+  for(let k=0;k<queue.length&&!emitted;k++){
+   const current=queue[k];if(current.path.length>12)continue;
+   if(current.truth&&current.id!==start&&current.path.length>=4&&(technique!=='XY-Chain'||digit(current.id)===digit(start))){
+    const pathCells=[...new Set(current.path.map(cell))];const removals=[];
+    for(const target of weak.get(start))if(weak.get(current.id).has(target)&&!pathCells.includes(cell(target))){const existing=removals.find(r=>r.cell===cell(target));if(existing)existing.digits.push(digit(target));else removals.push({cell:cell(target),digits:[digit(target)]});}
+    if(removals.length){const chain=current.path.map((id,j)=>`${j?j%2?' = ':' — ':''}${label(cell(id))} (${digit(id)})`).join('');yield elimination(technique,pathCells,removals,`Łańcuch: ${chain}. Znak = oznacza silne połączenie, — słabe. Jeśli pierwszy kandydat jest fałszywy, ostatni jest prawdziwy. Każdy kandydat widzący oba końce musi więc odpaść.`);emitted=true;break;}
+   }
+   if(current.path.length>=12)continue;
+   const nextEdges=current.truth?weak.get(current.id):strong.get(current.id);
+   for(const next of nextEdges){if(current.path.includes(next))continue;const truth=!current.truth,key=next*2+Number(truth);if(visited.has(key))continue;visited.add(key);queue.push({id:next,truth,path:[...current.path,next]});}
+  }
+ }
+}
+
 function findHint(values,manualNotes){
  if(S.conflicts(values).some(Boolean))return {kind:'conflict',message:'Najpierw popraw powtarzające się liczby zaznaczone na czerwono.'};
  if(values.every(Boolean))return {kind:'complete',message:'Plansza jest wypełniona poprawnie. Sudoku ukończone!'};
@@ -80,7 +133,7 @@ function findHint(values,manualNotes){
  for(let pass=0;pass<730;pass++){
   if(invalid())return {kind:'invalid',message:'W tej planszy brakuje możliwości dla co najmniej jednego pola lub cyfry. Sprawdź wpisane liczby.'};
   let progressed=false;
-  for(const h of deductions(notes)){
+  for(const h of deductions(notes,{isUnique:()=>verifiedUnique(values)})){
    if(!h.removals)return {...h,explanation:(prior.size?'Po uwzględnieniu już wykonanych, logicznie potwierdzonych eliminacji ('+[...prior].join(', ')+'): ':'')+h.explanation};
    const pending=h.removals.map(r=>({cell:r.cell,digits:r.digits.filter(n=>!manualNotes||manualNotes[r.cell]?.includes(n))})).filter(r=>r.digits.length);
    if(pending.length){const result=elimination(h.technique,h.sources,pending,h.explanation.split(' Usuń wyłącznie')[0]);if(prior.size)result.explanation='Po uwzględnieniu już wykonanych, logicznie potwierdzonych eliminacji ('+[...prior].join(', ')+'): '+result.explanation;return result;}
@@ -91,9 +144,19 @@ function findHint(values,manualNotes){
   }
   if(!progressed)break;
  }
- return {kind:'none',message:'Nie znalazłem nowego ruchu wśród dostępnych technik: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish. Wykonane eliminacje są pomijane. Przy pustych notatkach oblicz kandydatów. Plansza może wymagać jeszcze trudniejszej techniki.'};
+ return {kind:'none',message:'Nie znalazłem nowego ruchu wśród dostępnych technik: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle (typy 1, 2, 4), kolorowanie oraz łańcuchy X/XY/AIC. Wykonane eliminacje są pomijane. Przy pustych notatkach oblicz kandydatów. Plansza może wymagać jeszcze trudniejszej techniki.'};
 }
+let uniqueKey='',uniqueResult=false;
+function verifiedUnique(values){const key=values.join('');if(key!==uniqueKey){const result=S.solutionCount(values);uniqueResult=result.complete&&result.count===1;uniqueKey=key;}return uniqueResult;}
 const guides={
+ 'Unique Rectangle typ 1':'Tylko dla planszy z potwierdzonym jednym rozwiązaniem: cztery rogi prostokąta w dwóch blokach nie mogą tworzyć tej samej dwucyfrowej pary. Jeśli trzy rogi są taką parą, usuń obie cyfry z czwartego.',
+ 'Unique Rectangle typ 2':'Dwa rogi prostokąta są tą samą parą, a dwa pozostałe mają dodatkowo tę samą trzecią cyfrę. Przy potwierdzonej jednoznaczności co najmniej jeden z dodatkowych rogów musi zawierać tę cyfrę. Usuń ją ze wspólnych sąsiadów tych rogów.',
+ 'Unique Rectangle typ 4':'Przy potwierdzonej jednoznaczności: dwa rogi są parą, a pozostałe dwa są połączone silnym połączeniem jednej cyfry pary w jednostce. Usuń drugą cyfrę pary z tych dwóch dodatkowych rogów.',
+ 'Kolorowanie — pułapka':'Połącz silne pary jednej cyfry i przypisz przeciwne grupy kolejnym końcom. Jedna grupa musi być prawdziwa. Kandydat poza łańcuchem, który widzi obie grupy, jest niemożliwy.',
+ 'Kolorowanie — sprzeczność':'Pokoloruj naprzemiennie końce silnych połączeń jednej cyfry. Jeśli dwa pola tej samej grupy widzą się wzajemnie, wszystkie kandydaty tej grupy są fałszywe.',
+ 'X-Chain':'Łańcuch jednej cyfry przeplata silne i słabe połączenia, zaczynając i kończąc silnym. Co najmniej jeden z końców jest prawdziwy. Usuń tę cyfrę z pól widzących oba końce.',
+ 'XY-Chain':'Łańcuch pól z dwiema cyframi wykorzystuje silną zależność wewnątrz pola i słabe połączenia tej samej cyfry między polami. Jeśli oba końce reprezentują tę samą cyfrę, usuń ją ze wspólnych sąsiadów.',
+ 'AIC':'Naprzemienny łańcuch wnioskowania łączy silne i słabe zależności między kandydatami. Gdy z fałszywości pierwszego wynika prawdziwość ostatniego, kandydat wykluczający oba końce musi być fałszywy. Ta wersja analizuje proste łańcuchy do 11 połączeń, bez grup i sieci.',
  'Naga czwórka':'Cztery pola w jednej jednostce mają łącznie tylko cztery różne cyfry. Zajmą one te pola, więc można usunąć je z pozostałych pól jednostki.',
  'Ukryta czwórka':'Cztery cyfry występują wyłącznie w czterech polach jednostki. Usuń z tych czterech pól pozostałych kandydatów.',
  'XY-Wing':'Centrum ma parę XY, a dwa widzące je skrzydła pary XZ i YZ. Bez względu na cyfrę centrum jedno skrzydło ma Z, więc usuń Z z pól widzących oba skrzydła.',
