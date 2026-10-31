@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.6.5
+
+- Miniatura przyciętego oryginału bezpośrednio nad edytowalnym wynikiem OCR, także na telefonie.
+- Pełny obraz i kadrowanie nadal dostępne osobno w rozwijanej sekcji.
+
 ## 1.6.4
 
 - Po OCR automatyczne przejście do sprawdzania cyfr: zwinięte zdjęcie i suwaki, przewinięcie okna do góry i fokus na nagłówku wyniku bez otwierania klawiatury.

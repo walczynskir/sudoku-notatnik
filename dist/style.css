@@ -75,3 +75,5 @@
 #apply-image{width:100%;min-height:46px}#edit-image-crop{display:block;margin-top:10px;min-height:40px}
 #review-grid{width:min(100%,calc(92svh - 250px));margin:0 auto}#review-grid input{font-size:clamp(16px,4vw,24px)}
 @media(max-width:640px){#image-dialog .image-actions{bottom:-22px}#image-source{padding-left:10px;padding-right:10px}#image-dialog p{font-size:12px;margin:8px 0}#review-grid{width:min(100%,calc(92svh - 250px))}}
+
+.ocr-thumbnail{margin:10px auto 12px;text-align:center}.ocr-thumbnail canvas{display:block;width:min(100%,230px);height:auto;aspect-ratio:1;margin:auto;border:1px solid #ccd5c2;border-radius:5px}.ocr-thumbnail figcaption{font-size:10px;color:var(--muted);margin-top:5px}@media(max-width:640px){.ocr-thumbnail canvas{width:min(100%,180px)}.ocr-thumbnail{margin:8px auto}.ocr-thumbnail figcaption{font-size:10px}}
