@@ -85,3 +85,23 @@ Na hostingu statycznym opublikuj zawartość `dist/`, tak aby `index.html` był 
 Zmiana adresu strony oznacza inną przestrzeń localStorage. Przed przeniesieniem wyeksportuj planszę do JSON i zaimportuj ją pod nowym adresem. Import nie przenosi historii cofania ani oryginalnego punktu restartu.
 
 Silnik `hints.js`: generator `deductions(notes)` emituje ruchy w ustalonej kolejności; eliminacje mają listę `removals: [{cell, digits}]`. `findHint(values, manualNotes)` buduje bazowe możliwości z liczb i filtruje cele według notatek. Całkowicie wykonane, udowodnione eliminacje odtwarza na roboczej kopii kandydatów, po czym ponawia analizę. Każdy taki krok usuwa co najmniej jednego kandydata; limit 730 przebiegów przekracza maksymalną liczbę 729 kandydatów. Pusty notatnik nie uruchamia odtwarzania. Dane użytkownika pozostają bez zmian.
+
+## Wersjonowanie
+
+Stosujemy schemat `MAJOR.MINOR.PATCH` (np. `1.1.0`):
+
+- MAJOR: zmiana niezgodna z dotychczasowym użyciem lub formatem danych.
+- MINOR: nowe funkcje zgodne z dotychczasowym działaniem.
+- PATCH: poprawki błędów i drobne korekty wyglądu.
+
+Wersja wydania jest w `VERSION`, widoczna również w stopce. Przygotowanie wydania:
+
+```bash
+node scripts/version.mjs 1.1.1
+node scripts/version.mjs --check
+node --test tests/*.test.cjs
+```
+
+Zaktualizuj także `CHANGELOG.md`, zapisz zmiany w commicie, po udanych kontrolach oznacz ten commit adnotowanym tagiem `v1.1.1` i wyślij commit oraz tag do GitHuba. Nie przenoś istniejących tagów na inne commity. Przykładowy numer powyżej nie oznacza istniejącego wydania.
+
+CI sprawdza zgodność stopki z VERSION. Numery są nadawane świadomie przy wydaniu, nie przy każdym commicie. Push na main publikuje stronę po testach; sam tag nie uruchamia osobnej publikacji. Historia zmian: `CHANGELOG.md`. Dane użytkownika i eksport JSON mają osobne oznaczenie formatu `sudoku-notatnik-v1`, niezależne od numeru aplikacji.

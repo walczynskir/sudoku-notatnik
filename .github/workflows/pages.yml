@@ -31,6 +31,8 @@ jobs:
           for file in dist/*.js; do
             node --check "$file"
           done
+      - name: Sprawdź zgodność wersji
+        run: node scripts/version.mjs --check
       - name: Uruchom testy
         run: node --test tests/*.test.cjs
 

@@ -43,3 +43,5 @@
 .cell.hint-target.selected{outline:2px solid #355e4c;outline-offset:-6px}
 .cell:focus-visible{outline:2px solid #355e4c;outline-offset:-4px}
 @media(max-width:640px){.hint-card{padding:15px}.hint-card h2{font-size:16px;margin-bottom:12px}}
+
+#app-version{font-size:10px;color:#7b8375;white-space:nowrap;letter-spacing:.2px}@media(max-width:640px){#app-version{margin-top:4px}}

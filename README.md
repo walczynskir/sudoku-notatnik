@@ -46,3 +46,7 @@ Do publikacji wystarcza **zawartość katalogu `dist/`**. GitHub Actions sprawdz
 ## Licencja
 
 Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji nie oznacza udzielenia licencji open source na jej kod. Zależności zewnętrzne podlegają własnym licencjom.
+
+## Wersje
+
+Aktualne wydanie: **1.1.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
