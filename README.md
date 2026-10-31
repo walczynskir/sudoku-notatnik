@@ -1,25 +1,46 @@
 # Sudoku · Notatnik
 
-Statyczna strona po polsku. Uruchomienie: `python3 -m http.server 5173 --directory dist`, następnie http://localhost:5173.
+Prosta aplikacja internetowa po polsku do samodzielnego rozwiązywania sudoku 9 × 9. Pozwala wpisywać liczby, obliczać i edytować kandydatów oraz wczytywać plansze z tekstu, plików i zdjęć.
 
-Plansza 9 × 9, obliczanie i ręczna edycja kandydatów, podświetlanie konfliktów, cofanie, automatyczny zapis lokalny, import tekstu i obrazów oraz eksport kopii JSON z notatkami.
+**Działająca strona:** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
 
-Import tekstu: 81 cyfr lub kropek (0 i kropka to puste pola), opcjonalne białe znaki i separatory |, przecinki. Import JSON przywraca również notatki. Wpisanie liczby automatycznie usuwa ją z kandydatów w tym samym wierszu, kolumnie i bloku 3 × 3, zachowując pozostałe ręczne notatki. Całość można cofnąć jednym krokiem. Usunięcie lub zastąpienie liczby nie przywraca wcześniej usuniętych kandydatów; przycisk „Oblicz kandydatów” odtwarza wszystkie dozwolone możliwości, zastępując ręczne notatki.
+Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy użytkownik ma własny stan na swoim urządzeniu.
 
-OCR: ręczne dopasowanie kwadratowej ramki, rozpoznawanie i sprawdzenie wyniku przed zatwierdzeniem. Tesseract.js 5.1.1 z jsDelivr przetwarza obraz lokalnie; pierwsze użycie wymaga internetu do pobrania silnika i danych językowych. Skośne zdjęcia, cyfry odręczne i obrazki z kandydatami mogą dawać gorszy wynik. Czcionki Google Fonts mają fallback systemowy.
+## Dokumentacja
 
-Weryfikacja: `node --check dist/app.js` i `node --test tests/logic.test.cjs`.
+- [Instrukcja użytkownika](docs/INSTRUKCJA.md) — wpisywanie, kandydaci, import, aparat, zapis i cofanie.
+- [Założenia i ograniczenia](docs/ZALOZENIA.md) — zakres produktu, prywatność i dokładne zasady działania.
+- [Rozwój i publikacja](docs/ROZWOJ.md) — struktura kodu, testy, hosting i dalsze kierunki.
 
-Cofanie obejmuje liczby i kandydatów, bez ustalonego limitu liczby zmian w bieżącej sesji. Odświeżenie strony rozpoczyna nową historię; aktualna plansza pozostaje zapisana.
+## Uruchomienie lokalne
 
-Wyczyść kandydatów usuwa wyłącznie notatki. Restartuj sudoku przywraca liczby z ostatniego importu/przykładu, bez kandydatów; nowa ręcznie tworzona plansza restartuje do pustej. Stan początkowy jest zapisany lokalnie. Przy pierwszym uruchomieniu po tej aktualizacji zastana plansza staje się punktem restartu. Obie operacje można cofnąć. Cofnij jest w panelu narzędzi, obsługuje również Ctrl+Z / ⌘Z.
+Wymagania: Python 3 do serwera lokalnego. Node.js z obsługą `node:test` do testów (zweryfikowano na Node.js 22). Do używania opublikowanej strony wystarczy przeglądarka.
 
-## Aparat
+```bash
+git clone https://github.com/walczynskir/sudoku-notatnik.git
+cd sudoku-notatnik
+python3 -m http.server 5173 --directory dist
+```
 
-„Zrób zdjęcie” otwiera podgląd kamery (HTTPS, zgoda użytkownika, preferowana tylna kamera, bez mikrofonu). Po zrobieniu zdjęcia uruchamia się dotychczasowe dopasowanie siatki i OCR. Strumień kamery jest zatrzymywany po zdjęciu, zamknięciu okna, ukryciu karty lub opuszczeniu strony; opóźniona zgoda na dostęp nie pozostawia kamery aktywnej.
+Otwórz http://localhost:5173/. Zatrzymanie serwera: `Ctrl+C`.
 
-Na telefonie przycisk „Użyj aparatu telefonu” uruchamia pole plikowe `accept="image/*" capture="environment"`; zależnie od przeglądarki otworzy aparat lub wybór zdjęcia. W przeglądarkach osadzonych z ograniczeniami dostępu należy otworzyć stronę w Safari/Chrome. Po zdjęciu lub imporcie można poprawić rozpoznane cyfry przed zastąpieniem planszy. Zdjęcia nie są wysyłane na serwer.
+Nie potrzeba `npm install`, kompilacji ani kluczy API. OCR pobiera bibliotekę i dane z internetu przy pierwszym użyciu; fonty również są zewnętrzne. Dla dostępu do prywatnego repozytorium GitHub wymaga uprawnień.
 
-Testy aparatu: `node --test tests/*.test.cjs` (uruchomienie i zatrzymanie, opóźniona zgoda, odmowa i ponowienie). Fizyczny aparat i mobilny chooser wymagają ręcznej weryfikacji na urządzeniu.
+## Sprawdzenie kodu
 
-Układ mobilny (do 640 px szerokości): ten sam zestaw przełącznika trybu, klawiatury, czyszczenia pola i cofania przenosi się bezpośrednio pod planszę. Plansza dopasowuje szerokość do dostępnej wysokości ekranu (svh); nagłówek jest zwarty. Pozostałe narzędzia pozostają niżej. W małym poziomym widoku sterowanie znajduje się obok planszy. Sprawdzono podgląd 360 × 640.
+```bash
+node --check dist/app.js
+node --check dist/camera.js
+node --check dist/logic.js
+node --test tests/*.test.cjs
+```
+
+Testy obejmują reguły kandydatów, konflikty, import i cykl życia kamery z atrapą urządzenia. Rzeczywisty aparat, jakość OCR i układ na fizycznych telefonach wymagają testów ręcznych.
+
+## Hosting
+
+Do publikacji wystarcza **zawartość katalogu `dist/`**. Obecna wersja jest hostowana przez Sites; wyłączenie komputera właściciela nie wyłącza strony. GitHub przechowuje kod — samo przesłanie zmian do tego repozytorium nie aktualizuje obecnej strony. Szczegóły: [Rozwój i publikacja](docs/ROZWOJ.md).
+
+## Licencja
+
+Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji nie oznacza udzielenia licencji open source na jej kod. Zależności zewnętrzne podlegają własnym licencjom.
