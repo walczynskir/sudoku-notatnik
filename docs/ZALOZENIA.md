@@ -18,6 +18,7 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 ## Dane i prywatność
 
 - Brak kont, backendu, bazy danych i współdzielonych plansz.
+- Preferencja języka jest przechowywana lokalnie jako `sudoku-language`; nie zmienia formatu eksportu ani danych Sudoku.
 - Aktualny stan jest zapisany pod kluczem `sudoku-notatnik-v1`, punkt restartu pod `sudoku-notatnik-initial-v1` w `localStorage`.
 - Wiele kart tego samego adresu nie ma synchronizacji na żywo. Ostatni zapis może zastąpić stan zapisany przez inną kartę; najlepiej edytować w jednej karcie.
 - Zdjęcia i obraz z aparatu nie są wysyłane na serwer przez aplikację. Kamera działa tylko do zdjęcia, zamknięcia okna lub ukrycia/opuszczenia karty.

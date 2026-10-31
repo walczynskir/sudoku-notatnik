@@ -1,5 +1,7 @@
 # Instrukcja użytkownika
 
+Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angielski, hiszpański, niemiecki i chiński uproszczony. Wybór jest pamiętany na urządzeniu; zmiana nie resetuje planszy ani historii. Szczegóły: [Języki](JEZYKI.md).
+
 ## Wpisywanie liczb i kandydatów
 
 1. Wybierz pole na planszy.

@@ -1,5 +1,13 @@
 # Historia zmian
 
+## 1.12.0
+
+- Angielski, hiszpański, niemiecki i chiński uproszczony obok polskiego.
+- Wybór języka w nagłówku, dobór na podstawie przeglądarki i zapis preferencji na urządzeniu.
+- Tłumaczenia interfejsu, komunikatów, etykiet dostępności, technik i ich wyjaśnień.
+- Zmiana języka bez resetowania planszy i historii; lokalny katalog bez usług tłumaczeniowych.
+- Dokumentacja języków oraz testy kompletności i wartości dynamicznych.
+
 ## 1.11.0
 
 - Unique Rectangles (1/2/4) z potwierdzaniem jednoznaczności, simple coloring, X-Chain, XY-Chain i AIC z wyjaśnieniami.
