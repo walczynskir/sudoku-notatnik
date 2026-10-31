@@ -1,5 +1,9 @@
 # Historia zmian
 
+## 1.8.2
+
+- Widoczny przycisk „Zrób zdjęcie ponownie” podczas kadrowania i sprawdzania OCR. Ponownie otwiera aparat bez zmiany planszy; zablokowany podczas rozpoznawania.
+
 ## 1.8.1
 
 - Nazwa aplikacji: Trener Sudoku.

@@ -6,3 +6,8 @@ test('OCR success switches to the review without focusing a numeric input',()=>{
  assert.equal(elements['image-source'].open,false);assert.equal(elements['ocr-review'].hidden,false);assert.equal(elements['apply-image'].hidden,false);assert.equal(elements['image-dialog'].scrollTop,0);assert.equal(focus.id,'ocr-review-title');assert(focus.opts.preventScroll);assert.equal(elements.recognize.classList.to,'secondary');
  const start=html.indexOf('<details id="image-source"'),end=html.indexOf('</details>',start),button=html.indexOf('id="recognize"');assert(button>start&&button<end,'retry must be inside collapsed source section');assert.equal((html.match(/id="recognize"/g)||[]).length,1);
 });
+
+test('retake reopens camera without applying the rejected photo and is blocked during OCR',()=>{
+ const source=fs.readFileSync(path.join(__dirname,'../dist/app.js'),'utf8');let closed=0,opened=0;const elements={'retake-photo':{},'image-dialog':{close(){closed++;}},'open-camera':{click(){opened++;}}};const c={$:id=>elements[id],ocrBusy:false};vm.createContext(c);vm.runInContext(source.split('\n').find(l=>l.startsWith("$('retake-photo').onclick")),c);elements['retake-photo'].onclick();assert.equal(closed,1);assert.equal(opened,1);c.ocrBusy=true;elements['retake-photo'].onclick();assert.equal(closed,1);assert.equal(opened,1);
+ const html=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8');assert(html.indexOf('id="retake-photo"')<html.indexOf('id="image-source"'),'retake is visible above the image and outside collapsed details');
+});
