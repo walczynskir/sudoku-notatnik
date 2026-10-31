@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.6.1
+
+- Usunięcie starych klas przycisków Cofnij i Przywróć z belki i jawne wyrównanie wymiarów pięciu akcji na telefonie.
+- Wersjonowane adresy CSS i JavaScript, aby po aktualizacji nie mieszały się stare mobilne skrypty z nowym układem.
+
 ## 1.6.0
 
 - Belka szybkich akcji nad planszą: Cofnij, Przywróć, Wczytaj, Zapisz i Więcej.

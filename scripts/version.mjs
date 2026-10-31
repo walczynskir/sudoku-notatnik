@@ -12,6 +12,6 @@ if(argument==='--check'){
  console.log(`Wersja ${version}: VERSION i stopka są zgodne.`);
 }else{
  writeFileSync(new URL('VERSION',root),version+'\n');
- writeFileSync(new URL('dist/index.html',root),html.replace(pattern,`<span id="app-version" aria-label="Wersja ${version}">v${version}</span>`));
+ writeFileSync(new URL('dist/index.html',root),html.replace(/((?:href|src)="(?:style\.css|(?:logic|hints|app|camera)\.js))(?:\?v=[^"]*)?"/g,`$1?v=${version}"`).replace(pattern,`<span id="app-version" aria-label="Wersja ${version}">v${version}</span>`));
  console.log(`Ustawiono wersję ${version}. Zaktualizuj CHANGELOG.md i utwórz tag v${version} po sprawdzeniu zmian.`);
 }
