@@ -9,7 +9,7 @@
 | `dist/logic.js` | Reguły sudoku, kandydaci, konflikty, walidacja i parser importu |
 | `dist/app.js` | Stan, historia, zapis lokalny, zdarzenia, import/eksport, OCR i przenoszenie sterowania na telefonie |
 | `dist/hints.js` | Niezależna od notatek analiza technik; wynik z nazwą, polami źródłowymi, celami eliminacji i wyjaśnieniem |
-| `tests/hints.test.cjs` | Przykłady czterech technik, kolejność, poprawność względem znanego rozwiązania, stany błędów |
+| `tests/hints.test.cjs` | Przykłady technik, X-Wing w obu orientacjach, kolejność, odtwarzanie eliminacji, poprawność względem znanego rozwiązania, stany błędów |
 | `dist/camera.js` | Sesja kamery, jej zwalnianie i zrobienie zdjęcia |
 | `tests/logic.test.cjs` | Testy reguł i formatów danych |
 | `tests/camera.test.cjs` | Testy cyklu życia kamery z atrapą MediaDevices |
@@ -83,3 +83,5 @@ Publikacja w Sites wymaga zapisania wersji odpowiadającej wysłanemu commitowi 
 Na hostingu statycznym opublikuj zawartość `dist/`, tak aby `index.html` był dokumentem startowym. Nie publikuj całego repozytorium ani katalogu `.git`. Zapewnij HTTPS dla kamery. Nie trzeba konfigurować serwera aplikacyjnego ani zmiennych środowiskowych.
 
 Zmiana adresu strony oznacza inną przestrzeń localStorage. Przed przeniesieniem wyeksportuj planszę do JSON i zaimportuj ją pod nowym adresem. Import nie przenosi historii cofania ani oryginalnego punktu restartu.
+
+Silnik `hints.js`: generator `deductions(notes)` emituje ruchy w ustalonej kolejności; eliminacje mają listę `removals: [{cell, digits}]`. `findHint(values, manualNotes)` buduje bazowe możliwości z liczb i filtruje cele według notatek. Całkowicie wykonane, udowodnione eliminacje odtwarza na roboczej kopii kandydatów, po czym ponawia analizę. Każdy taki krok usuwa co najmniej jednego kandydata; limit 730 przebiegów przekracza maksymalną liczbę 729 kandydatów. Pusty notatnik nie uruchamia odtwarzania. Dane użytkownika pozostają bez zmian.

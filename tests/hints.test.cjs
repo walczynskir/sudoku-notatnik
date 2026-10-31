@@ -28,3 +28,36 @@ test('empty notes do not produce elimination hints but do not suppress placement
 test('all completed pair eliminations are skipped',()=>{
  const v=[...fixtures[3][1]].map(Number),h=findHint(v);assert.equal(h.technique,'Naga para');const notes=v.map((_,i)=>S.candidates(v,i));for(const i of h.targets)notes[i]=notes[i].filter(n=>!h.digits.includes(n));assert.notDeepEqual(findHint(v,notes),h);
 });
+const {deductions}=require('../dist/hints.js');
+const fullNotes=()=>Array.from({length:81},()=>[1,2,3,4,5,6,7,8,9]);
+const technique=(notes,name)=>[...deductions(notes)].find(h=>h.technique===name);
+test('hidden pair removes only other digits from its own two cells',()=>{
+ const n=fullNotes();for(let i=2;i<9;i++)n[i]=n[i].filter(v=>![1,2].includes(v));
+ const h=technique(n,'Ukryta para');assert.deepEqual(h.sources,[0,1]);assert.deepEqual(h.targets,[0,1]);assert.deepEqual(h.removals[0].digits,[3,4,5,6,7,8,9]);
+});
+test('naked triple supports three different two-digit combinations',()=>{
+ const n=fullNotes();n[0]=[1,2];n[1]=[2,3];n[2]=[1,3];
+ const h=technique(n,'Naga trójka');assert.deepEqual(h.sources,[0,1,2]);assert.deepEqual(h.targets,[3,4,5,6,7,8]);assert.deepEqual(h.removals[0].digits,[1,2,3]);
+});
+test('hidden triple retains its three digits and removes extras per cell',()=>{
+ const n=fullNotes();n[0]=[1,2,4];n[1]=[2,3,5];n[2]=[1,3,6];for(let i=3;i<9;i++)n[i]=[4,5,6,7,8,9];
+ const h=technique(n,'Ukryta trójka');assert.deepEqual(h.sources,[0,1,2]);assert.deepEqual(h.removals,[{cell:0,digits:[4]},{cell:1,digits:[5]},{cell:2,digits:[6]}]);
+});
+for(const transpose of [false,true])test('X-Wing '+(transpose?'columns':'rows')+' has four corners and correct elimination lines',()=>{
+ const n=fullNotes(),cell=(a,b)=>transpose?b*9+a:a*9+b;
+ for(const r of [0,3])for(let c=0;c<9;c++)if(![1,7].includes(c))n[cell(r,c)]=n[cell(r,c)].filter(v=>v!==5);
+ const h=technique(n,'X-Wing');assert.deepEqual(h.sources,[cell(0,1),cell(0,7),cell(3,1),cell(3,7)]);assert.equal(h.targets.length,14);assert(h.removals.every(r=>r.digits.join()==='5'));assert(h.targets.every(i=>!h.sources.includes(i)));
+});
+test('an X-Wing is not inferred when a base line has a third candidate',()=>{
+ const n=fullNotes();for(const r of [0,3])for(let c=0;c<9;c++)if(![1,7].includes(c))n[r*9+c]=n[r*9+c].filter(v=>v!==5);n[2].push(5);assert.equal(technique(n,'X-Wing'),undefined);
+});
+test('all emitted deductions preserve a known solution across deterministic puzzle samples',()=>{
+ let seed=4321;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
+ for(let trial=0;trial<35;trial++){
+  const values=solved.map(v=>random()<.32?v:0),n=values.map((_,i)=>S.candidates(values,i));
+  for(const h of deductions(n))if(h.removals){for(const r of h.removals)assert(!r.digits.includes(solved[r.cell]),h.technique+' removed solution');}else assert.equal(h.digits[0],solved[h.sources[0]]);
+ }
+});
+test('replay of completed eliminations does not mutate user notes or fabricate a placement',()=>{
+ const v=[...'400986003083020040000143800020000050305060408010000020000408000030010084840609007'].map(Number),n=v.map((_,i)=>S.candidates(v,i));n[31]=n[31].filter(v=>v!==3);n[49]=n[49].filter(v=>v!==3);const before=JSON.stringify(n);const h=findHint(v,n);assert.equal(JSON.stringify(n),before);assert.equal(h.kind,'hint');assert(!h.removals?.some(r=>[31,49].includes(r.cell)&&r.digits.includes(3)));
+});
