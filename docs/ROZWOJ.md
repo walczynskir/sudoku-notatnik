@@ -8,6 +8,8 @@
 | `dist/style.css` | Wygląd i układ responsywny |
 | `dist/logic.js` | Reguły sudoku, kandydaci, konflikty, walidacja i parser importu |
 | `dist/app.js` | Stan, historia, zapis lokalny, zdarzenia, import/eksport, OCR i przenoszenie sterowania na telefonie |
+| `dist/hints.js` | Niezależna od notatek analiza technik; wynik z nazwą, polami źródłowymi, celami eliminacji i wyjaśnieniem |
+| `tests/hints.test.cjs` | Przykłady czterech technik, kolejność, poprawność względem znanego rozwiązania, stany błędów |
 | `dist/camera.js` | Sesja kamery, jej zwalnianie i zrobienie zdjęcia |
 | `tests/logic.test.cjs` | Testy reguł i formatów danych |
 | `tests/camera.test.cjs` | Testy cyklu życia kamery z atrapą MediaDevices |

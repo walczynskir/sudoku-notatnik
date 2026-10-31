@@ -26,7 +26,7 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 
 ## Zakres, którego obecnie nie ma
 
-- Automatyczne rozwiązanie całej planszy, podpowiedzi technik i generator sudoku.
+- Automatyczne rozwiązanie całej planszy, zaawansowane techniki (np. X-Wing, łańcuchy) i generator sudoku.
 - Sprawdzenie, czy plansza ma rozwiązanie lub czy rozwiązanie jest unikalne. Brak lokalnych konfliktów nie gwarantuje rozwiązywalności.
 - Rozpoznawanie dowolnych perspektyw i pisma ręcznego z gwarantowaną skutecznością.
 - Konta, synchronizacja w chmurze, biblioteka wielu plansz i statystyki.
@@ -40,3 +40,5 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 4. Dopiero przy potrzebie synchronizacji między urządzeniami — opcjonalne konta i zapis w chmurze.
 
 To propozycje, nie deklaracja wdrożenia.
+
+Podpowiedzi: analiza z liczb, dwa osobne etapy (tylko nazwa techniki, następnie opcjonalne pola i wyjaśnienie), bez automatycznego zastosowania ruchu. Obecny zakres: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, naga para.

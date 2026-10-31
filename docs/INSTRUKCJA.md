@@ -79,3 +79,14 @@ Na telefonie przełącznik trybu, klawiatura i cofanie są przy planszy; pozosta
 | Ctrl+Z / ⌘Z | Cofnij ostatnią zmianę |
 
 Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana plansza pozostaje, historia cofania się zeruje.
+
+## Podpowiedź w dwóch etapach
+
+1. Kliknij **Podpowiedz technikę**. Zobaczysz wyłącznie nazwę najłatwiejszej znalezionej techniki, bez cyfr, pól i ich podświetlania.
+2. Jeśli chcesz więcej pomocy, kliknij **Pokaż pola i wyjaśnienie**. Zielone pola tworzą wskazówkę, a bursztynowa obwódka wskazuje miejsca do eliminacji kandydatów. Wyjaśnienie opisuje konkretny ruch.
+
+Wskazówkę można ukryć; każda edycja danych i cofnięcie automatycznie ją usuwa. Podpowiedź nie wpisuje liczb, nie zmienia notatek i nie trafia do historii cofania.
+
+Kolejność wyszukiwania: jedyny kandydat → jedyne miejsce dla cyfry → zablokowani kandydaci (wskazujące i zgłaszające) → naga para. To kolejność przyjęta w tej aplikacji, nie uniwersalna skala trudności. Analiza wylicza możliwości z liczb, niezależnie od ręcznych notatek. Z tego powodu eliminacje wykonane tylko w notatkach nie są uwzględniane i ta sama technika może być proponowana ponownie, dopóki nie zmienią się liczby.
+
+Brak znalezionej techniki nie oznacza braku rozwiązania. Trudniejsze techniki nie są jeszcze obsługiwane. Lokalnie sprzeczna plansza daje komunikat o błędzie przed szukaniem ruchu; nie jest to pełne sprawdzenie rozwiązywalności.
