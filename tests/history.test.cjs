@@ -1,0 +1,7 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
+test('undo/redo preserves numbers, notes and restart state; branching clears redo',()=>{
+ const source=fs.readFileSync(path.join(__dirname,'../dist/app.js'),'utf8'),buttons={undo:{},redo:{}},ctx={history:[],future:[],state:{values:[0],notes:[[]]},initial:{values:[0]},clearHint(){},save(){},render(){},message(){},$:id=>buttons[id]};vm.createContext(ctx);vm.runInContext(source.match(/function change\(fn\)\{[^\n]+/)[0],ctx);
+ for(const id of ['undo','redo'])vm.runInContext(source.split('\n').find(l=>l.startsWith(`$('${id}').onclick`)),ctx);
+ const before=JSON.stringify({state:ctx.state,initial:ctx.initial});vm.runInContext('change(()=>{state.values[0]=5;state.notes[0]=[2,3];initial.values[0]=4;})',ctx);const after=JSON.stringify({state:ctx.state,initial:ctx.initial});buttons.undo.onclick();assert.equal(JSON.stringify({state:ctx.state,initial:ctx.initial}),before);buttons.redo.onclick();assert.equal(JSON.stringify({state:ctx.state,initial:ctx.initial}),after);
+ for(let i=0;i<150;i++)vm.runInContext(`change(()=>state.values[0]=${i%9})`,ctx);for(let i=0;i<150;i++)buttons.undo.onclick();assert.equal(ctx.future.length,150);for(let i=0;i<150;i++)buttons.redo.onclick();assert.equal(ctx.future.length,0);buttons.undo.onclick();vm.runInContext('change(()=>state.values[0]=9)',ctx);assert.equal(ctx.future.length,0);buttons.redo.onclick();assert.equal(ctx.state.values[0],9);
+});

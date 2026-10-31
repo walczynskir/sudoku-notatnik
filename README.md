@@ -49,4 +49,4 @@ Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji n
 
 ## Wersje
 
-Aktualne wydanie: **1.2.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
+Aktualne wydanie: **1.3.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).

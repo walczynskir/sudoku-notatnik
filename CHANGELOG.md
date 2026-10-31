@@ -1,5 +1,11 @@
 # Historia wydań
 
+## 1.3.0
+
+- Przywracanie cofniętych zmian liczb, kandydatów i punktu restartu, także wielokrotnie.
+- Przycisk przy Cofnij na komputerze i telefonie; skróty Ctrl+Shift+Z / ⌘Shift+Z i Ctrl+Y.
+- Nowa edycja usuwa historię ponawiania.
+
 ## 1.2.0
 
 - Rozwijana sekcja „Na czym polega?” pod nazwą techniki, z ogólną zasadą dla wszystkich ośmiu technik.
