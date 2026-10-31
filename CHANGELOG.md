@@ -1,5 +1,11 @@
 # Historia zmian
 
+## 1.10.0
+
+- Zmiana rozmiaru ramki przez przeciąganie narożników.
+- Prostowanie zdjęcia w zakresie ±15°, co 0,1°, z możliwością wyzerowania.
+- Podgląd, miniatura i rozpoznawanie korzystają ze skorygowanego obrazu; regulacja kąta nie pogarsza kolejno jakości oryginału.
+
 ## 1.9.0
 
 - Podgląd aparatu z pomocniczą siatką i wyborem kamery, gdy jest ich kilka.
