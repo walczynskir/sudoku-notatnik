@@ -1,5 +1,11 @@
 # Historia zmian
 
+## 1.9.0
+
+- Podgląd aparatu z pomocniczą siatką i wyborem kamery, gdy jest ich kilka.
+- Przeciąganie ramki kadrowania myszą lub palcem, z uwzględnieniem proporcji obrazu.
+- Obracanie zdjęcia o 90° w lewo i w prawo przed rozpoznawaniem.
+
 ## 1.8.3
 
 - Import zdjęć: instrukcja dopasowania ramki opisuje suwaki, siatkę 9 × 9 i sprawdzenie wyniku.

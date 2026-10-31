@@ -2,25 +2,27 @@
 function createCameraSession(mediaDevices){
  let request=0,stream=null;
  function stop(){request++;stream?.getTracks().forEach(track=>track.stop());stream=null;}
- async function start(){stop();const current=request;const next=await mediaDevices.getUserMedia({audio:false,video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1920}}});if(current!==request){next.getTracks().forEach(track=>track.stop());return null;}stream=next;return next;}
+ async function start(deviceId){stop();const current=request;const next=await mediaDevices.getUserMedia({audio:false,video:{...(deviceId?{deviceId:{exact:deviceId}}:{facingMode:{ideal:'environment'}}),width:{ideal:1920},height:{ideal:1920}}});if(current!==request){next.getTracks().forEach(track=>track.stop());return null;}stream=next;return next;}
  return {start,stop};
 }
 if(typeof module!=='undefined')module.exports={createCameraSession};
 if(typeof document!=='undefined'){
  const dialog=$('camera-dialog'),video=$('camera-preview'),status=$('camera-status'),take=$('take-photo');
- const session=createCameraSession(navigator.mediaDevices);let opening=0;
+ const session=createCameraSession(navigator.mediaDevices),choice=$('camera-choice');let opening=0;
  function stopCamera(){opening++;session.stop();video.pause();video.srcObject=null;video.hidden=true;take.disabled=true;}
  dialog.addEventListener('close',stopCamera);
  window.addEventListener('pagehide',stopCamera);
  document.addEventListener('visibilitychange',()=>{if(document.hidden&&dialog.open){dialog.close();stopCamera();}});
  video.addEventListener('loadeddata',()=>{take.disabled=!dialog.open||!video.videoWidth;});
- $('open-camera').onclick=async()=>{
-  dialog.showModal();const attempt=++opening;take.disabled=true;
+ async function startPreview(deviceId){
+  const attempt=++opening;take.disabled=true;
   status.textContent='Zezwól przeglądarce na dostęp do aparatu. Mikrofon nie jest potrzebny.';
   if(!navigator.mediaDevices?.getUserMedia){status.textContent='Podgląd aparatu jest tutaj niedostępny. Użyj przycisku „Użyj aparatu telefonu” lub wczytaj obrazek.';return;}
-  try{const stream=await session.start();if(!stream||attempt!==opening||!dialog.open)return;video.srcObject=stream;video.hidden=false;await video.play();if(attempt!==opening||!dialog.open)return;take.disabled=!video.videoWidth;status.textContent='Obejmij całą planszę, ustaw aparat równolegle do kartki i zrób zdjęcie.';}
+  try{const stream=await session.start(deviceId);if(!stream||attempt!==opening||!dialog.open)return;video.srcObject=stream;video.hidden=false;await video.play();if(attempt!==opening||!dialog.open)return;take.disabled=!video.videoWidth;$('camera-view').style.aspectRatio=video.videoWidth+'/'+video.videoHeight;$('camera-guide').style.width=(Math.min(video.videoWidth*.9,video.videoHeight*.8)/video.videoWidth*100)+'%';status.textContent='Umieść całą planszę w podglądzie. Zielona ramka pomaga ją ustawić — nie musisz trafić idealnie. Po zdjęciu możesz przesunąć ramkę palcem lub myszą i obrócić obraz.';try{const devices=(await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==='videoinput');if(attempt!==opening||!dialog.open)return;choice.replaceChildren(...devices.map((d,i)=>{const option=document.createElement('option');option.value=d.deviceId;option.textContent=d.label||`Aparat ${i+1}`;return option;}));choice.value=stream.getVideoTracks()[0]?.getSettings?.().deviceId||deviceId||choice.options[0]?.value||'';$('camera-choice-label').hidden=devices.length<2;}catch{}}
   catch(error){if(attempt!==opening||!dialog.open)return;stopCamera();status.textContent=error.name==='NotAllowedError'?'Brak dostępu do aparatu. Zezwól na kamerę w ustawieniach przeglądarki lub użyj aparatu telefonu.':error.name==='NotFoundError'?'Nie znaleziono aparatu. Możesz wczytać gotowy obrazek.':'Nie udało się uruchomić aparatu. Sprawdź, czy nie korzysta z niego inna aplikacja, lub użyj aparatu telefonu.';}
- };
+ }
+ $('open-camera').onclick=()=>{dialog.showModal();startPreview();};
+ choice.onchange=()=>startPreview(choice.value);
  $('native-camera').onclick=()=>{dialog.close();stopCamera();$('camera-file').click();};
  take.onclick=async()=>{
   if(!video.videoWidth||!video.videoHeight){status.textContent='Poczekaj na obraz z aparatu.';return;}

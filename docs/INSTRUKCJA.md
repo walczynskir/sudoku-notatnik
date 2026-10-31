@@ -121,3 +121,7 @@ Podpowiedzi obejmują nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, 
 Obsługiwane są podstawowe ryby bez płetw (bez wariantów finned/sashimi). Ranking aplikacji jest stałą kolejnością wyszukiwania, nie obiektywną miarą trudności. Brak podpowiedzi nie stanowi dowodu nierozwiązywalności.
 
 Unique Rectangles, kolorowanie i łańcuchy są planowane na wersję 2.
+
+### Wygodniejsze zdjęcia z kamery
+
+Zielona siatka w podglądzie pomaga ustawić planszę; zdjęcie obejmuje cały podgląd, a ramka jest tylko pomocą. Przy kilku kamerach wybierz aparat z listy. Po zdjęciu przeciągnij ramkę myszą lub palcem i dopasuj rozmiar suwakiem. Obraz można obrócić o 90° w lewo lub w prawo (obrót resetuje kadr). Silne zniekształcenie perspektywy nadal wymaga zrobienia zdjęcia bardziej na wprost.

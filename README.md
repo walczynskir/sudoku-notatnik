@@ -51,6 +51,6 @@ Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji n
 
 ## Wersje
 
-Aktualne wydanie: **1.8.3**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
+Aktualne wydanie: **1.9.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
 
 Serię 1.x zamykają nagie i ukryte czwórki, skrzydła XY/XYZ/W oraz X-Wing, Swordfish i Jellyfish. Unique Rectangles, kolorowanie i łańcuchy pozostają na v2; ich kod zachowano na gałęzi `codex/v2-techniques`. Generator treningowy jest osobnym kolejnym etapem.
