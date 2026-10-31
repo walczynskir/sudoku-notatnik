@@ -1,5 +1,11 @@
 # Historia wydań
 
+## 1.2.0
+
+- Rozwijana sekcja „Na czym polega?” pod nazwą techniki, z ogólną zasadą dla wszystkich ośmiu technik.
+- Wyjaśnienie zasady nie ujawnia pól ani cyfr z planszy. Konkretny ruch pozostaje za osobnym przyciskiem.
+- Sekcja jest domyślnie zwinięta i resetuje się po zmianie podpowiedzi.
+
 ## 1.1.0
 
 - Podpowiedzi w dwóch etapach: najpierw technika, następnie opcjonalnie pola i wyjaśnienie.
