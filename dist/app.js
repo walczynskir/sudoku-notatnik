@@ -3,7 +3,7 @@ let state=empty(),selected=0,mode='value',history=[],pendingConfirm=null,photo=n
 try{const saved=localStorage.getItem('sudoku-notatnik-v1');if(saved)state=Sudoku.validate(JSON.parse(saved));}catch{}
 function message(text){$('status').textContent=text;}
 function save(){try{localStorage.setItem('sudoku-notatnik-v1',JSON.stringify(state));}catch{message('Nie udało się zapisać na urządzeniu. Możesz pobrać planszę do pliku.');}}
-function change(fn){history.push(JSON.stringify(state));if(history.length>100)history.shift();fn();save();render();}
+function change(fn){history.push(JSON.stringify(state));fn();save();render();}
 function confirmAction(title,description,action){$('confirm-title').textContent=title;$('confirm-description').textContent=description;pendingConfirm=action;$('confirm-dialog').showModal();}
 $('confirm-no').onclick=()=>$('confirm-dialog').close();$('confirm-yes').onclick=()=>{const fn=pendingConfirm;pendingConfirm=null;$('confirm-dialog').close();fn?.();};
 const cells=Array.from({length:81},(_,i)=>{const b=document.createElement('button');b.className='cell';b.onclick=()=>{selected=i;render();};b.onfocus=()=>{if(selected!==i){selected=i;render();}};$('board').append(b);return b;});

@@ -9,3 +9,5 @@ Import tekstu: 81 cyfr lub kropek (0 i kropka to puste pola), opcjonalne białe 
 OCR: ręczne dopasowanie kwadratowej ramki, rozpoznawanie i sprawdzenie wyniku przed zatwierdzeniem. Tesseract.js 5.1.1 z jsDelivr przetwarza obraz lokalnie; pierwsze użycie wymaga internetu do pobrania silnika i danych językowych. Skośne zdjęcia, cyfry odręczne i obrazki z kandydatami mogą dawać gorszy wynik. Czcionki Google Fonts mają fallback systemowy.
 
 Weryfikacja: `node --check dist/app.js` i `node --test tests/logic.test.cjs`.
+
+Cofanie obejmuje liczby i kandydatów, bez ustalonego limitu liczby zmian w bieżącej sesji. Odświeżenie strony rozpoczyna nową historię; aktualna plansza pozostaje zapisana.
