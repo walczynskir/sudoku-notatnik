@@ -4,7 +4,7 @@ Statyczna strona po polsku. Uruchomienie: `python3 -m http.server 5173 --directo
 
 Plansza 9 × 9, obliczanie i ręczna edycja kandydatów, podświetlanie konfliktów, cofanie, automatyczny zapis lokalny, import tekstu i obrazów oraz eksport kopii JSON z notatkami.
 
-Import tekstu: 81 cyfr lub kropek (0 i kropka to puste pola), opcjonalne białe znaki i separatory |, przecinki. Import JSON przywraca również notatki. Kandydaci są przeliczani wyłącznie na żądanie, zastępując dotychczasowe notatki; operację można cofnąć.
+Import tekstu: 81 cyfr lub kropek (0 i kropka to puste pola), opcjonalne białe znaki i separatory |, przecinki. Import JSON przywraca również notatki. Wpisanie liczby automatycznie usuwa ją z kandydatów w tym samym wierszu, kolumnie i bloku 3 × 3, zachowując pozostałe ręczne notatki. Całość można cofnąć jednym krokiem. Usunięcie lub zastąpienie liczby nie przywraca wcześniej usuniętych kandydatów; przycisk „Oblicz kandydatów” odtwarza wszystkie dozwolone możliwości, zastępując ręczne notatki.
 
 OCR: ręczne dopasowanie kwadratowej ramki, rozpoznawanie i sprawdzenie wyniku przed zatwierdzeniem. Tesseract.js 5.1.1 z jsDelivr przetwarza obraz lokalnie; pierwsze użycie wymaga internetu do pobrania silnika i danych językowych. Skośne zdjęcia, cyfry odręczne i obrazki z kandydatami mogą dawać gorszy wynik. Czcionki Google Fonts mają fallback systemowy.
 
