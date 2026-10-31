@@ -1,5 +1,14 @@
 # Historia wydań
 
+## 1.8.0
+
+- Nowa nazwa aplikacji: Szkoła Sudoku — krok po kroku. Adresy, repozytorium i dane lokalne bez zmian.
+- Nagie i ukryte czwórki, XY-Wing, XYZ-Wing, W-Wing, Swordfish i Jellyfish.
+- Unique Rectangle typy 1, 2 i 4 wyłącznie po potwierdzeniu dokładnie jednego rozwiązania.
+- Proste kolorowanie (pułapka i sprzeczność), X-Chain, XY-Chain i AIC (proste łańcuchy do 11 połączeń).
+- Wyjaśnienia zasad wszystkich technik oraz ścieżki dowodów dla łańcuchów.
+- Zachowanie etapowego odkrywania podpowiedzi i odtwarzania tylko udowodnionych eliminacji.
+
 ## 1.7.1
 
 - Zielona ikona siatki sudoku: SVG dla nowoczesnych przeglądarek, ICO 16/32/48 px i Apple Touch Icon 180 px.

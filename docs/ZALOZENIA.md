@@ -26,7 +26,7 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 
 ## Zakres, którego obecnie nie ma
 
-- Automatyczne rozwiązanie całej planszy, dalsze zaawansowane techniki (np. Swordfish, XY-Wing, łańcuchy) i generator sudoku.
+- Automatyczne rozwiązanie całej planszy, dalsze warianty zaawansowanych technik (np. finned fish, grupowe AIC, forcing nets) i generator sudoku.
 - Sprawdzenie, czy plansza ma rozwiązanie lub czy rozwiązanie jest unikalne. Brak lokalnych konfliktów nie gwarantuje rozwiązywalności.
 - Rozpoznawanie dowolnych perspektyw i pisma ręcznego z gwarantowaną skutecznością.
 - Konta, synchronizacja w chmurze, biblioteka wielu plansz i statystyki.
@@ -41,4 +41,6 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 
 To propozycje, nie deklaracja wdrożenia.
 
-Podpowiedzi: analiza z liczb, filtrowanie celów eliminacji według aktualnych notatek (bez ponawiania wykonanych eliminacji), dwa osobne etapy (tylko nazwa techniki, następnie opcjonalne pola i wyjaśnienie), bez automatycznego zastosowania ruchu. Obecny zakres: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, naga/ukryta para, naga/ukryta trójka, X-Wing. Wcześniejsze eliminacje są odtwarzane do dalszej analizy tylko wtedy, gdy silnik sam potrafi je udowodnić, a wszystkie docelowe kandydaty zostały już usunięte z notatek. Notatki nie stanowią samodzielnego dowodu.
+Podpowiedzi: analiza z liczb, filtrowanie celów eliminacji według aktualnych notatek (bez ponawiania wykonanych eliminacji), dwa osobne etapy (tylko nazwa techniki, następnie opcjonalne pola i wyjaśnienie), bez automatycznego zastosowania ruchu. Obecny zakres: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, naga/ukryta para, naga/ukryta trójka i czwórka, X-Wing, skrzydła XY/XYZ/W, Swordfish/Jellyfish, UR1/2/4, proste kolorowanie i ograniczone łańcuchy X/XY/AIC. Wcześniejsze eliminacje są odtwarzane do dalszej analizy tylko wtedy, gdy silnik sam potrafi je udowodnić, a wszystkie docelowe kandydaty zostały już usunięte z notatek. Notatki nie stanowią samodzielnego dowodu.
+
+Od 1.8.0 nazwa produktu to Szkoła Sudoku. Zakres analizatora rozszerzono o czwórki, skrzydła XY/XYZ/W, Swordfish/Jellyfish, UR1/2/4 z potwierdzeniem jednoznaczności, simple coloring oraz ograniczone X/XY/AIC. Solver do liczenia rozwiązań nie służy do podpowiadania cyfr z odpowiedzi. Generator treningowy nie jest jeszcze częścią tego wydania.

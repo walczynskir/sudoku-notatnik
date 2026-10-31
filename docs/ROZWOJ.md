@@ -109,3 +109,11 @@ CI sprawdza zgodność stopki z VERSION. Numery są nadawane świadomie przy wyd
 OCR: `dist/ocr.js` zawiera adaptacyjny próg Otsu, analizę składowych obrazu pola do usunięcia linii siatki, normalizację cyfry z białym marginesem i ponowienia PSM 10/13/8 dla niepewnych wyników. Pierwszy odczyt z oceną co najmniej 92 kończy próby; inaczej wynik wybierany jest według zgodności prób, następnie pewności. Rozbieżność lub pewność poniżej 75 oznacza pole jako niepewne. Puste pole z wykrytym znakiem także wymaga sprawdzenia. Oceny silnika nie są skalibrowanym prawdopodobieństwem poprawności. Testy `tests/ocr.test.cjs` obejmują przygotowanie pikseli i strategię ponowień.
 
 Dla niepewnych wyników OCR uruchamiany jest na żądanie drugi worker Tesseract (OEM 0, legacyCore/legacyLang, osobny cache). Wynik tego silnika zastępuje pierwszy tylko przy zgodności cyfry z obrazu oryginalnego i binarnego oraz wystarczającej ocenie pewności. Pobranie zasobów drugiego silnika zwiększa pierwsze użycie OCR i zużycie pamięci; po analizie oba workery są zamykane. Test rzeczywistego przykładu użytkownika wykonano lokalnie, bez dodawania prywatnego obrazu do repozytorium i bez wysyłania go do usług OCR.
+
+## Techniki i bezpieczeństwo jednoznaczności
+
+`logic.solutionCount(values, limit=2, maxNodes=200000)` liczy rozwiązania MRV/backtrackingiem, bez modyfikacji wejścia. Zwraca `count` i `complete`; tylko `count===1 && complete` pozwala na UR. Wynik dla ostatniej planszy jest buforowany w `hints.js`. Nieukończone wyszukiwanie nigdy nie oznacza jednoznaczności.
+
+Generator `deductions(notes, options)` rozszerza podzbiory do czwórek, podstawowe fish do rozmiaru 4, skrzydła, UR1/2/4 (opcja `isUnique` wywoływana leniwie), kolorowanie i ograniczone łańcuchy. Łańcuchy budują graf słabych połączeń (różne cyfry pola / ta sama cyfra sąsiadów) i silnych (dwucyfrowe pole / dwa miejsca cyfry w jednostce). BFS przeplata fałsz i prawdę, maksymalnie 11 połączeń. Eliminacja dotyczy kandydatów wykluczających oba końce. Nie ma grup ani sieci; ograniczenie może pomijać dłuższe poprawne dowody.
+
+Nowe testy `advanced-hints.test.cjs` obejmują dodatnie i ujemne wzorce, obie orientacje fish, gating UR, liczenie rozwiązań i zachowanie znanego rozwiązania przy wielu permutacjach cyfr. Opisy technik opracowano na podstawie referencji HoDoKu: https://hodoku.sourceforge.net/en/techniques.php .
