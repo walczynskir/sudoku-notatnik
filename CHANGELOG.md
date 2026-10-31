@@ -1,5 +1,10 @@
 # Historia wydań
 
+## 1.5.2
+
+- Jawne, równe wysokości dziewięciu wierszy i szerokości kolumn planszy.
+- Poprawka rozciągania wiersza z liczbami przy pustych pozostałych polach, widocznego w Chrome na telefonie.
+
 ## 1.5.1
 
 - Wyraźny baner „Sudoku rozwiązane!” i zielone wyróżnienie poprawnie ukończonej planszy, bez dialogu.
