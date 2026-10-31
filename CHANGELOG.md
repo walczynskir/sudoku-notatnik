@@ -1,5 +1,10 @@
 # Historia zmian
 
+## 1.8.3
+
+- Import zdjęć: instrukcja dopasowania ramki opisuje suwaki, siatkę 9 × 9 i sprawdzenie wyniku.
+- Zrozumiałe komunikaty przygotowania i błędu rozpoznawania, bez określenia „silnik OCR”.
+
 ## 1.8.2
 
 - Widoczny przycisk „Zrób zdjęcie ponownie” podczas kadrowania i sprawdzania OCR. Ponownie otwiera aparat bez zmiany planszy; zablokowany podczas rozpoznawania.
