@@ -41,4 +41,4 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 
 To propozycje, nie deklaracja wdrożenia.
 
-Podpowiedzi: analiza z liczb, dwa osobne etapy (tylko nazwa techniki, następnie opcjonalne pola i wyjaśnienie), bez automatycznego zastosowania ruchu. Obecny zakres: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, naga para.
+Podpowiedzi: analiza z liczb, filtrowanie celów eliminacji według aktualnych notatek (bez ponawiania wykonanych eliminacji), dwa osobne etapy (tylko nazwa techniki, następnie opcjonalne pola i wyjaśnienie), bez automatycznego zastosowania ruchu. Obecny zakres: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, naga para.
