@@ -1,5 +1,12 @@
 # Historia wydań
 
+## 1.6.2
+
+- OCR: adaptacyjny próg jasności zamiast stałego progu 150, usuwanie resztek krawędzi siatki i większe, wycentrowane obrazy cyfr.
+- Ponowienie niepewnego odczytu w alternatywnych trybach segmentacji, z zachowaniem oryginalnego obrazu jako jednej z prób.
+- Niepewne i nierozpoznane pola z wykrytym znakiem mają bursztynowe oznaczenie w podglądzie.
+- W porównaniu na 9 wygenerowanych próbkach 4/6/9 wynik wzrósł z 5/9 do 9/9; nie stanowi to gwarancji skuteczności na zdjęciach.
+
 ## 1.6.1
 
 - Usunięcie starych klas przycisków Cofnij i Przywróć z belki i jawne wyrównanie wymiarów pięciu akcji na telefonie.

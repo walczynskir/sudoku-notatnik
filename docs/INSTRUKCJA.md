@@ -105,3 +105,5 @@ Po poprawnym wypełnieniu wszystkich 81 pól nad planszą pojawia się zielony b
 ## Belka szybkich akcji
 
 Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczytaj rozwija import tekstu/pliku JSON, obrazka i aparatu. Zapisz pobiera dotychczasową kopię JSON (nie synchronizuje jej w chmurze). Więcej zawiera czyszczenie kandydatów, restart i nową pustą planszę. Nowa plansza nadal wymaga potwierdzenia. Menu zamyka się po wyborze, kliknięciu poza belką lub Escape. Eksport i nowa plansza pozostają dostępne także niżej jako wyraźne przyciski. Usunięto Wczytaj przykład.
+
+OCR automatycznie dopasowuje próg kontrastu dla każdego pola i ponawia słabe odczyty różnymi trybami rozpoznawania. Bursztynowe pola w podglądzie oznaczają niepewny wynik lub wykryty znak bez rozpoznanej cyfry. Sprawdź również pozostałe pola — nawet odczyt z wysoką oceną pewności może być błędny.
