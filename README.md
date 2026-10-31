@@ -13,3 +13,11 @@ Weryfikacja: `node --check dist/app.js` i `node --test tests/logic.test.cjs`.
 Cofanie obejmuje liczby i kandydatów, bez ustalonego limitu liczby zmian w bieżącej sesji. Odświeżenie strony rozpoczyna nową historię; aktualna plansza pozostaje zapisana.
 
 Wyczyść kandydatów usuwa wyłącznie notatki. Restartuj sudoku przywraca liczby z ostatniego importu/przykładu, bez kandydatów; nowa ręcznie tworzona plansza restartuje do pustej. Stan początkowy jest zapisany lokalnie. Przy pierwszym uruchomieniu po tej aktualizacji zastana plansza staje się punktem restartu. Obie operacje można cofnąć. Cofnij jest w panelu narzędzi, obsługuje również Ctrl+Z / ⌘Z.
+
+## Aparat
+
+„Zrób zdjęcie” otwiera podgląd kamery (HTTPS, zgoda użytkownika, preferowana tylna kamera, bez mikrofonu). Po zrobieniu zdjęcia uruchamia się dotychczasowe dopasowanie siatki i OCR. Strumień kamery jest zatrzymywany po zdjęciu, zamknięciu okna, ukryciu karty lub opuszczeniu strony; opóźniona zgoda na dostęp nie pozostawia kamery aktywnej.
+
+Na telefonie przycisk „Użyj aparatu telefonu” uruchamia pole plikowe `accept="image/*" capture="environment"`; zależnie od przeglądarki otworzy aparat lub wybór zdjęcia. W przeglądarkach osadzonych z ograniczeniami dostępu należy otworzyć stronę w Safari/Chrome. Po zdjęciu lub imporcie można poprawić rozpoznane cyfry przed zastąpieniem planszy. Zdjęcia nie są wysyłane na serwer.
+
+Testy aparatu: `node --test tests/*.test.cjs` (uruchomienie i zatrzymanie, opóźniona zgoda, odmowa i ponowienie). Fizyczny aparat i mobilny chooser wymagają ręcznej weryfikacji na urządzeniu.
