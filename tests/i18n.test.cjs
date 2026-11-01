@@ -33,3 +33,7 @@ test('every technique has a multi-paragraph lesson in every language without boa
 });
 
 test('translated coordinates keep row and column identities in Hindi and Arabic',()=>{assert.equal(I.text('wiersz 3, kolumna 8','hi'),'पंक्ति 3, स्तंभ 8');const ar=I.text('wiersz 3, kolumna 8','ar').replace(/[\u2068\u2069]/g,'');assert.equal(ar,'الصف 3، العمود 8');});
+
+test('Skyscraper explanation translates in every language and preserves coordinates',()=>{
+ const values=[...'030107400006000053000006000904000500200030009000040800020700080500928000000000060'].map(Number),notes=values.map((_,i)=>S.candidates(values,i));const h=[...H.deductions(notes)].find(h=>h.technique==='Skyscraper');assert(h);for(const lang of langs){const text=I.text(h.explanation,lang);assert(!/[ąćęłńśźż]/i.test(text),text);assert.deepEqual(text.match(/\d+/g),h.explanation.match(/\d+/g));}
+});

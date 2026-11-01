@@ -1,3 +1,10 @@
+# v1.14.0
+
+- Dodano stronę autorów i licencji oraz pełne teksty licencyjne OCR, jego zależności, fontów i biblioteki sudoku.
+- Dodano rozpoznawanie Skyscraper przed ogólnym kolorowaniem, z objaśnieniami we wszystkich językach.
+- Kolorowanie pokazuje oddzielne grupy A/B: niebieską i fioletową, z ramkami ciągłą/przerywaną i wyróżnioną cyfrą.
+- Regresja dla planszy ze zdjęcia: Skyscraper na 6 usuwa kandydatów r4c2 i r6c4.
+
 # Historia zmian
 
 ## 1.13.0

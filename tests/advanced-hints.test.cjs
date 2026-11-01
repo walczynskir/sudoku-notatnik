@@ -36,3 +36,25 @@ test('all advanced rules including uniqueness preserve a unique reference soluti
  const solved=[...'534678912672195348198342567859761423426853791713924856961537284287419635345286179'].map(Number),values=[...'530070000600195000098000060800060003400803001700020006060000280000419005000080079'].map(Number);assert.deepEqual(S.solutionCount(values),{count:1,complete:true});let seed=97531;const rnd=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
  for(let trial=0;trial<20;trial++){const notes=values.map((_,i)=>S.candidates(values,i).filter(n=>n===solved[i]||rnd()>.4));for(const h of H.deductions(notes,{unique:true})){if(h.removals)for(const r of h.removals)assert(!r.digits.includes(solved[r.cell]),h.technique);else assert.equal(h.digits[0],solved[h.sources[0]]);}}
 });
+
+test('photographed puzzle has a Skyscraper on 6 with exactly the documented eliminations',()=>{
+ const values=[...'030107400006000053000006000904000500200030009000040800020700080500928000000000060'].map(Number),notes=values.map((_,i)=>S.candidates(values,i));
+ const h=find(notes,'Skyscraper');assert(h);assert.deepEqual(h.digits,[6]);assert.deepEqual(h.sources,[54,58,45,31]);assert.deepEqual(h.removals,[{cell:28,digits:[6]},{cell:48,digits:[6]}]);
+ assert([...H.deductions(notes)].findIndex(x=>x.technique==='Skyscraper')<[...H.deductions(notes)].findIndex(x=>x.technique.startsWith('Kolorowanie')));
+ for(const removal of h.removals){const v=[...values];v[removal.cell]=6;assert.equal(S.solutionCount(v).count,0);}
+});
+for(const transpose of [false,true])test('Skyscraper requires two conjugate pairs '+transpose,()=>{
+ const n=full(),cell=(r,c)=>transpose?c*9+r:r*9+c;
+ for(const [r,cols]of [[0,[0,3]],[4,[0,4]]])for(let c=0;c<9;c++)if(!cols.includes(c))n[cell(r,c)]=n[cell(r,c)].filter(v=>v!==6);
+ const h=find(n,'Skyscraper');assert(contains(h,cell(1,4),6));assert(contains(h,cell(3,3),6));assert(!h.targets.some(i=>h.sources.includes(i)));
+ n[cell(0,8)].push(6);assert.equal(find(n,'Skyscraper'),undefined);
+});
+test('coloring deductions expose their two opposite groups',()=>{
+ const values=[...'030107400006000053000006000904000500200030009000040800020700080500928000000000060'].map(Number),notes=values.map((_,i)=>S.candidates(values,i));
+ const hints=[...H.deductions(notes)].filter(h=>h.technique.startsWith('Kolorowanie'));assert(hints.length);
+ for(const h of hints){assert.equal(h.groups.length,2);assert.deepEqual([...h.groups.flat()].sort((a,b)=>a-b),[...h.sources].sort((a,b)=>a-b));assert.equal(h.coloringDigit,h.digits[0]);assert(h.groups.every(g=>g.length));}
+});
+
+test('findHint keeps coloring groups after replaying already completed eliminations',()=>{
+ const state=require('./fixtures/coloring-state.json'),h=H.findHint(state.values,state.notes);assert.equal(h.technique,'Kolorowanie — pułapka');assert.deepEqual(h.groups,[[6,74,70],[78,63]]);assert.equal(h.coloringDigit,4);assert.deepEqual(h.removals,[{cell:0,digits:[4]}]);
+});

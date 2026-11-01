@@ -1,5 +1,5 @@
 const S=require('../../dist/logic.js'),H=require('../../dist/hints.js');
-const order=['Jedyny kandydat','Jedyne miejsce dla cyfry','Zablokowani kandydaci','Naga para','Ukryta para','Naga trójka','Ukryta trójka','Naga czwórka','Ukryta czwórka','X-Wing','XY-Wing','XYZ-Wing','W-Wing','Swordfish','Jellyfish','Unique Rectangle typ 1','Unique Rectangle typ 2','Unique Rectangle typ 4','Kolorowanie — sprzeczność','Kolorowanie — pułapka','X-Chain','XY-Chain','AIC'];
+const order=['Jedyny kandydat','Jedyne miejsce dla cyfry','Zablokowani kandydaci','Naga para','Ukryta para','Naga trójka','Ukryta trójka','Naga czwórka','Ukryta czwórka','X-Wing','Skyscraper','XY-Wing','XYZ-Wing','W-Wing','Swordfish','Jellyfish','Unique Rectangle typ 1','Unique Rectangle typ 2','Unique Rectangle typ 4','Kolorowanie — sprzeczność','Kolorowanie — pułapka','X-Chain','XY-Chain','AIC'];
 function validatePuzzle(puzzle,{maxMs=2000,maxNodes=200000}={}){
  if(!/^[0-9]{81}$/.test(puzzle))return {error:'format'};
  const values=[...puzzle].map(Number);if(S.conflicts(values).some(Boolean))return {error:'conflict'};

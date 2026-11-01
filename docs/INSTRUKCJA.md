@@ -142,3 +142,11 @@ Od 1.11.0 dostępne są także Unique Rectangle typy 1/2/4, proste kolorowanie o
 Zielona siatka w podglądzie pomaga ustawić planszę; zdjęcie obejmuje cały podgląd, a ramka jest tylko pomocą. Przy kilku kamerach wybierz aparat z listy. Po zdjęciu przeciągnij ramkę myszą lub palcem i dopasuj rozmiar suwakiem. Obraz można obrócić o 90° w lewo lub w prawo (obrót resetuje kadr). Silne zniekształcenie perspektywy nadal wymaga zrobienia zdjęcia bardziej na wprost.
 
 Narożniki ramki służą do zmiany jej rozmiaru; środek do przesuwania. Suwak „Wyprostuj zdjęcie” koryguje pochylenie o maksymalnie 15° w każdą stronę, co 0,1°. „Wyzeruj obrót” przywraca 0°. Korekta nie usuwa zniekształcenia perspektywy (trapezu). Po każdej zmianie kadru lub kąta rozpoznaj cyfry ponownie.
+
+### Kolorowanie i Skyscraper
+
+Skyscraper jest rozpoznawany przed ogólnym kolorowaniem. W kolorowaniu po odsłonięciu pól grupa A jest niebieska z ciągłą ramką, a grupa B fioletowa z przerywaną ramką. Pogrubiona, podkreślona cyfra to analizowany kandydat. Nie trzeba samodzielnie kolorować planszy. Bursztynowa ramka wskazuje eliminacje, ciemnozielona wybrane przez użytkownika pole.
+
+### Autorzy i licencje
+
+Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i danych oraz pełne teksty licencyjne. Oryginalne teksty prawne pozostają w języku źródłowym.

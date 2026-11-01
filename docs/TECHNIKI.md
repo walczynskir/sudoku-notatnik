@@ -8,12 +8,13 @@
 | Ryby | Podstawowe X-Wing, Swordfish, Jellyfish w obu orientacjach |
 | Skrzydła | XY-Wing, XYZ-Wing, W-Wing |
 | Jednoznaczność | Unique Rectangle typy 1, 2, 4, wyłącznie po potwierdzeniu jednego rozwiązania |
+| Skyscraper | Dwie pary sprzężone o wspólnej linii podstaw; eliminacje z pól widzących oba wierzchołki |
 | Kolorowanie | Simple Coloring: pułapka i sprzeczność |
 | Łańcuchy | X-Chain, XY-Chain i proste AIC do 11 połączeń |
 
 Najpierw wyświetlana jest nazwa techniki. Ogólne wyjaśnienie można rozwinąć niezależnie od ujawnienia pól. Niebieskie pola tworzą dowód, bursztynowe wskazują eliminacje. Podpowiedź nie wykonuje ruchu automatycznie.
 
-Dla łańcuchów opis podaje kolejne pola i cyfry: `=` oznacza silne połączenie, `—` słabe. Dwie grupy kolorowania są wypisane w opisie; podświetlenie źródeł pozostaje niebieskie.
+Dla łańcuchów opis podaje kolejne pola i cyfry: `=` oznacza silne połączenie, `—` słabe. Dwie grupy kolorowania są wypisane w opisie i oznaczone oddzielnie na planszy: grupa A ma niebieskie tło i ciągłą ramkę, grupa B fioletowe tło i przerywaną ramkę. Kolorowana cyfra jest pogrubiona i podkreślona; bursztynowa ramka nadal oznacza eliminację, a ciemnozielona wybór użytkownika.
 
 ## Zasady poszczególnych technik
 
@@ -212,3 +213,11 @@ Nie jest to katalog wszystkich wariantów znanych w Sudoku. Nie obejmuje finned/
 Osobny zakres: generator plansz wymagających wybranej techniki, ćwiczenia i ścieżki nauki. Konta, zapisy postępów oraz płatny dostęp pozostają decyzjami przyszłego etapu; obecna aplikacja pozostaje bez paywalla.
 
 Podstawy definicji: [HoDoKu — Chains and Loops](https://hodoku.sourceforge.net/en/tech_chains.php).
+
+### Skyscraper
+
+Wybierz jedną cyfrę i znajdź dwa wiersze, w których ma ona dokładnie po dwa możliwe miejsca. Jedno miejsce z pierwszego wiersza i jedno z drugiego muszą leżeć w tej samej kolumnie: to podstawy. Dwa pozostałe miejsca, w różnych kolumnach, są wierzchołkami. Możesz też zamienić role wierszy i kolumn.
+
+Podstawy widzą się, więc nie mogą obie zawierać wybranej cyfry. Jeśli jeden wierzchołek jej nie zawiera, jego podstawa musi ją zawierać; druga podstawa wtedy odpada, a drugi wierzchołek musi zawierać tę cyfrę. Zatem co najmniej jeden z wierzchołków jest prawdziwy, choć nie wiemy jeszcze który.
+
+Usuń tę cyfrę z innych pól, które widzą oba wierzchołki. Nie usuwaj jej z samych podstaw ani wierzchołków i nie wpisuj wartości na podstawie samego wzorca. Sprawdź dokładnie warunek dwóch miejsc w każdym wybranym wierszu lub kolumnie: trzeci kandydat przerywa to rozumowanie.

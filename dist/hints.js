@@ -28,6 +28,7 @@ function* deductions(notes,options={}){
   }
  }
  yield* fishDeductions(notes,2);
+ yield* skyscraperDeductions(notes);
  yield* wingDeductions(notes);
  yield* fishDeductions(notes,3);
  yield* fishDeductions(notes,4);
@@ -88,15 +89,28 @@ function* rectangleDeductions(notes){
   }
  }
 }
+// Two conjugate pairs with aligned bases: at least one roof must be true.
+function* skyscraperDeductions(notes){
+ for(const transpose of [false,true])for(const n of all){
+  const cell=(a,b)=>transpose?b*9+a:a*9+b;
+  const pairs=allCells.slice(0,9).map(a=>({a,positions:allCells.slice(0,9).filter(b=>notes[cell(a,b)].includes(n))})).filter(p=>p.positions.length===2);
+  for(const [a,b]of combinations(pairs,2)){
+   const shared=a.positions.filter(p=>b.positions.includes(p));if(shared.length!==1)continue;
+   const bases=[cell(a.a,shared[0]),cell(b.a,shared[0])],roofs=[cell(a.a,a.positions.find(p=>p!==shared[0])),cell(b.a,b.positions.find(p=>p!==shared[0]))],sources=[...bases,...roofs];
+   const removals=allCells.filter(i=>!sources.includes(i)&&notes[i].includes(n)&&roofs.every(r=>S.peers(i,r))).map(cell=>({cell,digits:[n]}));
+   if(removals.length)yield elimination('Skyscraper',sources,removals,`Skyscraper dla cyfry ${n}. Podstawy: ${bases.map(label).join('; ')}. Wierzchołki: ${roofs.map(label).join('; ')}. Każda para podstawa–wierzchołek zawiera dokładnie dwa miejsca dla tej cyfry w swoim wierszu lub kolumnie. Podstawy widzą się, więc co najmniej jeden wierzchołek musi zawierać tę cyfrę. Pola docelowe widzą oba wierzchołki.`);
+  }
+ }
+}
 function strongDigitGraph(notes,n){const graph=Array.from({length:81},()=>new Set());for(const u of units){const p=u.cells.filter(i=>notes[i].includes(n));if(p.length===2){graph[p[0]].add(p[1]);graph[p[1]].add(p[0]);}}return graph;}
 function* coloringDeductions(notes){
  for(const n of all){const graph=strongDigitGraph(notes,n),seen=new Set();
   for(const root of allCells){if(!graph[root].size||seen.has(root))continue;const color=new Map([[root,0]]),queue=[root];let valid=true;
    for(let k=0;k<queue.length;k++){const a=queue[k];seen.add(a);for(const b of graph[a]){if(!color.has(b)){color.set(b,1-color.get(a));queue.push(b);}else if(color.get(b)===color.get(a))valid=false;}}
    if(!valid)continue;const groups=[queue.filter(i=>color.get(i)===0),queue.filter(i=>color.get(i)===1)];
-   for(const group of groups)if(group.some((a,k)=>group.slice(k+1).some(b=>S.peers(a,b))))yield elimination('Kolorowanie — sprzeczność',queue,group.map(cell=>({cell,digits:[n]})),`Silne połączenia cyfry ${n} tworzą dwie przeciwne grupy: [${groups[0].map(label).join('; ')}] i [${groups[1].map(label).join('; ')}]. Dwa pola jednej grupy widzą się wzajemnie, więc cała ta grupa musi być fałszywa.`);
+   for(const group of groups)if(group.some((a,k)=>group.slice(k+1).some(b=>S.peers(a,b))))yield {...elimination('Kolorowanie — sprzeczność',queue,group.map(cell=>({cell,digits:[n]})),`Silne połączenia cyfry ${n} tworzą dwie przeciwne grupy: [${groups[0].map(label).join('; ')}] i [${groups[1].map(label).join('; ')}]. Dwa pola jednej grupy widzą się wzajemnie, więc cała ta grupa musi być fałszywa.`),groups,coloringDigit:n};
    const removals=allCells.filter(i=>!color.has(i)&&notes[i].includes(n)&&groups.every(g=>g.some(a=>S.peers(i,a)))).map(cell=>({cell,digits:[n]}));
-   if(removals.length)yield elimination('Kolorowanie — pułapka',queue,removals,`Silne połączenia cyfry ${n} tworzą przeciwne grupy: [${groups[0].map(label).join('; ')}] i [${groups[1].map(label).join('; ')}]. Pola docelowe widzą obie grupy. Jedna grupa musi być prawdziwa, więc cyfra odpada z tych pól.`);
+   if(removals.length)yield {...elimination('Kolorowanie — pułapka',queue,removals,`Silne połączenia cyfry ${n} tworzą przeciwne grupy: [${groups[0].map(label).join('; ')}] i [${groups[1].map(label).join('; ')}]. Pola docelowe widzą obie grupy. Jedna grupa musi być prawdziwa, więc cyfra odpada z tych pól.`),groups,coloringDigit:n};
   }
  }
 }
@@ -136,7 +150,7 @@ function findHint(values,manualNotes){
   for(const h of deductions(notes,{isUnique:()=>verifiedUnique(values)})){
    if(!h.removals)return {...h,explanation:(prior.size?'W aktualnym układzie: ':'')+h.explanation};
    const pending=h.removals.map(r=>({cell:r.cell,digits:r.digits.filter(n=>!manualNotes||manualNotes[r.cell]?.includes(n))})).filter(r=>r.digits.length);
-   if(pending.length){const result=elimination(h.technique,h.sources,pending,h.explanation.split(' Usuń wyłącznie')[0]);if(prior.size)result.explanation='W aktualnym układzie: '+result.explanation;return result;}
+   if(pending.length){const result=elimination(h.technique,h.sources,pending,h.explanation.split(' Usuń wyłącznie')[0]);if(h.groups){result.groups=h.groups;result.coloringDigit=h.coloringDigit;}if(prior.size)result.explanation='W aktualnym układzie: '+result.explanation;return result;}
    // An entirely blank notebook means "no notes", not a completed proof.
    if(!manualNotes?.some(a=>a.length))continue;
    for(const r of h.removals)notes[r.cell]=notes[r.cell].filter(n=>!r.digits.includes(n));
@@ -144,11 +158,12 @@ function findHint(values,manualNotes){
   }
   if(!progressed)break;
  }
- return {kind:'none',message:'Nie znalazłem nowego ruchu wśród dostępnych technik: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle (typy 1, 2, 4), kolorowanie oraz łańcuchy X/XY/AIC. Wykonane eliminacje są pomijane. Przy pustych notatkach oblicz kandydatów. Plansza może wymagać jeszcze trudniejszej techniki.'};
+ return {kind:'none',message:'Nie znalazłem nowego ruchu wśród dostępnych technik: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, nagie i ukryte pary, trójki i czwórki, X-Wing, Skyscraper, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle (typy 1, 2, 4), kolorowanie oraz łańcuchy X/XY/AIC. Wykonane eliminacje są pomijane. Przy pustych notatkach oblicz kandydatów. Plansza może wymagać jeszcze trudniejszej techniki.'};
 }
 let uniqueKey='',uniqueResult=false;
 function verifiedUnique(values){const key=values.join('');if(key!==uniqueKey){const result=S.solutionCount(values);uniqueResult=result.complete&&result.count===1;uniqueKey=key;}return uniqueResult;}
 const guides={
+ "Skyscraper":"Wybierz jedną cyfrę i znajdź dwa wiersze, w których ma ona dokładnie po dwa możliwe miejsca. Jedno miejsce z pierwszego wiersza i jedno z drugiego muszą leżeć w tej samej kolumnie: to podstawy. Dwa pozostałe miejsca, w różnych kolumnach, są wierzchołkami. Możesz też zamienić role wierszy i kolumn.\n\nPodstawy widzą się, więc nie mogą obie zawierać wybranej cyfry. Jeśli jeden wierzchołek jej nie zawiera, jego podstawa musi ją zawierać; druga podstawa wtedy odpada, a drugi wierzchołek musi zawierać tę cyfrę. Zatem co najmniej jeden z wierzchołków jest prawdziwy, choć nie wiemy jeszcze który.\n\nUsuń tę cyfrę z innych pól, które widzą oba wierzchołki. Nie usuwaj jej z samych podstaw ani wierzchołków i nie wpisuj wartości na podstawie samego wzorca. Sprawdź dokładnie warunek dwóch miejsc w każdym wybranym wierszu lub kolumnie: trzeci kandydat przerywa to rozumowanie.",
   "Unique Rectangle typ 1": "Tylko dla planszy z potwierdzonym jednym rozwiązaniem: cztery rogi prostokąta w dwóch blokach nie mogą tworzyć tej samej dwucyfrowej pary. Jeśli trzy rogi są taką parą, usuń obie cyfry z czwartego.\n\nCztery narożniki muszą należeć do dwóch wierszy, dwóch kolumn i dokładnie dwóch bloków. Gdyby wszystkie używały wyłącznie tej samej pary, można byłoby zamienić cyfry miejscami w całym prostokącie bez naruszenia tych jednostek. Otrzymalibyśmy drugie rozwiązanie.\n\nPrzy potwierdzonym jednym rozwiązaniu czwarty róg musi więc wybrać cyfrę spoza pary. Usuń z niego obie cyfry pary, ale nie zgaduj, która z dodatkowych jest poprawna. Bez założenia jednoznaczności ten argument nie jest dozwolony.",
   "Unique Rectangle typ 2": "Dwa rogi prostokąta są tą samą parą, a dwa pozostałe mają dodatkowo tę samą trzecią cyfrę. Przy potwierdzonej jednoznaczności co najmniej jeden z dodatkowych rogów musi zawierać tę cyfrę. Usuń ją ze wspólnych sąsiadów tych rogów.\n\nDwa rogi z dodatkową cyfrą są w tej odmianie w jednej jednostce. Gdyby żaden nie wybrał dodatkowej cyfry, wszystkie cztery rogi korzystałyby tylko z pary i powstałby zamienny prostokąt z dwoma rozwiązaniami.\n\nPrzynajmniej jeden z tych dwóch rogów musi więc zawierać dodatkową cyfrę. Każde inne pole widzące oba rogi nie może jej zawierać, niezależnie od tego, który róg ją dostanie. Nie usuwaj jej z samych rogów.",
   "Unique Rectangle typ 4": "Przy potwierdzonej jednoznaczności: dwa rogi są parą, a pozostałe dwa są połączone silnym połączeniem jednej cyfry pary w jednostce. Usuń drugą cyfrę pary z tych dwóch dodatkowych rogów.\n\nDwa dodatkowe rogi dzielą jednostkę, w której jedna cyfra pary występuje jako kandydat tylko w tych rogach. Ta cyfra musi zająć jeden z nich. Gdyby drugi róg użył drugiej cyfry pary, pozostałe dwa rogi także zamknęłyby się w tej parze i można byłoby zamienić cały prostokąt.\n\nJednoznaczność wyklucza taki układ. Usuń drugą cyfrę pary z obu dodatkowych rogów. Silne połączenie dotyczy konkretnej jednostki — same obecne cyfry w dwóch rogach nie wystarczają.",
