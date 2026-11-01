@@ -1,3 +1,8 @@
+# v1.14.6
+
+- Dodano robots.txt, mapę witryny oraz kanoniczne adresy strony głównej i licencji.
+- Dodano metadane Open Graph i karty udostępniania oraz instrukcję rejestracji w Google Search Console.
+
 # v1.14.5
 
 - Ukończenie sudoku nie zmniejsza już planszy ani belki i klawiatury na telefonie.
