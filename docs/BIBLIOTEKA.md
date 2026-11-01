@@ -33,8 +33,10 @@ Importer korzysta z czterech wątków i przyjmuje wyniki w kolejności źródło
 
 ## Dzień i postępy
 
-Łamigłówka dnia jest wybierana z poziomu średniego przez deterministyczny hash daty `YYYY-MM-DD` UTC i indeksu aktualnego zestawu. Jest niezależna od języka, strefy urządzenia i osobistych postępów. Losowanie zwykłe pomija ukończone oraz aktualną planszę, dopóki istnieją świeże; po wyczerpaniu zestawu dopuszcza powtórki.
+Łamigłówka dnia jest wybierana z aktualnie zaznaczonego poziomu trudności przez deterministyczny hash daty `YYYY-MM-DD` UTC i indeksu aktualnego zestawu. Jest niezależna od języka, strefy urządzenia i osobistych postępów. Losowanie zwykłe pomija ukończone oraz aktualną planszę, dopóki istnieją świeże; po wyczerpaniu zestawu dopuszcza powtórki.
 
 Klucz `sudoku-library-v1` w localStorage zawiera ID ukończonych plansz i ostatnie 1000 powiązań planszy z metadanymi. Zapis bieżącej planszy i punktu restartu korzysta z istniejących kluczy. Cofnij, Przywróć i Restart zachowują działanie. Ukończenie wymaga wszystkich 81 cyfr bez konfliktów i zachowania początkowych cyfr danego rekordu. Początkowe cyfry pozostają edytowalne, ale zmienione nie pozwalają zaliczyć pierwotnej łamigłówki.
 
 Postępy nie synchronizują się między urządzeniami ani adresami. Eksport JSON przenosi liczby i kandydatów, nie listę ukończonych i nie metadane biblioteki. Brak dostępu do localStorage nie blokuje gry. Przy błędzie pobierania lub zamknięciu okna przed końcem wczytywania dotychczasowa plansza pozostaje nienaruszona. Zastąpienie istniejącej planszy wymaga potwierdzenia.
+
+Od wersji 1.14.4 każdy poziom trudności ma osobną łamigłówkę dnia. Wybierz poziom, a potem „Łamigłówka dnia”. Wybór planszy zależy od daty UTC i zbioru danego poziomu, nie od lokalnego postępu. Zmiana następuje o północy UTC; dotychczasowy wybór dla poziomu średniego pozostaje zgodny.

@@ -2599,16 +2599,6 @@
     "لغز اليوم",
     "Sudoku del giorno"
   ],
-  "Łamigłówka dnia jest średnia i wspólna dla wszystkich. Zmienia się o północy UTC.": [
-    "The daily puzzle is Medium and the same for everyone. It changes at midnight UTC.",
-    "El sudoku del día es de nivel medio e igual para todos. Cambia a medianoche UTC.",
-    "Das Tagesrätsel ist mittel und für alle gleich. Es wechselt um Mitternacht UTC.",
-    "每日一题为中等难度，所有人题目相同，在 UTC 午夜更新。",
-    "आज की पहेली मध्यम है और सबके लिए समान है। UTC आधी रात को बदलती है।",
-    "Le sudoku du jour est moyen et identique pour tous. Il change à minuit UTC.",
-    "لغز اليوم متوسط وموحد للجميع، ويتغير عند منتصف الليل UTC.",
-    "Il sudoku del giorno è medio e uguale per tutti. Cambia a mezzanotte UTC."
-  ],
   "Źródło plansz:": [
     "Puzzle source:",
     "Fuente de los sudokus:",
@@ -3018,5 +3008,15 @@
     "Comment fonctionne la bibliothèque ?",
     "كيف تعمل مكتبة الألغاز؟",
     "Come funziona la raccolta?"
+  ],
+  "Każdy poziom ma własną łamigłówkę dnia, wspólną dla wszystkich graczy. Wybierz poziom powyżej. Plansze dnia zmieniają się o północy UTC.": [
+    "Each difficulty has its own daily puzzle, shared by all players. Choose a difficulty above. Daily puzzles change at midnight UTC.",
+    "Cada nivel tiene su propio sudoku del día, común para todos los jugadores. Elige un nivel arriba. Los sudokus del día cambian a medianoche UTC.",
+    "Jeder Schwierigkeitsgrad hat sein eigenes Tagesrätsel, das für alle gleich ist. Wähle oben einen Schwierigkeitsgrad. Die Tagesrätsel wechseln um Mitternacht UTC.",
+    "每个难度都有独立的每日题目，对所有玩家相同。请在上方选择难度。每日题目于 UTC 午夜更新。",
+    "हर कठिनाई स्तर की अपनी दैनिक पहेली होती है, जो सभी खिलाड़ियों के लिए समान है। ऊपर कठिनाई चुनें। दैनिक पहेलियाँ UTC की मध्यरात्रि में बदलती हैं।",
+    "Chaque niveau a sa propre grille du jour, identique pour tous les joueurs. Choisissez un niveau ci-dessus. Les grilles du jour changent à minuit UTC.",
+    "لكل مستوى صعوبة لغز يومي خاص به، وهو نفسه لجميع اللاعبين. اختر المستوى أعلاه. تتغير الألغاز اليومية عند منتصف الليل بالتوقيت العالمي UTC.",
+    "Ogni livello ha il proprio sudoku del giorno, uguale per tutti i giocatori. Scegli un livello qui sopra. I sudoku del giorno cambiano a mezzanotte UTC."
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

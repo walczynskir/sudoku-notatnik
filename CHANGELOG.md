@@ -1,3 +1,7 @@
+# v1.14.4
+
+- Łamigłówka dnia korzysta z wybranego poziomu trudności: każdy z czterech poziomów ma własną, wspólną dla wszystkich planszę dnia.
+
 # v1.14.3
 
 - Okno nowej gry zaczyna się od czterech wizualnych kafelków trudności; zaznaczony poziom jest zielony.

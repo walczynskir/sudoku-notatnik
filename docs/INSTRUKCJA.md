@@ -6,7 +6,7 @@ Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angiels
 
 Wybierz **Graj w sudoku** nad planszą lub **Wczytaj → Graj w sudoku**, następnie poziom i **Nowa łamigłówka**. Na telefonie podczas gry duży panel jest ukryty, a przy planszy dostępny jest mały przycisk **Nowa łamigłówka**. Każdy z czterech poziomów ma 2500 plansz. Opcja **Pokaż kandydatów od razu** wypełnia notatki już przy starcie; można je też obliczyć później. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
 
-**Łamigłówka dnia** wybiera wspólną planszę o średnim poziomie, niezależnie od poziomu ustawionego na liście. Zmienia się o północy UTC. Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana.
+**Łamigłówka dnia** wybiera wspólną planszę z zaznaczonego poziomu trudności. Każdy z czterech poziomów ma własną planszę dnia. Zmienia się o północy UTC. Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana.
 
 Ukończone plansze są pamiętane lokalnie i pomijane przy losowaniu nowych, dopóki są dostępne inne. Dzisiejsza łamigłówka jest zawsze ta sama, nawet jeśli została już ukończona. Ukończenie wymaga pełnej, poprawnej planszy z zachowaniem cyfr początkowych. Więcej: [Biblioteka](BIBLIOTEKA.md).
 
@@ -154,3 +154,5 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 Przycisk „Nowa gra” otwiera bibliotekę na komputerze i telefonie. Jest zielony i znajduje się w panelu nad planszą; na telefonie podczas gry panel ma kompaktową postać.
 
 W oknie nowej gry wybierz jeden z czterech kafelków trudności, a następnie „Nowa gra”. Opisy biblioteki są pod przyciskami, w sekcji „Jak działa biblioteka?”. Licznik ukończonych plansz zapisuje identyfikatory plansz w localStorage (`sudoku-library-v1`) dla danej przeglądarki i adresu witryny. Nie korzysta z cookies i nie synchronizuje postępu między urządzeniami.
+
+Od wersji 1.14.4 każdy poziom trudności ma osobną łamigłówkę dnia. Wybierz poziom, a potem „Łamigłówka dnia”. Wybór planszy zależy od daty UTC i zbioru danego poziomu, nie od lokalnego postępu. Zmiana następuje o północy UTC; dotychczasowy wybór dla poziomu średniego pozostaje zgodny.
