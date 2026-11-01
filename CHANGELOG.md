@@ -1,3 +1,8 @@
+# v1.14.1
+
+- Strona autorów i licencji obsługuje wszystkie dziewięć języków, zapamiętany wybór i zmianę języka; oryginalne teksty prawne i nazwy komponentów pozostają bez zmian.
+- Wyrównano szerokość panelu biblioteki i układu planszy na komputerach.
+
 # v1.14.0
 
 - Dodano stronę autorów i licencji oraz pełne teksty licencyjne OCR, jego zależności, fontów i biblioteki sudoku.

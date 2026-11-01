@@ -30,7 +30,7 @@ const api={languages,resolveLanguage,text,get language(){return language;}};root
 if(typeof document==='undefined')return;
 const originalText=new WeakMap(),originalAttributes=new WeakMap();
 function translateNode(node){
- const value=node.nodeValue;if(!value?.trim()||node.parentElement?.closest('script,style,textarea,#language-select'))return;
+ const value=node.nodeValue;if(!value?.trim()||node.parentElement?.closest('script,style,textarea,#language-select,[translate="no"]'))return;
  const saved=originalText.get(node),source=saved&&value===saved.translated?saved.source:value;
  const translated=(source.match(/^\s*/u)?.[0]||'')+text(normalize(source))+(source.match(/\s*$/u)?.[0]||'');
  originalText.set(node,{source,translated});if(value!==translated)node.nodeValue=translated;

@@ -106,3 +106,6 @@
 .cell.hint-color-b .colored-candidate{color:#653187}
 .cell.hint-color-a.selected,.cell.hint-color-b.selected{box-shadow:inset 0 0 0 3px #355e4c}
 .cell.hint-color-a.hint-target,.cell.hint-color-b.hint-target{box-shadow:inset 0 0 0 3px #c68b25}
+
+/* Match the desktop content width to the 560px board, 65px gap and 316px sidebar. */
+@media(min-width:1200px){main{max-width:1005px}}

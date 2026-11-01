@@ -2818,5 +2818,185 @@
     "Aucun nouveau coup parmi les techniques disponibles : candidats uniques, verrouillages, ensembles, ailes, poissons simples, UR 1/2/4, coloriage et chaînes X/XY/AIC. Les éliminations terminées sont ignorées. Calculez les candidats si les notes sont vides. Une autre technique peut être nécessaire.",
     "لم تُعثر على خطوة جديدة بالتقنيات المتاحة: الوحيدات، القفل، المجموعات، الأجنحة، الأسماك الأساسية، UR 1/2/4، التلوين وسلاسل X/XY/AIC. يُتجاوز الحذف المنجز. احسب المرشحين إذا كانت الملاحظات فارغة؛ قد تلزم تقنية أخرى.",
     "Nessuna nuova mossa con le tecniche disponibili: singoli, candidati bloccati, insiemi, ali, pesci semplici, UR 1/2/4, colorazione e catene X/XY/AIC. Le eliminazioni già fatte sono saltate. Calcola i candidati se le note sono vuote. Potrebbe servire un’altra tecnica."
+  ],
+  "Autorzy i licencje · Trener Sudoku": [
+    "Credits and licences · Sudoku Trainer",
+    "Créditos y licencias · Entrenador de Sudoku",
+    "Mitwirkende und Lizenzen · Sudoku-Trainer",
+    "致谢与许可 · 数独教练",
+    "श्रेय और लाइसेंस · सुडोकू प्रशिक्षक",
+    "Crédits et licences · Coach Sudoku",
+    "المساهمون والتراخيص · مدرب السودوكو",
+    "Crediti e licenze · Allenatore di Sudoku"
+  ],
+  "← Wróć do sudoku": [
+    "← Back to Sudoku",
+    "← Volver al sudoku",
+    "← Zurück zum Sudoku",
+    "← 返回数独",
+    "← सुडोकू पर लौटें",
+    "← Retour au sudoku",
+    "← العودة إلى السودوكو",
+    "← Torna al sudoku"
+  ],
+  "Dziękujemy twórcom bibliotek, fontów i kolekcji sudoku wykorzystanych w aplikacji. Poniżej znajdziesz informacje o ich autorach i licencjach.": [
+    "Thank you to the creators of the libraries, fonts and puzzle collection used in the app. Their credits and licences are listed below.",
+    "Gracias a los autores de las bibliotecas, fuentes y colección de sudokus utilizadas en la aplicación. Sus créditos y licencias aparecen a continuación.",
+    "Vielen Dank an die Autoren der verwendeten Bibliotheken, Schriftarten und Sudoku-Sammlung. Ihre Angaben und Lizenzen stehen unten.",
+    "感谢本应用所使用的库、字体和数独题库的创作者。以下列出作者信息和许可。",
+    "ऐप में उपयोग की गई लाइब्रेरी, फ़ॉन्ट और सुडोकू संग्रह के रचनाकारों का धन्यवाद। उनका श्रेय और लाइसेंस नीचे दिए गए हैं।",
+    "Merci aux créateurs des bibliothèques, polices et de la collection de sudokus utilisées dans l’application. Leurs crédits et licences figurent ci-dessous.",
+    "شكراً لمنشئي المكتبات والخطوط ومجموعة السودوكو المستخدمة في التطبيق. ترد معلومات المساهمين والتراخيص أدناه.",
+    "Grazie agli autori delle librerie, dei caratteri e della raccolta di sudoku utilizzati nell’app. I loro crediti e le licenze sono elencati qui sotto."
+  ],
+  "Pełne teksty licencji pozostają w oryginalnym języku.": [
+    "Full licence texts remain in their original language.",
+    "Los textos completos de las licencias se conservan en su idioma original.",
+    "Die vollständigen Lizenztexte bleiben in ihrer Originalsprache.",
+    "完整许可文本保留原始语言。",
+    "लाइसेंस का पूरा पाठ उसकी मूल भाषा में रखा गया है।",
+    "Les textes complets des licences restent dans leur langue d’origine.",
+    "تبقى نصوص التراخيص الكاملة بلغتها الأصلية.",
+    "I testi integrali delle licenze restano nella lingua originale."
+  ],
+  "Te licencje dotyczą wymienionych elementów zewnętrznych. Nie obejmują własnego kodu aplikacji, dla którego nie wybrano jeszcze licencji.": [
+    "These licences cover the listed third-party components. They do not license the app’s own code, for which a licence has not yet been selected.",
+    "Estas licencias cubren los componentes de terceros indicados. No otorgan una licencia al código propio de la aplicación, para el que aún no se ha elegido licencia.",
+    "Diese Lizenzen gelten für die aufgeführten Komponenten Dritter. Sie lizenzieren nicht den eigenen Anwendungscode, für den noch keine Lizenz gewählt wurde.",
+    "这些许可适用于列出的第三方组件，不授予应用自有代码的使用许可；自有代码尚未选定许可证。",
+    "ये लाइसेंस सूचीबद्ध तृतीय-पक्ष घटकों पर लागू होते हैं। ये ऐप के अपने कोड को लाइसेंस नहीं देते, जिसके लिए अभी लाइसेंस नहीं चुना गया है।",
+    "Ces licences concernent les composants tiers indiqués. Elles ne couvrent pas le code propre de l’application, pour lequel aucune licence n’a encore été choisie.",
+    "تشمل هذه التراخيص مكونات الجهات الخارجية المذكورة. ولا تمنح ترخيصاً للشيفرة الخاصة بالتطبيق، التي لم يُختر لها ترخيص بعد.",
+    "Queste licenze riguardano i componenti di terzi elencati. Non concedono una licenza al codice proprio dell’app, per il quale non è stata ancora scelta una licenza."
+  ],
+  "Kod źródłowy projektu": [
+    "Project source",
+    "Código fuente del proyecto",
+    "Quellcode des Projekts",
+    "项目源代码",
+    "परियोजना का स्रोत कोड",
+    "Code source du projet",
+    "الشيفرة المصدرية للمشروع",
+    "Codice sorgente del progetto"
+  ],
+  "Rozpoznawanie cyfr w przeglądarce. Licencja Apache-2.0.": [
+    "Digit recognition in the browser. Apache-2.0 licence.",
+    "Reconocimiento de cifras en el navegador. Licencia Apache-2.0.",
+    "Ziffernerkennung im Browser. Apache-2.0-Lizenz.",
+    "在浏览器中识别数字。Apache-2.0 许可。",
+    "ब्राउज़र में अंकों की पहचान। Apache-2.0 लाइसेंस।",
+    "Reconnaissance des chiffres dans le navigateur. Licence Apache-2.0.",
+    "التعرف على الأرقام في المتصفح. ترخيص Apache-2.0.",
+    "Riconoscimento delle cifre nel browser. Licenza Apache-2.0."
+  ],
+  "Silnik rozpoznawania obrazu. Licencja Apache-2.0.": [
+    "Image recognition engine. Apache-2.0 licence.",
+    "Motor de reconocimiento de imágenes. Licencia Apache-2.0.",
+    "Bilderkennungsmodul. Apache-2.0-Lizenz.",
+    "图像识别引擎。Apache-2.0 许可。",
+    "छवि पहचान इंजन। Apache-2.0 लाइसेंस।",
+    "Moteur de reconnaissance d’images. Licence Apache-2.0.",
+    "محرك التعرف على الصور. ترخيص Apache-2.0.",
+    "Motore di riconoscimento delle immagini. Licenza Apache-2.0."
+  ],
+  "Angielskie dane rozpoznawania tekstu": [
+    "English OCR training data",
+    "Datos de entrenamiento de OCR en inglés",
+    "Englische OCR-Trainingsdaten",
+    "英语文字识别训练数据",
+    "अंग्रेज़ी OCR प्रशिक्षण डेटा",
+    "Données d’entraînement OCR en anglais",
+    "بيانات تدريب التعرف على النصوص الإنجليزية",
+    "Dati di addestramento OCR in inglese"
+  ],
+  "Dane językowe udostępnione przez projekty Tesseract. Licencja Apache-2.0.": [
+    "Language data supplied by the Tesseract projects. Apache-2.0 licence.",
+    "Datos lingüísticos proporcionados por los proyectos Tesseract. Licencia Apache-2.0.",
+    "Sprachdaten der Tesseract-Projekte. Apache-2.0-Lizenz.",
+    "由 Tesseract 项目提供的语言数据。Apache-2.0 许可。",
+    "Tesseract परियोजनाओं द्वारा प्रदान किया गया भाषा डेटा। Apache-2.0 लाइसेंस।",
+    "Données linguistiques fournies par les projets Tesseract. Licence Apache-2.0.",
+    "بيانات لغوية توفرها مشاريع Tesseract. ترخيص Apache-2.0.",
+    "Dati linguistici forniti dai progetti Tesseract. Licenza Apache-2.0."
+  ],
+  "Font udostępniany przez Google Fonts. Autorzy i pełne warunki: w tekście licencji SIL Open Font License 1.1 poniżej.": [
+    "Font served by Google Fonts. Authors and full terms: see the SIL Open Font License 1.1 text below.",
+    "Fuente servida por Google Fonts. Autores y condiciones completas: consulta el texto de SIL Open Font License 1.1 a continuación.",
+    "Schriftart von Google Fonts. Autoren und vollständige Bedingungen: siehe SIL Open Font License 1.1 unten.",
+    "由 Google Fonts 提供的字体。作者与完整条款请见下方 SIL Open Font License 1.1 文本。",
+    "Google Fonts द्वारा उपलब्ध फ़ॉन्ट। लेखक और पूरी शर्तें नीचे SIL Open Font License 1.1 में देखें।",
+    "Police fournie par Google Fonts. Auteurs et conditions complètes : voir le texte SIL Open Font License 1.1 ci-dessous.",
+    "خط توفره Google Fonts. للاطلاع على المؤلفين والشروط الكاملة، انظر نص SIL Open Font License 1.1 أدناه.",
+    "Carattere fornito da Google Fonts. Autori e condizioni complete: consulta il testo SIL Open Font License 1.1 qui sotto."
+  ],
+  "Biblioteka sudoku Sudoku Exchange": [
+    "Sudoku Exchange puzzle bank",
+    "Colección de sudokus Sudoku Exchange",
+    "Sudoku-Sammlung Sudoku Exchange",
+    "Sudoku Exchange 数独题库",
+    "Sudoku Exchange पहेली संग्रह",
+    "Collection de sudokus Sudoku Exchange",
+    "مجموعة ألغاز Sudoku Exchange",
+    "Raccolta di sudoku Sudoku Exchange"
+  ],
+  "Grant McLean i współtwórcy. Domena publiczna / Unlicense. Wersja zbioru:": [
+    "Grant McLean and contributors. Public domain / Unlicense. Dataset revision:",
+    "Grant McLean y colaboradores. Dominio público / Unlicense. Revisión del conjunto:",
+    "Grant McLean und Mitwirkende. Gemeinfrei / Unlicense. Datenstand:",
+    "Grant McLean 及贡献者。公有领域 / Unlicense。数据版本：",
+    "Grant McLean और योगदानकर्ता। सार्वजनिक डोमेन / Unlicense। डेटा संस्करण:",
+    "Grant McLean et les contributeurs. Domaine public / Unlicense. Révision des données :",
+    "Grant McLean والمساهمون. الملك العام / Unlicense. إصدار البيانات:",
+    "Grant McLean e collaboratori. Pubblico dominio / Unlicense. Revisione dei dati:"
+  ],
+  "Biblioteki JavaScript używane przez OCR": [
+    "OCR JavaScript dependencies",
+    "Dependencias JavaScript del OCR",
+    "JavaScript-Bibliotheken für OCR",
+    "文字识别的 JavaScript 依赖",
+    "OCR की JavaScript निर्भरताएँ",
+    "Dépendances JavaScript de l’OCR",
+    "مكتبات JavaScript المستخدمة في التعرف على النصوص",
+    "Dipendenze JavaScript dell’OCR"
+  ],
+  "Informacje o właścicielach praw autorskich i pełne warunki znajdują się w poniższych plikach.": [
+    "Copyright holders and full terms are listed in the files below.",
+    "Los titulares de los derechos de autor y las condiciones completas figuran en los archivos siguientes.",
+    "Urheber und vollständige Bedingungen stehen in den folgenden Dateien.",
+    "版权所有者和完整条款列于以下文件中。",
+    "कॉपीराइट धारकों और पूरी शर्तों की जानकारी नीचे की फ़ाइलों में है।",
+    "Les titulaires des droits et les conditions complètes figurent dans les fichiers ci-dessous.",
+    "ترد أسماء أصحاب حقوق النشر والشروط الكاملة في الملفات أدناه.",
+    "I titolari dei diritti d’autore e le condizioni complete sono indicati nei file qui sotto."
+  ],
+  "Komponenty silnika OCR": [
+    "Native OCR components",
+    "Componentes nativos del OCR",
+    "Native OCR-Komponenten",
+    "文字识别引擎的原生组件",
+    "OCR इंजन के मूल घटक",
+    "Composants natifs de l’OCR",
+    "مكونات محرك التعرف على النصوص",
+    "Componenti nativi dell’OCR"
+  ],
+  "Teksty pochodzą z wersji komponentów używanych przez Tesseract.js-core 5.1.1. Każdy komponent zachowuje własne warunki licencji.": [
+    "The texts come from the component revisions used by Tesseract.js-core 5.1.1. Each component retains its own licence terms.",
+    "Los textos proceden de las versiones de los componentes utilizados por Tesseract.js-core 5.1.1. Cada componente conserva sus propias condiciones de licencia.",
+    "Die Texte stammen aus den von Tesseract.js-core 5.1.1 verwendeten Komponentenständen. Jede Komponente behält ihre eigenen Lizenzbedingungen.",
+    "文本来自 Tesseract.js-core 5.1.1 使用的组件版本。每个组件保留其各自的许可条款。",
+    "ये पाठ Tesseract.js-core 5.1.1 द्वारा उपयोग किए गए घटक संस्करणों से हैं। हर घटक की अपनी लाइसेंस शर्तें लागू रहती हैं।",
+    "Les textes proviennent des versions des composants utilisées par Tesseract.js-core 5.1.1. Chaque composant conserve ses propres conditions de licence.",
+    "تأتي النصوص من إصدارات المكونات المستخدمة في Tesseract.js-core 5.1.1. يحتفظ كل مكون بشروط ترخيصه الخاصة.",
+    "I testi provengono dalle revisioni dei componenti usate da Tesseract.js-core 5.1.1. Ogni componente mantiene le proprie condizioni di licenza."
+  ],
+  "Biblioteki OCR są pobierane z jsDelivr, a fonty z Google Fonts. Nie modyfikujemy tych bibliotek. Kod analizujący sudoku i objaśnienia są własną częścią aplikacji.": [
+    "OCR libraries are loaded from jsDelivr and fonts from Google Fonts. These libraries are unmodified. The Sudoku solver code and explanations belong to the app itself.",
+    "Las bibliotecas OCR se cargan desde jsDelivr y las fuentes desde Google Fonts. Estas bibliotecas no se han modificado. El código del solucionador y las explicaciones son propios de la aplicación.",
+    "OCR-Bibliotheken werden von jsDelivr, Schriftarten von Google Fonts geladen. Diese Bibliotheken sind unverändert. Sudoku-Lösungscode und Erklärungen gehören zur Anwendung selbst.",
+    "文字识别库从 jsDelivr 加载，字体来自 Google Fonts。这些库未经修改。数独求解代码和讲解为本应用自有部分。",
+    "OCR लाइब्रेरी jsDelivr से और फ़ॉन्ट Google Fonts से लोड होते हैं। इन लाइब्रेरी में बदलाव नहीं किया गया है। सुडोकू हल करने का कोड और व्याख्याएँ ऐप का अपना हिस्सा हैं।",
+    "Les bibliothèques OCR sont chargées depuis jsDelivr et les polices depuis Google Fonts. Ces bibliothèques ne sont pas modifiées. Le code de résolution et les explications sont propres à l’application.",
+    "تُحمّل مكتبات التعرف على النصوص من jsDelivr والخطوط من Google Fonts. لم تُعدّل هذه المكتبات. شيفرة حل السودوكو والشروحات جزء خاص بالتطبيق.",
+    "Le librerie OCR vengono caricate da jsDelivr e i caratteri da Google Fonts. Queste librerie non sono modificate. Il codice di risoluzione e le spiegazioni sono parte propria dell’app."
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

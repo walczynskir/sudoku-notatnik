@@ -57,7 +57,7 @@ Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji n
 
 ## Wersje
 
-Aktualne wydanie: **1.14.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
+Aktualne wydanie: **1.14.1**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
 
 Wersja 1.x obejmuje analizę i wyjaśnienia technik, także Unique Rectangles, kolorowania i łańcuchów. Dokładne warianty i ograniczenia: [Zakres technik](docs/TECHNIKI.md). Generowanie plansz do nauki, ścieżki treningowe i ewentualny płatny dostęp są planowane na wersję 2; nie są częścią obecnej aplikacji.
 

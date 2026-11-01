@@ -37,3 +37,9 @@ test('translated coordinates keep row and column identities in Hindi and Arabic'
 test('Skyscraper explanation translates in every language and preserves coordinates',()=>{
  const values=[...'030107400006000053000006000904000500200030009000040800020700080500928000000000060'].map(Number),notes=values.map((_,i)=>S.candidates(values,i));const h=[...H.deductions(notes)].find(h=>h.technique==='Skyscraper');assert(h);for(const lang of langs){const text=I.text(h.explanation,lang);assert(!/[ąćęłńśźż]/i.test(text),text);assert.deepEqual(text.match(/\d+/g),h.explanation.match(/\d+/g));}
 });
+
+test('credits page labels are translated in all supported languages',()=>{
+ const html=fs.readFileSync(require.resolve('../dist/credits.html'),'utf8');assert(html.includes('id="language-select"'));assert(html.includes('src="i18n.js?v='));
+ const readable=html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<(h2|ul|p)\b[^>]*translate="no"[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<select\b[^>]*>[\s\S]*?<\/select>/g,'');
+ for(const match of readable.matchAll(/>([^<>]+)</g)){const key=match[1].trim();if(!key)continue;assert(C[key],key);for(const lang of langs)assert.notEqual(I.text(key,lang),key,key+' '+lang);}
+});
