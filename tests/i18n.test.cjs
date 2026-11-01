@@ -7,7 +7,7 @@ test('every supported technique and guide is translated',()=>{
  for(const [name,guide]of Object.entries(H.guides))for(const lang of langs){assert(C[name],name);assert(C[guide],name);assert.notEqual(I.text(guide,lang),guide,name);assert(!/[ąćęłńśźż]/i.test(I.text(guide,lang)),name);}
 });
 test('browser language negotiation and unsupported fallback',()=>{
- assert.equal(I.resolveLanguage(['fr-FR','es-MX']),'es');assert.equal(I.resolveLanguage(['de-AT']),'de');assert.equal(I.resolveLanguage(['zh-CN']),'zh-Hans');assert.equal(I.resolveLanguage(['zh-TW']),'zh-Hans');assert.equal(I.resolveLanguage(['pl-PL']),'pl');assert.equal(I.resolveLanguage(['fr']),'en');
+ assert.equal(I.resolveLanguage(['fr-FR','es-MX']),'es');assert.equal(I.resolveLanguage(['de-AT']),'de');assert.equal(I.resolveLanguage(['zh-CN']),'zh-Hans');assert.equal(I.resolveLanguage(['zh-TW']),'zh-Hans');assert.equal(I.resolveLanguage(['pl-PL']),'pl');assert.equal(I.resolveLanguage(['fr']),'en');assert.equal(I.resolveLanguage([]),'en');assert.equal(I.resolveLanguage(undefined),'en');assert.equal(I.resolveLanguage(null),'en');assert.equal(I.resolveLanguage(['']),'en');
 });
 test('dynamic progress, coordinates, proof histories and OCR summaries preserve values',()=>{
  const cases=['Wiersz 3, kolumna 8: puste, kandydaci 2, 6, konflikt','Rozpoznawanie pola 47 z 81…','Rozpoznano 24 cyfr. Sprawdź wynik z obrazkiem. Pola z niepewnym odczytem (3) mają bursztynowe tło.','Wypełniono 17 pól z pojedynczym kandydatem. Całą operację możesz cofnąć jednym krokiem.','Po uwzględnieniu już wykonanych, logicznie potwierdzonych eliminacji (Naga para, Ukryta trójka): W wierszu 4 wszystkie miejsca dla cyfry 6 leżą także w kwadracie 5. Usuń wyłącznie wskazanych kandydatów: wiersz 5, kolumna 8 → 6; wiersz 6, kolumna 8 → 6.'];
@@ -26,4 +26,8 @@ test('switching language restores original text, preserves input and tolerates b
 test('all static interface labels have catalog or dynamic-template coverage',()=>{
  const html=fs.readFileSync(require.resolve('../dist/index.html'),'utf8'),labels=[...html.matchAll(/>([^<>]+)</g)].map(m=>m[1]),attributes=[...html.matchAll(/(?:aria-label|title)="([^"]+)"/g)].map(m=>m[1]),keys=new Set(Object.keys(C).map(s=>s.replace(/\s+/g,' ').trim()));
  for(let source of [...labels,...attributes]){source=source.replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();if(!/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż]/.test(source)||['Polski','English','Español','Deutsch','Language / Język'].includes(source)||/^v\d+\.\d+\.\d+$/.test(source))continue;assert(keys.has(source)||I.text(source,'en')!==source,source);}
+});
+
+test('every technique has a multi-paragraph lesson in every language without board coordinates',()=>{
+ for(const [name,guide]of Object.entries(H.guides))for(const lang of ['pl',...langs]){const lesson=I.text(guide,lang);assert(lesson.split(/\n\s*\n/).length>=3,name+' '+lang);assert(lesson.length>(lang==='zh-Hans'?100:300),name+' '+lang);assert(!/wiersz \d+, kolumna \d+|row \d+, column \d+/.test(lesson),name);}
 });

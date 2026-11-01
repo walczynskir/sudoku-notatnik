@@ -1,5 +1,11 @@
 # Historia zmian
 
+## 1.12.1
+
+- Rozbudowane lekcje wszystkich 23 technik w pięciu językach: rozpoznawanie, uzasadnienie, kierunek eliminacji i typowe pomyłki.
+- Czytelne akapity i opcjonalne objaśnienie pojęć, bez ujawniania pól w pierwszym etapie podpowiedzi.
+- Dodatkowe testy potwierdzają angielski domyślny przy braku języka przeglądarki.
+
 ## 1.12.0
 
 - Angielski, hiszpański, niemiecki i chiński uproszczony obok polskiego.

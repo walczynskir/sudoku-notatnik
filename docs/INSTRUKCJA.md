@@ -88,7 +88,7 @@ Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana 
 ## Podpowiedź: technika, zasada i ruch
 
 1. Kliknij **Podpowiedz technikę**. Zobaczysz wyłącznie nazwę najłatwiejszej znalezionej techniki, bez cyfr, pól i ich podświetlania.
-2. Opcjonalnie rozwiń **Na czym polega?** pod nazwą techniki: znajdziesz ogólną zasadę bez cyfr i współrzędnych z własnej planszy. Sekcję można ponownie zwinąć. Nowa podpowiedź zawsze zaczyna ze zwiniętą zasadą.
+2. Opcjonalnie rozwiń **Na czym polega?** pod nazwą techniki: znajdziesz ogólną zasadę, sposób rozpoznania układu, uzasadnienie i typowe pułapki, bez cyfr i współrzędnych z własnej planszy. W razie potrzeby rozwiń także **Pojęcia użyte w wyjaśnieniu**. Sekcję można ponownie zwinąć. Nowa podpowiedź zawsze zaczyna ze zwiniętą zasadą.
 3. Jeśli chcesz więcej pomocy, kliknij **Pokaż pola i wyjaśnienie ruchu**. Ciemnozielona ramka oznacza aktualnie wybrane przez Ciebie pole. Niebieskie pola tworzą wskazówkę, a bursztynowa obwódka wskazuje miejsca do eliminacji kandydatów. Wyjaśnienie opisuje konkretny ruch.
 
 Wskazówkę można ukryć; każda edycja danych i cofnięcie automatycznie ją usuwa. Podpowiedź nie wpisuje liczb, nie zmienia notatek i nie trafia do historii cofania.
