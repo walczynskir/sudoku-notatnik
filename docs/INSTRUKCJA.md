@@ -150,3 +150,5 @@ Skyscraper jest rozpoznawany przed ogólnym kolorowaniem. W kolorowaniu po odsł
 ### Autorzy i licencje
 
 Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i danych oraz pełne teksty licencyjne. Oryginalne teksty prawne pozostają w języku źródłowym.
+
+Przycisk „Nowa gra” otwiera bibliotekę na komputerze i telefonie. Jest zielony i znajduje się w panelu nad planszą; na telefonie podczas gry panel ma kompaktową postać.

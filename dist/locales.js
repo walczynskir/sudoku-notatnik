@@ -2998,5 +2998,15 @@
     "Les bibliothèques OCR sont chargées depuis jsDelivr et les polices depuis Google Fonts. Ces bibliothèques ne sont pas modifiées. Le code de résolution et les explications sont propres à l’application.",
     "تُحمّل مكتبات التعرف على النصوص من jsDelivr والخطوط من Google Fonts. لم تُعدّل هذه المكتبات. شيفرة حل السودوكو والشروحات جزء خاص بالتطبيق.",
     "Le librerie OCR vengono caricate da jsDelivr e i caratteri da Google Fonts. Queste librerie non sono modificate. Il codice di risoluzione e le spiegazioni sono parte propria dell’app."
+  ],
+  "Nowa gra": [
+    "New game",
+    "Nueva partida",
+    "Neues Spiel",
+    "新游戏",
+    "नया खेल",
+    "Nouvelle partie",
+    "لعبة جديدة",
+    "Nuova partita"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

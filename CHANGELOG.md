@@ -1,3 +1,8 @@
+# v1.14.2
+
+- Ujednolicono przycisk „Nowa gra” i jego zielone wyróżnienie na komputerach i telefonach.
+- Na telefonie przycisk pozostaje w tym samym panelu nad planszą; podczas gry panel jest kompaktowy. Usunięto osobny przycisk obok opisu planszy.
+
 # v1.14.1
 
 - Strona autorów i licencji obsługuje wszystkie dziewięć języków, zapamiętany wybór i zmianę języka; oryginalne teksty prawne i nazwy komponentów pozostają bez zmian.
