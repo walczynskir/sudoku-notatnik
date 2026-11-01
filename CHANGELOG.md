@@ -1,5 +1,7 @@
 # v1.14.4
 
+- Uporządkowano dokumentację: aktualne nazwy i układ Nowej gry, dziewięć języków, Skyscraper i kolorowanie, licencje oraz zasady zapisu postępu.
+
 - Łamigłówka dnia korzysta z wybranego poziomu trudności: każdy z czterech poziomów ma własną, wspólną dla wszystkich planszę dnia.
 
 # v1.14.3

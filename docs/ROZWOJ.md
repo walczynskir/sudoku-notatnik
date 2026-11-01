@@ -8,17 +8,20 @@
 | `dist/style.css` | Wygląd i układ responsywny |
 | `dist/logic.js` | Reguły sudoku, kandydaci, konflikty, walidacja i parser importu |
 | `dist/app.js` | Stan, historia, zapis lokalny, zdarzenia, import/eksport, OCR i przenoszenie sterowania na telefonie |
-| `dist/library.js` | Biblioteka plansz, dzień UTC i lokalna lista ukończeń |
+| `dist/library.js` | Biblioteka plansz, wizualny wybór poziomu, dzień UTC osobno dla każdego poziomu i lokalna lista ukończeń |
 | `scripts/import-puzzles.mjs` | Import i walidacja źródła na czterech wątkach |
 | `tests/library.test.cjs` | Integralność i unikalność 10 000 plansz oraz próbki pełnej ścieżki podpowiedzi |
-| `dist/locales.js` | Katalog tłumaczeń czterech języków względem polskich źródeł |
+| `dist/locales.js` | Katalog ośmiu tłumaczeń względem polskich źródeł (dziewięć języków interfejsu) |
+| `dist/credits.html` | Wielojęzyczna strona autorów i licencji |
+| `dist/licenses/` | Oryginalne teksty licencyjne zależności i danych |
+| `THIRD_PARTY_NOTICES.md` | Wykaz zależności, źródeł i przypisanych licencji |
 | `dist/i18n.js` | Dobór języka, lokalizacja komunikatów i warstwa DOM bez zmiany danych |
 | `tests/i18n.test.cjs` | Kompletność tłumaczeń, wartości dynamiczne, etykiety i przełączanie |
 | `dist/hints.js` | Niezależna od notatek analiza technik; wynik z nazwą, polami źródłowymi, celami eliminacji i wyjaśnieniem |
 | `tests/hints.test.cjs` | Przykłady technik, X-Wing w obu orientacjach, kolejność, odtwarzanie eliminacji, poprawność względem znanego rozwiązania, stany błędów |
 | `dist/camera.js` | Sesja kamery, jej zwalnianie i zrobienie zdjęcia |
 | `dist/ocr.js` | Przygotowanie obrazu komórek i strategia ponawiania odczytów |
-| `tests/advanced-hints.test.cjs` | Czwórki, skrzydła, ryby, UR, kolorowanie, łańcuchy i poprawność względem znanych rozwiązań |
+| `tests/advanced-hints.test.cjs` | Czwórki, skrzydła, ryby, Skyscraper, UR, kolorowanie, łańcuchy i poprawność względem znanych rozwiązań |
 | `tests/ocr.test.cjs` | Przetwarzanie pikseli oraz wybór wyniku OCR |
 | `tests/ocr-review.test.cjs` | Przegląd wyniku, ponowne zdjęcie, przesuwanie i rozmiar kadru, drobny obrót |
 | `tests/history.test.cjs` | Cofanie, przywracanie oraz migawki planszy i punktu restartu |
@@ -60,6 +63,8 @@ Uruchom polecenia kontroli składni i testy z README. Następnie ręcznie sprawd
 - Eksport/import JSON; nieprawidłowy tekst bez utraty obecnej planszy.
 - Odświeżenie i odtworzenie zapisu; reset historii po przeładowaniu.
 - Widok telefonu (np. 360 × 640), komputer i zmiana orientacji. Sterowanie powinno istnieć w jednej kopii i zachowywać działanie po przeniesieniu.
+- Biblioteka: wybór wszystkich czterech poziomów, zwykła i codzienna plansza zgodna z poziomem, licznik ukończeń i anulowanie pobierania.
+- Języki: wybór i zapamiętanie języka także na stronie autorów i licencji, arabski RTL oraz niezmienione pliki prawne.
 - Aparat: odmowa zgody, zamknięcie przed udzieleniem zgody, zdjęcie i przejście do OCR, powrót do strony.
 
 Testy kamery nie używają prawdziwego sprzętu. Test zapisu migawki nie zastępuje pełnego testu integracyjnego przycisku Cofnij. Dotychczasowy podgląd mobilny był symulowany w przeglądarce, nie na fizycznym telefonie.
@@ -96,9 +101,9 @@ Publikacja w Sites wymaga zapisania wersji odpowiadającej wysłanemu commitowi 
 
 Na hostingu statycznym opublikuj zawartość `dist/`, tak aby `index.html` był dokumentem startowym. Nie publikuj całego repozytorium ani katalogu `.git`. Zapewnij HTTPS dla kamery. Nie trzeba konfigurować serwera aplikacyjnego ani zmiennych środowiskowych.
 
-Zmiana adresu strony oznacza inną przestrzeń localStorage. Przed przeniesieniem wyeksportuj planszę do JSON i zaimportuj ją pod nowym adresem. Import nie przenosi historii cofania ani oryginalnego punktu restartu.
+Zmiana adresu strony oznacza inną przestrzeń localStorage. Przed przeniesieniem wyeksportuj planszę do JSON i zaimportuj ją pod nowym adresem. Import nie przenosi historii cofania, oryginalnego punktu restartu ani listy ukończonych plansz i metadanych biblioteki.
 
-Silnik `hints.js`: generator `deductions(notes, options)` emituje ruchy w ustalonej kolejności; eliminacje mają listę `removals: [{cell, digits}]`. `findHint(values, manualNotes)` buduje bazowe możliwości z liczb i filtruje cele według notatek. Całkowicie wykonane, udowodnione eliminacje odtwarza na roboczej kopii kandydatów, po czym ponawia analizę. Każdy taki krok usuwa co najmniej jednego kandydata; limit 730 przebiegów przekracza maksymalną liczbę 729 kandydatów. Pusty notatnik nie uruchamia odtwarzania. Dane użytkownika pozostają bez zmian.
+Silnik `hints.js`: generator `deductions(notes, options)` emituje ruchy w ustalonej kolejności; eliminacje mają listę `removals: [{cell, digits}]`. `findHint(values, manualNotes)` buduje bazowe możliwości z liczb i filtruje cele według notatek. Całkowicie wykonane, udowodnione eliminacje odtwarza na roboczej kopii kandydatów, po czym ponawia analizę. Każdy taki krok usuwa co najmniej jednego kandydata; limit 730 przebiegów przekracza maksymalną liczbę 729 kandydatów. Pusty notatnik nie uruchamia odtwarzania. Dane użytkownika pozostają bez zmian. Wskazówki kolorowania dodatkowo zawierają `groups` (dwie tablice indeksów pól) i `coloringDigit`; warstwa UI wyróżnia grupę A na niebiesko, grupę B na fioletowo, a analizowaną cyfrę pogrubieniem i podkreśleniem.
 
 ## Wersjonowanie
 
@@ -118,7 +123,7 @@ node --test tests/*.test.cjs
 
 Zaktualizuj także `CHANGELOG.md`, zapisz zmiany w commicie, po udanych kontrolach oznacz ten commit adnotowanym tagiem `v1.1.1` i wyślij commit oraz tag do GitHuba. Nie przenoś istniejących tagów na inne commity. Przykładowy numer powyżej nie oznacza istniejącego wydania.
 
-CI sprawdza zgodność stopki z VERSION. Numery są nadawane świadomie przy wydaniu, nie przy każdym commicie. Push na main publikuje stronę po testach; sam tag nie uruchamia osobnej publikacji. Historia zmian: `CHANGELOG.md`. Dane użytkownika i eksport JSON mają osobne oznaczenie formatu `sudoku-notatnik-v1`, niezależne od numeru aplikacji.
+CI sprawdza zgodność stopki i adresów skryptów strony licencji z VERSION. Numery są nadawane świadomie przy wydaniu, nie przy każdym commicie. Push na main publikuje stronę po testach; sam tag nie uruchamia osobnej publikacji. Historia zmian: `CHANGELOG.md`. Dane użytkownika i eksport JSON mają osobne oznaczenie formatu `sudoku-notatnik-v1`, niezależne od numeru aplikacji.
 
 OCR: `dist/ocr.js` zawiera adaptacyjny próg Otsu, analizę składowych obrazu pola do usunięcia linii siatki, normalizację cyfry z białym marginesem i ponowienia PSM 10/13/8 dla niepewnych wyników. Pierwszy odczyt z oceną co najmniej 92 kończy próby; inaczej wynik wybierany jest według zgodności prób, następnie pewności. Rozbieżność lub pewność poniżej 75 oznacza pole jako niepewne. Puste pole z wykrytym znakiem także wymaga sprawdzenia. Oceny silnika nie są skalibrowanym prawdopodobieństwem poprawności. Testy `tests/ocr.test.cjs` obejmują przygotowanie pikseli i strategię ponowień.
 
@@ -139,6 +144,6 @@ Dawna gałąź `codex/v2-techniques` pozostaje archiwalnym punktem odniesienia. 
 
 Współrzędne gestu są przeliczane przez `photoPoint`, z uwzględnieniem pustych pasów wynikających z `object-fit: contain`. Przeciąganie narożnika zachowuje przeciwległy narożnik i ogranicza kwadrat do rozmiarów zdjęcia. Zmiany kadru lub kąta ukrywają poprzedni odczyt; podczas OCR edycja jest zablokowana. Wybór innej kamery zamyka poprzedni strumień, a numer żądania zapobiega przyjęciu opóźnionego strumienia.
 
-Lokalizacja: [Języki i tłumaczenia](JEZYKI.md). Skrypt wersjonowania aktualizuje również adresy `locales.js` i `i18n.js`, aby zapobiec mieszaniu starych i nowych tłumaczeń.
+Lokalizacja: [Języki i tłumaczenia](JEZYKI.md). Skrypt wersjonowania aktualizuje również adresy `locales.js` i `i18n.js` w `index.html` oraz `credits.html`, aby zapobiec mieszaniu starych i nowych tłumaczeń.
 
 Biblioteka i jej audyt: [Biblioteka łamigłówek](BIBLIOTEKA.md). Odpowiedzi źródłowe nie są dołączane do danych biblioteki, a źródłowe oceny nie zmieniają rankingu naszego analizatora.

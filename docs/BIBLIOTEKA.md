@@ -1,6 +1,6 @@
 # Biblioteka gotowych sudoku
 
-Wydanie 1.13.0 zawiera 10 000 różnych zapisów plansz, po 2500 na poziom łatwy, średni, trudny i ekspert. Nie jest to generator treningowy wersji 2. Plansze są gotowymi danymi statycznymi; ich wczytywanie nie wymaga konta, bazy danych ani zewnętrznego API.
+Od wydania 1.13.0 biblioteka zawiera 10 000 różnych zapisów plansz, po 2500 na poziom łatwy, średni, trudny i ekspert. Nie jest to generator treningowy wersji 2. Plansze są gotowymi danymi statycznymi; ich wczytywanie nie wymaga konta, bazy danych ani zewnętrznego API.
 
 ## Źródło i licencja
 
@@ -20,7 +20,7 @@ Manifest przechowuje wersję i hash silnika użytego do walidacji oraz limity. K
 
 `dist/puzzles/manifest.json` zawiera indeks i hashe SHA-256. Dane są podzielone na partie po 500 rekordów; strona pobiera indeks i tylko potrzebną partię. `dist/library.js` obsługuje wybór, codzienną planszę i postęp. Nie zmienia reguł rozwiązywania.
 
-`tests/library.test.cjs` sprawdza liczebność całego zestawu, brak identycznych plansz i ID, hashe partii, unikalność rozwiązania każdej planszy, format profili oraz ponowny pełny przebieg podpowiedzi dla próbki z każdej partii. Osobno testuje losowanie, deterministyczny wybór dnia i zgodność cyfr początkowych.
+`tests/library.test.cjs` sprawdza liczebność całego zestawu, brak identycznych plansz i ID, hashe partii, unikalność rozwiązania każdej planszy, format profili oraz ponowny pełny przebieg podpowiedzi dla próbki z każdej partii. Osobno testuje losowanie, deterministyczny wybór dnia, wczytanie codziennej planszy z każdego z czterech poziomów, wybór kafelka i zgodność cyfr początkowych. Profile i liczby kroków dotyczą silnika z momentu importu; nowszy analizator może wybrać inną poprawną ścieżkę.
 
 Aby odtworzyć import, przygotuj pliki `easy.txt`, `medium.txt`, `hard.txt`, `diabolical.txt` i `LICENSE.txt` z podanej rewizji w katalogu lokalnym, a potem uruchom:
 
@@ -37,6 +37,6 @@ Importer korzysta z czterech wątków i przyjmuje wyniki w kolejności źródło
 
 Klucz `sudoku-library-v1` w localStorage zawiera ID ukończonych plansz i ostatnie 1000 powiązań planszy z metadanymi. Zapis bieżącej planszy i punktu restartu korzysta z istniejących kluczy. Cofnij, Przywróć i Restart zachowują działanie. Ukończenie wymaga wszystkich 81 cyfr bez konfliktów i zachowania początkowych cyfr danego rekordu. Początkowe cyfry pozostają edytowalne, ale zmienione nie pozwalają zaliczyć pierwotnej łamigłówki.
 
-Postępy nie synchronizują się między urządzeniami ani adresami. Eksport JSON przenosi liczby i kandydatów, nie listę ukończonych i nie metadane biblioteki. Brak dostępu do localStorage nie blokuje gry. Przy błędzie pobierania lub zamknięciu okna przed końcem wczytywania dotychczasowa plansza pozostaje nienaruszona. Zastąpienie istniejącej planszy wymaga potwierdzenia.
+Każdy identyfikator ukończonej planszy jest liczony tylko raz, także po ponownym rozwiązaniu. Postęp nie korzysta z cookies. Wyczyszczenie danych witryny usuwa zapis. Postępy nie synchronizują się między urządzeniami, profilami przeglądarki ani adresami. Eksport JSON przenosi liczby i kandydatów, nie listę ukończonych i nie metadane biblioteki. Brak dostępu do localStorage nie blokuje gry. Przy błędzie pobierania lub zamknięciu okna przed końcem wczytywania dotychczasowa plansza pozostaje nienaruszona. Zastąpienie istniejącej planszy wymaga potwierdzenia.
 
 Od wersji 1.14.4 każdy poziom trudności ma osobną łamigłówkę dnia. Wybierz poziom, a potem „Łamigłówka dnia”. Wybór planszy zależy od daty UTC i zbioru danego poziomu, nie od lokalnego postępu. Zmiana następuje o północy UTC; dotychczasowy wybór dla poziomu średniego pozostaje zgodny.

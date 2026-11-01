@@ -1,6 +1,6 @@
 # Języki i tłumaczenia
 
-Od wersji 1.12.0 dostępne są: Polski (`pl`), English (`en`), Español (`es`), Deutsch (`de`) 简体中文 — chiński uproszczony (`zh-Hans`), हिन्दी — hindi (`hi`), Français — francuski (`fr`), العربية — arabski (`ar`) i Italiano — włoski (`it`). Chiński tradycyjny nie ma osobnego tłumaczenia.
+Dostępne języki: Polski (`pl`), English (`en`), Español (`es`), Deutsch (`de`), 简体中文 — chiński uproszczony (`zh-Hans`), हिन्दी — hindi (`hi`), Français — francuski (`fr`), العربية — arabski (`ar`) i Italiano — włoski (`it`). Chiński tradycyjny nie ma osobnego tłumaczenia.
 
 ## Wybór języka
 

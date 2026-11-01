@@ -4,11 +4,19 @@ Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angiels
 
 ## Gotowe łamigłówki
 
-Wybierz **Graj w sudoku** nad planszą lub **Wczytaj → Graj w sudoku**, następnie poziom i **Nowa łamigłówka**. Na telefonie podczas gry duży panel jest ukryty, a przy planszy dostępny jest mały przycisk **Nowa łamigłówka**. Każdy z czterech poziomów ma 2500 plansz. Opcja **Pokaż kandydatów od razu** wypełnia notatki już przy starcie; można je też obliczyć później. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
+1. Kliknij zielony przycisk **Nowa gra** w panelu nad planszą lub wybierz **Wczytaj → Nowa gra**.
+2. W otwartym oknie zaznacz jeden z czterech kafelków: **Łatwy**, **Średni**, **Trudny**, **Ekspert**. Wybrany poziom ma zielone tło; na telefonie kafelki układają się w dwa rzędy.
+3. Opcjonalnie zaznacz **Pokaż kandydatów od razu**, a potem kliknij **Nowa gra**. Każdy poziom ma 2500 plansz. Notatki można też obliczyć później.
 
-**Łamigłówka dnia** wybiera wspólną planszę z zaznaczonego poziomu trudności. Każdy z czterech poziomów ma własną planszę dnia. Zmienia się o północy UTC. Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana.
+Przycisk nad planszą ma tę samą nazwę i kolor na komputerze i telefonie. Na telefonie podczas gry panel staje się kompaktowy. Dłuższe informacje o bibliotece, ocenach, kandydatach i źródle znajdują się pod przyciskami w rozwijanej sekcji **Jak działa biblioteka?**.
 
-Ukończone plansze są pamiętane lokalnie i pomijane przy losowaniu nowych, dopóki są dostępne inne. Dzisiejsza łamigłówka jest zawsze ta sama, nawet jeśli została już ukończona. Ukończenie wymaga pełnej, poprawnej planszy z zachowaniem cyfr początkowych. Więcej: [Biblioteka](BIBLIOTEKA.md).
+**Łamigłówka dnia** korzysta z zaznaczonego poziomu. Każdy z czterech poziomów ma własną planszę dnia, wspólną dla wszystkich graczy. Plansze zmieniają się o północy UTC i nie zależą od języka ani lokalnego postępu. Ponowne wybranie tego samego poziomu tego dnia otwiera tę samą planszę, nawet jeśli została już ukończona.
+
+Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
+
+Licznik pokazuje liczbę różnych ukończonych plansz na wybranym poziomie. Ponowne ukończenie tej samej nie zwiększa wyniku. Ukończenie wymaga pełnej, poprawnej planszy z zachowaniem cyfr początkowych. Przy losowaniu nowych pomijamy ukończone plansze, dopóki są dostępne inne.
+
+Postęp jest zapisywany w **localStorage**, nie w cookies, pod kluczem `sudoku-library-v1`. Dotyczy danej przeglądarki, jej profilu i adresu strony. Nie synchronizuje się między urządzeniami; wyczyszczenie danych witryny go usuwa. Eksport JSON planszy nie zawiera tego licznika. Więcej: [Biblioteka](BIBLIOTEKA.md).
 
 ## Wpisywanie liczb i kandydatów
 
@@ -25,10 +33,10 @@ Powtarzające się liczby w wierszu, kolumnie lub bloku są oznaczane na czerwon
 
 ## Cofanie, czyszczenie i restart
 
-- **Cofnij ostatnią zmianę** przywraca liczby i kandydatów; obejmuje także import, czyszczenie i restart. Nie ma ustalonego limitu liczby kroków w bieżącej sesji. Historia zajmuje pamięć przeglądarki i znika po odświeżeniu strony.
+- **Cofnij** przywraca liczby i kandydatów; obejmuje także import, czyszczenie i restart. Nie ma ustalonego limitu liczby kroków w bieżącej sesji. Historia zajmuje pamięć przeglądarki i znika po odświeżeniu strony.
 - **Wyczyść wybrane pole** usuwa z niego liczbę i notatki.
 - **Wyczyść kandydatów** usuwa wszystkie notatki i zachowuje liczby.
-- **Restartuj sudoku** przywraca liczby z ostatniego importu i usuwa kandydatów. Dla nowej planszy wpisywanej ręcznie punktem początkowym jest pusta plansza.
+- **Restartuj sudoku** przywraca cyfry początkowe ostatnio wczytanej planszy (z biblioteki lub importu) i usuwa kandydatów. Dla nowej planszy wpisywanej ręcznie punktem początkowym jest pusta plansza.
 - **Nowa, pusta plansza** rozpoczyna nowe sudoku. Wczytanie nowej planszy przy istniejących danych wymaga potwierdzenia.
 
 Dla danych zapisanych przed wprowadzeniem funkcji restartu stan przy pierwszym otwarciu aktualizacji jest traktowany jako początkowy.
@@ -82,7 +90,7 @@ Aby przywrócić kopię: **Z tekstu → Wybierz plik → wskaż JSON → potwier
 
 ## Telefon i skróty klawiaturowe
 
-Na telefonie przełącznik trybu, klawiatura i cofanie są przy planszy; pozostałe narzędzia znajdują się niżej. W małym widoku poziomym sterowanie jest obok planszy.
+Na telefonie przełącznik trybu i klawiatura są pod planszą, a Cofnij i Przywróć w belce nad nią; pozostałe narzędzia znajdują się niżej. W małym widoku poziomym sterowanie jest obok planszy.
 
 | Skrót | Działanie |
 | --- | --- |
@@ -103,13 +111,13 @@ Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana 
 
 Wskazówkę można ukryć; każda edycja danych i cofnięcie automatycznie ją usuwa. Podpowiedź nie wpisuje liczb, nie zmienia notatek i nie trafia do historii cofania.
 
-Kolejność wyszukiwania: jedyny kandydat → jedyne miejsce dla cyfry → zablokowani kandydaci (wskazujące i zgłaszające) → naga para → ukryta para → naga trójka → ukryta trójka → naga/ukryta czwórka → X-Wing → XY/XYZ/W-Wing → Swordfish → Jellyfish → UR1/2/4 → kolorowanie → X-Chain → XY-Chain → AIC. To kolejność przyjęta w tej aplikacji, nie uniwersalna skala trudności. Analiza wylicza możliwości z liczb, niezależnie od ręcznych notatek. Notatki służą do pomijania już wykonanych eliminacji: podpowiedź wskazuje tylko pola, w których dany kandydat nadal jest zapisany. Gdy wszystkie eliminacje danej wskazówki są już wykonane, analiza szuka kolejnej. Puste notatki nie są podstawą do proponowania eliminacji; można je uzupełnić przyciskiem Oblicz kandydatów. Same ręczne wykluczenia nie uzasadniają nowych wniosków. Analiza odtwarza tylko te wykonane już eliminacje, które potrafi niezależnie udowodnić własnymi regułami na podstawie liczb i poprzednich potwierdzonych eliminacji. Dzięki temu kolejne techniki mogą korzystać z poprawnego wcześniejszego postępu. Po odtworzeniu wcześniejszych eliminacji wyjaśnienie zaczyna się od „W aktualnym układzie:”. Nie wypisuje technicznych szczegółów odtwarzania. Dla każdego pola docelowego nadal podaje konkretne cyfry do usunięcia.
+Kolejność wyszukiwania: jedyny kandydat → jedyne miejsce dla cyfry → zablokowani kandydaci (wskazujące i zgłaszające) → naga para → ukryta para → naga trójka → ukryta trójka → naga/ukryta czwórka → X-Wing → Skyscraper → XY/XYZ/W-Wing → Swordfish → Jellyfish → UR1/2/4 → kolorowanie → X-Chain → XY-Chain → AIC. To kolejność przyjęta w tej aplikacji, nie uniwersalna skala trudności. Analiza wylicza możliwości z liczb, niezależnie od ręcznych notatek. Notatki służą do pomijania już wykonanych eliminacji: podpowiedź wskazuje tylko pola, w których dany kandydat nadal jest zapisany. Gdy wszystkie eliminacje danej wskazówki są już wykonane, analiza szuka kolejnej. Puste notatki nie są podstawą do proponowania eliminacji; można je uzupełnić przyciskiem Oblicz kandydatów. Same ręczne wykluczenia nie uzasadniają nowych wniosków. Analiza odtwarza tylko te wykonane już eliminacje, które potrafi niezależnie udowodnić własnymi regułami na podstawie liczb i poprzednich potwierdzonych eliminacji. Dzięki temu kolejne techniki mogą korzystać z poprawnego wcześniejszego postępu. Po odtworzeniu wcześniejszych eliminacji wyjaśnienie zaczyna się od „W aktualnym układzie:”. Nie wypisuje technicznych szczegółów odtwarzania. Dla każdego pola docelowego nadal podaje konkretne cyfry do usunięcia.
 
 Brak znalezionej techniki nie oznacza braku rozwiązania. Trudniejsze techniki nie są jeszcze obsługiwane. Lokalnie sprzeczna plansza daje komunikat o błędzie przed szukaniem ruchu; nie jest to pełne sprawdzenie rozwiązywalności.
 
 ## Przywracanie cofniętej zmiany
 
-Przycisk **Przywróć ostatnią zmianę** obok Cofnij ponawia ostatnią cofniętą zmianę. Można przywracać kolejne cofnięte kroki, również import, kandydatów i restart. Skróty: Ctrl+Shift+Z / ⌘Shift+Z lub Ctrl+Y. Nowa edycja usuwa możliwość przywrócenia poprzedniej ścieżki. Odświeżenie strony usuwa obie historie.
+Przycisk **Przywróć** obok Cofnij ponawia ostatnią cofniętą zmianę. Można przywracać kolejne cofnięte kroki, również import, kandydatów i restart. Skróty: Ctrl+Shift+Z / ⌘Shift+Z lub Ctrl+Y. Nowa edycja usuwa możliwość przywrócenia poprzedniej ścieżki. Odświeżenie strony usuwa obie historie.
 
 ## Wypełnianie pojedynczych kandydatów
 
@@ -119,7 +127,7 @@ Po poprawnym wypełnieniu wszystkich 81 pól nad planszą pojawia się zielony b
 
 ## Belka szybkich akcji
 
-Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczytaj rozwija import tekstu/pliku JSON, obrazka i aparatu. Zapisz pobiera dotychczasową kopię JSON (nie synchronizuje jej w chmurze). Więcej zawiera czyszczenie kandydatów, restart i nową pustą planszę. Nowa plansza nadal wymaga potwierdzenia. Menu zamyka się po wyborze, kliknięciu poza belką lub Escape. Eksport i nowa plansza pozostają dostępne także niżej jako wyraźne przyciski. Usunięto Wczytaj przykład.
+Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczytaj otwiera także Nową grę oraz import tekstu/pliku JSON, obrazka i aparatu. Zapisz pobiera dotychczasową kopię JSON (nie synchronizuje jej w chmurze). Więcej zawiera czyszczenie kandydatów, restart i nową pustą planszę. Nowa plansza nadal wymaga potwierdzenia. Menu zamyka się po wyborze, kliknięciu poza belką lub Escape. Eksport i nowa plansza pozostają dostępne także niżej jako wyraźne przyciski. Usunięto Wczytaj przykład.
 
 OCR automatycznie dopasowuje próg kontrastu dla każdego pola i ponawia słabe odczyty różnymi trybami rozpoznawania. Bursztynowe pola w podglądzie oznaczają niepewny wynik lub wykryty znak bez rozpoznanej cyfry. Sprawdź również pozostałe pola — nawet odczyt z wysoką oceną pewności może być błędny.
 
@@ -131,7 +139,7 @@ Gdy dana cyfra występuje już 9 razy w liczbach planszy, jej przycisk przestaje
 
 ## Zaawansowane techniki
 
-Podpowiedzi obejmują nagie i ukryte pary, trójki i czwórki, X-Wing, XY-Wing, XYZ-Wing, W-Wing, Swordfish i Jellyfish. Każda technika ma zwijaną ogólną zasadę oraz osobno odsłaniany ruch na planszy. Niebieskie pola tworzą dowód, bursztynowe są celami eliminacji.
+Podpowiedzi obejmują nagie i ukryte pary, trójki i czwórki, X-Wing, Skyscraper, XY-Wing, XYZ-Wing, W-Wing, Swordfish i Jellyfish. Każda technika ma zwijaną ogólną zasadę oraz osobno odsłaniany ruch na planszy. Niebieskie pola tworzą dowód, bursztynowe są celami eliminacji.
 
 Obsługiwane są podstawowe ryby bez płetw (bez wariantów finned/sashimi). Ranking aplikacji jest stałą kolejnością wyszukiwania, nie obiektywną miarą trudności. Brak podpowiedzi nie stanowi dowodu nierozwiązywalności.
 
@@ -149,10 +157,4 @@ Skyscraper jest rozpoznawany przed ogólnym kolorowaniem. W kolorowaniu po odsł
 
 ### Autorzy i licencje
 
-Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i danych oraz pełne teksty licencyjne. Oryginalne teksty prawne pozostają w języku źródłowym.
-
-Przycisk „Nowa gra” otwiera bibliotekę na komputerze i telefonie. Jest zielony i znajduje się w panelu nad planszą; na telefonie podczas gry panel ma kompaktową postać.
-
-W oknie nowej gry wybierz jeden z czterech kafelków trudności, a następnie „Nowa gra”. Opisy biblioteki są pod przyciskami, w sekcji „Jak działa biblioteka?”. Licznik ukończonych plansz zapisuje identyfikatory plansz w localStorage (`sudoku-library-v1`) dla danej przeglądarki i adresu witryny. Nie korzysta z cookies i nie synchronizuje postępu między urządzeniami.
-
-Od wersji 1.14.4 każdy poziom trudności ma osobną łamigłówkę dnia. Wybierz poziom, a potem „Łamigłówka dnia”. Wybór planszy zależy od daty UTC i zbioru danego poziomu, nie od lokalnego postępu. Zmiana następuje o północy UTC; dotychczasowy wybór dla poziomu średniego pozostaje zgodny.
+Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i danych oraz pełne teksty licencyjne. Nagłówki, opisy i nawigacja korzystają z wybranego języka aplikacji; na stronie jest też osobny selektor. Oryginalne teksty prawne pozostają w języku źródłowym. Pełny wykaz: [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).

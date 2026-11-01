@@ -17,6 +17,7 @@ Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy uży
 - [Języki i tłumaczenia](docs/JEZYKI.md) — wybór języka i rozwijanie katalogu tłumaczeń.
 - [Techniki i ich wyjaśnienia](docs/TECHNIKI.md) — obsługiwane warianty, zasady, ograniczenia i podział v1/v2.
 - [Założenia i ograniczenia](docs/ZALOZENIA.md) — zakres produktu, prywatność i dokładne zasady działania.
+- [Autorzy i licencje](THIRD_PARTY_NOTICES.md) — biblioteki, fonty, dane i pełne teksty warunków.
 - [Rozwój i publikacja](docs/ROZWOJ.md) — struktura kodu, testy, hosting i dalsze kierunki.
 
 ## Uruchomienie lokalne
@@ -36,20 +37,18 @@ Nie potrzeba `npm install`, kompilacji ani kluczy API. OCR pobiera bibliotekę i
 ## Sprawdzenie kodu
 
 ```bash
-node --check dist/app.js
-node --check dist/camera.js
-node --check dist/logic.js
-node --check dist/hints.js
-node --check dist/ocr.js
+for file in dist/*.js; do
+  node --check "$file"
+done
 node scripts/version.mjs --check
 node --test tests/*.test.cjs
 ```
 
-Testy obejmują reguły kandydatów, konflikty, import, historię, techniki (również zaawansowane i jednoznaczność), przygotowanie obrazów do OCR, przegląd wyników, przeciąganie i zmianę rozmiaru kadru, prostowanie zdjęcia oraz cykl życia i przełączanie kamery z atrapą urządzenia. Rzeczywisty aparat, jakość OCR i układ na fizycznych telefonach wymagają testów ręcznych.
+Testy obejmują integralność i jednoznaczność 10 000 plansz, codzienną planszę na każdym poziomie, wybór trudności, lokalizację interfejsu i strony licencji, reguły kandydatów, konflikty, import, historię, techniki (również zaawansowane i jednoznaczność), przygotowanie obrazów do OCR, przegląd wyników, przeciąganie i zmianę rozmiaru kadru, prostowanie zdjęcia oraz cykl życia i przełączanie kamery z atrapą urządzenia. Rzeczywisty aparat, jakość OCR i układ na fizycznych telefonach wymagają testów ręcznych.
 
 ## Hosting
 
-Do publikacji wystarcza **zawartość katalogu `dist/`**. GitHub Actions sprawdza składnię i testy przy zmianach na `main` i pull requestach. Po udanych testach zmiana na `main` jest automatycznie publikowana na GitHub Pages. Dostępne jest także ręczne uruchomienie w zakładce Actions. Obie publikacje działają niezależnie od komputera właściciela. Poprzednia strona Sites nie aktualizuje się automatycznie z GitHuba. Szczegóły: [Rozwój i publikacja](docs/ROZWOJ.md).
+Do publikacji wystarcza **zawartość katalogu `dist/`**. GitHub Actions sprawdza składnię i testy przy zmianach na `main` i pull requestach. Po udanych testach zmiana na `main` jest automatycznie publikowana na GitHub Pages. Dostępne jest także ręczne uruchomienie w zakładce Actions. Opublikowana strona działa niezależnie od komputera właściciela. Poprzednia strona Sites nie aktualizuje się automatycznie z GitHuba. Szczegóły: [Rozwój i publikacja](docs/ROZWOJ.md).
 
 ## Licencja
 
