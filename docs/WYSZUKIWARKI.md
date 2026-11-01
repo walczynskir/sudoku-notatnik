@@ -28,3 +28,7 @@ Wysłanie mapy ani prośba o indeksowanie nie gwarantują obecności lub pozycji
 Przy nowych publicznych stronach dodaj rzeczywiste kanoniczne adresy do sitemap.xml. Nie dopisuj wszystkich plików technicznych ani 10 000 zapisów plansz jako stron HTML. Weryfikacji nie da się zakończyć bez znacznika wydanego dla konta właściciela i potwierdzenia w Search Console. Ostatni etap nie jest wykonywany automatycznie przez publikację GitHub Pages.
 
 Źródła: [weryfikacja własności](https://support.google.com/webmasters/answer/9008080), [mapa witryny](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [prośba o indeksowanie](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
+## Opublikowany znacznik
+
+Tag HTML przekazany przez właściciela jest zapisany w `dist/index.html`. Należy zachować go przy kolejnych publikacjach. Sama obecność tagu nie oznacza zakończonej weryfikacji: właściciel musi jeszcze kliknąć „Zweryfikuj” w swojej usłudze Search Console.
