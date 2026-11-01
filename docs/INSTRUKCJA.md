@@ -123,7 +123,7 @@ Przycisk **Przywróć** obok Cofnij ponawia ostatnią cofniętą zmianę. Można
 
 **Wypełnij pojedynczych kandydatów** wpisuje cyfry w puste pola z dokładnie jednym kandydatem w bieżących notatkach. Nie oblicza notatek od nowa. Powtarza wpisy i eliminacje aż nie będzie kolejnych pojedynczych pól. Cała kaskada jest jedną operacją; błąd także w późniejszej rundzie anuluje wszystkie jej wpisy. Ręczne notatki muszą być poprawne; kontrola zgodności z planszą nie gwarantuje poprawności arbitralnych ręcznych wykluczeń. W przypadku wykrytego konfliktu lub pozbawienia innego pola możliwości operacja nie zmienia planszy. Wszystkie wpisy i eliminacje z jednego kliknięcia można razem cofnąć i przywrócić.
 
-Po poprawnym wypełnieniu wszystkich 81 pól nad planszą pojawia się zielony baner **Sudoku rozwiązane!**. Pełna plansza z powtórzeniami nie wyświetla tego komunikatu. Cofnięcie lub usunięcie wpisu usuwa baner.
+Po poprawnym wypełnieniu wszystkich 81 pól pod planszą pojawia się zielony baner **Sudoku rozwiązane!** (na telefonie pod klawiaturą, w kompaktowej formie). Pełna plansza z powtórzeniami nie wyświetla tego komunikatu. Cofnięcie lub usunięcie wpisu usuwa baner. Ukończenie nie zmienia rozmiaru planszy, belki ani klawiatury.
 
 ## Belka szybkich akcji
 

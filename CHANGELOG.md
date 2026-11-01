@@ -1,3 +1,8 @@
+# v1.14.5
+
+- Ukończenie sudoku nie zmniejsza już planszy ani belki i klawiatury na telefonie.
+- Baner ukończenia jest pod planszą (na telefonie pod klawiaturą), w kompaktowej formie mobilnej.
+
 # v1.14.4
 
 - Uporządkowano dokumentację: aktualne nazwy i układ Nowej gry, dziewięć języków, Skyscraper i kolorowanie, licencje oraz zasady zapisu postępu.
