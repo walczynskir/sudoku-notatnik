@@ -3008,5 +3008,15 @@
     "Nouvelle partie",
     "لعبة جديدة",
     "Nuova partita"
+  ],
+  "Jak działa biblioteka?": [
+    "How does the library work?",
+    "¿Cómo funciona la biblioteca?",
+    "Wie funktioniert die Bibliothek?",
+    "题库如何使用？",
+    "पहेली संग्रह कैसे काम करता है?",
+    "Comment fonctionne la bibliothèque ?",
+    "كيف تعمل مكتبة الألغاز؟",
+    "Come funziona la raccolta?"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

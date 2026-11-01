@@ -152,3 +152,5 @@ Skyscraper jest rozpoznawany przed ogólnym kolorowaniem. W kolorowaniu po odsł
 Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i danych oraz pełne teksty licencyjne. Oryginalne teksty prawne pozostają w języku źródłowym.
 
 Przycisk „Nowa gra” otwiera bibliotekę na komputerze i telefonie. Jest zielony i znajduje się w panelu nad planszą; na telefonie podczas gry panel ma kompaktową postać.
+
+W oknie nowej gry wybierz jeden z czterech kafelków trudności, a następnie „Nowa gra”. Opisy biblioteki są pod przyciskami, w sekcji „Jak działa biblioteka?”. Licznik ukończonych plansz zapisuje identyfikatory plansz w localStorage (`sudoku-library-v1`) dla danej przeglądarki i adresu witryny. Nie korzysta z cookies i nie synchronizuje postępu między urządzeniami.

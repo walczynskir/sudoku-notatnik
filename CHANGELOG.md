@@ -1,3 +1,8 @@
+# v1.14.3
+
+- Okno nowej gry zaczyna się od czterech wizualnych kafelków trudności; zaznaczony poziom jest zielony.
+- Opisy poziomów, ocen, kandydatów i źródła przeniesiono pod przyciski do rozwijanego wyjaśnienia.
+
 # v1.14.2
 
 - Ujednolicono przycisk „Nowa gra” i jego zielone wyróżnienie na komputerach i telefonach.
