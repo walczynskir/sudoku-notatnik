@@ -1,5 +1,15 @@
 # Historia zmian
 
+## 1.13.0
+
+- Biblioteka 10 000 zweryfikowanych sudoku: po 2500 na czterech poziomach, wraz z łamigłówką dnia UTC.
+- Pobieranie partii na żądanie, wybór kandydatów na start, lokalne śledzenie ukończonych i ograniczanie powtórek.
+- Dane Sudoku Exchange w domenie publicznej z zachowanymi ocenami SE, pełnym potwierdzeniem unikalności i rozwiązaniem przez rzeczywisty interfejs podpowiedzi.
+- Audyt odrzuconych kandydatów i dokumentacja biblioteki.
+- Hindi, francuski, arabski i włoski: łącznie dziewięć języków, arabski RTL bez odwracania siatki.
+- Normalizacja cyfr dewanagari, arabsko-indyjskich i perskich podczas wpisywania oraz importu tekstu.
+- Prostszy wstęp do wskazówki: „W aktualnym układzie:”.
+
 ## 1.12.1
 
 - Rozbudowane lekcje wszystkich 23 technik w pięciu językach: rozpoznawanie, uzasadnienie, kierunek eliminacji i typowe pomyłki.

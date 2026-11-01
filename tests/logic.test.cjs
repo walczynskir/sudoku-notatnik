@@ -32,3 +32,5 @@ test('cascade stops when only multiple candidates remain',()=>{
 });
 test('digit completion counts values and unlocks after removal',()=>{const v=[...'534678912672195348198342567859761423426853791713924856961537284287419635345286179'].map(Number);assert.deepEqual(S.digitState(v,6),{count:9,disabled:true,complete:true});v[v.indexOf(6)]=0;assert.deepEqual(S.digitState(v,6),{count:8,disabled:false,complete:false});});
 test('nine conflicting entries are blocked but never marked as a correct complete digit',()=>{const v=Array(81).fill(0);for(let i=0;i<9;i++)v[i]=4;assert.deepEqual(S.digitState(v,4),{count:9,disabled:true,complete:false});assert.deepEqual(S.digitState(v,3),{count:0,disabled:false,complete:false});});
+
+test('Arabic-Indic, Persian and Devanagari puzzle digits normalize without changing values',()=>{const puzzle='530070000600195000098000060800060003400803001700020006060000280000419005000080079';for(const base of [0x660,0x6f0,0x966]){const localized=[...puzzle].map(c=>String.fromCodePoint(base+Number(c))).join('');assert.deepEqual(S.parse(localized).values,[...puzzle].map(Number));}assert.equal(S.normalizeDigits('١२۳'),'123');});

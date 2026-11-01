@@ -31,13 +31,13 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 - Osobny przycisk do sprawdzania rozwiązywalności lub jednoznaczności. Analizator sprawdza jednoznaczność wewnętrznie tylko do zabezpieczenia technik UR, z limitem wyszukiwania; nie jest to ogólna walidacja całej planszy. Brak lokalnych konfliktów nie gwarantuje rozwiązywalności.
 - Rozpoznawanie dowolnych perspektyw i pisma ręcznego z gwarantowaną skutecznością.
 - Konta, synchronizacja w chmurze, biblioteka wielu plansz i statystyki.
-- Trwała historia cofania oraz jej eksport do JSON.
+- Trwała historia cofania oraz jej eksport do JSON. Lokalna lista ukończonych łamigłówek jest osobną funkcją, nie historią zmian planszy.
 
 ## Kierunki do rozważenia
 
 1. Więcej testów ręcznych OCR i aparatu na rzeczywistych telefonach.
 2. Dokładniejsze kadrowanie i korekcja perspektywy.
-3. Opcjonalna biblioteka plansz i trwalsza historia lokalna.
+3. Trwalsza historia lokalna i biblioteka własnych zapisów.
 4. Dopiero przy potrzebie synchronizacji między urządzeniami — opcjonalne konta i zapis w chmurze.
 
 To propozycje, nie deklaracja wdrożenia.
@@ -45,3 +45,5 @@ To propozycje, nie deklaracja wdrożenia.
 Podpowiedzi: analiza z liczb, filtrowanie celów eliminacji według aktualnych notatek (bez ponawiania wykonanych eliminacji), dwa osobne etapy (tylko nazwa techniki, następnie opcjonalne pola i wyjaśnienie), bez automatycznego zastosowania ruchu. Obecny zakres: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, naga/ukryta para, naga/ukryta trójka i czwórka, X-Wing, skrzydła XY/XYZ/W, Swordfish/Jellyfish, UR1/2/4, simple coloring i ograniczone X/XY/AIC. Wcześniejsze eliminacje są odtwarzane do dalszej analizy tylko wtedy, gdy silnik sam potrafi je udowodnić, a wszystkie docelowe kandydaty zostały już usunięte z notatek. Notatki nie stanowią samodzielnego dowodu.
 
 Nazwa produktu: Trener Sudoku. Wersje 1.x rozwijają analizator i wyjaśnienia technik (dokładny zakres: TECHNIKI.md). Generowanie treningowe i ewentualny płatny dostęp pozostają zakresem wersji 2.
+
+Biblioteka gotowych plansz jest częścią 1.x: 10 000 zweryfikowanych łamigłówek w domenie publicznej, z ocenami źródłowymi. Generator personalizowanego treningu pozostaje poza tym zakresem. Postęp i ostatnie identyfikatory biblioteki są zapisywane jako `sudoku-library-v1`. Nie wymagają konta ani serwera aplikacyjnego.

@@ -8,6 +8,9 @@
 | `dist/style.css` | Wygląd i układ responsywny |
 | `dist/logic.js` | Reguły sudoku, kandydaci, konflikty, walidacja i parser importu |
 | `dist/app.js` | Stan, historia, zapis lokalny, zdarzenia, import/eksport, OCR i przenoszenie sterowania na telefonie |
+| `dist/library.js` | Biblioteka plansz, dzień UTC i lokalna lista ukończeń |
+| `scripts/import-puzzles.mjs` | Import i walidacja źródła na czterech wątkach |
+| `tests/library.test.cjs` | Integralność i unikalność 10 000 plansz oraz próbki pełnej ścieżki podpowiedzi |
 | `dist/locales.js` | Katalog tłumaczeń czterech języków względem polskich źródeł |
 | `dist/i18n.js` | Dobór języka, lokalizacja komunikatów i warstwa DOM bez zmiany danych |
 | `tests/i18n.test.cjs` | Kompletność tłumaczeń, wartości dynamiczne, etykiety i przełączanie |
@@ -137,3 +140,5 @@ Dawna gałąź `codex/v2-techniques` pozostaje archiwalnym punktem odniesienia. 
 Współrzędne gestu są przeliczane przez `photoPoint`, z uwzględnieniem pustych pasów wynikających z `object-fit: contain`. Przeciąganie narożnika zachowuje przeciwległy narożnik i ogranicza kwadrat do rozmiarów zdjęcia. Zmiany kadru lub kąta ukrywają poprzedni odczyt; podczas OCR edycja jest zablokowana. Wybór innej kamery zamyka poprzedni strumień, a numer żądania zapobiega przyjęciu opóźnionego strumienia.
 
 Lokalizacja: [Języki i tłumaczenia](JEZYKI.md). Skrypt wersjonowania aktualizuje również adresy `locales.js` i `i18n.js`, aby zapobiec mieszaniu starych i nowych tłumaczeń.
+
+Biblioteka i jej audyt: [Biblioteka łamigłówek](BIBLIOTEKA.md). Odpowiedzi źródłowe nie są dołączane do danych biblioteki, a źródłowe oceny nie zmieniają rankingu naszego analizatora.

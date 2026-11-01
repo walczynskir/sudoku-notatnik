@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
 const raw=root.SudokuLocales||(typeof require==='function'?require('./locales.js'):{});
-const languages=['pl','en','es','de','zh-Hans'],normalize=s=>s.replace(/\s+/gu,' ').trim();
+const languages=['pl','en','es','de','zh-Hans','hi','fr','ar','it'],normalize=s=>s.replace(/\s+/gu,' ').trim();
 const catalog=new Map(Object.entries(raw).map(([key,v])=>[normalize(key),v]));
 const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const patterns=[...catalog].filter(([key])=>/\{\d+\}/.test(key)).map(([key,values])=>{
@@ -13,9 +13,10 @@ function text(source,lang=language,depth=0){
  if(source==null)return '';source=String(source);if(lang==='pl'||!languages.includes(lang)||depth>12)return source;
  if(!/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż]/u.test(source))return source;
  const key=normalize(source),column=languages.indexOf(lang)-1,found=catalog.get(key);if(found)return found[column];
+ const currentPrefix='W aktualnym układzie: ';if(key.startsWith(currentPrefix)){const value=text(key.slice(currentPrefix.length),lang,depth+1);return catalog.get(currentPrefix+'{0}')[column].replace('{0}',()=>lang==='ar'?'\u2068'+value+'\u2069':value);}
  const removal=' Usuń wyłącznie wskazanych kandydatów: ',at=source.indexOf(removal);
  if(at>=0)return text(source.slice(0,at),lang,depth+1)+' '+text(removal.trim(),lang)+' '+text(source.slice(at+removal.length),lang,depth+1);
- for(const p of patterns){const m=key.match(p.regex);if(!m)continue;const args={};p.slots.forEach((slot,i)=>{args[slot]=text(m[i+1],lang,depth+1);});return p.values[column].replace(/\{(\d+)\}/g,(_,i)=>args[i]);}
+ for(const p of patterns){const m=key.match(p.regex);if(!m)continue;const args={};p.slots.forEach((slot,i)=>{args[slot]=text(m[i+1],lang,depth+1);});return p.values[column].replace(/\{(\d+)\}/g,(_,i)=>lang==='ar'?'\u2068'+args[i]+'\u2069':args[i]);}
  // Coordinate lists and chain notation retain every digit and link exactly.
  let result=source.replace(/wiersz (\d+), kolumna (\d+)/g,(_,r,c)=>text(`wiersz ${r}, kolumna ${c}`,lang,depth+1));
  for(const [key,v]of catalog){if((key.startsWith('Nie udało się otworzyć obrazu.')||key.startsWith('Rozpoznawanie nie powiodło się.'))&&source.startsWith(key+' '))return v[column]+' '+text(source.slice(key.length+1),lang,depth+1);}
@@ -40,7 +41,7 @@ function translateElement(el){
  for(const attr of ['aria-label','title','placeholder']){if(!el.hasAttribute(attr))continue;const value=el.getAttribute(attr),old=stored[attr],source=old&&old.translated===value?old.source:value,translated=text(source);stored[attr]={source,translated};if(value!==translated)el.setAttribute(attr,translated);}
 }
 function apply(){
- document.documentElement.lang=language;
+ document.documentElement.lang=language;document.documentElement.dir=language==='ar'?'rtl':'ltr';
  const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode())translateNode(node);
  document.querySelectorAll('[aria-label],[title],[placeholder]').forEach(translateElement);
  const meta=document.querySelector('meta[name="description"]');if(meta){const key='Trener Sudoku: rozwiązuj sudoku krok po kroku. Kandydaci, import zdjęć i wyjaśnienia technik — od par po skrzydła i ryby.';meta.content=text(key);}

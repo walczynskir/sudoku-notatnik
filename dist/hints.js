@@ -134,9 +134,9 @@ function findHint(values,manualNotes){
   if(invalid())return {kind:'invalid',message:'W tej planszy brakuje możliwości dla co najmniej jednego pola lub cyfry. Sprawdź wpisane liczby.'};
   let progressed=false;
   for(const h of deductions(notes,{isUnique:()=>verifiedUnique(values)})){
-   if(!h.removals)return {...h,explanation:(prior.size?'Po uwzględnieniu już wykonanych, logicznie potwierdzonych eliminacji ('+[...prior].join(', ')+'): ':'')+h.explanation};
+   if(!h.removals)return {...h,explanation:(prior.size?'W aktualnym układzie: ':'')+h.explanation};
    const pending=h.removals.map(r=>({cell:r.cell,digits:r.digits.filter(n=>!manualNotes||manualNotes[r.cell]?.includes(n))})).filter(r=>r.digits.length);
-   if(pending.length){const result=elimination(h.technique,h.sources,pending,h.explanation.split(' Usuń wyłącznie')[0]);if(prior.size)result.explanation='Po uwzględnieniu już wykonanych, logicznie potwierdzonych eliminacji ('+[...prior].join(', ')+'): '+result.explanation;return result;}
+   if(pending.length){const result=elimination(h.technique,h.sources,pending,h.explanation.split(' Usuń wyłącznie')[0]);if(prior.size)result.explanation='W aktualnym układzie: '+result.explanation;return result;}
    // An entirely blank notebook means "no notes", not a completed proof.
    if(!manualNotes?.some(a=>a.length))continue;
    for(const r of h.removals)notes[r.cell]=notes[r.cell].filter(n=>!r.digits.includes(n));

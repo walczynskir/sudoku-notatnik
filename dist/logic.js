@@ -33,6 +33,7 @@ function solutionCount(values,limit=2,maxNodes=200000){
  }search();return {count,complete:!exhausted};
 }
 function digitState(values,n){const count=values.filter(v=>v===n).length;const bad=conflicts(values);return {count,disabled:count>=9,complete:count===9&&!values.some((v,i)=>v===n&&bad[i])};}
-function parse(text){if(text.trim().startsWith('{'))return validate(JSON.parse(text));const clean=text.replace(/[\s|,+\-]/g,'');if(!/^[0-9.]{81}$/.test(clean))throw Error('Potrzeba dokładnie 81 cyfr lub kropek. Sprawdź, czy jest 9 wierszy po 9 pól.');return validate({values:[...clean].map(c=>c==='.'?0:Number(c))});}
-const api={peers,candidates,placeValue,fillSingles,solutionCount,digitState,conflicts,validate,parse};root.Sudoku=api;if(typeof module!=='undefined')module.exports=api;
+function normalizeDigits(text){return String(text).replace(/[٠-٩۰-۹०-९]/gu,c=>{const n=c.codePointAt(0);return String(n>=0x966?n-0x966:n>=0x6f0?n-0x6f0:n-0x660);});}
+function parse(text){text=normalizeDigits(text);if(text.trim().startsWith('{'))return validate(JSON.parse(text));const clean=text.replace(/[\s|,+\-]/g,'');if(!/^[0-9.]{81}$/.test(clean))throw Error('Potrzeba dokładnie 81 cyfr lub kropek. Sprawdź, czy jest 9 wierszy po 9 pól.');return validate({values:[...clean].map(c=>c==='.'?0:Number(c))});}
+const api={peers,candidates,placeValue,fillSingles,solutionCount,digitState,conflicts,validate,parse,normalizeDigits};root.Sudoku=api;if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

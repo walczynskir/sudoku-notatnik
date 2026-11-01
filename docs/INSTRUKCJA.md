@@ -1,6 +1,14 @@
 # Instrukcja użytkownika
 
-Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angielski, hiszpański, niemiecki i chiński uproszczony. Wybór jest pamiętany na urządzeniu; zmiana nie resetuje planszy ani historii. Szczegóły: [Języki](JEZYKI.md).
+Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angielski, hiszpański, niemiecki, chiński uproszczony, hindi, francuski, arabski i włoski. Wybór jest pamiętany na urządzeniu; zmiana nie resetuje planszy ani historii. Szczegóły: [Języki](JEZYKI.md).
+
+## Gotowe łamigłówki
+
+Wybierz **Graj w sudoku** nad planszą lub **Wczytaj → Graj w sudoku**, następnie poziom i **Nowa łamigłówka**. Na telefonie podczas gry duży panel jest ukryty, a przy planszy dostępny jest mały przycisk **Nowa łamigłówka**. Każdy z czterech poziomów ma 2500 plansz. Opcja **Pokaż kandydatów od razu** wypełnia notatki już przy starcie; można je też obliczyć później. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
+
+**Łamigłówka dnia** wybiera wspólną planszę o średnim poziomie, niezależnie od poziomu ustawionego na liście. Zmienia się o północy UTC. Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana.
+
+Ukończone plansze są pamiętane lokalnie i pomijane przy losowaniu nowych, dopóki są dostępne inne. Dzisiejsza łamigłówka jest zawsze ta sama, nawet jeśli została już ukończona. Ukończenie wymaga pełnej, poprawnej planszy z zachowaniem cyfr początkowych. Więcej: [Biblioteka](BIBLIOTEKA.md).
 
 ## Wpisywanie liczb i kandydatów
 
@@ -10,6 +18,8 @@ Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angiels
 4. **Oblicz kandydatów** uzupełnia wszystkie dozwolone cyfry w pustych polach zgodnie z wierszem, kolumną i blokiem 3 × 3. Zastępuje ręczne notatki.
 
 Po wpisaniu liczby aplikacja automatycznie usuwa tę cyfrę z kandydatów w powiązanych polach. Nie dodaje automatycznie innych kandydatów i nie przywraca ich po usunięciu liczby. Do pełnego odtworzenia możliwości użyj **Oblicz kandydatów**.
+
+Można wpisywać także cyfry dewanagari, arabsko-indyjskie i perskie; aplikacja zamienia je na cyfry 0–9 przy wprowadzaniu oraz imporcie tekstu. OCR nadal jest przeznaczony dla drukowanych cyfr 1–9.
 
 Powtarzające się liczby w wierszu, kolumnie lub bloku są oznaczane na czerwono.
 
@@ -93,7 +103,7 @@ Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana 
 
 Wskazówkę można ukryć; każda edycja danych i cofnięcie automatycznie ją usuwa. Podpowiedź nie wpisuje liczb, nie zmienia notatek i nie trafia do historii cofania.
 
-Kolejność wyszukiwania: jedyny kandydat → jedyne miejsce dla cyfry → zablokowani kandydaci (wskazujące i zgłaszające) → naga para → ukryta para → naga trójka → ukryta trójka → naga/ukryta czwórka → X-Wing → XY/XYZ/W-Wing → Swordfish → Jellyfish → UR1/2/4 → kolorowanie → X-Chain → XY-Chain → AIC. To kolejność przyjęta w tej aplikacji, nie uniwersalna skala trudności. Analiza wylicza możliwości z liczb, niezależnie od ręcznych notatek. Notatki służą do pomijania już wykonanych eliminacji: podpowiedź wskazuje tylko pola, w których dany kandydat nadal jest zapisany. Gdy wszystkie eliminacje danej wskazówki są już wykonane, analiza szuka kolejnej. Puste notatki nie są podstawą do proponowania eliminacji; można je uzupełnić przyciskiem Oblicz kandydatów. Same ręczne wykluczenia nie uzasadniają nowych wniosków. Analiza odtwarza tylko te wykonane już eliminacje, które potrafi niezależnie udowodnić własnymi regułami na podstawie liczb i poprzednich potwierdzonych eliminacji. Dzięki temu kolejne techniki mogą korzystać z poprawnego wcześniejszego postępu. Wyjaśnienie informuje o uwzględnionych wcześniej technikach, a dla każdego pola docelowego podaje konkretne cyfry do usunięcia.
+Kolejność wyszukiwania: jedyny kandydat → jedyne miejsce dla cyfry → zablokowani kandydaci (wskazujące i zgłaszające) → naga para → ukryta para → naga trójka → ukryta trójka → naga/ukryta czwórka → X-Wing → XY/XYZ/W-Wing → Swordfish → Jellyfish → UR1/2/4 → kolorowanie → X-Chain → XY-Chain → AIC. To kolejność przyjęta w tej aplikacji, nie uniwersalna skala trudności. Analiza wylicza możliwości z liczb, niezależnie od ręcznych notatek. Notatki służą do pomijania już wykonanych eliminacji: podpowiedź wskazuje tylko pola, w których dany kandydat nadal jest zapisany. Gdy wszystkie eliminacje danej wskazówki są już wykonane, analiza szuka kolejnej. Puste notatki nie są podstawą do proponowania eliminacji; można je uzupełnić przyciskiem Oblicz kandydatów. Same ręczne wykluczenia nie uzasadniają nowych wniosków. Analiza odtwarza tylko te wykonane już eliminacje, które potrafi niezależnie udowodnić własnymi regułami na podstawie liczb i poprzednich potwierdzonych eliminacji. Dzięki temu kolejne techniki mogą korzystać z poprawnego wcześniejszego postępu. Po odtworzeniu wcześniejszych eliminacji wyjaśnienie zaczyna się od „W aktualnym układzie:”. Nie wypisuje technicznych szczegółów odtwarzania. Dla każdego pola docelowego nadal podaje konkretne cyfry do usunięcia.
 
 Brak znalezionej techniki nie oznacza braku rozwiązania. Trudniejsze techniki nie są jeszcze obsługiwane. Lokalnie sprzeczna plansza daje komunikat o błędzie przed szukaniem ruchu; nie jest to pełne sprawdzenie rozwiązywalności.
 

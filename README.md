@@ -1,6 +1,6 @@
 # Trener Sudoku
 
-Prosta aplikacja internetowa po polsku do samodzielnego rozwiązywania sudoku 9 × 9. Pozwala wpisywać liczby, obliczać i edytować kandydatów oraz wczytywać plansze z tekstu, plików i zdjęć. Podpowiedzi najpierw ujawniają tylko technikę, a na życzenie pola i wyjaśnienie. Interfejs, komunikaty i wyjaśnienia technik są dostępne po polsku, angielsku, hiszpańsku, niemiecku i w chińskim uproszczonym. Język można wybrać w nagłówku. Aplikacja wcześniej nosiła nazwę Sudoku · Notatnik; adresy, repozytorium i zapisane dane pozostają takie same.
+Aplikacja internetowa do rozwiązywania sudoku 9 × 9. Biblioteka zawiera 10 000 sprawdzonych plansz (po 2500 na poziom: łatwy, średni, trudny, ekspert) oraz wspólną łamigłówkę dnia. Pozwala wpisywać liczby, obliczać i edytować kandydatów oraz wczytywać plansze z tekstu, plików i zdjęć. Podpowiedzi najpierw ujawniają tylko technikę, a na życzenie pola i wyjaśnienie. Interfejs, komunikaty i wyjaśnienia technik są dostępne po polsku, angielsku, hiszpańsku, niemiecku, w chińskim uproszczonym, hindi, francusku, arabsku i włosku. Język można wybrać w nagłówku. Aplikacja wcześniej nosiła nazwę Sudoku · Notatnik; adresy, repozytorium i zapisane dane pozostają takie same.
 
 **Strona:** https://rsudoku.pl/
 
@@ -13,6 +13,7 @@ Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy uży
 ## Dokumentacja
 
 - [Instrukcja użytkownika](docs/INSTRUKCJA.md) — wpisywanie, kandydaci, import, aparat, zapis i cofanie.
+- [Biblioteka łamigłówek](docs/BIBLIOTEKA.md) — źródło, walidacja, oceny, codzienna plansza i postępy.
 - [Języki i tłumaczenia](docs/JEZYKI.md) — wybór języka i rozwijanie katalogu tłumaczeń.
 - [Techniki i ich wyjaśnienia](docs/TECHNIKI.md) — obsługiwane warianty, zasady, ograniczenia i podział v1/v2.
 - [Założenia i ograniczenia](docs/ZALOZENIA.md) — zakres produktu, prywatność i dokładne zasady działania.
@@ -52,10 +53,10 @@ Do publikacji wystarcza **zawartość katalogu `dist/`**. GitHub Actions sprawdz
 
 ## Licencja
 
-Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji nie oznacza udzielenia licencji open source na jej kod. Zależności zewnętrzne podlegają własnym licencjom.
+Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji nie oznacza udzielenia licencji open source na jej kod. Zależności zewnętrzne podlegają własnym licencjom. Dane biblioteki Sudoku Exchange są osobnym zbiorem w domenie publicznej (Unlicense); pełna deklaracja: `licenses/sudoku-exchange-LICENSE.txt`. Nie zmienia to statusu licencji kodu aplikacji.
 
 ## Wersje
 
-Aktualne wydanie: **1.12.1**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
+Aktualne wydanie: **1.13.0**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
 
 Wersja 1.x obejmuje analizę i wyjaśnienia technik, także Unique Rectangles, kolorowania i łańcuchów. Dokładne warianty i ograniczenia: [Zakres technik](docs/TECHNIKI.md). Generowanie plansz do nauki, ścieżki treningowe i ewentualny płatny dostęp są planowane na wersję 2; nie są częścią obecnej aplikacji.
