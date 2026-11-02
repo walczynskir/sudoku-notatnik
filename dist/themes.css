@@ -46,10 +46,29 @@
 [data-theme="ink"] .solved-banner{background:#e4ecd9;border-color:#789260;color:#344f2b}
 [data-theme="ink"] .board.solved{border-color:#54723f;box-shadow:0 0 0 3px #91a87b55}
 [data-theme="ink"] textarea,[data-theme="ink"] #review-grid input{background:#fffdf7;color:#242c35;border-color:#bdb5a6}
-[data-theme="ink"] #review-grid input.uncertain{background:#ffecd3;border-color:#b76a19}
+[data-theme="ink"] #review-grid input.ocr-uncertain{background:#ffecd3;border-color:#b76a19}
 [data-theme="ink"] .error,[data-theme="ink"] .danger-action{color:#a52e27}
 [data-theme="ink"] button:focus-visible,[data-theme="ink"] a:focus-visible,[data-theme="ink"] select:focus-visible,[data-theme="ink"] .difficulty-choice input:focus-visible+.difficulty-tile{outline:3px solid #b76a19;outline-offset:3px}
 [data-theme="ink"] .sliders input,[data-theme="ink"] .library-notes-label input{accent-color:#254b72}
 [data-theme="ink"] .photo-choice{background:#fcf9f2}
 
 [data-theme="ink"] .cell:focus-visible{outline-color:#254b72}
+
+/* Complete the secondary controls and disclosure surfaces, not only primary actions. */
+[data-theme="ink"] button{background:#fcf9f2}
+[data-theme="ink"] #hint-guide{background:#f4efe3;border-color:#cfc5b4;border-radius:3px}
+[data-theme="ink"] .import-card>.camera-button,[data-theme="ink"] .import-card>.export-button{background:#e2e8ed;border-color:#a6b5c1;color:#254b72}
+[data-theme="ink"] .import-icon{color:#254b72}
+[data-theme="ink"] .restart-button{background:#fcf9f2}
+[data-theme="ink"] .undo-button,[data-theme="ink"] .redo-button{background:#e2e8ed;border-color:#a6b5c1}
+[data-theme="ink"] #image-dialog .image-actions{background:#fcf9f2;border-color:#d5cdbd}
+[data-theme="ink"] .ocr-thumbnail canvas{border-color:#bdb5a6;border-radius:3px}
+[data-theme="ink"] #image-source,[data-theme="ink"] #camera-choice,[data-theme="ink"] textarea{border-radius:3px}
+[data-theme="ink"] #image-preview{background:#e8e1d3}
+[data-theme="ink"] #camera-view,[data-theme="ink"] #camera-preview{background:#202a34;border-radius:3px}
+[data-theme="ink"] .keypad button.digit-complete::after{color:#254b72}
+[data-theme="ink"] #hint-guide summary:focus-visible,[data-theme="ink"] .quick-toolbar summary:focus-visible{outline:3px solid #b76a19;outline-offset:3px}
+[data-theme="ink"] .local i{background:#254b72}
+[data-theme="ink"] .credits-page section{background:#fcf9f2;border-color:#d5cdbd;border-radius:3px}
+
+.reset{color:var(--ink)}

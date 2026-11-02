@@ -1,3 +1,10 @@
+# v1.15.1
+
+- „Nowa, pusta plansza” ma neutralny styl w menu i pod narzędziami; potwierdzenie i cofanie zachowują działanie.
+
+- Uzupełniono Ink & Paper dla wyjaśnienia techniki, przycisków aparatu i eksportu, restartu, OCR, stanów klawiatury i strony licencji.
+- Ink & Paper jest domyślnym motywem przy braku lub błędnym zapisie; jawnie zapisany Sage pozostaje bez zmian.
+
 # v1.15.0
 
 - Dodano wybór wyglądu w menu Więcej: dotychczasowy Sage i nowy Ink & Paper (kość słoniowa, granat, szeryfowe nagłówki i płaskie kontrolki).

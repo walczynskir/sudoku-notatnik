@@ -163,6 +163,8 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 
 Wybierz **Więcej → Wygląd** nad planszą. **Sage** zachowuje dotychczasową zieloną paletę. **Ink & Paper** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są stałe we wszystkich językach.
 
-Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki i adresu strony. Nie jest eksportowany w pliku JSON. Działa także na stronie autorów i licencji. Zmiana wyglądu nie resetuje planszy, notatek, podpowiedzi, historii ani postępu. Bez dostępnej pamięci lokalnej można zmienić motyw w otwartej karcie; po przeładowaniu wróci Sage.
+Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki i adresu strony. Nie jest eksportowany w pliku JSON. Działa także na stronie autorów i licencji. Zmiana wyglądu nie resetuje planszy, notatek, podpowiedzi, historii ani postępu. Bez dostępnej pamięci lokalnej można zmienić motyw w otwartej karcie; po przeładowaniu wróci Ink & Paper.
 
 W obu motywach gruba ramka wskazuje wybrane pole, grupa A pozostaje niebieska, grupa B fioletowa z przerywaną ramką, eliminacje mają bursztynową/pomarańczową ramkę, a konflikty są czerwone.
+
+Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w menu Więcej → Wygląd. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.

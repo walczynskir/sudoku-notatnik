@@ -153,6 +153,8 @@ Biblioteka i jej audyt: [Biblioteka łamigłówek](BIBLIOTEKA.md). Odpowiedzi ź
 
 ## Motywy wyglądu
 
-`theme.js` jest zwykłym, blokującym skryptem w head, przed arkuszami stylów. Ustawia `data-theme` na elemencie html i kolor interfejsu przeglądarki przed pierwszym rysowaniem. Nieznany zapis daje Sage. Selektor jest podłączany przy DOMContentLoaded. Moduł czyta i zapisuje tylko `sudoku-theme`; nie wywołuje renderowania planszy ani historii.
+`theme.js` jest zwykłym, blokującym skryptem w head, przed arkuszami stylów. Ustawia `data-theme` na elemencie html i kolor interfejsu przeglądarki przed pierwszym rysowaniem. Brak lub nieznany zapis daje Ink & Paper. Jawnie zapisany Sage jest zachowywany. Selektor jest podłączany przy DOMContentLoaded. Moduł czyta i zapisuje tylko `sudoku-theme`; nie wywołuje renderowania planszy ani historii.
 
 Sage korzysta z istniejącego style.css. Ink & Paper nadpisuje podstawowe zmienne CSS oraz jawne stany kontrolek w themes.css. Nowe style stanów planszy należy sprawdzać w obu paletach, zwłaszcza przecięcia zaznaczenia, konfliktu i podpowiedzi. Nie zmieniaj wymiarów planszy w zależności od motywu. Skrypt wersjonowania aktualizuje theme.js i themes.css na obu stronach.
+
+Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w menu Więcej → Wygląd. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
