@@ -25,14 +25,14 @@
 [data-theme="ink"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="ink"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#293541}
 [data-theme="ink"] .cell.peer{background:#f0ebe0}
 [data-theme="ink"] .cell.same{background:#e3eaf1}
-[data-theme="ink"] .cell.selected{background:#dce6f0;box-shadow:inset 0 0 0 3px #254b72}
+[data-theme="ink"] .cell.selected{background:#e7e5df;box-shadow:inset 0 0 0 4px #254b72}
 [data-theme="ink"] .notes{color:#59636b}
 [data-theme="ink"] .cell.conflict{color:#a52e27;background:#fce5de}
-[data-theme="ink"] .cell.selected.conflict{box-shadow:inset 0 0 0 3px #254b72}
+[data-theme="ink"] .cell.selected.conflict{box-shadow:inset 0 0 0 4px #254b72}
 [data-theme="ink"] .cell.hint-source,[data-theme="ink"] .cell.hint-color-a{background:#dbeffc;box-shadow:inset 0 0 0 2px #3280b1}
 [data-theme="ink"] .cell.hint-color-b{background:#eee1f5;box-shadow:none}
 [data-theme="ink"] .cell.hint-target{background:#ffecd3;box-shadow:inset 0 0 0 3px #b76a19}
-[data-theme="ink"] .cell.hint-source.selected,[data-theme="ink"] .cell.hint-color-a.selected,[data-theme="ink"] .cell.hint-color-b.selected{box-shadow:inset 0 0 0 3px #254b72}
+[data-theme="ink"] .cell.hint-source.selected,[data-theme="ink"] .cell.hint-color-a.selected,[data-theme="ink"] .cell.hint-color-b.selected{box-shadow:inset 0 0 0 4px #254b72}
 [data-theme="ink"] .cell.hint-target.selected{outline-color:#254b72}
 [data-theme="ink"] .cell.hint-color-a.hint-target{background:#dbeffc;box-shadow:inset 0 0 0 3px #b76a19}
 [data-theme="ink"] .cell.hint-color-b.hint-target{background:#eee1f5;box-shadow:inset 0 0 0 3px #b76a19}
@@ -72,3 +72,6 @@
 [data-theme="ink"] .credits-page section{background:#fcf9f2;border-color:#d5cdbd;border-radius:3px}
 
 .reset{color:var(--ink)}
+
+/* Keep both meanings when the selected cell is also an elimination target. */
+[data-theme="ink"] .cell.selected.hint-target{box-shadow:inset 0 0 0 3px #b76a19;outline:3px solid #254b72;outline-offset:-7px}

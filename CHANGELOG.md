@@ -1,3 +1,8 @@
+# v1.15.2
+
+- Ink & Paper: wybrane pole ma neutralne szare tło i mocniejszą granatową ramkę, odróżnione od błękitnych i fioletowych podpowiedzi.
+- Przy nakładaniu zaznaczenia i podpowiedzi zachowane są kolory dowodu oraz oznaczenia eliminacji.
+
 # v1.15.1
 
 - „Nowa, pusta plansza” ma neutralny styl w menu i pod narzędziami; potwierdzenie i cofanie zachowują działanie.
