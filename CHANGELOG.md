@@ -1,3 +1,9 @@
+# v1.16.0
+
+- Dodano motyw Wysoki kontrast: czarny tekst, białe tło, grubsza siatka, żółte zaznaczenie i symbole konfliktów/eliminacji.
+- Dodano niezależne ustawienie Większy tekst dla wszystkich motywów, zapisywane jako sudoku-large-text.
+- Na telefonach powiększona plansza ma własne przewijanie poziome; belka i klawiatura dostają czytelniejszy układ.
+
 # v1.15.3
 
 - Rozdzielono trzy stany Ink & Paper: wybrane pole (szare tło, ciemna atramentowa ramka), jednakowe wpisane cyfry (ciepły beż) i dowód podpowiedzi (błękit lub fiolet).

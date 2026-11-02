@@ -19,7 +19,8 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 
 - Brak kont, backendu, bazy danych i współdzielonych plansz.
 - Postęp biblioteki (`sudoku-library-v1`) zawiera identyfikatory ukończonych plansz i ostatnie metadane. Korzysta z localStorage, nie z cookies; nie synchronizuje się między urządzeniami. Eksport JSON planszy nie przenosi tych danych.
-- Motyw wyglądu jest przechowywany lokalnie jako `sudoku-theme` (`sage` lub `ink`). Nie zmienia danych planszy ani eksportu.
+- Motyw wyglądu jest przechowywany lokalnie jako `sudoku-theme` (`sage`, `ink` lub `contrast`). Nie zmienia danych planszy ani eksportu.
+- Niezależny wybór większego tekstu jest przechowywany pod `sudoku-large-text`. Na małych ekranach czytelność w tym trybie ma pierwszeństwo przed widocznością całej planszy bez przewijania.
 - Preferencja języka jest przechowywana lokalnie jako `sudoku-language`; nie zmienia formatu eksportu ani danych Sudoku.
 - Aktualny stan jest zapisany pod kluczem `sudoku-notatnik-v1`, punkt restartu pod `sudoku-notatnik-initial-v1` w `localStorage`.
 - Wiele kart tego samego adresu nie ma synchronizacji na żywo. Ostatni zapis może zastąpić stan zapisany przez inną kartę; najlepiej edytować w jednej karcie.

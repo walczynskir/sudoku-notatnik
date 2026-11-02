@@ -75,3 +75,77 @@
 
 /* Keep both meanings when the selected cell is also an elimination target. */
 [data-theme="ink"] .cell.selected.hint-target{box-shadow:inset 0 0 0 3px #b76a19;outline:3px solid #253039;outline-offset:-7px}
+
+.large-text-picker{display:flex;align-items:center;gap:8px;padding:8px 10px;font-weight:600;font-size:13px;cursor:pointer}.large-text-picker input{width:20px;height:20px;accent-color:var(--green);flex-shrink:0}.appearance-help{margin:0 10px 10px;font-size:12px;line-height:1.5;color:var(--muted)}
+:root[data-theme="contrast"]{--bg:#fff;--ink:#111;--muted:#333;--green:#111;--line:#555;--accent:#eee}
+[data-theme="contrast"] body{background:#fff;color:#111;font-family:Arial,sans-serif;font-size:16px}
+[data-theme="contrast"] h1,[data-theme="contrast"] h2,[data-theme="contrast"] .brand{font-family:Arial,sans-serif;font-weight:700;letter-spacing:0}
+[data-theme="contrast"] .brand-sub,[data-theme="contrast"] .eyebrow,[data-theme="contrast"] .help,[data-theme="contrast"] #status,[data-theme="contrast"] footer,[data-theme="contrast"] #app-version,[data-theme="contrast"] .board-bottom,[data-theme="contrast"] .text-button,[data-theme="contrast"] .notes,[data-theme="contrast"] .local,[data-theme="contrast"] .import-icon{color:#333}
+[data-theme="contrast"] button,[data-theme="contrast"] dialog,[data-theme="contrast"] .card,[data-theme="contrast"] .play-launch,[data-theme="contrast"] .quick-toolbar,[data-theme="contrast"] .toolbar-dropdown,[data-theme="contrast"] .difficulty-tile,[data-theme="contrast"] .segmented,[data-theme="contrast"] #hint-guide,[data-theme="contrast"] .language-picker select{border-radius:2px;box-shadow:none}
+[data-theme="contrast"] button,[data-theme="contrast"] .card,[data-theme="contrast"] dialog,[data-theme="contrast"] .toolbar-dropdown,[data-theme="contrast"] .quick-toolbar>button,[data-theme="contrast"] .quick-toolbar summary,[data-theme="contrast"] #hint-guide,[data-theme="contrast"] #image-dialog .image-actions,[data-theme="contrast"] .restart-button{background:#fff;color:#111;border-color:#555}
+[data-theme="contrast"] .play-launch,[data-theme="contrast"] .quick-toolbar,[data-theme="contrast"] .segmented,[data-theme="contrast"] #board-state{background:#eee;color:#111;border-color:#555}
+[data-theme="contrast"] .primary,[data-theme="contrast"] .quick-toolbar .toolbar-save{background:#111;color:#fff;border-color:#111}
+[data-theme="contrast"] .secondary,[data-theme="contrast"] .quiet,[data-theme="contrast"] select,[data-theme="contrast"] textarea,[data-theme="contrast"] #review-grid input{border-color:#555;background:#fff;color:#111}
+[data-theme="contrast"] .import-card>.export-button,[data-theme="contrast"] .import-card>.camera-button{background:#eee;border:2px solid #111;color:#111}
+[data-theme="contrast"] .segmented button{color:#111}[data-theme="contrast"] .segmented [aria-pressed="true"]{font-weight:700}
+[data-theme="contrast"] .segmented .active{background:#111;color:#fff}
+[data-theme="contrast"] .toolbar-menu[open] summary,[data-theme="contrast"] .toolbar-dropdown button:hover{background:#fff1a6;border-color:#111}
+[data-theme="contrast"] .keypad button{background:#fff;color:#111;border:2px solid #111;font-weight:700}
+[data-theme="contrast"] button:disabled{opacity:1;color:#555;background:#eee;border-color:#777;cursor:default}
+[data-theme="contrast"] .keypad button.digit-complete:disabled{background:#eee;color:#444;border-color:#777;opacity:1}
+[data-theme="contrast"] .keypad button.digit-complete::after{color:#111}
+[data-theme="contrast"] .board{background:#fff;border:3px solid #111;box-shadow:none}
+[data-theme="contrast"] .cell{background:#fff;color:#111;border-color:#777;font-family:Arial,sans-serif;font-weight:700;font-size:clamp(24px,3vw,34px);border-radius:0}
+[data-theme="contrast"] .cell:nth-child(3n){border-right:3px solid #111}[data-theme="contrast"] .cell:nth-child(9n){border-right:0}
+[data-theme="contrast"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="contrast"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom:3px solid #111}
+[data-theme="contrast"] .cell.peer{background:#f0f0f0}[data-theme="contrast"] .cell.same{background:#dedede}
+[data-theme="contrast"] .cell.selected{background:#fff1a6;box-shadow:inset 0 0 0 4px #111}
+[data-theme="contrast"] .notes{font-size:clamp(11px,1.2vw,14px);font-weight:700;width:90%;height:90%;color:#222}
+[data-theme="contrast"] .cell.hint-source,[data-theme="contrast"] .cell.hint-color-a{background:#d5eaff;box-shadow:inset 0 0 0 3px #00549a;outline:2px solid #00549a;outline-offset:-4px}
+[data-theme="contrast"] .cell.hint-color-b{background:#efdcff;box-shadow:none;outline:3px dashed #62218c;outline-offset:-4px}
+[data-theme="contrast"] .cell .colored-candidate{color:#003c70;text-decoration:underline;font-weight:800}[data-theme="contrast"] .cell.hint-color-b .colored-candidate{color:#521476}
+[data-theme="contrast"] .cell.hint-target{background:#ffe1ae;box-shadow:inset 0 0 0 3px #8a4200}
+[data-theme="contrast"] .cell.hint-source.selected,[data-theme="contrast"] .cell.hint-color-a.selected,[data-theme="contrast"] .cell.hint-color-b.selected{box-shadow:inset 0 0 0 4px #111}
+[data-theme="contrast"] .cell.selected.hint-target{outline:3px solid #111;outline-offset:-7px}
+[data-theme="contrast"] .cell.conflict{background:#ffe1dc;color:#9e1500;box-shadow:inset 0 0 0 2px #9e1500}
+[data-theme="contrast"] .cell.conflict::after{content:"!";position:absolute;top:1px;right:2px;font-size:12px;line-height:1;font-weight:800;color:#9e1500}
+[data-theme="contrast"] .cell.hint-target::after{content:"−";position:absolute;top:1px;right:2px;font-size:12px;line-height:1;font-weight:800;color:#733700}
+[data-theme="contrast"] .cell.selected.conflict{outline:3px solid #111;outline-offset:-6px}
+[data-theme="contrast"] .blue{background:#111}[data-theme="contrast"] .red{background:#9e1500}
+[data-theme="contrast"] .difficulty-tile{background:#fff;border:2px solid #555;color:#111;font-size:15px}[data-theme="contrast"] .difficulty-bars{color:#333}
+[data-theme="contrast"] .difficulty-choice input:checked+.difficulty-tile{background:#111;border-color:#111;color:#fff}[data-theme="contrast"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#fff}
+[data-theme="contrast"] .solved-banner{background:#fff;border:3px solid #111;color:#111}[data-theme="contrast"] .board.solved{border-color:#111;box-shadow:0 0 0 3px #111}
+[data-theme="contrast"] #review-grid input.ocr-uncertain{background:#ffe1ae;box-shadow:inset 0 0 0 3px #8a4200}
+[data-theme="contrast"] .error{color:#9e1500;font-weight:700}
+[data-theme="contrast"] button:focus-visible,[data-theme="contrast"] a:focus-visible,[data-theme="contrast"] summary:focus-visible,[data-theme="contrast"] select:focus-visible,[data-theme="contrast"] input:focus-visible,[data-theme="contrast"] .difficulty-choice input:focus-visible+.difficulty-tile{outline:3px solid #111;outline-offset:3px}
+[data-theme="contrast"] .cell:focus-visible{outline:3px solid #111;outline-offset:-7px}
+[data-theme="contrast"] .sliders input,[data-theme="contrast"] input[type="checkbox"]{accent-color:#111}
+[data-theme="contrast"] .credits-page section{background:#fff;border:2px solid #555;border-radius:2px}
+[data-theme="contrast"] .credits-page a,[data-theme="contrast"] footer a{color:#003c70;text-decoration:underline}
+@media(max-width:640px){[data-theme="contrast"] .board-panel{max-width:100%}[data-theme="contrast"] .notes{font-size:clamp(11px,2.9vw,14px)}[data-theme="contrast"] .quick-toolbar>button,[data-theme="contrast"] .quick-toolbar summary{font-size:12px;min-height:58px;height:58px;max-height:none}[data-theme="contrast"] .keypad button{min-height:46px;font-size:24px}}
+/* Text size is independent of theme. Only the board scrolls horizontally when enlarged. */
+[data-text-size="large"] body{font-size:18px}
+[data-text-size="large"] .intro p:not(.eyebrow),[data-text-size="large"] .help,[data-text-size="large"] #status,[data-text-size="large"] #hint-explanation,[data-text-size="large"] #hint-guide-text,[data-text-size="large"] dialog p,[data-text-size="large"] .library-explanation p,[data-text-size="large"] .board-top,[data-text-size="large"] .board-bottom,[data-text-size="large"] #library-current{font-size:16px;line-height:1.6}
+[data-text-size="large"] .eyebrow,[data-text-size="large"] .appearance-help{font-size:14px;letter-spacing:1px}
+[data-text-size="large"] .wide,[data-text-size="large"] .toolbar-dropdown button,[data-text-size="large"] .quick-toolbar>button,[data-text-size="large"] .quick-toolbar summary,[data-text-size="large"] .segmented button,[data-text-size="large"] .play-launch button,[data-text-size="large"] .import-actions button,[data-text-size="large"] summary,[data-text-size="large"] .text-button,[data-text-size="large"] .appearance-picker,[data-text-size="large"] .large-text-picker,[data-text-size="large"] .difficulty-tile{font-size:16px}
+[data-text-size="large"] .keypad button{font-size:28px;min-height:48px}
+[data-text-size="large"] .cell{font-size:36px}[data-text-size="large"] .notes{font-size:16px;font-weight:700;width:90%;height:90%}
+[data-text-size="large"] .solved-banner strong{font-size:20px}
+[data-text-size="large"] .quick-toolbar>button,[data-text-size="large"] .quick-toolbar summary{min-height:64px;height:auto;max-height:none}
+@media(max-width:640px){[data-text-size="large"] .board-panel{max-width:100%}[data-text-size="large"] .board-scroll{overflow-x:auto;padding:4px}[data-text-size="large"] .board{min-width:414px}[data-text-size="large"] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}[data-text-size="large"] .quick-toolbar span:last-child{overflow-wrap:normal;hyphens:none}[data-text-size="large"] .keypad{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}[data-text-size="large"] .keypad button{min-height:48px}[data-text-size="large"] .play-launch{flex-wrap:wrap}[data-text-size="large"] .toolbar-dropdown{width:min(290px,calc(100vw - 40px));right:0}[data-text-size="large"] .library-actions{flex-direction:column}}
+
+[data-theme="contrast"] .help,[data-theme="contrast"] #status,[data-theme="contrast"] #hint-explanation,[data-theme="contrast"] #hint-guide-text,[data-theme="contrast"] #hint-guide summary,[data-theme="contrast"] .wide,[data-theme="contrast"] .import-actions button{font-size:14px;line-height:1.6}
+[data-theme="contrast"] #app-version,[data-theme="contrast"] .board-bottom,[data-theme="contrast"] footer{font-size:12px}
+[data-theme="contrast"][data-text-size="large"] .help,[data-theme="contrast"][data-text-size="large"] #status,[data-theme="contrast"][data-text-size="large"] #hint-explanation,[data-theme="contrast"][data-text-size="large"] #hint-guide-text,[data-theme="contrast"][data-text-size="large"] #hint-guide summary,[data-theme="contrast"][data-text-size="large"] .wide,[data-theme="contrast"][data-text-size="large"] .import-actions button{font-size:16px}
+[data-theme="contrast"] .cell.hint-color-a.hint-target{background:#d5eaff;box-shadow:inset 0 0 0 3px #8a4200}
+[data-theme="contrast"] .cell.hint-color-b.hint-target{background:#efdcff;box-shadow:inset 0 0 0 3px #8a4200}
+[data-theme="contrast"] #entry-controls .keypad button{font-size:24px;min-height:46px}
+[data-text-size="large"] #entry-controls .keypad button{font-size:28px;min-height:50px}
+[data-text-size="large"] #entry-controls #erase,[data-text-size="large"] #entry-controls .segmented button{font-size:16px;min-height:46px}
+@media(max-width:640px){[data-text-size="large"] .quick-toolbar span:last-child{overflow-wrap:anywhere;hyphens:auto}}
+/* Reserve a small marker strip instead of covering a candidate with ! or −. */
+[data-theme="contrast"] .cell.conflict .notes,[data-theme="contrast"] .cell.hint-target .notes{height:calc(100% - 14px);align-self:flex-end}
+[data-theme="contrast"] .cell.conflict::after,[data-theme="contrast"] .cell.hint-target::after{background:#fff;padding:0 2px;min-width:12px;text-align:center}
+@media(max-width:640px){[data-theme="contrast"] .board-scroll{overflow-x:auto;padding:4px}[data-theme="contrast"] .board{min-width:414px}[data-text-size="large"] .board{min-width:486px}}
+@media(max-width:640px){[data-theme="contrast"] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}[data-theme="contrast"] .quick-toolbar span:last-child{overflow-wrap:anywhere;hyphens:auto}}
+@media(max-width:640px){[data-theme="contrast"] .toolbar-menu,[data-text-size="large"] .toolbar-menu{position:static}[data-theme="contrast"] .toolbar-dropdown,[data-text-size="large"] .toolbar-dropdown{left:auto;right:0;width:min(290px,calc(100vw - 40px))}}

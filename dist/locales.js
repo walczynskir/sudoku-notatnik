@@ -3048,5 +3048,35 @@
     "Groupe A : fond bleu et contour continu. Groupe B : fond violet et contour discontinu. Le chiffre mis en évidence est le candidat coloré. Contour ambre : éliminations. Contour épais : case sélectionnée.",
     "المجموعة A: خلفية زرقاء وإطار متصل. المجموعة B: خلفية بنفسجية وإطار متقطع. الرقم المميز هو المرشح الملون. الإطار الكهرماني: الحذف. الإطار السميك: الخلية المحددة.",
     "Gruppo A: sfondo blu e bordo continuo. Gruppo B: sfondo viola e bordo tratteggiato. La cifra evidenziata è il candidato colorato. Bordo ambra: eliminazioni. Bordo spesso: cella selezionata."
+  ],
+  "Wysoki kontrast": [
+    "High Contrast",
+    "Alto contraste",
+    "Hoher Kontrast",
+    "高对比度",
+    "उच्च कंट्रास्ट",
+    "Contraste élevé",
+    "تباين عالٍ",
+    "Contrasto elevato"
+  ],
+  "Większy tekst": [
+    "Larger text",
+    "Texto más grande",
+    "Größerer Text",
+    "大号文字",
+    "बड़ा पाठ",
+    "Texte agrandi",
+    "نص أكبر",
+    "Testo più grande"
+  ],
+  "Może wymagać przewijania na telefonie.": [
+    "May require scrolling on a phone.",
+    "Puede requerir desplazamiento en el móvil.",
+    "Kann auf dem Handy Scrollen erfordern.",
+    "在手机上可能需要滚动。",
+    "फ़ोन पर स्क्रॉल करना पड़ सकता है।",
+    "Peut nécessiter de faire défiler sur téléphone.",
+    "قد يتطلب التمرير على الهاتف.",
+    "Sul telefono potrebbe richiedere lo scorrimento."
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);
