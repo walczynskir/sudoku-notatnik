@@ -1,3 +1,7 @@
+# v1.16.3
+
+- Dodano Umami Cloud do zbiorczych statystyk odwiedzin strony głównej i strony licencji, bez publicznego licznika i bez wysyłania danych planszy.
+
 # v1.16.2
 
 - Większy tekst przeniesiono do nagłówka obok języka i motywu; na telefonie jest to kompaktowe A+.

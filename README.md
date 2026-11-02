@@ -8,7 +8,7 @@ Aplikacja internetowa do rozwiązywania sudoku 9 × 9. Biblioteka zawiera 10 000
 
 **Starsza kopia, nieaktualizowana automatycznie (Sites):** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
 
-Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy użytkownik ma własny stan na swoim urządzeniu.
+Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy użytkownik ma własny stan na swoim urządzeniu. Zbiorcze statystyki odwiedzin są zbierane przez Umami Cloud; panel statystyk jest zewnętrzny, bez publicznego licznika w aplikacji.
 
 ## Dokumentacja
 
@@ -57,7 +57,7 @@ Nie wybrano jeszcze licencji dla kodu projektu. Publiczny dostęp do aplikacji n
 
 ## Wersje
 
-Aktualne wydanie: **1.16.2**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
+Aktualne wydanie: **1.16.3**, numer również w stopce strony. Stosujemy `MAJOR.MINOR.PATCH`, tagi `vX.Y.Z` i [historię zmian](CHANGELOG.md). Procedura: [Wersjonowanie](docs/ROZWOJ.md#wersjonowanie).
 
 Wersja 1.x obejmuje analizę i wyjaśnienia technik, także Unique Rectangles, kolorowania i łańcuchów. Dokładne warianty i ograniczenia: [Zakres technik](docs/TECHNIKI.md). Generowanie plansz do nauki, ścieżki treningowe i ewentualny płatny dostęp są planowane na wersję 2; nie są częścią obecnej aplikacji.
 

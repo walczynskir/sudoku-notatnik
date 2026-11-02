@@ -5,7 +5,7 @@
 - `dist/robots.txt` pozwala robotom odwiedzać stronę i wskazuje mapę witryny. Brak tego pliku sam w sobie wcześniej nie blokował Google.
 - `dist/sitemap.xml` zawiera publiczne adresy strony głównej i autorów/licencji. Nie zawiera JSON-ów z planszami, stanu gry ani zasobów skryptowych.
 - Strony HTML wskazują własne adresy kanoniczne w domenie `https://rsudoku.pl/`. Strona główna ma także tytuł, opis oraz metadane Open Graph i karty tekstowej do udostępniania. Nie dodano osobnej grafiki podglądu.
-- Nie dodano analityki, śledzenia ani nowych cookies.
+- Od wersji 1.16.3 strona główna i strona licencji zawierają odroczony skrypt Umami Cloud do statystyk odwiedzin. Search Console pozostaje osobnym źródłem danych o wyszukiwaniu Google.
 
 Interfejs ma dziewięć języków na jednym adresie, wybieranych w przeglądarce. Nie ma osobnych URL-i językowych ani deklaracji hreflang. Nie oznaczamy fikcyjnych stron językowych. Metadane udostępniania w źródle HTML są po polsku; roboty społecznościowe zwykle nie wykonują przełączania języka aplikacji.
 

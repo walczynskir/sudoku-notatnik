@@ -17,7 +17,8 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 
 ## Dane i prywatność
 
-- Brak kont, backendu, bazy danych i współdzielonych plansz.
+- Brak kont użytkowników, własnego backendu, bazy danych i współdzielonych plansz.
+- Umami Cloud zbiera statystyki odwiedzin na stronie głównej i stronie licencji. Skrypt ładuje się z `https://cloud.umami.is/script.js` z atrybutem `defer`; zablokowanie usługi nie blokuje gry. Nie dodano własnych zdarzeń ani przekazywania plansz, notatek i zdjęć. Identyfikator witryny w HTML jest publiczny; konto panelu pozostaje prywatne. Liczba odwiedzających jest szacunkowa, nie stanowi dokładnej liczby osób ani listy adresów IP.
 - Postęp biblioteki (`sudoku-library-v1`) zawiera identyfikatory ukończonych plansz i ostatnie metadane. Korzysta z localStorage, nie z cookies; nie synchronizuje się między urządzeniami. Eksport JSON planszy nie przenosi tych danych.
 - Motyw wyglądu jest przechowywany lokalnie jako `sudoku-theme` (`sage`, `ink` lub `contrast`). Nie zmienia danych planszy ani eksportu.
 - Niezależny wybór większego tekstu jest przechowywany pod `sudoku-large-text`. Na małych ekranach czytelność w tym trybie ma pierwszeństwo przed widocznością całej planszy bez przewijania.
