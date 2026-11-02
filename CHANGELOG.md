@@ -1,3 +1,9 @@
+# v1.17.0
+
+- Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szerokości telefonu; większy tekst zachowuje poziome przewijanie.
+- Zablokowano cyfry początkowe biblioteki. Ręczne/importowane plansze mają przycisk rozpoczęcia rozwiązywania oraz możliwość ponownej edycji danych początkowych.
+- Blokada jest zachowywana w localStorage, cofnięciu/przywróceniu, restarcie i JSON. Starsze pliki pozostają zgodne.
+
 # v1.16.3
 
 - Dodano Umami Cloud do zbiorczych statystyk odwiedzin strony głównej i strony licencji, bez publicznego licznika i bez wysyłania danych planszy.

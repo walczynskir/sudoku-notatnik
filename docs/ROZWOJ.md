@@ -166,3 +166,9 @@ Wrapper `.board-scroll` otacza samą planszę. High Contrast i większy tekst mo
 Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst włącza się obok selektorów w nagłówku. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
 
 Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przełącznik powiększenia ma oznaczenie A+ przy logo, bez dodatkowego wiersza. Motywy mają lokalizowane nazwy; techniczne klucze `sage`, `ink`, `contrast` pozostają stałe.
+
+### Blokada cyfr początkowych (1.17.0)
+
+Opcjonalna tablica `state.givens` zawiera 81 cyfr zgodnych z `values`; `Sudoku.validate` zachowuje ją i odrzuca sprzeczne dane. `Sudoku.isGiven` i `placeValue` chronią zapis, a UI chroni też kandydatów i kasowanie. Stan blokady jest częścią istniejących migawek undo/redo i localStorage. Przy imporcie blokowanego JSON punkt restartu pochodzi z givens. Biblioteka blokuje nowe plansze i migruje zapisane starsze gry rozpoznane po danych biblioteki; jawnie odblokowana gra ma tablicę zer, więc migracja jej nie blokuje ponownie. Testy clues obejmują prawdziwe handlery wpisywania, blokowania, restartu i historii.
+
+Poprawka mobilnego wysokiego kontrastu usuwa minimum 414 px tylko dla normalnego tekstu. Opcja większego tekstu zachowuje minimum 486 px i przewijanie planszy.

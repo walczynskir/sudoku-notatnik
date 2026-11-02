@@ -3078,5 +3078,95 @@
     "Encre et papier",
     "حبر وورق",
     "Inchiostro e carta"
+  ],
+  "Rozpocznij rozwiązywanie": [
+    "Start solving",
+    "Empezar a resolver",
+    "Lösen beginnen",
+    "开始解题",
+    "हल करना शुरू करें",
+    "Commencer à résoudre",
+    "ابدأ الحل",
+    "Inizia a risolvere"
+  ],
+  "Edytuj liczby początkowe": [
+    "Edit starting clues",
+    "Editar pistas iniciales",
+    "Vorgaben bearbeiten",
+    "编辑初始数字",
+    "शुरुआती अंक संपादित करें",
+    "Modifier les chiffres initiaux",
+    "عدّل الأرقام المعطاة",
+    "Modifica i numeri iniziali"
+  ],
+  "Liczba początkowa — zablokowana": [
+    "Starting clue — locked",
+    "Pista inicial — bloqueada",
+    "Vorgabe — gesperrt",
+    "初始数字 — 已锁定",
+    "शुरुआती अंक — लॉक है",
+    "Chiffre initial — verrouillé",
+    "رقم معطى — مقفل",
+    "Numero iniziale — bloccato"
+  ],
+  "To liczba początkowa. Aby ją zmienić, wybierz „Edytuj liczby początkowe”.": [
+    "This is a starting clue. Choose “Edit starting clues” to change it.",
+    "Es una pista inicial. Elige «Editar pistas iniciales» para cambiarla.",
+    "Dies ist eine Vorgabe. Wähle „Vorgaben bearbeiten“, um sie zu ändern.",
+    "这是初始数字。请选择“编辑初始数字”进行修改。",
+    "यह शुरुआती अंक है। इसे बदलने के लिए “शुरुआती अंक संपादित करें” चुनें।",
+    "C’est un chiffre initial. Choisissez « Modifier les chiffres initiaux » pour le changer.",
+    "هذا رقم معطى. اختر «عدّل الأرقام المعطاة» لتغييره.",
+    "È un numero iniziale. Scegli «Modifica i numeri iniziali» per cambiarlo."
+  ],
+  "Edytować liczby początkowe?": [
+    "Edit starting clues?",
+    "¿Editar las pistas iniciales?",
+    "Vorgaben bearbeiten?",
+    "编辑初始数字？",
+    "शुरुआती अंक संपादित करें?",
+    "Modifier les chiffres initiaux ?",
+    "هل تريد تعديل الأرقام المعطاة؟",
+    "Modificare i numeri iniziali?"
+  ],
+  "Blokada zostanie zdjęta. Po poprawieniu planszy wybierz „Rozpocznij rozwiązywanie”, aby ponownie zablokować liczby początkowe.": [
+    "The clues will be unlocked. After correcting the grid, choose “Start solving” to lock the starting clues again.",
+    "Las pistas se desbloquearán. Tras corregir la cuadrícula, elige «Empezar a resolver» para bloquearlas de nuevo.",
+    "Die Vorgaben werden entsperrt. Wähle nach der Korrektur „Lösen beginnen“, um sie wieder zu sperren.",
+    "初始数字将被解锁。修正棋盘后，选择“开始解题”可再次锁定初始数字。",
+    "अंकों का लॉक हट जाएगा। ग्रिड सुधारने के बाद शुरुआती अंकों को फिर लॉक करने के लिए “हल करना शुरू करें” चुनें।",
+    "Les chiffres seront déverrouillés. Après correction, choisissez « Commencer à résoudre » pour les verrouiller à nouveau.",
+    "سيتم إلغاء القفل. بعد تصحيح الشبكة، اختر «ابدأ الحل» لقفل الأرقام المعطاة مجددًا.",
+    "I numeri verranno sbloccati. Dopo aver corretto la griglia, scegli «Inizia a risolvere» per bloccarli di nuovo."
+  ],
+  "Możesz poprawić liczby początkowe.": [
+    "You can now correct the starting clues.",
+    "Ahora puedes corregir las pistas iniciales.",
+    "Du kannst die Vorgaben jetzt korrigieren.",
+    "现在可以修正初始数字。",
+    "अब आप शुरुआती अंक सुधार सकते हैं।",
+    "Vous pouvez maintenant corriger les chiffres initiaux.",
+    "يمكنك الآن تصحيح الأرقام المعطاة.",
+    "Ora puoi correggere i numeri iniziali."
+  ],
+  "Liczby początkowe zablokowane. Miłego rozwiązywania!": [
+    "Starting clues locked. Enjoy solving!",
+    "Pistas iniciales bloqueadas. ¡Disfruta resolviendo!",
+    "Vorgaben gesperrt. Viel Spaß beim Lösen!",
+    "初始数字已锁定。祝解题愉快！",
+    "शुरुआती अंक लॉक हो गए हैं। हल करने का आनंद लें!",
+    "Chiffres initiaux verrouillés. Bonne résolution !",
+    "تم قفل الأرقام المعطاة. استمتع بالحل!",
+    "Numeri iniziali bloccati. Buon divertimento!"
+  ],
+  "Przywrócisz liczby z punktu restartu i usuniesz kandydatów. Możesz cofnąć restart.": [
+    "Restore the restart point and clear candidates. You can undo the restart.",
+    "Se restaurará el punto de reinicio y se borrarán los candidatos. Puedes deshacer el reinicio.",
+    "Der Neustartpunkt wird wiederhergestellt und Kandidaten werden gelöscht. Der Neustart lässt sich rückgängig machen.",
+    "将恢复重置点并清除候选数。你可以撤销重置。",
+    "पुनः आरंभ बिंदु बहाल होगा और उम्मीदवार हटेंगे। आप पुनः आरंभ को पूर्ववत कर सकते हैं।",
+    "Le point de redémarrage sera restauré et les candidats effacés. Vous pouvez annuler le redémarrage.",
+    "ستتم استعادة نقطة إعادة البدء ومسح المرشحين. يمكنك التراجع عن إعادة البدء.",
+    "Verrà ripristinato il punto di riavvio e cancellati i candidati. Puoi annullare il riavvio."
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

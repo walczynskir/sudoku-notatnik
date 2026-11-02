@@ -59,7 +59,7 @@ Wymagane jest 81 cyfr lub kropek, w jednym ciągu albo w 9 wierszach. `0` i `.` 
 000080079
 ```
 
-Obsługiwane pliki: TXT, SDK, CSV zawierający taką siatkę oraz kopie JSON eksportowane przez aplikację. JSON przywraca również kandydatów.
+Obsługiwane pliki: TXT, SDK, CSV zawierający taką siatkę oraz kopie JSON eksportowane przez aplikację. JSON przywraca również kandydatów i blokadę cyfr początkowych, jeżeli została zapisana w pliku.
 
 ## Import ze zdjęcia i aparatu
 
@@ -86,7 +86,7 @@ Stan planszy i kandydatów jest automatycznie zapisywany w pamięci lokalnej prz
 
 **Pobierz planszę i notatki** pobiera `sudoku-notatnik.json`. Plik zawiera aktualne liczby i kandydatów; nie zawiera zdjęcia, historii cofania ani osobnego punktu restartu.
 
-Aby przywrócić kopię: **Z tekstu → Wybierz plik → wskaż JSON → potwierdź zastąpienie planszy**. Zaimportowane liczby stają się nowym punktem restartu.
+Aby przywrócić kopię: **Z tekstu → Wybierz plik → wskaż JSON → potwierdź zastąpienie planszy**. Dla JSON z zablokowanymi cyframi punktem restartu są te cyfry; dla starszych plików bez blokady — wszystkie zaimportowane liczby.
 
 ## Telefon i skróty klawiaturowe
 
@@ -161,7 +161,7 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 
 ## Wygląd
 
-Wybierz **Wygląd** obok selektora języka w nagłówku. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Na wąskim telefonie plansza może wymagać przewijania w poziomie.
+Wybierz **Wygląd** obok selektora języka w nagłówku. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Przy zwykłym tekście plansza mieści się na szerokość telefonu; przewijanie poziome jest dostępne w trybie większego tekstu.
 
 **Szałwia** zachowuje dotychczasową zieloną paletę. **Atrament i papier** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są tłumaczone na wybrany język interfejsu; po polsku to Szałwia, Atrament i papier oraz Wysoki kontrast.
 
@@ -184,3 +184,9 @@ Na telefonie większa plansza ma własne przewijanie poziome. Belka pozostaje na
 Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst włącza się obok selektorów w nagłówku. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
 
 Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przełącznik powiększenia ma oznaczenie A+ przy logo, bez dodatkowego wiersza. Motywy mają lokalizowane nazwy; techniczne klucze `sage`, `ink`, `contrast` pozostają stałe.
+
+## Cyfry początkowe i szerokość planszy (1.17.0)
+
+Plansze biblioteki od razu blokują cyfry początkowe. Są pogrubione i oznaczone małą kropką w rogu. Można je zaznaczać, ale nie zmieniać ani usuwać. Po ręcznym wpisaniu lub imporcie zdjęcia/tekstu popraw dane, następnie wybierz **Rozpocznij rozwiązywanie** nad planszą. Bieżące cyfry zostaną zablokowane i staną się punktem restartu. **Edytuj liczby początkowe** odblokowuje je po potwierdzeniu; po poprawkach ponownie rozpocznij rozwiązywanie. Cofnij/Przywróć obejmują także blokowanie i odblokowanie. Blokada przetrwa odświeżenie i eksport/import JSON.
+
+Na telefonie Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szerokości ekranu. Większy tekst nadal pozwala przewijać samą planszę poziomo, aby zachować duże cyfry i kandydatów.

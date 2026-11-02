@@ -182,3 +182,10 @@ header .header-preferences .language-picker{margin:0;min-width:0}
 .text-size-symbol{display:none;font-size:18px;font-weight:800}
 @media(max-width:640px){header{position:relative}.header-preferences .header-text-size{position:absolute;top:10px;inset-inline-end:14px;min-height:32px;padding:4px;gap:5px}.header-text-size .text-size-name{display:none}.text-size-symbol{display:inline}.brand{padding-inline-end:62px}}
 @media(max-width:640px) and (orientation:landscape){.header-preferences .header-text-size{position:static}.brand{padding-inline-end:0}.header-preferences{gap:7px}.header-preferences .language-picker select{max-width:110px}.header-preferences .theme-picker select{max-width:180px}}
+
+/* Normal text fits narrow phones; only the larger-text option needs a wider grid. */
+@media(max-width:640px){[data-theme="contrast"]:not([data-text-size="large"]) .board{min-width:0;width:100%}[data-theme="contrast"]:not([data-text-size="large"]) .notes{font-size:clamp(9px,2.7vw,14px)}}
+.clue-controls{display:flex;justify-content:flex-end;margin:8px 0}.clue-controls button{font-size:13px;min-height:38px;padding:8px 12px}
+.cell.given{font-weight:800}.cell:not(.given){font-weight:400}
+.cell.given::before{content:"";position:absolute;inset-inline-end:3px;bottom:3px;width:4px;height:4px;background:currentColor;border-radius:50%;pointer-events:none}
+[data-theme="contrast"] .cell:not(.given){font-weight:500}
