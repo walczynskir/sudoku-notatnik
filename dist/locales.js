@@ -3009,26 +3009,6 @@
     "المظهر",
     "Aspetto"
   ],
-  "Sage": [
-    "Sage",
-    "Sage",
-    "Sage",
-    "Sage",
-    "Sage",
-    "Sage",
-    "Sage",
-    "Sage"
-  ],
-  "Ink & Paper": [
-    "Ink & Paper",
-    "Ink & Paper",
-    "Ink & Paper",
-    "Ink & Paper",
-    "Ink & Paper",
-    "Ink & Paper",
-    "Ink & Paper",
-    "Ink & Paper"
-  ],
   "Gruba ramka: wybrane przez Ciebie pole. Niebieskie tło: pola tworzące wskazówkę. Bursztynowa obwódka: pola do usunięcia kandydatów.": [
     "Thick border: your selected cell. Blue background: cells supporting the hint. Amber border: cells for candidate elimination.",
     "Borde grueso: tu casilla seleccionada. Fondo azul: casillas que justifican la pista. Borde ámbar: casillas para eliminar candidatos.",
@@ -3078,5 +3058,25 @@
     "Peut nécessiter de faire défiler sur téléphone.",
     "قد يتطلب التمرير على الهاتف.",
     "Sul telefono potrebbe richiedere lo scorrimento."
+  ],
+  "Szałwia": [
+    "Sage",
+    "Salvia",
+    "Salbei",
+    "鼠尾草",
+    "सेज",
+    "Sauge",
+    "المريمية",
+    "Salvia"
+  ],
+  "Atrament i papier": [
+    "Ink & Paper",
+    "Tinta y papel",
+    "Tinte und Papier",
+    "墨与纸",
+    "स्याही और कागज़",
+    "Encre et papier",
+    "حبر وورق",
+    "Inchiostro e carta"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

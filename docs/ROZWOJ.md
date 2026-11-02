@@ -163,4 +163,6 @@ Od 1.16.0 trzeci identyfikator motywu to `contrast`. `data-text-size` ma wartoś
 
 Wrapper `.board-scroll` otacza samą planszę. High Contrast i większy tekst mogą powiększać ją na telefonach; przewijanie nie obejmuje belki ani pozostałych narzędzi. Dla kontrastowych oznaczeń konfliktu i eliminacji pas u góry notatek rezerwuje miejsce na symbol, aby nie zakrywać kandydatów.
 
-Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst nadal włącza się w menu Więcej. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
+Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst włącza się obok selektorów w nagłówku. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
+
+Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przełącznik powiększenia ma oznaczenie A+ przy logo, bez dodatkowego wiersza. Motywy mają lokalizowane nazwy; techniczne klucze `sage`, `ink`, `contrast` pozostają stałe.

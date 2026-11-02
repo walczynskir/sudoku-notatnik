@@ -163,7 +163,7 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 
 Wybierz **Wygląd** obok selektora języka w nagłówku. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Na wąskim telefonie plansza może wymagać przewijania w poziomie.
 
-**Sage** zachowuje dotychczasową zieloną paletę. **Ink & Paper** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są stałe we wszystkich językach.
+**Szałwia** zachowuje dotychczasową zieloną paletę. **Atrament i papier** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są tłumaczone na wybrany język interfejsu; po polsku to Szałwia, Atrament i papier oraz Wysoki kontrast.
 
 Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki i adresu strony. Nie jest eksportowany w pliku JSON. Działa także na stronie autorów i licencji. Zmiana wyglądu nie resetuje planszy, notatek, podpowiedzi, historii ani postępu. Bez dostępnej pamięci lokalnej można zmienić motyw w otwartej karcie; po przeładowaniu wróci Ink & Paper.
 
@@ -177,8 +177,10 @@ Podświetlenie innych wpisanych cyfr równych wybranej ma w Ink & Paper ciepłe 
 
 ## Większy tekst
 
-W menu **Więcej** zaznacz **Większy tekst**. To osobne ustawienie: można go używać z każdym z trzech motywów. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
+W nagłówku obok motywu zaznacz **Większy tekst** (na telefonie: **A+**). To osobne ustawienie: można go używać z każdym z trzech motywów. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
 
 Na telefonie większa plansza ma własne przewijanie poziome. Belka pozostaje na szerokość ekranu, a klawiatura liczbowa układa się w dwa rzędy. To świadomy wybór czytelności kosztem przewijania. Strzałki na klawiaturze komputera nadal przenoszą zaznaczenie; pola przy prawej krawędzi można odsłonić przewijaniem planszy. Przy braku pamięci lokalnej oba ustawienia działają w bieżącej karcie. Ink & Paper pozostaje domyślnym motywem, a powiększenie domyślnie jest wyłączone.
 
-Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst nadal włącza się w menu Więcej. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
+Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst włącza się obok selektorów w nagłówku. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
+
+Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przełącznik powiększenia ma oznaczenie A+ przy logo, bez dodatkowego wiersza. Motywy mają lokalizowane nazwy; techniczne klucze `sage`, `ink`, `contrast` pozostają stałe.

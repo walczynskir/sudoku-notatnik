@@ -24,7 +24,7 @@ test('switching language restores original text, preserves input and tolerates b
 });
 
 test('all static interface labels have catalog or dynamic-template coverage',()=>{
- const html=fs.readFileSync(require.resolve('../dist/index.html'),'utf8'),labels=[...html.matchAll(/>([^<>]+)</g)].map(m=>m[1]),attributes=[...html.matchAll(/(?:aria-label|title)="([^"]+)"/g)].map(m=>m[1]),keys=new Set(Object.keys(C).map(s=>s.replace(/\s+/g,' ').trim()));
+ const html=fs.readFileSync(require.resolve('../dist/index.html'),'utf8').replace(/<([a-z][a-z0-9]*)\b[^>]*translate="no"[^>]*>[\s\S]*?<\/\1>/gi,''),labels=[...html.matchAll(/>([^<>]+)</g)].map(m=>m[1]),attributes=[...html.matchAll(/(?:aria-label|title)="([^"]+)"/g)].map(m=>m[1]),keys=new Set(Object.keys(C).map(s=>s.replace(/\s+/g,' ').trim()));
  for(let source of [...labels,...attributes]){source=source.replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();if(!/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż]/.test(source)||['Polski','English','Español','Deutsch','Language / Język','हिन्दी','Français','العربية','Italiano'].includes(source)||/^v\d+\.\d+\.\d+$/.test(source))continue;assert(keys.has(source)||I.text(source,'en')!==source,source);}
 });
 

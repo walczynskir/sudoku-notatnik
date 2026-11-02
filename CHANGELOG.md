@@ -1,3 +1,8 @@
+# v1.16.2
+
+- Większy tekst przeniesiono do nagłówka obok języka i motywu; na telefonie jest to kompaktowe A+.
+- Nazwy motywów są tłumaczone na język interfejsu, po polsku: Szałwia, Atrament i papier, Wysoki kontrast. Identyfikatory zapisanych preferencji pozostają bez zmian.
+
 # v1.16.1
 
 - Selektor motywu przeniesiono do nagłówka obok języka, także na stronie licencji. Większy tekst pozostaje w menu Więcej.
