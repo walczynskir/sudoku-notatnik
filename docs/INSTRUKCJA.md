@@ -187,6 +187,6 @@ Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przeł
 
 ## Cyfry początkowe i szerokość planszy (1.17.0)
 
-Plansze biblioteki od razu blokują cyfry początkowe. Są pogrubione i oznaczone małą kropką w rogu. Można je zaznaczać, ale nie zmieniać ani usuwać. Po ręcznym wpisaniu lub imporcie zdjęcia/tekstu popraw dane, następnie wybierz **Rozpocznij rozwiązywanie** nad planszą. Bieżące cyfry zostaną zablokowane i staną się punktem restartu. **Edytuj liczby początkowe** odblokowuje je po potwierdzeniu; po poprawkach ponownie rozpocznij rozwiązywanie. Cofnij/Przywróć obejmują także blokowanie i odblokowanie. Blokada przetrwa odświeżenie i eksport/import JSON.
+Plansze biblioteki od razu blokują cyfry początkowe. Są pogrubione i oznaczone małą kropką w rogu. Można je zaznaczać, ale nie zmieniać ani usuwać. Po ręcznym wpisaniu lub imporcie zdjęcia/tekstu popraw dane, następnie wybierz **Rozpocznij rozwiązywanie** nad planszą. Bieżące cyfry zostaną zablokowane i staną się punktem restartu. **Więcej → Edytuj liczby początkowe** odblokowuje je po potwierdzeniu; po poprawkach ponownie rozpocznij rozwiązywanie. Cofnij/Przywróć obejmują także blokowanie i odblokowanie. Blokada przetrwa odświeżenie i eksport/import JSON.
 
 Na telefonie Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szerokości ekranu. Większy tekst nadal pozwala przewijać samą planszę poziomo, aby zachować duże cyfry i kandydatów.

@@ -1,3 +1,8 @@
+# v1.17.1
+
+- Przeniesiono edycję zablokowanych cyfr początkowych do menu Więcej, aby nie zajmowała dodatkowego wiersza nad planszą podczas gry.
+- Mobilne przyciski cyfr mają jawną wysokość minimalną, wysokość wiersza tekstu i pionowe centrowanie, aby cyfry nie były przycinane.
+
 # v1.17.0
 
 - Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szerokości telefonu; większy tekst zachowuje poziome przewijanie.

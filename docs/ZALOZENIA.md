@@ -9,7 +9,7 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 - Obowiązuje klasyczne sudoku: cyfry 1–9, bez powtórzeń w wierszu, kolumnie i bloku 3 × 3.
 - Kandydaci wynikają z bieżących wpisanych liczb, a nie z zaawansowanych technik rozwiązywania.
 - Ręczne notatki należą do użytkownika. Wpisanie liczby usuwa tylko odpowiadającego jej kandydata u sąsiadów; pełne przeliczenie wykonuje osobny przycisk.
-- Łamigłówki biblioteki mają zablokowane cyfry początkowe. Przy ręcznym wpisywaniu i imporcie tekstu/zdjęcia można poprawić dane, a następnie wybrać „Rozpocznij rozwiązywanie”. „Edytuj liczby początkowe” odblokowuje cyfry po potwierdzeniu. Blokada działa dla klawiatury, kasowania i notatek; pola nadal można zaznaczać.
+- Łamigłówki biblioteki mają zablokowane cyfry początkowe. Przy ręcznym wpisywaniu i imporcie tekstu/zdjęcia można poprawić dane, a następnie wybrać „Rozpocznij rozwiązywanie”. „Więcej → Edytuj liczby początkowe” odblokowuje cyfry po potwierdzeniu. Blokada działa dla klawiatury, kasowania i notatek; pola nadal można zaznaczać.
 - Opcjonalne `givens` w JSON przechowuje 81 cyfr początkowych (0 oznacza pole edytowalne); każda niezerowa cyfra musi zgadzać się z `values`. Starsze pliki bez `givens` pozostają edytowalne. Nowy eksport zachowuje blokadę, a restart odtwarza cyfry początkowe bez późniejszych wpisów.
 - Każda zmiana danych przez interfejs przechodzi przez historię cofania. Wybór pola i trybu edycji nie stanowią kroków historii.
 - Cofanie przywraca również punkt restartu, jeśli zmienił się w wyniku importu lub nowej planszy.

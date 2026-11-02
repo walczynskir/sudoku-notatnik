@@ -189,3 +189,6 @@ header .header-preferences .language-picker{margin:0;min-width:0}
 .cell.given{font-weight:800}.cell:not(.given){font-weight:400}
 .cell.given::before{content:"";position:absolute;inset-inline-end:3px;bottom:3px;width:4px;height:4px;background:currentColor;border-radius:50%;pointer-events:none}
 [data-theme="contrast"] .cell:not(.given){font-weight:500}
+
+/* The keypad keeps its own text height, independent of extra actions above it. */
+@media(max-width:640px){#entry-controls .keypad button{display:flex;align-items:center;justify-content:center;line-height:1.15;height:auto;min-height:48px;padding:8px 1px;overflow:visible;flex-shrink:0}[data-text-size="large"] #entry-controls .keypad button{min-height:56px}}
