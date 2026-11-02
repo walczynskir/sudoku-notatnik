@@ -1,3 +1,8 @@
+# v1.15.3
+
+- Rozdzielono trzy stany Ink & Paper: wybrane pole (szare tło, ciemna atramentowa ramka), jednakowe wpisane cyfry (ciepły beż) i dowód podpowiedzi (błękit lub fiolet).
+- Poprawiono również oznaczenie wyboru w legendzie oraz ramki przy nakładaniu wyboru i podpowiedzi.
+
 # v1.15.2
 
 - Ink & Paper: wybrane pole ma neutralne szare tło i mocniejszą granatową ramkę, odróżnione od błękitnych i fioletowych podpowiedzi.

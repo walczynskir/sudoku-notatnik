@@ -169,4 +169,6 @@ W obu motywach gruba ramka wskazuje wybrane pole, grupa A pozostaje niebieska, g
 
 Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w menu Więcej → Wygląd. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
 
-W Ink & Paper wybrane pole ma neutralne szare tło i granatową ramkę. Jeśli należy też do podpowiedzi, zachowuje błękitne lub fioletowe tło dowodu, a mocna granatowa ramka oznacza wybór. Dla wybranego celu eliminacji widoczne są obie ramki: pomarańczowa i wewnętrzna granatowa.
+W Ink & Paper wybrane pole ma neutralne szare tło i ciemną atramentową ramkę. Jeśli należy też do podpowiedzi, zachowuje błękitne lub fioletowe tło dowodu, a mocna atramentowa ramka oznacza wybór. Dla wybranego celu eliminacji widoczne są obie ramki: pomarańczowa i wewnętrzna atramentowa.
+
+Podświetlenie innych wpisanych cyfr równych wybranej ma w Ink & Paper ciepłe beżowe tło. To pomoc w śledzeniu cyfr, nie podpowiedź techniki. Błękitne tło jest zarezerwowane dla pól dowodu podpowiedzi.
