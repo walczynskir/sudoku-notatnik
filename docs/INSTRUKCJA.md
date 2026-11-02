@@ -4,8 +4,8 @@ Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angiels
 
 ## Gotowe łamigłówki
 
-1. Kliknij zielony przycisk **Nowa gra** w panelu nad planszą lub wybierz **Wczytaj → Nowa gra**.
-2. W otwartym oknie zaznacz jeden z czterech kafelków: **Łatwy**, **Średni**, **Trudny**, **Ekspert**. Wybrany poziom ma zielone tło; na telefonie kafelki układają się w dwa rzędy.
+1. Kliknij wyróżniony przycisk **Nowa gra** w panelu nad planszą lub wybierz **Wczytaj → Nowa gra**.
+2. W otwartym oknie zaznacz jeden z czterech kafelków: **Łatwy**, **Średni**, **Trudny**, **Ekspert**. Wybrany poziom ma mocno wyróżnione tło; na telefonie kafelki układają się w dwa rzędy.
 3. Opcjonalnie zaznacz **Pokaż kandydatów od razu**, a potem kliknij **Nowa gra**. Każdy poziom ma 2500 plansz. Notatki można też obliczyć później.
 
 Przycisk nad planszą ma tę samą nazwę i kolor na komputerze i telefonie. Na telefonie podczas gry panel staje się kompaktowy. Dłuższe informacje o bibliotece, ocenach, kandydatach i źródle znajdują się pod przyciskami w rozwijanej sekcji **Jak działa biblioteka?**.
@@ -107,7 +107,7 @@ Kliknięcie logo otwiera stronę główną i przeładowuje aplikację. Zapisana 
 
 1. Kliknij **Podpowiedz technikę**. Zobaczysz wyłącznie nazwę najłatwiejszej znalezionej techniki, bez cyfr, pól i ich podświetlania.
 2. Opcjonalnie rozwiń **Na czym polega?** pod nazwą techniki: znajdziesz ogólną zasadę, sposób rozpoznania układu, uzasadnienie i typowe pułapki, bez cyfr i współrzędnych z własnej planszy. W razie potrzeby rozwiń także **Pojęcia użyte w wyjaśnieniu**. Sekcję można ponownie zwinąć. Nowa podpowiedź zawsze zaczyna ze zwiniętą zasadą.
-3. Jeśli chcesz więcej pomocy, kliknij **Pokaż pola i wyjaśnienie ruchu**. Ciemnozielona ramka oznacza aktualnie wybrane przez Ciebie pole. Niebieskie pola tworzą wskazówkę, a bursztynowa obwódka wskazuje miejsca do eliminacji kandydatów. Wyjaśnienie opisuje konkretny ruch.
+3. Jeśli chcesz więcej pomocy, kliknij **Pokaż pola i wyjaśnienie ruchu**. Gruba ramka oznacza aktualnie wybrane przez Ciebie pole. Niebieskie pola tworzą wskazówkę, a bursztynowa obwódka wskazuje miejsca do eliminacji kandydatów. Wyjaśnienie opisuje konkretny ruch.
 
 Wskazówkę można ukryć; każda edycja danych i cofnięcie automatycznie ją usuwa. Podpowiedź nie wpisuje liczb, nie zmienia notatek i nie trafia do historii cofania.
 
@@ -153,8 +153,16 @@ Narożniki ramki służą do zmiany jej rozmiaru; środek do przesuwania. Suwak 
 
 ### Kolorowanie i Skyscraper
 
-Skyscraper jest rozpoznawany przed ogólnym kolorowaniem. W kolorowaniu po odsłonięciu pól grupa A jest niebieska z ciągłą ramką, a grupa B fioletowa z przerywaną ramką. Pogrubiona, podkreślona cyfra to analizowany kandydat. Nie trzeba samodzielnie kolorować planszy. Bursztynowa ramka wskazuje eliminacje, ciemnozielona wybrane przez użytkownika pole.
+Skyscraper jest rozpoznawany przed ogólnym kolorowaniem. W kolorowaniu po odsłonięciu pól grupa A jest niebieska z ciągłą ramką, a grupa B fioletowa z przerywaną ramką. Pogrubiona, podkreślona cyfra to analizowany kandydat. Nie trzeba samodzielnie kolorować planszy. Bursztynowa ramka wskazuje eliminacje, gruba ramka wybrane przez użytkownika pole.
 
 ### Autorzy i licencje
 
 Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i danych oraz pełne teksty licencyjne. Nagłówki, opisy i nawigacja korzystają z wybranego języka aplikacji; na stronie jest też osobny selektor. Oryginalne teksty prawne pozostają w języku źródłowym. Pełny wykaz: [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
+
+## Wygląd
+
+Wybierz **Więcej → Wygląd** nad planszą. **Sage** zachowuje dotychczasową zieloną paletę. **Ink & Paper** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są stałe we wszystkich językach.
+
+Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki i adresu strony. Nie jest eksportowany w pliku JSON. Działa także na stronie autorów i licencji. Zmiana wyglądu nie resetuje planszy, notatek, podpowiedzi, historii ani postępu. Bez dostępnej pamięci lokalnej można zmienić motyw w otwartej karcie; po przeładowaniu wróci Sage.
+
+W obu motywach gruba ramka wskazuje wybrane pole, grupa A pozostaje niebieska, grupa B fioletowa z przerywaną ramką, eliminacje mają bursztynową/pomarańczową ramkę, a konflikty są czerwone.

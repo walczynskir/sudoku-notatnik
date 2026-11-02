@@ -469,16 +469,6 @@
     "عرض الخانات وشرح الخطوة",
     "Mostra celle e spiegazione"
   ],
-  "Ciemnozielona ramka: wybrane przez Ciebie pole. Niebieskie tło: pola tworzące wskazówkę. Bursztynowa obwódka: pola do usunięcia kandydatów.": [
-    "Dark green border: your selected cell. Blue background: cells supporting the hint. Amber border: cells for candidate elimination.",
-    "Borde verde oscuro: tu casilla seleccionada. Fondo azul: casillas que justifican la pista. Borde ámbar: casillas para eliminar candidatos.",
-    "Dunkelgrüner Rahmen: ausgewähltes Feld. Blauer Hintergrund: Begründungsfelder. Bernsteinfarbener Rahmen: Felder zum Entfernen von Kandidaten.",
-    "深绿色边框：所选格子。蓝色背景：推理依据。琥珀色边框：可删除候选数的格子。",
-    "गहरी हरी सीमा: आपका चुना खाना। नीला रंग: संकेत के आधार वाले खाने। सुनहरी सीमा: उम्मीदवार हटाने वाले खाने।",
-    "Bord vert foncé : votre case. Fond bleu : cases justifiant l’indice. Bord ambré : cases où éliminer des candidats.",
-    "الإطار الأخضر الداكن: خانتك المحددة. الأزرق: خانات الاستدلال. الإطار الكهرماني: خانات حذف المرشحين.",
-    "Bordo verde scuro: cella selezionata. Sfondo blu: celle che giustificano l’indizio. Bordo ambra: celle da cui eliminare candidati."
-  ],
   "Ukryj podpowiedź": [
     "Hide hint",
     "Ocultar pista",
@@ -2789,16 +2779,6 @@
     "ناطحة السحاب للرقم {0}. القاعدتان: {1}. القمتان: {2}. كل زوج من قاعدة وقمة هو الموضعان الوحيدان للرقم في صفه أو عموده. ترى القاعدتان إحداهما الأخرى، لذا تحتوي قمة واحدة على الأقل على الرقم. ترى الخلايا المستهدفة القمتين معاً.",
     "Skyscraper per la cifra {0}. Basi: {1}. Cime: {2}. Ogni coppia base–cima rappresenta le uniche due posizioni per questa cifra nella sua riga o colonna. Le basi si vedono, quindi almeno una cima contiene la cifra. Le celle bersaglio vedono entrambe le cime."
   ],
-  "Grupa A: niebieskie tło i ciągła ramka. Grupa B: fioletowe tło i przerywana ramka. Wyróżniona cyfra jest kolorowanym kandydatem. Bursztynowa ramka: eliminacje. Ciemnozielona ramka: wybrane pole.": [
-    "Group A: blue background and solid outline. Group B: purple background and dashed outline. The emphasized digit is the colored candidate. Amber outline: eliminations. Dark green outline: selected cell.",
-    "Grupo A: fondo azul y borde continuo. Grupo B: fondo violeta y borde discontinuo. La cifra resaltada es el candidato coloreado. Borde ámbar: eliminaciones. Borde verde oscuro: casilla seleccionada.",
-    "Gruppe A: blauer Hintergrund und durchgehender Rahmen. Gruppe B: violetter Hintergrund und gestrichelter Rahmen. Die hervorgehobene Ziffer ist der gefärbte Kandidat. Bernsteinrahmen: Eliminierungen. Dunkelgrüner Rahmen: ausgewähltes Feld.",
-    "A 组：蓝色背景和实线框。B 组：紫色背景和虚线框。强调的数字是着色候选数。琥珀色框：删除目标。深绿色框：选中格。",
-    "समूह A: नीली पृष्ठभूमि और ठोस सीमा। समूह B: बैंगनी पृष्ठभूमि और टूटी सीमा। उभरा अंक रंगित उम्मीदवार है। अंबर सीमा: हटाने वाले उम्मीदवार। गहरी हरी सीमा: चुना खाना।",
-    "Groupe A : fond bleu et contour continu. Groupe B : fond violet et contour discontinu. Le chiffre mis en évidence est le candidat coloré. Contour ambre : éliminations. Contour vert foncé : case sélectionnée.",
-    "المجموعة A: خلفية زرقاء وإطار متصل. المجموعة B: خلفية بنفسجية وإطار متقطع. الرقم المميز هو المرشح الملون. الإطار الكهرماني: الحذف. الإطار الأخضر الداكن: الخلية المحددة.",
-    "Gruppo A: sfondo blu e bordo continuo. Gruppo B: sfondo viola e bordo tratteggiato. La cifra evidenziata è il candidato colorato. Bordo ambra: eliminazioni. Bordo verde scuro: cella selezionata."
-  ],
   "Nie znalazłem nowego ruchu wśród dostępnych technik: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, nagie i ukryte pary, trójki i czwórki, X-Wing, Skyscraper, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle (typy 1, 2, 4), kolorowanie oraz łańcuchy X/XY/AIC. Wykonane eliminacje są pomijane. Przy pustych notatkach oblicz kandydatów. Plansza może wymagać jeszcze trudniejszej techniki.": [
     "No new move found among the supported techniques (singles, locked candidates, subsets, wings, basic fish, UR 1/2/4, coloring and X/XY/AIC chains). Completed eliminations are skipped. Calculate candidates if notes are empty. A more advanced technique may be needed.",
     "No se encontró un paso nuevo con las técnicas admitidas (candidatos únicos, bloqueados, subconjuntos, alas, peces básicos, UR 1/2/4, coloreado y cadenas X/XY/AIC). Se omiten eliminaciones ya realizadas. Calcula candidatos si las notas están vacías. Puede requerir otra técnica.",
@@ -3018,5 +2998,55 @@
     "Chaque niveau a sa propre grille du jour, identique pour tous les joueurs. Choisissez un niveau ci-dessus. Les grilles du jour changent à minuit UTC.",
     "لكل مستوى صعوبة لغز يومي خاص به، وهو نفسه لجميع اللاعبين. اختر المستوى أعلاه. تتغير الألغاز اليومية عند منتصف الليل بالتوقيت العالمي UTC.",
     "Ogni livello ha il proprio sudoku del giorno, uguale per tutti i giocatori. Scegli un livello qui sopra. I sudoku del giorno cambiano a mezzanotte UTC."
+  ],
+  "Wygląd": [
+    "Appearance",
+    "Apariencia",
+    "Darstellung",
+    "外观",
+    "दिखावट",
+    "Apparence",
+    "المظهر",
+    "Aspetto"
+  ],
+  "Sage": [
+    "Sage",
+    "Sage",
+    "Sage",
+    "Sage",
+    "Sage",
+    "Sage",
+    "Sage",
+    "Sage"
+  ],
+  "Ink & Paper": [
+    "Ink & Paper",
+    "Ink & Paper",
+    "Ink & Paper",
+    "Ink & Paper",
+    "Ink & Paper",
+    "Ink & Paper",
+    "Ink & Paper",
+    "Ink & Paper"
+  ],
+  "Gruba ramka: wybrane przez Ciebie pole. Niebieskie tło: pola tworzące wskazówkę. Bursztynowa obwódka: pola do usunięcia kandydatów.": [
+    "Thick border: your selected cell. Blue background: cells supporting the hint. Amber border: cells for candidate elimination.",
+    "Borde grueso: tu casilla seleccionada. Fondo azul: casillas que justifican la pista. Borde ámbar: casillas para eliminar candidatos.",
+    "Dicker Rahmen: ausgewähltes Feld. Blauer Hintergrund: Begründungsfelder. Bernsteinfarbener Rahmen: Felder zum Entfernen von Kandidaten.",
+    "粗边框：所选格子。蓝色背景：推理依据。琥珀色边框：可删除候选数的格子。",
+    "मोटी सीमा: आपका चुना खाना। नीला रंग: संकेत के आधार वाले खाने। सुनहरी सीमा: उम्मीदवार हटाने वाले खाने।",
+    "Bord épais : votre case. Fond bleu : cases justifiant l’indice. Bord ambré : cases où éliminer des candidats.",
+    "الإطار السميك: خانتك المحددة. الأزرق: خانات الاستدلال. الإطار الكهرماني: خانات حذف المرشحين.",
+    "Bordo spesso: cella selezionata. Sfondo blu: celle che giustificano l’indizio. Bordo ambra: celle da cui eliminare candidati."
+  ],
+  "Grupa A: niebieskie tło i ciągła ramka. Grupa B: fioletowe tło i przerywana ramka. Wyróżniona cyfra jest kolorowanym kandydatem. Bursztynowa ramka: eliminacje. Gruba ramka: wybrane pole.": [
+    "Group A: blue background and solid outline. Group B: purple background and dashed outline. The emphasized digit is the colored candidate. Amber outline: eliminations. Thick outline: selected cell.",
+    "Grupo A: fondo azul y borde continuo. Grupo B: fondo violeta y borde discontinuo. La cifra resaltada es el candidato coloreado. Borde ámbar: eliminaciones. Borde grueso: casilla seleccionada.",
+    "Gruppe A: blauer Hintergrund und durchgehender Rahmen. Gruppe B: violetter Hintergrund und gestrichelter Rahmen. Die hervorgehobene Ziffer ist der gefärbte Kandidat. Bernsteinrahmen: Eliminierungen. Dicker Rahmen: ausgewähltes Feld.",
+    "A 组：蓝色背景和实线框。B 组：紫色背景和虚线框。强调的数字是着色候选数。琥珀色框：删除目标。粗框：选中格。",
+    "समूह A: नीली पृष्ठभूमि और ठोस सीमा। समूह B: बैंगनी पृष्ठभूमि और टूटी सीमा। उभरा अंक रंगित उम्मीदवार है। अंबर सीमा: हटाने वाले उम्मीदवार। मोटी सीमा: चुना खाना।",
+    "Groupe A : fond bleu et contour continu. Groupe B : fond violet et contour discontinu. Le chiffre mis en évidence est le candidat coloré. Contour ambre : éliminations. Contour épais : case sélectionnée.",
+    "المجموعة A: خلفية زرقاء وإطار متصل. المجموعة B: خلفية بنفسجية وإطار متقطع. الرقم المميز هو المرشح الملون. الإطار الكهرماني: الحذف. الإطار السميك: الخلية المحددة.",
+    "Gruppo A: sfondo blu e bordo continuo. Gruppo B: sfondo viola e bordo tratteggiato. La cifra evidenziata è il candidato colorato. Bordo ambra: eliminazioni. Bordo spesso: cella selezionata."
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

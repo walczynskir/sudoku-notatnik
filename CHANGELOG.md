@@ -1,3 +1,10 @@
+# v1.15.0
+
+- Dodano wybór wyglądu w menu Więcej: dotychczasowy Sage i nowy Ink & Paper (kość słoniowa, granat, szeryfowe nagłówki i płaskie kontrolki).
+- Motyw jest zapamiętywany lokalnie i stosowany przed pierwszym wyświetleniem strony, także na stronie licencji.
+- Zmiana wyglądu nie zmienia planszy, notatek, historii, języka ani postępu; dodano testy zapisu i działania przy zablokowanym localStorage.
+- Legenda wyboru pola mówi o grubej ramce, niezależnie od palety motywu.
+
 # v1.14.6
 
 - Opublikowano tag HTML weryfikacji własności w Google Search Console przekazany przez właściciela.

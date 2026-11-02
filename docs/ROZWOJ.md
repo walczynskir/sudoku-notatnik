@@ -5,6 +5,9 @@
 | Plik | Odpowiedzialność |
 | --- | --- |
 | `dist/index.html` | Struktura strony i okna dialogowe |
+| `dist/theme.js` | Wczesne zastosowanie motywu, obsługa selektora i zapis `sudoku-theme` |
+| `dist/themes.css` | Selektor wyglądu, wspólne zmienne palety i nadpisania motywu Ink & Paper |
+| `tests/theme.test.cjs` | Przywracanie wyglądu, walidacja motywu, zapis i brak dostępu do pamięci |
 | `dist/style.css` | Wygląd i układ responsywny |
 | `dist/logic.js` | Reguły sudoku, kandydaci, konflikty, walidacja i parser importu |
 | `dist/app.js` | Stan, historia, zapis lokalny, zdarzenia, import/eksport, OCR i przenoszenie sterowania na telefonie |
@@ -147,3 +150,9 @@ Współrzędne gestu są przeliczane przez `photoPoint`, z uwzględnieniem pusty
 Lokalizacja: [Języki i tłumaczenia](JEZYKI.md). Skrypt wersjonowania aktualizuje również adresy `locales.js` i `i18n.js` w `index.html` oraz `credits.html`, aby zapobiec mieszaniu starych i nowych tłumaczeń.
 
 Biblioteka i jej audyt: [Biblioteka łamigłówek](BIBLIOTEKA.md). Odpowiedzi źródłowe nie są dołączane do danych biblioteki, a źródłowe oceny nie zmieniają rankingu naszego analizatora.
+
+## Motywy wyglądu
+
+`theme.js` jest zwykłym, blokującym skryptem w head, przed arkuszami stylów. Ustawia `data-theme` na elemencie html i kolor interfejsu przeglądarki przed pierwszym rysowaniem. Nieznany zapis daje Sage. Selektor jest podłączany przy DOMContentLoaded. Moduł czyta i zapisuje tylko `sudoku-theme`; nie wywołuje renderowania planszy ani historii.
+
+Sage korzysta z istniejącego style.css. Ink & Paper nadpisuje podstawowe zmienne CSS oraz jawne stany kontrolek w themes.css. Nowe style stanów planszy należy sprawdzać w obu paletach, zwłaszcza przecięcia zaznaczenia, konfliktu i podpowiedzi. Nie zmieniaj wymiarów planszy w zależności od motywu. Skrypt wersjonowania aktualizuje theme.js i themes.css na obu stronach.

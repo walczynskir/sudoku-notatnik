@@ -14,7 +14,7 @@
 
 Najpierw wyświetlana jest nazwa techniki. Ogólne wyjaśnienie można rozwinąć niezależnie od ujawnienia pól. Niebieskie pola tworzą dowód, bursztynowe wskazują eliminacje. Podpowiedź nie wykonuje ruchu automatycznie.
 
-Dla łańcuchów opis podaje kolejne pola i cyfry: `=` oznacza silne połączenie, `—` słabe. Dwie grupy kolorowania są wypisane w opisie i oznaczone oddzielnie na planszy: grupa A ma niebieskie tło i ciągłą ramkę, grupa B fioletowe tło i przerywaną ramkę. Kolorowana cyfra jest pogrubiona i podkreślona; bursztynowa ramka nadal oznacza eliminację, a ciemnozielona wybór użytkownika.
+Dla łańcuchów opis podaje kolejne pola i cyfry: `=` oznacza silne połączenie, `—` słabe. Dwie grupy kolorowania są wypisane w opisie i oznaczone oddzielnie na planszy: grupa A ma niebieskie tło i ciągłą ramkę, grupa B fioletowe tło i przerywaną ramkę. Kolorowana cyfra jest pogrubiona i podkreślona; bursztynowa ramka nadal oznacza eliminację, a gruba ramka wybór użytkownika (kolor zależy od motywu).
 
 ## Zasady poszczególnych technik
 
