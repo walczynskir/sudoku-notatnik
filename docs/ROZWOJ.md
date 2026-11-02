@@ -157,8 +157,10 @@ Biblioteka i jej audyt: [Biblioteka łamigłówek](BIBLIOTEKA.md). Odpowiedzi ź
 
 Sage korzysta z istniejącego style.css. Ink & Paper nadpisuje podstawowe zmienne CSS oraz jawne stany kontrolek w themes.css. Nowe style stanów planszy należy sprawdzać w obu paletach, zwłaszcza przecięcia zaznaczenia, konfliktu i podpowiedzi. Nie zmieniaj wymiarów planszy w zależności od motywu. Skrypt wersjonowania aktualizuje theme.js i themes.css na obu stronach.
 
-Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w menu Więcej → Wygląd. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
+Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w nagłówku obok języka. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
 
 Od 1.16.0 trzeci identyfikator motywu to `contrast`. `data-text-size` ma wartości `normal`/`large`, a `sudoku-large-text` zapisuje łańcuch `true` lub `false` niezależnie od motywu. Moduł theme.js stosuje oba ustawienia przed pierwszym rysowaniem. API `setLargeText(boolean)` nie dotyka stanu sudoku. Testy obejmują przełączenie motywu przy włączonym powiększeniu, przywracanie obu preferencji i odmowę dostępu do localStorage.
 
 Wrapper `.board-scroll` otacza samą planszę. High Contrast i większy tekst mogą powiększać ją na telefonach; przewijanie nie obejmuje belki ani pozostałych narzędzi. Dla kontrastowych oznaczeń konfliktu i eliminacji pas u góry notatek rezerwuje miejsce na symbol, aby nie zakrywać kandydatów.
+
+Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst nadal włącza się w menu Więcej. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.

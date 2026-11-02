@@ -1,3 +1,8 @@
+# v1.16.1
+
+- Selektor motywu przeniesiono do nagłówka obok języka, także na stronie licencji. Większy tekst pozostaje w menu Więcej.
+- W poziomym widoku telefonu belka dobiera liczbę kolumn do dostępnego miejsca, a przyciski mogą zwiększyć wysokość bez obcinania etykiet.
+
 # v1.16.0
 
 - Dodano motyw Wysoki kontrast: czarny tekst, białe tło, grubsza siatka, żółte zaznaczenie i symbole konfliktów/eliminacji.

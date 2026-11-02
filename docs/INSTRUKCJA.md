@@ -161,7 +161,7 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 
 ## Wygląd
 
-Wybierz **Więcej → Wygląd** nad planszą. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Na wąskim telefonie plansza może wymagać przewijania w poziomie.
+Wybierz **Wygląd** obok selektora języka w nagłówku. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Na wąskim telefonie plansza może wymagać przewijania w poziomie.
 
 **Sage** zachowuje dotychczasową zieloną paletę. **Ink & Paper** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są stałe we wszystkich językach.
 
@@ -169,7 +169,7 @@ Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki
 
 W obu motywach gruba ramka wskazuje wybrane pole, grupa A pozostaje niebieska, grupa B fioletowa z przerywaną ramką, eliminacje mają bursztynową/pomarańczową ramkę, a konflikty są czerwone.
 
-Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w menu Więcej → Wygląd. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
+Od 1.15.1 domyślnym motywem jest Ink & Paper. Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w nagłówku obok języka. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
 
 W Ink & Paper wybrane pole ma neutralne szare tło i ciemną atramentową ramkę. Jeśli należy też do podpowiedzi, zachowuje błękitne lub fioletowe tło dowodu, a mocna atramentowa ramka oznacza wybór. Dla wybranego celu eliminacji widoczne są obie ramki: pomarańczowa i wewnętrzna atramentowa.
 
@@ -177,6 +177,8 @@ Podświetlenie innych wpisanych cyfr równych wybranej ma w Ink & Paper ciepłe 
 
 ## Większy tekst
 
-W menu **Więcej**, pod wyborem motywu, zaznacz **Większy tekst**. To osobne ustawienie: można go używać z każdym z trzech motywów. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
+W menu **Więcej** zaznacz **Większy tekst**. To osobne ustawienie: można go używać z każdym z trzech motywów. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
 
 Na telefonie większa plansza ma własne przewijanie poziome. Belka pozostaje na szerokość ekranu, a klawiatura liczbowa układa się w dwa rzędy. To świadomy wybór czytelności kosztem przewijania. Strzałki na klawiaturze komputera nadal przenoszą zaznaczenie; pola przy prawej krawędzi można odsłonić przewijaniem planszy. Przy braku pamięci lokalnej oba ustawienia działają w bieżącej karcie. Ink & Paper pozostaje domyślnym motywem, a powiększenie domyślnie jest wyłączone.
+
+Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst nadal włącza się w menu Więcej. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.

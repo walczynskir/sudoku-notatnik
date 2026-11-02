@@ -40,6 +40,6 @@ test('Skyscraper explanation translates in every language and preserves coordina
 
 test('credits page labels are translated in all supported languages',()=>{
  const html=fs.readFileSync(require.resolve('../dist/credits.html'),'utf8');assert(html.includes('id="language-select"'));assert(html.includes('src="i18n.js?v='));
- const readable=html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<(h2|ul|p)\b[^>]*translate="no"[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<select\b[^>]*>[\s\S]*?<\/select>/g,'');
+ const readable=html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<([a-z][a-z0-9]*)\b[^>]*translate="no"[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<select\b[^>]*>[\s\S]*?<\/select>/g,'');
  for(const match of readable.matchAll(/>([^<>]+)</g)){const key=match[1].trim();if(!key)continue;assert(C[key],key);for(const lang of langs)assert.notEqual(I.text(key,lang),key,key+' '+lang);}
 });
