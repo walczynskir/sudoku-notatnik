@@ -1,3 +1,7 @@
+# v1.23.3
+
+- Na stronie Autorzy i licencje wskazano Roberta Walczyńskiego jako autora projektu, wsparcie OpenAI Codex oraz repozytorium GitHub. Opisy dostępne w dziesięciu językach; licencje komponentów pozostają bez zmian.
+
 # v1.23.2
 
 - Dodano dyskretne, dobrowolne linki wsparcia PAH (pomoc Ukrainie) i Ciapkowa w Gdyni (psy i koty) w stopce, we wszystkich motywach i dziesięciu językach. Odnośniki prowadzą do oficjalnych stron; aplikacja nie zbiera wpłat ani prowizji.

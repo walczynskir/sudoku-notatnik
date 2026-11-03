@@ -111,3 +111,5 @@
 [data-theme="ukraine"] progress::-webkit-progress-value{background:#ffd43b}
 [data-theme="ukraine"] progress::-moz-progress-bar{background:#ffd43b}
 [data-theme="ukraine"] header :is(button,select):focus-visible{outline-color:#ffd43b}
+
+[data-theme="ukraine"] .credits-page header>a{color:#fff}
