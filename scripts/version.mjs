@@ -18,6 +18,6 @@ if(argument==='--check'){
 }else{
  writeFileSync(new URL('dist/credits.html',root),credits.replace(/((?:src="(?:locales|i18n|theme)\.js|href="(?:themes|studio|forma|energy|tangerine|porcelain|accessibility|aurora|ukraine)\.css))(?:\?v=[^"]*)?"/g,`$1?v=${version}"`));
  writeFileSync(new URL('VERSION',root),version+'\n');
- writeFileSync(new URL('dist/index.html',root),html.replace(/((?:href|src)="(?:style\.css|themes\.css|studio\.css|forma\.css|energy\.css|tangerine\.css|porcelain\.css|accessibility\.css|aurora\.css|progress\.css|favicon\.ico|favicon\.svg|apple-touch-icon\.png|(?:logic|hints|ocr|app|camera|locales|i18n|library|theme|progress)\.js))(?:\?v=[^"]*)?"/g,`$1?v=${version}"`).replace(pattern,`<span id="app-version" aria-label="Wersja ${version}">v${version}</span>`));
+ writeFileSync(new URL('dist/index.html',root),html.replace(/((?:href|src)="(?:style\.css|themes\.css|studio\.css|forma\.css|energy\.css|tangerine\.css|porcelain\.css|accessibility\.css|aurora\.css|ukraine\.css|progress\.css|favicon\.ico|favicon\.svg|apple-touch-icon\.png|(?:logic|hints|ocr|app|camera|locales|i18n|library|theme|progress)\.js))(?:\?v=[^"]*)?"/g,`$1?v=${version}"`).replace(pattern,`<span id="app-version" aria-label="Wersja ${version}">v${version}</span>`));
  console.log(`Ustawiono wersję ${version}. Zaktualizuj CHANGELOG.md i utwórz tag v${version} po sprawdzeniu zmian.`);
 }
