@@ -30,3 +30,12 @@ html[data-theme] #my-progress-mobile{display:none}
  html[data-theme][data-text-size="large"] .board-top{flex-wrap:wrap}
  html[data-theme][data-text-size="large"] #my-progress-mobile{font-size:14px;min-height:40px}
 }
+.badge-album{margin-block:20px}.badge-album-count{font-weight:700}.badge-groups h4{margin:20px 0 10px}
+.badge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0}
+.badge-card{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:14px 10px;border:1px dashed var(--muted);border-radius:12px;background:var(--bg);color:var(--ink)}
+.badge-card strong{font-size:13px}.badge-card p{font-size:11px;line-height:1.5;margin:0}.badge-card small{font-size:10px}.badge-card progress{width:100%;height:6px;accent-color:var(--green)}
+.badge-emblem{display:grid;place-items:center;width:54px;height:60px;clip-path:polygon(50% 0,95% 20%,95% 75%,50% 100%,5% 75%,5% 20%);background:#e3e4e8;color:#4c5361;font:bold 25px/1 Arial}
+.badge-card.earned{border:1px solid var(--line);background:#fff}.badge-card.earned[data-group="Setki"] .badge-emblem{background:#ffda78;color:#533500}.badge-card.earned[data-group="Regularność"] .badge-emblem{background:#aee1ce;color:#184c3c}.badge-card.earned[data-group="Odkrywca poziomów"] .badge-emblem{background:#70519c;color:#fff}
+.badge-state{font-weight:bold}.badge-toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:1000;max-width:min(420px,calc(100vw - 24px));padding:12px 18px;margin:0;background:var(--bg);color:var(--ink);border:2px solid var(--green);border-radius:12px;box-shadow:0 4px 18px #0002;pointer-events:none;font-size:13px}
+html[data-theme="contrast"] .badge-card,html[data-theme="contrast"] .badge-emblem{background:#fff!important;color:#000!important;border:2px solid #000;clip-path:none}
+@media(max-width:360px){.badge-card{padding:10px 7px}.badge-card strong{font-size:12px}}

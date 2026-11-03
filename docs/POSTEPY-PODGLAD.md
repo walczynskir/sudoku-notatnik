@@ -29,3 +29,11 @@ Bez podpowiedzi oznacza brak ujawnionej techniki i brak włączonego oznaczania 
 ## Weryfikacja
 
 Testy obejmują blokadę flagi na produkcji, unikalność ukończeń, pomoc, migrację, granice dni i tygodni, własny cel, wyłączanie, trwałość nagrody, odblokowanie po trzech dniach, progi setek (99/100 i 10 000), rejestrację motywu tylko lokalnie oraz połączenie z biblioteką bez zmiany planszy. Ręcznie w izolowanych danych testowych: ostatni pojedynczy kandydat jednocześnie realizuje cel dnia, daje trzeci pucharek, odsłania Setkę 2 i motyw; wybór Zorzy pozostaje po odświeżeniu. Testowe HTML z danymi nie wchodzą do repozytorium.
+
+## Album plakietek
+
+W rozwijanych szczegółach jest album 12 plakietek, w trzech kolekcjach po cztery: Setki (100, 200, 500 i 1000 różnych plansz), Regularność (3, 7, 15 i 30 zrealizowanych celów dnia; dni nie muszą być kolejne), Odkrywca poziomów (pierwsza plansza łatwa, średnia, trudna i ekspert). Każda karta pokazuje warunek, postęp i tekstowy stan; zdobyte mają kolorowy emblemat i datę odblokowania w prototypie. Kolor nie jest jedyną informacją o stanie.
+
+Odblokowania są zapisywane raz w polu badges, według stałego ID i lokalnej daty. Nie są odbierane przez wyłączenie celu ani cofnięcie ostatniego wpisu. Pomoc nie ogranicza żadnej kolekcji. Dotychczasowe sumy ukończeń mogą odblokować plakietki Setek przy migracji; bez danych poziomu lub dat nie wymyślamy pozostałych osiągnięć. Migracja nie wyświetla lawiny powiadomień. Nowe plakietki są ogłaszane krótkim, znikającym komunikatem bez dialogu; panel gry nie zmienia wysokości.
+
+Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Pozostaje lokalny i na razie polskojęzyczny. Testy sprawdzają liczbę i unikalność 12 ID, migrację, progi postępu, pomoc, niekolejne dni, zapis po odświeżeniu, jednokrotne nadanie i trwałość daty.
