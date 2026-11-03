@@ -3168,5 +3168,55 @@
     "Le point de redémarrage sera restauré et les candidats effacés. Vous pouvez annuler le redémarrage.",
     "ستتم استعادة نقطة إعادة البدء ومسح المرشحين. يمكنك التراجع عن إعادة البدء.",
     "Verrà ripristinato il punto di riavvio e cancellati i candidati. Puoi annullare il riavvio."
+  ],
+  "Pracownia": [
+    "Workshop",
+    "Taller",
+    "Werkstatt",
+    "工作室",
+    "कार्यशाला",
+    "Atelier",
+    "ورشة",
+    "Laboratorio"
+  ],
+  "Podgląd lokalny": [
+    "Local preview",
+    "Vista previa local",
+    "Lokale Vorschau",
+    "本地预览",
+    "स्थानीय पूर्वावलोकन",
+    "Aperçu local",
+    "معاينة محلية",
+    "Anteprima locale"
+  ],
+  "Podpowiedź": [
+    "Hint",
+    "Pista",
+    "Hinweis",
+    "提示",
+    "संकेत",
+    "Indice",
+    "تلميح",
+    "Suggerimento"
+  ],
+  "Import planszy": [
+    "Import puzzle",
+    "Importar cuadrícula",
+    "Rätsel importieren",
+    "导入题目",
+    "पहेली आयात करें",
+    "Importer une grille",
+    "استيراد اللغز",
+    "Importa una griglia"
+  ],
+  "O narzędziach": [
+    "About the tools",
+    "Acerca de las herramientas",
+    "Über die Werkzeuge",
+    "工具说明",
+    "उपकरणों के बारे में",
+    "À propos des outils",
+    "حول الأدوات",
+    "Informazioni sugli strumenti"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);
