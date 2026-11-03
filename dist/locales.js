@@ -3248,5 +3248,25 @@
     "Mandarine",
     "يوسفي",
     "Mandarino"
+  ],
+  "Kontrast": [
+    "Contrast",
+    "Contraste",
+    "Kontrast",
+    "对比度",
+    "कंट्रास्ट",
+    "Contraste",
+    "التباين",
+    "Contrasto"
+  ],
+  "Oblicz kandydatów": [
+    "Calculate candidates",
+    "Calcular candidatos",
+    "Kandidaten berechnen",
+    "计算候选数",
+    "उम्मीदवार गणना करें",
+    "Calculer les candidats",
+    "حساب المرشحين",
+    "Calcola candidati"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);
