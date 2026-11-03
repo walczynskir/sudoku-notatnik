@@ -1,0 +1,9 @@
+#my-progress{font-size:12px;white-space:nowrap}
+#progress-dialog{width:min(560px,calc(100vw - 24px));max-height:90svh;overflow:auto}
+#progress-dialog .progress-total{font-size:25px;font-weight:700;color:var(--ink)}
+.progress-stats{display:grid;gap:8px;padding:12px;border:1px solid var(--line);border-radius:12px}
+.progress-badges{list-style:none;padding:0;line-height:2}
+.progress-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.progress-calendar span{padding:8px 3px;text-align:center;border:1px solid var(--line);border-radius:6px;font-size:12px}
+.progress-calendar .day-done{background:var(--green);color:white;font-weight:bold}
+@media(max-width:640px){html[data-theme] header .header-preferences>#my-progress{grid-column:1/-1;width:100%;margin-top:4px}}
