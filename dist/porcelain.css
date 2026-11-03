@@ -54,7 +54,7 @@
 [data-theme="porcelain"] .hint-card h2{color:#24364b}
 [data-theme="porcelain"] .import-actions button,[data-theme="porcelain"] .camera-button,[data-theme="porcelain"] .export-button{background:#f0f3f6;color:#24364b;border-color:#c8d4df}
 [data-theme="porcelain"] .restart-button,[data-theme="porcelain"] .reset{background:transparent;color:#657182}
-[data-theme="porcelain"] .solved-banner{background:#edf6dd;color:#355423;border-color:#9cbf76}
+[data-theme="porcelain"] .solved-banner{background:#eaf0f6;color:#24364b;border-color:#8ca7bf}
 [data-theme="porcelain"] .board.solved{border-color:#24364b;box-shadow:none}
 [data-theme="porcelain"] dialog{background:#fff;color:#24364b;border-color:#dce2e8;border-radius:26px}
 [data-theme="porcelain"] dialog::backdrop{background:#24364b70}

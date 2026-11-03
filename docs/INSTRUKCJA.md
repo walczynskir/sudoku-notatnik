@@ -206,3 +206,5 @@ W menu **Więcej → Sprawdzaj błędne wpisy** można włączyć porównywanie 
 Sprawdzane są wyłącznie wpisane cyfry poza zablokowanymi liczbami początkowymi. Kandydaci nie są oceniani. Dla planszy ręcznej lub importowanej najpierw wybierz **Rozpocznij rozwiązywanie**. Aplikacja potwierdza jednoznaczność na podstawie samych cyfr początkowych, bez bieżących wpisów i notatek gracza. Przy wielu rozwiązaniach, braku rozwiązania lub przekroczeniu limitu analizy sprawdzanie jest wstrzymane; powód widać pod planszą. Edycja cyfr początkowych także wstrzymuje sprawdzanie.
 
 Ustawienie jest pamiętane lokalnie pod kluczem `sudoku-check-entries`, niezależnie od planszy. Nie wchodzi do eksportu JSON ani historii cofania. Nie zmienia liczb, kandydatów, podpowiedzi i postępów. Cofnięcie lub przywrócenie wpisu odświeża oznaczenia zgodnie z bieżącą planszą.
+
+Od 1.20.1 komunikat ukończenia używa palety wybranego motywu, np. bursztynu w Mandarynce. O ukończeniu informują tekst i symbol ✓, niezależnie od koloru.

@@ -88,7 +88,7 @@
 [data-theme="forma"] #hint-guide{background:#faf0e8;border-color:#dfcec4}
 [data-theme="forma"] .import-actions button,[data-theme="forma"] .camera-button,[data-theme="forma"] .export-button{background:#fffdf9;color:#432c46;border-color:#d7c3bc}
 [data-theme="forma"] .restart-button,[data-theme="forma"] .reset{background:transparent;color:#73626c}
-[data-theme="forma"] .solved-banner{background:#e8f0df;color:#354d28;border-color:#9aad85}
+[data-theme="forma"] .solved-banner{background:#fae8df;color:#672f29;border-color:#c88c78}
 [data-theme="forma"] .board.solved{border-color:#432c46;box-shadow:none}
 [data-theme="forma"] dialog{background:#fff8ef;color:#342837;border-color:#d7c3bc}
 [data-theme="forma"] dialog::backdrop{background:#35203966}

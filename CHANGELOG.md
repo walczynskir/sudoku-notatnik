@@ -1,3 +1,7 @@
+# v1.20.1
+
+- Dopasowano komunikat ukończenia do palety motywów: Mandarynka — bursztynowy, Energia — lawendowy, Porcelana, Atrament i papier oraz Pracownia — niebieski, Forma — terakotowy. Symbol ✓ i tekst nadal jednoznacznie oznaczają rozwiązanie.
+
 # v1.20.0
 
 - Dodano domyślnie wyłączoną opcję Więcej → Sprawdzaj błędne wpisy, zapamiętywaną na urządzeniu.

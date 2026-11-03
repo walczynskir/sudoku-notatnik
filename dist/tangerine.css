@@ -54,7 +54,7 @@
 [data-theme="tangerine"] .hint-card h2{color:#30291f}
 [data-theme="tangerine"] .import-actions button,[data-theme="tangerine"] .camera-button,[data-theme="tangerine"] .export-button{background:#fff7e6;color:#493a20;border-color:#e4c991}
 [data-theme="tangerine"] .restart-button,[data-theme="tangerine"] .reset{background:transparent;color:#70695f}
-[data-theme="tangerine"] .solved-banner{background:#edf6dd;color:#355423;border-color:#9cbf76}
+[data-theme="tangerine"] .solved-banner{background:#fff0cc;color:#493a20;border-color:#c88600}
 [data-theme="tangerine"] .board.solved{border-color:#493a20;box-shadow:none}
 [data-theme="tangerine"] dialog{background:#fff;color:#30291f;border-color:#ece2cd;border-radius:26px}
 [data-theme="tangerine"] dialog::backdrop{background:#3c2c1370}

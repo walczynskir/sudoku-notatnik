@@ -54,7 +54,7 @@
 [data-theme="energy"] .hint-card h2{color:#6235c3}
 [data-theme="energy"] .import-actions button,[data-theme="energy"] .camera-button,[data-theme="energy"] .export-button{background:#f5f0ff;color:#48227e;border-color:#d9cbed}
 [data-theme="energy"] .restart-button,[data-theme="energy"] .reset{background:transparent;color:#6a607a}
-[data-theme="energy"] .solved-banner{background:#edf6dd;color:#355423;border-color:#9cbf76}
+[data-theme="energy"] .solved-banner{background:#efe6ff;color:#43236b;border-color:#a179d1}
 [data-theme="energy"] .board.solved{border-color:#392453;box-shadow:none}
 [data-theme="energy"] dialog{background:#fff;color:#302441;border-color:#e3daf2;border-radius:26px}
 [data-theme="energy"] dialog::backdrop{background:#29143f77}
