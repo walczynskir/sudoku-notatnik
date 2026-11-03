@@ -1,4 +1,3 @@
-#my-progress{font-size:12px;white-space:nowrap}
 #progress-dialog{width:min(560px,calc(100vw - 24px));max-height:90svh;overflow:auto}
 #progress-dialog .progress-total{font-size:25px;font-weight:700;color:var(--ink)}
 .progress-stats{display:grid;gap:8px;padding:12px;border:1px solid var(--line);border-radius:12px}
@@ -6,4 +5,11 @@
 .progress-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .progress-calendar span{padding:8px 3px;text-align:center;border:1px solid var(--line);border-radius:6px;font-size:12px}
 .progress-calendar .day-done{background:var(--green);color:white;font-weight:bold}
-@media(max-width:640px){html[data-theme] header .header-preferences>#my-progress{grid-column:1/-1;width:100%;margin-top:4px}}
+html[data-theme] #my-progress{display:flex;align-items:center;gap:14px;width:100%;max-width:100%;padding:12px 18px;margin:0 0 18px;border:1px solid var(--line);background:var(--bg);color:var(--ink);text-align:start;white-space:normal;border-radius:14px}
+html[data-theme="ink"] #my-progress,html[data-theme="studio"] #my-progress{border-radius:3px}
+html[data-theme="sage"] #my-progress{border-radius:8px}
+.goal-icon{font-size:26px}.goal-copy{flex:1;min-width:0;display:grid;gap:5px}.goal-title{font-size:14px}.goal-caption{font-size:11px;font-weight:400}.goal-trophy{font-size:20px;white-space:nowrap}
+.goal-meter{display:block;width:100%;height:7px;accent-color:var(--green)}
+.goal-settings{display:grid;gap:10px}.goal-settings label{font-weight:bold}.goal-settings select{width:100%;padding:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.goal-summary{font-weight:600;line-height:1.5;margin:0}.progress-details{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}.progress-details>summary{font-weight:600;cursor:pointer;padding-block:8px}
+@media(max-width:640px){html[data-theme] #my-progress{margin-bottom:10px;padding:10px 12px;gap:9px}.goal-title{font-size:12px}.goal-caption{font-size:10px}}
