@@ -44,7 +44,7 @@
 [data-theme="ink"] .difficulty-choice input:checked+.difficulty-tile{background:#254b72;border-color:#254b72;color:#fff}
 [data-theme="ink"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#e2edf7}
 [data-theme="ink"] .solved-banner{background:#e3e9f0;border-color:#8198ae;color:#254b70}
-[data-theme="ink"] .board.solved{border-color:#54723f;box-shadow:0 0 0 3px #91a87b55}
+[data-theme="ink"] .board.solved{border-color:#254b70;box-shadow:0 0 0 3px #8198ae55}
 [data-theme="ink"] textarea,[data-theme="ink"] #review-grid input{background:#fffdf7;color:#242c35;border-color:#bdb5a6}
 [data-theme="ink"] #review-grid input.ocr-uncertain{background:#ffecd3;border-color:#b76a19}
 [data-theme="ink"] .error,[data-theme="ink"] .danger-action{color:#a52e27}

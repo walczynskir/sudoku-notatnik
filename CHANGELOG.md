@@ -1,3 +1,7 @@
+# v1.20.2
+
+- Usunięto zieloną ramkę i poświatę rozwiązanej planszy z motywu Atrament i papier. Obramowanie ukończenia używa teraz granatowej palety, na telefonie i komputerze.
+
 # v1.20.1
 
 - Dopasowano komunikat ukończenia do palety motywów: Mandarynka — bursztynowy, Energia — lawendowy, Porcelana, Atrament i papier oraz Pracownia — niebieski, Forma — terakotowy. Symbol ✓ i tekst nadal jednoznacznie oznaczają rozwiązanie.

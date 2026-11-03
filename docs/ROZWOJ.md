@@ -157,7 +157,7 @@ Biblioteka i jej audyt: [Biblioteka łamigłówek](BIBLIOTEKA.md). Odpowiedzi ź
 
 Sage korzysta z istniejącego style.css. Ink & Paper nadpisuje podstawowe zmienne CSS oraz jawne stany kontrolek w themes.css. Nowe style stanów planszy należy sprawdzać w obu paletach, zwłaszcza przecięcia zaznaczenia, konfliktu i podpowiedzi. Nie zmieniaj wymiarów planszy w zależności od motywu. Skrypt wersjonowania aktualizuje theme.js i themes.css na obu stronach.
 
-Od 1.19.0 domyślnym motywem jest Porcelana (wcześniej od 1.15.1: Ink & Paper). Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w nagłówku obok języka. Zielone oznaczenie ukończenia, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
+Od 1.19.0 domyślnym motywem jest Porcelana (wcześniej od 1.15.1: Ink & Paper). Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w nagłówku obok języka. Oznaczenie ukończenia dopasowane do motywu, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
 
 Od 1.16.0 trzeci identyfikator motywu to `contrast`. `data-text-size` ma wartości `normal`/`large`, a `sudoku-large-text` zapisuje łańcuch `true` lub `false` niezależnie od motywu. Moduł theme.js stosuje oba ustawienia przed pierwszym rysowaniem. API `setLargeText(boolean)` nie dotyka stanu sudoku. Testy obejmują przełączenie motywu przy włączonym powiększeniu, przywracanie obu preferencji i odmowę dostępu do localStorage.
 
