@@ -1,3 +1,9 @@
+# v1.22.0
+
+- Włączono cele, kolekcje, plakietki i nagrody w standardowym widoku. Parametr `?features=no-gamification` pozwala ukryć dodatki; zapisane postępy pozostają zachowane.
+- Uzupełniono wszystkie dziewięć języków, także liczniki, opisy dostępności, warunki plakietek, nagrody i komunikaty. Kalendarz używa lokalnych nazw dni, miesięcy i formatów dat; otwarty panel reaguje na zmianę języka.
+- Ujednolicono czcionki całego panelu postępów, w tym rozwijanych statystyk i kart plakietek, oraz uwzględniono większy tekst i układ RTL.
+
 # v1.21.1
 
 - W wersji testowej postępów pokazano cel dnia i wynik bieżącej setki jednocześnie: dwa paski na komputerze, kompaktowy licznik na telefonie.

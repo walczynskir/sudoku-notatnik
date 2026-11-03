@@ -179,7 +179,7 @@ Podświetlenie innych wpisanych cyfr równych wybranej ma w Ink & Paper ciepłe 
 
 W nagłówku obok motywu zaznacz **Większy tekst** (na telefonie: **A+**). To osobne ustawienie: można go używać z każdym z trzech motywów. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
 
-Na telefonie większa plansza ma własne przewijanie poziome. Belka pozostaje na szerokość ekranu, a klawiatura liczbowa układa się w dwa rzędy. To świadomy wybór czytelności kosztem przewijania. Strzałki na klawiaturze komputera nadal przenoszą zaznaczenie; pola przy prawej krawędzi można odsłonić przewijaniem planszy. Przy braku pamięci lokalnej oba ustawienia działają w bieżącej karcie. Ink & Paper pozostaje domyślnym motywem, a powiększenie domyślnie jest wyłączone.
+Na telefonie większa plansza ma własne przewijanie poziome. Belka pozostaje na szerokość ekranu, a klawiatura liczbowa układa się w dwa rzędy. To świadomy wybór czytelności kosztem przewijania. Strzałki na klawiaturze komputera nadal przenoszą zaznaczenie; pola przy prawej krawędzi można odsłonić przewijaniem planszy. Przy braku pamięci lokalnej oba ustawienia działają w bieżącej karcie. Porcelana pozostaje domyślnym motywem, a powiększenie domyślnie jest wyłączone.
 
 Od 1.16.1 język i motyw mają sąsiadujące selektory w nagłówku (symbol ◐ oznacza wygląd). Na wąskim ekranie mogą zajmować drugi wiersz. Większy tekst włącza się obok selektorów w nagłówku. W widoku poziomym belka rozkłada akcje na tyle kolumn, ile mieści się przy czytelnej szerokości przycisku; napisy nie są obcinane.
 
@@ -209,6 +209,6 @@ Ustawienie jest pamiętane lokalnie pod kluczem `sudoku-check-entries`, niezale�
 
 Od 1.20.1 komunikat ukończenia używa palety wybranego motywu, np. bursztynu w Mandarynce. O ukończeniu informują tekst i symbol ✓, niezależnie od koloru.
 
-## Wersja testowa postępów (1.21.0)
+## Cele, plakietki i nagrody (1.22.0)
 
-Opcjonalny adres https://rsudoku.pl/?features=gamification włącza polskojęzyczny test celów dziennych, kolekcji setek, 12 plakietek i nagrodowego motywu Zorza. Zwykły adres strony pozostaje bez tych dodatków. Domyślny cel wynosi 3 nowe sudoku dziennie; można go zmienić lub wyłączyć. Na telefonie szczegóły otwiera mały przycisk 🎯 przy liczniku pól. Pomoc nie ogranicza pucharków i plakietek. Zorza odblokowuje się po trzech zrealizowanych celach dnia, trwale i bez wydawania pucharków. Dane są zapisane tylko na urządzeniu; nie synchronizują się i nie wchodzą do JSON planszy. Szczegółowe zasady: POSTEPY-PODGLAD.md.
+W zwykłym widoku strony dostępny jest cel dzienny, kolekcje setek, album 12 plakietek i motyw nagrodowy Zorza, we wszystkich dziewięciu językach. Domyślny cel wynosi 3 nowe sudoku dziennie; można go zmienić lub wyłączyć. Na telefonie szczegóły otwiera mały przycisk 🎯 przy liczniku pól. Na komputerze są dwa paski: celu i bieżącej setki. Pomoc nie ogranicza pucharków i plakietek. Zorza odblokowuje się trwale po trzech zrealizowanych celach dnia. Dane są tylko na urządzeniu i nie wchodzą do JSON planszy. Cały interfejs postępów można ukryć adresem ?features=no-gamification. Szczegóły: POSTEPY-PODGLAD.md.

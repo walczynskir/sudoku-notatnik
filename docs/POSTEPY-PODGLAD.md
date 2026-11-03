@@ -1,8 +1,10 @@
-# Moje postępy — opcjonalna wersja testowa 1.21.0
+# Cele, postępy i nagrody — od 1.22.0
 
-Wydanie 1.21.0 zawiera publiczny test pod adresem https://rsudoku.pl/?features=gamification . Zwykły adres https://rsudoku.pl/ nie włącza tej funkcji. Flaga jest odczytywana z URL, nie jest zapamiętywana jako uprawnienie użytkownika. Usunięcie parametru wyłącza interfejs; dane postępów pozostają na urządzeniu. Parametr nie jest zabezpieczeniem ani listą zaproszonych — każdy znający link może włączyć test.
+Funkcja jest domyślnie dostępna na https://rsudoku.pl/ we wszystkich dziewięciu językach. Flaga `?features=no-gamification` ukrywa cały interfejs postępów, zachowując zapis. Wyłączenie samego celu dziennego jest dostępne w panelu. Stary adres `?features=gamification` nadal działa. Nazwę pliku dokumentacji zachowano dla zgodności wcześniejszych odnośników.
 
-Podgląd deweloperski: http://127.0.0.1:5196/?features=gamification . Obsługiwane hosty to rsudoku.pl, www.rsudoku.pl, walczynskir.github.io i lokalne adresy loopback. Interfejs wersji testowej jest na razie po polsku; standardowy interfejs zachowuje dziewięć języków. Nowe zasoby są objęte skryptem wersjonowania. Nie ma kont ani synchronizacji postępów.
+Tłumaczone są teksty statyczne, liczniki, nazwy i warunki plakietek, nagrody, powiadomienia, opisy dostępności oraz błędy. Kalendarz używa nazw dni, miesięcy i dat z Intl dla bieżącego języka. Zmiana języka odświeża otwarty panel bez przeładowania i bez zmiany postępów. Arabski używa układu RTL, a kompaktowy przycisk liczbowy zachowuje LTR. Typografia panelu jest spójna z motywem; także natywny element details dziedziczy czcionkę panelu.
+
+Podgląd lokalny: http://127.0.0.1:5196/ . Obsługiwane hosty: rsudoku.pl, www.rsudoku.pl, walczynskir.github.io i loopback. Parametr nie jest kontrolą dostępu. Nowe zasoby podlegają wersjonowaniu. Nie ma kont ani synchronizacji postępów.
 
 ## Cel dzienny i pucharki
 
@@ -18,7 +20,7 @@ Każde 100 różnych ukończonych plansz tworzy jedną kolekcję. Na początku w
 
 ## Nagrodowy motyw Zorza
 
-Trzy pucharki dnia (trzy różne dni z osiągniętym celem) odblokowują trwale Zorzę. Pucharków się nie wydaje. Motyw ma białe powierzchnie, miętowo-lawendowy nagłówek i śliwkowe akcenty. Można go wybrać przy nagrodzie lub na liście motywów. Działa z większym tekstem i przełącznikiem wysokiego kontrastu. Dostępność, podpowiedzi i podstawowe narzędzia nie są nagrodami. Zorza jest rejestrowana tylko po włączeniu flagi; poza flagą zapisany wybór Zorzy ma bezpieczny powrót do Porcelany. To prototyp, bez ochrony przed ręcznym edytowaniem danych użytkownika.
+Trzy pucharki dnia (trzy różne dni z osiągniętym celem) odblokowują trwale Zorzę. Pucharków się nie wydaje. Motyw ma białe powierzchnie, miętowo-lawendowy nagłówek i śliwkowe akcenty. Można go wybrać przy nagrodzie lub na liście motywów. Działa z większym tekstem i przełącznikiem wysokiego kontrastu. Dostępność, podpowiedzi i podstawowe narzędzia nie są nagrodami. Zorza jest rejestrowana kiedy postępy są włączone; po wyłączeniu postępów zapisany wybór Zorzy ma bezpieczny powrót do Porcelany. Brak ochrony przed ręcznym edytowaniem danych użytkownika.
 
 ## Sposób rozwiązania
 
@@ -30,7 +32,7 @@ Bez podpowiedzi oznacza brak ujawnionej techniki i brak włączonego oznaczania 
 
 ## Weryfikacja
 
-Testy obejmują domyślne wyłączenie flagi i jawne włączenie wersji testowej, unikalność ukończeń, pomoc, migrację, granice dni i tygodni, własny cel, wyłączanie, trwałość nagrody, odblokowanie po trzech dniach, progi setek (99/100 i 10 000), rejestrację motywu tylko w wersji testowej oraz połączenie z biblioteką bez zmiany planszy. Ręcznie w izolowanych danych testowych: ostatni pojedynczy kandydat jednocześnie realizuje cel dnia, daje trzeci pucharek, odsłania Setkę 2 i motyw; wybór Zorzy pozostaje po odświeżeniu. Testowe HTML z danymi nie wchodzą do repozytorium.
+Testy obejmują domyślne włączenie oraz jawne wyłączenie postępów, unikalność ukończeń, pomoc, migrację, granice dni i tygodni, własny cel, wyłączanie, trwałość nagrody, odblokowanie po trzech dniach, progi setek (99/100 i 10 000), rejestrację motywu tylko przy włączonych postępach oraz połączenie z biblioteką bez zmiany planszy. Ręcznie w izolowanych danych testowych: ostatni pojedynczy kandydat jednocześnie realizuje cel dnia, daje trzeci pucharek, odsłania Setkę 2 i motyw; wybór Zorzy pozostaje po odświeżeniu. Testowe HTML z danymi nie wchodzą do repozytorium.
 
 ## Album plakietek
 
@@ -38,6 +40,8 @@ W rozwijanych szczegółach jest album 12 plakietek, w trzech kolekcjach po czte
 
 Odblokowania są zapisywane raz w polu badges, według stałego ID i lokalnej daty. Nie są odbierane przez wyłączenie celu ani cofnięcie ostatniego wpisu. Pomoc nie ogranicza żadnej kolekcji. Dotychczasowe sumy ukończeń mogą odblokować plakietki Setek przy migracji; bez danych poziomu lub dat nie wymyślamy pozostałych osiągnięć. Migracja nie wyświetla lawiny powiadomień. Nowe plakietki są ogłaszane krótkim, znikającym komunikatem bez dialogu; panel gry nie zmienia wysokości.
 
-Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Album jest dostępny tylko po włączeniu flagi i na razie polskojęzyczny. Testy sprawdzają liczbę i unikalność 12 ID, migrację, progi postępu, pomoc, niekolejne dni, zapis po odświeżeniu, jednokrotne nadanie i trwałość daty.
+Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Album jest dostępny kiedy postępy są włączone i przetłumaczony na wszystkie dziewięć języków. Testy sprawdzają liczbę i unikalność 12 ID, migrację, progi postępu, pomoc, niekolejne dni, zapis po odświeżeniu, jednokrotne nadanie i trwałość daty.
 
 Od 1.21.1 pasek komputerowy ma dwa wskaźniki: dzisiejszy cel i bieżącą setkę (z łącznym wynikiem z 10 000). Mobilny przycisk pokazuje także wynik setki obok celu i pucharków. Pełne wartości są w opisie dostępności; na najwęższych ekranach etykieta stanu planszy może być skrócona, aby nie dodawać wiersza.
+
+Zachowano klucz sudoku-progress-preview-v1, aby dotychczasowe testowe postępy nie zniknęły po wydaniu. Nazwa klucza nie oznacza już ograniczenia do wersji testowej.

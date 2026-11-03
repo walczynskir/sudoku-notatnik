@@ -46,3 +46,13 @@ html[data-theme="contrast"] .badge-card,html[data-theme="contrast"] .badge-emble
  html[data-theme] .board-top:has(#my-progress-mobile) #filled{white-space:nowrap;flex-shrink:0}
  html[data-theme] .board-top:has(#my-progress-mobile) #board-state{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 }
+
+/* Keep the complete progress panel in one UI font, including native details. */
+:root{--progress-font:Arial,Helvetica,sans-serif}
+[data-theme="sage"],[data-theme="ink"]{--progress-font:'DM Sans',Arial,sans-serif}
+html[data-theme] #progress-dialog{font-family:var(--progress-font);font-variant-numeric:tabular-nums}
+html[data-theme] #progress-dialog :where(*){font-family:inherit}
+.progress-calendar b{font-size:11px;text-align:center;min-width:0;overflow-wrap:anywhere}
+html[data-text-size="large"] #progress-dialog{font-size:18px}
+html[data-text-size="large"] #progress-dialog :is(.help,.badge-card p,.badge-card small){font-size:14px}
+html[data-text-size="large"] #progress-dialog .badge-card strong{font-size:16px}

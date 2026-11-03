@@ -21,3 +21,5 @@ Testy `tests/i18n.test.cjs` sprawdzają kompletność ośmiu kolumn, znaczniki w
 Arabski ustawia `dir=rtl` na dokumencie. Sama plansza, siatka kandydatów, klawiatura liczbowa i podgląd zdjęć pozostają LTR, aby współrzędne i pozycje nie były odwracane. Wartości dynamiczne w zdaniach arabskich są izolowane znakami kierunkowymi FSI/PDI. Cyfry dewanagari, arabsko-indyjskie i perskie są normalizowane przy wpisywaniu i parsowaniu tekstu.
 
 Strona „Autorzy i licencje” korzysta z tego samego wyboru języka i ma własny selektor. Nagłówki, opisy i nawigacja są tłumaczone na dziewięć języków. Oryginalne pliki licencji, nazwy bibliotek i identyfikatory pozostają bez zmian; listy plików są wyświetlane od lewej do prawej również w języku arabskim.
+
+Od 1.22.0 przetłumaczono również cele, kolekcje, plakietki i nagrody. Katalog obejmuje szablony liczników i opisów dostępności, a nazwy dni i miesięcy oraz daty są formatowane przez Intl dla wybranego języka. Zdarzenie sudoku-language-change odświeża formatowanie panelu bez przeładowania; nie jest emitowane przy każdym przebiegu obserwatora tłumaczeń.

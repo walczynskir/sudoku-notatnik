@@ -24,9 +24,9 @@ Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy uży
 - [Motywy i dostępność](docs/LOKALNE-STEROWANIE.md) — wygląd, kontrast, większy tekst i menu akcji.
 - [Rozwój i publikacja](docs/ROZWOJ.md) — struktura kodu, testy, hosting i dalsze kierunki.
 
-## Opcjonalna wersja testowa postępów
+## Cele, postępy i nagrody
 
-[Włącz cele, plakietki i nagrody](https://rsudoku.pl/?features=gamification). Zwykły adres strony nie włącza dodatków. Wersja testowa jest na razie po polsku, zapisuje postępy na urządzeniu i nie wymaga konta. Flaga w URL nie ogranicza dostępu do zaproszonych osób. [Zasady i ograniczenia](docs/POSTEPY-PODGLAD.md).
+Od wersji 1.22.0 cele dzienne, kolekcje setek, album 12 plakietek i nagrodowy motyw Zorza są dostępne w zwykłym widoku https://rsudoku.pl/ we wszystkich dziewięciu językach. Postępy pozostają na urządzeniu. Cel można wyłączyć w panelu; parametr `?features=no-gamification` wyłącza cały interfejs postępów bez usuwania danych. Stary link `?features=gamification` pozostaje zgodny. [Zasady i ograniczenia](docs/POSTEPY-PODGLAD.md).
 
 ## Uruchomienie lokalne
 

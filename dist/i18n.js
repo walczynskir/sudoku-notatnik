@@ -48,8 +48,8 @@ function apply(){
 }
 const select=document.getElementById('language-select');
 try{const saved=localStorage.getItem('sudoku-language');language=languages.includes(saved)?saved:resolveLanguage(navigator.languages||[navigator.language]);}catch{language=resolveLanguage(navigator.languages||[navigator.language]);}
-api.setLanguage=lang=>{if(!languages.includes(lang))return;language=lang;select.value=lang;try{localStorage.setItem('sudoku-language',lang);}catch{}apply();};
+api.setLanguage=lang=>{if(!languages.includes(lang))return;language=lang;select.value=lang;try{localStorage.setItem('sudoku-language',lang);}catch{}apply();document.dispatchEvent(new Event('sudoku-language-change'));};
 select.value=language;select.addEventListener('change',()=>api.setLanguage(select.value));
-apply();let queued=false;
+apply();document.dispatchEvent(new Event('sudoku-language-change'));let queued=false;
 new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;apply();});}).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['aria-label','title','placeholder']});
 })(globalThis);
