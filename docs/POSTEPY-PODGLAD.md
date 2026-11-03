@@ -4,7 +4,7 @@ Gałąź `codex/progress-preview`, bez publikacji i nowego numeru wydania. Produ
 
 ## Cel dzienny i pucharki
 
-Klikalny pasek nad grą pokazuje postęp dzisiaj, liczbę pucharków oraz aktualną setkę. Po kliknięciu otwiera ustawienia i nagrody. Statystyki oraz kalendarz są w rozwijanych szczegółach.
+Na komputerze klikalny pasek nad grą pokazuje postęp dzisiaj, liczbę pucharków oraz aktualną setkę. Na telefonie do 640 px pasek jest ukryty; zamiast niego przy liczniku pól jest kompaktowy przycisk 🎯 2/3 · 🏆 1. Oba otwierają ten sam panel. Wyłączony cel pokazuje kreskę, a liczby pucharków powyżej 99 skrót 99+; pełne wartości pozostają w opisie dostępności. Większy tekst może zawinąć wiersz dla czytelności. Po kliknięciu otwiera ustawienia i nagrody. Statystyki oraz kalendarz są w rozwijanych szczegółach.
 
 Domyślny cel: 3 nowe ukończone sudoku dziennie. Presety: 1, 3, 5, własny cel 1–99 albo Bez celu. Liczą się unikalne plansze biblioteki, niezależnie od trudności i użycia pomocy. Wcześniejsze ukończenia bez daty nie są wstecz doliczane do dzisiejszego celu. Powtórne rozwiązanie tej samej planszy nie zwiększa licznika.
 
