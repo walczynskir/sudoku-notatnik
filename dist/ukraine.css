@@ -93,10 +93,21 @@
 [data-theme="ukraine"] button.primary,[data-theme="ukraine"] .quick-toolbar #open-library,[data-theme="ukraine"] .segmented .active,[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile,[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#fff}
 [data-theme="ukraine"] .board-panel,[data-theme="ukraine"] .card{box-shadow:none}
 
-[data-theme="ukraine"] header{background:linear-gradient(180deg,#0755a1 0 8px,#fff 8px);border-bottom:4px solid #ffd43b}
-[data-theme="ukraine"] .cell.selected{background:#fff0a8;box-shadow:inset 0 0 0 2px #775600}
+[data-theme="ukraine"] header{background:#0755a1;border-bottom:8px solid #ffd43b}
+[data-theme="ukraine"] .cell.selected{background:#ffe66b;box-shadow:inset 0 0 0 2px #775600}
 [data-theme="ukraine"] .cell.hint-source{background:#d9ecff;box-shadow:inset 0 0 0 2px #1765ad}
 [data-theme="ukraine"] .solved-banner{background:#e6f0fb;border-color:#0755a1;color:#102c4a}
 [data-theme="ukraine"] .board.solved{border-color:#0755a1;box-shadow:0 0 0 3px #ffd43b}
 
 [data-theme="ukraine"] .quick-toolbar>button,[data-theme="ukraine"] .quick-toolbar summary{white-space:normal;overflow-wrap:anywhere;min-width:0;padding-inline:5px}
+
+/* Flag colours belong to navigation and actions; the puzzle stays neutral. */
+[data-theme="ukraine"] header :is(.brand,.logo,.header-text-size,.local,.forma-preview){color:#fff}
+[data-theme="ukraine"] header .header-text-size input{accent-color:#ffd43b}
+[data-theme="ukraine"] button.primary,[data-theme="ukraine"] .quick-toolbar #open-library,[data-theme="ukraine"] .segmented .active,[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile{background:#ffd43b;border-color:#e5b900;color:#102c4a}
+[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#102c4a}
+[data-theme="ukraine"] button.primary:hover,[data-theme="ukraine"] .quick-toolbar #open-library:hover{background:#ffe66b}
+[data-theme="ukraine"] :is(.goal-meter,.collection-meter,.collection-launch-meter,.badge-card progress){accent-color:#ffd43b}
+[data-theme="ukraine"] progress::-webkit-progress-value{background:#ffd43b}
+[data-theme="ukraine"] progress::-moz-progress-bar{background:#ffd43b}
+[data-theme="ukraine"] header :is(button,select):focus-visible{outline-color:#ffd43b}

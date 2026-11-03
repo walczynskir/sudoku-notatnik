@@ -1,3 +1,7 @@
+# v1.23.1
+
+- Wzmocniono niebiesko-żółtą paletę motywu Ukraina: niebieski nagłówek z żółtym pasem, żółte akcje główne, aktywny tryb i paski postępu. Wybrane pole jest wyraźnie żółte, podpowiedzi pozostają niebieskie.
+
 # v1.23.0
 
 - Dodano pełny język ukraiński: interfejs, 24 lekcje technik, import i kamera, biblioteka, statystyki, plakietki oraz opisy licencji. Automatycznie rozpoznawany dla `uk` i `uk-UA`; zapisany wybór języka ma pierwszeństwo.
