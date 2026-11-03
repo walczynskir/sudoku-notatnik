@@ -1,0 +1,90 @@
+/* Energia: vivid app surfaces inspired by the supplied mobile UI references. */
+:root[data-theme="energy"]{--bg:#f3f0fc;--ink:#302441;--muted:#6a607a;--green:#6235c3;--line:#e1d9ef;--accent:#ece5fa;--energy-purple:#6235c3;--energy-amber:#ffb800}
+[data-theme="energy"] body{background:#f3f0fc;color:#302441}
+[data-theme="energy"] header{background:linear-gradient(110deg,#7134cf 0%,#a42ba8 65%,#c7288b 100%);border:0;border-radius:0 0 26px 26px;padding-block:20px;box-shadow:0 8px 24px #6235c31a}
+[data-theme="energy"] .brand,[data-theme="energy"] .logo,[data-theme="energy"] .header-text-size{color:#fff}
+[data-theme="energy"] .forma-preview{color:#fff;border-color:#ffffff66}
+[data-theme="energy"] .header-preferences select{background:#fff;color:#48227e;border-color:#fff;border-radius:12px;font-weight:600}
+[data-theme="energy"] .header-text-size input{accent-color:#ffb800}
+[data-theme="energy"] main{padding-top:24px}
+[data-theme="energy"] .workspace{grid-template-columns:minmax(0,560px) minmax(250px,300px);gap:24px}
+[data-theme="energy"] .board-panel{background:#fff;border:1px solid #e3daf2;border-radius:24px;padding:18px;box-shadow:0 8px 26px #49217c0a}
+[data-theme="energy"] button:not(.cell){background:#fff;color:#48227e;font-weight:600}
+[data-theme="energy"] button.primary{background:#6235c3;color:#fff;border-color:#6235c3}
+[data-theme="energy"] .secondary{background:#f5f0ff;border-color:#d9cbed;color:#48227e}
+[data-theme="energy"] .quick-toolbar{border:0;padding-bottom:0;margin-bottom:16px;gap:5px}
+[data-theme="energy"] .quick-toolbar>button,[data-theme="energy"] .quick-toolbar summary{background:transparent;color:#48227e}
+[data-theme="energy"] .quick-toolbar #open-library{background:#ffb800;color:#302441;border-color:#ffb800;font-weight:700}
+[data-theme="energy"] .quick-toolbar .toolbar-save{background:transparent;color:#48227e}
+[data-theme="energy"] .quick-toolbar>button:hover,[data-theme="energy"] .quick-toolbar summary:hover,[data-theme="energy"] .toolbar-menu[open] summary{background:#eee6fb}
+[data-theme="energy"] .quick-toolbar #open-library:hover{background:#ffc52c}
+[data-theme="energy"] .toolbar-dropdown{background:#fff;border-color:#d9cbed;box-shadow:0 8px 22px #49217c20}
+[data-theme="energy"] .toolbar-dropdown button{background:transparent;color:#48227e}
+[data-theme="energy"] .toolbar-dropdown button:hover{background:#f0e9fc}
+[data-theme="energy"] .board-top{margin-bottom:10px;color:#6a607a}
+[data-theme="energy"] #board-state{background:#f0e9fc;color:#5a3980;padding:4px 9px;border-radius:999px;font-weight:600}
+[data-theme="energy"] .board{background:#fff;border-color:#392453;box-shadow:none}
+[data-theme="energy"] .cell{background:#fff;color:#302441;border-color:#ddd5e8}
+[data-theme="energy"] .cell:nth-child(3n){border-right-color:#392453}
+[data-theme="energy"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="energy"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#392453}
+[data-theme="energy"] .cell.peer{background:#f6f2fc}
+[data-theme="energy"] .cell.same{background:#e9e0f5}
+[data-theme="energy"] .cell.selected{background:#eae4f1;box-shadow:inset 0 0 0 3px #392453}
+[data-theme="energy"] .notes{color:#65576f}
+[data-theme="energy"] .cell.hint-source,[data-theme="energy"] .cell.hint-color-a{background:#d9edff;box-shadow:inset 0 0 0 2px #2071a9}
+[data-theme="energy"] .cell.hint-color-b{background:#efddfa;outline:2px dashed #7a3199;outline-offset:-3px;box-shadow:none}
+[data-theme="energy"] .cell.hint-target{background:#ffedcc;box-shadow:inset 0 0 0 3px #a35a05}
+[data-theme="energy"] .cell.conflict{background:#ffe4df;color:#a22618}
+[data-theme="energy"] .cell.selected.conflict,[data-theme="energy"] .cell.hint-source.selected,[data-theme="energy"] .cell.hint-color-a.selected,[data-theme="energy"] .cell.hint-color-b.selected{box-shadow:inset 0 0 0 3px #392453}
+[data-theme="energy"] .cell.selected.hint-target{outline-color:#392453}
+[data-theme="energy"] .cell.hint-color-a.hint-target{background:#d9edff}
+[data-theme="energy"] .cell.hint-color-b.hint-target{background:#efddfa}
+[data-theme="energy"] .blue{background:#392453}
+[data-theme="energy"] .board-bottom,[data-theme="energy"] .help,[data-theme="energy"] .text-button,[data-theme="energy"] #status,[data-theme="energy"] .studio-help,[data-theme="energy"] .library-context #library-current,[data-theme="energy"] footer{color:#6a607a}
+[data-theme="energy"] .card{background:#fff;border:1px solid #e3daf2;border-radius:24px;padding:18px;margin-bottom:16px;box-shadow:0 8px 26px #49217c08}
+[data-theme="energy"] .segmented{background:#efe8fa}
+[data-theme="energy"] .segmented button{background:transparent;color:#6a607a}
+[data-theme="energy"] .segmented .active{background:#ffb800;color:#302441;box-shadow:none;font-weight:700}
+[data-theme="energy"] .keypad button{background:#fff;color:#48227e;border-color:#d9cbed;box-shadow:0 2px 0 #e7def2;font-weight:600}
+[data-theme="energy"] .keypad button:hover{background:#fff2cc;border-color:#b78b2d}
+[data-theme="energy"] .keypad button.digit-complete:disabled{background:#f0e9fa;color:#75658a;border-color:#ded2ed;box-shadow:none}
+[data-theme="energy"] .keypad button.digit-complete::after{color:#75658a}
+[data-theme="energy"] .divider{background:#e1d9ef}
+[data-theme="energy"] #hint-guide{background:#f7f3fe;border-color:#e1d9ef}
+[data-theme="energy"] .hint-card h2{color:#6235c3}
+[data-theme="energy"] .import-actions button,[data-theme="energy"] .camera-button,[data-theme="energy"] .export-button{background:#f5f0ff;color:#48227e;border-color:#d9cbed}
+[data-theme="energy"] .restart-button,[data-theme="energy"] .reset{background:transparent;color:#6a607a}
+[data-theme="energy"] .solved-banner{background:#edf6dd;color:#355423;border-color:#9cbf76}
+[data-theme="energy"] .board.solved{border-color:#392453;box-shadow:none}
+[data-theme="energy"] dialog{background:#fff;color:#302441;border-color:#e3daf2;border-radius:26px}
+[data-theme="energy"] dialog::backdrop{background:#29143f77}
+[data-theme="energy"] dialog h2{color:#6235c3}
+[data-theme="energy"] .difficulty-tile{background:#f8f4ff;border-color:#d9cbed}
+[data-theme="energy"] .difficulty-bars{color:#6235c3}
+[data-theme="energy"] .difficulty-choice input:checked+.difficulty-tile{background:#6235c3;color:#fff;border-color:#6235c3}
+[data-theme="energy"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#ffcc49}
+[data-theme="energy"] .library-credit,[data-theme="energy"] .library-explanation,[data-theme="energy"] footer{border-color:#e1d9ef}
+[data-theme="energy"] textarea,[data-theme="energy"] #review-grid input,[data-theme="energy"] #camera-choice{background:#fff;color:#302441;border-color:#d9cbed}
+[data-theme="energy"] #review-grid input.ocr-uncertain{background:#ffedcc;border-color:#a35a05}
+[data-theme="energy"] .error{color:#a22618}
+[data-theme="energy"] .sliders input,[data-theme="energy"] .library-notes-label input{accent-color:#6235c3}
+[data-theme="energy"] button:focus-visible,[data-theme="energy"] a:focus-visible,[data-theme="energy"] summary:focus-visible,[data-theme="energy"] select:focus-visible{outline-color:#6235c3}
+[data-theme="energy"] .credits-page section{background:#fff;border-color:#e1d9ef;border-radius:20px;padding:20px}
+@media(max-width:640px){
+ [data-theme="energy"] header{padding:12px 14px;border-radius:0 0 22px 22px}
+ [data-theme="energy"] main{padding:12px 8px 20px}
+ [data-theme="energy"] .board-panel{padding:10px;border-radius:20px}
+ [data-theme="energy"] .quick-toolbar{grid-template-columns:minmax(60px,1.25fr) repeat(5,minmax(0,1fr));margin-bottom:10px;gap:2px}
+ [data-theme="energy"] .quick-toolbar .toolbar-action,[data-theme="energy"] .quick-toolbar summary{padding-inline:1px}
+ html[lang="pl"][data-theme="energy"]:not([data-text-size="large"]) .quick-toolbar>button>span:last-child,
+ html[lang="pl"][data-theme="energy"]:not([data-text-size="large"]) .quick-toolbar summary>span:last-child{white-space:nowrap;font-size:10px;letter-spacing:-.15px}
+ [data-theme="energy"] .card{border-radius:20px;padding:14px}
+ [data-theme="energy"] .board-top{margin-bottom:8px;font-size:10px}
+ [data-theme="energy"] #board-state{font-size:9px;padding:3px 7px}
+ [data-theme="energy"] #mobile-entry-slot{margin-top:10px}
+ [data-theme="energy"] #entry-controls{margin-top:0}
+ [data-theme="energy"] .solved-banner{margin-top:12px}
+ [data-theme="energy"][data-text-size="large"] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}
+ [data-theme="energy"][data-text-size="large"] .card{padding:16px}
+}
+@media(max-width:360px){[data-theme="energy"] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}}

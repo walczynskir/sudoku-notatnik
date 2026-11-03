@@ -3228,5 +3228,15 @@
     "Contour",
     "انسياب",
     "Forma"
+  ],
+  "Energia": [
+    "Energy",
+    "Energía",
+    "Energie",
+    "活力",
+    "ऊर्जा",
+    "Énergie",
+    "طاقة",
+    "Energia"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);

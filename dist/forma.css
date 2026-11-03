@@ -1,43 +1,43 @@
 /* Local rounded alternative. Workshop itself keeps its precise rectangular controls. */
 .forma-only{display:none}
-[data-theme="forma"] .forma-only{display:inline}
-[data-theme="forma"] .forma-preview{font:10px/1.2 monospace;text-transform:uppercase;letter-spacing:.7px;color:#626b76;border-inline-start:1px solid #d7dce2;padding-inline-start:12px}
-[data-theme="forma"] button:not(.cell){border-radius:999px;padding-inline:16px}
-[data-theme="forma"] .header-preferences select{border-radius:10px;padding-inline:10px}
-[data-theme="forma"] .quick-toolbar{gap:5px}
-[data-theme="forma"] .quick-toolbar>button,[data-theme="forma"] .quick-toolbar summary{border-radius:999px;padding-inline:7px}
-[data-theme="forma"] .quick-toolbar #open-library{border-radius:999px;padding-inline:14px}
-[data-theme="forma"] .segmented{border-radius:999px;padding:4px;gap:4px}
-[data-theme="forma"] .segmented button{border-radius:999px;padding-block:10px}
-[data-theme="forma"] .segmented .active{box-shadow:0 0 0 1px #d0d7e0}
-[data-theme="forma"] .keypad button{border-radius:12px;padding:10px;min-height:50px;line-height:1.15}
-[data-theme="forma"] .keypad button:hover{background:#eaf0fa;border-color:#8ba4d3}
-[data-theme="forma"] .toolbar-dropdown{border-radius:14px;padding:6px}
-[data-theme="forma"] .toolbar-dropdown button{border-radius:9px;padding-inline:12px}
-[data-theme="forma"] #hint-guide{border-radius:14px;overflow:hidden}
-[data-theme="forma"] #hint-guide summary{border-radius:13px;padding:12px 14px}
-[data-theme="forma"] #hint-guide-text{padding-inline:14px}
-[data-theme="forma"] dialog{border-radius:22px;padding:28px}
-[data-theme="forma"] dialog .close{border-radius:50%;min-width:32px;min-height:32px;padding:0;line-height:1}
-[data-theme="forma"] .difficulty-tile{border-radius:14px}
-[data-theme="forma"] .library-actions button{min-height:46px;padding-inline:18px}
-[data-theme="forma"] textarea{border-radius:12px}
-[data-theme="forma"] #image-preview,[data-theme="forma"] #camera-view,[data-theme="forma"] .ocr-thumbnail canvas{border-radius:12px}
-[data-theme="forma"] .solved-banner{border-radius:14px}
+:is([data-theme="forma"],[data-theme="energy"]) .forma-only{display:inline}
+:is([data-theme="forma"],[data-theme="energy"]) .forma-preview{font:10px/1.2 monospace;text-transform:uppercase;letter-spacing:.7px;color:#626b76;border-inline-start:1px solid #d7dce2;padding-inline-start:12px}
+:is([data-theme="forma"],[data-theme="energy"]) button:not(.cell){border-radius:999px;padding-inline:16px}
+:is([data-theme="forma"],[data-theme="energy"]) .header-preferences select{border-radius:10px;padding-inline:10px}
+:is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar{gap:5px}
+:is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar>button,:is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar summary{border-radius:999px;padding-inline:7px}
+:is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar #open-library{border-radius:999px;padding-inline:14px}
+:is([data-theme="forma"],[data-theme="energy"]) .segmented{border-radius:999px;padding:4px;gap:4px}
+:is([data-theme="forma"],[data-theme="energy"]) .segmented button{border-radius:999px;padding-block:10px}
+:is([data-theme="forma"],[data-theme="energy"]) .segmented .active{box-shadow:0 0 0 1px #d0d7e0}
+:is([data-theme="forma"],[data-theme="energy"]) .keypad button{border-radius:12px;padding:10px;min-height:50px;line-height:1.15}
+:is([data-theme="forma"],[data-theme="energy"]) .keypad button:hover{background:#eaf0fa;border-color:#8ba4d3}
+:is([data-theme="forma"],[data-theme="energy"]) .toolbar-dropdown{border-radius:14px;padding:6px}
+:is([data-theme="forma"],[data-theme="energy"]) .toolbar-dropdown button{border-radius:9px;padding-inline:12px}
+:is([data-theme="forma"],[data-theme="energy"]) #hint-guide{border-radius:14px;overflow:hidden}
+:is([data-theme="forma"],[data-theme="energy"]) #hint-guide summary{border-radius:13px;padding:12px 14px}
+:is([data-theme="forma"],[data-theme="energy"]) #hint-guide-text{padding-inline:14px}
+:is([data-theme="forma"],[data-theme="energy"]) dialog{border-radius:22px;padding:28px}
+:is([data-theme="forma"],[data-theme="energy"]) dialog .close{border-radius:50%;min-width:32px;min-height:32px;padding:0;line-height:1}
+:is([data-theme="forma"],[data-theme="energy"]) .difficulty-tile{border-radius:14px}
+:is([data-theme="forma"],[data-theme="energy"]) .library-actions button{min-height:46px;padding-inline:18px}
+:is([data-theme="forma"],[data-theme="energy"]) textarea{border-radius:12px}
+:is([data-theme="forma"],[data-theme="energy"]) #image-preview,:is([data-theme="forma"],[data-theme="energy"]) #camera-view,:is([data-theme="forma"],[data-theme="energy"]) .ocr-thumbnail canvas{border-radius:12px}
+:is([data-theme="forma"],[data-theme="energy"]) .solved-banner{border-radius:14px}
 /* A rounded control shape never changes the geometry of Sudoku cells. */
-[data-theme="forma"] .cell{border-radius:0}
-[data-theme="forma"] #review-grid input{border-radius:0}
+:is([data-theme="forma"],[data-theme="energy"]) .cell{border-radius:0}
+:is([data-theme="forma"],[data-theme="energy"]) #review-grid input{border-radius:0}
 @media(max-width:640px){
- [data-theme="forma"] .forma-preview{display:none}
- [data-theme="forma"] .quick-toolbar{gap:2px}
- [data-theme="forma"] .quick-toolbar>button,[data-theme="forma"] .quick-toolbar summary{padding:5px 2px;min-height:46px}
- [data-theme="forma"] .quick-toolbar #open-library{padding:5px 7px}
- [data-theme="forma"] #entry-controls .keypad{gap:4px}
- [data-theme="forma"] #entry-controls .keypad button{border-radius:10px;min-height:48px;padding:8px 0;line-height:1.15}
- [data-theme="forma"] #entry-controls #erase{border-radius:999px;padding-inline:12px;min-height:36px}
- [data-theme="forma"] #entry-controls .segmented button{border-radius:999px}
- [data-theme="forma"] dialog{padding:22px;border-radius:18px}
- [data-theme="forma"][data-text-size="large"] #entry-controls .keypad button{min-height:56px}
+ :is([data-theme="forma"],[data-theme="energy"]) .forma-preview{display:none}
+ :is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar{gap:2px}
+ :is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar>button,:is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar summary{padding:5px 2px;min-height:46px}
+ :is([data-theme="forma"],[data-theme="energy"]) .quick-toolbar #open-library{padding:5px 7px}
+ :is([data-theme="forma"],[data-theme="energy"]) #entry-controls .keypad{gap:4px}
+ :is([data-theme="forma"],[data-theme="energy"]) #entry-controls .keypad button{border-radius:10px;min-height:48px;padding:8px 0;line-height:1.15}
+ :is([data-theme="forma"],[data-theme="energy"]) #entry-controls #erase{border-radius:999px;padding-inline:12px;min-height:36px}
+ :is([data-theme="forma"],[data-theme="energy"]) #entry-controls .segmented button{border-radius:999px}
+ :is([data-theme="forma"],[data-theme="energy"]) dialog{padding:22px;border-radius:18px}
+ :is([data-theme="forma"],[data-theme="energy"])[data-text-size="large"] #entry-controls .keypad button{min-height:56px}
 }
 
 /* Ivory, plum and terracotta: a warmer identity for the rounded layout. */
