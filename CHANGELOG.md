@@ -1,3 +1,10 @@
+# v1.20.0
+
+- Dodano domyślnie wyłączoną opcję Więcej → Sprawdzaj błędne wpisy, zapamiętywaną na urządzeniu.
+- Błędne cyfry otrzymują tło i symbol × bez ujawniania odpowiedzi. Dostępne są oznaczenia wysokiego kontrastu, opisy dostępności i tłumaczenia na wszystkie języki.
+- Porównanie używa wyłącznie cyfr początkowych i potwierdzonego jedynego rozwiązania. Sprawdzanie jest wstrzymywane przy edycji danych początkowych, wieloznaczności, braku rozwiązania lub limicie analizy.
+- Funkcja nie zmienia planszy, notatek, cofania, eksportu ani podpowiedzi.
+
 # v1.19.0
 
 - Dodano motywy Forma, Energia, Mandarynka i Porcelana. Porcelana jest domyślna dla nowych użytkowników; zapisane wybory pozostają zachowane. Motywy i strona licencji mają tłumaczenia we wszystkich dziewięciu językach.

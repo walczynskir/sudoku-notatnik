@@ -36,3 +36,10 @@ header .header-preferences .accessibility-controls .header-text-size{position:st
 }
 
 @media(max-width:640px){html[data-theme] body.credits-page{padding:16px}}
+
+/* Optional entry checking: a separate annotation, never a board mutation. */
+html[data-theme] .cell.wrong-entry{background:#ffe4df;color:#9f2119}
+html[data-theme] .cell.wrong-entry::after{content:'×';position:absolute;right:2px;top:1px;font:bold 11px/1 Arial;color:#9f2119}
+html[data-theme="contrast"] .cell.wrong-entry{background:#fff;color:#000;text-decoration:underline wavy #000}
+html[data-theme="contrast"] .cell.wrong-entry::after{color:#000}
+#check-entries[aria-pressed="true"]::before{content:'✓ ';font-weight:bold}

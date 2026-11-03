@@ -172,3 +172,7 @@ Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przeł
 Opcjonalna tablica `state.givens` zawiera 81 cyfr zgodnych z `values`; `Sudoku.validate` zachowuje ją i odrzuca sprzeczne dane. `Sudoku.isGiven` i `placeValue` chronią zapis, a UI chroni też kandydatów i kasowanie. Stan blokady jest częścią istniejących migawek undo/redo i localStorage. Przy imporcie blokowanego JSON punkt restartu pochodzi z givens. Biblioteka blokuje nowe plansze i migruje zapisane starsze gry rozpoznane po danych biblioteki; jawnie odblokowana gra ma tablicę zer, więc migracja jej nie blokuje ponownie. Testy clues obejmują prawdziwe handlery wpisywania, blokowania, restartu i historii.
 
 Poprawka mobilnego wysokiego kontrastu usuwa minimum 414 px tylko dla normalnego tekstu. Opcja większego tekstu zachowuje minimum 486 px i przewijanie planszy.
+
+## Sprawdzanie wpisów (1.20.0)
+
+`Sudoku.createEntryChecker()` tworzy pamięć ostatniej analizy cyfr początkowych. `solutionCount` może opcjonalnie zwrócić pierwsze znalezione rozwiązanie; sprawdzanie używa go wyłącznie po pełnym potwierdzeniu dokładnie jednego rozwiązania (limit dwóch wyników, 200 000 węzłów). Analiza jest ponawiana po zmianie cyfr początkowych, nie po każdym wpisie. Widok dodaje klasę `wrong-entry`, `aria-invalid` i opis błędu. Funkcja nie modyfikuje stanu planszy ani notatek. Testy `entry-check.test.cjs` obejmują błąd bez konfliktu, korektę i usunięcie wpisu, wyłączenie, niezmienność danych, zmianę planszy, brak blokady, wieloznaczność i limit analizy.
