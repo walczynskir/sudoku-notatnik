@@ -1,3 +1,7 @@
+# v1.23.2
+
+- Dodano dyskretne, dobrowolne linki wsparcia PAH (pomoc Ukrainie) i Ciapkowa w Gdyni (psy i koty) w stopce, we wszystkich motywach i dziesięciu językach. Odnośniki prowadzą do oficjalnych stron; aplikacja nie zbiera wpłat ani prowizji.
+
 # v1.23.1
 
 - Wzmocniono niebiesko-żółtą paletę motywu Ukraina: niebieski nagłówek z żółtym pasem, żółte akcje główne, aktywny tryb i paski postępu. Wybrane pole jest wyraźnie żółte, podpowiedzi pozostają niebieskie.

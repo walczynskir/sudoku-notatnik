@@ -115,3 +115,17 @@
 /* Completion never changes the width or position of the board and entry controls. */
 .solved-banner{margin:12px 0 0}
 @media(max-width:640px){.solved-banner{padding:8px 10px;margin:8px 0 0}.solved-banner strong{font-size:15px;line-height:1.4}.solved-banner span{display:none}}
+
+/* Optional support links stay below the game and inherit each theme palette. */
+html[data-theme] footer{flex-wrap:wrap}
+html[data-theme] .support-causes{flex:0 0 100%;width:100%;text-align:start;color:var(--ink);font-family:inherit;font-size:13px;line-height:1.6;padding:0 0 20px;margin:0 0 14px;border-bottom:1px solid var(--line)}
+html[data-theme] .support-causes h2{font-family:inherit;font-size:15px;line-height:1.5;font-weight:600;margin:0 0 6px;letter-spacing:normal}
+html[data-theme] .support-causes p{margin:6px 0;max-width:75ch}
+html[data-theme] .support-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin:10px 0}
+html[data-theme] .support-links a{display:inline-flex;align-items:center;gap:6px;min-height:44px;max-width:100%;color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+html[data-theme] .support-links a span{display:inline}
+html[data-theme] .support-links b{font-weight:400;flex-shrink:0}
+html[data-theme] .support-causes .support-note{font-size:11px;color:var(--muted)}
+html[data-text-size="large"] .support-causes{font-size:17px}
+html[data-text-size="large"] .support-causes h2{font-size:19px}
+html[data-text-size="large"] .support-causes .support-note{font-size:14px}

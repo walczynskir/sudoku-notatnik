@@ -70,4 +70,6 @@ Wersja 1.x obejmuje analizę i wyjaśnienia technik, także Unique Rectangles, k
 
 Pełne informacje o bibliotekach, fontach i danych: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). W aplikacji znajduje się też odnośnik „Autorzy i licencje” w stopce.
 
-Od wersji 1.23.0 dostępne są język ukraiński i niebiesko-żółty motyw Ukraina. Motyw wybiera się niezależnie od języka; nie zmienia zapisanej gry ani domyślnych preferencji. Link do zbiórki nie został jeszcze wybrany ani dodany.
+Od wersji 1.23.0 dostępne są język ukraiński i niebiesko-żółty motyw Ukraina. Motyw wybiera się niezależnie od języka; nie zmienia zapisanej gry ani domyślnych preferencji.
+
+Stopka we wszystkich motywach i językach zawiera dobrowolne linki wsparcia: PAH — pomoc Ukrainie oraz OTOZ Animals Ciapkowo w Gdyni — pomoc psom i kotom. Prowadzą do oficjalnych stron w nowej karcie, bez osadzonych płatności, przekazywania danych gry i prowizji aplikacji.
