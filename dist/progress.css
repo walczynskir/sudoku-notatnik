@@ -13,3 +13,8 @@ html[data-theme="sage"] #my-progress{border-radius:8px}
 .goal-settings{display:grid;gap:10px}.goal-settings label{font-weight:bold}.goal-settings select{width:100%;padding:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 .goal-summary{font-weight:600;line-height:1.5;margin:0}.progress-details{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}.progress-details>summary{font-weight:600;cursor:pointer;padding-block:8px}
 @media(max-width:640px){html[data-theme] #my-progress{margin-bottom:10px;padding:10px 12px;gap:9px}.goal-title{font-size:12px}.goal-caption{font-size:10px}}
+
+.collection-card,.reward-card{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:12px}
+.collection-card h3,.reward-card h3{margin:0 0 10px}.collection-meter{width:100%;height:12px;accent-color:var(--green)}
+.reward-swatch{height:32px;border-radius:8px;background:linear-gradient(100deg,#e4f5ec 0 35%,#eee5fa 35% 65%,#66509a 65%);border:1px solid #cdc0df}
+.goal-settings input{width:100%;padding:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}

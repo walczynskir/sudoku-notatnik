@@ -2,7 +2,7 @@
 [data-theme="sage"]{--contrast-control-radius:8px}
 [data-theme="ink"]{--contrast-control-radius:3px}
 [data-theme="studio"],[data-theme="contrast"]{--contrast-control-radius:2px}
-[data-theme="forma"],[data-theme="energy"],[data-theme="tangerine"],[data-theme="porcelain"]{--contrast-control-radius:999px}
+[data-theme="forma"],[data-theme="energy"],[data-theme="tangerine"],[data-theme="porcelain"],[data-theme="aurora"]{--contrast-control-radius:999px}
 header .header-preferences .accessibility-controls{display:flex;align-items:center;gap:8px;flex:0 0 auto}
 header .header-preferences .contrast-toggle{display:flex;align-items:center;justify-content:center;gap:5px;min-height:34px;padding:6px 9px;border:1px solid #151515;border-radius:var(--contrast-control-radius,8px);background:#fff;color:#151515;font:600 12px/1.2 Arial,sans-serif;white-space:nowrap;opacity:1;box-shadow:none}
 header .header-preferences .contrast-toggle[aria-pressed="true"]{background:#ffe566;color:#111;border:2px solid #111}
