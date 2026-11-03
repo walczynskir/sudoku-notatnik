@@ -1,3 +1,7 @@
+# v1.22.1
+
+- Zmniejszono nagłówek liczby ukończonych plansz i uproszczono podsumowanie statystyk do czytelnych wierszy bez dodatkowej ramki. Liczniki korzystają ze spójnej typografii panelu; tryb większego tekstu pozostaje obsługiwany.
+
 # v1.22.0
 
 - Włączono cele, kolekcje, plakietki i nagrody w standardowym widoku. Parametr `?features=no-gamification` pozwala ukryć dodatki; zapisane postępy pozostają zachowane.
