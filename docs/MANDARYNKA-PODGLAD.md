@@ -17,3 +17,5 @@ Nazwę przetłumaczono na wszystkie języki aplikacji. Wybór większego tekstu 
 Przyciski Wczytaj i Więcej wcześniej kotwiczyły rozwijany panel względem własnej wąskiej kolumny, przez co panel mógł wychodzić poza lewą krawędź ekranu. Dla czterech nowych układów (Pracownia, Forma, Energia, Mandarynka) mobilny panel jest teraz pozycjonowany względem całej belki. Ma szerokość co najwyżej 280 px i 100% belki, logiczne wyrównanie uwzględniające kierunek pisma oraz pozycję pod belką. Weryfikacja przeglądarkowa obejmowała Wczytaj w Energii przy 390 px oraz Więcej w Mandarynce przy 360 px.
 
 Zmiany są lokalne na gałęzi codex/forma-preview. Nie zostały opublikowane ani wypchnięte do publicznego repozytorium. Publiczna strona pozostaje w wersji 1.18.0.
+
+Nagłówek Podpowiedź ma neutralny kolor #30291f, zgodny z nagłówkiem importu; pomarańcz jest akcentem akcji.
