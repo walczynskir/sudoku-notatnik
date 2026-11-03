@@ -8,7 +8,7 @@ Aplikacja internetowa do rozwiązywania sudoku 9 × 9. Biblioteka zawiera 10 000
 
 **Starsza kopia, nieaktualizowana automatycznie (Sites):** https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/
 
-Opcjonalne **Więcej → Sprawdzaj błędne wpisy** oznacza cyfry niezgodne z jedynym rozwiązaniem, bez ujawniania odpowiedzi. Domyślnie jest wyłączone; wymaga zablokowanych cyfr początkowych i potwierdzenia jednoznaczności.
+Opcjonalne **Więcej → Oznaczaj błędne cyfry** oznacza cyfry niezgodne z jedynym rozwiązaniem, bez ujawniania odpowiedzi. Domyślnie jest wyłączone; wymaga zablokowanych cyfr początkowych i potwierdzenia jednoznaczności.
 
 Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy użytkownik ma własny stan na swoim urządzeniu. Zbiorcze statystyki odwiedzin są zbierane przez Umami Cloud; panel statystyk jest zewnętrzny, bez publicznego licznika w aplikacji.
 

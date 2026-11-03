@@ -1,3 +1,7 @@
+# v1.20.3
+
+- Zmieniono nazwę opcji na „Oznaczaj błędne cyfry” i dopasowano ją we wszystkich dziewięciu językach. Uściślono objaśnienie; działanie i zapisane ustawienia pozostają bez zmian.
+
 # v1.20.2
 
 - Usunięto zieloną ramkę i poświatę rozwiązanej planszy z motywu Atrament i papier. Obramowanie ukończenia używa teraz granatowej palety, na telefonie i komputerze.

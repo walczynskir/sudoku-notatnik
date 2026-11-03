@@ -201,7 +201,7 @@ Menu Więcej zawiera także Oblicz kandydatów, Wypełnij pojedynczych kandydat�
 
 ## Opcjonalne sprawdzanie błędnych wpisów (1.20.0)
 
-W menu **Więcej → Sprawdzaj błędne wpisy** można włączyć porównywanie cyfr z rozwiązaniem. Domyślnie opcja jest wyłączona. Błędny wpis otrzymuje czerwone tło i symbol ×; w wysokim kontraście używa czarnego oznaczenia i falistego podkreślenia. Poprawna cyfra nie jest ujawniana. Wyłączenie usuwa te oznaczenia, ale zwykłe konflikty w wierszu, kolumnie i kwadracie nadal są pokazywane.
+W menu **Więcej → Oznaczaj błędne cyfry** można włączyć porównywanie cyfr z rozwiązaniem. Domyślnie opcja jest wyłączona. Błędny wpis otrzymuje czerwone tło i symbol ×; w wysokim kontraście używa czarnego oznaczenia i falistego podkreślenia. Poprawna cyfra nie jest ujawniana. Wyłączenie usuwa te oznaczenia, ale zwykłe konflikty w wierszu, kolumnie i kwadracie nadal są pokazywane.
 
 Sprawdzane są wyłącznie wpisane cyfry poza zablokowanymi liczbami początkowymi. Kandydaci nie są oceniani. Dla planszy ręcznej lub importowanej najpierw wybierz **Rozpocznij rozwiązywanie**. Aplikacja potwierdza jednoznaczność na podstawie samych cyfr początkowych, bez bieżących wpisów i notatek gracza. Przy wielu rozwiązaniach, braku rozwiązania lub przekroczeniu limitu analizy sprawdzanie jest wstrzymane; powód widać pod planszą. Edycja cyfr początkowych także wstrzymuje sprawdzanie.
 
