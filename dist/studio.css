@@ -1,4 +1,4 @@
-/* Local design experiment. The existing themes retain their established layout. */
+/* Workshop layout. The existing themes retain their established layout. */
 .studio-only{display:none}
 :root[data-theme="studio"]{--bg:#fff;--ink:#20252b;--muted:#626b76;--green:#2458cd;--line:#d7dce2;--accent:#eef2f7}
 [data-theme="studio"] body{background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:14px}
@@ -14,7 +14,7 @@
 [data-theme="studio"] .header-text-size{font-size:12px;min-height:34px;padding:0}
 [data-theme="studio"] .header-text-size input{width:16px;height:16px}
 [data-theme="studio"] .local{display:none}
-[data-theme="studio"] .studio-preview{font:10px/1.2 monospace;letter-spacing:.8px;text-transform:uppercase;color:#626b76;border-inline-start:1px solid #d7dce2;padding-inline-start:14px}
+
 [data-theme="studio"] main{max-width:1040px;padding:26px 32px 20px}
 [data-theme="studio"] .workspace{grid-template-columns:minmax(0,520px) minmax(240px,280px);gap:40px;justify-content:center}
 [data-theme="studio"] .board-panel{max-width:100%;width:100%;min-width:0}
@@ -103,7 +103,7 @@
 @media(max-width:640px){
  [data-theme="studio"] header{padding:10px 12px;gap:8px;min-height:0}
  [data-theme="studio"] .brand{font-size:19px}
- [data-theme="studio"] .studio-preview{position:absolute;top:18px;inset-inline-end:60px;font-size:8px;border:0;padding:0}
+
  [data-theme="studio"] .header-preferences{gap:8px;margin:0}
  [data-theme="studio"] .header-preferences select{width:100%;min-height:32px;font-size:12px}
  [data-theme="studio"] main{padding:12px 10px 20px}
@@ -136,7 +136,7 @@
  [data-theme="studio"][data-text-size="large"] #entry-controls .keypad{grid-template-columns:repeat(5,minmax(0,1fr))}
  [data-theme="studio"][data-text-size="large"] #entry-controls .keypad button{font-size:28px;min-height:56px}
 }
-@media(max-width:640px) and (orientation:landscape){[data-theme="studio"] .header-preferences{margin-inline-start:auto;width:auto}[data-theme="studio"] .studio-preview{display:none}[data-theme="studio"] .header-preferences .header-text-size{position:static}}
+@media(max-width:640px) and (orientation:landscape){[data-theme="studio"] .header-preferences{margin-inline-start:auto;width:auto}[data-theme="studio"] .header-preferences .header-text-size{position:static}}
 
 [data-theme="studio"] details.studio-only{display:block}
 [data-theme="studio"] .studio-help{font-size:12px;line-height:1.6;margin-top:12px;color:#626b76}
@@ -148,5 +148,5 @@
 [data-theme="studio"][data-text-size="large"] .keypad button{font-size:28px;min-height:56px}
 [data-theme="studio"][data-text-size="large"] .quick-toolbar>button,[data-theme="studio"][data-text-size="large"] .quick-toolbar summary{font-size:16px;min-height:54px}
 
-@media(max-width:640px){[data-theme="studio"] .studio-preview{display:none}}
+
 [data-theme="studio"] .clue-controls:has(#clue-lock:disabled){display:none}

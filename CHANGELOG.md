@@ -1,3 +1,9 @@
+# v1.18.0
+
+- Dodano Pracownię jako opcjonalny motyw: zwarty pasek akcji z Nową grą, płaskie sekcje i prosta typografia. Dotychczasowy motyw domyślny i zapisane wybory pozostają zachowane.
+- Nowy motyw działa także na telefonie i stronie licencji; nazwy i nagłówki są przetłumaczone.
+- Umami ograniczono do rsudoku.pl oraz www.rsudoku.pl, aby lokalne podglądy nie dodawały sztucznych odwiedzin.
+
 # v1.17.2
 
 - Zmniejszono ramkę zaznaczenia w motywie Atrament i papier z 4 do 3 px, także przy podpowiedziach i konflikcie. Szałwia zachowuje cieńszą ramkę 2 px, a Wysoki kontrast wyraźną 4 px.

@@ -7,8 +7,6 @@ function positionStudioAction(){const button=document.getElementById('open-libra
 function applySize(value){largeText=value;document.documentElement.dataset.textSize=largeText?'large':'normal';const input=document.getElementById('large-text');if(input)input.checked=largeText;}
 try{current=localStorage.getItem(key)||'ink';}catch{}
 try{largeText=localStorage.getItem(sizeKey)==='true';}catch{}
-// This branch's opt-in preview URL is restricted to a loopback host. It is not an access-control mechanism.
-try{if(['localhost','127.0.0.1','[::1]'].includes(root.location?.hostname)&&new URLSearchParams(root.location.search).get('preview')==='studio')current='studio';}catch{}
 apply(current);applySize(largeText);
 const api={themes,get current(){return current;},get largeText(){return largeText;},set(value){if(!themes.includes(value))return false;apply(value);try{localStorage.setItem(key,current);}catch{}return true;},setLargeText(value){if(typeof value!=='boolean')return false;applySize(value);try{localStorage.setItem(sizeKey,String(value));}catch{}return true;}};
 root.SudokuTheme=api;if(typeof module!=='undefined')module.exports=api;

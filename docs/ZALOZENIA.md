@@ -21,7 +21,7 @@ Pomagać użytkownikowi samodzielnie rozwiązywać klasyczne sudoku 9 × 9, bez 
 - Brak kont użytkowników, własnego backendu, bazy danych i współdzielonych plansz.
 - Umami Cloud zbiera statystyki odwiedzin na stronie głównej i stronie licencji. Skrypt ładuje się z `https://cloud.umami.is/script.js` z atrybutem `defer`; zablokowanie usługi nie blokuje gry. Nie dodano własnych zdarzeń ani przekazywania plansz, notatek i zdjęć. Identyfikator witryny w HTML jest publiczny; konto panelu pozostaje prywatne. Liczba odwiedzających jest szacunkowa, nie stanowi dokładnej liczby osób ani listy adresów IP.
 - Postęp biblioteki (`sudoku-library-v1`) zawiera identyfikatory ukończonych plansz i ostatnie metadane. Korzysta z localStorage, nie z cookies; nie synchronizuje się między urządzeniami. Eksport JSON planszy nie przenosi tych danych.
-- Motyw wyglądu jest przechowywany lokalnie jako `sudoku-theme` (`sage`, `ink` lub `contrast`). Nie zmienia danych planszy ani eksportu.
+- Motyw wyglądu jest przechowywany lokalnie jako `sudoku-theme` (`sage`, `ink`, `contrast` lub `studio`). Nie zmienia danych planszy ani eksportu.
 - Niezależny wybór większego tekstu jest przechowywany pod `sudoku-large-text`. Na małych ekranach czytelność w tym trybie ma pierwszeństwo przed widocznością całej planszy bez przewijania.
 - Preferencja języka jest przechowywana lokalnie jako `sudoku-language`; nie zmienia formatu eksportu ani danych Sudoku.
 - Aktualny stan jest zapisany pod kluczem `sudoku-notatnik-v1`, punkt restartu pod `sudoku-notatnik-initial-v1` w `localStorage`.
@@ -52,3 +52,5 @@ Podpowiedzi: analiza z liczb, filtrowanie celów eliminacji według aktualnych n
 Nazwa produktu: Trener Sudoku. Wersje 1.x rozwijają analizator i wyjaśnienia technik (dokładny zakres: TECHNIKI.md). Generowanie treningowe i ewentualny płatny dostęp pozostają zakresem wersji 2.
 
 Biblioteka gotowych plansz jest częścią 1.x: 10 000 zweryfikowanych łamigłówek w domenie publicznej, z ocenami źródłowymi. Generator personalizowanego treningu pozostaje poza tym zakresem. Postęp i ostatnie identyfikatory biblioteki są zapisywane jako `sudoku-library-v1`. Nie wymagają konta ani serwera aplikacyjnego.
+
+Od 1.18.0 Pracownia jest publicznym motywem. To wybór wyglądu, nie flaga uprawnień ani prywatna beta. Umami zbiera odwiedziny tylko dla rsudoku.pl i www.rsudoku.pl; lokalne podglądy są wykluczone przez data-domains.

@@ -163,7 +163,7 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 
 Wybierz **Wygląd** obok selektora języka w nagłówku. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Przy zwykłym tekście plansza mieści się na szerokość telefonu; przewijanie poziome jest dostępne w trybie większego tekstu.
 
-**Szałwia** zachowuje dotychczasową zieloną paletę. **Atrament i papier** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są tłumaczone na wybrany język interfejsu; po polsku to Szałwia, Atrament i papier oraz Wysoki kontrast.
+**Szałwia** zachowuje dotychczasową zieloną paletę. **Atrament i papier** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są tłumaczone na wybrany język interfejsu; po polsku to Szałwia, Atrament i papier, Wysoki kontrast oraz Pracownia.
 
 Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki i adresu strony. Nie jest eksportowany w pliku JSON. Działa także na stronie autorów i licencji. Zmiana wyglądu nie resetuje planszy, notatek, podpowiedzi, historii ani postępu. Bez dostępnej pamięci lokalnej można zmienić motyw w otwartej karcie; po przeładowaniu wróci Ink & Paper.
 
@@ -190,3 +190,5 @@ Od 1.16.2 nagłówek zawiera język, motyw i Większy tekst. Na telefonie przeł
 Plansze biblioteki od razu blokują cyfry początkowe. Są pogrubione i oznaczone małą kropką w rogu. Można je zaznaczać, ale nie zmieniać ani usuwać. Po ręcznym wpisaniu lub imporcie zdjęcia/tekstu popraw dane, następnie wybierz **Rozpocznij rozwiązywanie** nad planszą. Bieżące cyfry zostaną zablokowane i staną się punktem restartu. **Więcej → Edytuj liczby początkowe** odblokowuje je po potwierdzeniu; po poprawkach ponownie rozpocznij rozwiązywanie. Cofnij/Przywróć obejmują także blokowanie i odblokowanie. Blokada przetrwa odświeżenie i eksport/import JSON.
 
 Na telefonie Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szerokości ekranu. Większy tekst nadal pozwala przewijać samą planszę poziomo, aby zachować duże cyfry i kandydatów.
+
+**Pracownia** (od 1.18.0) oferuje zwarty układ bez wstępu i kart. Nowa gra znajduje się w belce, a wyjaśnienia narzędzi w rozwijanej sekcji O narzędziach. Szczegóły: [Pracownia](PRACOWNIA.md).
