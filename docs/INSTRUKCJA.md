@@ -208,3 +208,7 @@ Sprawdzane są wyłącznie wpisane cyfry poza zablokowanymi liczbami początkowy
 Ustawienie jest pamiętane lokalnie pod kluczem `sudoku-check-entries`, niezależnie od planszy. Nie wchodzi do eksportu JSON ani historii cofania. Nie zmienia liczb, kandydatów, podpowiedzi i postępów. Cofnięcie lub przywrócenie wpisu odświeża oznaczenia zgodnie z bieżącą planszą.
 
 Od 1.20.1 komunikat ukończenia używa palety wybranego motywu, np. bursztynu w Mandarynce. O ukończeniu informują tekst i symbol ✓, niezależnie od koloru.
+
+## Wersja testowa postępów (1.21.0)
+
+Opcjonalny adres https://rsudoku.pl/?features=gamification włącza polskojęzyczny test celów dziennych, kolekcji setek, 12 plakietek i nagrodowego motywu Zorza. Zwykły adres strony pozostaje bez tych dodatków. Domyślny cel wynosi 3 nowe sudoku dziennie; można go zmienić lub wyłączyć. Na telefonie szczegóły otwiera mały przycisk 🎯 przy liczniku pól. Pomoc nie ogranicza pucharków i plakietek. Zorza odblokowuje się po trzech zrealizowanych celach dnia, trwale i bez wydawania pucharków. Dane są zapisane tylko na urządzeniu; nie synchronizują się i nie wchodzą do JSON planszy. Szczegółowe zasady: POSTEPY-PODGLAD.md.

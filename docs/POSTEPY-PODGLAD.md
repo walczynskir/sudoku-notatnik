@@ -1,6 +1,8 @@
-# Moje postępy — lokalny prototyp
+# Moje postępy — opcjonalna wersja testowa 1.21.0
 
-Gałąź `codex/progress-preview`, bez publikacji i nowego numeru wydania. Produkcja pozostaje przy 1.20.3. Adres: http://127.0.0.1:5196/?features=gamification . Bez flagi funkcja jest wyłączona. Kod sprawdza host: rsudoku.pl nie może jej włączyć parametrem. To ograniczenie wdrożeniowe, nie zabezpieczenie przed modyfikacją kodu lub localStorage. Serwer nasłuchuje na 127.0.0.1. Interfejs prototypu jest po polsku; tłumaczenia i wersjonowanie nowych zasobów wymagają przygotowania przed wydaniem.
+Wydanie 1.21.0 zawiera publiczny test pod adresem https://rsudoku.pl/?features=gamification . Zwykły adres https://rsudoku.pl/ nie włącza tej funkcji. Flaga jest odczytywana z URL, nie jest zapamiętywana jako uprawnienie użytkownika. Usunięcie parametru wyłącza interfejs; dane postępów pozostają na urządzeniu. Parametr nie jest zabezpieczeniem ani listą zaproszonych — każdy znający link może włączyć test.
+
+Podgląd deweloperski: http://127.0.0.1:5196/?features=gamification . Obsługiwane hosty to rsudoku.pl, www.rsudoku.pl, walczynskir.github.io i lokalne adresy loopback. Interfejs wersji testowej jest na razie po polsku; standardowy interfejs zachowuje dziewięć języków. Nowe zasoby są objęte skryptem wersjonowania. Nie ma kont ani synchronizacji postępów.
 
 ## Cel dzienny i pucharki
 
@@ -16,7 +18,7 @@ Każde 100 różnych ukończonych plansz tworzy jedną kolekcję. Na początku w
 
 ## Nagrodowy motyw Zorza
 
-Trzy pucharki dnia (trzy różne dni z osiągniętym celem) odblokowują trwale Zorzę. Pucharków się nie wydaje. Motyw ma białe powierzchnie, miętowo-lawendowy nagłówek i śliwkowe akcenty. Można go wybrać przy nagrodzie lub na liście motywów. Działa z większym tekstem i przełącznikiem wysokiego kontrastu. Dostępność, podpowiedzi i podstawowe narzędzia nie są nagrodami. Zorza jest rejestrowana tylko w lokalnym eksperymencie; poza flagą zapisany wybór Zorzy ma bezpieczny powrót do Porcelany. To prototyp, bez ochrony przed ręcznym edytowaniem danych użytkownika.
+Trzy pucharki dnia (trzy różne dni z osiągniętym celem) odblokowują trwale Zorzę. Pucharków się nie wydaje. Motyw ma białe powierzchnie, miętowo-lawendowy nagłówek i śliwkowe akcenty. Można go wybrać przy nagrodzie lub na liście motywów. Działa z większym tekstem i przełącznikiem wysokiego kontrastu. Dostępność, podpowiedzi i podstawowe narzędzia nie są nagrodami. Zorza jest rejestrowana tylko po włączeniu flagi; poza flagą zapisany wybór Zorzy ma bezpieczny powrót do Porcelany. To prototyp, bez ochrony przed ręcznym edytowaniem danych użytkownika.
 
 ## Sposób rozwiązania
 
@@ -28,7 +30,7 @@ Bez podpowiedzi oznacza brak ujawnionej techniki i brak włączonego oznaczania 
 
 ## Weryfikacja
 
-Testy obejmują blokadę flagi na produkcji, unikalność ukończeń, pomoc, migrację, granice dni i tygodni, własny cel, wyłączanie, trwałość nagrody, odblokowanie po trzech dniach, progi setek (99/100 i 10 000), rejestrację motywu tylko lokalnie oraz połączenie z biblioteką bez zmiany planszy. Ręcznie w izolowanych danych testowych: ostatni pojedynczy kandydat jednocześnie realizuje cel dnia, daje trzeci pucharek, odsłania Setkę 2 i motyw; wybór Zorzy pozostaje po odświeżeniu. Testowe HTML z danymi nie wchodzą do repozytorium.
+Testy obejmują domyślne wyłączenie flagi i jawne włączenie wersji testowej, unikalność ukończeń, pomoc, migrację, granice dni i tygodni, własny cel, wyłączanie, trwałość nagrody, odblokowanie po trzech dniach, progi setek (99/100 i 10 000), rejestrację motywu tylko w wersji testowej oraz połączenie z biblioteką bez zmiany planszy. Ręcznie w izolowanych danych testowych: ostatni pojedynczy kandydat jednocześnie realizuje cel dnia, daje trzeci pucharek, odsłania Setkę 2 i motyw; wybór Zorzy pozostaje po odświeżeniu. Testowe HTML z danymi nie wchodzą do repozytorium.
 
 ## Album plakietek
 
@@ -36,4 +38,4 @@ W rozwijanych szczegółach jest album 12 plakietek, w trzech kolekcjach po czte
 
 Odblokowania są zapisywane raz w polu badges, według stałego ID i lokalnej daty. Nie są odbierane przez wyłączenie celu ani cofnięcie ostatniego wpisu. Pomoc nie ogranicza żadnej kolekcji. Dotychczasowe sumy ukończeń mogą odblokować plakietki Setek przy migracji; bez danych poziomu lub dat nie wymyślamy pozostałych osiągnięć. Migracja nie wyświetla lawiny powiadomień. Nowe plakietki są ogłaszane krótkim, znikającym komunikatem bez dialogu; panel gry nie zmienia wysokości.
 
-Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Pozostaje lokalny i na razie polskojęzyczny. Testy sprawdzają liczbę i unikalność 12 ID, migrację, progi postępu, pomoc, niekolejne dni, zapis po odświeżeniu, jednokrotne nadanie i trwałość daty.
+Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Album jest dostępny tylko po włączeniu flagi i na razie polskojęzyczny. Testy sprawdzają liczbę i unikalność 12 ID, migrację, progi postępu, pomoc, niekolejne dni, zapis po odświeżeniu, jednokrotne nadanie i trwałość daty.

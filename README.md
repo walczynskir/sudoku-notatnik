@@ -24,6 +24,10 @@ Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy uży
 - [Motywy i dostępność](docs/LOKALNE-STEROWANIE.md) — wygląd, kontrast, większy tekst i menu akcji.
 - [Rozwój i publikacja](docs/ROZWOJ.md) — struktura kodu, testy, hosting i dalsze kierunki.
 
+## Opcjonalna wersja testowa postępów
+
+[Włącz cele, plakietki i nagrody](https://rsudoku.pl/?features=gamification). Zwykły adres strony nie włącza dodatków. Wersja testowa jest na razie po polsku, zapisuje postępy na urządzeniu i nie wymaga konta. Flaga w URL nie ogranicza dostępu do zaproszonych osób. [Zasady i ograniczenia](docs/POSTEPY-PODGLAD.md).
+
 ## Uruchomienie lokalne
 
 Wymagania: Python 3 do serwera lokalnego. Node.js z obsługą `node:test` do testów (zweryfikowano na Node.js 22). Do używania opublikowanej strony wystarczy przeglądarka.

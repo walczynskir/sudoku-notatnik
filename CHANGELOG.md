@@ -1,3 +1,12 @@
+# v1.21.0
+
+- Udostępniono opcjonalny, polskojęzyczny test postępów przez `?features=gamification`. Domyślnie wyłączony; zwykły adres zachowuje standardowy widok.
+- Dodano cel dzienny (domyślnie 3 sudoku), pucharki, kolejne setki unikalnych ukończeń oraz album 12 plakietek.
+- Motyw nagrodowy Zorza odblokowuje się trwale po trzech pucharkach dnia. Korzystanie z pomocy nie zmniejsza nagród.
+- Na telefonie kompaktowy przycisk w wierszu licznika pól otwiera szczegóły. Na komputerze dostępny jest pasek postępu.
+- Postępy pozostają na urządzeniu. Wcześniejsze ukończenia mają nieznany sposób rozwiązania; dane gry, kandydaci, historia i eksport pozostają niezależne.
+- Nowe zasoby objęto wersjonowaniem, dodano testy celów, plakietek, migracji, flagi i motywu nagrodowego.
+
 # v1.20.3
 
 - Zmieniono nazwę opcji na „Oznaczaj błędne cyfry” i dopasowano ją we wszystkich dziewięciu językach. Uściślono objaśnienie; działanie i zapisane ustawienia pozostają bez zmian.
