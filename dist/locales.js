@@ -3238,5 +3238,15 @@
     "Énergie",
     "طاقة",
     "Energia"
+  ],
+  "Mandarynka": [
+    "Tangerine",
+    "Mandarina",
+    "Mandarine",
+    "橘子",
+    "कीनू",
+    "Mandarine",
+    "يوسفي",
+    "Mandarino"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);
