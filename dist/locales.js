@@ -3218,5 +3218,15 @@
     "À propos des outils",
     "حول الأدوات",
     "Informazioni sugli strumenti"
+  ],
+  "Forma": [
+    "Contour",
+    "Forma",
+    "Kontur",
+    "圆角",
+    "रूप",
+    "Contour",
+    "انسياب",
+    "Forma"
   ]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);
