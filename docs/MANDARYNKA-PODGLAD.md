@@ -1,6 +1,6 @@
-> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+> Dostępne na rsudoku.pl od wersji 1.19.0. Domyślna jest Porcelana; zapisane preferencje są zachowane. Adresy localhost poniżej służą wyłącznie do testów lokalnych. Nazwy plików z PODGLAD zachowano dla ciągłości odnośników.
 
-# Mandarynka — lokalny pomarańczowy motyw
+# Mandarynka — pomarańczowy motyw
 
 Mandarynka jest osobnym wariantem inspirowanym pomarańczowo-białym podglądem aplikacji do nawyków dostarczonym przez właściciela. Nie zastępuje Energii ani ciepłej Formy. Nie kopiowano zdjęcia, plików wektorowych ani fontów referencji do aplikacji.
 
@@ -18,6 +18,6 @@ Nazwę przetłumaczono na wszystkie języki aplikacji. Wybór większego tekstu 
 
 Przyciski Wczytaj i Więcej wcześniej kotwiczyły rozwijany panel względem własnej wąskiej kolumny, przez co panel mógł wychodzić poza lewą krawędź ekranu. Dla czterech nowych układów (Pracownia, Forma, Energia, Mandarynka) mobilny panel jest teraz pozycjonowany względem całej belki. Ma szerokość co najwyżej 280 px i 100% belki, logiczne wyrównanie uwzględniające kierunek pisma oraz pozycję pod belką. Weryfikacja przeglądarkowa obejmowała Wczytaj w Energii przy 390 px oraz Więcej w Mandarynce przy 360 px.
 
-Zmiany są lokalne na gałęzi codex/forma-preview. Nie zostały opublikowane ani wypchnięte do publicznego repozytorium. Publiczna strona pozostaje w wersji 1.18.0.
+Zmiany są na głównej gałęzi publicznego repozytorium i zostały opublikowane w 1.19.0.
 
 Nagłówek Podpowiedź ma neutralny kolor #30291f, zgodny z nagłówkiem importu; pomarańcz jest akcentem akcji.

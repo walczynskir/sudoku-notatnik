@@ -1,10 +1,10 @@
-> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+> Dostępne na rsudoku.pl od wersji 1.19.0. Domyślna jest Porcelana; zapisane preferencje są zachowane. Adresy localhost poniżej służą wyłącznie do testów lokalnych. Nazwy plików z PODGLAD zachowano dla ciągłości odnośników.
 
-# Forma — lokalny wariant zaokrąglony
+# Forma — wariant zaokrąglony
 
 Pracownia została opublikowana jako motyw w wersji 1.18.0. Zgodnie z wyborem właściciela pozostaje przy prostokątnych kontrolkach.
 
-Forma jest osobnym, lokalnym wariantem na gałęzi `codex/forma-preview`. Nie publikujemy tej gałęzi ani kodu nowego motywu bez oceny właściciela. Produkcyjny motyw domyślny pozostaje bez zmian.
+Forma jest osobnym motywem dostępnym w produkcji od 1.19.0. Domyślnym motywem nowych użytkowników jest Porcelana.
 
 ## Podgląd
 
@@ -12,7 +12,7 @@ Forma jest osobnym, lokalnym wariantem na gałęzi `codex/forma-preview`. Nie pu
 python3 -m http.server 5196 --bind 127.0.0.1 --directory dist
 ```
 
-Otwórz <http://127.0.0.1:5196/?preview=forma>. Serwer nasłuchuje wyłącznie lokalnie, bez dostępu z internetu lub telefonu. Parametr URL jest tylko wygodnym wyborem motywu, nie zabezpieczeniem. Prywatność wynika z braku publikacji oraz użycia 127.0.0.1. Statystyki Umami ograniczono do domen produkcyjnych, więc lokalny podgląd nie jest liczony.
+Otwórz <http://127.0.0.1:5196/?preview=forma>. Serwer nasłuchuje wyłącznie lokalnie, bez dostępu z internetu lub telefonu. Parametr URL jest tylko wygodnym wyborem motywu, nie zabezpieczeniem. Serwer podglądu jest dostępny wyłącznie na tym komputerze; same motywy są publiczne. Statystyki Umami ograniczono do domen produkcyjnych, więc lokalny podgląd nie jest liczony.
 
 ## Kształty
 

@@ -1,8 +1,8 @@
-> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+> Dostępne na rsudoku.pl od wersji 1.19.0. Domyślna jest Porcelana; zapisane preferencje są zachowane. Adresy localhost poniżej służą wyłącznie do testów lokalnych. Nazwy plików z PODGLAD zachowano dla ciągłości odnośników.
 
-# Energia — osobny kolorowy motyw lokalny
+# Energia — osobny kolorowy motyw
 
-Forma zachowuje ciepłe kolory kości słoniowej, śliwki i terakoty. Energia jest dodatkową opcją, a nie zamiennikiem Formy. Publiczna strona nadal udostępnia wydanie 1.18.0; te dwa warianty nie zostały opublikowane.
+Forma zachowuje ciepłe kolory kości słoniowej, śliwki i terakoty. Energia jest dodatkową opcją, a nie zamiennikiem Formy. Oba warianty są dostępne na publicznej stronie od 1.19.0.
 
 ## Podgląd
 
@@ -10,7 +10,7 @@ Forma zachowuje ciepłe kolory kości słoniowej, śliwki i terakoty. Energia je
 python3 -m http.server 5196 --bind 127.0.0.1 --directory dist
 ```
 
-Otwórz <http://127.0.0.1:5196/?preview=energy>. W selektorze Wygląd można wrócić do Formy lub Pracowni. LocalStorage jest niezależny od rsudoku.pl. Parametr preview służy do wygodnego wyboru wariantu tylko na localhost, nie stanowi kontroli dostępu. Podgląd pozostaje lokalny dzięki brakowi publikacji i nasłuchiwaniu wyłącznie na 127.0.0.1.
+Otwórz <http://127.0.0.1:5196/?preview=energy>. W selektorze Wygląd można wrócić do Formy lub Pracowni. LocalStorage jest niezależny od rsudoku.pl. Parametr preview służy do wygodnego wyboru wariantu tylko na localhost, nie stanowi kontroli dostępu. Serwer podglądu nasłuchuje wyłącznie na 127.0.0.1; te same motywy są dostępne w produkcji.
 
 ## Kierunek
 

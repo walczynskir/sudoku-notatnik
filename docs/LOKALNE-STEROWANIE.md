@@ -1,8 +1,8 @@
-> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+> Dostępne na rsudoku.pl od wersji 1.19.0. Domyślna jest Porcelana; zapisane preferencje są zachowane. Adresy localhost poniżej służą wyłącznie do testów lokalnych. Nazwy plików z PODGLAD zachowano dla ciągłości odnośników.
 
 # Lokalne usprawnienia sterowania
 
-Zmiany na gałęzi codex/forma-preview; nie zostały jeszcze opublikowane. Publiczna strona nadal działa w wersji 1.18.0.
+Sterowanie zostało opublikowane na głównej gałęzi w 1.19.0.
 
 ## Więcej
 
@@ -18,7 +18,7 @@ Włączenie przełącza na istniejący tryb wysokiego kontrastu; wyłączenie pr
 
 Stan wysokiego kontrastu nadal jest zapisany w sudoku-theme jako contrast, co zachowuje kompatybilność ze starszymi zapisami. Ostatni zwykły motyw jest zapisany pod sudoku-previous-theme. Parametr lokalnego podglądu nie nadpisuje zapisanego włączonego kontrastu. Nie zmienia się stan planszy, notatek, historii ani eksportu.
 
-Na telefonie o zwykłym tekście Kontrast i A+ są w górnym wierszu nagłówka. W trybie większego tekstu grupa dostaje osobny wiersz, aby nie kolidowała z nazwą aplikacji i selektorami. Style są w accessibility.css. Przy przyszłej publikacji ten plik trzeba uwzględnić w procedurze wersjonowania tak jak pozostałe nowe arkusze lokalne.
+Na telefonie o zwykłym tekście Kontrast i A+ są w górnym wierszu nagłówka. W trybie większego tekstu grupa dostaje osobny wiersz, aby nie kolidowała z nazwą aplikacji i selektorami. Style są w accessibility.css. Plik jest objęty procedurą wersjonowania wraz z pozostałymi arkuszami motywów.
 
 ## Języki
 

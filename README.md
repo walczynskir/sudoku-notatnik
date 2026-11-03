@@ -19,6 +19,7 @@ Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy uży
 - [Założenia i ograniczenia](docs/ZALOZENIA.md) — zakres produktu, prywatność i dokładne zasady działania.
 - [Autorzy i licencje](THIRD_PARTY_NOTICES.md) — biblioteki, fonty, dane i pełne teksty warunków.
 - [Widoczność w Google](docs/WYSZUKIWARKI.md) — Search Console, weryfikacja i mapa witryny.
+- [Motywy i dostępność](docs/LOKALNE-STEROWANIE.md) — wygląd, kontrast, większy tekst i menu akcji.
 - [Rozwój i publikacja](docs/ROZWOJ.md) — struktura kodu, testy, hosting i dalsze kierunki.
 
 ## Uruchomienie lokalne
