@@ -1,3 +1,7 @@
+# v1.17.2
+
+- Zmniejszono ramkę zaznaczenia w motywie Atrament i papier z 4 do 3 px, także przy podpowiedziach i konflikcie. Szałwia zachowuje cieńszą ramkę 2 px, a Wysoki kontrast wyraźną 4 px.
+
 # v1.17.1
 
 - Przeniesiono edycję zablokowanych cyfr początkowych do menu Więcej, aby nie zajmowała dodatkowego wiersza nad planszą podczas gry.
