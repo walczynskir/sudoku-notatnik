@@ -1,7 +1,7 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),I=require('../dist/i18n.js'),C=require('../dist/locales.js'),H=require('../dist/hints.js'),S=require('../dist/logic.js');
-const langs=['en','es','de','zh-Hans','hi','fr','ar','it'];
-test('all catalog entries contain all eight translations and matching placeholders',()=>{
- for(const [source,targets]of Object.entries(C)){assert.equal(targets.length,8,source);const slots=s=>[...s.matchAll(/\{(\d+)\}/g)].map(m=>m[1]).sort().join();for(const target of targets){assert(target.trim(),source);assert.equal(slots(target),slots(source),source);}}
+const langs=['en','es','de','zh-Hans','hi','fr','ar','it','uk'];
+test('all catalog entries contain all nine translations and matching placeholders',()=>{
+ for(const [source,targets]of Object.entries(C)){assert.equal(targets.length,9,source);const slots=s=>[...s.matchAll(/\{(\d+)\}/g)].map(m=>m[1]).sort().join();for(const target of targets){assert(target.trim(),source);assert.equal(slots(target),slots(source),source);}}
 });
 test('every supported technique and guide is translated',()=>{
  for(const [name,guide]of Object.entries(H.guides))for(const lang of langs){assert(C[name],name);assert(C[guide],name);assert.notEqual(I.text(guide,lang),guide,name);assert(!/[ąćęłńśźż]/i.test(I.text(guide,lang)),name);}
@@ -45,3 +45,5 @@ test('credits page labels are translated in all supported languages',()=>{
 });
 test('progress interface, rewards and badge conditions are translated in every supported language',()=>{const P=require('../dist/progress.js'),tracker=P.createTracker();const source=fs.readFileSync(require.resolve('../dist/progress.js'),'utf8'),html=source.match(/dialog\.innerHTML='([^']+)';/)[1],labels=[...html.matchAll(/>([^<>]+)</g)].map(m=>m[1]),attrs=[...html.matchAll(/(?:aria-label|title)="([^"]+)"/g)].map(m=>m[1]);for(const label of [...labels,...attrs,...tracker.badges().flatMap(b=>[b.title,b.condition,b.group])]){if(!/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż]/.test(label))continue;for(const lang of langs){const t=I.text(label,lang);assert(C[label]||(/^[135] sudoku$/.test(label)&&C['{0} sudoku'])||t!==label,`${lang}: ${label}`);assert(!/[ąćęłńśźż]/i.test(t),`${lang}: ${t}`);}}});
 test('progress counters and accessibility descriptions preserve every numeric value',()=>{const samples=['Dzisiaj: 2 z 3 sudoku','Setka 2: 23/100','23 / 100 · Ukończone kolekcje: 1 · Łącznie 123 / 10 000','Zdobyte: 3 / 12','3 · Bez podpowiedzi','Ukończono 2 z 3. Pucharek czeka na realizację celu.','🏆 Cel zrealizowany! Ukończono dzisiaj: 3. Zdobyte puchary: 7.','Dzisiaj: 2 z 3 sudoku. Setka 2: 23 ze 100. Łącznie 123 z 10 000. Zdobyte puchary: 7. Otwórz moje postępy'];for(const text of samples)for(const lang of langs){const t=I.text(text,lang);assert.notEqual(t,text,`${lang}: ${text}`);assert(!/[ąćęłńśźż]/i.test(t),`${lang}: ${t}`);assert.deepEqual((t.match(/\d+/g)||[]).sort(),(text.match(/\d+/g)||[]).sort(),`${lang}: ${t}`);}});
+
+test("Ukrainian browser detection and coordinates",()=>{assert.equal(I.resolveLanguage(["uk-UA"]),"uk");assert.equal(I.text("wiersz 3, kolumna 8","uk"),"рядок 3, стовпець 8");assert.equal(I.text("Nowa gra","uk"),"Нова гра");});

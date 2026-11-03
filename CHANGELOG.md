@@ -1,3 +1,8 @@
+# v1.23.0
+
+- Dodano pełny język ukraiński: interfejs, 24 lekcje technik, import i kamera, biblioteka, statystyki, plakietki oraz opisy licencji. Automatycznie rozpoznawany dla `uk` i `uk-UA`; zapisany wybór języka ma pierwszeństwo.
+- Dodano niezależny motyw Ukraina z niebiesko-żółtymi akcentami i odmiennymi oznaczeniami wybranej komórki oraz podpowiedzi. Zachowano domyślną Porcelanę.
+
 # v1.22.1
 
 - Zmniejszono nagłówek liczby ukończonych plansz i uproszczono podsumowanie statystyk do czytelnych wierszy bez dodatkowej ramki. Liczniki korzystają ze spójnej typografii panelu; tryb większego tekstu pozostaje obsługiwany.

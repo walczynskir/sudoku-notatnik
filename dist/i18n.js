@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
 const raw=root.SudokuLocales||(typeof require==='function'?require('./locales.js'):{});
-const languages=['pl','en','es','de','zh-Hans','hi','fr','ar','it'],normalize=s=>s.replace(/\s+/gu,' ').trim();
+const languages=['pl','en','es','de','zh-Hans','hi','fr','ar','it','uk'],normalize=s=>s.replace(/\s+/gu,' ').trim();
 const catalog=new Map(Object.entries(raw).map(([key,v])=>[normalize(key),v]));
 const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const patterns=[...catalog].filter(([key])=>/\{\d+\}/.test(key)).map(([key,values])=>{

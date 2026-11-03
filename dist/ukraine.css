@@ -1,0 +1,102 @@
+/* Ukraina: blue and yellow accents with a quiet white puzzle surface. */
+:root[data-theme="ukraine"]{--bg:#f3f7fc;--ink:#102c4a;--muted:#52677d;--green:#0755a1;--line:#ccdceb;--accent:#e6f0fb;--ukraine-orange:#0755a1;--ukraine-amber:#0755a1}
+[data-theme="ukraine"] body{background:#f3f7fc;color:#102c4a}
+[data-theme="ukraine"] header{background:#0755a1;border:0;border-radius:0 0 26px 26px;padding-block:20px;box-shadow:0 8px 24px #0755a108}
+[data-theme="ukraine"] .brand,[data-theme="ukraine"] .logo,[data-theme="ukraine"] .header-text-size{color:#102c4a}
+[data-theme="ukraine"] .forma-preview{color:#102c4a;border-color:#0755a133}
+[data-theme="ukraine"] .header-preferences select{background:#fff;color:#102c4a;border-color:#fff;border-radius:12px;font-weight:600}
+[data-theme="ukraine"] .header-text-size input{accent-color:#0755a1}
+[data-theme="ukraine"] main{padding-top:24px}
+[data-theme="ukraine"] .workspace{grid-template-columns:minmax(0,560px) minmax(250px,300px);gap:24px}
+[data-theme="ukraine"] .board-panel{background:#fff;border:1px solid #ccdceb;border-radius:24px;padding:18px;box-shadow:0 8px 26px #102c4a05}
+[data-theme="ukraine"] button:not(.cell){background:#fff;color:#102c4a;font-weight:600}
+[data-theme="ukraine"] button.primary{background:#0755a1;color:#102c4a;border-color:#0755a1}
+[data-theme="ukraine"] .secondary{background:#f0f3f6;border-color:#c8d4df;color:#102c4a}
+[data-theme="ukraine"] .quick-toolbar{border:0;padding-bottom:0;margin-bottom:16px;gap:5px}
+[data-theme="ukraine"] .quick-toolbar>button,[data-theme="ukraine"] .quick-toolbar summary{background:transparent;color:#102c4a}
+[data-theme="ukraine"] .quick-toolbar #open-library{background:#0755a1;color:#102c4a;border-color:#0755a1;font-weight:700}
+[data-theme="ukraine"] .quick-toolbar .toolbar-save{background:transparent;color:#102c4a}
+[data-theme="ukraine"] .quick-toolbar>button:hover,[data-theme="ukraine"] .quick-toolbar summary:hover,[data-theme="ukraine"] .toolbar-menu[open] summary{background:#e6f0fb}
+[data-theme="ukraine"] .quick-toolbar #open-library:hover{background:#345574}
+[data-theme="ukraine"] .toolbar-dropdown{background:#fff;border-color:#c8d4df;box-shadow:0 8px 22px #102c4a18}
+[data-theme="ukraine"] .toolbar-dropdown button{background:transparent;color:#102c4a}
+[data-theme="ukraine"] .toolbar-dropdown button:hover{background:#edf2f7}
+[data-theme="ukraine"] .board-top{margin-bottom:10px;color:#52677d}
+[data-theme="ukraine"] #board-state{background:#edf2f7;color:#0755a1;padding:4px 9px;border-radius:999px;font-weight:600}
+[data-theme="ukraine"] .board{background:#fff;border-color:#102c4a;box-shadow:none}
+[data-theme="ukraine"] .cell{background:#fff;color:#102c4a;border-color:#d4dce4}
+[data-theme="ukraine"] .cell:nth-child(3n){border-right-color:#102c4a}
+[data-theme="ukraine"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="ukraine"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#102c4a}
+[data-theme="ukraine"] .cell.peer{background:#f3f4f5}
+[data-theme="ukraine"] .cell.same{background:#e0e7ef}
+[data-theme="ukraine"] .cell.selected{background:#e8e6df;box-shadow:inset 0 0 0 3px #102c4a}
+[data-theme="ukraine"] .notes{color:#526477}
+[data-theme="ukraine"] .cell.hint-source,[data-theme="ukraine"] .cell.hint-color-a{background:#d9edff;box-shadow:inset 0 0 0 2px #2071a9}
+[data-theme="ukraine"] .cell.hint-color-b{background:#efddfa;outline:2px dashed #7a3199;outline-offset:-3px;box-shadow:none}
+[data-theme="ukraine"] .cell.hint-target{background:#ffedcc;box-shadow:inset 0 0 0 3px #a35a05}
+[data-theme="ukraine"] .cell.conflict{background:#ffe4df;color:#a22618}
+[data-theme="ukraine"] .cell.selected.conflict,[data-theme="ukraine"] .cell.hint-source.selected,[data-theme="ukraine"] .cell.hint-color-a.selected,[data-theme="ukraine"] .cell.hint-color-b.selected{box-shadow:inset 0 0 0 3px #102c4a}
+[data-theme="ukraine"] .cell.selected.hint-target{outline-color:#102c4a}
+[data-theme="ukraine"] .cell.hint-color-a.hint-target{background:#d9edff}
+[data-theme="ukraine"] .cell.hint-color-b.hint-target{background:#efddfa}
+[data-theme="ukraine"] .blue{background:#102c4a}
+[data-theme="ukraine"] .board-bottom,[data-theme="ukraine"] .help,[data-theme="ukraine"] .text-button,[data-theme="ukraine"] #status,[data-theme="ukraine"] .studio-help,[data-theme="ukraine"] .library-context #library-current,[data-theme="ukraine"] footer{color:#52677d}
+[data-theme="ukraine"] .card{background:#fff;border:1px solid #ccdceb;border-radius:24px;padding:18px;margin-bottom:16px;box-shadow:0 8px 26px #102c4a04}
+[data-theme="ukraine"] .segmented{background:#edf1f5}
+[data-theme="ukraine"] .segmented button{background:transparent;color:#52677d}
+[data-theme="ukraine"] .segmented .active{background:#0755a1;color:#102c4a;box-shadow:none;font-weight:700}
+[data-theme="ukraine"] .keypad button{background:#fff;color:#102c4a;border-color:#c8d4df;box-shadow:0 2px 0 #e2e8ee;font-weight:600}
+[data-theme="ukraine"] .keypad button:hover{background:#edf2f7;border-color:#0755a1}
+[data-theme="ukraine"] .keypad button.digit-complete:disabled{background:#edf0f2;color:#637487;border-color:#d4dce4;box-shadow:none}
+[data-theme="ukraine"] .keypad button.digit-complete::after{color:#637487}
+[data-theme="ukraine"] .divider{background:#ccdceb}
+[data-theme="ukraine"] #hint-guide{background:#f3f6f9;border-color:#ccdceb}
+[data-theme="ukraine"] .hint-card h2{color:#102c4a}
+[data-theme="ukraine"] .import-actions button,[data-theme="ukraine"] .camera-button,[data-theme="ukraine"] .export-button{background:#f0f3f6;color:#102c4a;border-color:#c8d4df}
+[data-theme="ukraine"] .restart-button,[data-theme="ukraine"] .reset{background:transparent;color:#52677d}
+[data-theme="ukraine"] .solved-banner{background:#e6f0fb;color:#102c4a;border-color:#8ca7bf}
+[data-theme="ukraine"] .board.solved{border-color:#102c4a;box-shadow:none}
+[data-theme="ukraine"] dialog{background:#fff;color:#102c4a;border-color:#ccdceb;border-radius:26px}
+[data-theme="ukraine"] dialog::backdrop{background:#102c4a70}
+[data-theme="ukraine"] dialog h2{color:#0755a1}
+[data-theme="ukraine"] .difficulty-tile{background:#f5f7f9;border-color:#c8d4df}
+[data-theme="ukraine"] .difficulty-bars{color:#0755a1}
+[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile{background:#0755a1;color:#102c4a;border-color:#0755a1}
+[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#102c4a}
+[data-theme="ukraine"] .library-credit,[data-theme="ukraine"] .library-explanation,[data-theme="ukraine"] footer{border-color:#ccdceb}
+[data-theme="ukraine"] textarea,[data-theme="ukraine"] #review-grid input,[data-theme="ukraine"] #camera-choice{background:#fff;color:#102c4a;border-color:#c8d4df}
+[data-theme="ukraine"] #review-grid input.ocr-uncertain{background:#ffedcc;border-color:#a35a05}
+[data-theme="ukraine"] .error{color:#a22618}
+[data-theme="ukraine"] .sliders input,[data-theme="ukraine"] .library-notes-label input{accent-color:#0755a1}
+[data-theme="ukraine"] button:focus-visible,[data-theme="ukraine"] a:focus-visible,[data-theme="ukraine"] summary:focus-visible,[data-theme="ukraine"] select:focus-visible{outline-color:#0755a1}
+[data-theme="ukraine"] .credits-page section{background:#fff;border-color:#ccdceb;border-radius:20px;padding:20px}
+@media(max-width:640px){
+ [data-theme="ukraine"] header{padding:12px 14px;border-radius:0 0 22px 22px}
+ [data-theme="ukraine"] main{padding:12px 8px 20px}
+ [data-theme="ukraine"] .board-panel{padding:10px;border-radius:20px}
+ [data-theme="ukraine"] .quick-toolbar{grid-template-columns:minmax(60px,1.25fr) repeat(5,minmax(0,1fr));margin-bottom:10px;gap:2px}
+ [data-theme="ukraine"] .quick-toolbar .toolbar-action,[data-theme="ukraine"] .quick-toolbar summary{padding-inline:1px}
+ html[lang="pl"][data-theme="ukraine"]:not([data-text-size="large"]) .quick-toolbar>button>span:last-child,
+ html[lang="pl"][data-theme="ukraine"]:not([data-text-size="large"]) .quick-toolbar summary>span:last-child{white-space:nowrap;font-size:10px;letter-spacing:-.15px}
+ [data-theme="ukraine"] .card{border-radius:20px;padding:14px}
+ [data-theme="ukraine"] .board-top{margin-bottom:8px;font-size:10px}
+ [data-theme="ukraine"] #board-state{font-size:9px;padding:3px 7px}
+ [data-theme="ukraine"] #mobile-entry-slot{margin-top:10px}
+ [data-theme="ukraine"] #entry-controls{margin-top:0}
+ [data-theme="ukraine"] .solved-banner{margin-top:12px}
+ [data-theme="ukraine"][data-text-size="large"] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}
+ [data-theme="ukraine"][data-text-size="large"] .card{padding:16px}
+}
+@media(max-width:360px){[data-theme="ukraine"] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+[data-theme="ukraine"] header{background:#fff;border-bottom:1px solid #ccdceb;box-shadow:none}
+[data-theme="ukraine"] button.primary,[data-theme="ukraine"] .quick-toolbar #open-library,[data-theme="ukraine"] .segmented .active,[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile,[data-theme="ukraine"] .difficulty-choice input:checked+.difficulty-tile .difficulty-bars{color:#fff}
+[data-theme="ukraine"] .board-panel,[data-theme="ukraine"] .card{box-shadow:none}
+
+[data-theme="ukraine"] header{background:linear-gradient(180deg,#0755a1 0 8px,#fff 8px);border-bottom:4px solid #ffd43b}
+[data-theme="ukraine"] .cell.selected{background:#fff0a8;box-shadow:inset 0 0 0 2px #775600}
+[data-theme="ukraine"] .cell.hint-source{background:#d9ecff;box-shadow:inset 0 0 0 2px #1765ad}
+[data-theme="ukraine"] .solved-banner{background:#e6f0fb;border-color:#0755a1;color:#102c4a}
+[data-theme="ukraine"] .board.solved{border-color:#0755a1;box-shadow:0 0 0 3px #ffd43b}
+
+[data-theme="ukraine"] .quick-toolbar>button,[data-theme="ukraine"] .quick-toolbar summary{white-space:normal;overflow-wrap:anywhere;min-width:0;padding-inline:5px}

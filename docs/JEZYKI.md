@@ -1,6 +1,6 @@
 # Języki i tłumaczenia
 
-Dostępne języki: Polski (`pl`), English (`en`), Español (`es`), Deutsch (`de`), 简体中文 — chiński uproszczony (`zh-Hans`), हिन्दी — hindi (`hi`), Français — francuski (`fr`), العربية — arabski (`ar`) i Italiano — włoski (`it`). Chiński tradycyjny nie ma osobnego tłumaczenia.
+Dostępne języki: Polski (`pl`), English (`en`), Español (`es`), Deutsch (`de`), 简体中文 — chiński uproszczony (`zh-Hans`), हिन्दी — hindi (`hi`), Français — francuski (`fr`), العربية — arabski (`ar`), Italiano — włoski (`it`) i Українська — ukraiński (`uk`). Chiński tradycyjny nie ma osobnego tłumaczenia.
 
 ## Wybór języka
 
@@ -10,7 +10,7 @@ Tłumaczenia obejmują interfejs, okna, komunikaty aplikacji, postęp rozpoznawa
 
 ## Utrzymanie
 
-`dist/locales.js` zawiera katalog: polski tekst lub wzorzec → tablica tłumaczeń w kolejności angielski, hiszpański, niemiecki, chiński uproszczony, hindi, francuski, arabski, włoski. `{0}`, `{1}` itd. oznaczają wartości dynamiczne; należy zachować ich zestaw i znaczenie. Indeksy komórek, cyfry oraz połączenia w łańcuchu muszą pozostać zgodne z dowodem.
+`dist/locales.js` zawiera katalog: polski tekst lub wzorzec → tablica tłumaczeń w kolejności angielski, hiszpański, niemiecki, chiński uproszczony, hindi, francuski, arabski, włoski, ukraiński. `{0}`, `{1}` itd. oznaczają wartości dynamiczne; należy zachować ich zestaw i znaczenie. Indeksy komórek, cyfry oraz połączenia w łańcuchu muszą pozostać zgodne z dowodem.
 
 `dist/i18n.js` udostępnia czyste `text(source, language)` oraz dobór języka. Warstwa DOM przechowuje oryginalne treści w WeakMap i reaguje na nowe komunikaty. Zmienia wyłącznie tekst i wybrane etykiety, nie wartości formularzy, stan Sudoku ani procedury wnioskowania. Nazwy technik w silniku pozostają polskimi identyfikatorami. Dla nowej techniki dodaj tłumaczenie nazwy, ogólnej zasady oraz wzorca konkretnego wyjaśnienia.
 
@@ -20,6 +20,8 @@ Testy `tests/i18n.test.cjs` sprawdzają kompletność ośmiu kolumn, znaczniki w
 
 Arabski ustawia `dir=rtl` na dokumencie. Sama plansza, siatka kandydatów, klawiatura liczbowa i podgląd zdjęć pozostają LTR, aby współrzędne i pozycje nie były odwracane. Wartości dynamiczne w zdaniach arabskich są izolowane znakami kierunkowymi FSI/PDI. Cyfry dewanagari, arabsko-indyjskie i perskie są normalizowane przy wpisywaniu i parsowaniu tekstu.
 
-Strona „Autorzy i licencje” korzysta z tego samego wyboru języka i ma własny selektor. Nagłówki, opisy i nawigacja są tłumaczone na dziewięć języków. Oryginalne pliki licencji, nazwy bibliotek i identyfikatory pozostają bez zmian; listy plików są wyświetlane od lewej do prawej również w języku arabskim.
+Strona „Autorzy i licencje” korzysta z tego samego wyboru języka i ma własny selektor. Nagłówki, opisy i nawigacja są tłumaczone na dziesięć języków. Oryginalne pliki licencji, nazwy bibliotek i identyfikatory pozostają bez zmian; listy plików są wyświetlane od lewej do prawej również w języku arabskim.
 
 Od 1.22.0 przetłumaczono również cele, kolekcje, plakietki i nagrody. Katalog obejmuje szablony liczników i opisów dostępności, a nazwy dni i miesięcy oraz daty są formatowane przez Intl dla wybranego języka. Zdarzenie sudoku-language-change odświeża formatowanie panelu bez przeładowania; nie jest emitowane przy każdym przebiegu obserwatora tłumaczeń.
+
+Od wersji 1.23.0 ukraiński obejmuje cały katalog interfejsu, lekcje technik, import, dostępność, postępy i licencje. Preferencja przeglądarki `uk` / `uk-UA` wybiera ukraiński, o ile gracz nie zapisał własnego wyboru. W selektorze Українська znajduje się po Polski, przed العربية.

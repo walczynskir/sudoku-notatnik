@@ -26,7 +26,7 @@ Aplikacja działa w przeglądarce, bez backendu, kont i bazy danych. Każdy uży
 
 ## Cele, postępy i nagrody
 
-Od wersji 1.22.0 cele dzienne, kolekcje setek, album 12 plakietek i nagrodowy motyw Zorza są dostępne w zwykłym widoku https://rsudoku.pl/ we wszystkich dziewięciu językach. Postępy pozostają na urządzeniu. Cel można wyłączyć w panelu; parametr `?features=no-gamification` wyłącza cały interfejs postępów bez usuwania danych. Stary link `?features=gamification` pozostaje zgodny. [Zasady i ograniczenia](docs/POSTEPY-PODGLAD.md).
+Od wersji 1.22.0 cele dzienne, kolekcje setek, album 12 plakietek i nagrodowy motyw Zorza są dostępne w zwykłym widoku https://rsudoku.pl/ we wszystkich dziesięciu językach. Postępy pozostają na urządzeniu. Cel można wyłączyć w panelu; parametr `?features=no-gamification` wyłącza cały interfejs postępów bez usuwania danych. Stary link `?features=gamification` pozostaje zgodny. [Zasady i ograniczenia](docs/POSTEPY-PODGLAD.md).
 
 ## Uruchomienie lokalne
 
@@ -69,3 +69,5 @@ Aktualne wydanie: **1.18.0**, numer również w stopce strony. Stosujemy `MAJOR.
 Wersja 1.x obejmuje analizę i wyjaśnienia technik, także Unique Rectangles, kolorowania i łańcuchów. Dokładne warianty i ograniczenia: [Zakres technik](docs/TECHNIKI.md). Generowanie plansz do nauki, ścieżki treningowe i ewentualny płatny dostęp są planowane na wersję 2; nie są częścią obecnej aplikacji.
 
 Pełne informacje o bibliotekach, fontach i danych: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). W aplikacji znajduje się też odnośnik „Autorzy i licencje” w stopce.
+
+Od wersji 1.23.0 dostępne są język ukraiński i niebiesko-żółty motyw Ukraina. Motyw wybiera się niezależnie od języka; nie zmienia zapisanej gry ani domyślnych preferencji. Link do zbiórki nie został jeszcze wybrany ani dodany.

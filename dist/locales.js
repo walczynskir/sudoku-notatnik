@@ -1,81 +1,82 @@
 (function(root){const catalog={
-  "TWOJE POSTĘPY": ["YOUR PROGRESS", "TU PROGRESO", "DEIN FORTSCHRITT", "你的进度", "आपकी प्रगति", "VOTRE PROGRESSION", "تقدمك", "I TUOI PROGRESSI"],
-  "Moje postępy": ["My progress", "Mi progreso", "Meine Fortschritte", "我的进度", "मेरी प्रगति", "Mes progrès", "تقدمي", "I miei progressi"],
-  "Twój cel dzienny": ["Your daily goal", "Tu objetivo diario", "Dein Tagesziel", "每日目标", "आपका दैनिक लक्ष्य", "Votre objectif quotidien", "هدفك اليومي", "Il tuo obiettivo giornaliero"],
-  "1 sudoku": ["1 Sudoku", "1 sudoku", "1 Sudoku", "1 道数独", "1 सुडोकू", "1 sudoku", "1 سودوكو", "1 sudoku"],
-  "{0} sudoku": ["{0} Sudoku puzzles", "{0} sudokus", "{0} Sudokus", "{0} 道数独", "{0} सुडोकू", "{0} sudokus", "{0} ألغاز سودوكو", "{0} sudoku"],
-  "Własny cel": ["Custom goal", "Objetivo personalizado", "Eigenes Ziel", "自定义目标", "अपना लक्ष्य", "Objectif personnalisé", "هدف مخصص", "Obiettivo personalizzato"],
-  "Bez celu": ["No goal", "Sin objetivo", "Kein Ziel", "不设目标", "कोई लक्ष्य नहीं", "Sans objectif", "بدون هدف", "Nessun obiettivo"],
-  "Ile sudoku dziennie? (1–99)": ["How many puzzles per day? (1–99)", "¿Cuántos sudokus al día? (1–99)", "Wie viele Sudokus pro Tag? (1–99)", "每天几道数独？（1–99）", "रोज़ कितने सुडोकू? (1–99)", "Combien de sudokus par jour ? (1–99)", "كم لغزًا في اليوم؟ (1–99)", "Quanti sudoku al giorno? (1–99)"],
-  "Nowy dzień, nowy cel. Każda nowa plansza liczy się tak samo — także z pomocą. Cel możesz zmienić lub wyłączyć.": ["A new day, a new goal. Every new puzzle counts equally, including with help. Change or disable your goal anytime.", "Un nuevo día, un nuevo objetivo. Cada nuevo sudoku cuenta igual, también con ayuda. Puedes cambiar o desactivar el objetivo.", "Neuer Tag, neues Ziel. Jedes neue Sudoku zählt gleich, auch mit Hilfe. Du kannst das Ziel ändern oder ausschalten.", "新的一天，新的目标。每道新完成的题目都同样计数，使用帮助也一样。目标可随时更改或关闭。", "नया दिन, नया लक्ष्य। मदद से हल की गई नई पहेली भी समान रूप से गिनी जाती है। लक्ष्य बदल या बंद कर सकते हैं।", "Un nouveau jour, un nouvel objectif. Chaque nouvelle grille compte autant, même avec de l’aide. Modifiez ou désactivez l’objectif à tout moment.", "يوم جديد وهدف جديد. كل لغز جديد يُحسب بالتساوي، حتى مع المساعدة. يمكنك تغيير الهدف أو تعطيله.", "Un nuovo giorno, un nuovo obiettivo. Ogni nuovo schema conta allo stesso modo, anche con aiuto. Puoi cambiare o disattivare l’obiettivo."],
-  "Postęp kolekcji": ["Collection progress", "Progreso de la colección", "Sammlungsfortschritt", "收集进度", "संग्रह की प्रगति", "Progression de la collection", "تقدم المجموعة", "Progresso della collezione"],
-  "Każde 100 różnych plansz tworzy kolekcję. Sam wybierasz poziom.": ["Every 100 different puzzles form a collection. You choose the difficulty.", "Cada 100 sudokus distintos forman una colección. Tú eliges la dificultad.", "Je 100 verschiedene Sudokus bilden eine Sammlung. Du wählst den Schwierigkeitsgrad.", "每完成100道不同题目组成一个合集，难度由你选择。", "हर 100 अलग पहेलियाँ एक संग्रह बनाती हैं। कठिनाई आप चुनते हैं।", "Chaque série de 100 grilles différentes forme une collection. Vous choisissez la difficulté.", "كل 100 لغز مختلف تشكل مجموعة. أنت تختار الصعوبة.", "Ogni 100 schemi diversi formano una collezione. Scegli tu la difficoltà."],
-  "Motyw nagrodowy: Zorza": ["Reward theme: Aurora", "Tema de recompensa: Aurora", "Belohnungsdesign: Aurora", "奖励主题：极光", "इनाम थीम: ऑरोरा", "Thème récompense : Aurore", "سمة المكافأة: الشفق", "Tema premio: Aurora"],
-  "Wybierz motyw Zorza": ["Choose Aurora theme", "Elegir tema Aurora", "Aurora-Design wählen", "选择极光主题", "ऑरोरा थीम चुनें", "Choisir le thème Aurore", "اختر سمة الشفق", "Scegli il tema Aurora"],
-  "Zorza · nagroda": ["Aurora · reward", "Aurora · recompensa", "Aurora · Belohnung", "极光 · 奖励", "ऑरोरा · इनाम", "Aurore · récompense", "الشفق · مكافأة", "Aurora · premio"],
-  "Nagroda jest trwała i nie zużywa pucharków. Narzędzia i zwykłe motywy są zawsze dostępne.": ["The reward is permanent and does not spend trophies. Tools and regular themes are always available.", "La recompensa es permanente y no gasta trofeos. Las herramientas y los temas normales siempre están disponibles.", "Die Belohnung bleibt dauerhaft und verbraucht keine Pokale. Werkzeuge und normale Designs sind immer verfügbar.", "奖励永久保留，不消耗奖杯。工具和普通主题始终可用。", "इनाम स्थायी है और ट्रॉफ़ियाँ खर्च नहीं होतीं। साधन और सामान्य थीम हमेशा उपलब्ध हैं।", "La récompense est permanente et ne dépense aucun trophée. Les outils et thèmes habituels restent disponibles.", "المكافأة دائمة ولا تستهلك الكؤوس. الأدوات والسمات العادية متاحة دائمًا.", "Il premio è permanente e non consuma trofei. Strumenti e temi normali sono sempre disponibili."],
-  "Statystyki, osiągnięcia i kalendarz": ["Statistics, achievements and calendar", "Estadísticas, logros y calendario", "Statistik, Erfolge und Kalender", "统计、成就与日历", "आँकड़े, उपलब्धियाँ और कैलेंडर", "Statistiques, réussites et calendrier", "الإحصاءات والإنجازات والتقويم", "Statistiche, traguardi e calendario"],
-  "Kolekcje plakietek": ["Badge collections", "Colecciones de insignias", "Abzeichensammlungen", "徽章收藏", "बैज संग्रह", "Collections de badges", "مجموعات الشارات", "Collezioni di distintivi"],
-  "Pomoc nie ogranicza plakietek. Dni nie muszą być kolejne.": ["Help does not limit badges. Days do not need to be consecutive.", "La ayuda no limita las insignias. Los días no tienen que ser consecutivos.", "Hilfe schränkt Abzeichen nicht ein. Die Tage müssen nicht aufeinanderfolgen.", "使用帮助不影响徽章，天数无需连续。", "मदद लेने से बैज सीमित नहीं होते। दिनों का लगातार होना ज़रूरी नहीं है।", "L’aide ne limite pas les badges. Les jours n’ont pas à être consécutifs.", "المساعدة لا تحد من الشارات. لا يشترط أن تكون الأيام متتالية.", "Gli aiuti non limitano i distintivi. I giorni non devono essere consecutivi."],
-  "● Ukończone Sudoku dnia (lokalna data).": ["● Daily Sudoku completed (local date).", "● Sudoku diario completado (fecha local).", "● Tages-Sudoku gelöst (lokales Datum).", "● 已完成每日数独（本地日期）。", "● दैनिक सुडोकू पूरा (स्थानीय तारीख)।", "● Sudoku du jour terminé (date locale).", "● تم إكمال سودوكو اليوم (التاريخ المحلي).", "● Sudoku del giorno completato (data locale)."],
-  "„Bez podpowiedzi” oznacza brak podpowiedzi techniki i oznaczania błędów. Kandydaci i wypełnianie pojedynczych są dozwolone. Wcześniejsze wyniki nie mają danych o pomocy. Każda plansza liczy się raz.": ["“Without hints” means no technique hints or error highlighting. Candidates and filling singles are allowed. Earlier results have no help history. Each puzzle counts once.", "«Sin pistas» significa sin pistas de técnicas ni marcado de errores. Se permiten candidatos y rellenar únicos. Los resultados anteriores no tienen historial de ayuda. Cada sudoku cuenta una vez.", "„Ohne Hinweise“ bedeutet ohne Technikhinweise und Fehlermarkierung. Kandidaten und das Ausfüllen einzelner Kandidaten sind erlaubt. Bei früheren Ergebnissen fehlen Hilfedaten. Jedes Sudoku zählt einmal.", "“无提示”表示未使用技巧提示或错误标记。允许使用候选数和自动填入唯一候选数。早期结果没有帮助记录，每道题只计一次。", "“बिना संकेत” का मतलब तकनीक संकेत और गलती चिह्नांकन के बिना है। उम्मीदवार और एकल उम्मीदवार भरना मान्य हैं। पुराने परिणामों का मदद इतिहास नहीं है। हर पहेली एक बार गिनी जाती है।", "« Sans indices » signifie sans indice de technique ni signalement des erreurs. Les candidats et le remplissage des candidats uniques sont autorisés. Les anciens résultats n’ont pas d’historique d’aide. Chaque grille compte une fois.", "«بدون تلميحات» يعني دون تلميحات للتقنيات أو تمييز الأخطاء. المرشحون وملء المرشحين المنفردين مسموحان. النتائج السابقة بلا سجل للمساعدة. كل لغز يُحسب مرة واحدة.", "«Senza suggerimenti» significa senza suggerimenti di tecnica né segnalazione degli errori. Candidati e riempimento dei candidati singoli sono consentiti. I vecchi risultati non hanno uno storico degli aiuti. Ogni schema conta una volta."],
-  "Postępy zapisane tylko na tym urządzeniu. Bez konta i synchronizacji.": ["Progress is saved only on this device. No account or synchronization.", "El progreso se guarda solo en este dispositivo. Sin cuenta ni sincronización.", "Fortschritte werden nur auf diesem Gerät gespeichert. Ohne Konto und Synchronisierung.", "进度仅保存在此设备，无账号或同步。", "प्रगति केवल इस उपकरण पर सहेजी जाती है। कोई खाता या सिंक्रोनाइज़ेशन नहीं।", "Les progrès sont enregistrés uniquement sur cet appareil. Sans compte ni synchronisation.", "يُحفظ التقدم على هذا الجهاز فقط. بلا حساب أو مزامنة.", "I progressi sono salvati solo su questo dispositivo. Senza account né sincronizzazione."],
-  "Nie udało się zapisać postępów. Dane działają tylko w tej sesji.": ["Progress could not be saved. Data is available only for this session.", "No se pudo guardar el progreso. Los datos solo duran esta sesión.", "Fortschritte konnten nicht gespeichert werden. Die Daten gelten nur für diese Sitzung.", "无法保存进度，数据仅在本次会话有效。", "प्रगति सहेजी नहीं जा सकी। डेटा केवल इस सत्र में उपलब्ध है।", "Impossible d’enregistrer les progrès. Les données ne durent que cette session.", "تعذر حفظ التقدم. البيانات متاحة لهذه الجلسة فقط.", "Impossibile salvare i progressi. I dati restano solo per questa sessione."],
-  "Setki": ["Hundreds", "Centenas", "Hunderter", "百题合集", "शतक", "Centaines", "المئات", "Centinaia"],
-  "Regularność": ["Consistency", "Constancia", "Regelmäßigkeit", "坚持", "नियमितता", "Régularité", "المواظبة", "Costanza"],
-  "Odkrywca poziomów": ["Difficulty explorer", "Explorador de niveles", "Schwierigkeitsentdecker", "难度探索者", "स्तर खोजकर्ता", "Explorateur des niveaux", "مستكشف المستويات", "Esploratore dei livelli"],
-  "Pierwsza setka": ["First hundred", "Primera centena", "Erster Hunderter", "首个百题合集", "पहला शतक", "Première centaine", "المئة الأولى", "Prima centinaia"],
-  "Dwie setki": ["Two hundred", "Dos centenas", "Zwei Hunderter", "两个百题合集", "दो शतक", "Deux centaines", "مئتان", "Due centinaia"],
-  "Pięć setek": ["Five hundred", "Cinco centenas", "Fünf Hunderter", "五个百题合集", "पाँच शतक", "Cinq centaines", "خمسمئة", "Cinque centinaia"],
-  "Dziesięć setek": ["One thousand", "Mil sudokus", "Tausend Sudokus", "一千题", "एक हज़ार", "Mille grilles", "ألف لغز", "Mille sudoku"],
-  "Dobry początek": ["A good start", "Un buen comienzo", "Ein guter Anfang", "良好开端", "अच्छी शुरुआत", "Un bon départ", "بداية جيدة", "Un buon inizio"],
-  "W swoim rytmie": ["At your own pace", "A tu ritmo", "Im eigenen Rhythmus", "自己的节奏", "अपनी लय में", "À votre rythme", "على وتيرتك", "Al tuo ritmo"],
-  "Stały bywalec": ["Regular player", "Jugador habitual", "Stammspieler", "常客", "नियमित खिलाड़ी", "Joueur régulier", "لاعب منتظم", "Giocatore abituale"],
-  "Miesiąc celów": ["A month of goals", "Un mes de objetivos", "Ein Monat voller Ziele", "目标之月", "लक्ष्यों का महीना", "Un mois d’objectifs", "شهر من الأهداف", "Un mese di obiettivi"],
-  "Pierwszy łatwy": ["First easy puzzle", "Primer sudoku fácil", "Erstes leichtes Sudoku", "首道简单题", "पहली आसान पहेली", "Première grille facile", "أول لغز سهل", "Primo sudoku facile"],
-  "Pierwszy średni": ["First medium puzzle", "Primer sudoku medio", "Erstes mittleres Sudoku", "首道中等题", "पहली मध्यम पहेली", "Première grille moyenne", "أول لغز متوسط", "Primo sudoku medio"],
-  "Pierwszy trudny": ["First hard puzzle", "Primer sudoku difícil", "Erstes schweres Sudoku", "首道困难题", "पहली कठिन पहेली", "Première grille difficile", "أول لغز صعب", "Primo sudoku difficile"],
-  "Pierwszy ekspert": ["First expert puzzle", "Primer sudoku experto", "Erstes Experten-Sudoku", "首道专家题", "पहली विशेषज्ञ पहेली", "Première grille experte", "أول لغز خبير", "Primo sudoku esperto"],
-  "Ukończ {0} różnych plansz z biblioteki.": ["Complete {0} different library puzzles.", "Completa {0} sudokus distintos de la biblioteca.", "Löse {0} verschiedene Sudokus aus der Bibliothek.", "完成题库中{0}道不同题目。", "पुस्तकालय की {0} अलग पहेलियाँ पूरी करें।", "Terminez {0} grilles différentes de la bibliothèque.", "أكمل {0} ألغاز مختلفة من المكتبة.", "Completa {0} schemi diversi della raccolta."],
-  "Zrealizuj cel dnia {0} razy. Dni nie muszą być kolejne.": ["Reach your daily goal {0} times. Days need not be consecutive.", "Cumple el objetivo diario {0} veces. No hace falta que sean días consecutivos.", "Erreiche dein Tagesziel {0} Mal. Die Tage müssen nicht aufeinanderfolgen.", "达成每日目标{0}次，无需连续。", "दैनिक लक्ष्य {0} बार पूरा करें। दिनों का लगातार होना ज़रूरी नहीं है।", "Atteignez votre objectif quotidien {0} fois. Les jours n’ont pas à être consécutifs.", "حقق هدفك اليومي {0} مرات. لا يشترط أن تكون الأيام متتالية.", "Raggiungi l’obiettivo giornaliero {0} volte. I giorni non devono essere consecutivi."],
-  "Ukończ planszę na poziomie: łatwy.": ["Complete an easy puzzle.", "Completa un sudoku fácil.", "Löse ein leichtes Sudoku.", "完成一道简单题。", "एक आसान पहेली पूरी करें।", "Terminez une grille facile.", "أكمل لغزًا سهلًا.", "Completa un sudoku facile."],
-  "Ukończ planszę na poziomie: średni.": ["Complete a medium puzzle.", "Completa un sudoku medio.", "Löse ein mittleres Sudoku.", "完成一道中等题。", "एक मध्यम पहेली पूरी करें।", "Terminez une grille moyenne.", "أكمل لغزًا متوسطًا.", "Completa un sudoku medio."],
-  "Ukończ planszę na poziomie: trudny.": ["Complete a hard puzzle.", "Completa un sudoku difícil.", "Löse ein schweres Sudoku.", "完成一道困难题。", "एक कठिन पहेली पूरी करें।", "Terminez une grille difficile.", "أكمل لغزًا صعبًا.", "Completa un sudoku difficile."],
-  "Ukończ planszę na poziomie: ekspert.": ["Complete an expert puzzle.", "Completa un sudoku experto.", "Löse ein Experten-Sudoku.", "完成一道专家题。", "एक विशेषज्ञ पहेली पूरी करें।", "Terminez une grille experte.", "أكمل لغز خبير.", "Completa un sudoku esperto."],
-  "Nowa plakietka:": ["New badge:", "Nueva insignia:", "Neues Abzeichen:", "新徽章：", "नया बैज:", "Nouveau badge :", "شارة جديدة:", "Nuovo distintivo:"],
-  "Nowe plakietki:": ["New badges:", "Nuevas insignias:", "Neue Abzeichen:", "新徽章：", "नए बैज:", "Nouveaux badges :", "شارات جديدة:", "Nuovi distintivi:"],
-  "Zdobyte: {0} / {1}": ["Earned: {0} / {1}", "Conseguidas: {0} / {1}", "Erhalten: {0} / {1}", "已获得：{0} / {1}", "प्राप्त: {0} / {1}", "Obtenus : {0} / {1}", "المكتسبة: ⁦{0} / {1}⁩", "Ottenuti: {0} / {1}"],
-  "✓ Zdobyta": ["✓ Earned", "✓ Conseguida", "✓ Erhalten", "✓ 已获得", "✓ प्राप्त", "✓ Obtenu", "✓ مكتسبة", "✓ Ottenuto"],
-  "{0} — postęp": ["{0} — progress", "{0} — progreso", "{0} — Fortschritt", "{0} — 进度", "{0} — प्रगति", "{0} — progression", "{0} — التقدم", "{0} — progresso"],
-  "Odblokowana: {0}": ["Unlocked: {0}", "Desbloqueada: {0}", "Freigeschaltet: {0}", "解锁日期：{0}", "अनलॉक: {0}", "Débloqué : {0}", "فُتحت: {0}", "Sbloccato: {0}"],
-  "Cel dnia osiągnięty!": ["Daily goal reached!", "¡Objetivo diario cumplido!", "Tagesziel erreicht!", "每日目标已达成！", "दैनिक लक्ष्य पूरा!", "Objectif quotidien atteint !", "تم تحقيق الهدف اليومي!", "Obiettivo giornaliero raggiunto!"],
-  "Dzisiaj: {0} z {1} sudoku": ["Today: {0} of {1} puzzles", "Hoy: {0} de {1} sudokus", "Heute: {0} von {1} Sudokus", "今天：{0} / {1} 道", "आज: {1} में से {0} पहेलियाँ", "Aujourd’hui : {0} sur {1} grilles", "اليوم: {0} من {1} ألغاز", "Oggi: {0} di {1} sudoku"],
-  "Graj po swojemu — bez celu": ["Play your way — no goal", "Juega a tu manera — sin objetivo", "Spiele auf deine Weise — ohne Ziel", "按自己的方式玩，不设目标", "अपने तरीके से खेलें — बिना लक्ष्य", "Jouez à votre façon — sans objectif", "العب بطريقتك — بدون هدف", "Gioca a modo tuo — senza obiettivo"],
-  "Cel dzienny · Moje postępy": ["Daily goal · My progress", "Objetivo diario · Mi progreso", "Tagesziel · Meine Fortschritte", "每日目标 · 我的进度", "दैनिक लक्ष्य · मेरी प्रगति", "Objectif quotidien · Mes progrès", "الهدف اليومي · تقدمي", "Obiettivo giornaliero · I miei progressi"],
-  "Setka {0}: {1}/100": ["Hundred {0}: {1}/100", "Centena {0}: {1}/100", "Hunderter {0}: {1}/100", "第{0}组百题：{1}/100", "शतक {0}: {1}/100", "Centaine {0} : {1}/100", "المئة {0}: ⁦{1}/100⁩", "Centinaia {0}: {1}/100"],
-  "Łącznie {0} / 10 000": ["Total {0} / 10,000", "Total {0} / 10 000", "Insgesamt {0} / 10 000", "总计 {0} / 10 000", "कुल {0} / 10 000", "Total {0} / 10 000", "المجموع ⁦{0} / 10 000⁩", "Totale {0} / 10 000"],
-  "{0}. Setka {1}: {2} ze 100. Łącznie {3} z 10 000. Zdobyte puchary: {4}. Otwórz moje postępy": ["{0}. Hundred {1}: {2} of 100. Total {3} of 10,000. Trophies earned: {4}. Open my progress", "{0}. Centena {1}: {2} de 100. Total {3} de 10 000. Trofeos: {4}. Abrir mi progreso", "{0}. Hunderter {1}: {2} von 100. Insgesamt {3} von 10 000. Pokale: {4}. Meine Fortschritte öffnen", "{0}。第{1}组百题：{2}/100。总计{3}/10 000。奖杯：{4}。打开我的进度", "{0}। शतक {1}: 100 में से {2}। कुल {3} / 10 000। प्राप्त ट्रॉफ़ियाँ: {4}। मेरी प्रगति खोलें", "{0}. Centaine {1} : {2} sur 100. Total {3} sur 10 000. Trophées : {4}. Ouvrir mes progrès", "{0}. المئة {1}: {2} من 100. المجموع {3} من 10 000. الكؤوس: {4}. افتح تقدمي", "{0}. Centinaia {1}: {2} di 100. Totale {3} di 10 000. Trofei: {4}. Apri i miei progressi"],
-  "Setka {0}": ["Hundred {0}", "Centena {0}", "Hunderter {0}", "第{0}组百题", "शतक {0}", "Centaine {0}", "المئة {0}", "Centinaia {0}"],
-  "🏅 Zdobyte odznaki setek: {0}": ["🏅 Hundred badges earned: {0}", "🏅 Insignias de centenas: {0}", "🏅 Erhaltene Hunderter-Abzeichen: {0}", "🏅 百题徽章：{0}", "🏅 प्राप्त शतक बैज: {0}", "🏅 Badges de centaines : {0}", "🏅 شارات المئات المكتسبة: {0}", "🏅 Distintivi delle centinaia: {0}"],
-  "Pierwsza odznaka czeka za ukończenie 100 różnych plansz.": ["Your first badge awaits after 100 different puzzles.", "Tu primera insignia te espera tras 100 sudokus distintos.", "Dein erstes Abzeichen wartet nach 100 verschiedenen Sudokus.", "完成100道不同题目即可获得首枚徽章。", "100 अलग पहेलियों के बाद पहला बैज मिलेगा।", "Votre premier badge vous attend après 100 grilles différentes.", "تنتظرك أول شارة بعد إكمال 100 لغز مختلف.", "Il primo distintivo ti aspetta dopo 100 schemi diversi."],
-  "{0} / 100 · Ukończone kolekcje: {1} · Łącznie {2} / 10 000": ["{0} / 100 · Collections completed: {1} · Total {2} / 10,000", "{0} / 100 · Colecciones completadas: {1} · Total {2} / 10 000", "{0} / 100 · Abgeschlossene Sammlungen: {1} · Insgesamt {2} / 10 000", "{0} / 100 · 已完成合集：{1} · 总计 {2} / 10 000", "{0} / 100 · पूरे संग्रह: {1} · कुल {2} / 10 000", "{0} / 100 · Collections terminées : {1} · Total {2} / 10 000", "⁦{0} / 100⁩ · المجموعات المكتملة: {1} · المجموع ⁦{2} / 10 000⁩", "{0} / 100 · Collezioni completate: {1} · Totale {2} / 10 000"],
-  "Odblokowany! Zorza jest już dostępna na liście motywów.": ["Unlocked! Aurora is now available in the theme list.", "¡Desbloqueado! Aurora ya está en la lista de temas.", "Freigeschaltet! Aurora ist jetzt in der Designliste verfügbar.", "已解锁！极光已加入主题列表。", "अनलॉक! ऑरोरा अब थीम सूची में उपलब्ध है।", "Débloqué ! Aurore est disponible dans la liste des thèmes.", "تم الفتح! سمة الشفق متاحة الآن في قائمة السمات.", "Sbloccato! Aurora è disponibile nell’elenco dei temi."],
-  "Zdobądź 3 pucharki dnia, aby odblokować Zorzę. Masz {0} z 3.": ["Earn 3 daily trophies to unlock Aurora. You have {0} of 3.", "Consigue 3 trofeos diarios para desbloquear Aurora. Tienes {0} de 3.", "Sammle 3 Tagespokale, um Aurora freizuschalten. Du hast {0} von 3.", "获得3个每日奖杯即可解锁极光，目前为{0}/3。", "ऑरोरा अनलॉक करने के लिए 3 दैनिक ट्रॉफ़ियाँ पाएँ। आपके पास 3 में से {0} हैं।", "Gagnez 3 trophées quotidiens pour débloquer Aurore. Vous en avez {0} sur 3.", "اجمع 3 كؤوس يومية لفتح الشفق. لديك {0} من 3.", "Ottieni 3 trofei giornalieri per sbloccare Aurora. Ne hai {0} di 3."],
-  "🏆 Cel zrealizowany! Ukończono dzisiaj: {0}. Zdobyte puchary: {1}.": ["🏆 Goal reached! Completed today: {0}. Trophies earned: {1}.", "🏆 ¡Objetivo cumplido! Completados hoy: {0}. Trofeos: {1}.", "🏆 Ziel erreicht! Heute gelöst: {0}. Pokale: {1}.", "🏆 目标已达成！今天完成：{0}。奖杯：{1}。", "🏆 लक्ष्य पूरा! आज पूरे: {0}। प्राप्त ट्रॉफ़ियाँ: {1}।", "🏆 Objectif atteint ! Terminés aujourd’hui : {0}. Trophées : {1}.", "🏆 تحقق الهدف! المكتمل اليوم: {0}. الكؤوس: {1}.", "🏆 Obiettivo raggiunto! Completati oggi: {0}. Trofei: {1}."],
-  "Ukończono {0} z {1}. {2}": ["Completed {0} of {1}. {2}", "Completados {0} de {1}. {2}", "{0} von {1} gelöst. {2}", "已完成 {0} / {1}。{2}", "{1} में से {0} पूरे। {2}", "{0} sur {1} terminés. {2}", "تم إكمال {0} من {1}. {2}", "Completati {0} di {1}. {2}"],
-  "Zdobyty wcześniej pucharek zachowujesz.": ["You keep your previously earned trophy.", "Conservas el trofeo que ya ganaste.", "Dein bereits verdienter Pokal bleibt erhalten.", "已获得的奖杯会保留。", "पहले प्राप्त ट्रॉफ़ी बनी रहेगी।", "Vous conservez le trophée déjà gagné.", "تحتفظ بالكأس الذي كسبته سابقًا.", "Conservi il trofeo già ottenuto."],
-  "Pucharek czeka na realizację celu.": ["A trophy awaits when you reach your goal.", "Un trofeo te espera al cumplir el objetivo.", "Ein Pokal wartet auf das Erreichen deines Ziels.", "达成目标即可获得奖杯。", "लक्ष्य पूरा करने पर ट्रॉफ़ी मिलेगी।", "Un trophée vous attend à l’arrivée.", "ينتظرك كأس عند تحقيق هدفك.", "Un trofeo ti aspetta al raggiungimento dell’obiettivo."],
-  "Cel wyłączony. Nadal zapisujemy postępy. Zdobyte puchary: {0}.": ["Goal disabled. Progress is still saved. Trophies earned: {0}.", "Objetivo desactivado. Seguimos guardando el progreso. Trofeos: {0}.", "Ziel ausgeschaltet. Fortschritte werden weiter gespeichert. Pokale: {0}.", "目标已关闭，仍会保存进度。奖杯：{0}。", "लक्ष्य बंद है। प्रगति सहेजी जाती रहेगी। ट्रॉफ़ियाँ: {0}।", "Objectif désactivé. Les progrès restent enregistrés. Trophées : {0}.", "الهدف معطل. ما زلنا نحفظ التقدم. الكؤوس: {0}.", "Obiettivo disattivato. I progressi vengono salvati. Trofei: {0}."],
-  "{0} / 10 000 ukończonych plansz": ["{0} / 10,000 puzzles completed", "{0} / 10 000 sudokus completados", "{0} / 10 000 Sudokus gelöst", "已完成 {0} / 10 000 道", "{0} / 10 000 पहेलियाँ पूरी", "{0} / 10 000 grilles terminées", "ألغاز مكتملة: ⁦{0} / 10 000⁩", "{0} / 10 000 sudoku completati"],
-  "Ukończone w tym tygodniu": ["Completed this week", "Completados esta semana", "Diese Woche gelöst", "本周完成", "इस सप्ताह पूरे", "Terminés cette semaine", "المكتمل هذا الأسبوع", "Completati questa settimana"],
-  "Bez podpowiedzi": ["Without hints", "Sin pistas", "Ohne Hinweise", "无提示", "बिना संकेत", "Sans indices", "بدون تلميحات", "Senza suggerimenti"],
-  "Z pomocą": ["With help", "Con ayuda", "Mit Hilfe", "使用帮助", "मदद के साथ", "Avec aide", "مع المساعدة", "Con aiuto"],
-  "Wcześniejsze — brak danych": ["Earlier — no data", "Anteriores — sin datos", "Frühere — keine Daten", "早期结果 — 无记录", "पुराने — डेटा नहीं", "Anciens — sans données", "سابقة — لا بيانات", "Precedenti — dati assenti"],
-  "{0} · {1}": ["{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}"],
-  "Sudoku dnia — ten miesiąc": ["Daily Sudoku — this month", "Sudoku diario — este mes", "Tages-Sudoku — dieser Monat", "每日数独 — 本月", "दैनिक सुडोकू — यह महीना", "Sudoku du jour — ce mois-ci", "سودوكو اليوم — هذا الشهر", "Sudoku del giorno — questo mese"],
-  "Sudoku dnia — {0}": ["Daily Sudoku — {0}", "Sudoku diario — {0}", "Tages-Sudoku — {0}", "每日数独 — {0}", "दैनिक सुडोकू — {0}", "Sudoku du jour — {0}", "سودوكو اليوم — {0}", "Sudoku del giorno — {0}"],
-  "{0} — ukończone Sudoku dnia": ["{0} — daily Sudoku completed", "{0} — sudoku diario completado", "{0} — Tages-Sudoku gelöst", "{0} — 已完成每日数独", "{0} — दैनिक सुडोकू पूरा", "{0} — sudoku du jour terminé", "{0} — سودوكو اليوم مكتمل", "{0} — sudoku del giorno completato"],
-  "Wpisz liczbę całkowitą od 1 do 99.": ["Enter a whole number from 1 to 99.", "Introduce un número entero del 1 al 99.", "Gib eine ganze Zahl von 1 bis 99 ein.", "请输入1至99之间的整数。", "1 से 99 तक पूर्णांक दर्ज करें।", "Saisissez un nombre entier de 1 à 99.", "أدخل عددًا صحيحًا من 1 إلى 99.", "Inserisci un numero intero da 1 a 99."],
+  "Ukraina": ["Ukraine","Ucrania","Ukraine","乌克兰","यूक्रेन","Ukraine","أوكرانيا","Ucraina","Україна"],
+  "TWOJE POSTĘPY": ["YOUR PROGRESS", "TU PROGRESO", "DEIN FORTSCHRITT", "你的进度", "आपकी प्रगति", "VOTRE PROGRESSION", "تقدمك", "I TUOI PROGRESSI", "ТВІЙ ПРОГРЕС"],
+  "Moje postępy": ["My progress", "Mi progreso", "Meine Fortschritte", "我的进度", "मेरी प्रगति", "Mes progrès", "تقدمي", "I miei progressi", "Мій прогрес"],
+  "Twój cel dzienny": ["Your daily goal", "Tu objetivo diario", "Dein Tagesziel", "每日目标", "आपका दैनिक लक्ष्य", "Votre objectif quotidien", "هدفك اليومي", "Il tuo obiettivo giornaliero", "Твоя щоденна ціль"],
+  "1 sudoku": ["1 Sudoku", "1 sudoku", "1 Sudoku", "1 道数独", "1 सुडोकू", "1 sudoku", "1 سودوكو", "1 sudoku", "1 судоку"],
+  "{0} sudoku": ["{0} Sudoku puzzles", "{0} sudokus", "{0} Sudokus", "{0} 道数独", "{0} सुडोकू", "{0} sudokus", "{0} ألغاز سودوكو", "{0} sudoku", "{0} судоку"],
+  "Własny cel": ["Custom goal", "Objetivo personalizado", "Eigenes Ziel", "自定义目标", "अपना लक्ष्य", "Objectif personnalisé", "هدف مخصص", "Obiettivo personalizzato", "Власна ціль"],
+  "Bez celu": ["No goal", "Sin objetivo", "Kein Ziel", "不设目标", "कोई लक्ष्य नहीं", "Sans objectif", "بدون هدف", "Nessun obiettivo", "Без цілі"],
+  "Ile sudoku dziennie? (1–99)": ["How many puzzles per day? (1–99)", "¿Cuántos sudokus al día? (1–99)", "Wie viele Sudokus pro Tag? (1–99)", "每天几道数独？（1–99）", "रोज़ कितने सुडोकू? (1–99)", "Combien de sudokus par jour ? (1–99)", "كم لغزًا في اليوم؟ (1–99)", "Quanti sudoku al giorno? (1–99)", "Скільки судоку на день? (1–99)"],
+  "Nowy dzień, nowy cel. Każda nowa plansza liczy się tak samo — także z pomocą. Cel możesz zmienić lub wyłączyć.": ["A new day, a new goal. Every new puzzle counts equally, including with help. Change or disable your goal anytime.", "Un nuevo día, un nuevo objetivo. Cada nuevo sudoku cuenta igual, también con ayuda. Puedes cambiar o desactivar el objetivo.", "Neuer Tag, neues Ziel. Jedes neue Sudoku zählt gleich, auch mit Hilfe. Du kannst das Ziel ändern oder ausschalten.", "新的一天，新的目标。每道新完成的题目都同样计数，使用帮助也一样。目标可随时更改或关闭。", "नया दिन, नया लक्ष्य। मदद से हल की गई नई पहेली भी समान रूप से गिनी जाती है। लक्ष्य बदल या बंद कर सकते हैं।", "Un nouveau jour, un nouvel objectif. Chaque nouvelle grille compte autant, même avec de l’aide. Modifiez ou désactivez l’objectif à tout moment.", "يوم جديد وهدف جديد. كل لغز جديد يُحسب بالتساوي، حتى مع المساعدة. يمكنك تغيير الهدف أو تعطيله.", "Un nuovo giorno, un nuovo obiettivo. Ogni nuovo schema conta allo stesso modo, anche con aiuto. Puoi cambiare o disattivare l’obiettivo.", "Новий день — нова ціль. Кожна нова головоломка зараховується однаково, навіть із допомогою. Ціль можна змінити або вимкнути."],
+  "Postęp kolekcji": ["Collection progress", "Progreso de la colección", "Sammlungsfortschritt", "收集进度", "संग्रह की प्रगति", "Progression de la collection", "تقدم المجموعة", "Progresso della collezione", "Прогрес колекції"],
+  "Każde 100 różnych plansz tworzy kolekcję. Sam wybierasz poziom.": ["Every 100 different puzzles form a collection. You choose the difficulty.", "Cada 100 sudokus distintos forman una colección. Tú eliges la dificultad.", "Je 100 verschiedene Sudokus bilden eine Sammlung. Du wählst den Schwierigkeitsgrad.", "每完成100道不同题目组成一个合集，难度由你选择。", "हर 100 अलग पहेलियाँ एक संग्रह बनाती हैं। कठिनाई आप चुनते हैं।", "Chaque série de 100 grilles différentes forme une collection. Vous choisissez la difficulté.", "كل 100 لغز مختلف تشكل مجموعة. أنت تختار الصعوبة.", "Ogni 100 schemi diversi formano una collezione. Scegli tu la difficoltà.", "Кожні 100 різних головоломок утворюють колекцію. Рівень обираєш самостійно."],
+  "Motyw nagrodowy: Zorza": ["Reward theme: Aurora", "Tema de recompensa: Aurora", "Belohnungsdesign: Aurora", "奖励主题：极光", "इनाम थीम: ऑरोरा", "Thème récompense : Aurore", "سمة المكافأة: الشفق", "Tema premio: Aurora", "Нагородна тема: Сяйво"],
+  "Wybierz motyw Zorza": ["Choose Aurora theme", "Elegir tema Aurora", "Aurora-Design wählen", "选择极光主题", "ऑरोरा थीम चुनें", "Choisir le thème Aurore", "اختر سمة الشفق", "Scegli il tema Aurora", "Вибрати тему Сяйво"],
+  "Zorza · nagroda": ["Aurora · reward", "Aurora · recompensa", "Aurora · Belohnung", "极光 · 奖励", "ऑरोरा · इनाम", "Aurore · récompense", "الشفق · مكافأة", "Aurora · premio", "Сяйво · нагорода"],
+  "Nagroda jest trwała i nie zużywa pucharków. Narzędzia i zwykłe motywy są zawsze dostępne.": ["The reward is permanent and does not spend trophies. Tools and regular themes are always available.", "La recompensa es permanente y no gasta trofeos. Las herramientas y los temas normales siempre están disponibles.", "Die Belohnung bleibt dauerhaft und verbraucht keine Pokale. Werkzeuge und normale Designs sind immer verfügbar.", "奖励永久保留，不消耗奖杯。工具和普通主题始终可用。", "इनाम स्थायी है और ट्रॉफ़ियाँ खर्च नहीं होतीं। साधन और सामान्य थीम हमेशा उपलब्ध हैं।", "La récompense est permanente et ne dépense aucun trophée. Les outils et thèmes habituels restent disponibles.", "المكافأة دائمة ولا تستهلك الكؤوس. الأدوات والسمات العادية متاحة دائمًا.", "Il premio è permanente e non consuma trofei. Strumenti e temi normali sono sempre disponibili.", "Нагорода залишається назавжди й не витрачає кубків. Інструменти та звичайні теми завжди доступні."],
+  "Statystyki, osiągnięcia i kalendarz": ["Statistics, achievements and calendar", "Estadísticas, logros y calendario", "Statistik, Erfolge und Kalender", "统计、成就与日历", "आँकड़े, उपलब्धियाँ और कैलेंडर", "Statistiques, réussites et calendrier", "الإحصاءات والإنجازات والتقويم", "Statistiche, traguardi e calendario", "Статистика, досягнення та календар"],
+  "Kolekcje plakietek": ["Badge collections", "Colecciones de insignias", "Abzeichensammlungen", "徽章收藏", "बैज संग्रह", "Collections de badges", "مجموعات الشارات", "Collezioni di distintivi", "Колекції значків"],
+  "Pomoc nie ogranicza plakietek. Dni nie muszą być kolejne.": ["Help does not limit badges. Days do not need to be consecutive.", "La ayuda no limita las insignias. Los días no tienen que ser consecutivos.", "Hilfe schränkt Abzeichen nicht ein. Die Tage müssen nicht aufeinanderfolgen.", "使用帮助不影响徽章，天数无需连续。", "मदद लेने से बैज सीमित नहीं होते। दिनों का लगातार होना ज़रूरी नहीं है।", "L’aide ne limite pas les badges. Les jours n’ont pas à être consécutifs.", "المساعدة لا تحد من الشارات. لا يشترط أن تكون الأيام متتالية.", "Gli aiuti non limitano i distintivi. I giorni non devono essere consecutivi.", "Допомога не обмежує отримання значків. Дні не обов’язково мають бути поспіль."],
+  "● Ukończone Sudoku dnia (lokalna data).": ["● Daily Sudoku completed (local date).", "● Sudoku diario completado (fecha local).", "● Tages-Sudoku gelöst (lokales Datum).", "● 已完成每日数独（本地日期）。", "● दैनिक सुडोकू पूरा (स्थानीय तारीख)।", "● Sudoku du jour terminé (date locale).", "● تم إكمال سودوكو اليوم (التاريخ المحلي).", "● Sudoku del giorno completato (data locale).", "● Судоку дня розв’язано (місцева дата)."],
+  "„Bez podpowiedzi” oznacza brak podpowiedzi techniki i oznaczania błędów. Kandydaci i wypełnianie pojedynczych są dozwolone. Wcześniejsze wyniki nie mają danych o pomocy. Każda plansza liczy się raz.": ["“Without hints” means no technique hints or error highlighting. Candidates and filling singles are allowed. Earlier results have no help history. Each puzzle counts once.", "«Sin pistas» significa sin pistas de técnicas ni marcado de errores. Se permiten candidatos y rellenar únicos. Los resultados anteriores no tienen historial de ayuda. Cada sudoku cuenta una vez.", "„Ohne Hinweise“ bedeutet ohne Technikhinweise und Fehlermarkierung. Kandidaten und das Ausfüllen einzelner Kandidaten sind erlaubt. Bei früheren Ergebnissen fehlen Hilfedaten. Jedes Sudoku zählt einmal.", "“无提示”表示未使用技巧提示或错误标记。允许使用候选数和自动填入唯一候选数。早期结果没有帮助记录，每道题只计一次。", "“बिना संकेत” का मतलब तकनीक संकेत और गलती चिह्नांकन के बिना है। उम्मीदवार और एकल उम्मीदवार भरना मान्य हैं। पुराने परिणामों का मदद इतिहास नहीं है। हर पहेली एक बार गिनी जाती है।", "« Sans indices » signifie sans indice de technique ni signalement des erreurs. Les candidats et le remplissage des candidats uniques sont autorisés. Les anciens résultats n’ont pas d’historique d’aide. Chaque grille compte une fois.", "«بدون تلميحات» يعني دون تلميحات للتقنيات أو تمييز الأخطاء. المرشحون وملء المرشحين المنفردين مسموحان. النتائج السابقة بلا سجل للمساعدة. كل لغز يُحسب مرة واحدة.", "«Senza suggerimenti» significa senza suggerimenti di tecnica né segnalazione degli errori. Candidati e riempimento dei candidati singoli sono consentiti. I vecchi risultati non hanno uno storico degli aiuti. Ogni schema conta una volta.", "«Без підказок» означає без підказок технік і позначення помилок. Кандидати й заповнення одиночних дозволені. Для попередніх результатів немає даних про допомогу. Кожна головоломка зараховується один раз."],
+  "Postępy zapisane tylko na tym urządzeniu. Bez konta i synchronizacji.": ["Progress is saved only on this device. No account or synchronization.", "El progreso se guarda solo en este dispositivo. Sin cuenta ni sincronización.", "Fortschritte werden nur auf diesem Gerät gespeichert. Ohne Konto und Synchronisierung.", "进度仅保存在此设备，无账号或同步。", "प्रगति केवल इस उपकरण पर सहेजी जाती है। कोई खाता या सिंक्रोनाइज़ेशन नहीं।", "Les progrès sont enregistrés uniquement sur cet appareil. Sans compte ni synchronisation.", "يُحفظ التقدم على هذا الجهاز فقط. بلا حساب أو مزامنة.", "I progressi sono salvati solo su questo dispositivo. Senza account né sincronizzazione.", "Прогрес зберігається лише на цьому пристрої. Без облікового запису та синхронізації."],
+  "Nie udało się zapisać postępów. Dane działają tylko w tej sesji.": ["Progress could not be saved. Data is available only for this session.", "No se pudo guardar el progreso. Los datos solo duran esta sesión.", "Fortschritte konnten nicht gespeichert werden. Die Daten gelten nur für diese Sitzung.", "无法保存进度，数据仅在本次会话有效。", "प्रगति सहेजी नहीं जा सकी। डेटा केवल इस सत्र में उपलब्ध है।", "Impossible d’enregistrer les progrès. Les données ne durent que cette session.", "تعذر حفظ التقدم. البيانات متاحة لهذه الجلسة فقط.", "Impossibile salvare i progressi. I dati restano solo per questa sessione.", "Не вдалося зберегти прогрес. Дані доступні лише в цьому сеансі."],
+  "Setki": ["Hundreds", "Centenas", "Hunderter", "百题合集", "शतक", "Centaines", "المئات", "Centinaia", "Сотні"],
+  "Regularność": ["Consistency", "Constancia", "Regelmäßigkeit", "坚持", "नियमितता", "Régularité", "المواظبة", "Costanza", "Регулярність"],
+  "Odkrywca poziomów": ["Difficulty explorer", "Explorador de niveles", "Schwierigkeitsentdecker", "难度探索者", "स्तर खोजकर्ता", "Explorateur des niveaux", "مستكشف المستويات", "Esploratore dei livelli", "Дослідник рівнів"],
+  "Pierwsza setka": ["First hundred", "Primera centena", "Erster Hunderter", "首个百题合集", "पहला शतक", "Première centaine", "المئة الأولى", "Prima centinaia", "Перша сотня"],
+  "Dwie setki": ["Two hundred", "Dos centenas", "Zwei Hunderter", "两个百题合集", "दो शतक", "Deux centaines", "مئتان", "Due centinaia", "Дві сотні"],
+  "Pięć setek": ["Five hundred", "Cinco centenas", "Fünf Hunderter", "五个百题合集", "पाँच शतक", "Cinq centaines", "خمسمئة", "Cinque centinaia", "П’ять сотень"],
+  "Dziesięć setek": ["One thousand", "Mil sudokus", "Tausend Sudokus", "一千题", "एक हज़ार", "Mille grilles", "ألف لغز", "Mille sudoku", "Десять сотень"],
+  "Dobry początek": ["A good start", "Un buen comienzo", "Ein guter Anfang", "良好开端", "अच्छी शुरुआत", "Un bon départ", "بداية جيدة", "Un buon inizio", "Добрий початок"],
+  "W swoim rytmie": ["At your own pace", "A tu ritmo", "Im eigenen Rhythmus", "自己的节奏", "अपनी लय में", "À votre rythme", "على وتيرتك", "Al tuo ritmo", "У власному ритмі"],
+  "Stały bywalec": ["Regular player", "Jugador habitual", "Stammspieler", "常客", "नियमित खिलाड़ी", "Joueur régulier", "لاعب منتظم", "Giocatore abituale", "Постійний гравець"],
+  "Miesiąc celów": ["A month of goals", "Un mes de objetivos", "Ein Monat voller Ziele", "目标之月", "लक्ष्यों का महीना", "Un mois d’objectifs", "شهر من الأهداف", "Un mese di obiettivi", "Місяць цілей"],
+  "Pierwszy łatwy": ["First easy puzzle", "Primer sudoku fácil", "Erstes leichtes Sudoku", "首道简单题", "पहली आसान पहेली", "Première grille facile", "أول لغز سهل", "Primo sudoku facile", "Перше легке"],
+  "Pierwszy średni": ["First medium puzzle", "Primer sudoku medio", "Erstes mittleres Sudoku", "首道中等题", "पहली मध्यम पहेली", "Première grille moyenne", "أول لغز متوسط", "Primo sudoku medio", "Перше середнє"],
+  "Pierwszy trudny": ["First hard puzzle", "Primer sudoku difícil", "Erstes schweres Sudoku", "首道困难题", "पहली कठिन पहेली", "Première grille difficile", "أول لغز صعب", "Primo sudoku difficile", "Перше складне"],
+  "Pierwszy ekspert": ["First expert puzzle", "Primer sudoku experto", "Erstes Experten-Sudoku", "首道专家题", "पहली विशेषज्ञ पहेली", "Première grille experte", "أول لغز خبير", "Primo sudoku esperto", "Перший експертний рівень"],
+  "Ukończ {0} różnych plansz z biblioteki.": ["Complete {0} different library puzzles.", "Completa {0} sudokus distintos de la biblioteca.", "Löse {0} verschiedene Sudokus aus der Bibliothek.", "完成题库中{0}道不同题目。", "पुस्तकालय की {0} अलग पहेलियाँ पूरी करें।", "Terminez {0} grilles différentes de la bibliothèque.", "أكمل {0} ألغاز مختلفة من المكتبة.", "Completa {0} schemi diversi della raccolta.", "Розв’яжи {0} різних головоломок із бібліотеки."],
+  "Zrealizuj cel dnia {0} razy. Dni nie muszą być kolejne.": ["Reach your daily goal {0} times. Days need not be consecutive.", "Cumple el objetivo diario {0} veces. No hace falta que sean días consecutivos.", "Erreiche dein Tagesziel {0} Mal. Die Tage müssen nicht aufeinanderfolgen.", "达成每日目标{0}次，无需连续。", "दैनिक लक्ष्य {0} बार पूरा करें। दिनों का लगातार होना ज़रूरी नहीं है।", "Atteignez votre objectif quotidien {0} fois. Les jours n’ont pas à être consécutifs.", "حقق هدفك اليومي {0} مرات. لا يشترط أن تكون الأيام متتالية.", "Raggiungi l’obiettivo giornaliero {0} volte. I giorni non devono essere consecutivi.", "Досягни щоденної цілі {0} разів. Дні не обов’язково мають бути поспіль."],
+  "Ukończ planszę na poziomie: łatwy.": ["Complete an easy puzzle.", "Completa un sudoku fácil.", "Löse ein leichtes Sudoku.", "完成一道简单题。", "एक आसान पहेली पूरी करें।", "Terminez une grille facile.", "أكمل لغزًا سهلًا.", "Completa un sudoku facile.", "Розв’яжи головоломку рівня: легкий."],
+  "Ukończ planszę na poziomie: średni.": ["Complete a medium puzzle.", "Completa un sudoku medio.", "Löse ein mittleres Sudoku.", "完成一道中等题。", "एक मध्यम पहेली पूरी करें।", "Terminez une grille moyenne.", "أكمل لغزًا متوسطًا.", "Completa un sudoku medio.", "Розв’яжи головоломку рівня: середній."],
+  "Ukończ planszę na poziomie: trudny.": ["Complete a hard puzzle.", "Completa un sudoku difícil.", "Löse ein schweres Sudoku.", "完成一道困难题。", "एक कठिन पहेली पूरी करें।", "Terminez une grille difficile.", "أكمل لغزًا صعبًا.", "Completa un sudoku difficile.", "Розв’яжи головоломку рівня: складний."],
+  "Ukończ planszę na poziomie: ekspert.": ["Complete an expert puzzle.", "Completa un sudoku experto.", "Löse ein Experten-Sudoku.", "完成一道专家题。", "एक विशेषज्ञ पहेली पूरी करें।", "Terminez une grille experte.", "أكمل لغز خبير.", "Completa un sudoku esperto.", "Розв’яжи головоломку рівня: експерт."],
+  "Nowa plakietka:": ["New badge:", "Nueva insignia:", "Neues Abzeichen:", "新徽章：", "नया बैज:", "Nouveau badge :", "شارة جديدة:", "Nuovo distintivo:", "Новий значок:"],
+  "Nowe plakietki:": ["New badges:", "Nuevas insignias:", "Neue Abzeichen:", "新徽章：", "नए बैज:", "Nouveaux badges :", "شارات جديدة:", "Nuovi distintivi:", "Нові значки:"],
+  "Zdobyte: {0} / {1}": ["Earned: {0} / {1}", "Conseguidas: {0} / {1}", "Erhalten: {0} / {1}", "已获得：{0} / {1}", "प्राप्त: {0} / {1}", "Obtenus : {0} / {1}", "المكتسبة: ⁦{0} / {1}⁩", "Ottenuti: {0} / {1}", "Отримано: {0} / {1}"],
+  "✓ Zdobyta": ["✓ Earned", "✓ Conseguida", "✓ Erhalten", "✓ 已获得", "✓ प्राप्त", "✓ Obtenu", "✓ مكتسبة", "✓ Ottenuto", "✓ Отримано"],
+  "{0} — postęp": ["{0} — progress", "{0} — progreso", "{0} — Fortschritt", "{0} — 进度", "{0} — प्रगति", "{0} — progression", "{0} — التقدم", "{0} — progresso", "{0} — прогрес"],
+  "Odblokowana: {0}": ["Unlocked: {0}", "Desbloqueada: {0}", "Freigeschaltet: {0}", "解锁日期：{0}", "अनलॉक: {0}", "Débloqué : {0}", "فُتحت: {0}", "Sbloccato: {0}", "Відкрито: {0}"],
+  "Cel dnia osiągnięty!": ["Daily goal reached!", "¡Objetivo diario cumplido!", "Tagesziel erreicht!", "每日目标已达成！", "दैनिक लक्ष्य पूरा!", "Objectif quotidien atteint !", "تم تحقيق الهدف اليومي!", "Obiettivo giornaliero raggiunto!", "Щоденної цілі досягнуто!"],
+  "Dzisiaj: {0} z {1} sudoku": ["Today: {0} of {1} puzzles", "Hoy: {0} de {1} sudokus", "Heute: {0} von {1} Sudokus", "今天：{0} / {1} 道", "आज: {1} में से {0} पहेलियाँ", "Aujourd’hui : {0} sur {1} grilles", "اليوم: {0} من {1} ألغاز", "Oggi: {0} di {1} sudoku", "Сьогодні: {0} із {1} судоку"],
+  "Graj po swojemu — bez celu": ["Play your way — no goal", "Juega a tu manera — sin objetivo", "Spiele auf deine Weise — ohne Ziel", "按自己的方式玩，不设目标", "अपने तरीके से खेलें — बिना लक्ष्य", "Jouez à votre façon — sans objectif", "العب بطريقتك — بدون هدف", "Gioca a modo tuo — senza obiettivo", "Грай по-своєму — без цілі"],
+  "Cel dzienny · Moje postępy": ["Daily goal · My progress", "Objetivo diario · Mi progreso", "Tagesziel · Meine Fortschritte", "每日目标 · 我的进度", "दैनिक लक्ष्य · मेरी प्रगति", "Objectif quotidien · Mes progrès", "الهدف اليومي · تقدمي", "Obiettivo giornaliero · I miei progressi", "Щоденна ціль · Мій прогрес"],
+  "Setka {0}: {1}/100": ["Hundred {0}: {1}/100", "Centena {0}: {1}/100", "Hunderter {0}: {1}/100", "第{0}组百题：{1}/100", "शतक {0}: {1}/100", "Centaine {0} : {1}/100", "المئة {0}: ⁦{1}/100⁩", "Centinaia {0}: {1}/100", "Сотня {0}: {1}/100"],
+  "Łącznie {0} / 10 000": ["Total {0} / 10,000", "Total {0} / 10 000", "Insgesamt {0} / 10 000", "总计 {0} / 10 000", "कुल {0} / 10 000", "Total {0} / 10 000", "المجموع ⁦{0} / 10 000⁩", "Totale {0} / 10 000", "Загалом {0} / 10 000"],
+  "{0}. Setka {1}: {2} ze 100. Łącznie {3} z 10 000. Zdobyte puchary: {4}. Otwórz moje postępy": ["{0}. Hundred {1}: {2} of 100. Total {3} of 10,000. Trophies earned: {4}. Open my progress", "{0}. Centena {1}: {2} de 100. Total {3} de 10 000. Trofeos: {4}. Abrir mi progreso", "{0}. Hunderter {1}: {2} von 100. Insgesamt {3} von 10 000. Pokale: {4}. Meine Fortschritte öffnen", "{0}。第{1}组百题：{2}/100。总计{3}/10 000。奖杯：{4}。打开我的进度", "{0}। शतक {1}: 100 में से {2}। कुल {3} / 10 000। प्राप्त ट्रॉफ़ियाँ: {4}। मेरी प्रगति खोलें", "{0}. Centaine {1} : {2} sur 100. Total {3} sur 10 000. Trophées : {4}. Ouvrir mes progrès", "{0}. المئة {1}: {2} من 100. المجموع {3} من 10 000. الكؤوس: {4}. افتح تقدمي", "{0}. Centinaia {1}: {2} di 100. Totale {3} di 10 000. Trofei: {4}. Apri i miei progressi", "{0}. Сотня {1}: {2} зі 100. Загалом {3} із 10 000. Отримані кубки: {4}. Відкрити мій прогрес"],
+  "Setka {0}": ["Hundred {0}", "Centena {0}", "Hunderter {0}", "第{0}组百题", "शतक {0}", "Centaine {0}", "المئة {0}", "Centinaia {0}", "Сотня {0}"],
+  "🏅 Zdobyte odznaki setek: {0}": ["🏅 Hundred badges earned: {0}", "🏅 Insignias de centenas: {0}", "🏅 Erhaltene Hunderter-Abzeichen: {0}", "🏅 百题徽章：{0}", "🏅 प्राप्त शतक बैज: {0}", "🏅 Badges de centaines : {0}", "🏅 شارات المئات المكتسبة: {0}", "🏅 Distintivi delle centinaia: {0}", "🏅 Отримані значки сотень: {0}"],
+  "Pierwsza odznaka czeka za ukończenie 100 różnych plansz.": ["Your first badge awaits after 100 different puzzles.", "Tu primera insignia te espera tras 100 sudokus distintos.", "Dein erstes Abzeichen wartet nach 100 verschiedenen Sudokus.", "完成100道不同题目即可获得首枚徽章。", "100 अलग पहेलियों के बाद पहला बैज मिलेगा।", "Votre premier badge vous attend après 100 grilles différentes.", "تنتظرك أول شارة بعد إكمال 100 لغز مختلف.", "Il primo distintivo ti aspetta dopo 100 schemi diversi.", "Перший значок чекає після розв’язання 100 різних головоломок."],
+  "{0} / 100 · Ukończone kolekcje: {1} · Łącznie {2} / 10 000": ["{0} / 100 · Collections completed: {1} · Total {2} / 10,000", "{0} / 100 · Colecciones completadas: {1} · Total {2} / 10 000", "{0} / 100 · Abgeschlossene Sammlungen: {1} · Insgesamt {2} / 10 000", "{0} / 100 · 已完成合集：{1} · 总计 {2} / 10 000", "{0} / 100 · पूरे संग्रह: {1} · कुल {2} / 10 000", "{0} / 100 · Collections terminées : {1} · Total {2} / 10 000", "⁦{0} / 100⁩ · المجموعات المكتملة: {1} · المجموع ⁦{2} / 10 000⁩", "{0} / 100 · Collezioni completate: {1} · Totale {2} / 10 000", "{0} / 100 · Завершені колекції: {1} · Загалом {2} / 10 000"],
+  "Odblokowany! Zorza jest już dostępna na liście motywów.": ["Unlocked! Aurora is now available in the theme list.", "¡Desbloqueado! Aurora ya está en la lista de temas.", "Freigeschaltet! Aurora ist jetzt in der Designliste verfügbar.", "已解锁！极光已加入主题列表。", "अनलॉक! ऑरोरा अब थीम सूची में उपलब्ध है।", "Débloqué ! Aurore est disponible dans la liste des thèmes.", "تم الفتح! سمة الشفق متاحة الآن في قائمة السمات.", "Sbloccato! Aurora è disponibile nell’elenco dei temi.", "Відкрито! Сяйво вже доступне в переліку тем."],
+  "Zdobądź 3 pucharki dnia, aby odblokować Zorzę. Masz {0} z 3.": ["Earn 3 daily trophies to unlock Aurora. You have {0} of 3.", "Consigue 3 trofeos diarios para desbloquear Aurora. Tienes {0} de 3.", "Sammle 3 Tagespokale, um Aurora freizuschalten. Du hast {0} von 3.", "获得3个每日奖杯即可解锁极光，目前为{0}/3。", "ऑरोरा अनलॉक करने के लिए 3 दैनिक ट्रॉफ़ियाँ पाएँ। आपके पास 3 में से {0} हैं।", "Gagnez 3 trophées quotidiens pour débloquer Aurore. Vous en avez {0} sur 3.", "اجمع 3 كؤوس يومية لفتح الشفق. لديك {0} من 3.", "Ottieni 3 trofei giornalieri per sbloccare Aurora. Ne hai {0} di 3.", "Отримай 3 щоденні кубки, щоб відкрити Сяйво. У тебе {0} із 3."],
+  "🏆 Cel zrealizowany! Ukończono dzisiaj: {0}. Zdobyte puchary: {1}.": ["🏆 Goal reached! Completed today: {0}. Trophies earned: {1}.", "🏆 ¡Objetivo cumplido! Completados hoy: {0}. Trofeos: {1}.", "🏆 Ziel erreicht! Heute gelöst: {0}. Pokale: {1}.", "🏆 目标已达成！今天完成：{0}。奖杯：{1}。", "🏆 लक्ष्य पूरा! आज पूरे: {0}। प्राप्त ट्रॉफ़ियाँ: {1}।", "🏆 Objectif atteint ! Terminés aujourd’hui : {0}. Trophées : {1}.", "🏆 تحقق الهدف! المكتمل اليوم: {0}. الكؤوس: {1}.", "🏆 Obiettivo raggiunto! Completati oggi: {0}. Trofei: {1}.", "🏆 Цілі досягнуто! Сьогодні розв’язано: {0}. Отримані кубки: {1}."],
+  "Ukończono {0} z {1}. {2}": ["Completed {0} of {1}. {2}", "Completados {0} de {1}. {2}", "{0} von {1} gelöst. {2}", "已完成 {0} / {1}。{2}", "{1} में से {0} पूरे। {2}", "{0} sur {1} terminés. {2}", "تم إكمال {0} من {1}. {2}", "Completati {0} di {1}. {2}", "Розв’язано {0} із {1}. {2}"],
+  "Zdobyty wcześniej pucharek zachowujesz.": ["You keep your previously earned trophy.", "Conservas el trofeo que ya ganaste.", "Dein bereits verdienter Pokal bleibt erhalten.", "已获得的奖杯会保留。", "पहले प्राप्त ट्रॉफ़ी बनी रहेगी।", "Vous conservez le trophée déjà gagné.", "تحتفظ بالكأس الذي كسبته سابقًا.", "Conservi il trofeo già ottenuto.", "Раніше отриманий кубок залишається в тебе."],
+  "Pucharek czeka na realizację celu.": ["A trophy awaits when you reach your goal.", "Un trofeo te espera al cumplir el objetivo.", "Ein Pokal wartet auf das Erreichen deines Ziels.", "达成目标即可获得奖杯。", "लक्ष्य पूरा करने पर ट्रॉफ़ी मिलेगी।", "Un trophée vous attend à l’arrivée.", "ينتظرك كأس عند تحقيق هدفك.", "Un trofeo ti aspetta al raggiungimento dell’obiettivo.", "Кубок чекає на досягнення цілі."],
+  "Cel wyłączony. Nadal zapisujemy postępy. Zdobyte puchary: {0}.": ["Goal disabled. Progress is still saved. Trophies earned: {0}.", "Objetivo desactivado. Seguimos guardando el progreso. Trofeos: {0}.", "Ziel ausgeschaltet. Fortschritte werden weiter gespeichert. Pokale: {0}.", "目标已关闭，仍会保存进度。奖杯：{0}。", "लक्ष्य बंद है। प्रगति सहेजी जाती रहेगी। ट्रॉफ़ियाँ: {0}।", "Objectif désactivé. Les progrès restent enregistrés. Trophées : {0}.", "الهدف معطل. ما زلنا نحفظ التقدم. الكؤوس: {0}.", "Obiettivo disattivato. I progressi vengono salvati. Trofei: {0}.", "Ціль вимкнено. Ми й далі зберігаємо прогрес. Отримані кубки: {0}."],
+  "{0} / 10 000 ukończonych plansz": ["{0} / 10,000 puzzles completed", "{0} / 10 000 sudokus completados", "{0} / 10 000 Sudokus gelöst", "已完成 {0} / 10 000 道", "{0} / 10 000 पहेलियाँ पूरी", "{0} / 10 000 grilles terminées", "ألغاز مكتملة: ⁦{0} / 10 000⁩", "{0} / 10 000 sudoku completati", "{0} / 10 000 розв’язаних головоломок"],
+  "Ukończone w tym tygodniu": ["Completed this week", "Completados esta semana", "Diese Woche gelöst", "本周完成", "इस सप्ताह पूरे", "Terminés cette semaine", "المكتمل هذا الأسبوع", "Completati questa settimana", "Розв’язано цього тижня"],
+  "Bez podpowiedzi": ["Without hints", "Sin pistas", "Ohne Hinweise", "无提示", "बिना संकेत", "Sans indices", "بدون تلميحات", "Senza suggerimenti", "Без підказок"],
+  "Z pomocą": ["With help", "Con ayuda", "Mit Hilfe", "使用帮助", "मदद के साथ", "Avec aide", "مع المساعدة", "Con aiuto", "Із допомогою"],
+  "Wcześniejsze — brak danych": ["Earlier — no data", "Anteriores — sin datos", "Frühere — keine Daten", "早期结果 — 无记录", "पुराने — डेटा नहीं", "Anciens — sans données", "سابقة — لا بيانات", "Precedenti — dati assenti", "Попередні — немає даних"],
+  "{0} · {1}": ["{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}", "{0} · {1}"],
+  "Sudoku dnia — ten miesiąc": ["Daily Sudoku — this month", "Sudoku diario — este mes", "Tages-Sudoku — dieser Monat", "每日数独 — 本月", "दैनिक सुडोकू — यह महीना", "Sudoku du jour — ce mois-ci", "سودوكو اليوم — هذا الشهر", "Sudoku del giorno — questo mese", "Судоку дня — цей місяць"],
+  "Sudoku dnia — {0}": ["Daily Sudoku — {0}", "Sudoku diario — {0}", "Tages-Sudoku — {0}", "每日数独 — {0}", "दैनिक सुडोकू — {0}", "Sudoku du jour — {0}", "سودوكو اليوم — {0}", "Sudoku del giorno — {0}", "Судоку дня — {0}"],
+  "{0} — ukończone Sudoku dnia": ["{0} — daily Sudoku completed", "{0} — sudoku diario completado", "{0} — Tages-Sudoku gelöst", "{0} — 已完成每日数独", "{0} — दैनिक सुडोकू पूरा", "{0} — sudoku du jour terminé", "{0} — سودوكو اليوم مكتمل", "{0} — sudoku del giorno completato", "{0} — судоку дня розв’язано"],
+  "Wpisz liczbę całkowitą od 1 do 99.": ["Enter a whole number from 1 to 99.", "Introduce un número entero del 1 al 99.", "Gib eine ganze Zahl von 1 bis 99 ein.", "请输入1至99之间的整数。", "1 से 99 तक पूर्णांक दर्ज करें।", "Saisissez un nombre entier de 1 à 99.", "أدخل عددًا صحيحًا من 1 إلى 99.", "Inserisci un numero intero da 1 a 99.", "Введи ціле число від 1 до 99."],
 
   "Konflikt liczb": [
     "Digit conflict",
@@ -86,7 +87,7 @@
     "Conflit de chiffres",
     "تعارض الأرقام",
     "Conflitto di cifre"
-  ],
+  , "Конфлікт чисел"],
   "Trener Sudoku — krok po kroku": [
     "Sudoku Trainer — step by step",
     "Entrenador de Sudoku — paso a paso",
@@ -96,7 +97,7 @@
     "Coach Sudoku — pas à pas",
     "مدرّب سودوكو — خطوة بخطوة",
     "Allenatore di Sudoku — passo dopo passo"
-  ],
+  , "Тренер судоку — крок за кроком"],
   "trener sudoku": [
     "sudoku trainer",
     "entrenador de sudoku",
@@ -106,7 +107,7 @@
     "coach sudoku",
     "مدرّب سودوكو",
     "allenatore di sudoku"
-  ],
+  , "тренер судоку"],
   "/ krok po kroku": [
     "/ step by step",
     "/ paso a paso",
@@ -116,7 +117,7 @@
     "/ pas à pas",
     "/ خطوة بخطوة",
     "/ passo dopo passo"
-  ],
+  , "/ крок за кроком"],
   "Zapis na tym urządzeniu": [
     "Saved on this device",
     "Guardado en este dispositivo",
@@ -126,7 +127,7 @@
     "Enregistré sur cet appareil",
     "محفوظ على هذا الجهاز",
     "Salvato su questo dispositivo"
-  ],
+  , "Збереження на цьому пристрої"],
   "UCZ SIĘ KROK PO KROKU": [
     "LEARN STEP BY STEP",
     "APRENDE PASO A PASO",
@@ -136,7 +137,7 @@
     "APPRENEZ PAS À PAS",
     "تعلّم خطوة بخطوة",
     "IMPARA PASSO DOPO PASSO"
-  ],
+  , "НАВЧАЙСЯ КРОК ЗА КРОКОМ"],
   "Twój następny ruch.": [
     "Your next move.",
     "Tu siguiente paso.",
@@ -146,7 +147,7 @@
     "Votre prochain coup.",
     "خطوتك التالية.",
     "La tua prossima mossa."
-  ],
+  , "Твій наступний хід."],
   "Wpisz liczby, sprawdź możliwości i rozwiązuj po swojemu.": [
     "Enter digits, explore candidates and solve your way.",
     "Introduce cifras, revisa candidatos y resuelve a tu manera.",
@@ -156,7 +157,7 @@
     "Saisissez des chiffres, examinez les candidats et résolvez à votre rythme.",
     "أدخل الأرقام وافحص المرشحين وحل بطريقتك.",
     "Inserisci le cifre, esamina i candidati e risolvi al tuo ritmo."
-  ],
+  , "Вводь числа, перевіряй можливості й розв’язуй по-своєму."],
   "Szybkie akcje planszy": [
     "Quick board actions",
     "Acciones rápidas",
@@ -166,7 +167,7 @@
     "Actions rapides de la grille",
     "إجراءات سريعة للشبكة",
     "Azioni rapide della griglia"
-  ],
+  , "Швидкі дії з головоломкою"],
   "Cofnij ostatnią zmianę — Ctrl+Z lub ⌘Z": [
     "Undo last change — Ctrl+Z or ⌘Z",
     "Deshacer último cambio — Ctrl+Z o ⌘Z",
@@ -176,7 +177,7 @@
     "Annuler la modification — Ctrl+Z ou ⌘Z",
     "تراجع عن آخر تغيير — Ctrl+Z أو ⌘Z",
     "Annulla la modifica — Ctrl+Z o ⌘Z"
-  ],
+  , "Скасувати останню зміну — Ctrl+Z або ⌘Z"],
   "Cofnij": [
     "Undo",
     "Deshacer",
@@ -186,7 +187,7 @@
     "Annuler",
     "تراجع",
     "Annulla"
-  ],
+  , "Скасувати"],
   "Przywróć cofniętą zmianę — Ctrl+Shift+Z / ⌘Shift+Z lub Ctrl+Y": [
     "Redo — Ctrl+Shift+Z / ⌘Shift+Z or Ctrl+Y",
     "Rehacer — Ctrl+Shift+Z / ⌘Shift+Z o Ctrl+Y",
@@ -196,7 +197,7 @@
     "Rétablir — Ctrl+Maj+Z / ⌘Maj+Z ou Ctrl+Y",
     "إعادة التغيير — Ctrl+Shift+Z / ⌘Shift+Z أو Ctrl+Y",
     "Ripristina — Ctrl+Shift+Z / ⌘Shift+Z o Ctrl+Y"
-  ],
+  , "Повторити скасовану зміну — Ctrl+Shift+Z / ⌘Shift+Z або Ctrl+Y"],
   "Przywróć": [
     "Redo",
     "Rehacer",
@@ -206,7 +207,7 @@
     "Rétablir",
     "إعادة",
     "Ripristina"
-  ],
+  , "Повторити"],
   "Wczytaj": [
     "Import",
     "Cargar",
@@ -216,7 +217,7 @@
     "Importer",
     "استيراد",
     "Carica"
-  ],
+  , "Імпорт"],
   "Tekst lub plik JSON": [
     "Text or JSON file",
     "Texto o archivo JSON",
@@ -226,7 +227,7 @@
     "Texte ou fichier JSON",
     "نص أو ملف JSON",
     "Testo o file JSON"
-  ],
+  , "Текст або файл JSON"],
   "Obrazek z urządzenia": [
     "Image from device",
     "Imagen del dispositivo",
@@ -236,7 +237,7 @@
     "Image de l’appareil",
     "صورة من الجهاز",
     "Immagine dal dispositivo"
-  ],
+  , "Зображення з пристрою"],
   "Zrób zdjęcie": [
     "Take photo",
     "Hacer foto",
@@ -246,7 +247,7 @@
     "Prendre une photo",
     "التقاط صورة",
     "Scatta una foto"
-  ],
+  , "Зробити фото"],
   "Pobierz planszę i notatki do pliku JSON": [
     "Download board and notes as JSON",
     "Descargar tablero y notas en JSON",
@@ -256,7 +257,7 @@
     "Télécharger la grille et les notes en JSON",
     "تنزيل الشبكة والملاحظات بصيغة JSON",
     "Scarica griglia e note in JSON"
-  ],
+  , "Зберегти головоломку й нотатки у файл JSON"],
   "Zapisz": [
     "Save",
     "Guardar",
@@ -266,7 +267,7 @@
     "Enregistrer",
     "حفظ",
     "Salva"
-  ],
+  , "Зберегти"],
   "Więcej": [
     "More",
     "Más",
@@ -276,7 +277,7 @@
     "Plus",
     "المزيد",
     "Altro"
-  ],
+  , "Ще"],
   "Wyczyść kandydatów": [
     "Clear candidates",
     "Borrar candidatos",
@@ -286,7 +287,7 @@
     "Effacer les candidats",
     "مسح المرشحين",
     "Cancella candidati"
-  ],
+  , "Очистити кандидатів"],
   "Restartuj sudoku": [
     "Restart Sudoku",
     "Reiniciar sudoku",
@@ -296,7 +297,7 @@
     "Recommencer le sudoku",
     "إعادة بدء السودوكو",
     "Ricomincia il sudoku"
-  ],
+  , "Почати судоку спочатку"],
   "Nowa, pusta plansza": [
     "New empty board",
     "Nuevo tablero vacío",
@@ -306,7 +307,7 @@
     "Nouvelle grille vide",
     "شبكة فارغة جديدة",
     "Nuova griglia vuota"
-  ],
+  , "Нова порожня сітка"],
   "✓ Sudoku rozwiązane!": [
     "✓ Sudoku solved!",
     "✓ ¡Sudoku resuelto!",
@@ -316,7 +317,7 @@
     "✓ Sudoku résolu !",
     "✓ تم حل السودوكو!",
     "✓ Sudoku risolto!"
-  ],
+  , "✓ Судоку розв’язано!"],
   "Wszystkie 81 pól jest poprawnie wypełnionych.": [
     "All 81 cells are filled correctly.",
     "Las 81 casillas están completas y son correctas.",
@@ -326,7 +327,7 @@
     "Les 81 cases sont correctement remplies.",
     "جميع الخانات الـ81 مكتملة بشكل صحيح.",
     "Tutte le 81 celle sono compilate correttamente."
-  ],
+  , "Усі 81 клітинку заповнено правильно."],
   "0 / 81 pól": [
     "0 / 81 cells",
     "0 / 81 casillas",
@@ -336,7 +337,7 @@
     "0 / 81 cases",
     "0 / 81 خانة",
     "0 / 81 celle"
-  ],
+  , "0 / 81 клітинок"],
   "Pusta plansza": [
     "Empty board",
     "Tablero vacío",
@@ -346,7 +347,7 @@
     "Grille vide",
     "شبكة فارغة",
     "Griglia vuota"
-  ],
+  , "Порожня сітка"],
   "Plansza sudoku": [
     "Sudoku board",
     "Tablero de sudoku",
@@ -356,7 +357,7 @@
     "Grille de sudoku",
     "شبكة سودوكو",
     "Griglia sudoku"
-  ],
+  , "Сітка судоку"],
   "Wybrane pole": [
     "Selected cell",
     "Casilla seleccionada",
@@ -366,7 +367,7 @@
     "Case sélectionnée",
     "الخانة المحددة",
     "Cella selezionata"
-  ],
+  , "Вибрана клітинка"],
   "Konflikt": [
     "Conflict",
     "Conflicto",
@@ -376,7 +377,7 @@
     "Conflit",
     "تعارض",
     "Conflitto"
-  ],
+  , "Конфлікт"],
   "Wybierz pole i wpisz cyfrę od 1 do 9.": [
     "Select a cell and enter a digit from 1 to 9.",
     "Selecciona una casilla e introduce una cifra del 1 al 9.",
@@ -386,7 +387,7 @@
     "Sélectionnez une case et saisissez un chiffre de 1 à 9.",
     "حدد خانة وأدخل رقماً من 1 إلى 9.",
     "Seleziona una cella e inserisci una cifra da 1 a 9."
-  ],
+  , "Вибери клітинку та введи цифру від 1 до 9."],
   "NARZĘDZIA": [
     "TOOLS",
     "HERRAMIENTAS",
@@ -396,7 +397,7 @@
     "OUTILS",
     "الأدوات",
     "STRUMENTI"
-  ],
+  , "ІНСТРУМЕНТИ"],
   "Każde pole ma możliwości.": [
     "Every cell has possibilities.",
     "Cada casilla tiene posibilidades.",
@@ -406,7 +407,7 @@
     "Chaque case a ses possibilités.",
     "لكل خانة احتمالاتها.",
     "Ogni cella ha le sue possibilità."
-  ],
+  , "Кожна клітинка має можливості."],
   "Tryb edycji": [
     "Editing mode",
     "Modo de edición",
@@ -416,7 +417,7 @@
     "Mode de saisie",
     "وضع الإدخال",
     "Modalità di inserimento"
-  ],
+  , "Режим редагування"],
   "① Liczby": [
     "① Digits",
     "① Cifras",
@@ -426,7 +427,7 @@
     "① Chiffres",
     "① أرقام",
     "① Cifre"
-  ],
+  , "① Числа"],
   "✎ Kandydaci": [
     "✎ Candidates",
     "✎ Candidatos",
@@ -436,7 +437,7 @@
     "✎ Candidats",
     "✎ مرشحون",
     "✎ Candidati"
-  ],
+  , "✎ Кандидати"],
   "Wpisz cyfrę w wybranym polu.": [
     "Enter a digit in the selected cell.",
     "Introduce una cifra en la casilla seleccionada.",
@@ -446,7 +447,7 @@
     "Saisissez un chiffre dans la case sélectionnée.",
     "أدخل رقماً في الخانة المحددة.",
     "Inserisci una cifra nella cella selezionata."
-  ],
+  , "Введи цифру у вибрану клітинку."],
   "⌫ Wyczyść wybrane pole": [
     "⌫ Clear selected cell",
     "⌫ Borrar casilla seleccionada",
@@ -456,7 +457,7 @@
     "⌫ Vider la case sélectionnée",
     "⌫ مسح الخانة المحددة",
     "⌫ Svuota la cella selezionata"
-  ],
+  , "⌫ Очистити вибрану клітинку"],
   "Wypełnij pojedynczych kandydatów": [
     "Fill single candidates",
     "Rellenar candidatos únicos",
@@ -466,7 +467,7 @@
     "Remplir les candidats uniques",
     "ملء المرشحين الوحيدين",
     "Compila i candidati singoli"
-  ],
+  , "Заповнити одиночних кандидатів"],
   "Wypełnia pola z jedną notatką, także kolejne powstałe po wpisach — aż do wyczerpania możliwości.": [
     "Fills cells with one note, including new singles created by earlier entries, until no more remain.",
     "Rellena las casillas con un solo candidato y repite con los nuevos candidatos únicos hasta que no queden más.",
@@ -476,7 +477,7 @@
     "Remplit les cases à un seul candidat, puis les nouveaux candidats uniques, jusqu’à épuisement.",
     "يملأ الخانات ذات المرشح الوحيد، ويكرر ذلك للمرشحين الوحيدين الناتجين حتى لا يبقى المزيد.",
     "Compila le celle con un solo candidato e continua con i nuovi singoli finché non ne restano."
-  ],
+  , "Заповнює клітинки з одним кандидатом, зокрема нові, що з’являються після заповнення, доки такі клітинки не закінчаться."],
   "✧ Oblicz kandydatów": [
     "✧ Calculate candidates",
     "✧ Calcular candidatos",
@@ -486,7 +487,7 @@
     "✧ Calculer les candidats",
     "✧ حساب المرشحين",
     "✧ Calcola candidati"
-  ],
+  , "✧ Обчислити кандидатів"],
   "Uzupełnia możliwości w pustych polach na podstawie wiersza, kolumny i kwadratu 3 × 3. Zastępuje dotychczasowe notatki. Wpisanie liczby automatycznie usuwa ją z kandydatów w powiązanych polach.": [
     "Fills empty cells with candidates allowed by their row, column and 3 × 3 box. Replaces existing notes. Entering a digit removes it from candidates in related cells.",
     "Calcula los candidatos según la fila, columna y bloque 3 × 3. Sustituye las notas existentes. Al introducir una cifra, la elimina de los candidatos de las casillas relacionadas.",
@@ -496,7 +497,7 @@
     "Calcule les candidats selon la ligne, la colonne et le bloc 3 × 3, en remplaçant les notes. Un chiffre saisi est retiré des candidats des cases liées.",
     "يحسب مرشحي الخانات وفق الصف والعمود والمربع 3 × 3 ويستبدل الملاحظات. إدخال رقم يحذفه من مرشحي الخانات المرتبطة.",
     "Calcola i candidati in base a riga, colonna e riquadro 3 × 3, sostituendo le note. Una cifra inserita viene rimossa dai candidati delle celle collegate."
-  ],
+  , "Заповнює можливі цифри в порожніх клітинках за рядком, стовпцем і блоком 3 × 3. Замінює попередні нотатки. Введення числа автоматично прибирає його з кандидатів у пов’язаних клітинках."],
   "MAŁA PODPOWIEDŹ": [
     "A LITTLE HINT",
     "UNA PEQUEÑA PISTA",
@@ -506,7 +507,7 @@
     "UN PETIT INDICE",
     "تلميح بسيط",
     "UN PICCOLO AIUTO"
-  ],
+  , "НЕВЕЛИКА ПІДКАЗКА"],
   "Najpierw technika, potem pola.": [
     "Technique first, cells later.",
     "Primero la técnica, después las casillas.",
@@ -516,7 +517,7 @@
     "La technique d’abord, les cases ensuite.",
     "التقنية أولاً، ثم الخانات.",
     "Prima la tecnica, poi le celle."
-  ],
+  , "Спочатку техніка, потім клітинки."],
   "Podpowiedz technikę": [
     "Suggest a technique",
     "Sugerir técnica",
@@ -526,7 +527,7 @@
     "Suggérer une technique",
     "اقتراح تقنية",
     "Suggerisci una tecnica"
-  ],
+  , "Підказати техніку"],
   "Na czym polega?": [
     "How does it work?",
     "¿Cómo funciona?",
@@ -536,7 +537,7 @@
     "Comment ça marche ?",
     "كيف تعمل؟",
     "Come funziona?"
-  ],
+  , "Як це працює?"],
   "Pokaż pola i wyjaśnienie ruchu": [
     "Show cells and explain the move",
     "Mostrar casillas y explicar el paso",
@@ -546,7 +547,7 @@
     "Afficher les cases et expliquer le coup",
     "عرض الخانات وشرح الخطوة",
     "Mostra celle e spiegazione"
-  ],
+  , "Показати клітинки та пояснення ходу"],
   "Ukryj podpowiedź": [
     "Hide hint",
     "Ocultar pista",
@@ -556,7 +557,7 @@
     "Masquer l’indice",
     "إخفاء التلميح",
     "Nascondi suggerimento"
-  ],
+  , "Приховати підказку"],
   "Analiza korzysta z liczb i pomija eliminacje już wykonane w notatkach. Nie zmienia planszy.": [
     "Analysis uses entered digits and skips eliminations already made in your notes. It does not change the board.",
     "El análisis usa las cifras y omite eliminaciones ya realizadas en tus notas. No modifica el tablero.",
@@ -566,7 +567,7 @@
     "L’analyse utilise les chiffres saisis et ignore les éliminations déjà effectuées. Elle ne modifie pas la grille.",
     "يستخدم التحليل الأرقام المدخلة ويتجاوز الحذف المنجز في ملاحظاتك، ولا يغيّر الشبكة.",
     "L’analisi usa le cifre inserite e salta le eliminazioni già eseguite nelle note. Non modifica la griglia."
-  ],
+  , "Аналіз використовує числа й пропускає вже виконані виключення в нотатках. Не змінює головоломку."],
   "Masz już sudoku?": [
     "Already have a Sudoku?",
     "¿Ya tienes un sudoku?",
@@ -576,7 +577,7 @@
     "Vous avez déjà un sudoku ?",
     "لديك سودوكو جاهز؟",
     "Hai già un sudoku?"
-  ],
+  , "Уже маєш судоку?"],
   "Przenieś je na swoją planszę.": [
     "Bring it onto your board.",
     "Pásalo a tu tablero.",
@@ -586,7 +587,7 @@
     "Importez-le dans votre grille.",
     "انقله إلى شبكتك.",
     "Portalo nella tua griglia."
-  ],
+  , "Перенеси його на свою сітку."],
   "Z tekstu": [
     "From text",
     "Desde texto",
@@ -596,7 +597,7 @@
     "Depuis du texte",
     "من نص",
     "Da testo"
-  ],
+  , "Із тексту"],
   "Z obrazka": [
     "From image",
     "Desde imagen",
@@ -606,7 +607,7 @@
     "Depuis une image",
     "من صورة",
     "Da immagine"
-  ],
+  , "Із зображення"],
   "◉ Zrób zdjęcie": [
     "◉ Take photo",
     "◉ Hacer foto",
@@ -616,7 +617,7 @@
     "◉ Prendre une photo",
     "◉ التقاط صورة",
     "◉ Scatta una foto"
-  ],
+  , "◉ Зробити фото"],
   "Pobierz planszę i notatki ↓": [
     "Download board and notes ↓",
     "Descargar tablero y notas ↓",
@@ -626,7 +627,7 @@
     "Télécharger grille et notes ↓",
     "تنزيل الشبكة والملاحظات ↓",
     "Scarica griglia e note ↓"
-  ],
+  , "Зберегти головоломку й нотатки ↓"],
   "↻ Restartuj sudoku": [
     "↻ Restart Sudoku",
     "↻ Reiniciar sudoku",
@@ -636,7 +637,7 @@
     "↻ Recommencer le sudoku",
     "↻ إعادة بدء السودوكو",
     "↻ Ricomincia il sudoku"
-  ],
+  , "↻ Почати судоку спочатку"],
   "Małe liczby. Dużo możliwości.": [
     "Small digits. Many possibilities.",
     "Pequeñas cifras. Muchas posibilidades.",
@@ -646,7 +647,7 @@
     "Petits chiffres. Grandes possibilités.",
     "أرقام صغيرة. احتمالات كثيرة.",
     "Piccole cifre. Tante possibilità."
-  ],
+  , "Малі числа. Безліч можливостей."],
   "1–9 · wpisz / N · tryb notatek / ← ↑ ↓ → · nawigacja": [
     "1–9 · enter / N · notes mode / ← ↑ ↓ → · navigate",
     "1–9 · introducir / N · candidatos / ← ↑ ↓ → · navegar",
@@ -656,7 +657,7 @@
     "1–9 · saisir / N · notes / ← ↑ ↓ → · naviguer",
     "1–9 · إدخال / N · الملاحظات / ← ↑ ↓ → · تنقل",
     "1–9 · inserisci / N · note / ← ↑ ↓ → · spostati"
-  ],
+  , "1–9 · введення / N · нотатки / ← ↑ ↓ → · навігація"],
   "Wersja 1.11.0": [
     "Version 1.11.0",
     "Versión 1.11.0",
@@ -666,7 +667,7 @@
     "Version 1.11.0",
     "الإصدار 1.11.0",
     "Versione 1.11.0"
-  ],
+  , "Версія 1.11.0"],
   "Zamknij": [
     "Close",
     "Cerrar",
@@ -676,7 +677,7 @@
     "Fermer",
     "إغلاق",
     "Chiudi"
-  ],
+  , "Закрити"],
   "IMPORT": [
     "IMPORT",
     "IMPORTAR",
@@ -686,7 +687,7 @@
     "IMPORT",
     "استيراد",
     "IMPORTAZIONE"
-  ],
+  , "ІМПОРТ"],
   "Wczytaj sudoku z tekstu": [
     "Import Sudoku from text",
     "Cargar sudoku desde texto",
@@ -696,7 +697,7 @@
     "Importer un sudoku depuis du texte",
     "استيراد سودوكو من نص",
     "Carica sudoku da testo"
-  ],
+  , "Завантажити судоку з тексту"],
   "Wklej 9 wierszy po 9 znaków lub jeden ciąg 81 znaków. Puste pola oznacz kropką lub zerem. Spacje i separatory | są pomijane.": [
     "Paste 9 rows of 9 characters or a single string of 81 characters. Use a dot or zero for empty cells. Spaces and | separators are ignored.",
     "Pega 9 filas de 9 caracteres o una cadena de 81. Usa puntos o ceros para las casillas vacías. Se ignoran espacios y separadores |.",
@@ -706,7 +707,7 @@
     "Collez 9 lignes de 9 caractères ou une suite de 81 caractères. Utilisez un point ou zéro pour les cases vides. Espaces et séparateurs | sont ignorés.",
     "ألصق 9 صفوف من 9 رموز أو سلسلة من 81 رمزاً. استخدم النقطة أو الصفر للخانات الفارغة. تُتجاهل المسافات والفواصل |.",
     "Incolla 9 righe di 9 caratteri o una sequenza di 81. Usa punto o zero per le celle vuote. Spazi e separatori | vengono ignorati."
-  ],
+  , "Встав 9 рядків по 9 символів або один рядок із 81 символу. Порожні клітинки познач крапкою або нулем. Пробіли й роздільники | ігноруються."],
   "Tekst sudoku": [
     "Sudoku text",
     "Texto del sudoku",
@@ -716,7 +717,7 @@
     "Texte du sudoku",
     "نص السودوكو",
     "Testo del sudoku"
-  ],
+  , "Текст судоку"],
   "Wybierz plik": [
     "Choose file",
     "Elegir archivo",
@@ -726,7 +727,7 @@
     "Choisir un fichier",
     "اختيار ملف",
     "Scegli file"
-  ],
+  , "Вибрати файл"],
   "Wczytaj planszę": [
     "Load board",
     "Cargar tablero",
@@ -736,7 +737,7 @@
     "Charger la grille",
     "تحميل الشبكة",
     "Carica griglia"
-  ],
+  , "Завантажити головоломку"],
   "Zamknij aparat": [
     "Close camera",
     "Cerrar cámara",
@@ -746,7 +747,7 @@
     "Fermer la caméra",
     "إغلاق الكاميرا",
     "Chiudi fotocamera"
-  ],
+  , "Закрити камеру"],
   "APARAT": [
     "CAMERA",
     "CÁMARA",
@@ -756,7 +757,7 @@
     "CAMÉRA",
     "الكاميرا",
     "FOTOCAMERA"
-  ],
+  , "КАМЕРА"],
   "Zrób zdjęcie sudoku": [
     "Take a Sudoku photo",
     "Fotografiar sudoku",
@@ -766,7 +767,7 @@
     "Photographier le sudoku",
     "تصوير السودوكو",
     "Fotografa il sudoku"
-  ],
+  , "Зробити фото судоку"],
   "Ustaw planszę prosto, zadbaj o dobre światło i obejmij całą siatkę. Zdjęcie posłuży do rozpoznania cyfr.": [
     "Keep the board straight, use good lighting and include the whole grid. The photo will be used to recognize digits.",
     "Mantén el tablero recto, usa buena iluminación e incluye toda la cuadrícula. La foto servirá para reconocer las cifras.",
@@ -776,7 +777,7 @@
     "Gardez la grille droite, bien éclairée et entièrement visible. La photo servira à reconnaître les chiffres.",
     "اجعل الشبكة مستقيمة ومضاءة جيداً وظاهرة بالكامل. ستُستخدم الصورة للتعرف على الأرقام.",
     "Tieni la griglia dritta, ben illuminata e interamente visibile. La foto servirà a riconoscere le cifre."
-  ],
+  , "Розмісти головоломку рівно, забезпеч добре освітлення та охопи всю сітку. Фото буде використано для розпізнавання цифр."],
   "Aparat": [
     "Camera",
     "Cámara",
@@ -786,7 +787,7 @@
     "Caméra",
     "الكاميرا",
     "Fotocamera"
-  ],
+  , "Камера"],
   "Wybierz aparat": [
     "Choose camera",
     "Elegir cámara",
@@ -796,7 +797,7 @@
     "Choisir la caméra",
     "اختيار الكاميرا",
     "Scegli fotocamera"
-  ],
+  , "Вибрати камеру"],
   "Podgląd aparatu": [
     "Camera preview",
     "Vista previa de cámara",
@@ -806,7 +807,7 @@
     "Aperçu de la caméra",
     "معاينة الكاميرا",
     "Anteprima fotocamera"
-  ],
+  , "Перегляд камери"],
   "Uruchamianie aparatu…": [
     "Starting camera…",
     "Iniciando cámara…",
@@ -816,7 +817,7 @@
     "Démarrage de la caméra…",
     "جارٍ تشغيل الكاميرا…",
     "Avvio della fotocamera…"
-  ],
+  , "Запуск камери…"],
   "Użyj aparatu telefonu": [
     "Use phone camera",
     "Usar cámara del teléfono",
@@ -826,7 +827,7 @@
     "Utiliser la caméra du téléphone",
     "استخدام كاميرا الهاتف",
     "Usa la fotocamera del telefono"
-  ],
+  , "Використати камеру телефона"],
   "Jeśli podgląd jest niedostępny, użyj aparatu telefonu lub wczytaj gotowy obrazek. Zdjęcie jest przetwarzane na Twoim urządzeniu.": [
     "If preview is unavailable, use the phone camera or import an image. The photo is processed on your device.",
     "Si no hay vista previa, usa la cámara del teléfono o carga una imagen. La foto se procesa en tu dispositivo.",
@@ -836,7 +837,7 @@
     "Sans aperçu, utilisez la caméra du téléphone ou importez une image. La photo est traitée sur votre appareil.",
     "إذا تعذرت المعاينة، استخدم كاميرا الهاتف أو استورد صورة. تُعالج الصورة على جهازك.",
     "Se l’anteprima non è disponibile, usa la fotocamera del telefono o importa un’immagine. La foto viene elaborata sul dispositivo."
-  ],
+  , "Якщо перегляд недоступний, скористайся камерою телефона або завантаж зображення. Фото обробляється на твоєму пристрої."],
   "IMPORT Z OBRAZKA": [
     "IMAGE IMPORT",
     "IMPORTAR IMAGEN",
@@ -846,7 +847,7 @@
     "IMPORT D’IMAGE",
     "استيراد صورة",
     "IMPORTA IMMAGINE"
-  ],
+  , "ІМПОРТ ІЗ ЗОБРАЖЕННЯ"],
   "Dopasuj ramkę do planszy": [
     "Fit the frame to the board",
     "Ajustar el marco al tablero",
@@ -856,7 +857,7 @@
     "Ajuster le cadre à la grille",
     "مطابقة الإطار مع الشبكة",
     "Adatta il riquadro alla griglia"
-  ],
+  , "Сумісти рамку із сіткою"],
   "↻ Zrób zdjęcie ponownie": [
     "↻ Retake photo",
     "↻ Repetir foto",
@@ -866,7 +867,7 @@
     "↻ Reprendre la photo",
     "↻ إعادة التقاط الصورة",
     "↻ Scatta di nuovo"
-  ],
+  , "↻ Зробити фото ще раз"],
   "Obraz i kadrowanie": [
     "Image and cropping",
     "Imagen y recorte",
@@ -876,7 +877,7 @@
     "Image et recadrage",
     "الصورة والقص",
     "Immagine e ritaglio"
-  ],
+  , "Зображення та кадрування"],
   "Wybierz wyraźne zdjęcie zrobione na wprost, tak aby plansza miała kształt kwadratu. Najłatwiej odczytać duże cyfry bez drobnych notatek kandydatów. Zielone linie powinny pokrywać się z liniami siatki. Jeśli zdjęcie jest niewyraźne lub przekrzywione, wybierz „Zrób zdjęcie ponownie”.": [
     "Choose a sharp, front-facing photo with a square grid and clear digits, without small candidate notes. Align the green lines with the grid. If blurred or tilted too far, retake the photo.",
     "Elige una foto nítida y de frente, con cuadrícula cuadrada y cifras claras, sin notas pequeñas. Alinea las líneas verdes con la cuadrícula. Si está borrosa o muy inclinada, repite la foto.",
@@ -886,7 +887,7 @@
     "Choisissez une photo nette de face, avec une grille carrée et des chiffres lisibles, sans petites notes. Alignez les lignes vertes sur la grille. Reprenez une photo trop floue ou inclinée.",
     "اختر صورة واضحة من الأمام لشبكة مربعة بأرقام واضحة دون ملاحظات صغيرة. طابق الخطوط الخضراء مع الشبكة. أعد التصوير إذا كانت ضبابية أو شديدة الميل.",
     "Scegli una foto nitida e frontale, con griglia quadrata e cifre chiare, senza piccole note. Allinea le linee verdi alla griglia. Ripeti la foto se sfocata o troppo inclinata."
-  ],
+  , "Вибери чітке фото, зроблене прямо, щоб сітка мала форму квадрата. Найлегше розпізнаються великі цифри без дрібних нотаток кандидатів. Зелені лінії мають збігатися з лініями сітки. Якщо фото нечітке або перекошене, вибери «Зробити фото ще раз»."],
   "Przeciągnij narożnik ramki, aby zmienić jej rozmiar, lub jej środek, aby ją przesunąć. Lekkie pochylenie popraw suwakiem „Wyprostuj zdjęcie”.": [
     "Drag a corner to resize the frame or its center to move it. Correct a slight tilt with “Straighten photo”.",
     "Arrastra una esquina para cambiar el tamaño o el centro para mover el marco. Corrige la inclinación con «Enderezar foto».",
@@ -896,7 +897,7 @@
     "Déplacez un coin pour redimensionner le cadre, ou son centre pour le déplacer. Corrigez l’inclinaison avec « Redresser la photo ».",
     "اسحب الزاوية لتغيير الحجم أو الوسط لتحريك الإطار. صحح الميل البسيط عبر «تسوية الصورة».",
     "Trascina un angolo per ridimensionare o il centro per spostare. Correggi l’inclinazione con «Raddrizza foto»."
-  ],
+  , "Перетягни кут рамки, щоб змінити її розмір, або середину, щоб пересунути. Невеликий нахил виправ повзунком «Вирівняти фото»."],
   "↶ Obróć w lewo": [
     "↶ Rotate left",
     "↶ Girar a la izquierda",
@@ -906,7 +907,7 @@
     "↶ Tourner à gauche",
     "↶ تدوير لليسار",
     "↶ Ruota a sinistra"
-  ],
+  , "↶ Повернути ліворуч"],
   "↷ Obróć w prawo": [
     "↷ Rotate right",
     "↷ Girar a la derecha",
@@ -916,7 +917,7 @@
     "↷ Tourner à droite",
     "↷ تدوير لليمين",
     "↷ Ruota a destra"
-  ],
+  , "↷ Повернути праворуч"],
   "Wyprostuj zdjęcie": [
     "Straighten photo",
     "Enderezar foto",
@@ -926,7 +927,7 @@
     "Redresser la photo",
     "تسوية الصورة",
     "Raddrizza foto"
-  ],
+  , "Вирівняти фото"],
   "Wyzeruj obrót": [
     "Reset rotation",
     "Restablecer giro",
@@ -936,7 +937,7 @@
     "Réinitialiser la rotation",
     "إعادة ضبط الدوران",
     "Azzera rotazione"
-  ],
+  , "Скинути поворот"],
   "Rozmiar": [
     "Size",
     "Tamaño",
@@ -946,7 +947,7 @@
     "Taille",
     "الحجم",
     "Dimensione"
-  ],
+  , "Розмір"],
   "Poziomo": [
     "Horizontal",
     "Horizontal",
@@ -956,7 +957,7 @@
     "Horizontal",
     "أفقياً",
     "Orizzontale"
-  ],
+  , "Горизонтально"],
   "Pionowo": [
     "Vertical",
     "Vertical",
@@ -966,7 +967,7 @@
     "Vertical",
     "عمودياً",
     "Verticale"
-  ],
+  , "Вертикально"],
   "Rozpoznaj cyfry": [
     "Recognize digits",
     "Reconocer cifras",
@@ -976,7 +977,7 @@
     "Reconnaître les chiffres",
     "التعرف على الأرقام",
     "Riconosci cifre"
-  ],
+  , "Розпізнати цифри"],
   "Suwakiem „Rozmiar” dopasuj wielkość zielonej ramki, a suwakami „Poziomo” i „Pionowo” ustaw ją na planszy. Ramka powinna obejmować dokładnie całą siatkę 9 × 9 pól, bez marginesów. Następnie wybierz „Rozpoznaj cyfry” i sprawdź wynik przed wczytaniem planszy.": [
     "Use “Size” to resize the green frame and “Horizontal” / “Vertical” to position it. Include exactly the whole 9 × 9 grid without margins. Then choose “Recognize digits” and check the result before loading.",
     "Usa «Tamaño» para ajustar el marco y «Horizontal» / «Vertical» para colocarlo. Incluye toda la cuadrícula 9 × 9 sin márgenes. Pulsa «Reconocer cifras» y revisa el resultado antes de cargarlo.",
@@ -986,7 +987,7 @@
     "Réglez le cadre avec « Taille », « Horizontal » et « Vertical ». Incluez toute la grille 9 × 9 sans marges. Lancez la reconnaissance puis vérifiez avant de charger.",
     "اضبط الإطار بالحجم والموضع الأفقي والعمودي ليشمل شبكة 9 × 9 كاملة دون هوامش. تعرّف على الأرقام ثم راجع النتيجة قبل التحميل.",
     "Regola il riquadro con «Dimensione», «Orizzontale» e «Verticale». Includi tutta la griglia 9 × 9 senza margini. Riconosci le cifre e controllale prima di caricare."
-  ],
+  , "Повзунком «Розмір» підлаштуй зелену рамку, а повзунками «Горизонтально» й «Вертикально» розмісти її на сітці. Рамка має точно охоплювати всю сітку 9 × 9 без полів. Потім вибери «Розпізнати цифри» та перевір результат перед завантаженням."],
   "Sprawdź rozpoznane liczby": [
     "Check recognized digits",
     "Revisar cifras reconocidas",
@@ -996,7 +997,7 @@
     "Vérifier les chiffres reconnus",
     "مراجعة الأرقام المتعرّف عليها",
     "Controlla le cifre riconosciute"
-  ],
+  , "Перевір розпізнані числа"],
   "Popraw cyfry poniżej, zanim zastąpisz obecną planszę. Puste lub niepewne pola sprawdź z obrazkiem.": [
     "Correct the digits below before replacing your board. Compare empty or uncertain cells with the image.",
     "Corrige las cifras antes de sustituir tu tablero. Compara las casillas vacías o dudosas con la imagen.",
@@ -1006,7 +1007,7 @@
     "Corrigez les chiffres avant de remplacer la grille. Comparez les cases vides ou incertaines à l’image.",
     "صحح الأرقام قبل استبدال الشبكة، وقارن الخانات الفارغة أو غير المؤكدة بالصورة.",
     "Correggi le cifre prima di sostituire la griglia. Confronta le celle vuote o incerte con l’immagine."
-  ],
+  , "Виправ цифри нижче перед заміною поточної головоломки. Порожні або сумнівні клітинки звір із зображенням."],
   "Miniatura przyciętej planszy do porównania z rozpoznanymi cyframi": [
     "Cropped board thumbnail for comparison with recognized digits",
     "Miniatura del tablero recortado para comparar las cifras",
@@ -1016,7 +1017,7 @@
     "Miniature recadrée pour comparer les chiffres",
     "صورة مصغرة للشبكة المقصوصة لمقارنة الأرقام",
     "Miniatura ritagliata per confrontare le cifre"
-  ],
+  , "Мініатюра обрізаної сітки для порівняння з розпізнаними цифрами"],
   "Oryginał — porównaj z liczbami poniżej": [
     "Original — compare with the digits below",
     "Original: compara con las cifras de abajo",
@@ -1026,7 +1027,7 @@
     "Original — comparez aux chiffres ci-dessous",
     "الأصل — قارن بالأرقام أدناه",
     "Originale — confronta con le cifre sotto"
-  ],
+  , "Оригінал — порівняй із числами нижче"],
   "Popraw kadr lub rozpoznaj ponownie": [
     "Adjust crop or recognize again",
     "Ajustar recorte o reconocer de nuevo",
@@ -1036,7 +1037,7 @@
     "Recadrer ou reconnaître à nouveau",
     "تعديل القص أو إعادة التعرف",
     "Modifica ritaglio o riconosci di nuovo"
-  ],
+  , "Виправити кадр або розпізнати повторно"],
   "Użyj tej planszy": [
     "Use this board",
     "Usar este tablero",
@@ -1046,7 +1047,7 @@
     "Utiliser cette grille",
     "استخدام هذه الشبكة",
     "Usa questa griglia"
-  ],
+  , "Використати цю головоломку"],
   "Anuluj": [
     "Cancel",
     "Cancelar",
@@ -1056,7 +1057,7 @@
     "Annuler",
     "إلغاء",
     "Annulla"
-  ],
+  , "Скасувати"],
   "Kontynuuj": [
     "Continue",
     "Continuar",
@@ -1066,7 +1067,7 @@
     "Continuer",
     "متابعة",
     "Continua"
-  ],
+  , "Продовжити"],
   "Nie udało się zapisać na urządzeniu. Możesz pobrać planszę do pliku.": [
     "Could not save on this device. You can download the board as a file.",
     "No se pudo guardar en este dispositivo. Puedes descargar el tablero como archivo.",
@@ -1076,7 +1077,7 @@
     "Enregistrement impossible sur cet appareil. Vous pouvez télécharger la grille.",
     "تعذر الحفظ على هذا الجهاز. يمكنك تنزيل الشبكة كملف.",
     "Impossibile salvare sul dispositivo. Puoi scaricare la griglia come file."
-  ],
+  , "Не вдалося зберегти на пристрої. Можна зберегти головоломку у файл."],
   ", sprawdź konflikty": [
     ", check conflicts",
     ", revisa los conflictos",
@@ -1086,7 +1087,7 @@
     ", vérifier les conflits",
     "، راجع التعارضات",
     ", controlla i conflitti"
-  ],
+  , ", перевір конфлікти"],
   "Komplet: 9 z 9 pól": [
     "Complete: 9 of 9 cells",
     "Completo: 9 de 9 casillas",
@@ -1096,7 +1097,7 @@
     "Complet : 9 cases sur 9",
     "مكتمل: 9 من 9 خانات",
     "Completo: 9 celle su 9"
-  ],
+  , "Повний набір: 9 із 9 клітинок"],
   "Wpisano już co najmniej 9 razy — sprawdź konflikty": [
     "Already entered at least 9 times — check conflicts",
     "Ya aparece al menos 9 veces: revisa los conflictos",
@@ -1106,7 +1107,7 @@
     "Déjà saisi au moins 9 fois — vérifiez les conflits",
     "أُدخل 9 مرات على الأقل — راجع التعارضات",
     "Già inserito almeno 9 volte — controlla i conflitti"
-  ],
+  , "Уже введено щонайменше 9 разів — перевір конфлікти"],
   "Sudoku ukończone ✓": [
     "Sudoku complete ✓",
     "Sudoku completo ✓",
@@ -1116,7 +1117,7 @@
     "Sudoku terminé ✓",
     "اكتمل السودوكو ✓",
     "Sudoku completato ✓"
-  ],
+  , "Судоку завершено ✓"],
   "Kliknij cyfrę, aby dodać lub usunąć kandydata.": [
     "Click a digit to add or remove a candidate.",
     "Pulsa una cifra para añadir o quitar un candidato.",
@@ -1126,7 +1127,7 @@
     "Cliquez sur un chiffre pour ajouter ou retirer un candidat.",
     "اضغط رقماً لإضافة مرشح أو حذفه.",
     "Tocca una cifra per aggiungere o togliere un candidato."
-  ],
+  , "Натисни цифру, щоб додати або прибрати кандидата."],
   "Aby dodać kandydatów, najpierw usuń liczbę z tego pola.": [
     "Remove the digit from this cell before adding candidates.",
     "Borra la cifra de esta casilla antes de añadir candidatos.",
@@ -1136,7 +1137,7 @@
     "Effacez le chiffre de cette case avant d’ajouter des candidats.",
     "امسح رقم الخانة قبل إضافة المرشحين.",
     "Cancella la cifra della cella prima di aggiungere candidati."
-  ],
+  , "Щоб додати кандидатів, спочатку прибери число з цієї клітинки."],
   "Zmieniono kandydatów w wybranym polu.": [
     "Candidates changed in the selected cell.",
     "Candidatos modificados en la casilla seleccionada.",
@@ -1146,7 +1147,7 @@
     "Candidats modifiés dans la case sélectionnée.",
     "تم تعديل مرشحي الخانة المحددة.",
     "Candidati modificati nella cella selezionata."
-  ],
+  , "Кандидатів у вибраній клітинці змінено."],
   "Wpisano liczbę i zaktualizowano kandydatów w wierszu, kolumnie i kwadracie 3 × 3.": [
     "Digit entered and candidates updated in its row, column and 3 × 3 box.",
     "Cifra introducida y candidatos actualizados en su fila, columna y bloque 3 × 3.",
@@ -1156,7 +1157,7 @@
     "Chiffre saisi ; candidats mis à jour dans sa ligne, sa colonne et son bloc 3 × 3.",
     "أُدخل الرقم وحُدّث المرشحون في صفه وعموده ومربعه 3 × 3.",
     "Cifra inserita e candidati aggiornati nella riga, colonna e riquadro 3 × 3."
-  ],
+  , "Число введено, кандидатів у рядку, стовпці та блоці 3 × 3 оновлено."],
   "Cofnięto ostatnią zmianę.": [
     "Last change undone.",
     "Último cambio deshecho.",
@@ -1166,7 +1167,7 @@
     "Dernière modification annulée.",
     "تم التراجع عن آخر تغيير.",
     "Ultima modifica annullata."
-  ],
+  , "Останню зміну скасовано."],
   "Przywrócono ostatnią cofniętą zmianę.": [
     "Last undone change restored.",
     "Último cambio deshecho restaurado.",
@@ -1176,7 +1177,7 @@
     "Dernière modification annulée rétablie.",
     "تمت إعادة آخر تغيير أُلغي.",
     "Ultima modifica annullata ripristinata."
-  ],
+  , "Останню скасовану зміну повторено."],
   "Nie ma pustych pól z dokładnie jednym kandydatem w notatkach.": [
     "No empty cells have exactly one candidate in the notes.",
     "Ninguna casilla vacía tiene exactamente un candidato en las notas.",
@@ -1186,7 +1187,7 @@
     "Aucune case vide n’a exactement un candidat noté.",
     "لا توجد خانة فارغة بمرشح واحد في الملاحظات.",
     "Nessuna cella vuota ha esattamente un candidato nelle note."
-  ],
+  , "Немає порожніх клітинок із рівно одним кандидатом у нотатках."],
   "Obliczono kandydatów. Popraw zaznaczone na czerwono konflikty.": [
     "Candidates calculated. Correct conflicts marked in red.",
     "Candidatos calculados. Corrige los conflictos en rojo.",
@@ -1196,7 +1197,7 @@
     "Candidats calculés. Corrigez les conflits en rouge.",
     "حُسب المرشحون. صحح التعارضات باللون الأحمر.",
     "Candidati calcolati. Correggi i conflitti in rosso."
-  ],
+  , "Кандидатів обчислено. Виправ конфлікти, позначені червоним."],
   "Obliczono kandydatów. Co najmniej jedno puste pole nie ma możliwej cyfry — sprawdź wpisane liczby.": [
     "Candidates calculated. At least one empty cell has no possible digit — check your entries.",
     "Candidatos calculados. Alguna casilla vacía no tiene cifras posibles: revisa las entradas.",
@@ -1206,7 +1207,7 @@
     "Candidats calculés. Au moins une case n’a aucune possibilité : vérifiez les chiffres saisis.",
     "حُسب المرشحون. توجد خانة بلا رقم ممكن؛ راجع الأرقام المدخلة.",
     "Candidati calcolati. Almeno una cella non ha possibilità: controlla le cifre inserite."
-  ],
+  , "Кандидатів обчислено. Щонайменше одна порожня клітинка не має можливої цифри — перевір введені числа."],
   "Obliczono kandydatów. Możesz teraz edytować ich w trybie „Kandydaci”.": [
     "Candidates calculated. You can edit them in “Candidates” mode.",
     "Candidatos calculados. Puedes editarlos en el modo «Candidatos».",
@@ -1216,7 +1217,7 @@
     "Candidats calculés. Modifiez-les en mode « Candidats ».",
     "حُسب المرشحون. يمكنك تعديلهم في وضع «مرشحون».",
     "Candidati calcolati. Puoi modificarli nella modalità «Candidati»."
-  ],
+  , "Кандидатів обчислено. Тепер їх можна редагувати в режимі «Кандидати»."],
   "Zastąpić obecną planszę?": [
     "Replace the current board?",
     "¿Sustituir el tablero actual?",
@@ -1226,7 +1227,7 @@
     "Remplacer la grille actuelle ?",
     "استبدال الشبكة الحالية؟",
     "Sostituire la griglia attuale?"
-  ],
+  , "Замінити поточну головоломку?"],
   "Bieżąca plansza i notatki zostaną zastąpione. Zmianę możesz cofnąć przyciskiem „Cofnij”.": [
     "The current board and notes will be replaced. You can undo this change.",
     "Se sustituirán el tablero y las notas actuales. Puedes deshacer este cambio.",
@@ -1236,7 +1237,7 @@
     "La grille et les notes seront remplacées. Vous pourrez annuler ce changement.",
     "ستُستبدل الشبكة والملاحظات. يمكنك التراجع عن التغيير.",
     "La griglia e le note saranno sostituite. Potrai annullare la modifica."
-  ],
+  , "Поточну головоломку й нотатки буде замінено. Зміну можна скасувати кнопкою «Скасувати»."],
   "Wyczyszczono wszystkich kandydatów. Liczby pozostały na planszy.": [
     "All candidates cleared. Entered digits remain.",
     "Todos los candidatos borrados. Las cifras permanecen.",
@@ -1246,7 +1247,7 @@
     "Tous les candidats sont effacés. Les chiffres saisis restent.",
     "مُسح جميع المرشحين وبقيت الأرقام المدخلة.",
     "Tutti i candidati cancellati. Le cifre inserite restano."
-  ],
+  , "Усіх кандидатів очищено. Числа залишилися в сітці."],
   "Rozpocząć sudoku od początku?": [
     "Restart this Sudoku?",
     "¿Reiniciar este sudoku?",
@@ -1256,7 +1257,7 @@
     "Recommencer ce sudoku ?",
     "بدء السودوكو من جديد؟",
     "Ricominciare questo sudoku?"
-  ],
+  , "Почати судоку спочатку?"],
   "Przywrócisz liczby z ostatniego importu lub przykładu i usuniesz kandydatów. Na planszy rozpoczętej ręcznie usunięte zostaną wszystkie wpisy. Możesz cofnąć restart.": [
     "Restores the digits from the last import and clears candidates. For a manually started board, clears all entries. You can undo the restart.",
     "Restaura las cifras de la última importación y borra candidatos. En un tablero manual, borra todo. Puedes deshacer el reinicio.",
@@ -1266,7 +1267,7 @@
     "Restaure les chiffres du dernier import et efface les candidats. Une grille commencée à la main sera vidée. Vous pourrez annuler.",
     "يعيد أرقام آخر استيراد ويمسح المرشحين. تُمسح كل مدخلات الشبكة اليدوية. يمكنك التراجع.",
     "Ripristina le cifre dell’ultima importazione e cancella i candidati. Una griglia iniziata a mano verrà svuotata. Puoi annullare."
-  ],
+  , "Буде відновлено числа з останнього імпорту або прикладу й видалено кандидатів. Якщо сітку почато вручну, усі записи буде очищено. Перезапуск можна скасувати."],
   "Przywrócono początkową planszę. Restart możesz cofnąć.": [
     "Initial board restored. You can undo the restart.",
     "Tablero inicial restaurado. Puedes deshacer el reinicio.",
@@ -1276,7 +1277,7 @@
     "Grille initiale restaurée. Vous pouvez annuler le redémarrage.",
     "استُعيدت الشبكة الأصلية. يمكنك التراجع عن إعادة البدء.",
     "Griglia iniziale ripristinata. Puoi annullare il riavvio."
-  ],
+  , "Початкову сітку відновлено. Перезапуск можна скасувати."],
   "Gotowe. Nowa plansza czeka na pierwszą liczbę.": [
     "Ready. A new board awaits your first digit.",
     "Listo. El nuevo tablero espera tu primera cifra.",
@@ -1286,7 +1287,7 @@
     "Prêt. La nouvelle grille attend votre premier chiffre.",
     "جاهز. الشبكة الجديدة تنتظر رقمك الأول.",
     "Pronto. La nuova griglia aspetta la tua prima cifra."
-  ],
+  , "Готово. Нова сітка чекає на перше число."],
   "Wczytano planszę z tekstu.": [
     "Board imported from text.",
     "Tablero cargado desde texto.",
@@ -1296,7 +1297,7 @@
     "Grille importée depuis le texte.",
     "استُوردت الشبكة من النص.",
     "Griglia caricata dal testo."
-  ],
+  , "Головоломку завантажено з тексту."],
   "Plik tekstowy jest zbyt duży (maks. 1 MB).": [
     "Text file is too large (maximum 1 MB).",
     "El archivo de texto es demasiado grande (máximo 1 MB).",
@@ -1306,7 +1307,7 @@
     "Fichier texte trop volumineux (1 Mo maximum).",
     "ملف النص كبير جداً (الحد 1 MB).",
     "File di testo troppo grande (massimo 1 MB)."
-  ],
+  , "Текстовий файл завеликий (макс. 1 МБ)."],
   "Wczytano planszę z pliku.": [
     "Board imported from file.",
     "Tablero cargado desde archivo.",
@@ -1316,7 +1317,7 @@
     "Grille importée depuis le fichier.",
     "استُوردت الشبكة من الملف.",
     "Griglia caricata dal file."
-  ],
+  , "Головоломку завантажено з файлу."],
   "Pobrano planszę i kandydatów. Możesz przywrócić je opcją „Z tekstu” → „Wybierz plik”.": [
     "Board and candidates downloaded. Restore them via “From text” → “Choose file”.",
     "Tablero y candidatos descargados. Restáuralos desde «Desde texto» → «Elegir archivo».",
@@ -1326,7 +1327,7 @@
     "Grille et candidats téléchargés. Restaurez via « Depuis du texte » → « Choisir un fichier ».",
     "نُزّلت الشبكة والمرشحون. استعدهم عبر «من نص» ← «اختيار ملف».",
     "Griglia e candidati scaricati. Ripristina con «Da testo» → «Scegli file»."
-  ],
+  , "Головоломку й кандидатів збережено. Їх можна відновити через «Із тексту» → «Вибрати файл»."],
   "Nie udało się obrócić zdjęcia. Spróbuj ponownie.": [
     "Could not rotate the photo. Try again.",
     "No se pudo girar la foto. Inténtalo de nuevo.",
@@ -1336,7 +1337,7 @@
     "Rotation impossible. Réessayez.",
     "تعذر تدوير الصورة. حاول مجدداً.",
     "Impossibile ruotare la foto. Riprova."
-  ],
+  , "Не вдалося повернути фото. Спробуй ще раз."],
   "Sprawdź rozpoznaną planszę": [
     "Check the recognized board",
     "Revisar tablero reconocido",
@@ -1346,7 +1347,7 @@
     "Vérifier la grille reconnue",
     "مراجعة الشبكة المتعرّف عليها",
     "Controlla la griglia riconosciuta"
-  ],
+  , "Перевір розпізнану головоломку"],
   "Przeciągnij narożnik ramki, aby zmienić jej rozmiar, lub jej środek, aby ją przesunąć. Suwak „Wyprostuj zdjęcie” pozwala skorygować lekkie pochylenie; zielone linie powinny pokrywać się z siatką. Ramka powinna obejmować dokładnie całą siatkę 9 × 9 pól, bez marginesów. Następnie wybierz „Rozpoznaj cyfry” i sprawdź wynik przed wczytaniem planszy.": [
     "Drag a corner to resize the frame or its center to move it. Use “Straighten photo” for a slight tilt. Align the green lines with the entire 9 × 9 grid without margins. Then recognize the digits and check the result before loading.",
     "Arrastra una esquina para ajustar el tamaño o el centro para mover el marco. Usa «Enderezar foto» para corregir la inclinación. Alinea las líneas verdes con toda la cuadrícula 9 × 9 sin márgenes. Reconoce las cifras y revisa antes de cargar.",
@@ -1356,7 +1357,7 @@
     "Déplacez un coin pour redimensionner, le centre pour déplacer. Redressez la photo et alignez les lignes vertes sur toute la grille 9 × 9 sans marges. Reconnaissez les chiffres puis vérifiez avant de charger.",
     "اسحب زاوية لتغيير الحجم أو الوسط لتحريك الإطار. صحح الميل وطابق الخطوط الخضراء مع شبكة 9 × 9 كاملة دون هوامش. تعرّف على الأرقام وراجعها قبل التحميل.",
     "Trascina un angolo per ridimensionare o il centro per spostare. Raddrizza la foto e allinea le linee verdi all’intera griglia 9 × 9 senza margini. Riconosci e controlla prima di caricare."
-  ],
+  , "Перетягни кут рамки, щоб змінити розмір, або середину, щоб пересунути. Повзунок «Вирівняти фото» виправляє невеликий нахил; зелені лінії мають збігатися із сіткою. Рамка має точно охоплювати всю сітку 9 × 9 без полів. Потім вибери «Розпізнати цифри» й перевір результат перед завантаженням."],
   "Obraz jest zbyt duży. Wybierz plik do 20 MB.": [
     "Image is too large. Choose a file up to 20 MB.",
     "La imagen es demasiado grande. Elige un archivo de hasta 20 MB.",
@@ -1366,7 +1367,7 @@
     "Image trop volumineuse. Choisissez un fichier de 20 Mo maximum.",
     "الصورة كبيرة جداً. اختر ملفاً حتى 20 MB.",
     "Immagine troppo grande. Scegli un file fino a 20 MB."
-  ],
+  , "Зображення завелике. Вибери файл до 20 МБ."],
   "Nie udało się otworzyć obrazu. ": [
     "Could not open the image. ",
     "No se pudo abrir la imagen. ",
@@ -1376,7 +1377,7 @@
     "Impossible d’ouvrir l’image. ",
     "تعذر فتح الصورة. ",
     "Impossibile aprire l’immagine. "
-  ],
+  , "Не вдалося відкрити зображення. "],
   "Nie udało się przygotować rozpoznawania cyfr. Sprawdź połączenie z internetem i spróbuj ponownie.": [
     "Could not prepare digit recognition. Check your internet connection and try again.",
     "No se pudo preparar el reconocimiento. Revisa tu conexión a internet e inténtalo de nuevo.",
@@ -1386,7 +1387,7 @@
     "Préparation impossible. Vérifiez votre connexion et réessayez.",
     "تعذر إعداد التعرف على الأرقام. تحقق من الإنترنت وأعد المحاولة.",
     "Impossibile preparare il riconoscimento. Controlla la connessione e riprova."
-  ],
+  , "Не вдалося підготувати розпізнавання цифр. Перевір інтернет і спробуй ще раз."],
   "Przygotowuję rozpoznawanie cyfr… Pierwsze uruchomienie może potrwać chwilę.": [
     "Preparing digit recognition… The first run may take a moment.",
     "Preparando el reconocimiento… La primera vez puede tardar un poco.",
@@ -1396,7 +1397,7 @@
     "Préparation de la reconnaissance… Le premier lancement peut prendre un moment.",
     "جارٍ إعداد التعرف… قد يستغرق التشغيل الأول بعض الوقت.",
     "Preparazione del riconoscimento… Il primo avvio può richiedere qualche istante."
-  ],
+  , "Підготовка розпізнавання цифр… Перший запуск може тривати деякий час."],
   "Niepewny odczyt — sprawdź z obrazkiem": [
     "Uncertain result — compare with the image",
     "Lectura dudosa: compara con la imagen",
@@ -1406,7 +1407,7 @@
     "Lecture incertaine — comparez à l’image",
     "قراءة غير مؤكدة — قارن بالصورة",
     "Lettura incerta — confronta con l’immagine"
-  ],
+  , "Непевне розпізнавання — звір із зображенням"],
   "Rozpoznawanie nie powiodło się. ": [
     "Recognition failed. ",
     "El reconocimiento falló. ",
@@ -1416,7 +1417,7 @@
     "Échec de la reconnaissance. ",
     "فشل التعرف. ",
     "Riconoscimento non riuscito. "
-  ],
+  , "Розпізнавання не вдалося. "],
   "Wczytano sprawdzoną planszę z obrazka.": [
     "Checked board imported from image.",
     "Tablero revisado cargado desde imagen.",
@@ -1426,7 +1427,7 @@
     "Grille vérifiée importée depuis l’image.",
     "استُوردت الشبكة المراجعة من الصورة.",
     "Griglia controllata caricata dall’immagine."
-  ],
+  , "Перевірену головоломку завантажено із зображення."],
   "Zezwól przeglądarce na dostęp do aparatu. Mikrofon nie jest potrzebny.": [
     "Allow browser access to the camera. No microphone is needed.",
     "Permite al navegador usar la cámara. No se necesita micrófono.",
@@ -1436,7 +1437,7 @@
     "Autorisez la caméra dans le navigateur. Le microphone n’est pas nécessaire.",
     "اسمح للمتصفح بالوصول إلى الكاميرا. الميكروفون غير مطلوب.",
     "Consenti l’accesso alla fotocamera. Il microfono non serve."
-  ],
+  , "Дозволь браузеру доступ до камери. Мікрофон не потрібен."],
   "Podgląd aparatu jest tutaj niedostępny. Użyj przycisku „Użyj aparatu telefonu” lub wczytaj obrazek.": [
     "Camera preview is unavailable here. Use “Use phone camera” or import an image.",
     "La vista previa no está disponible. Usa «Usar cámara del teléfono» o carga una imagen.",
@@ -1446,7 +1447,7 @@
     "Aperçu indisponible ici. Utilisez la caméra du téléphone ou importez une image.",
     "معاينة الكاميرا غير متاحة هنا. استخدم كاميرا الهاتف أو استورد صورة.",
     "Anteprima non disponibile. Usa la fotocamera del telefono o importa un’immagine."
-  ],
+  , "Перегляд камери тут недоступний. Натисни «Використати камеру телефона» або завантаж зображення."],
   "Umieść całą planszę w podglądzie. Zielona ramka pomaga ją ustawić — nie musisz trafić idealnie. Po zdjęciu możesz przesunąć ramkę palcem lub myszą i obrócić obraz.": [
     "Include the whole board in the preview. The green frame is a guide, not an exact crop. After taking the photo, you can move the frame and rotate the image.",
     "Incluye todo el tablero. El marco verde es una guía; no hace falta encajarlo exactamente. Después puedes mover el marco y girar la imagen.",
@@ -1456,7 +1457,7 @@
     "Incluez toute la grille. Le cadre vert est un guide, sans alignement parfait requis. Après la photo, déplacez le cadre et tournez l’image.",
     "أظهر الشبكة كاملة. الإطار الأخضر دليل ولا يلزم التطابق الدقيق. بعد التصوير يمكنك تحريك الإطار وتدوير الصورة.",
     "Inquadra l’intera griglia. Il riquadro verde è una guida, non serve allinearlo perfettamente. Dopo la foto puoi spostarlo e ruotare l’immagine."
-  ],
+  , "Розмісти всю сітку в кадрі. Зелена рамка допомагає — ідеальна точність не потрібна. Після знімка можна пересунути рамку пальцем або мишею та повернути зображення."],
   "Brak dostępu do aparatu. Zezwól na kamerę w ustawieniach przeglądarki lub użyj aparatu telefonu.": [
     "No camera access. Allow it in browser settings or use the phone camera.",
     "Sin acceso a la cámara. Permítelo en los ajustes o usa la cámara del teléfono.",
@@ -1466,7 +1467,7 @@
     "Accès caméra refusé. Autorisez-le dans les réglages ou utilisez la caméra du téléphone.",
     "لا يوجد إذن للكاميرا. اسمح بها في إعدادات المتصفح أو استخدم كاميرا الهاتف.",
     "Accesso negato. Consenti la fotocamera nelle impostazioni o usa quella del telefono."
-  ],
+  , "Немає доступу до камери. Дозволь його в налаштуваннях браузера або скористайся камерою телефона."],
   "Nie znaleziono aparatu. Możesz wczytać gotowy obrazek.": [
     "No camera found. You can import an image.",
     "No se encontró cámara. Puedes cargar una imagen.",
@@ -1476,7 +1477,7 @@
     "Aucune caméra trouvée. Vous pouvez importer une image.",
     "لم يُعثر على كاميرا. يمكنك استيراد صورة.",
     "Nessuna fotocamera trovata. Puoi importare un’immagine."
-  ],
+  , "Камеру не знайдено. Можна завантажити готове зображення."],
   "Nie udało się uruchomić aparatu. Sprawdź, czy nie korzysta z niego inna aplikacja, lub użyj aparatu telefonu.": [
     "Could not start the camera. Check whether another app is using it, or use the phone camera.",
     "No se pudo iniciar la cámara. Comprueba si otra aplicación la está usando o usa la cámara del teléfono.",
@@ -1486,7 +1487,7 @@
     "Impossible de démarrer la caméra. Vérifiez si une autre application l’utilise, ou utilisez celle du téléphone.",
     "تعذر تشغيل الكاميرا. تحقق من عدم استخدامها بتطبيق آخر أو استخدم كاميرا الهاتف.",
     "Impossibile avviare la fotocamera. Controlla se un’altra app la sta usando o usa quella del telefono."
-  ],
+  , "Не вдалося запустити камеру. Перевір, чи її не використовує інша програма, або скористайся камерою телефона."],
   "Nie udało się odczytać zdjęcia. Spróbuj ponownie lub wczytaj obrazek.": [
     "Could not read the photo. Try again or import an image.",
     "No se pudo leer la foto. Reinténtalo o carga una imagen.",
@@ -1496,7 +1497,7 @@
     "Impossible de lire la photo. Réessayez ou importez une image.",
     "تعذرت قراءة الصورة. أعد المحاولة أو استورد صورة.",
     "Impossibile leggere la foto. Riprova o importa un’immagine."
-  ],
+  , "Не вдалося прочитати фото. Спробуй ще раз або завантаж зображення."],
   "Nie udało się zrobić zdjęcia. Spróbuj ponownie.": [
     "Could not take the photo. Try again.",
     "No se pudo hacer la foto. Inténtalo de nuevo.",
@@ -1506,7 +1507,7 @@
     "Impossible de prendre la photo. Réessayez.",
     "تعذر التقاط الصورة. حاول مجدداً.",
     "Impossibile scattare la foto. Riprova."
-  ],
+  , "Не вдалося зробити фото. Спробуй ще раз."],
   "Pojedynczy kandydat jest sprzeczny z planszą lub innym wpisem. Sprawdź notatki; nic nie zmieniono.": [
     "A single candidate conflicts with the board or another entry. Check your notes; nothing changed.",
     "Un candidato único contradice el tablero u otra entrada. Revisa tus notas; no se ha cambiado nada.",
@@ -1516,7 +1517,7 @@
     "Un candidat unique contredit la grille ou une saisie. Vérifiez les notes ; rien n’a changé.",
     "مرشح وحيد يتعارض مع الشبكة أو إدخال آخر. راجع الملاحظات؛ لم يتغير شيء.",
     "Un candidato singolo contraddice la griglia o un’altra cifra. Controlla le note; nulla è cambiato."
-  ],
+  , "Одиночний кандидат суперечить сітці або іншому запису. Перевір нотатки; нічого не змінено."],
   "Wpisanie pojedynczych kandydatów pozostawiłoby pole bez możliwości. Sprawdź notatki; nic nie zmieniono.": [
     "Filling singles would leave a cell with no candidates. Check your notes; nothing changed.",
     "Rellenar los candidatos únicos dejaría una casilla sin posibilidades. Revisa tus notas; no se ha cambiado nada.",
@@ -1526,7 +1527,7 @@
     "Remplir les candidats uniques laisserait une case sans possibilité. Vérifiez les notes ; rien n’a changé.",
     "ملء المرشحين الوحيدين سيترك خانة بلا احتمال. راجع الملاحظات؛ لم يتغير شيء.",
     "Compilare i singoli lascerebbe una cella senza possibilità. Controlla le note; nulla è cambiato."
-  ],
+  , "Заповнення одиночних кандидатів залишило б клітинку без можливостей. Перевір нотатки; нічого не змінено."],
   "Nieprawidłowe dane planszy.": [
     "Invalid board data.",
     "Datos del tablero no válidos.",
@@ -1536,7 +1537,7 @@
     "Données de grille invalides.",
     "بيانات الشبكة غير صالحة.",
     "Dati della griglia non validi."
-  ],
+  , "Неправильні дані головоломки."],
   "Nieprawidłowy format kandydatów.": [
     "Invalid candidate format.",
     "Formato de candidatos no válido.",
@@ -1546,7 +1547,7 @@
     "Format des candidats invalide.",
     "تنسيق المرشحين غير صالح.",
     "Formato dei candidati non valido."
-  ],
+  , "Неправильний формат кандидатів."],
   "Potrzeba dokładnie 81 cyfr lub kropek. Sprawdź, czy jest 9 wierszy po 9 pól.": [
     "Exactly 81 digits or dots are required. Check that there are 9 rows of 9 cells.",
     "Se necesitan exactamente 81 cifras o puntos. Comprueba que haya 9 filas de 9 casillas.",
@@ -1556,7 +1557,7 @@
     "Il faut exactement 81 chiffres ou points. Vérifiez les 9 lignes de 9 cases.",
     "يلزم 81 رقماً أو نقطة بالضبط. تحقق من وجود 9 صفوف بكل منها 9 خانات.",
     "Servono esattamente 81 cifre o punti. Controlla che ci siano 9 righe da 9 celle."
-  ],
+  , "Потрібно рівно 81 цифра або крапка. Перевір, чи є 9 рядків по 9 клітинок."],
   "Jedyny kandydat": [
     "Naked single",
     "Único candidato",
@@ -1566,7 +1567,7 @@
     "Candidat unique",
     "مرشح وحيد",
     "Singolo nudo"
-  ],
+  , "Єдиний кандидат"],
   "Jedyne miejsce dla cyfry": [
     "Hidden single",
     "Única posición",
@@ -1576,7 +1577,7 @@
     "Position unique",
     "موضع وحيد",
     "Singolo nascosto"
-  ],
+  , "Єдине місце для цифри"],
   "Zablokowani kandydaci": [
     "Locked candidates",
     "Candidatos bloqueados",
@@ -1586,7 +1587,7 @@
     "Candidats verrouillés",
     "مرشحون مقفلون",
     "Candidati bloccati"
-  ],
+  , "Заблоковані кандидати"],
   "Naga para": [
     "Naked pair",
     "Pareja desnuda",
@@ -1596,7 +1597,7 @@
     "Paire nue",
     "زوج ظاهر",
     "Coppia nuda"
-  ],
+  , "Відкрита пара"],
   "Ukryta para": [
     "Hidden pair",
     "Pareja oculta",
@@ -1606,7 +1607,7 @@
     "Paire cachée",
     "زوج مخفي",
     "Coppia nascosta"
-  ],
+  , "Прихована пара"],
   "Naga trójka": [
     "Naked triple",
     "Trío desnudo",
@@ -1616,7 +1617,7 @@
     "Triplet nu",
     "ثلاثية ظاهرة",
     "Terzina nuda"
-  ],
+  , "Відкрита трійка"],
   "Ukryta trójka": [
     "Hidden triple",
     "Trío oculto",
@@ -1626,7 +1627,7 @@
     "Triplet caché",
     "ثلاثية مخفية",
     "Terzina nascosta"
-  ],
+  , "Прихована трійка"],
   "Naga czwórka": [
     "Naked quad",
     "Cuarteto desnudo",
@@ -1636,7 +1637,7 @@
     "Quadruplet nu",
     "رباعية ظاهرة",
     "Quartina nuda"
-  ],
+  , "Відкрита четвірка"],
   "Ukryta czwórka": [
     "Hidden quad",
     "Cuarteto oculto",
@@ -1646,7 +1647,7 @@
     "Quadruplet caché",
     "رباعية مخفية",
     "Quartina nascosta"
-  ],
+  , "Прихована четвірка"],
   "X-Wing": [
     "X-Wing",
     "X-Wing",
@@ -1656,7 +1657,7 @@
     "X-Wing",
     "X-Wing",
     "X-Wing"
-  ],
+  , "X-Wing"],
   "XY-Wing": [
     "XY-Wing",
     "XY-Wing",
@@ -1666,7 +1667,7 @@
     "XY-Wing",
     "XY-Wing",
     "XY-Wing"
-  ],
+  , "XY-Wing"],
   "XYZ-Wing": [
     "XYZ-Wing",
     "XYZ-Wing",
@@ -1676,7 +1677,7 @@
     "XYZ-Wing",
     "XYZ-Wing",
     "XYZ-Wing"
-  ],
+  , "XYZ-Wing"],
   "W-Wing": [
     "W-Wing",
     "W-Wing",
@@ -1686,7 +1687,7 @@
     "W-Wing",
     "W-Wing",
     "W-Wing"
-  ],
+  , "W-Wing"],
   "Swordfish": [
     "Swordfish",
     "Swordfish",
@@ -1696,7 +1697,7 @@
     "Swordfish",
     "سمكة السيف",
     "Swordfish"
-  ],
+  , "Swordfish"],
   "Jellyfish": [
     "Jellyfish",
     "Jellyfish",
@@ -1706,7 +1707,7 @@
     "Jellyfish",
     "قنديل البحر",
     "Jellyfish"
-  ],
+  , "Jellyfish"],
   "Unique Rectangle typ 1": [
     "Unique Rectangle type 1",
     "Rectángulo único tipo 1",
@@ -1716,7 +1717,7 @@
     "Rectangle unique type 1",
     "المستطيل الفريد نوع 1",
     "Rettangolo unico tipo 1"
-  ],
+  , "Unique Rectangle тип 1"],
   "Unique Rectangle typ 2": [
     "Unique Rectangle type 2",
     "Rectángulo único tipo 2",
@@ -1726,7 +1727,7 @@
     "Rectangle unique type 2",
     "المستطيل الفريد نوع 2",
     "Rettangolo unico tipo 2"
-  ],
+  , "Unique Rectangle тип 2"],
   "Unique Rectangle typ 4": [
     "Unique Rectangle type 4",
     "Rectángulo único tipo 4",
@@ -1736,7 +1737,7 @@
     "Rectangle unique type 4",
     "المستطيل الفريد نوع 4",
     "Rettangolo unico tipo 4"
-  ],
+  , "Unique Rectangle тип 4"],
   "Kolorowanie — pułapka": [
     "Simple coloring — trap",
     "Coloreado simple — trampa",
@@ -1746,7 +1747,7 @@
     "Coloriage simple — piège",
     "التلوين البسيط — فخ",
     "Colorazione semplice — trappola"
-  ],
+  , "Розфарбовування — пастка"],
   "Kolorowanie — sprzeczność": [
     "Simple coloring — contradiction",
     "Coloreado simple — contradicción",
@@ -1756,7 +1757,7 @@
     "Coloriage simple — contradiction",
     "التلوين البسيط — تناقض",
     "Colorazione semplice — contraddizione"
-  ],
+  , "Розфарбовування — суперечність"],
   "X-Chain": [
     "X-Chain",
     "Cadena X",
@@ -1766,7 +1767,7 @@
     "Chaîne X",
     "سلسلة X",
     "Catena X"
-  ],
+  , "X-Chain"],
   "XY-Chain": [
     "XY-Chain",
     "Cadena XY",
@@ -1776,7 +1777,7 @@
     "Chaîne XY",
     "سلسلة XY",
     "Catena XY"
-  ],
+  , "XY-Chain"],
   "AIC": [
     "AIC",
     "AIC",
@@ -1786,7 +1787,7 @@
     "AIC",
     "سلسلة الاستدلال المتناوب (AIC)",
     "AIC"
-  ],
+  , "AIC"],
   "Technika: {0}": [
     "Technique: {0}",
     "Técnica: {0}",
@@ -1796,7 +1797,7 @@
     "Technique : {0}",
     "التقنية: {0}",
     "Tecnica: {0}"
-  ],
+  , "Техніка: {0}"],
   "{0} / 81 pól": [
     "{0} / 81 cells",
     "{0} / 81 casillas",
@@ -1806,7 +1807,7 @@
     "{0} / 81 cases",
     "{0} / 81 خانة",
     "{0} / 81 celle"
-  ],
+  , "{0} / 81 клітинок"],
   "Wersja {0}": [
     "Version {0}",
     "Versión {0}",
@@ -1816,7 +1817,7 @@
     "Version {0}",
     "الإصدار {0}",
     "Versione {0}"
-  ],
+  , "Версія {0}"],
   "Wiersz {0}, kolumna {1}: {2}": [
     "Row {0}, column {1}: {2}",
     "Fila {0}, columna {1}: {2}",
@@ -1826,7 +1827,7 @@
     "Ligne {0}, colonne {1} : {2}",
     "الصف {0}، العمود {1}: {2}",
     "Riga {0}, colonna {1}: {2}"
-  ],
+  , "Рядок {0}, стовпець {1}: {2}"],
   "Wiersz {0}, kolumna {1}": [
     "Row {0}, column {1}",
     "Fila {0}, columna {1}",
@@ -1836,7 +1837,7 @@
     "Ligne {0}, colonne {1}",
     "الصف {0}، العمود {1}",
     "Riga {0}, colonna {1}"
-  ],
+  , "Рядок {0}, стовпець {1}"],
   "wiersz {0}, kolumna {1}": [
     "row {0}, column {1}",
     "fila {0}, columna {1}",
@@ -1846,7 +1847,7 @@
     "ligne {0}, colonne {1}",
     "الصف {0}، العمود {1}",
     "riga {0}, colonna {1}"
-  ],
+  , "рядок {0}, стовпець {1}"],
   "wierszu {0}": [
     "row {0}",
     "fila {0}",
@@ -1856,7 +1857,7 @@
     "ligne {0}",
     "الصف {0}",
     "riga {0}"
-  ],
+  , "рядку {0}"],
   "kolumnie {0}": [
     "column {0}",
     "columna {0}",
@@ -1866,7 +1867,7 @@
     "colonne {0}",
     "العمود {0}",
     "colonna {0}"
-  ],
+  , "стовпці {0}"],
   "kwadracie {0}": [
     "box {0}",
     "bloque {0}",
@@ -1876,7 +1877,7 @@
     "bloc {0}",
     "المربع {0}",
     "riquadro {0}"
-  ],
+  , "блоці {0}"],
   "{0}: komplet, 9 z 9 pól": [
     "{0}: complete, 9 of 9 cells",
     "{0}: completo, 9 de 9 casillas",
@@ -1886,7 +1887,7 @@
     "{0} : complet, 9 cases sur 9",
     "{0}: مكتمل، 9 من 9 خانات",
     "{0}: completo, 9 celle su 9"
-  ],
+  , "{0}: повний набір, 9 із 9 клітинок"],
   "{0}: {1} z 9 pól{2}": [
     "{0}: {1} of 9 cells{2}",
     "{0}: {1} de 9 casillas{2}",
@@ -1896,7 +1897,7 @@
     "{0} : {1} cases sur 9{2}",
     "{0}: {1} من 9 خانات{2}",
     "{0}: {1} celle su 9{2}"
-  ],
+  , "{0}: {1} із 9 клітинок{2}"],
   "{0} z 9 pól": [
     "{0} of 9 cells",
     "{0} de 9 casillas",
@@ -1906,7 +1907,7 @@
     "{0} cases sur 9",
     "{0} من 9 خانات",
     "{0} celle su 9"
-  ],
+  , "{0} із 9 клітинок"],
   "Wpisz {0}": [
     "Enter {0}",
     "Introducir {0}",
@@ -1916,7 +1917,7 @@
     "Saisir {0}",
     "إدخال {0}",
     "Inserisci {0}"
-  ],
+  , "Ввести {0}"],
   "Aparat {0}": [
     "Camera {0}",
     "Cámara {0}",
@@ -1926,7 +1927,7 @@
     "Caméra {0}",
     "الكاميرا {0}",
     "Fotocamera {0}"
-  ],
+  , "Камера {0}"],
   "Cyfra {0} występuje już 9 razy na planszy. Usuń lub cofnij wpis, aby użyć jej ponownie.": [
     "Digit {0} already appears 9 times. Clear or undo an entry to use it again.",
     "La cifra {0} ya aparece 9 veces. Borra o deshaz una entrada para usarla de nuevo.",
@@ -1936,7 +1937,7 @@
     "Le chiffre {0} apparaît déjà 9 fois. Effacez ou annulez une saisie pour le réutiliser.",
     "الرقم {0} موجود 9 مرات. امسح إدخالاً أو تراجع عنه لاستخدامه مجدداً.",
     "La cifra {0} compare già 9 volte. Cancella o annulla un inserimento per usarla di nuovo."
-  ],
+  , "Цифру {0} вже введено 9 разів. Видали або скасуй запис, щоб використати її знову."],
   "Wypełniono {0} pól z pojedynczym kandydatem. Całą operację możesz cofnąć jednym krokiem.": [
     "Filled {0} single-candidate cells. Undo the entire operation in one step.",
     "Se rellenaron {0} casillas con candidato único. Puedes deshacer toda la operación en un paso.",
@@ -1946,7 +1947,7 @@
     "{0} cases à candidat unique remplies. Annulez toute l’opération en une étape.",
     "مُلئت {0} خانات بمرشح وحيد. يمكنك التراجع عن العملية كاملة بخطوة واحدة.",
     "Compilate {0} celle con candidato singolo. Puoi annullare l’intera operazione in un solo passo."
-  ],
+  , "Заповнено {0} клітинок з одиночним кандидатом. Усю дію можна скасувати одним кроком."],
   "Rozpoznawanie pola {0} z 81…": [
     "Recognizing cell {0} of 81…",
     "Reconociendo casilla {0} de 81…",
@@ -1956,7 +1957,7 @@
     "Reconnaissance de la case {0} sur 81…",
     "جارٍ التعرف على الخانة {0} من 81…",
     "Riconoscimento della cella {0} di 81…"
-  ],
+  , "Розпізнавання клітинки {0} із 81…"],
   "Rozpoznano {0} cyfr. Sprawdź wynik z obrazkiem. Pola z niepewnym odczytem ({1}) mają bursztynowe tło.": [
     "Recognized {0} digits. Compare with the image. Uncertain cells ({1}) have an amber background.",
     "Se reconocieron {0} cifras. Compara con la imagen. Las casillas dudosas ({1}) tienen fondo ámbar.",
@@ -1966,7 +1967,7 @@
     "{0} chiffres reconnus. Comparez à l’image. Les cases incertaines ({1}) ont un fond ambré.",
     "تم التعرف على {0} أرقام. قارن بالصورة. الخانات غير المؤكدة ({1}) بخلفية كهرمانية.",
     "Riconosciute {0} cifre. Confronta con l’immagine. Le celle incerte ({1}) hanno sfondo ambra."
-  ],
+  , "Розпізнано {0} цифр. Звір результат із зображенням. Клітинки з непевним розпізнаванням ({1}) мають бурштинове тло."],
   "puste": [
     "empty",
     "vacía",
@@ -1976,7 +1977,7 @@
     "vide",
     "فارغة",
     "vuota"
-  ],
+  , "порожня"],
   ", konflikt": [
     ", conflict",
     ", conflicto",
@@ -1986,7 +1987,7 @@
     ", conflit",
     "، تعارض",
     ", conflitto"
-  ],
+  , ", конфлікт"],
   "puste, kandydaci {0}": [
     "empty, candidates {0}",
     "vacía, candidatos {0}",
@@ -1996,7 +1997,7 @@
     "vide, candidats {0}",
     "فارغة، المرشحون {0}",
     "vuota, candidati {0}"
-  ],
+  , "порожня, кандидати {0}"],
   "wierszach": [
     "rows",
     "filas",
@@ -2006,7 +2007,7 @@
     "lignes",
     "صفوف",
     "righe"
-  ],
+  , "рядках"],
   "kolumnach": [
     "columns",
     "columnas",
@@ -2016,7 +2017,7 @@
     "colonnes",
     "أعمدة",
     "colonne"
-  ],
+  , "стовпцях"],
   "tych trzech pól": [
     "these three cells",
     "estas tres casillas",
@@ -2026,7 +2027,7 @@
     "ces trois cases",
     "هذه الخانات الثلاث",
     "queste tre celle"
-  ],
+  , "цих трьох клітинок"],
   "dwóch skrzydeł": [
     "the two wings",
     "las dos alas",
@@ -2036,7 +2037,7 @@
     "les deux ailes",
     "الجناحين",
     "le due ali"
-  ],
+  , "двох крил"],
   "Pole {0} ma tylko jednego dozwolonego kandydata: {1}. Możesz wpisać tę cyfrę.": [
     "The cell at {0} has only one allowed candidate: {1}. Enter this digit.",
     "La casilla {0} solo tiene un candidato permitido: {1}. Puedes introducirlo.",
@@ -2046,7 +2047,7 @@
     "La case {0} n’a qu’un candidat autorisé : {1}. Vous pouvez le saisir.",
     "الخانة {0} لها مرشح ممكن واحد: {1}. يمكنك إدخاله.",
     "La cella {0} ha un solo candidato ammesso: {1}. Puoi inserirlo."
-  ],
+  , "Клітинка {0} має лише одного дозволеного кандидата: {1}. Можна вписати цю цифру."],
   "W {0} cyfra {1} może znaleźć się tylko w polu: {2}. Możesz wpisać tam {3}.": [
     "In {0}, digit {1} can only go in cell {2}. Enter {3} there.",
     "En {0}, la cifra {1} solo puede ir en {2}. Puedes introducir {3} allí.",
@@ -2056,7 +2057,7 @@
     "Dans {0}, le chiffre {1} ne peut aller qu’en {2}. Saisissez-y {3}.",
     "في {0}، لا يمكن وضع الرقم {1} إلا في {2}. أدخل {3} هناك.",
     "In {0}, la cifra {1} può andare solo in {2}. Inserisci {3} lì."
-  ],
+  , "У {0} цифра {1} можлива лише в клітинці: {2}. Можна вписати туди {3}."],
   "W {0} wszystkie miejsca dla cyfry {1} leżą także w {2}.": [
     "In {0}, all positions for digit {1} also lie in {2}.",
     "En {0}, todas las posiciones de la cifra {1} están también en {2}.",
@@ -2066,7 +2067,7 @@
     "Dans {0}, toutes les positions du chiffre {1} sont aussi dans {2}.",
     "في {0}، تقع جميع مواضع الرقم {1} أيضاً في {2}.",
     "In {0}, tutte le posizioni della cifra {1} si trovano anche in {2}."
-  ],
+  , "У {0} усі місця для цифри {1} лежать також у {2}."],
   "W {0} pola {1} zawierają łącznie tylko cyfry {2}. Te cyfry muszą zająć te pola.": [
     "In {0}, cells {1} together contain only digits {2}. These digits must occupy these cells.",
     "En {0}, las casillas {1} contienen en total solo las cifras {2}. Estas cifras deben ocupar esas casillas.",
@@ -2076,7 +2077,7 @@
     "Dans {0}, les cases {1} contiennent ensemble uniquement les chiffres {2}. Ces chiffres doivent occuper ces cases.",
     "في {0}، لا تحتوي الخانات {1} مجتمعة إلا على الأرقام {2}، ولذلك يجب أن تشغلها هذه الأرقام.",
     "In {0}, le celle {1} contengono insieme solo le cifre {2}. Queste devono occupare tali celle."
-  ],
+  , "У {0} клітинки {1} разом містять лише цифри {2}. Ці цифри мають зайняти ці клітинки."],
   "W {0} cyfry {1} występują wyłącznie w polach {2}. Pozostaw w tych polach tylko te cyfry.": [
     "In {0}, digits {1} occur only in cells {2}. Keep only those digits in these cells.",
     "En {0}, las cifras {1} solo aparecen en las casillas {2}. Conserva únicamente esas cifras en ellas.",
@@ -2086,7 +2087,7 @@
     "Dans {0}, les chiffres {1} apparaissent uniquement dans les cases {2}. N’y gardez que ces chiffres.",
     "في {0}، تظهر الأرقام {1} فقط في الخانات {2}. أبقِ هذه الأرقام وحدها فيها.",
     "In {0}, le cifre {1} compaiono solo nelle celle {2}. Conserva solo queste cifre in tali celle."
-  ],
+  , "У {0} цифри {1} трапляються лише в клітинках {2}. Залиш у цих клітинках тільки ці цифри."],
   "Cyfra {0}: w {1} {2} wszystkie możliwości mieszczą się w {3} {4}: {5}. Każda z tych linii musi pomieścić tę cyfrę, więc zajmuje ona wszystkie linie poprzeczne.": [
     "Digit {0}: in {1} {2}, all possibilities lie in {3} {4}: {5}. Each base line needs the digit, so all cover lines are occupied.",
     "Cifra {0}: en {1} {2}, todas las posibilidades están en {3} {4}: {5}. Cada línea base necesita la cifra, por lo que ocupa todas las líneas transversales.",
@@ -2096,7 +2097,7 @@
     "Chiffre {0} : dans {1} {2}, toutes les possibilités tiennent dans {3} {4} : {5}. Chaque ligne de base doit contenir ce chiffre, occupant toutes les lignes transversales.",
     "الرقم {0}: في {1} {2} تقع كل الاحتمالات ضمن {3} {4}: {5}. كل خط أساس يحتاج الرقم، فتُشغل جميع الخطوط المتقاطعة.",
     "Cifra {0}: nelle {1} {2}, tutte le possibilità stanno in {3} {4}: {5}. Ogni linea di base richiede la cifra, occupando tutte le linee trasversali."
-  ],
+  , "Цифра {0}: у {1} {2} усі можливості містяться в {3} {4}: {5}. Кожна з цих ліній має містити цю цифру, тому вона займає всі поперечні лінії."],
   "Pole centralne {0} ma kandydatów {1}, a skrzydła {2} i {3} pary {4} oraz {5}. Niezależnie od wyboru w centrum cyfra {6} wystąpi w jednym z {7}.": [
     "Pivot {0} has candidates {1}; wings {2} and {3} have pairs {4} and {5}. Whatever the pivot takes, digit {6} occurs in one of {7}.",
     "El pivote {0} tiene {1}; las alas {2} y {3} tienen las parejas {4} y {5}. Sea cual sea el pivote, la cifra {6} aparece en una de {7}.",
@@ -2106,7 +2107,7 @@
     "Le pivot {0} a les candidats {1} ; les ailes {2} et {3} ont les paires {4} et {5}. Quel que soit le pivot, {6} apparaît dans l’un de {7}.",
     "المحور {0} له المرشحون {1}، والجناحان {2} و{3} لهما الزوجان {4} و{5}. مهما كانت قيمة المحور، يظهر الرقم {6} في أحد {7}.",
     "Il perno {0} ha candidati {1}; le ali {2} e {3} hanno le coppie {4} e {5}. Qualunque sia il perno, {6} compare in una di {7}."
-  ],
+  , "Центральна клітинка {0} має кандидатів {1}, а крила {2} і {3} — пари {4} та {5}. Незалежно від вибору в центрі цифра {6} буде в одному з {7}."],
   "Pola {0} i {1} mają parę {2}. Silne połączenie cyfry {3} w {4} ({5}) wymusza cyfrę {6} w co najmniej jednym z tych dwóch pól.": [
     "Cells {0} and {1} have pair {2}. The strong link for digit {3} in {4} ({5}) forces digit {6} into at least one of those two cells.",
     "Las casillas {0} y {1} tienen la pareja {2}. El enlace fuerte de {3} en {4} ({5}) obliga a que {6} esté en alguna de esas dos casillas.",
@@ -2116,7 +2117,7 @@
     "Les cases {0} et {1} ont la paire {2}. Le lien fort du chiffre {3} dans {4} ({5}) impose {6} dans au moins l’une de ces cases.",
     "الخانتان {0} و{1} لهما الزوج {2}. الرابط القوي للرقم {3} في {4} ({5}) يفرض الرقم {6} في إحداهما على الأقل.",
     "Le celle {0} e {1} hanno la coppia {2}. Il legame forte di {3} in {4} ({5}) impone {6} in almeno una delle due celle."
-  ],
+  , "Клітинки {0} і {1} мають пару {2}. Сильний зв’язок цифри {3} у {4} ({5}) змушує цифру {6} з’явитися щонайменше в одній із цих двох клітинок."],
   "Potwierdzono jedno rozwiązanie planszy. Trzy rogi prostokąta mają wyłącznie parę {0}. Czwarty róg ({1}) nie może mieć tej samej pary, bo powstałyby dwa rozwiązania.": [
     "One solution verified. Three rectangle corners contain only pair {0}. The fourth ({1}) cannot have the same pair, as that would allow two solutions.",
     "Se verificó solución única. Tres esquinas solo contienen la pareja {0}. La cuarta ({1}) no puede tenerla también, pues permitiría dos soluciones.",
@@ -2126,7 +2127,7 @@
     "Solution unique vérifiée. Trois coins n’ont que la paire {0}. Le quatrième ({1}) ne peut prendre la même paire, sinon deux solutions seraient possibles.",
     "تم التحقق من الحل الفريد. ثلاثة أركان لا تحتوي إلا الزوج {0}. الركن الرابع ({1}) لا يمكن أن يأخذ الزوج نفسه، وإلا نتج حلان.",
     "Soluzione unica verificata. Tre angoli contengono solo la coppia {0}. Il quarto ({1}) non può avere la stessa coppia, altrimenti sarebbero possibili due soluzioni."
-  ],
+  , "Підтверджено єдиний розв’язок. Три кути прямокутника мають лише пару {0}. Четвертий кут ({1}) не може мати ту саму пару, інакше було б два розв’язки."],
   "Potwierdzono jedno rozwiązanie. Dwa dodatkowe rogi ({0}) mają oprócz pary {1} tylko cyfrę {2}. Co najmniej jeden z nich musi mieć tę dodatkową cyfrę.": [
     "Uniqueness verified. The two extra corners ({0}) have only digit {2} besides pair {1}. At least one must take that extra digit.",
     "Unicidad verificada. Las dos esquinas adicionales ({0}) solo tienen la cifra {2} además de la pareja {1}. Alguna debe contener esa cifra adicional.",
@@ -2136,7 +2137,7 @@
     "Unicité vérifiée. Les coins supplémentaires ({0}) ont, outre la paire {1}, seulement le chiffre {2}. Au moins l’un doit prendre ce chiffre supplémentaire.",
     "تم التحقق من التفرد. الركنان الإضافيان ({0}) يحتويان، إلى جانب الزوج {1}، الرقم {2} فقط. يجب أن يأخذه أحدهما على الأقل.",
     "Unicità verificata. Gli angoli aggiuntivi ({0}) hanno, oltre alla coppia {1}, solo la cifra {2}. Almeno uno deve assumere quella cifra."
-  ],
+  , "Підтверджено єдиний розв’язок. Два додаткові кути ({0}) мають, крім пари {1}, лише цифру {2}. Принаймні один із них має містити цю додаткову цифру."],
   "Potwierdzono jedno rozwiązanie. Cyfra {0} w {1} ma tylko dwa miejsca: dodatkowe rogi prostokąta. Drugą cyfrę pary ({2}) trzeba z tych rogów wykluczyć, aby uniknąć dwóch rozwiązań.": [
     "Uniqueness verified. Digit {0} has only two positions in {1}: the extra rectangle corners. Remove the other pair digit ({2}) from those corners to avoid two solutions.",
     "Unicidad verificada. La cifra {0} solo tiene dos posiciones en {1}: las esquinas adicionales. Elimina de ellas la otra cifra de la pareja ({2}) para evitar dos soluciones.",
@@ -2146,7 +2147,7 @@
     "Unicité vérifiée. Le chiffre {0} n’a que deux places dans {1} : les coins supplémentaires. Éliminez l’autre chiffre de la paire ({2}) de ces coins pour éviter deux solutions.",
     "تم التحقق من التفرد. للرقم {0} موضعان فقط في {1}: الركنان الإضافيان. احذف الرقم الآخر من الزوج ({2}) منهما لتجنب حلين.",
     "Unicità verificata. La cifra {0} ha solo due posizioni in {1}: gli angoli aggiuntivi. Elimina da entrambi l’altra cifra della coppia ({2}) per evitare due soluzioni."
-  ],
+  , "Підтверджено єдиний розв’язок. Цифра {0} у {1} має лише два місця: додаткові кути прямокутника. Другу цифру пари ({2}) потрібно виключити з цих кутів, щоб уникнути двох розв’язків."],
   "Silne połączenia cyfry {0} tworzą dwie przeciwne grupy: [{1}] i [{2}]. Dwa pola jednej grupy widzą się wzajemnie, więc cała ta grupa musi być fałszywa.": [
     "Strong links for digit {0} form opposite groups: [{1}] and [{2}]. Two cells in one group see each other, so that entire group is false.",
     "Los enlaces fuertes de {0} forman grupos opuestos: [{1}] y [{2}]. Dos casillas de un grupo se ven, por lo que todo ese grupo es falso.",
@@ -2156,7 +2157,7 @@
     "Les liens forts de {0} forment deux groupes opposés : [{1}] et [{2}]. Deux cases d’un même groupe se voient ; tout ce groupe est donc faux.",
     "روابط الرقم {0} القوية تشكل مجموعتين متعاكستين: [{1}] و[{2}]. خانتان من مجموعة واحدة تريان بعضهما، لذا فالمجموعة كلها خاطئة.",
     "I legami forti di {0} formano gruppi opposti: [{1}] e [{2}]. Due celle dello stesso gruppo si vedono, quindi l’intero gruppo è falso."
-  ],
+  , "Сильні зв’язки цифри {0} утворюють дві протилежні групи: [{1}] і [{2}]. Дві клітинки однієї групи бачать одна одну, тому вся ця група має бути хибною."],
   "Silne połączenia cyfry {0} tworzą przeciwne grupy: [{1}] i [{2}]. Pola docelowe widzą obie grupy. Jedna grupa musi być prawdziwa, więc cyfra odpada z tych pól.": [
     "Strong links for digit {0} form opposite groups: [{1}] and [{2}]. Target cells see both groups. One group must be true, so remove the digit from those cells.",
     "Los enlaces fuertes de {0} forman grupos opuestos: [{1}] y [{2}]. Las casillas objetivo ven ambos grupos. Uno debe ser verdadero, así que elimina la cifra de esas casillas.",
@@ -2166,7 +2167,7 @@
     "Les liens forts de {0} forment les groupes opposés [{1}] et [{2}]. Les cases cibles voient les deux. Un groupe doit être vrai : le chiffre est éliminé des cibles.",
     "روابط الرقم {0} القوية تشكل مجموعتين متعاكستين: [{1}] و[{2}]. الخانات المستهدفة ترى المجموعتين. إحداهما صحيحة، فيُحذف الرقم من تلك الخانات.",
     "I legami forti di {0} formano i gruppi opposti [{1}] e [{2}]. Le celle bersaglio vedono entrambi. Uno deve essere vero: elimina la cifra dai bersagli."
-  ],
+  , "Сильні зв’язки цифри {0} утворюють протилежні групи: [{1}] і [{2}]. Цільові клітинки бачать обидві групи. Одна група має бути істинною, тому цифра виключається з цих клітинок."],
   "Łańcuch: {0}. Znak = oznacza silne połączenie, — słabe. Jeśli pierwszy kandydat jest fałszywy, ostatni jest prawdziwy. Każdy kandydat widzący oba końce musi więc odpaść.": [
     "Chain: {0}. = denotes a strong link, — a weak link. If the first candidate is false, the last is true. A candidate conflicting with both endpoints must therefore be removed.",
     "Cadena: {0}. = indica enlace fuerte; —, débil. Si el primer candidato es falso, el último es verdadero. Elimina todo candidato que contradiga ambos extremos.",
@@ -2176,7 +2177,7 @@
     "Chaîne : {0}. = indique un lien fort, — un lien faible. Si le premier candidat est faux, le dernier est vrai. Éliminez tout candidat incompatible avec les deux extrémités.",
     "السلسلة: {0}. الرمز = رابط قوي و— رابط ضعيف. إذا كان المرشح الأول خاطئاً فالأخير صحيح. لذلك يُحذف أي مرشح يتعارض مع الطرفين.",
     "Catena: {0}. = indica un legame forte, — uno debole. Se il primo candidato è falso, l’ultimo è vero. Elimina ogni candidato incompatibile con entrambe le estremità."
-  ],
+  , "Ланцюг: {0}. Знак = означає сильний зв’язок, — слабкий. Якщо перший кандидат хибний, останній істинний. Отже, кожен кандидат, що бачить обидва кінці, має бути виключений."],
   "Po uwzględnieniu już wykonanych, logicznie potwierdzonych eliminacji ({0}): {1}": [
     "After accounting for already completed, logically verified eliminations ({0}): {1}",
     "Tras tener en cuenta eliminaciones ya realizadas y verificadas ({0}): {1}",
@@ -2186,7 +2187,7 @@
     "Après prise en compte des éliminations déjà effectuées et vérifiées ({0}) : {1}",
     "بعد احتساب الحذف المنجز والمثبت منطقياً ({0}): {1}",
     "Tenendo conto delle eliminazioni già eseguite e verificate ({0}): {1}"
-  ],
+  , "Після врахування вже виконаних логічно підтверджених виключень ({0}): {1}"],
   "Usuń wyłącznie wskazanych kandydatów:": [
     "Remove only the listed candidates:",
     "Elimina solo los candidatos indicados:",
@@ -2196,7 +2197,7 @@
     "Éliminez uniquement les candidats indiqués :",
     "احذف المرشحين المحددين فقط:",
     "Elimina solo i candidati indicati:"
-  ],
+  , "Прибери лише вказаних кандидатів:"],
   "Najpierw popraw powtarzające się liczby zaznaczone na czerwono.": [
     "First correct repeated digits marked in red.",
     "Primero corrige las cifras repetidas marcadas en rojo.",
@@ -2206,7 +2207,7 @@
     "Corrigez d’abord les chiffres répétés en rouge.",
     "صحح أولاً الأرقام المكررة باللون الأحمر.",
     "Correggi prima le cifre ripetute in rosso."
-  ],
+  , "Спочатку виправ повторювані числа, позначені червоним."],
   "Plansza jest wypełniona poprawnie. Sudoku ukończone!": [
     "The board is filled correctly. Sudoku solved!",
     "El tablero está completo y correcto. ¡Sudoku resuelto!",
@@ -2216,7 +2217,7 @@
     "La grille est correctement remplie. Sudoku résolu !",
     "الشبكة مكتملة وصحيحة. تم حل السودوكو!",
     "La griglia è compilata correttamente. Sudoku risolto!"
-  ],
+  , "Сітку заповнено правильно. Судоку завершено!"],
   "W tej planszy brakuje możliwości dla co najmniej jednego pola lub cyfry. Sprawdź wpisane liczby.": [
     "At least one cell or digit has no valid position. Check the entered digits.",
     "Alguna casilla o cifra no tiene posición válida. Revisa las cifras introducidas.",
@@ -2226,7 +2227,7 @@
     "Au moins une case ou un chiffre n’a aucune possibilité valide. Vérifiez les chiffres saisis.",
     "لا يوجد احتمال صالح لخانة أو رقم واحد على الأقل. راجع الأرقام المدخلة.",
     "Almeno una cella o cifra non ha possibilità valide. Controlla le cifre inserite."
-  ],
+  , "У цій головоломці немає можливостей щонайменше для однієї клітинки або цифри. Перевір введені числа."],
   "W trakcie": [
     "In progress",
     "En curso",
@@ -2236,7 +2237,7 @@
     "En cours",
     "قيد الحل",
     "In corso"
-  ],
+  , "У процесі"],
   "Rozpoznaj ponownie": [
     "Recognize again",
     "Reconocer de nuevo",
@@ -2246,7 +2247,7 @@
     "Reconnaître à nouveau",
     "التعرف مجدداً",
     "Riconosci di nuovo"
-  ],
+  , "Розпізнати повторно"],
   "Poczekaj na obraz z aparatu.": [
     "Wait for the camera image.",
     "Espera la imagen de la cámara.",
@@ -2256,7 +2257,7 @@
     "Attendez l’image de la caméra.",
     "انتظر صورة الكاميرا.",
     "Attendi l’immagine della fotocamera."
-  ],
+  , "Дочекайся зображення з камери."],
   "Trener Sudoku: rozwiązuj sudoku krok po kroku. Kandydaci, import zdjęć i wyjaśnienia technik — od par po skrzydła i ryby.": [
     "Sudoku Trainer: solve step by step. Candidates, photo import and technique explanations, from pairs to wings, fish and chains.",
     "Entrenador de Sudoku: resuelve paso a paso. Candidatos, importación de fotos y técnicas desde parejas hasta alas, peces y cadenas.",
@@ -2266,7 +2267,7 @@
     "Coach Sudoku : résolution pas à pas, candidats, import de photos et explications des techniques, des paires aux ailes, poissons et chaînes.",
     "مدرّب سودوكو: حل خطوة بخطوة، مع المرشحين واستيراد الصور وشرح التقنيات من الأزواج إلى الأجنحة والأسماك والسلاسل.",
     "Allenatore di Sudoku: risolvi passo dopo passo con candidati, importazione di foto e spiegazioni dalle coppie alle ali, ai pesci e alle catene."
-  ],
+  , "Тренер судоку: розв’язуй крок за кроком. Кандидати, імпорт фото й пояснення технік — від пар до крил і риб."],
   "W pustym polu zostaje tylko jedna możliwa cyfra po wykluczeniu liczb obecnych w jego wierszu, kolumnie i kwadracie. Można wpisać tę cyfrę.\n\nSpójrz na jedno puste pole, a nie na całą linię. Zbierz cyfry już wpisane w jego wierszu, kolumnie i bloku. Każda z nich jest w tym polu zabroniona. Jeśli po wykluczeniu zostaje jedna możliwość, nie ma drugiego poprawnego wyboru.\n\nTo jest wpisanie liczby, nie eliminacja w innych polach. Sama pojedyncza ręczna notatka nie wystarczy do dowodu: kandydaci muszą wynikać z poprawnych ograniczeń planszy.": [
     "Only one candidate remains in a cell after excluding digits in its row, column and box. Enter that digit.\n\nFocus on one empty cell. Collect the digits already placed in its row, column and box. Each is forbidden in that cell. If exactly one possibility survives, no other valid choice remains.\n\nThis technique places a digit rather than merely removing notes. A lone handwritten note is not proof on its own: the remaining candidates must follow from valid board constraints.",
     "Solo queda un candidato tras excluir las cifras de su fila, columna y bloque. Puedes introducirlo.\n\nFíjate en una casilla vacía. Reúne las cifras ya presentes en su fila, columna y bloque: ninguna puede ir ahí. Si solo queda una posibilidad, no existe otra elección válida.\n\nEsta técnica coloca una cifra, no solo elimina notas. Una única nota manual no demuestra nada por sí sola: los candidatos deben proceder de restricciones válidas del tablero.",
@@ -2276,7 +2277,7 @@
     "Examinez les chiffres déjà présents dans la ligne, la colonne et le bloc d’une case vide. Aucun ne peut occuper cette case. S’il ne reste qu’un candidat, sa valeur est imposée.\n\nCette technique inscrit un chiffre ; elle ne fait pas qu’effacer des notes. Il n’est pas nécessaire de connaître les autres positions de ce chiffre dans toute la grille.\n\nUne unique note manuscrite ne suffit pas comme preuve : les autres possibilités doivent avoir été exclues par des contraintes valides, et non supprimées arbitrairement.",
     "افحص أرقام صف الخانة الفارغة وعمودها ومربعها. لا يجوز وضع أي منها في الخانة. إذا بقي مرشح واحد فقط بعد الاستبعاد فهو قيمتها المفروضة.\n\nهذه تقنية لوضع رقم، لا لمجرد مسح ملاحظات. لا تحتاج إلى معرفة بقية مواضع الرقم في الشبكة؛ يكفي عدم وجود بديل صالح لهذه الخانة.\n\nالملاحظة اليدوية الوحيدة ليست دليلاً بمفردها. يجب أن تكون البدائل الأخرى قد استُبعدت بقيود صحيحة، لا بحذف عشوائي أو خاطئ.",
     "Osserva le cifre già presenti nella riga, colonna e riquadro di una cella vuota. Nessuna può occupare quella cella. Se rimane un solo candidato, il suo valore è obbligato.\n\nLa tecnica inserisce una cifra, non si limita a cancellare note. Non serve conoscere tutte le altre posizioni di quella cifra nella griglia.\n\nUna sola nota scritta a mano non basta come prova: le alternative devono essere state escluse con vincoli validi, non eliminate arbitrariamente."
-  ],
+  , "У порожній клітинці залишається лише одна можлива цифра після виключення чисел, уже присутніх у її рядку, стовпці та блоці. Цю цифру можна вписати.\n\nРозглянь одну порожню клітинку. Збери всі числа в її рядку, стовпці й блоці. Жодне з них не може повторитися в цій клітинці. Якщо після виключення залишається одна можливість, іншого правильного вибору немає.\n\nЦе встановлення числа, а не лише виключення кандидатів. Однієї ручної нотатки недостатньо для доказу: список кандидатів має відповідати правильним обмеженням сітки."],
   "W wierszu, kolumnie lub kwadracie dana cyfra może trafić tylko do jednego pola. Nawet jeśli to pole ma kilku kandydatów, tę cyfrę można w nim wpisać.\n\nWybierz jedną cyfrę i jedną jednostkę, czyli wiersz, kolumnę albo blok. Sprawdź wszystkie puste pola tej jednostki. Cyfra musi wystąpić w niej dokładnie raz, więc jeśli pasuje tylko do jednego pola, właśnie tam jest jej miejsce.\n\nRóżnica względem jedynego kandydata: tutaj jedyna jest pozycja cyfry w jednostce, niekoniecznie lista kandydatów w samym polu. Pozostałe notatki w tym polu nie przeszkadzają we wpisaniu ustalonej cyfry.": [
     "A digit has only one possible cell in a row, column or box. Enter it there even if that cell has other candidates.\n\nChoose one digit and one unit: a row, column or box. Check every empty cell in that unit. The digit must occur there exactly once, so if it fits only one cell, that is its position.\n\nUnlike a naked single, it is the digit's position in the unit that is unique; the cell itself may still have several candidates. Those other notes do not prevent placing the forced digit.",
     "Una cifra solo puede ir en una casilla de una fila, columna o bloque, aunque esa casilla tenga otros candidatos.\n\nElige una cifra y una unidad: fila, columna o bloque. Revisa todas sus casillas vacías. La cifra debe aparecer exactamente una vez, así que, si solo cabe en una casilla, esa es su posición.\n\nA diferencia del único candidato, aquí es única la posición de la cifra en la unidad. La casilla puede tener otras notas; no impiden colocar la cifra forzada.",
@@ -2286,7 +2287,7 @@
     "Choisissez un chiffre et une unité : ligne, colonne ou bloc. Vérifiez toutes ses cases vides. Le chiffre doit y apparaître une fois ; si une seule case l’accepte, sa position est imposée.\n\nLa position du chiffre est unique, pas forcément la liste de la case. Celle-ci peut conserver plusieurs notes sans empêcher l’inscription du chiffre forcé.\n\nÀ distinguer du candidat unique : dans ce dernier, une case n’accepte qu’un chiffre ; ici, un chiffre n’a qu’une case dans l’unité.",
     "اختر رقماً ووحدة: صفاً أو عموداً أو مربعاً. افحص خاناتها الفارغة. يجب أن يظهر الرقم مرة واحدة فيها، فإذا لم تقبله إلا خانة واحدة فقد تحدد موضعه.\n\nالموضع هو الوحيد، وليس بالضرورة مرشحو الخانة. قد تحمل الخانة ملاحظات أخرى، لكنها لا تمنع إدخال الرقم المفروض.\n\nالفرق عن المرشح الوحيد أن تلك التقنية تنظر إلى خانة لا تقبل إلا رقماً واحداً، أما هنا فنبحث عن رقم لا يملك إلا موضعاً واحداً في الوحدة.",
     "Scegli una cifra e un’unità: riga, colonna o riquadro. Controlla tutte le celle vuote. La cifra deve comparire una volta: se una sola cella la ammette, quella è la sua posizione.\n\nÈ unica la posizione della cifra, non necessariamente la lista della cella. Le altre note presenti non impediscono di inserire il valore obbligato.\n\nDiversamente dal singolo nudo, non cerchi una cella con una sola possibilità, ma una cifra con un solo posto nell’unità."
-  ],
+  , "У рядку, стовпці або блоці певна цифра може стояти лише в одній клітинці. Навіть якщо ця клітинка має кількох кандидатів, саме цю цифру можна вписати.\n\nВибери одну цифру й одну одиницю: рядок, стовпець або блок. Перевір усі її порожні клітинки. Цифра має з’явитися в одиниці рівно один раз, тому якщо підходить лише одна клітинка, це її місце.\n\nНа відміну від єдиного кандидата, тут єдиною є позиція цифри в одиниці, а не обов’язково весь список кандидатів клітинки. Інші нотатки в ній не заважають установленню цифри."],
   "Jeśli wszystkie miejsca dla cyfry w kwadracie leżą w jednym wierszu lub kolumnie, usuń ją z pozostałych pól tego wiersza lub kolumny poza kwadratem. Działa też odwrotnie: jeśli wszystkie miejsca dla cyfry w wierszu lub kolumnie leżą w jednym kwadracie, usuń ją z pozostałych pól tego kwadratu.\n\nKluczem jest przecięcie bloku z wierszem lub kolumną. Gdy wszystkie możliwości danej cyfry w bloku leżą na tej samej linii, nie trzeba wiedzieć, które pole ją zawiera. Wiadomo już, że linia będzie miała tę cyfrę wewnątrz bloku, więc poza nim nie może jej powtórzyć.\n\nW odwrotnym kierunku to wiersz lub kolumna ogranicza cyfrę do jednego bloku, a eliminacje dotyczą reszty tego bloku. Nie usuwaj kandydatów z pól tworzących samo przecięcie.": [
     "If all candidates for a digit in a box share a row or column, remove it from that line outside the box. Conversely, if a line confines that digit to one box, remove it elsewhere in that box.\n\nLook at the intersection of a box and a row or column. If all positions for a digit in the box lie on one line, you do not need to know which cell holds it. That line will contain the digit inside the box, so it cannot repeat outside it.\n\nIn the reverse direction, a row or column confines a digit to one box, allowing eliminations in the rest of that box. Do not remove candidates from the cells forming the intersection itself.",
     "Si todos los candidatos de una cifra en un bloque están en una misma fila o columna, elimínala de esa línea fuera del bloque. A la inversa, si una línea la limita a un bloque, elimínala del resto de ese bloque.\n\nObserva la intersección entre un bloque y una fila o columna. Si todas las posiciones de una cifra en el bloque están en una línea, no hace falta saber cuál es la correcta. La línea tendrá esa cifra dentro del bloque y no podrá repetirla fuera.\n\nEn sentido inverso, una fila o columna limita la cifra a un bloque y permite eliminarla del resto de ese bloque. No la elimines de las casillas de la propia intersección.",
@@ -2296,7 +2297,7 @@
     "Observez l’intersection d’un bloc et d’une ligne ou colonne. Si tous les candidats d’un chiffre dans le bloc sont sur cette ligne, celle-ci contiendra le chiffre dans le bloc. Éliminez-le ailleurs sur la ligne.\n\nInversement, si une ligne ou colonne limite un chiffre à un seul bloc, éliminez-le du reste de ce bloc.\n\nLa case exacte reste inconnue, mais la zone est certaine. Ne supprimez pas les candidats de l’intersection : l’élimination porte sur le reste de l’unité concernée.",
     "انظر إلى تقاطع مربع مع صف أو عمود. إذا وقعت كل مواضع رقم في المربع على هذا الخط، فلا بد أن يظهر الرقم في الخط داخل المربع، ويُحذف خارجه.\n\nوبالعكس، إذا حصر صف أو عمود الرقم في مربع واحد، أمكن حذفه من بقية خانات ذلك المربع.\n\nلا يلزم تحديد الخانة الصحيحة داخل التقاطع؛ يكفي ثبوت المنطقة. لا تحذف مرشحي التقاطع نفسه، بل احذف من الجزء الخارجي في الوحدة التي أثبتنا حصرها.",
     "Osserva l’intersezione di un riquadro con una riga o colonna. Se tutti i candidati di una cifra nel riquadro sono sulla stessa linea, quella linea conterrà la cifra dentro il riquadro. Eliminala fuori da esso.\n\nViceversa, se una linea limita la cifra a un riquadro, eliminala dal resto di quel riquadro.\n\nNon serve conoscere la cella esatta: la zona è certa. Conserva i candidati nell’intersezione e cancella soltanto nella parte esterna dell’unità coinvolta."
-  ],
+  , "Якщо всі місця для цифри в блоці лежать в одному рядку або стовпці, виключи її з інших клітинок цієї лінії поза блоком. Правило працює й навпаки: лінія може обмежити цифру одним блоком.\n\nКлючем є перетин блока з рядком або стовпцем. Не потрібно знати точну клітинку цифри в блоці. Уже відомо, що вона буде в цій лінії всередині блока, тому поза ним повторитися не може.\n\nУ зворотному напрямку всі місця цифри в рядку або стовпці мають лежати в одному блоці. Тоді прибирай її з решти цього блока. Не видаляй кандидатів із клітинок самого перетину."],
   "Dwa pola w tym samym wierszu, kolumnie lub kwadracie mają dokładnie tych samych dwóch kandydatów. Te cyfry zajmą te dwa pola, więc można usunąć je z kandydatów w pozostałych polach tej jednostki.\n\nSzukaj dwóch pól z dokładnie tą samą parą, bez dodatkowych kandydatów. Nie musisz ustalać kolejności cyfr. Jedno pole zajmie jedną cyfrę, drugie pozostałą, więc obie są zarezerwowane dla tej pary pól.\n\nEliminacje wykonuj wyłącznie w jednostce wspólnej dla obu pól. Zachowaj obie cyfry w samej parze. Para, która nie usuwa niczego z innych pól, nie daje jeszcze nowego ruchu.": [
     "Two cells in one row, column or box have the same two candidates and no others. Those digits occupy those cells; remove them from the other cells in that unit.\n\nLook for two cells with exactly the same pair and no extra candidates. Their order is unknown, but irrelevant: one cell takes one digit and the other takes the remaining digit. Both digits are reserved for those two cells.\n\nEliminate only within a unit shared by both cells. Keep both candidates in the pair itself. A pair that removes nothing elsewhere does not yet provide a new move.",
     "Dos casillas de una fila, columna o bloque tienen exactamente los mismos dos candidatos. Reservan esas cifras; elimínalas de las demás casillas de la unidad.\n\nBusca dos casillas con exactamente la misma pareja, sin candidatos adicionales. No necesitas conocer el orden: una tendrá una cifra y la otra la restante. Ambas cifras quedan reservadas para esas dos casillas.\n\nElimina solo dentro de una unidad compartida por ambas. Conserva los candidatos de la pareja. Si no se elimina nada en otras casillas, la pareja aún no aporta un paso nuevo.",
@@ -2306,7 +2307,7 @@
     "Cherchez deux cases d’une unité contenant exactement les mêmes deux candidats, sans troisième possibilité. Les deux chiffres occuperont ces deux cases, même si leur ordre reste inconnu.\n\nIls ne sont donc plus disponibles pour les autres cases de cette unité. Éliminez-les uniquement dans une ligne, colonne ou bloc partagé par les deux cases.\n\nConservez les deux candidats dans la paire. Une paire sans élimination ailleurs décrit un motif, mais ne fournit pas encore de nouveau coup.",
     "ابحث عن خانتين في وحدة تحملان المرشحين نفسيهما فقط، دون احتمال ثالث. سيشغل الرقمان الخانتين بقيمتين مختلفتين مهما كان ترتيبهما المجهول.\n\nلذلك لا يبقى أي من الرقمين لبقية الوحدة. احذفهما من الخانات الأخرى في الصف أو العمود أو المربع المشترك فقط.\n\nاحتفظ بالمرشحين داخل الزوج. إذا لم ينتج حذف في مكان آخر، فالزوج نمط صحيح لكنه لا يقدم خطوة جديدة بعد. لا تختر ترتيب الرقمين بالتخمين.",
     "Cerca due celle di un’unità con esattamente gli stessi due candidati e nessuna terza possibilità. Le due cifre occuperanno quelle celle anche se il loro ordine è ancora ignoto.\n\nNon sono quindi disponibili per le altre celle dell’unità. Eliminale solo nella riga, colonna o riquadro condiviso dalle due celle.\n\nConserva entrambi i candidati nella coppia. Se non elimini nulla altrove, il motivo è valido ma non offre ancora una nuova mossa."
-  ],
+  , "Дві клітинки одного рядка, стовпця або блока мають рівно тих самих двох кандидатів. Ці цифри займуть ці дві клітинки, тому їх можна виключити з решти спільної одиниці.\n\nШукай дві клітинки з однаковою парою без додаткових кандидатів. Порядок цифр визначати не потрібно: одна клітинка отримає одну цифру, інша — другу. Обидві цифри зарезервовані для цієї пари клітинок.\n\nВиключення виконуй лише в одиниці, спільній для обох клітинок. У самій парі збережи обидві цифри. Якщо пара нічого не виключає з інших клітинок, вона ще не дає нового ходу."],
   "Dwie cyfry mogą wystąpić wyłącznie w tych samych dwóch polach wiersza, kolumny lub kwadratu. Te pola są dla nich zarezerwowane, więc można usunąć z nich wszystkich pozostałych kandydatów.\n\nZamiast szukać krótkich list kandydatów, śledź pozycje dwóch cyfr w jednej jednostce. Jeśli obie mieszczą się tylko w tych samych dwóch polach, muszą wspólnie je zająć. Inne cyfry zapisane w tych polach są wtedy zbędne.\n\nTo odwrócenie nagiej pary: tutaj usuwasz inne cyfry z dwóch pól, a nie cyfry pary z pozostałych pól. Każda z dwóch wybranych cyfr musi mieć w jednostce co najmniej jedno możliwe miejsce.": [
     "Two digits occur only in the same two cells of a unit. Keep those two digits in these cells and remove all other candidates from them.\n\nTrack the positions of two digits within one unit instead of looking for short candidate lists. If both are confined to the same two cells, they must occupy those cells together. Any additional candidates in those cells can be removed.\n\nThis reverses a naked pair: remove other digits inside the two cells, rather than removing the pair's digits elsewhere. Each chosen digit must have at least one possible position in the unit.",
     "Dos cifras solo aparecen en las mismas dos casillas de una unidad. Conserva esas cifras y elimina los demás candidatos de esas dos casillas.\n\nSigue las posiciones de dos cifras en una unidad, en vez de buscar listas cortas. Si ambas están limitadas a las mismas dos casillas, deben ocuparlas entre las dos. Los candidatos adicionales de esas casillas se pueden eliminar.\n\nEs el inverso de la pareja desnuda: quitas otras cifras de las dos casillas, no las cifras de la pareja de las demás. Cada cifra elegida debe tener alguna posición posible.",
@@ -2316,7 +2317,7 @@
     "Suivez toutes les positions de deux chiffres dans une unité. S’ils sont limités aux mêmes deux cases, ces cases leur sont réservées. De longues listes peuvent masquer cette réservation.\n\nRetirez des deux cases les chiffres extérieurs à la paire. Chaque chiffre choisi doit avoir au moins une position possible dans l’unité.\n\nLe sens est inverse de la paire nue : ici, on nettoie l’intérieur des deux cases, au lieu d’éliminer les chiffres de la paire à l’extérieur. Leur ordre reste ouvert.",
     "تتبّع جميع مواضع رقمين في وحدة واحدة. إذا انحصرا في الخانتين نفسيهما، فالخانتان محجوزتان لهما، حتى لو أخفت الملاحظات الكثيرة هذا النمط.\n\nاحذف الأرقام الأخرى من الخانتين، مع بقاء موضع ممكن واحد على الأقل لكل رقم مختار. لا يلزم تحديد ترتيب الرقمين.\n\nالاتجاه معاكس للزوج الظاهر: هناك نحذف رقمي الزوج من الخارج، وهنا ننظف داخل الخانتين من المرشحين الآخرين. لا تحذف أحد رقمي الزوج لمجرد غموض موضعه.",
     "Segui tutte le posizioni di due cifre in un’unità. Se sono confinate alle stesse due celle, queste sono riservate a loro. Liste lunghe di note possono nascondere questa riserva.\n\nElimina dalle due celle le cifre esterne alla coppia. Ogni cifra scelta deve avere almeno una posizione possibile nell’unità.\n\nIl verso è opposto alla coppia nuda: qui pulisci l’interno delle celle, anziché togliere le cifre della coppia dall’esterno. Il loro ordine resta da stabilire."
-  ],
+  , "Дві цифри можуть стояти лише в тих самих двох клітинках рядка, стовпця або блока. Ці клітинки зарезервовані для них, тому всіх інших кандидатів у цих клітинках можна прибрати.\n\nЗамість коротких списків кандидатів простеж позиції двох цифр у спільній одиниці. Якщо обидві обмежені тими самими двома клітинками, вони мають зайняти саме їх. Інші цифри в нотатках цих клітинок зайві.\n\nЦе протилежність відкритої пари: тут прибирають інші цифри з двох клітинок, а не цифри пари з решти одиниці. Кожна з вибраних цифр має мати хоча б одне можливе місце."],
   "Trzy pola w jednym wierszu, kolumnie lub kwadracie zawierają łącznie tylko trzy różne cyfry. Każde pole może mieć dwóch lub trzech kandydatów. Te cyfry zajmą te trzy pola, więc usuń je z pozostałych pól tej jednostki.\n\nNie wymagaj identycznych trzech kandydatów w każdym polu. Trzy listy mogą być różne; ważne, by ich suma zawierała dokładnie trzy cyfry. Ponieważ trzy pola w jednej jednostce nie mogą powtarzać liczb, zużyją wszystkie trzy cyfry między sobą.\n\nSkreśl te cyfry wyłącznie w pozostałych polach wspólnej jednostki. Żadna dodatkowa, czwarta cyfra nie może występować w wybranych trzech polach — wtedy ta reguła nie działa.": [
     "Three cells in a unit contain only three different candidates in total. Each cell may contain two or three of them. Remove these digits from the other cells of the unit.\n\nThe three cells do not need identical lists. Their lists may differ; what matters is that their union contains exactly three digits. Since cells in the same unit cannot repeat digits, the three cells use all three digits between them.\n\nRemove those digits only from other cells of their shared unit. An extra fourth digit in any of the three cells breaks this pattern.",
     "Tres casillas contienen en total solo tres candidatos distintos. Cada casilla puede tener dos o tres. Elimínalos de las demás casillas de la unidad.\n\nLas tres casillas no necesitan listas idénticas. Pueden ser distintas; su unión debe contener exactamente tres cifras. Como no pueden repetir cifras en la misma unidad, las tres casillas usarán esas tres cifras entre ellas.\n\nElimínalas solo de otras casillas de la unidad compartida. Una cuarta cifra adicional en cualquiera de las tres rompe el patrón.",
@@ -2326,7 +2327,7 @@
     "Réunissez les candidats de trois cases d’une unité. Les listes peuvent différer, mais leur union doit contenir exactement trois chiffres. Trois cases distinctes doivent prendre trois valeurs distinctes et utilisent donc tout cet ensemble.\n\nÉliminez ces chiffres des autres cases de l’unité partagée. Une case peut n’avoir que deux des trois candidats.\n\nUn quatrième chiffre supplémentaire dans l’une des cases invalide le motif. La proximité des cases ou la ressemblance des listes ne suffit pas.",
     "اجمع مرشحي ثلاث خانات في وحدة. لا يلزم تطابق القوائم، لكن يجب أن يحتوي اتحادها ثلاثة أرقام مختلفة بالضبط. تحتاج الخانات ثلاث قيم مختلفة فتستهلك الأرقام الثلاثة.\n\nاحذف هذه الأرقام من بقية الوحدة المشتركة فقط. قد تحتوي الخانة اثنين من المرشحين الثلاثة لا جميعهم.\n\nوجود رقم رابع إضافي في أي خانة يبطل النمط. مجرد تقارب الخانات أو تشابه القوائم لا يكفي، ولا نحدد ترتيب الأرقام داخل الثلاثية بعد.",
     "Unisci i candidati di tre celle della stessa unità. Le liste possono differire, ma l’unione deve contenere esattamente tre cifre. Tre celle distinte richiedono tre valori diversi e consumano quindi tutto l’insieme.\n\nElimina queste cifre dalle altre celle dell’unità condivisa. Una cella può contenere solo due dei tre candidati.\n\nUna quarta cifra aggiuntiva in qualsiasi cella invalida il motivo. La vicinanza delle celle o la somiglianza delle liste non basta."
-  ],
+  , "Три клітинки одного рядка, стовпця або блока разом містять лише три різні цифри. Кожна клітинка може мати двох або трьох кандидатів. Ці цифри займуть ці три клітинки.\n\nНе вимагай однакових списків у кожній клітинці. Важливо, щоб об’єднання трьох списків містило рівно три цифри. Три клітинки однієї одиниці не можуть повторювати значення, тому використають усі ці цифри між собою.\n\nВиключи ці цифри з інших клітинок спільної одиниці. У вибраних трьох клітинках не має бути жодної четвертої цифри: інакше це правило не працює. Самі клітинки трійки не очищай."],
   "Trzy cyfry mogą występować tylko w tych samych trzech polach wiersza, kolumny lub kwadratu. Można usunąć z tych pól pozostałych kandydatów. Nie każda z tych trzech cyfr musi występować w każdym z trzech pól.\n\nZaznacz wszystkie miejsca trzech wybranych cyfr w jednej jednostce. Łącznie muszą mieścić się w trzech polach, choć poszczególna cyfra nie musi pojawiać się w każdym z nich. Te trzy cyfry muszą gdzieś wystąpić, więc zajmują cały zestaw trzech pól.\n\nUsuń z tych pól kandydatów spoza wybranej trójki. Nie usuwaj cyfr trójki tylko dlatego, że kolejność ich rozmieszczenia nie jest jeszcze znana.": [
     "Three digits occur only within three cells of a unit. Remove other candidates from those cells. Not every digit must occur in every one of the three cells.\n\nMark every position of three chosen digits in one unit. Together they must fit within three cells, although each digit need not occur in every cell. All three digits must appear somewhere, reserving all three cells.\n\nRemove candidates outside the chosen triple from those cells. Keep the triple's own candidates even though their exact arrangement is still unknown.",
     "Tres cifras solo aparecen en tres casillas de una unidad. Elimina de ellas los demás candidatos. No todas las cifras tienen que aparecer en cada casilla.\n\nMarca todas las posiciones de tres cifras en una unidad. En conjunto deben limitarse a tres casillas, aunque cada cifra no aparezca en todas. Las tres deben colocarse, así que reservan esas tres casillas.\n\nElimina de ellas los candidatos ajenos al trío. Conserva los del trío aunque todavía no conozcas su orden.",
@@ -2336,7 +2337,7 @@
     "Marquez toutes les positions de trois chiffres dans une unité. Ensemble, elles doivent tenir dans trois cases ; chaque chiffre n’a pas à figurer dans chaque case. Les trois chiffres doivent apparaître et réservent ces cases.\n\nRetirez de ces cases les candidats extérieurs au triplet. Les longues listes peuvent cacher le motif.\n\nGardez les candidats du triplet malgré l’ordre inconnu. Un ensemble nu élimine vers l’extérieur ; un ensemble caché nettoie les cases de l’intérieur.",
     "حدد جميع مواضع ثلاثة أرقام في وحدة. يجب أن تنحصر مجتمعة في ثلاث خانات، دون اشتراط ظهور كل رقم في كل خانة. الأرقام الثلاثة مطلوبة فتحجز الخانات كلها.\n\nاحذف المرشحين خارج الثلاثية من هذه الخانات. قد تخفي القوائم الطويلة هذا التركيب.\n\nاحتفظ بمرشحي الثلاثية ولو جهلت ترتيبها. المجموعة الظاهرة تحذف إلى الخارج، أما المخفية فتنظف داخل خاناتها. لا تشترط قوائم متطابقة لتطبيق هذه القاعدة.",
     "Segna tutte le posizioni di tre cifre in un’unità. Insieme devono stare in tre celle; non occorre che ogni cifra compaia in ciascuna. Le tre cifre devono essere collocate e riservano quelle celle.\n\nRimuovi dalle celle i candidati esterni alla terzina. Liste lunghe possono nascondere il motivo.\n\nMantieni i candidati della terzina anche se l’ordine è ignoto. Un insieme nudo elimina all’esterno; uno nascosto pulisce le sue celle dall’interno."
-  ],
+  , "Три цифри можуть стояти лише в тих самих трьох клітинках рядка, стовпця або блока. Інших кандидатів із цих клітинок можна прибрати. Не кожна цифра має бути в кожній із трьох клітинок.\n\nПознач усі можливі місця трьох вибраних цифр в одній одиниці. Разом вони мають уміститися в трьох клітинках. Ці три цифри обов’язково десь з’являться, тому займуть увесь набір із трьох клітинок.\n\nПрибери з цих клітинок кандидатів, які не належать до трійки. Не виключай цифри самої трійки лише через те, що точний порядок їх розташування ще невідомий."],
   "Cztery pola w jednej jednostce mają łącznie tylko cztery różne cyfry. Zajmą one te pola, więc można usunąć je z pozostałych pól jednostki.\n\nZasada jest taka sama jak dla nagiej pary i trójki, ale obejmuje cztery pola. Listy mogą mieć różną długość; razem muszą zawierać dokładnie cztery cyfry. Cztery pola jednej jednostki potrzebują czterech różnych wartości, więc żadna z tych cyfr nie zostaje dla pozostałych pól.\n\nZwróć uwagę na kierunek eliminacji: cyfry czwórki usuwasz poza jej polami, we wspólnej jednostce. Nie próbujesz jeszcze rozstrzygać, która cyfra trafia do którego z czterech pól.": [
     "Four cells of a unit contain only four different candidates in total. These digits occupy those cells, so remove them from the other cells of the unit.\n\nThis is the same principle as a naked pair or triple, applied to four cells. Lists may have different lengths, but together contain exactly four digits. Four cells in a unit need four distinct values, leaving none of those digits available elsewhere in that unit.\n\nRemove the quad's digits outside its four cells, within the shared unit. You do not yet need to decide which digit belongs in each of the four cells.",
     "Cuatro casillas contienen en total solo cuatro candidatos distintos. Esas cifras ocuparán esas casillas; elimínalas del resto de la unidad.\n\nEs el mismo principio de la pareja o trío desnudos, aplicado a cuatro casillas. Las listas pueden variar, pero juntas deben contener exactamente cuatro cifras. Las casillas necesitan cuatro valores distintos y reservan esas cifras.\n\nElimina las cifras del cuarteto fuera de sus cuatro casillas, dentro de la unidad compartida. No hace falta decidir aún la cifra de cada casilla.",
@@ -2346,7 +2347,7 @@
     "Les listes de quatre cases doivent réunir exactement quatre chiffres distincts. Elles peuvent avoir des longueurs différentes. Quatre cases d’une unité nécessitent quatre valeurs différentes et réservent ces chiffres.\n\nRetirez-les des autres cases de l’unité commune, jamais de la quartette elle-même. C’est l’extension de la paire et du triplet nus.\n\nLa valeur de chaque case reste inconnue. Un cinquième chiffre distinct dans une liste invalide ce raisonnement : vérifiez l’union complète des candidats.",
     "يجب أن تضم قوائم أربع خانات أربعة أرقام مختلفة بالضبط، مع جواز اختلاف طول القوائم. تحتاج خانات الوحدة أربع قيم مختلفة فتُحجز هذه الأرقام لها.\n\nاحذفها من الخانات الأخرى في الوحدة المشتركة، لا من الرباعية نفسها. هذا امتداد لفكرة الزوج والثلاثية الظاهرين.\n\nلا يحدد ذلك قيمة كل خانة بعد. ظهور رقم خامس مختلف في إحدى القوائم يبطل الاستنتاج، لذا افحص اتحاد المرشحين كله لا شكل الخانات وحده.",
     "Le liste di quattro celle devono riunire esattamente quattro cifre distinte. Possono avere lunghezze diverse. Quattro celle di un’unità richiedono quattro valori distinti e riservano quelle cifre.\n\nEliminale dalle altre celle dell’unità comune, non dalla quartina stessa. È l’estensione della coppia e della terzina nude.\n\nIl valore di ogni cella resta ignoto. Una quinta cifra diversa in una lista invalida il ragionamento: controlla l’intera unione dei candidati."
-  ],
+  , "Чотири клітинки однієї одиниці разом мають лише чотири різні цифри. Вони займуть ці клітинки, тому ці цифри можна прибрати з решти одиниці.\n\nПринцип такий самий, як для відкритої пари й трійки, але охоплює чотири клітинки. Списки можуть мати різну довжину; разом вони мають містити рівно чотири цифри. Клітинки потребують чотирьох різних значень і використають усі ці цифри.\n\nСтеж за напрямком виключення: цифри четвірки прибирають поза її клітинками, у спільній одиниці. Поки що не потрібно визначати, яка цифра стоятиме в кожній із чотирьох клітинок."],
   "Cztery cyfry występują wyłącznie w czterech polach jednostki. Usuń z tych czterech pól pozostałych kandydatów.\n\nSkup się na czterech cyfrach i sprawdź wszystkie ich pozycje w jednej jednostce. Jeśli razem zajmują tylko cztery pola, te pola są w całości dla nich zarezerwowane. Rozbudowane listy notatek mogą ukrywać ten układ.\n\nCzyść same cztery pola z pozostałych cyfr. W przeciwieństwie do nagiej czwórki wybranych cyfr nie skreślasz tutaj z zewnętrznych pól — warunek już mówi, że nie mają tam swoich miejsc.": [
     "Four digits occur only within four cells of a unit. Remove all other candidates from those four cells.\n\nFocus on four digits and check all their positions in one unit. If together they occupy only four cells, those cells are fully reserved for them. Long candidate lists can hide this arrangement.\n\nRemove other digits from the four cells themselves. Unlike a naked quad, this rule cleans inside the set: the chosen digits already have no positions outside it in the unit.",
     "Cuatro cifras solo aparecen en cuatro casillas de una unidad. Elimina todos los demás candidatos de esas cuatro casillas.\n\nCéntrate en cuatro cifras y revisa todas sus posiciones en una unidad. Si juntas solo ocupan cuatro casillas, estas quedan reservadas. Las listas largas pueden ocultar el patrón.\n\nBorra las otras cifras de esas cuatro casillas. A diferencia del cuarteto desnudo, aquí limpias el interior del conjunto: las cifras elegidas ya no tienen posiciones fuera de él.",
@@ -2356,7 +2357,7 @@
     "Repérez toutes les positions de quatre chiffres dans une unité. S’ils sont ensemble limités à quatre cases, celles-ci leur sont réservées. Les notes supplémentaires peuvent masquer la structure.\n\nSupprimez les autres chiffres à l’intérieur de ces quatre cases. Chaque chiffre choisi doit avoir une place possible ; les listes n’ont pas à être identiques.\n\nContrairement au quadruplet nu, l’élimination vise ici l’intérieur. Les chiffres choisis n’ont déjà aucune position extérieure dans l’unité.",
     "ابحث عن جميع مواضع أربعة أرقام في وحدة. إن انحصرت مجتمعة في أربع خانات، حُجزت الخانات لها. قد تخفي الملاحظات الإضافية هذا التركيب.\n\nامسح الأرقام الأخرى من داخل الخانات الأربع. يجب أن يملك كل رقم مختار موضعاً ممكناً، ولا يلزم تطابق القوائم.\n\nالفرق عن الرباعية الظاهرة هو اتجاه الحذف: الأرقام المختارة لا تملك مواضع خارجية أصلاً في الوحدة، لذلك نحذف المرشحين الآخرين من داخل المجموعة نفسها.",
     "Trova tutte le posizioni di quattro cifre in un’unità. Se sono confinate insieme a quattro celle, queste sono riservate a loro. Le note aggiuntive possono nascondere la struttura.\n\nElimina le altre cifre dentro le quattro celle. Ogni cifra scelta deve avere una posizione possibile; non servono liste identiche.\n\nDiversamente dalla quartina nuda, qui si elimina all’interno. Le cifre scelte non hanno già alcuna posizione esterna nell’unità."
-  ],
+  , "Чотири цифри трапляються лише в чотирьох клітинках однієї одиниці. З цих чотирьох клітинок можна прибрати всіх інших кандидатів.\n\nЗосередься на чотирьох цифрах і перевір усі їхні позиції в одному рядку, стовпці або блоці. Якщо разом вони займають лише чотири клітинки, ці клітинки повністю зарезервовані для них. Довгі списки нотаток можуть приховувати цей візерунок.\n\nОчищай саме ці чотири клітинки від решти цифр. На відміну від відкритої четвірки, тут не прибирають вибрані цифри із зовнішніх клітинок: умова вже означає, що там їх немає."],
   "W dwóch wierszach dana cyfra ma dokładnie po dwa możliwe miejsca, w tych samych dwóch kolumnach. Powstaje prostokąt: cyfra musi zająć przeciwległe rogi, więc usuń ją z pozostałych pól obu kolumn. Reguła działa też po zamianie wierszy z kolumnami.\n\nWybierz jedną cyfrę i znajdź dwa wiersze, w których ma ona po dwa miejsca. Obie pary muszą leżeć w tych samych kolumnach. Gdy w pierwszym wierszu wybierzesz jeden róg, drugi wiersz musi użyć przeciwnego rogu, bo kolumna nie może powtórzyć cyfry.\n\nNiezależnie od wyboru obie kolumny zostaną zajęte przez tę cyfrę w tych dwóch wierszach. Usuń ją z pozostałych pól obu kolumn, zachowując cztery rogi. Przy zamianie wierszy z kolumnami odwraca się też kierunek eliminacji.": [
     "In two rows a digit has exactly two positions, in the same two columns. It occupies opposite corners; remove it from the other cells of those columns. Rows and columns may be exchanged.\n\nChoose one digit and find two rows with two positions each, aligned in the same columns. If the first row uses one corner, the second must use the opposite corner because a column cannot repeat the digit.\n\nEither choice occupies both columns within those two rows. Remove the digit from other cells in those columns, keeping the four corners. When rows and columns are exchanged, the elimination direction also reverses.",
     "Una cifra tiene dos posiciones en cada una de dos filas, en las mismas dos columnas. Ocupa esquinas opuestas; elimínala del resto de esas columnas. También funciona intercambiando filas y columnas.\n\nElige una cifra y dos filas con dos posiciones cada una en las mismas columnas. Si una fila usa una esquina, la otra debe usar la opuesta, porque una columna no puede repetir la cifra.\n\nCualquiera de las dos opciones ocupa ambas columnas dentro de esas filas. Elimina la cifra de las demás casillas de esas columnas y conserva las cuatro esquinas. Al intercambiar filas y columnas se invierte también la eliminación.",
@@ -2366,7 +2367,7 @@
     "Choisissez un chiffre ayant exactement deux places dans chacune de deux lignes, aux mêmes colonnes. Si la première ligne prend un coin, la seconde doit prendre le coin opposé pour éviter un doublon dans la colonne.\n\nDans les deux cas, les deux colonnes sont occupées par ces lignes. Éliminez le chiffre ailleurs dans ces colonnes, en conservant les quatre coins.\n\nOn peut échanger lignes et colonnes, ce qui inverse l’élimination. Un rectangle visuel ne suffit pas : les lignes de base ne doivent avoir aucune autre position.",
     "اختر رقماً له موضعان بالضبط في كل من صفين، ضمن العمودين نفسيهما. إذا اختار الصف الأول زاوية، وجب على الثاني اختيار الزاوية المقابلة لتجنب تكرار الرقم في العمود.\n\nفي الحالتين يشغل الصفان العمودين، فيُحذف الرقم من بقية خاناتهما مع الاحتفاظ بالأركان الأربعة.\n\nيمكن تبديل الصفوف بالأعمدة فينعكس اتجاه الحذف. لا يكفي شكل المستطيل وحده؛ يجب ألا تكون للرقم مواضع إضافية في خطي الأساس.",
     "Scegli una cifra con esattamente due posti in ciascuna di due righe, nelle stesse colonne. Se la prima riga prende un angolo, la seconda deve prendere quello opposto per evitare una ripetizione nella colonna.\n\nIn entrambi i casi le due colonne sono occupate da quelle righe. Elimina la cifra altrove nelle colonne, conservando i quattro angoli.\n\nPuoi scambiare righe e colonne, invertendo anche l’eliminazione. Il solo rettangolo visivo non basta: le linee di base non devono avere altri posti."
-  ],
+  , "У двох рядках цифра має рівно по два можливі місця в тих самих двох стовпцях. Утворюється прямокутник. Цифра займе протилежні кути, тому її можна прибрати з решти обох стовпців.\n\nВибери одну цифру й знайди два рядки з двома місцями для неї. Пари мають лежати в однакових стовпцях. Якщо в першому рядку вибрати один кут, у другому доведеться вибрати протилежний, бо стовпець не може повторювати цифру.\n\nЗа будь-якого вибору обидва стовпці вже зайняті цією цифрою в цих двох рядках. Збережи чотири кути, виключай поза ними. Рядки й стовпці можна поміняти ролями; напрямок виключення теж зміниться."],
   "W trzech wierszach wszystkie miejsca dla jednej cyfry mieszczą się w tych samych trzech kolumnach. Usuń tę cyfrę z innych pól tych kolumn. Działa też z zamienionymi wierszami i kolumnami.\n\nWybierz jedną cyfrę. W trzech wybranych wierszach jej wszystkie pozycje muszą łącznie mieścić się w trzech kolumnach. Każdy z tych wierszy potrzebuje jednego wystąpienia cyfry, a żadna kolumna nie może dostać jej dwa razy. Trzy wystąpienia zajmą więc wszystkie trzy kolumny.\n\nSkreśl cyfrę z tych kolumn poza trzema wierszami tworzącymi układ. Nie jest wymagany pełny prostokąt ani taka sama liczba kandydatów w każdym wierszu. Ta aplikacja rozpoznaje podstawową odmianę bez płetw.": [
     "In three rows all positions for a digit lie within the same three columns. Remove the digit from other cells in those columns. Also works with rows and columns exchanged.\n\nChoose one digit. Across three selected rows, all its positions must fit into three columns. Each row needs one occurrence and no column can receive it twice. The three occurrences therefore occupy all three columns.\n\nRemove the digit from those columns outside the three source rows. A full rectangle or identical candidate counts in each row are not required. This app detects the basic, unfinned version.",
     "En tres filas, todas las posiciones de una cifra están en las mismas tres columnas. Elimínala del resto de esas columnas. También funciona intercambiando filas y columnas.\n\nElige una cifra. En tres filas, todas sus posiciones deben caber en tres columnas. Cada fila necesita una aparición y ninguna columna puede recibirla dos veces. Las tres apariciones ocuparán las tres columnas.\n\nElimina la cifra de esas columnas fuera de las filas del patrón. No hace falta un rectángulo completo ni igual número de candidatos en cada fila. La aplicación detecta la variante básica sin aletas.",
@@ -2376,7 +2377,7 @@
     "Pour un chiffre, toutes les positions de trois lignes choisies doivent tenir dans trois colonnes. Chaque ligne exige une occurrence et aucune colonne n’en accepte deux : les trois colonnes seront donc occupées.\n\nÉliminez le chiffre dans ces colonnes hors des trois lignes de base. Le raisonnement fonctionne aussi en orientation inverse.\n\nNi rectangle complet ni nombre égal de candidats par ligne ne sont requis. Toutes les positions des lignes choisies doivent être incluses. L’application reconnaît la forme simple, sans nageoire.",
     "لرقم واحد، يجب أن تنحصر جميع مواضع ثلاثة صفوف مختارة في ثلاثة أعمدة. كل صف يحتاج ظهوراً واحداً، ولا يقبل العمود ظهورين، فتُشغل الأعمدة الثلاثة كلها.\n\nاحذف الرقم من هذه الأعمدة خارج صفوف الأساس. يعمل المنطق نفسه بعد تبديل الصفوف والأعمدة.\n\nلا يلزم مستطيل كامل ولا عدد متساوٍ من المرشحين في كل صف، لكن يجب شمول جميع مواضع الصفوف المختارة. التطبيق يدعم الشكل الأساسي دون زعانف.",
     "Per una cifra, tutte le posizioni di tre righe scelte devono stare in tre colonne. Ogni riga richiede un’occorrenza e nessuna colonna ne ammette due: saranno quindi occupate tutte e tre.\n\nElimina la cifra dalle colonne fuori dalle tre righe di base. Il ragionamento vale anche nell’orientamento inverso.\n\nNon servono un rettangolo completo o uguali quantità di candidati per riga. Vanno incluse tutte le posizioni delle righe scelte. L’app riconosce la forma semplice, senza pinne."
-  ],
+  , "У трьох рядках усі місця однієї цифри лежать у тих самих трьох стовпцях. Виключи цю цифру з інших клітинок цих стовпців. Рядки та стовпці можна поміняти ролями.\n\nВибери одну цифру. Усі її позиції в трьох вибраних рядках разом мають уміщатися в трьох стовпцях. Кожен рядок потребує одного входження, а жоден стовпець не може отримати цифру двічі. Отже, будуть зайняті всі три стовпці.\n\nВиключай цифру в цих стовпцях поза трьома вихідними рядками. Повний прямокутник чи однакова кількість кандидатів у кожному рядку не потрібні. Застосунок розпізнає базовий різновид без плавців."],
   "W czterech wierszach wszystkie miejsca dla jednej cyfry mieszczą się w tych samych czterech kolumnach. Usuń tę cyfrę z innych pól tych kolumn. Działa też z zamienionymi wierszami i kolumnami.\n\nTu rozumowanie obejmuje cztery wiersze i cztery kolumny dla jednej cyfry. Wszystkie możliwości w wybranych wierszach muszą mieścić się w tych czterech kolumnach. Cztery wymagane wystąpienia nie mogą współdzielić kolumny, więc zajmą każdą z nich.\n\nEliminuj cyfrę w tych kolumnach poza wierszami źródłowymi. Liczy się wspólne ograniczenie wszystkich czterech wierszy, nie sam wizualny kształt rysunku. W tej aplikacji jest to podstawowa odmiana bez płetw; wiersze i kolumny można zamienić.": [
     "In four rows all positions for a digit lie within the same four columns. Remove the digit from other cells in those columns. Also works with rows and columns exchanged.\n\nHere one digit is restricted across four rows and four columns. All positions in the selected rows must lie in those four columns. The four required occurrences cannot share a column, so each column is occupied.\n\nEliminate the digit in those columns outside the source rows. The joint restriction matters, not the visual shape of the pattern. This app supports the basic unfinned form; rows and columns can be exchanged.",
     "En cuatro filas, todas las posiciones de una cifra están en las mismas cuatro columnas. Elimínala del resto de esas columnas. También funciona intercambiando filas y columnas.\n\nUna cifra queda restringida en cuatro filas a cuatro columnas. Todas las posiciones de esas filas deben estar en esas columnas. Las cuatro apariciones necesarias no pueden compartir columna, así que ocuparán las cuatro.\n\nElimina la cifra de esas columnas fuera de las filas fuente. Importa la restricción conjunta, no la forma visual. La aplicación admite la variante básica sin aletas y su orientación inversa.",
@@ -2386,7 +2387,7 @@
     "Pour un chiffre, toutes les positions de quatre lignes doivent se limiter à quatre colonnes. Chaque ligne exige une occurrence dans une colonne distincte : les quatre colonnes sont donc occupées.\n\nÉliminez le candidat dans ces colonnes hors des lignes de base. Les positions exactes à l’intérieur du motif restent inconnues.\n\nC’est la restriction commune des quatre lignes qui compte, pas la forme du dessin. Lignes et colonnes sont interchangeables. L’application traite la forme simple, sans nageoire.",
     "لرقم واحد، تنحصر كل مواضع أربعة صفوف في أربعة أعمدة. تحتاج الصفوف أربع مرات في أعمدة مختلفة، ولذلك تُشغل الأعمدة الأربعة كلها.\n\nاحذف المرشح من تلك الأعمدة خارج صفوف الأساس. لا يحدد هذا الموضع الدقيق داخل النمط أو قيمة كل خانة بعد.\n\nالعبرة بالقيد المشترك للصفوف الأربعة، لا بالشكل المرئي. يمكن تبديل الصفوف بالأعمدة. يدعم التطبيق الشكل الأساسي دون زعانف أو امتدادات إضافية.",
     "Per una cifra, tutte le posizioni di quattro righe devono limitarsi a quattro colonne. Ogni riga richiede un’occorrenza in una colonna distinta: sono quindi occupate tutte e quattro.\n\nElimina il candidato nelle colonne fuori dalle righe di base. Le posizioni precise all’interno del motivo restano ignote.\n\nConta il vincolo comune delle quattro righe, non la forma del disegno. Righe e colonne sono intercambiabili. L’app tratta la forma semplice, senza pinne."
-  ],
+  , "У чотирьох рядках усі місця однієї цифри лежать у тих самих чотирьох стовпцях. Виключи її з інших клітинок цих стовпців. Рядки та стовпці можна поміняти ролями.\n\nМіркування охоплює чотири рядки й чотири стовпці для однієї цифри. Усі можливості у вибраних рядках мають міститися в цих чотирьох стовпцях. Чотири необхідні входження не можуть ділити стовпець, тому займуть кожен із них.\n\nВиключай цифру поза вихідними рядками. Важливе спільне обмеження всіх чотирьох рядків, а не лише вигляд фігури. Тут підтримується базовий різновид без плавців; для зворотного випадку поміняй лінії ролями."],
   "Centrum ma parę XY, a dwa widzące je skrzydła pary XZ i YZ. Bez względu na cyfrę centrum jedno skrzydło ma Z, więc usuń Z z pól widzących oba skrzydła.\n\nLitery X, Y i Z oznaczają trzy różne cyfry. Centrum widzi oba skrzydła, czyli współdzieli z każdym wiersz, kolumnę lub blok; skrzydła nie muszą widzieć się wzajemnie. Gdy centrum przyjmie X, skrzydło XZ musi przyjąć Z. Gdy centrum przyjmie Y, skrzydło YZ musi przyjąć Z.\n\nW obu przypadkach jedno ze skrzydeł zawiera Z. Z można więc usunąć tylko z pól widzących oba skrzydła. Nie trzeba wiedzieć, które skrzydło ostatecznie przyjmie Z.": [
     "The pivot has XY and sees two wings containing XZ and YZ. Whichever digit the pivot takes, one wing contains Z. Remove Z from cells that see both wings.\n\nX, Y and Z represent three different digits. The pivot sees both wings, meaning it shares a row, column or box with each; the wings need not see each other. If the pivot is X, the XZ wing must be Z. If it is Y, the YZ wing must be Z.\n\nIn either case one wing contains Z. Remove Z only from cells seeing both wings. You do not need to decide which wing will actually hold Z.",
     "El pivote tiene XY y ve dos alas XZ e YZ. Sea cual sea su valor, un ala contiene Z. Elimina Z de las casillas que ven ambas alas.\n\nX, Y y Z representan tres cifras distintas. El pivote ve ambas alas: comparte fila, columna o bloque con cada una. Las alas no necesitan verse. Si el pivote es X, el ala XZ será Z; si es Y, el ala YZ será Z.\n\nEn ambos casos un ala contiene Z. Elimina Z solo de las casillas que ven ambas alas. No necesitas saber qué ala tendrá finalmente Z.",
@@ -2396,7 +2397,7 @@
     "X, Y et Z sont trois chiffres distincts. Le pivot XY voit deux ailes XZ et YZ, par ligne, colonne ou bloc partagé. Les ailes n’ont pas besoin de se voir mutuellement.\n\nSi le pivot vaut X, l’aile XZ vaut Z. S’il vaut Y, l’aile YZ vaut Z. Dans les deux cas, au moins une aile contient Z.\n\nÉliminez donc Z uniquement des autres cases voyant les deux ailes. Ne décidez pas encore laquelle contient Z. Voir seulement une aile ou le pivot ne suffit pas.",
     "تمثل X وY وZ أرقاماً مختلفة. المحور XY يرى جناحين XZ وYZ بمشاركة صف أو عمود أو مربع، ولا يلزم أن يرى الجناحان بعضهما.\n\nإذا كان المحور X صار جناح XZ هو Z، وإذا كان Y صار جناح YZ هو Z. في الحالتين يحتوي أحد الجناحين Z على الأقل.\n\nاحذف Z فقط من الخانات الأخرى التي ترى الجناحين معاً. لا تحدد بعد أيهما يحمل Z؛ رؤية جناح واحد أو المحور وحده لا تكفي للحذف.",
     "X, Y e Z sono tre cifre distinte. Il perno XY vede due ali XZ e YZ attraverso una riga, colonna o riquadro comune. Le ali non devono necessariamente vedersi tra loro.\n\nSe il perno è X, l’ala XZ diventa Z. Se è Y, l’ala YZ diventa Z. In ogni caso almeno un’ala contiene Z.\n\nElimina Z solo dalle altre celle che vedono entrambe le ali. Non decidere quale contenga Z. Vedere solo un’ala o il perno non basta."
-  ],
+  , "Центр має пару XY, а два крила, що бачать його, — пари XZ і YZ. Незалежно від цифри центру одне крило міститиме Z. Прибери Z з клітинок, що бачать обидва крила.\n\nX, Y і Z — три різні цифри. Центр має спільний рядок, стовпець або блок із кожним крилом; самі крила можуть не бачити одне одного. Якщо центр вибирає X, крило XZ отримує Z. Якщо центр вибирає Y, крило YZ отримує Z.\n\nВ обох випадках одне з крил містить Z. Виключення дозволене лише в клітинках, що бачать обидва крила. Не потрібно визначати, яке саме крило зрештою отримає Z, і не можна довільно виключати інших кандидатів."],
   "Centrum ma XYZ, a widzące je skrzydła XZ i YZ. Usuń Z tylko z pól widzących wszystkie trzy pola: centrum i oba skrzydła.\n\nRozpatrz trzy możliwości centrum. Gdy wybierze Z, Z jest w centrum. Gdy wybierze X, skrzydło XZ zostaje z Z; gdy wybierze Y, skrzydło YZ zostaje z Z. Za każdym razem Z wystąpi w którymś z trzech pól.\n\nDlatego cel eliminacji musi widzieć nie tylko oba skrzydła, lecz także centrum. To ważna różnica względem XY-Wing: pole widzące same skrzydła nie zawsze pozwala usunąć Z.": [
     "The pivot has XYZ and sees two wings XZ and YZ. Remove Z only from cells that see all three cells: the pivot and both wings.\n\nConsider the pivot's three possibilities. If it is Z, Z is in the pivot. If it is X, the XZ wing becomes Z; if it is Y, the YZ wing becomes Z. Every case places Z in one of the three cells.\n\nA target must therefore see the pivot as well as both wings. This is the key difference from XY-Wing: seeing only the two wings is not always sufficient to remove Z.",
     "El pivote tiene XYZ y ve dos alas XZ e YZ. Elimina Z solo de las casillas que ven al pivote y a ambas alas.\n\nConsidera las tres opciones del pivote. Si es Z, Z está en el centro. Si es X, el ala XZ será Z; si es Y, el ala YZ será Z. En todos los casos Z ocupa alguna de las tres casillas.\n\nLa casilla objetivo debe ver al pivote y a ambas alas. Es la diferencia clave con XY-Wing: ver solo las alas no siempre basta para eliminar Z.",
@@ -2406,7 +2407,7 @@
     "Le pivot XYZ voit deux ailes XZ et YZ. S’il vaut Z, Z est au centre. S’il vaut X, l’aile XZ vaut Z ; s’il vaut Y, l’aile YZ vaut Z.\n\nChaque possibilité place donc Z dans l’une des trois cases. Une autre case ne peut exclure Z que si elle voit les trois.\n\nC’est la différence essentielle avec XY-Wing : voir les deux ailes ne suffit pas, il faut aussi voir le pivot. Oublier que le pivot peut lui-même valoir Z rendrait l’élimination incorrecte.",
     "المحور XYZ يرى جناحين XZ وYZ. إن كان Z فالرقم في المركز، وإن كان X صار جناح XZ هو Z، وإن كان Y صار جناح YZ هو Z.\n\nكل احتمال يضع Z في إحدى الخانات الثلاث. لا يمكن لخانة أخرى استبعاده إلا إذا كانت ترى الثلاث جميعاً.\n\nهذا هو الفرق الأساسي عن XY-Wing: رؤية الجناحين وحدهما لا تكفي، بل يجب رؤية المحور أيضاً. تجاهل احتمال أن يحمل المحور Z يؤدي إلى حذف غير صحيح.",
     "Il perno XYZ vede due ali XZ e YZ. Se vale Z, Z è al centro. Se vale X, l’ala XZ vale Z; se vale Y, l’ala YZ vale Z.\n\nOgni possibilità colloca quindi Z in una delle tre celle. Un’altra cella può escludere Z solo se le vede tutte e tre.\n\nÈ la differenza essenziale rispetto a XY-Wing: vedere le due ali non basta, bisogna vedere anche il perno. Dimenticare che il perno stesso può valere Z renderebbe errata l’eliminazione."
-  ],
+  , "Центр має XYZ, а крила, що бачать його, — XZ і YZ. Прибери Z лише з клітинок, що бачать усі три клітинки: центр та обидва крила.\n\nРозглянь три варіанти центру. Якщо він вибирає Z, потрібна цифра вже в центрі. Якщо X — крило XZ отримує Z; якщо Y — крило YZ отримує Z. У кожному випадку одна з цих трьох клітинок містить Z.\n\nТому ціль виключення має бачити не лише обидва крила, а й центр. Це важлива відмінність від XY-Wing: клітинки, що бачать лише крила, не завжди дозволяють виключити Z. Зберігай кандидатів у самій фігурі."],
   "Dwa pola z taką samą parą kandydatów są połączone silnym połączeniem jednej cyfry: w jednostce są dla niej tylko dwa miejsca. Jeden koniec widzi pierwszą parę, drugi drugą. Druga cyfra pary musi wystąpić w co najmniej jednym z tych pól; usuń ją ze wspólnych sąsiadów.\n\nSilne połączenie oznacza tutaj, że wybrana cyfra ma w jednej jednostce dokładnie dwa miejsca i jedno z nich musi być prawdziwe. Wyobraź sobie, że obie jednakowe pary wybierają cyfrę łączącą zamiast drugiej cyfry. Każda para wykluczy wtedy inny koniec silnego połączenia, więc nie zostanie żadne miejsce dla tej cyfry — sprzeczność.\n\nCo najmniej jedna para musi zatem użyć drugiej cyfry. Usuń tę drugą cyfrę ze wspólnych sąsiadów dwóch pól z parą, a nie automatycznie z otoczenia całego połączenia.": [
     "Two non-peer cells have the same candidate pair. A conjugate link for one digit connects them: each cell sees a different end of the link. The other digit must occur in at least one pair cell; remove it from their common peers.\n\nA strong link here means the linking digit has exactly two positions in a unit and one must be true. Suppose both identical pairs chose the linking digit rather than their other digit. Each would eliminate a different end of the strong link, leaving no position for that digit: a contradiction.\n\nAt least one pair cell must therefore take the other digit. Remove that other digit from common peers of the two pair cells, not automatically from every neighbor of the whole link.",
     "Dos casillas que no se ven tienen la misma pareja. Un enlace fuerte de una cifra las conecta: cada una ve un extremo distinto. La otra cifra debe estar en alguna de ellas; elimínala de sus vecinos comunes.\n\nAquí un enlace fuerte significa que la cifra de enlace tiene exactamente dos posiciones en una unidad y alguna debe ser verdadera. Si ambas parejas eligieran esa cifra, cada una eliminaría un extremo distinto del enlace. La cifra quedaría sin posición: una contradicción.\n\nAlguna casilla de la pareja debe tener la otra cifra. Elimínala de los vecinos comunes de esas dos casillas, no automáticamente de todos los vecinos del enlace.",
@@ -2416,7 +2417,7 @@
     "Deux cases qui ne se voient pas portent la même paire. Un chiffre de cette paire n’a que deux places dans une unité : c’est un lien fort. Chaque case de paire voit une extrémité différente.\n\nSi les deux paires choisissaient le chiffre de liaison, elles excluraient les deux extrémités du lien, laissant ce chiffre sans place : contradiction.\n\nAu moins une paire prend donc l’autre chiffre. Éliminez cet autre chiffre des voisins communs des deux cases de paire, pas de tous les voisins du lien.",
     "خانتان لا تريان بعضهما تحملان الزوج نفسه. لأحد رقميه موضعان فقط في وحدة، فيشكلان رابطاً قوياً. ترى كل خانة زوج طرفاً مختلفاً منه.\n\nلو اختارت خانتا الزوج رقم الربط لحذفتا طرفي الرابط القوي، فلا يبقى للرقم موضع: تناقض.\n\nإذن تحمل إحدى خانتي الزوج الرقم الآخر على الأقل. احذفه من الخانات التي ترى خانتي الزوج معاً، لا من جميع جيران الرابط. لا يلزم معرفة أي خانة تحمل الرقم الآخر فعلياً.",
     "Due celle che non si vedono hanno la stessa coppia. Una cifra della coppia ha solo due posti in un’unità: è un legame forte. Ciascuna cella della coppia vede un’estremità diversa.\n\nSe entrambe scegliessero la cifra di collegamento, escluderebbero tutte e due le estremità del legame, lasciando la cifra senza posto: contraddizione.\n\nAlmeno una prende quindi l’altra cifra. Eliminala dai vicini comuni delle due celle della coppia, non da tutti i vicini del legame."
-  ],
+  , "Дві клітинки з однаковою парою кандидатів пов’язані сильним зв’язком однієї цифри. В одиниці для неї є лише два місця: один кінець бачить першу пару, інший — другу. Друга цифра пари має бути хоча б в одній парі.\n\nСильний зв’язок означає, що одне з двох місць обов’язково істинне. Уяви, що обидві пари вибрали цифру зв’язку. Кожна заборонила б інший кінець цього зв’язку, і для цифри не залишилося б місця. Це суперечність.\n\nОтже, принаймні одна пара використовує другу цифру. Прибери її зі спільних сусідів двох клітинок із парою. Не виключай її автоматично з усього оточення сильного зв’язку."],
   "Tylko dla planszy z potwierdzonym jednym rozwiązaniem: cztery rogi prostokąta w dwóch blokach nie mogą tworzyć tej samej dwucyfrowej pary. Jeśli trzy rogi są taką parą, usuń obie cyfry z czwartego.\n\nCztery narożniki muszą należeć do dwóch wierszy, dwóch kolumn i dokładnie dwóch bloków. Gdyby wszystkie używały wyłącznie tej samej pary, można byłoby zamienić cyfry miejscami w całym prostokącie bez naruszenia tych jednostek. Otrzymalibyśmy drugie rozwiązanie.\n\nPrzy potwierdzonym jednym rozwiązaniu czwarty róg musi więc wybrać cyfrę spoza pary. Usuń z niego obie cyfry pary, ale nie zgaduj, która z dodatkowych jest poprawna. Bez założenia jednoznaczności ten argument nie jest dozwolony.": [
     "Only for a board verified to have one solution: four corners in two boxes cannot all have the same pair. If three corners contain only that pair, remove both digits from the fourth.\n\nThe corners must occupy two rows, two columns and exactly two boxes. If all four used only the same pair, the two digits could be swapped throughout the rectangle without breaking those units, producing a second solution.\n\nFor a verified unique puzzle, the fourth corner must therefore take a digit outside the pair. Remove both pair digits from it, but do not guess which extra candidate is correct. Without verified uniqueness, this argument is not allowed.",
     "Solo con solución única verificada: cuatro esquinas en dos bloques no pueden contener la misma pareja. Si tres tienen solo esa pareja, elimina ambas cifras de la cuarta.\n\nLas esquinas deben ocupar dos filas, dos columnas y exactamente dos bloques. Si las cuatro usaran solo la misma pareja, se podrían intercambiar las cifras en todo el rectángulo sin romper las unidades, creando otra solución.\n\nCon solución única verificada, la cuarta esquina debe elegir una cifra ajena a la pareja. Elimina ambas cifras de la pareja, sin adivinar qué candidato adicional es correcto. Sin unicidad, el argumento no es válido.",
@@ -2426,7 +2427,7 @@
     "Les quatre coins occupent deux lignes, deux colonnes et exactement deux blocs. Trois coins ont seulement la même paire. Si le quatrième prenait aussi cette paire, les chiffres seraient échangeables dans le rectangle, créant une seconde solution.\n\nL’application vérifie d’abord l’unicité. Le quatrième coin doit alors prendre un chiffre extérieur à la paire : retirez-en les deux chiffres.\n\nNe devinez pas quel candidat supplémentaire est correct. Sans unicité vérifiée, le raisonnement est interdit. La simple forme rectangulaire ne suffit pas.",
     "تقع الأركان في صفين وعمودين ومربعين بالضبط، ولثلاثة منها الزوج نفسه فقط. لو أخذ الرابع الزوج أيضاً لأمكن تبديل الرقمين في المستطيل والحصول على حل ثانٍ.\n\nيتحقق التطبيق من الحل الفريد أولاً. عندئذ يجب أن يأخذ الركن الرابع رقماً خارج الزوج، فيُحذف منه رقما الزوج.\n\nلا تخمّن أي مرشح إضافي صحيح. لا يصح هذا الاستدلال دون إثبات التفرد، ولا يكفي شكل المستطيل وحده لتطبيقه. تبقى البدائل الإضافية حتى تُثبتها خطوة أخرى.",
     "I quattro angoli occupano due righe, due colonne ed esattamente due riquadri. Tre hanno soltanto la stessa coppia. Se anche il quarto la prendesse, le cifre sarebbero scambiabili nel rettangolo, creando una seconda soluzione.\n\nL’app verifica prima l’unicità. Il quarto angolo deve allora scegliere una cifra esterna alla coppia: elimina da esso entrambe le cifre della coppia.\n\nNon indovinare quale candidato aggiuntivo sia corretto. Senza unicità verificata il ragionamento non è valido. Il solo rettangolo non basta."
-  ],
+  , "Лише за підтвердженого єдиного розв’язку: чотири кути прямокутника у двох блоках не можуть складатися з тієї самої пари. Якщо три кути мають цю пару, прибери обидві її цифри з четвертого.\n\nКути мають належати двом рядкам, двом стовпцям і рівно двом блокам. Якби всі чотири використовували лише одну пару, можна було б поміняти її цифри місцями в усьому прямокутнику без порушення обмежень. Це дало б другий розв’язок.\n\nТому четвертий кут має вибрати цифру поза парою. Прибери обидві цифри пари, але не вгадуй, яка додаткова цифра правильна. Без підтвердження однозначності цей доказ застосовувати не можна."],
   "Dwa rogi prostokąta są tą samą parą, a dwa pozostałe mają dodatkowo tę samą trzecią cyfrę. Przy potwierdzonej jednoznaczności co najmniej jeden z dodatkowych rogów musi zawierać tę cyfrę. Usuń ją ze wspólnych sąsiadów tych rogów.\n\nDwa rogi z dodatkową cyfrą są w tej odmianie w jednej jednostce. Gdyby żaden nie wybrał dodatkowej cyfry, wszystkie cztery rogi korzystałyby tylko z pary i powstałby zamienny prostokąt z dwoma rozwiązaniami.\n\nPrzynajmniej jeden z tych dwóch rogów musi więc zawierać dodatkową cyfrę. Każde inne pole widzące oba rogi nie może jej zawierać, niezależnie od tego, który róg ją dostanie. Nie usuwaj jej z samych rogów.": [
     "Two corners have the same pair and the other two also share one extra digit. With verified uniqueness, at least one extra corner must take that extra digit. Remove it from their common peers.\n\nIn this variant the two extra corners share a unit. If neither took the extra digit, all four corners would use only the pair, creating the swappable rectangle with two solutions.\n\nAt least one extra corner must therefore contain the extra digit. Any other cell seeing both corners cannot contain it, regardless of which corner takes it. Keep the extra candidate in the corners themselves.",
     "Dos esquinas tienen la misma pareja y las otras dos una misma cifra adicional. Con unicidad verificada, alguna de estas últimas debe contener la cifra adicional. Elimínala de sus vecinos comunes.\n\nEn esta variante las dos esquinas adicionales comparten una unidad. Si ninguna usara la cifra adicional, las cuatro usarían solo la pareja y formarían el rectángulo intercambiable con dos soluciones.\n\nAlguna debe contener la cifra adicional. Cualquier otra casilla que vea ambas no puede tenerla, sea cual sea la esquina que la reciba. Conserva ese candidato en las propias esquinas.",
@@ -2436,7 +2437,7 @@
     "Dans un rectangle unique, deux coins ont seulement la paire ; les deux autres, partageant une unité, ont aussi le même chiffre supplémentaire. Si aucun ne le prenait, les quatre coins resteraient dans la paire et permettraient deux solutions.\n\nAu moins un coin supplémentaire doit donc prendre ce chiffre, sans qu’on sache lequel.\n\nÉliminez-le uniquement des cases extérieures voyant les deux coins supplémentaires. Gardez-le dans les coins eux-mêmes. Voir un seul coin ne couvre pas toutes les possibilités.",
     "في مستطيل فريد، لركنين الزوج فقط وللركنين الآخرين الرقم الإضافي نفسه، وهما يشتركان في وحدة. لو لم يأخذه أي منهما لانحصرت الأركان كلها في الزوج وظهر حلان.\n\nإذن يحمل أحد الركنين الإضافيين ذلك الرقم على الأقل، دون الحاجة لتحديد أيهما.\n\nاحذفه من الخانات الخارجية التي ترى الركنين معاً فقط، وأبقِه في الركنين نفسيهما. رؤية ركن واحد لا تستبعد جميع الاحتمالات، ولا يجوز تطبيق القاعدة دون تفرد مثبت.",
     "In un rettangolo unico due angoli hanno solo la coppia; gli altri due, nella stessa unità, hanno anche la medesima cifra aggiuntiva. Se nessuno la prendesse, tutti gli angoli resterebbero nella coppia, consentendo due soluzioni.\n\nAlmeno un angolo aggiuntivo deve quindi prendere quella cifra, senza sapere quale.\n\nEliminala solo dalle celle esterne che vedono entrambi gli angoli aggiuntivi. Mantienila negli angoli stessi. Vedere un solo angolo non copre tutte le possibilità."
-  ],
+  , "Два кути прямокутника мають однакову пару, а інші два — ту саму пару й одну спільну додаткову цифру. За підтвердженої однозначності принаймні один додатковий кут має містити цю цифру.\n\nУ цьому різновиді два кути з додатковою цифрою належать спільній одиниці. Якби жоден не вибрав додаткову цифру, усі чотири кути замкнулися б у парі. Заміна цифр у прямокутнику створила б два правильні розв’язки.\n\nОтже, додаткова цифра є хоча б в одному з цих кутів. Прибери її з інших клітинок, що бачать обидва кути. Із самих кутів цю цифру не прибирай: саме вони забезпечують унікальність."],
   "Przy potwierdzonej jednoznaczności: dwa rogi są parą, a pozostałe dwa są połączone silnym połączeniem jednej cyfry pary w jednostce. Usuń drugą cyfrę pary z tych dwóch dodatkowych rogów.\n\nDwa dodatkowe rogi dzielą jednostkę, w której jedna cyfra pary występuje jako kandydat tylko w tych rogach. Ta cyfra musi zająć jeden z nich. Gdyby drugi róg użył drugiej cyfry pary, pozostałe dwa rogi także zamknęłyby się w tej parze i można byłoby zamienić cały prostokąt.\n\nJednoznaczność wyklucza taki układ. Usuń drugą cyfrę pary z obu dodatkowych rogów. Silne połączenie dotyczy konkretnej jednostki — same obecne cyfry w dwóch rogach nie wystarczają.": [
     "With verified uniqueness: two corners contain a pair; the other two have a strong link for one digit of that pair in a unit. Remove the other pair digit from those two extra corners.\n\nThe two extra corners share a unit where one pair digit occurs as a candidate only in those corners. That digit must occupy one corner. If the other corner took the other pair digit, the remaining two corners would also be confined to the pair and the rectangle could be swapped.\n\nUniqueness rules this out. Remove the other pair digit from both extra corners. The strong link must hold in a specific shared unit; merely seeing the digit in both corners is insufficient.",
     "Con unicidad verificada: dos esquinas son una pareja y las otras dos tienen un enlace fuerte de una cifra de esa pareja en una unidad. Elimina la otra cifra de esas dos esquinas adicionales.\n\nLas dos esquinas adicionales comparten una unidad donde una cifra de la pareja solo aparece en ellas. Esa cifra debe ocupar una esquina. Si la otra usara la segunda cifra, las otras dos también quedarían limitadas a la pareja y se podría intercambiar el rectángulo.\n\nLa unicidad lo impide. Elimina la segunda cifra de ambas esquinas adicionales. El enlace fuerte debe existir en una unidad concreta; ver la cifra en ambas esquinas no basta.",
@@ -2446,7 +2447,7 @@
     "Dans l’unité partagée par les coins supplémentaires, un chiffre de la paire n’a que ces deux places. Ce lien fort impose le chiffre dans l’un des coins.\n\nSi l’autre coin prenait l’autre chiffre de la paire, les coins restants seraient aussi confinés à la paire et le rectangle deviendrait échangeable. L’unicité l’interdit.\n\nÉliminez l’autre chiffre des deux coins supplémentaires. Le lien fort doit être vérifié dans une unité précise ; la présence du candidat dans les deux coins ne suffit pas.",
     "في الوحدة المشتركة للركنين الإضافيين، لا يملك أحد رقمي الزوج إلا هذين الموضعين. هذا رابط قوي يفرض الرقم في أحد الركنين.\n\nلو أخذ الركن الآخر الرقم الثاني لانحصرت الأركان الباقية في الزوج وأصبح المستطيل قابلاً للتبديل. التفرد يمنع ذلك.\n\nاحذف الرقم الآخر من الركنين الإضافيين. يجب التحقق من الرابط القوي في وحدة محددة؛ مجرد وجود المرشح في الركنين لا يكفي. لا تستخدم القاعدة دون إثبات حل واحد للشبكة.",
     "Nell’unità condivisa dagli angoli aggiuntivi, una cifra della coppia ha solo quei due posti. Questo legame forte la impone in uno degli angoli.\n\nSe l’altro prendesse la seconda cifra della coppia, anche gli angoli restanti sarebbero confinati alla coppia e il rettangolo diventerebbe scambiabile. L’unicità lo vieta.\n\nElimina l’altra cifra da entrambi gli angoli aggiuntivi. Il legame forte va verificato in un’unità precisa: la presenza del candidato nei due angoli non basta."
-  ],
+  , "За підтвердженої однозначності два кути прямокутника мають пару, а інші два утворюють сильний зв’язок однієї цифри цієї пари. Прибери другу цифру пари з обох додаткових кутів.\n\nДва додаткові кути ділять одиницю, де одна цифра пари можлива лише в них. Вона обов’язково займе один кут. Якби інший вибрав другу цифру пари, решта кутів теж замкнулася б у парі, дозволяючи замінити весь прямокутник.\n\nЄдиний розв’язок виключає такий випадок. Тому другу цифру пари прибирають з обох додаткових кутів. Сильний зв’язок має бути доведений у конкретній одиниці, а не лише наявністю цифри у двох клітинках."],
   "Połącz silne pary jednej cyfry i przypisz przeciwne grupy kolejnym końcom. Jedna grupa musi być prawdziwa. Kandydat poza łańcuchem, który widzi obie grupy, jest niemożliwy.\n\nDla jednej cyfry połącz pary, które są jej jedynymi dwoma miejscami w jednostce. Końce takiego połączenia mają przeciwne wartości logiczne: gdy jeden jest prawdziwy, drugi fałszywy. Idąc po połączeniach, otrzymujesz dwie naprzemienne grupy, a jedna z nich musi być prawdziwa.\n\nKandydat spoza tej sieci, który widzi przynajmniej jedno pole z każdej grupy, przegrywa w obu przypadkach. Usuń go, ale nie wybieraj na tej podstawie jednej grupy jako poprawnej. Kolor jest etykietą zależności, nie zgadywaną cyfrą.": [
     "Connect conjugate pairs of one digit and assign alternating colors to the ends. One color group must be true. A candidate outside the chain seeing both colors is impossible.\n\nFor one digit, connect pairs that are its only two positions in a unit. The ends have opposite truth values: if one is true, the other is false. Following the links forms two alternating groups, one of which must be true.\n\nAn outside candidate seeing at least one cell from each group loses in both cases. Remove it without deciding which group is correct. A color labels a logical relationship; it is not a guessed digit.",
     "Conecta pares conjugados de una cifra y alterna dos colores. Un grupo debe ser verdadero. Un candidato externo que ve ambos colores es imposible.\n\nPara una cifra, conecta parejas que sean sus únicas dos posiciones en una unidad. Los extremos tienen valores lógicos opuestos. Al seguir los enlaces obtienes dos grupos alternos, y uno debe ser verdadero.\n\nUn candidato externo que ve alguna casilla de cada grupo pierde en ambos casos. Elimínalo sin decidir qué grupo es correcto. El color representa una relación lógica, no una cifra adivinada.",
@@ -2456,7 +2457,7 @@
     "Reliez, pour un chiffre, les paires qui sont ses seules places dans une unité. Les extrémités de chaque lien ont des vérités opposées. Le réseau forme deux groupes alternés, dont l’un doit être vrai.\n\nUn candidat extérieur voyant au moins une case de chaque groupe est exclu dans les deux cas et peut être retiré.\n\nCela ne désigne pas le bon groupe. Une couleur représente une relation logique, pas une valeur devinée. Ne mélangez pas les couleurs de réseaux indépendants.",
     "صل أزواج رقم تكون موضعيه الوحيدين في وحدة. طرفا كل رابط متعاكسان منطقياً، فتتكون مجموعتان متناوبتان ويجب أن تكون إحداهما صحيحة.\n\nمرشح خارجي يرى خانة واحدة على الأقل من كل مجموعة يُستبعد في الحالتين، فيمكن حذفه.\n\nلا يحدد هذا المجموعة الصحيحة. اللون تسمية لعلاقة منطقية وليس رقماً مخمناً. لا تخلط ألوان شبكات مستقلة كأنها دليل واحد، ولا تحذف من المجموعتين نفسيهما بناء على هذا الفخ فقط.",
     "Collega, per una cifra, le coppie che sono i suoi unici posti in un’unità. Le estremità di ogni legame hanno verità opposte. La rete forma due gruppi alternati, uno dei quali deve essere vero.\n\nUn candidato esterno che vede almeno una cella di ciascun gruppo è escluso in entrambi i casi e può essere rimosso.\n\nQuesto non identifica il gruppo corretto. Un colore rappresenta una relazione logica, non un valore indovinato. Non mescolare i colori di reti indipendenti."
-  ],
+  , "З’єднай сильні пари однієї цифри й признач протилежні групи кінцям кожного зв’язку. Одна група має бути істинною. Кандидат поза мережею, що бачить обидві групи, неможливий.\n\nДля однієї цифри з’єднай пари, які є її єдиними двома місцями в одиниці. Кінці такого зв’язку мають протилежні логічні значення. Рухаючись мережею, отримуєш дві групи, що чергуються; одна з них обов’язково істинна.\n\nЗовнішній кандидат, який бачить принаймні одну клітинку кожної групи, програє в обох випадках. Прибери його, але не роби висновку, яка група правильна. Колір тут позначає залежність, а не вгадане число."],
   "Pokoloruj naprzemiennie końce silnych połączeń jednej cyfry. Jeśli dwa pola tej samej grupy widzą się wzajemnie, wszystkie kandydaty tej grupy są fałszywe.\n\nW jednej spójnej sieci silnych połączeń cała grupa tego samego koloru ma tę samą wartość logiczną. Jeśli dwa jej pola współdzielą wiersz, kolumnę lub blok, nie mogą jednocześnie zawierać rozpatrywanej cyfry. Taka grupa nie może być prawdziwa.\n\nUsuń kandydatów tej cyfry ze wszystkich pól sprzecznej grupy, nie z obu grup naraz. Nie łącz kolorów z niezależnych sieci tak, jakby były jednym dowodem.": [
     "Alternate colors along strong links of one digit. If two cells of the same color see each other, every candidate in that color group is false.\n\nWithin one connected strong-link network, every candidate of the same color shares a truth value. If two cells of that color share a row, column or box, they cannot both contain the digit. That color group cannot be true.\n\nRemove this digit from every cell of the contradictory group, not from both groups. Do not combine colors from disconnected networks as though they were one proof.",
     "Alterna colores a lo largo de enlaces fuertes de una cifra. Si dos casillas del mismo color se ven, todos los candidatos de ese color son falsos.\n\nDentro de una red conectada de enlaces fuertes, los candidatos de un color comparten valor lógico. Si dos casillas de ese color comparten fila, columna o bloque, no pueden contener ambas la cifra. Ese grupo no puede ser verdadero.\n\nElimina la cifra de todas las casillas del grupo contradictorio, no de ambos grupos. No mezcles colores de redes independientes como si fueran un solo razonamiento.",
@@ -2466,7 +2467,7 @@
     "Dans un réseau connecté de liens forts, tous les candidats d’une couleur partagent la même vérité. Si deux cases de cette couleur partagent une ligne, colonne ou bloc, elles ne peuvent contenir toutes deux le chiffre.\n\nToute cette couleur est donc fausse. Retirez le candidat de chaque case de ce groupe, pas seulement des deux cases en conflit.\n\nNe supprimez pas l’autre groupe. La preuve concerne un seul réseau connecté ; des couleurs semblables dans des réseaux indépendants n’ont pas cette relation garantie.",
     "في شبكة متصلة من الروابط القوية، يشترك مرشحو اللون الواحد في القيمة المنطقية. إذا شاركت خانتان بهذا اللون صفاً أو عموداً أو مربعاً، فلا يمكن أن تحمل كلتاهما الرقم.\n\nإذن المجموعة الملونة كلها خاطئة. احذف المرشح من جميع خاناتها، لا من الخانتين المتعارضتين فقط.\n\nلا تمسح المجموعة المقابلة معها. يجب أن يكون الاستدلال ضمن شبكة متصلة واحدة، لأن تشابه الألوان في شبكات مستقلة لا يثبت العلاقة نفسها.",
     "In una rete connessa di legami forti, tutti i candidati di un colore condividono la stessa verità. Se due celle di quel colore condividono riga, colonna o riquadro, non possono contenere entrambe la cifra.\n\nL’intero colore è quindi falso. Rimuovi il candidato da ogni cella del gruppo, non soltanto dalle due in conflitto.\n\nNon cancellare anche l’altro gruppo. La prova riguarda una sola rete connessa; colori simili in reti indipendenti non garantiscono la stessa relazione."
-  ],
+  , "Розфарбуй почергово кінці сильних зв’язків однієї цифри. Якщо дві клітинки тієї самої групи бачать одна одну, усі кандидати цієї групи хибні.\n\nВ одній зв’язній мережі сильних зв’язків усі клітинки одного кольору мають однакове логічне значення. Якщо дві з них ділять рядок, стовпець або блок, вони не можуть одночасно містити цю цифру. Отже, вся група не може бути істинною.\n\nПрибери цю цифру з усіх клітинок суперечливої групи, а не з обох груп одразу. Не об’єднуй однакові кольори з незалежних мереж так, ніби вони належать одному доказу."],
   "Łańcuch jednej cyfry przeplata silne i słabe połączenia, zaczynając i kończąc silnym. Co najmniej jeden z końców jest prawdziwy. Usuń tę cyfrę z pól widzących oba końce.\n\nSilne połączenie pozwala przejść od „ten kandydat jest fałszywy” do „następny jest prawdziwy”. Słabe pozwala przejść od „prawdziwy” do „następny fałszywy”. Naprzemienne użycie tych dwóch reguł buduje dowód dla jednej cyfry, bez zgadywania wartości całej planszy.\n\nZacznij myślowo od fałszywego pierwszego końca. Jeśli łańcuch kończy się prawdziwym drugim końcem, co najmniej jeden z końców musi być prawdziwy. Usuwasz cyfrę tylko z pól widzących oba końce, nie z każdego pola sąsiadującego z dowolnym fragmentem łańcucha.": [
     "A single-digit chain alternates strong and weak links, starting and ending with a strong link. At least one endpoint is true. Remove the digit from cells seeing both endpoints.\n\nA strong link takes you from “this candidate is false” to “the next is true”. A weak link takes you from “true” to “the next is false”. Alternating these rules builds a single-digit proof without guessing a full solution.\n\nStart by imagining the first endpoint is false. If the chain makes the other endpoint true, at least one endpoint must be true. Remove the digit only from cells seeing both endpoints, not from every neighbor of any chain cell.",
     "Una cadena de una cifra alterna enlaces fuertes y débiles, empezando y terminando con uno fuerte. Algún extremo es verdadero. Elimina la cifra de las casillas que ven ambos extremos.\n\nUn enlace fuerte pasa de «este candidato es falso» a «el siguiente es verdadero». Uno débil pasa de «verdadero» a «el siguiente es falso». Alternarlos construye una prueba de una cifra sin adivinar la solución completa.\n\nSupón falso el primer extremo. Si la cadena hace verdadero el otro, alguno debe ser verdadero. Elimina la cifra solo de las casillas que ven ambos extremos, no de cualquier vecino de la cadena.",
@@ -2476,7 +2477,7 @@
     "Un lien fort mène de « faux » à « le suivant est vrai ». Un lien faible mène de « vrai » à « le suivant est faux ». Alternez-les pour un seul chiffre, en commençant et terminant par un lien fort.\n\nSupposez la première extrémité fausse. Si la dernière devient vraie, au moins une extrémité est vraie. Éliminez le chiffre des cases voyant les deux.\n\nNe l’éliminez pas chez tous les voisins de la chaîne : les deux extrémités doivent être vues. C’est une preuve par implications, pas une solution devinée.",
     "الرابط القوي ينقل من «خاطئ» إلى «التالي صحيح»، والضعيف من «صحيح» إلى «التالي خاطئ». تناوب بينهما لرقم واحد، مع البداية والنهاية برابط قوي.\n\nافترض الطرف الأول خاطئاً. إن صار الأخير صحيحاً، فلا بد من صحة أحد الطرفين. احذف الرقم من الخانات التي ترى الطرفين معاً.\n\nلا تحذفه من كل جيران السلسلة؛ رؤية الطرفين شرط لازم. هذا إثبات بعلاقات صالحة لا تخمين لحل كامل، وتبقى القيم داخل السلسلة غير محسومة بالضرورة.",
     "Un legame forte porta da «falso» a «il prossimo è vero». Uno debole da «vero» a «il prossimo è falso». Alternali per una sola cifra, iniziando e finendo con un legame forte.\n\nSupponi falsa la prima estremità. Se l’ultima diventa vera, almeno una è vera. Elimina la cifra dalle celle che vedono entrambe.\n\nNon eliminarla da tutti i vicini della catena: devono vedere le due estremità. È una prova tramite implicazioni valide, non una soluzione indovinata."
-  ],
+  , "Ланцюг однієї цифри чергує сильні та слабкі зв’язки, починаючись і закінчуючись сильним. Принаймні один кінець істинний. Прибери цифру з клітинок, що бачать обидва кінці.\n\nСильний зв’язок дозволяє перейти від хибного кандидата до істинного наступного. Слабкий — від істинного до хибного наступного. Чергування цих правил створює доказ для однієї цифри без вгадування значень усієї головоломки.\n\nПрипусти, що перший кінець хибний. Якщо ланцюг змушує останній бути істинним, принаймні один кінець істинний. Виключай цифру лише зі спільних сусідів кінців, а не з кожної клітинки біля будь-якої частини ланцюга."],
   "Łańcuch pól z dwiema cyframi wykorzystuje silną zależność wewnątrz pola i słabe połączenia tej samej cyfry między polami. Jeśli oba końce reprezentują tę samą cyfrę, usuń ją ze wspólnych sąsiadów.\n\nKażde używane pole ma dokładnie dwóch kandydatów: odrzucenie jednego wymusza drugiego. Między polami przechodzisz po tej samej cyfrze, której dwa widzące się pola nie mogą zawierać jednocześnie. W ten sposób wymuszenia przechodzą przez kolejne różne pary.\n\nOba końce muszą reprezentować tę samą cyfrę. Jeśli jej brak na pierwszym końcu wymusza ją na ostatnim, jest prawdziwa na co najmniej jednym z nich. Usuń ją z ich wspólnych sąsiadów; sama seria dowolnych pól z dwiema notatkami nie stanowi jeszcze poprawnego łańcucha.": [
     "A chain of bivalue cells uses strong links within cells and weak links of the same digit between cells. When both endpoints represent the same digit, remove it from their common peers.\n\nEvery cell used has exactly two candidates: ruling one out forces the other. Between cells, follow the same digit, which two cells seeing each other cannot both contain. This propagates implications through different pairs.\n\nBoth endpoints must represent the same digit. If its absence at the first forces it at the last, at least one endpoint contains it. Remove it from their common peers. An arbitrary sequence of bivalue cells is not sufficient; every link must be valid.",
     "Una cadena de casillas bivalue usa enlaces fuertes internos y débiles de la misma cifra entre casillas. Si ambos extremos representan la misma cifra, elimínala de sus vecinos comunes.\n\nCada casilla usada tiene dos candidatos: descartar uno obliga al otro. Entre casillas se sigue la misma cifra, que dos casillas visibles entre sí no pueden compartir. Así se propagan las implicaciones por parejas distintas.\n\nAmbos extremos deben representar la misma cifra. Si su ausencia al principio la fuerza al final, alguno la contiene. Elimínala de sus vecinos comunes. Una secuencia arbitraria de casillas con dos notas no basta: cada enlace debe ser válido.",
@@ -2486,7 +2487,7 @@
     "Chaque case utilisée contient exactement deux candidats : en exclure un force l’autre. Entre cases, un lien faible suit le même chiffre, que deux cases se voyant ne peuvent partager.\n\nL’alternance propage les implications à travers différentes paires. Les deux extrémités doivent représenter le même chiffre ; son absence au début le force à la fin.\n\nÉliminez ce chiffre des voisins communs des extrémités. Une simple suite de cases à deux notes ne suffit pas : chaque lien doit être valide.",
     "كل خانة مستخدمة تحمل مرشحين فقط؛ استبعاد أحدهما يفرض الآخر. وبين الخانات يتبع الرابط الضعيف الرقم نفسه، الذي لا يمكن لخانتين متواجهتين حمله معاً.\n\nينقل التناوب الاستدلال عبر أزواج مختلفة. يجب أن يمثل الطرفان الرقم نفسه؛ غيابه في الأول يفرضه في الأخير.\n\nاحذف الرقم من الخانات التي ترى الطرفين معاً. ليست أي قائمة من خانات ثنائية المرشحين سلسلة صالحة؛ يجب التحقق من كل رابط واتجاه الاستنتاج.",
     "Ogni cella usata contiene esattamente due candidati: escluderne uno forza l’altro. Tra celle, un legame debole segue la stessa cifra, che due celle visibili non possono condividere.\n\nL’alternanza propaga le implicazioni attraverso coppie diverse. Le estremità devono rappresentare la stessa cifra: la sua assenza all’inizio la forza alla fine.\n\nElimina la cifra dai vicini comuni delle estremità. Una semplice sequenza di celle con due note non basta: ogni legame deve essere valido."
-  ],
+  , "Ланцюг клітинок із двома кандидатами використовує сильну залежність усередині клітинки й слабкі зв’язки тієї самої цифри між клітинками. Якщо обидва кінці представляють одну цифру, її можна виключити зі спільних сусідів.\n\nКожна використана клітинка має рівно двох кандидатів: відмова від одного змушує вибрати другого. Між клітинками переходь по однаковій цифрі, яку дві клітинки, що бачать одна одну, не можуть містити одночасно.\n\nКінці обов’язково мають представляти ту саму цифру. Якщо її відсутність на початку змушує її з’явитися в кінці, хоча б один кінець істинний. Довільна послідовність клітинок із двома нотатками ще не є доказом."],
   "Naprzemienny łańcuch wnioskowania łączy silne i słabe zależności między kandydatami. Gdy z fałszywości pierwszego wynika prawdziwość ostatniego, kandydat wykluczający oba końce musi być fałszywy. Ta wersja analizuje proste łańcuchy do 11 połączeń, bez grup i sieci.\n\nW tej aplikacji znak = oznacza silne połączenie: oba końce nie mogą być fałszywe. Znak — oznacza słabe: oba nie mogą być prawdziwe. Silne połączenie może wynikać z dwóch kandydatów w polu albo dwóch miejsc cyfry w jednostce. Łańcuch przeplata te zależności i zaczyna oraz kończy się silnym połączeniem.\n\nNie musisz rozstrzygać, który koniec jest prawdziwy. Wystarczy, że kandydat docelowy wyklucza oba: gdyby był prawdziwy, oba końce byłyby fałszywe, czemu przeczy łańcuch. W tej wersji analizowane są proste łańcuchy do 11 połączeń, bez grup i rozgałęzionych sieci.": [
     "An alternating inference chain connects strong and weak candidate links. If a false first endpoint implies a true last endpoint, any candidate conflicting with both endpoints is false. This implementation checks simple chains up to 11 links, without groups or nets.\n\nIn this app, = marks a strong link: both ends cannot be false. — marks a weak link: both cannot be true. Strong links can come from two candidates in one cell or two positions for a digit in a unit. The chain alternates these relationships, starting and ending strong.\n\nYou need not decide which endpoint is true. A target candidate conflicting with both must be false: if it were true, both endpoints would be false, contradicting the chain. This version checks simple chains up to 11 links, without groups or branching nets.",
     "Una cadena de inferencia alterna enlaces fuertes y débiles. Si el primer extremo falso implica que el último es verdadero, un candidato que contradice ambos es falso. Esta versión analiza cadenas simples de hasta 11 enlaces, sin grupos ni redes.\n\nEn esta aplicación, = indica enlace fuerte: ambos extremos no pueden ser falsos. — indica enlace débil: ambos no pueden ser verdaderos. El enlace fuerte puede venir de dos candidatos en una casilla o dos posiciones de una cifra en una unidad. La cadena alterna relaciones y empieza y termina fuerte.\n\nNo necesitas saber qué extremo es verdadero. Un candidato que contradice ambos debe ser falso: si fuera verdadero, ambos extremos serían falsos, contradiciendo la cadena. Esta versión analiza cadenas simples de hasta 11 enlaces, sin grupos ni redes ramificadas.",
@@ -2496,7 +2497,7 @@
     "Ici, = signifie lien fort : les deux extrémités ne peuvent être fausses. — signifie lien faible : elles ne peuvent être vraies. Un lien fort vient de deux candidats d’une case ou deux positions d’un chiffre dans une unité.\n\nLa chaîne alterne ces relations et commence et finit fort. Un candidat incompatible avec les deux extrémités les rendrait toutes deux fausses, contredisant la chaîne : il doit être éliminé.\n\nNul besoin de choisir l’extrémité vraie. Cette version examine des chaînes simples jusqu’à 11 liens, sans groupes ni réseaux ramifiés.",
     "هنا يعني = رابطاً قوياً: لا يمكن أن يخطئ الطرفان معاً. ويعني — رابطاً ضعيفاً: لا يصح الطرفان معاً. ينشأ الرابط القوي من مرشحي خانة أو موضعَي رقم في وحدة.\n\nتتناوب السلسلة بين العلاقتين وتبدأ وتنتهي برابط قوي. لو صح مرشح يتعارض مع الطرفين لجعلهما خاطئين، مخالفاً لاستنتاج السلسلة؛ لذلك يُحذف.\n\nلا يلزم تحديد الطرف الصحيح. تفحص هذه النسخة سلاسل بسيطة حتى 11 رابطاً، دون مجموعات أو شبكات متفرعة.",
     "Qui = indica un legame forte: le estremità non possono essere entrambe false. — indica un legame debole: non possono essere entrambe vere. Un legame forte deriva da due candidati in una cella o due posti di una cifra in un’unità.\n\nLa catena alterna le relazioni, iniziando e finendo forte. Un candidato incompatibile con le estremità le renderebbe entrambe false, contraddicendo la catena: va eliminato.\n\nNon serve scegliere l’estremità vera. Questa versione esamina catene semplici fino a 11 legami, senza gruppi o reti ramificate."
-  ],
+  , "Ланцюг почергових висновків поєднує сильні та слабкі залежності між кандидатами. Якщо хибність першого змушує останнього бути істинним, кандидат, що виключає обидва кінці, має бути хибним.\n\nЗнак = означає сильний зв’язок: обидва кінці не можуть бути хибними. Знак — означає слабкий: обидва не можуть бути істинними. Сильний зв’язок походить від двох кандидатів у клітинці або двох місць цифри в одиниці. Ланцюг починається й закінчується сильним зв’язком.\n\nНе потрібно визначати істинний кінець. Достатньо, що цільовий кандидат виключає обидва: його істинність суперечила б ланцюгу. Ця версія аналізує прості ланцюги до 11 зв’язків, без груп і розгалужених мереж."],
   "Pojęcia użyte w wyjaśnieniu": [
     "Terms used in this explanation",
     "Términos usados en la explicación",
@@ -2506,7 +2507,7 @@
     "Termes de l’explication",
     "مصطلحات الشرح",
     "Termini della spiegazione"
-  ],
+  , "Поняття, використані в поясненні"],
   "Jednostka to jeden wiersz, jedna kolumna albo jeden blok 3 × 3. Dwa pola „widzą się”, gdy należą do wspólnej jednostki i nie mogą mieć tej samej cyfry. Kandydat jest możliwością do sprawdzenia, a nie wpisaną liczbą. Usunięcie kandydata nie oznacza jeszcze ustalenia wartości pola.": [
     "A unit is one row, one column or one 3 × 3 box. Two cells “see” each other when they share a unit and cannot contain the same digit. A candidate is a possible value, not an entered digit. Removing a candidate does not necessarily determine the cell’s value.",
     "Una unidad es una fila, una columna o un bloque 3 × 3. Dos casillas «se ven» cuando comparten una unidad y no pueden contener la misma cifra. Un candidato es un valor posible, no una cifra ya colocada. Eliminarlo no determina necesariamente el valor de la casilla.",
@@ -2516,7 +2517,7 @@
     "Une unité est une ligne, colonne ou bloc 3 × 3. Deux cases se « voient » si elles partagent une unité et ne peuvent contenir le même chiffre. Un candidat est une valeur possible, pas un chiffre inscrit. L’éliminer ne détermine pas forcément la valeur de la case.",
     "الوحدة صف أو عمود أو مربع 3 × 3. خانتان «تريان» بعضهما إن اشتركتا في وحدة ولا تقبلان الرقم نفسه. المرشح قيمة ممكنة، وليس رقماً مثبتاً. حذف مرشح لا يحدد بالضرورة قيمة الخانة فوراً.",
     "Un’unità è una riga, colonna o riquadro 3 × 3. Due celle si «vedono» se condividono un’unità e non possono contenere la stessa cifra. Un candidato è un valore possibile, non una cifra inserita. Eliminarlo non determina necessariamente il valore della cella."
-  ],
+  , "Одиниця — один рядок, один стовпець або один блок 3 × 3. Дві клітинки «бачать одна одну», коли належать до спільної одиниці й не можуть містити однакову цифру. Кандидат — можлива цифра, а не введене число. Виключення кандидата ще не визначає значення клітинки."],
   "Masz ochotę na sudoku?": [
     "Ready for a Sudoku?",
     "¿Te apetece un sudoku?",
@@ -2526,7 +2527,7 @@
     "Envie d’un sudoku ?",
     "هل ترغب في سودوكو؟",
     "Ti va un sudoku?"
-  ],
+  , "Хочеться судоку?"],
   "10 000 sprawdzonych plansz w czterech poziomach trudności.": [
     "10,000 verified puzzles across four difficulty levels.",
     "10 000 sudokus verificados en cuatro niveles de dificultad.",
@@ -2536,7 +2537,7 @@
     "10 000 grilles vérifiées sur quatre niveaux de difficulté.",
     "10,000 لغز مُتحقق منه بأربعة مستويات صعوبة.",
     "10.000 griglie verificate in quattro livelli di difficoltà."
-  ],
+  , "10 000 перевірених головоломок на чотирьох рівнях складності."],
   "Graj w sudoku": [
     "Play Sudoku",
     "Jugar al sudoku",
@@ -2546,7 +2547,7 @@
     "Jouer au sudoku",
     "العب سودوكو",
     "Gioca a sudoku"
-  ],
+  , "Грати в судоку"],
   "BIBLIOTEKA SUDOKU": [
     "SUDOKU LIBRARY",
     "BIBLIOTECA DE SUDOKUS",
@@ -2556,7 +2557,7 @@
     "BIBLIOTHÈQUE DE SUDOKUS",
     "مكتبة السودوكو",
     "RACCOLTA DI SUDOKU"
-  ],
+  , "БІБЛІОТЕКА СУДОКУ"],
   "Wybierz swoją łamigłówkę": [
     "Choose your puzzle",
     "Elige tu sudoku",
@@ -2566,7 +2567,7 @@
     "Choisissez votre grille",
     "اختر لغزك",
     "Scegli il tuo sudoku"
-  ],
+  , "Вибери свою головоломку"],
   "Każdy poziom zawiera 2500 plansz. Poziomy i oceny SE pochodzą z Sudoku Exchange; nie są uniwersalną skalą trudności.": [
     "Each level contains 2,500 puzzles. Levels and SE ratings come from Sudoku Exchange; difficulty scales are not universal.",
     "Cada nivel contiene 2500 sudokus. Los niveles y las puntuaciones SE proceden de Sudoku Exchange; no existe una escala universal de dificultad.",
@@ -2576,7 +2577,7 @@
     "Chaque niveau propose 2500 grilles. Niveaux et notes SE viennent de Sudoku Exchange ; la difficulté n’a pas d’échelle universelle.",
     "يحتوي كل مستوى 2500 لغز. المستويات وتقييمات SE من Sudoku Exchange، وليست مقياساً عالمياً للصعوبة.",
     "Ogni livello contiene 2500 griglie. Livelli e valutazioni SE provengono da Sudoku Exchange; non esiste una scala universale di difficoltà."
-  ],
+  , "Кожен рівень містить 2500 головоломок. Рівні й оцінки SE походять із Sudoku Exchange; це не універсальна шкала складності."],
   "Poziom trudności": [
     "Difficulty",
     "Dificultad",
@@ -2586,7 +2587,7 @@
     "Difficulté",
     "الصعوبة",
     "Difficoltà"
-  ],
+  , "Рівень складності"],
   "Łatwy": [
     "Easy",
     "Fácil",
@@ -2596,7 +2597,7 @@
     "Facile",
     "سهل",
     "Facile"
-  ],
+  , "Легкий"],
   "Średni": [
     "Medium",
     "Medio",
@@ -2606,7 +2607,7 @@
     "Moyen",
     "متوسط",
     "Medio"
-  ],
+  , "Середній"],
   "Trudny": [
     "Hard",
     "Difícil",
@@ -2616,7 +2617,7 @@
     "Difficile",
     "صعب",
     "Difficile"
-  ],
+  , "Складний"],
   "Ekspert": [
     "Expert",
     "Experto",
@@ -2626,7 +2627,7 @@
     "Expert",
     "خبير",
     "Esperto"
-  ],
+  , "Експерт"],
   "Pokaż kandydatów od razu": [
     "Show candidates from the start",
     "Mostrar candidatos desde el inicio",
@@ -2636,7 +2637,7 @@
     "Afficher les candidats dès le départ",
     "إظهار المرشحين منذ البداية",
     "Mostra subito i candidati"
-  ],
+  , "Показати кандидатів одразу"],
   "Kandydatów możesz też obliczyć później przyciskiem „Oblicz kandydatów”.": [
     "You can also show them later with “Calculate candidates”.",
     "También puedes mostrarlos después con «Calcular candidatos».",
@@ -2646,7 +2647,7 @@
     "Vous pourrez aussi les afficher avec « Calculer les candidats ».",
     "يمكنك إظهارهم لاحقاً عبر «حساب المرشحين».",
     "Puoi mostrarli anche dopo con «Calcola candidati»."
-  ],
+  , "Кандидатів можна обчислити пізніше кнопкою «Обчислити кандидатів»."],
   "Nowa łamigłówka": [
     "New puzzle",
     "Nuevo sudoku",
@@ -2656,7 +2657,7 @@
     "Nouvelle grille",
     "لغز جديد",
     "Nuovo sudoku"
-  ],
+  , "Нова головоломка"],
   "Łamigłówka dnia": [
     "Daily puzzle",
     "Sudoku del día",
@@ -2666,7 +2667,7 @@
     "Sudoku du jour",
     "لغز اليوم",
     "Sudoku del giorno"
-  ],
+  , "Головоломка дня"],
   "Źródło plansz:": [
     "Puzzle source:",
     "Fuente de los sudokus:",
@@ -2676,7 +2677,7 @@
     "Source des grilles :",
     "مصدر الألغاز:",
     "Fonte delle griglie:"
-  ],
+  , "Джерело головоломок:"],
   "Postęp nie może być zapisany na tym urządzeniu. Nadal możesz grać.": [
     "Progress cannot be saved on this device. You can still play.",
     "No se puede guardar el progreso en este dispositivo. Puedes seguir jugando.",
@@ -2686,7 +2687,7 @@
     "La progression ne peut être enregistrée sur cet appareil. Vous pouvez continuer à jouer.",
     "لا يمكن حفظ التقدم على هذا الجهاز. ما زال بإمكانك اللعب.",
     "Non è possibile salvare i progressi sul dispositivo. Puoi comunque giocare."
-  ],
+  , "Не вдається зберегти прогрес на цьому пристрої. Грати все одно можна."],
   "Ukończone na tym urządzeniu: {0} / {1}": [
     "Completed on this device: {0} / {1}",
     "Completados en este dispositivo: {0} / {1}",
@@ -2696,7 +2697,7 @@
     "Terminées sur cet appareil : {0} / {1}",
     "المكتملة على هذا الجهاز: {0} / {1}",
     "Completati su questo dispositivo: {0} / {1}"
-  ],
+  , "Розв’язано на цьому пристрої: {0} / {1}"],
   "Poziom: {0} · Sudoku #{1} · Ocena SE: {2}": [
     "Level: {0} · Sudoku #{1} · SE rating: {2}",
     "Nivel: {0} · Sudoku #{1} · Puntuación SE: {2}",
@@ -2706,7 +2707,7 @@
     "Niveau : {0} · Sudoku #{1} · Note SE : {2}",
     "المستوى: {0} · سودوكو #{1} · تقييم SE: {2}",
     "Livello: {0} · Sudoku #{1} · Valutazione SE: {2}"
-  ],
+  , "Рівень: {0} · Судоку #{1} · Оцінка SE: {2}"],
   "Wczytywanie biblioteki…": [
     "Loading puzzle library…",
     "Cargando biblioteca…",
@@ -2716,7 +2717,7 @@
     "Chargement de la bibliothèque…",
     "جارٍ تحميل المكتبة…",
     "Caricamento della raccolta…"
-  ],
+  , "Завантаження бібліотеки…"],
   "Każda plansza ma jedno rozwiązanie i została rozwiązana naszym analizatorem.": [
     "Every puzzle has one solution and has been solved by our logic engine.",
     "Cada sudoku tiene una solución y nuestro motor lógico lo ha resuelto.",
@@ -2726,7 +2727,7 @@
     "Chaque grille a une solution unique et a été résolue par notre moteur logique.",
     "لكل لغز حل واحد وقد حله محركنا المنطقي كاملاً.",
     "Ogni griglia ha una soluzione unica ed è stata risolta dal nostro motore logico."
-  ],
+  , "Кожна головоломка має єдиний розв’язок і розв’язана нашим аналізатором."],
   "Nie udało się wczytać biblioteki. Sprawdź internet i spróbuj ponownie.": [
     "Could not load the library. Check your connection and try again.",
     "No se pudo cargar la biblioteca. Revisa tu conexión e inténtalo de nuevo.",
@@ -2736,7 +2737,7 @@
     "Impossible de charger la bibliothèque. Vérifiez la connexion et réessayez.",
     "تعذر تحميل المكتبة. تحقق من الاتصال وأعد المحاولة.",
     "Impossibile caricare la raccolta. Controlla la connessione e riprova."
-  ],
+  , "Не вдалося завантажити бібліотеку. Перевір інтернет і спробуй ще раз."],
   "Wczytywanie planszy…": [
     "Loading puzzle…",
     "Cargando sudoku…",
@@ -2746,7 +2747,7 @@
     "Chargement de la grille…",
     "جارٍ تحميل اللغز…",
     "Caricamento del sudoku…"
-  ],
+  , "Завантаження головоломки…"],
   "Wczytano dzisiejszą łamigłówkę. Miłego rozwiązywania!": [
     "Today's puzzle is ready. Enjoy solving!",
     "El sudoku de hoy está listo. ¡Disfrútalo!",
@@ -2756,7 +2757,7 @@
     "La grille du jour est prête. Bonne résolution !",
     "لغز اليوم جاهز. استمتع بالحل!",
     "Il sudoku di oggi è pronto. Buon divertimento!"
-  ],
+  , "Головоломку дня завантажено. Приємного розв’язування!"],
   "Wczytano sudoku z biblioteki. Miłego rozwiązywania!": [
     "Your puzzle is ready. Enjoy solving!",
     "Tu sudoku está listo. ¡Disfrútalo!",
@@ -2766,7 +2767,7 @@
     "Votre grille est prête. Bonne résolution !",
     "لغزك جاهز. استمتع بالحل!",
     "Il tuo sudoku è pronto. Buon divertimento!"
-  ],
+  , "Судоку з бібліотеки завантажено. Приємного розв’язування!"],
   "Nie udało się wczytać planszy. Spróbuj ponownie; obecne sudoku pozostaje bez zmian.": [
     "Could not load the puzzle. Try again; your current board is unchanged.",
     "No se pudo cargar el sudoku. Reinténtalo; tu tablero actual no ha cambiado.",
@@ -2776,7 +2777,7 @@
     "Impossible de charger la grille. Réessayez ; votre sudoku actuel reste intact.",
     "تعذر تحميل اللغز. حاول مجدداً؛ شبكتك الحالية لم تتغير.",
     "Impossibile caricare il sudoku. Riprova: la griglia attuale non è cambiata."
-  ],
+  , "Не вдалося завантажити головоломку. Спробуй ще раз; поточне судоку не змінено."],
   "Najpierw popraw konflikty liczb na planszy.": [
     "First correct the conflicting digits on the board.",
     "Primero corrige los conflictos de cifras del tablero.",
@@ -2786,7 +2787,7 @@
     "Corrigez d’abord les conflits de chiffres.",
     "صحح تعارضات الأرقام في الشبكة أولاً.",
     "Correggi prima i conflitti tra cifre nella griglia."
-  ],
+  , "Спочатку виправ конфлікти чисел у сітці."],
   "Sudoku Exchange Puzzle Bank": [
     "Sudoku Exchange Puzzle Bank",
     "Sudoku Exchange Puzzle Bank",
@@ -2796,7 +2797,7 @@
     "Sudoku Exchange Puzzle Bank",
     "Sudoku Exchange Puzzle Bank",
     "Sudoku Exchange Puzzle Bank"
-  ],
+  , "Sudoku Exchange Puzzle Bank"],
   "· domena publiczna (Unlicense).": [
     "· public domain (Unlicense).",
     "· dominio público (Unlicense).",
@@ -2806,7 +2807,7 @@
     "· domaine public (Unlicense).",
     "· ملكية عامة (Unlicense).",
     "· pubblico dominio (Unlicense)."
-  ],
+  , "· суспільне надбання (Unlicense)."],
   "W aktualnym układzie: {0}": [
     "In the current position: {0}",
     "En la posición actual: {0}",
@@ -2816,7 +2817,7 @@
     "Dans la position actuelle : {0}",
     "في الوضع الحالي: {0}",
     "Nella posizione attuale: {0}"
-  ],
+  , "У поточній сітці: {0}"],
   "Autorzy i licencje": [
     "Credits and licences",
     "Créditos y licencias",
@@ -2826,7 +2827,7 @@
     "Crédits et licences",
     "المساهمون والتراخيص",
     "Crediti e licenze"
-  ],
+  , "Автори та ліцензії"],
   "Skyscraper": [
     "Skyscraper",
     "Skyscraper",
@@ -2836,7 +2837,7 @@
     "Skyscraper",
     "ناطحة السحاب",
     "Skyscraper"
-  ],
+  , "Skyscraper"],
   "Wybierz jedną cyfrę i znajdź dwa wiersze, w których ma ona dokładnie po dwa możliwe miejsca. Jedno miejsce z pierwszego wiersza i jedno z drugiego muszą leżeć w tej samej kolumnie: to podstawy. Dwa pozostałe miejsca, w różnych kolumnach, są wierzchołkami. Możesz też zamienić role wierszy i kolumn.\n\nPodstawy widzą się, więc nie mogą obie zawierać wybranej cyfry. Jeśli jeden wierzchołek jej nie zawiera, jego podstawa musi ją zawierać; druga podstawa wtedy odpada, a drugi wierzchołek musi zawierać tę cyfrę. Zatem co najmniej jeden z wierzchołków jest prawdziwy, choć nie wiemy jeszcze który.\n\nUsuń tę cyfrę z innych pól, które widzą oba wierzchołki. Nie usuwaj jej z samych podstaw ani wierzchołków i nie wpisuj wartości na podstawie samego wzorca. Sprawdź dokładnie warunek dwóch miejsc w każdym wybranym wierszu lub kolumnie: trzeci kandydat przerywa to rozumowanie.": [
     "Choose one digit and find two rows with exactly two possible places for it in each row. One place in each row must share a column: these are the bases. The other two places, in different columns, are the roofs. You can also exchange rows and columns.\n\nThe bases see each other, so they cannot both contain the digit. If one roof is false, its base must be true; that rules out the other base and forces the other roof to be true. At least one roof therefore contains the digit, although we do not yet know which one.\n\nRemove the digit from other cells that see both roofs. Do not remove it from the four pattern cells or fill in a value from this pattern alone. Check that each selected row or column really has only two places for the digit: a third place breaks the reasoning.",
     "Elige una cifra y busca dos filas con exactamente dos posiciones posibles para ella en cada fila. Una posición de cada fila debe compartir columna: son las bases. Las otras dos, en columnas distintas, son los extremos superiores. También se pueden intercambiar filas y columnas.\n\nLas bases se ven y no pueden contener ambas la cifra. Si un extremo superior es falso, su base es verdadera; esto descarta la otra base y obliga al otro extremo superior a ser verdadero. Por tanto, al menos uno de los extremos contiene la cifra, aunque aún no sabemos cuál.\n\nElimina la cifra de otras casillas que vean ambos extremos superiores. No la elimines de las cuatro casillas del patrón ni escribas una cifra basándote solo en él. Comprueba que cada fila o columna elegida tenga exactamente dos posiciones: una tercera invalida el razonamiento.",
@@ -2846,7 +2847,7 @@
     "Choisissez un chiffre et trouvez deux lignes où il possède exactement deux positions possibles par ligne. Une position de chaque ligne doit partager la même colonne : ce sont les bases. Les deux autres, dans des colonnes différentes, sont les sommets. On peut aussi échanger lignes et colonnes.\n\nLes bases se voient et ne peuvent pas être vraies toutes les deux. Si un sommet est faux, sa base doit être vraie ; cela rend la seconde base fausse et force son sommet à être vrai. Au moins un sommet contient donc le chiffre, sans savoir encore lequel.\n\nRetirez le chiffre des autres cases qui voient les deux sommets. Ne le retirez pas des quatre cases du motif et ne remplissez pas une case sur ce seul constat. Vérifiez que chaque ligne ou colonne choisie possède exactement deux positions : une troisième invalide le raisonnement.",
     "اختر رقماً وابحث عن صفين يحتوي كل منهما على موضعين ممكنين فقط له. يجب أن يشترك موضع من كل صف في العمود نفسه: هذان هما القاعدتان. والموضعان الآخران، في عمودين مختلفين، هما القمتان. ويمكن أيضاً تبديل دور الصفوف والأعمدة.\n\nترى القاعدتان إحداهما الأخرى، فلا يمكن أن تحتوي كلتاهما على الرقم. إذا كانت إحدى القمتين خاطئة، وجب أن تكون قاعدتها صحيحة؛ وعندئذ تكون القاعدة الأخرى خاطئة وقمتها صحيحة. إذن تحتوي قمة واحدة على الأقل على الرقم، دون أن نعرف أيهما.\n\nاحذف الرقم من الخلايا الأخرى التي ترى القمتين معاً. لا تحذفه من خلايا النمط الأربع ولا تملأ قيمة اعتماداً على هذا النمط وحده. تأكد من وجود موضعين فقط في كل صف أو عمود مختار؛ وجود موضع ثالث يبطل هذا الاستنتاج.",
     "Scegli una cifra e trova due righe con esattamente due posizioni possibili ciascuna. Una posizione per riga deve condividere la stessa colonna: sono le basi. Le altre due, in colonne diverse, sono le cime. È possibile anche scambiare righe e colonne.\n\nLe basi si vedono e non possono essere entrambe vere. Se una cima è falsa, la sua base deve essere vera; ciò esclude l’altra base e rende vera l’altra cima. Almeno una cima contiene quindi la cifra, anche se non sappiamo ancora quale.\n\nElimina la cifra dalle altre celle che vedono entrambe le cime. Non eliminarla dalle quattro celle dello schema e non inserire un valore basandoti solo su questo motivo. Verifica che ogni riga o colonna scelta abbia esattamente due posizioni: una terza rende invalido il ragionamento."
-  ],
+  , "Вибери цифру й знайди два рядки, де вона має рівно по два можливі місця. Одне місце з кожного рядка має лежати в спільному стовпці: це основи. Два інші, у різних стовпцях, — вершини. Рядки й стовпці можна поміняти ролями.\n\nОснови бачать одна одну й не можуть обидві містити цифру. Якщо одна вершина її не містить, її основа мусить містити; тоді друга основа відпадає й друга вершина мусить містити цифру. Отже, хоча б одна вершина істинна.\n\nПрибери цифру з інших клітинок, що бачать обидві вершини. Не прибирай її з основ або вершин і не вписуй значення лише за візерунком. Перевір рівно два місця в кожній вибраній лінії: третій кандидат руйнує цей доказ."],
   "Skyscraper dla cyfry {0}. Podstawy: {1}. Wierzchołki: {2}. Każda para podstawa–wierzchołek zawiera dokładnie dwa miejsca dla tej cyfry w swoim wierszu lub kolumnie. Podstawy widzą się, więc co najmniej jeden wierzchołek musi zawierać tę cyfrę. Pola docelowe widzą oba wierzchołki.": [
     "Skyscraper for digit {0}. Bases: {1}. Roofs: {2}. Each base–roof pair is the only two places for this digit in its row or column. The bases see each other, so at least one roof must contain the digit. The target cells see both roofs.",
     "Skyscraper para la cifra {0}. Bases: {1}. Extremos superiores: {2}. Cada pareja base–extremo son las únicas dos posiciones de la cifra en su fila o columna. Las bases se ven, por lo que al menos un extremo debe contener la cifra. Las casillas objetivo ven ambos extremos.",
@@ -2856,7 +2857,7 @@
     "Skyscraper pour le chiffre {0}. Bases : {1}. Sommets : {2}. Chaque paire base–sommet représente les deux seules positions du chiffre dans sa ligne ou colonne. Les bases se voient, donc au moins un sommet contient le chiffre. Les cases cibles voient les deux sommets.",
     "ناطحة السحاب للرقم {0}. القاعدتان: {1}. القمتان: {2}. كل زوج من قاعدة وقمة هو الموضعان الوحيدان للرقم في صفه أو عموده. ترى القاعدتان إحداهما الأخرى، لذا تحتوي قمة واحدة على الأقل على الرقم. ترى الخلايا المستهدفة القمتين معاً.",
     "Skyscraper per la cifra {0}. Basi: {1}. Cime: {2}. Ogni coppia base–cima rappresenta le uniche due posizioni per questa cifra nella sua riga o colonna. Le basi si vedono, quindi almeno una cima contiene la cifra. Le celle bersaglio vedono entrambe le cime."
-  ],
+  , "Skyscraper для цифри {0}. Основи: {1}. Вершини: {2}. Кожна пара основа–вершина містить рівно два місця для цієї цифри у своєму рядку або стовпці. Основи бачать одна одну, тому принаймні одна вершина має містити цю цифру. Цільові клітинки бачать обидві вершини."],
   "Nie znalazłem nowego ruchu wśród dostępnych technik: jedyny kandydat, jedyne miejsce, zablokowani kandydaci, nagie i ukryte pary, trójki i czwórki, X-Wing, Skyscraper, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle (typy 1, 2, 4), kolorowanie oraz łańcuchy X/XY/AIC. Wykonane eliminacje są pomijane. Przy pustych notatkach oblicz kandydatów. Plansza może wymagać jeszcze trudniejszej techniki.": [
     "No new move found among the supported techniques (singles, locked candidates, subsets, wings, basic fish, UR 1/2/4, coloring and X/XY/AIC chains). Completed eliminations are skipped. Calculate candidates if notes are empty. A more advanced technique may be needed.",
     "No se encontró un paso nuevo con las técnicas admitidas (candidatos únicos, bloqueados, subconjuntos, alas, peces básicos, UR 1/2/4, coloreado y cadenas X/XY/AIC). Se omiten eliminaciones ya realizadas. Calcula candidatos si las notas están vacías. Puede requerir otra técnica.",
@@ -2866,7 +2867,7 @@
     "Aucun nouveau coup parmi les techniques disponibles : candidats uniques, verrouillages, ensembles, ailes, poissons simples, UR 1/2/4, coloriage et chaînes X/XY/AIC. Les éliminations terminées sont ignorées. Calculez les candidats si les notes sont vides. Une autre technique peut être nécessaire.",
     "لم تُعثر على خطوة جديدة بالتقنيات المتاحة: الوحيدات، القفل، المجموعات، الأجنحة، الأسماك الأساسية، UR 1/2/4، التلوين وسلاسل X/XY/AIC. يُتجاوز الحذف المنجز. احسب المرشحين إذا كانت الملاحظات فارغة؛ قد تلزم تقنية أخرى.",
     "Nessuna nuova mossa con le tecniche disponibili: singoli, candidati bloccati, insiemi, ali, pesci semplici, UR 1/2/4, colorazione e catene X/XY/AIC. Le eliminazioni già fatte sono saltate. Calcola i candidati se le note sono vuote. Potrebbe servire un’altra tecnica."
-  ],
+  , "Не знайдено нового ходу серед доступних технік: єдиний кандидат, єдине місце, заблоковані кандидати, відкриті й приховані пари, трійки та четвірки, X-Wing, Skyscraper, XY-Wing, XYZ-Wing, W-Wing, Swordfish, Jellyfish, Unique Rectangle (типи 1, 2, 4), розфарбовування та ланцюги X/XY/AIC. Виконані виключення пропускаються. Якщо нотатки порожні, обчисли кандидатів. Можливо, потрібна складніша техніка."],
   "Autorzy i licencje · Trener Sudoku": [
     "Credits and licences · Sudoku Trainer",
     "Créditos y licencias · Entrenador de Sudoku",
@@ -2876,7 +2877,7 @@
     "Crédits et licences · Coach Sudoku",
     "المساهمون والتراخيص · مدرب السودوكو",
     "Crediti e licenze · Allenatore di Sudoku"
-  ],
+  , "Автори та ліцензії · Тренер судоку"],
   "← Wróć do sudoku": [
     "← Back to Sudoku",
     "← Volver al sudoku",
@@ -2886,7 +2887,7 @@
     "← Retour au sudoku",
     "← العودة إلى السودوكو",
     "← Torna al sudoku"
-  ],
+  , "← Повернутися до судоку"],
   "Dziękujemy twórcom bibliotek, fontów i kolekcji sudoku wykorzystanych w aplikacji. Poniżej znajdziesz informacje o ich autorach i licencjach.": [
     "Thank you to the creators of the libraries, fonts and puzzle collection used in the app. Their credits and licences are listed below.",
     "Gracias a los autores de las bibliotecas, fuentes y colección de sudokus utilizadas en la aplicación. Sus créditos y licencias aparecen a continuación.",
@@ -2896,7 +2897,7 @@
     "Merci aux créateurs des bibliothèques, polices et de la collection de sudokus utilisées dans l’application. Leurs crédits et licences figurent ci-dessous.",
     "شكراً لمنشئي المكتبات والخطوط ومجموعة السودوكو المستخدمة في التطبيق. ترد معلومات المساهمين والتراخيص أدناه.",
     "Grazie agli autori delle librerie, dei caratteri e della raccolta di sudoku utilizzati nell’app. I loro crediti e le licenze sono elencati qui sotto."
-  ],
+  , "Дякуємо творцям бібліотек, шрифтів і колекцій судоку, використаних у застосунку. Нижче наведено відомості про авторів і ліцензії."],
   "Pełne teksty licencji pozostają w oryginalnym języku.": [
     "Full licence texts remain in their original language.",
     "Los textos completos de las licencias se conservan en su idioma original.",
@@ -2906,7 +2907,7 @@
     "Les textes complets des licences restent dans leur langue d’origine.",
     "تبقى نصوص التراخيص الكاملة بلغتها الأصلية.",
     "I testi integrali delle licenze restano nella lingua originale."
-  ],
+  , "Повні тексти ліцензій залишаються мовою оригіналу."],
   "Te licencje dotyczą wymienionych elementów zewnętrznych. Nie obejmują własnego kodu aplikacji, dla którego nie wybrano jeszcze licencji.": [
     "These licences cover the listed third-party components. They do not license the app’s own code, for which a licence has not yet been selected.",
     "Estas licencias cubren los componentes de terceros indicados. No otorgan una licencia al código propio de la aplicación, para el que aún no se ha elegido licencia.",
@@ -2916,7 +2917,7 @@
     "Ces licences concernent les composants tiers indiqués. Elles ne couvrent pas le code propre de l’application, pour lequel aucune licence n’a encore été choisie.",
     "تشمل هذه التراخيص مكونات الجهات الخارجية المذكورة. ولا تمنح ترخيصاً للشيفرة الخاصة بالتطبيق، التي لم يُختر لها ترخيص بعد.",
     "Queste licenze riguardano i componenti di terzi elencati. Non concedono una licenza al codice proprio dell’app, per il quale non è stata ancora scelta una licenza."
-  ],
+  , "Ці ліцензії стосуються перелічених сторонніх компонентів. Вони не охоплюють власний код застосунку, для якого ліцензію ще не вибрано."],
   "Kod źródłowy projektu": [
     "Project source",
     "Código fuente del proyecto",
@@ -2926,7 +2927,7 @@
     "Code source du projet",
     "الشيفرة المصدرية للمشروع",
     "Codice sorgente del progetto"
-  ],
+  , "Вихідний код проєкту"],
   "Rozpoznawanie cyfr w przeglądarce. Licencja Apache-2.0.": [
     "Digit recognition in the browser. Apache-2.0 licence.",
     "Reconocimiento de cifras en el navegador. Licencia Apache-2.0.",
@@ -2936,7 +2937,7 @@
     "Reconnaissance des chiffres dans le navigateur. Licence Apache-2.0.",
     "التعرف على الأرقام في المتصفح. ترخيص Apache-2.0.",
     "Riconoscimento delle cifre nel browser. Licenza Apache-2.0."
-  ],
+  , "Розпізнавання цифр у браузері. Ліцензія Apache-2.0."],
   "Silnik rozpoznawania obrazu. Licencja Apache-2.0.": [
     "Image recognition engine. Apache-2.0 licence.",
     "Motor de reconocimiento de imágenes. Licencia Apache-2.0.",
@@ -2946,7 +2947,7 @@
     "Moteur de reconnaissance d’images. Licence Apache-2.0.",
     "محرك التعرف على الصور. ترخيص Apache-2.0.",
     "Motore di riconoscimento delle immagini. Licenza Apache-2.0."
-  ],
+  , "Рушій розпізнавання зображень. Ліцензія Apache-2.0."],
   "Angielskie dane rozpoznawania tekstu": [
     "English OCR training data",
     "Datos de entrenamiento de OCR en inglés",
@@ -2956,7 +2957,7 @@
     "Données d’entraînement OCR en anglais",
     "بيانات تدريب التعرف على النصوص الإنجليزية",
     "Dati di addestramento OCR in inglese"
-  ],
+  , "Англійські дані розпізнавання тексту"],
   "Dane językowe udostępnione przez projekty Tesseract. Licencja Apache-2.0.": [
     "Language data supplied by the Tesseract projects. Apache-2.0 licence.",
     "Datos lingüísticos proporcionados por los proyectos Tesseract. Licencia Apache-2.0.",
@@ -2966,7 +2967,7 @@
     "Données linguistiques fournies par les projets Tesseract. Licence Apache-2.0.",
     "بيانات لغوية توفرها مشاريع Tesseract. ترخيص Apache-2.0.",
     "Dati linguistici forniti dai progetti Tesseract. Licenza Apache-2.0."
-  ],
+  , "Мовні дані від проєктів Tesseract. Ліцензія Apache-2.0."],
   "Font udostępniany przez Google Fonts. Autorzy i pełne warunki: w tekście licencji SIL Open Font License 1.1 poniżej.": [
     "Font served by Google Fonts. Authors and full terms: see the SIL Open Font License 1.1 text below.",
     "Fuente servida por Google Fonts. Autores y condiciones completas: consulta el texto de SIL Open Font License 1.1 a continuación.",
@@ -2976,7 +2977,7 @@
     "Police fournie par Google Fonts. Auteurs et conditions complètes : voir le texte SIL Open Font License 1.1 ci-dessous.",
     "خط توفره Google Fonts. للاطلاع على المؤلفين والشروط الكاملة، انظر نص SIL Open Font License 1.1 أدناه.",
     "Carattere fornito da Google Fonts. Autori e condizioni complete: consulta il testo SIL Open Font License 1.1 qui sotto."
-  ],
+  , "Шрифт із Google Fonts. Автори й повні умови наведені нижче в тексті ліцензії SIL Open Font License 1.1."],
   "Biblioteka sudoku Sudoku Exchange": [
     "Sudoku Exchange puzzle bank",
     "Colección de sudokus Sudoku Exchange",
@@ -2986,7 +2987,7 @@
     "Collection de sudokus Sudoku Exchange",
     "مجموعة ألغاز Sudoku Exchange",
     "Raccolta di sudoku Sudoku Exchange"
-  ],
+  , "Бібліотека судоку Sudoku Exchange"],
   "Grant McLean i współtwórcy. Domena publiczna / Unlicense. Wersja zbioru:": [
     "Grant McLean and contributors. Public domain / Unlicense. Dataset revision:",
     "Grant McLean y colaboradores. Dominio público / Unlicense. Revisión del conjunto:",
@@ -2996,7 +2997,7 @@
     "Grant McLean et les contributeurs. Domaine public / Unlicense. Révision des données :",
     "Grant McLean والمساهمون. الملك العام / Unlicense. إصدار البيانات:",
     "Grant McLean e collaboratori. Pubblico dominio / Unlicense. Revisione dei dati:"
-  ],
+  , "Grant McLean та співавтори. Суспільне надбання / Unlicense. Версія набору:"],
   "Biblioteki JavaScript używane przez OCR": [
     "OCR JavaScript dependencies",
     "Dependencias JavaScript del OCR",
@@ -3006,7 +3007,7 @@
     "Dépendances JavaScript de l’OCR",
     "مكتبات JavaScript المستخدمة في التعرف على النصوص",
     "Dipendenze JavaScript dell’OCR"
-  ],
+  , "Бібліотеки JavaScript, використані для OCR"],
   "Informacje o właścicielach praw autorskich i pełne warunki znajdują się w poniższych plikach.": [
     "Copyright holders and full terms are listed in the files below.",
     "Los titulares de los derechos de autor y las condiciones completas figuran en los archivos siguientes.",
@@ -3016,7 +3017,7 @@
     "Les titulaires des droits et les conditions complètes figurent dans les fichiers ci-dessous.",
     "ترد أسماء أصحاب حقوق النشر والشروط الكاملة في الملفات أدناه.",
     "I titolari dei diritti d’autore e le condizioni complete sono indicati nei file qui sotto."
-  ],
+  , "Відомості про власників авторських прав і повні умови наведено в наступних файлах."],
   "Komponenty silnika OCR": [
     "Native OCR components",
     "Componentes nativos del OCR",
@@ -3026,7 +3027,7 @@
     "Composants natifs de l’OCR",
     "مكونات محرك التعرف على النصوص",
     "Componenti nativi dell’OCR"
-  ],
+  , "Компоненти рушія OCR"],
   "Teksty pochodzą z wersji komponentów używanych przez Tesseract.js-core 5.1.1. Każdy komponent zachowuje własne warunki licencji.": [
     "The texts come from the component revisions used by Tesseract.js-core 5.1.1. Each component retains its own licence terms.",
     "Los textos proceden de las versiones de los componentes utilizados por Tesseract.js-core 5.1.1. Cada componente conserva sus propias condiciones de licencia.",
@@ -3036,7 +3037,7 @@
     "Les textes proviennent des versions des composants utilisées par Tesseract.js-core 5.1.1. Chaque composant conserve ses propres conditions de licence.",
     "تأتي النصوص من إصدارات المكونات المستخدمة في Tesseract.js-core 5.1.1. يحتفظ كل مكون بشروط ترخيصه الخاصة.",
     "I testi provengono dalle revisioni dei componenti usate da Tesseract.js-core 5.1.1. Ogni componente mantiene le proprie condizioni di licenza."
-  ],
+  , "Тексти відповідають версіям компонентів Tesseract.js-core 5.1.1. Кожен компонент зберігає власні умови ліцензії."],
   "Biblioteki OCR są pobierane z jsDelivr, a fonty z Google Fonts. Nie modyfikujemy tych bibliotek. Kod analizujący sudoku i objaśnienia są własną częścią aplikacji.": [
     "OCR libraries are loaded from jsDelivr and fonts from Google Fonts. These libraries are unmodified. The Sudoku solver code and explanations belong to the app itself.",
     "Las bibliotecas OCR se cargan desde jsDelivr y las fuentes desde Google Fonts. Estas bibliotecas no se han modificado. El código del solucionador y las explicaciones son propios de la aplicación.",
@@ -3046,7 +3047,7 @@
     "Les bibliothèques OCR sont chargées depuis jsDelivr et les polices depuis Google Fonts. Ces bibliothèques ne sont pas modifiées. Le code de résolution et les explications sont propres à l’application.",
     "تُحمّل مكتبات التعرف على النصوص من jsDelivr والخطوط من Google Fonts. لم تُعدّل هذه المكتبات. شيفرة حل السودوكو والشروحات جزء خاص بالتطبيق.",
     "Le librerie OCR vengono caricate da jsDelivr e i caratteri da Google Fonts. Queste librerie non sono modificate. Il codice di risoluzione e le spiegazioni sono parte propria dell’app."
-  ],
+  , "Бібліотеки OCR завантажуються з jsDelivr, шрифти — з Google Fonts. Ми не змінюємо ці бібліотеки. Код аналізу судоку й пояснення є власною частиною застосунку."],
   "Nowa gra": [
     "New game",
     "Nueva partida",
@@ -3056,7 +3057,7 @@
     "Nouvelle partie",
     "لعبة جديدة",
     "Nuova partita"
-  ],
+  , "Нова гра"],
   "Jak działa biblioteka?": [
     "How does the library work?",
     "¿Cómo funciona la biblioteca?",
@@ -3066,7 +3067,7 @@
     "Comment fonctionne la bibliothèque ?",
     "كيف تعمل مكتبة الألغاز؟",
     "Come funziona la raccolta?"
-  ],
+  , "Як працює бібліотека?"],
   "Każdy poziom ma własną łamigłówkę dnia, wspólną dla wszystkich graczy. Wybierz poziom powyżej. Plansze dnia zmieniają się o północy UTC.": [
     "Each difficulty has its own daily puzzle, shared by all players. Choose a difficulty above. Daily puzzles change at midnight UTC.",
     "Cada nivel tiene su propio sudoku del día, común para todos los jugadores. Elige un nivel arriba. Los sudokus del día cambian a medianoche UTC.",
@@ -3076,7 +3077,7 @@
     "Chaque niveau a sa propre grille du jour, identique pour tous les joueurs. Choisissez un niveau ci-dessus. Les grilles du jour changent à minuit UTC.",
     "لكل مستوى صعوبة لغز يومي خاص به، وهو نفسه لجميع اللاعبين. اختر المستوى أعلاه. تتغير الألغاز اليومية عند منتصف الليل بالتوقيت العالمي UTC.",
     "Ogni livello ha il proprio sudoku del giorno, uguale per tutti i giocatori. Scegli un livello qui sopra. I sudoku del giorno cambiano a mezzanotte UTC."
-  ],
+  , "Кожен рівень має власну головоломку дня, спільну для всіх гравців. Вибери рівень вище. Головоломки дня змінюються опівночі UTC."],
   "Wygląd": [
     "Appearance",
     "Apariencia",
@@ -3086,7 +3087,7 @@
     "Apparence",
     "المظهر",
     "Aspetto"
-  ],
+  , "Вигляд"],
   "Gruba ramka: wybrane przez Ciebie pole. Niebieskie tło: pola tworzące wskazówkę. Bursztynowa obwódka: pola do usunięcia kandydatów.": [
     "Thick border: your selected cell. Blue background: cells supporting the hint. Amber border: cells for candidate elimination.",
     "Borde grueso: tu casilla seleccionada. Fondo azul: casillas que justifican la pista. Borde ámbar: casillas para eliminar candidatos.",
@@ -3096,7 +3097,7 @@
     "Bord épais : votre case. Fond bleu : cases justifiant l’indice. Bord ambré : cases où éliminer des candidats.",
     "الإطار السميك: خانتك المحددة. الأزرق: خانات الاستدلال. الإطار الكهرماني: خانات حذف المرشحين.",
     "Bordo spesso: cella selezionata. Sfondo blu: celle che giustificano l’indizio. Bordo ambra: celle da cui eliminare candidati."
-  ],
+  , "Товста рамка: вибрана клітинка. Блакитне тло: клітинки підказки. Бурштинова рамка: клітинки для виключення кандидатів."],
   "Grupa A: niebieskie tło i ciągła ramka. Grupa B: fioletowe tło i przerywana ramka. Wyróżniona cyfra jest kolorowanym kandydatem. Bursztynowa ramka: eliminacje. Gruba ramka: wybrane pole.": [
     "Group A: blue background and solid outline. Group B: purple background and dashed outline. The emphasized digit is the colored candidate. Amber outline: eliminations. Thick outline: selected cell.",
     "Grupo A: fondo azul y borde continuo. Grupo B: fondo violeta y borde discontinuo. La cifra resaltada es el candidato coloreado. Borde ámbar: eliminaciones. Borde grueso: casilla seleccionada.",
@@ -3106,7 +3107,7 @@
     "Groupe A : fond bleu et contour continu. Groupe B : fond violet et contour discontinu. Le chiffre mis en évidence est le candidat coloré. Contour ambre : éliminations. Contour épais : case sélectionnée.",
     "المجموعة A: خلفية زرقاء وإطار متصل. المجموعة B: خلفية بنفسجية وإطار متقطع. الرقم المميز هو المرشح الملون. الإطار الكهرماني: الحذف. الإطار السميك: الخلية المحددة.",
     "Gruppo A: sfondo blu e bordo continuo. Gruppo B: sfondo viola e bordo tratteggiato. La cifra evidenziata è il candidato colorato. Bordo ambra: eliminazioni. Bordo spesso: cella selezionata."
-  ],
+  , "Група A: блакитне тло й суцільна рамка. Група B: фіолетове тло й пунктирна рамка. Виділена цифра — кандидат, що розфарбовується. Бурштинова рамка: виключення. Товста рамка: вибрана клітинка."],
   "Wysoki kontrast": [
     "High Contrast",
     "Alto contraste",
@@ -3116,7 +3117,7 @@
     "Contraste élevé",
     "تباين عالٍ",
     "Contrasto elevato"
-  ],
+  , "Високий контраст"],
   "Większy tekst": [
     "Larger text",
     "Texto más grande",
@@ -3126,7 +3127,7 @@
     "Texte agrandi",
     "نص أكبر",
     "Testo più grande"
-  ],
+  , "Більший текст"],
   "Może wymagać przewijania na telefonie.": [
     "May require scrolling on a phone.",
     "Puede requerir desplazamiento en el móvil.",
@@ -3136,7 +3137,7 @@
     "Peut nécessiter de faire défiler sur téléphone.",
     "قد يتطلب التمرير على الهاتف.",
     "Sul telefono potrebbe richiedere lo scorrimento."
-  ],
+  , "На телефоні може знадобитися прокручування."],
   "Szałwia": [
     "Sage",
     "Salvia",
@@ -3146,7 +3147,7 @@
     "Sauge",
     "المريمية",
     "Salvia"
-  ],
+  , "Шавлія"],
   "Atrament i papier": [
     "Ink & Paper",
     "Tinta y papel",
@@ -3156,7 +3157,7 @@
     "Encre et papier",
     "حبر وورق",
     "Inchiostro e carta"
-  ],
+  , "Чорнило й папір"],
   "Rozpocznij rozwiązywanie": [
     "Start solving",
     "Empezar a resolver",
@@ -3166,7 +3167,7 @@
     "Commencer à résoudre",
     "ابدأ الحل",
     "Inizia a risolvere"
-  ],
+  , "Почати розв’язування"],
   "Edytuj liczby początkowe": [
     "Edit starting clues",
     "Editar pistas iniciales",
@@ -3176,7 +3177,7 @@
     "Modifier les chiffres initiaux",
     "عدّل الأرقام المعطاة",
     "Modifica i numeri iniziali"
-  ],
+  , "Редагувати початкові числа"],
   "Liczba początkowa — zablokowana": [
     "Starting clue — locked",
     "Pista inicial — bloqueada",
@@ -3186,7 +3187,7 @@
     "Chiffre initial — verrouillé",
     "رقم معطى — مقفل",
     "Numero iniziale — bloccato"
-  ],
+  , "Початкове число — заблоковано"],
   "To liczba początkowa. Aby ją zmienić, wybierz „Edytuj liczby początkowe”.": [
     "This is a starting clue. Choose “Edit starting clues” to change it.",
     "Es una pista inicial. Elige «Editar pistas iniciales» para cambiarla.",
@@ -3196,7 +3197,7 @@
     "C’est un chiffre initial. Choisissez « Modifier les chiffres initiaux » pour le changer.",
     "هذا رقم معطى. اختر «عدّل الأرقام المعطاة» لتغييره.",
     "È un numero iniziale. Scegli «Modifica i numeri iniziali» per cambiarlo."
-  ],
+  , "Це початкове число. Щоб змінити його, вибери «Редагувати початкові числа»."],
   "Edytować liczby początkowe?": [
     "Edit starting clues?",
     "¿Editar las pistas iniciales?",
@@ -3206,7 +3207,7 @@
     "Modifier les chiffres initiaux ?",
     "هل تريد تعديل الأرقام المعطاة؟",
     "Modificare i numeri iniziali?"
-  ],
+  , "Редагувати початкові числа?"],
   "Blokada zostanie zdjęta. Po poprawieniu planszy wybierz „Rozpocznij rozwiązywanie”, aby ponownie zablokować liczby początkowe.": [
     "The clues will be unlocked. After correcting the grid, choose “Start solving” to lock the starting clues again.",
     "Las pistas se desbloquearán. Tras corregir la cuadrícula, elige «Empezar a resolver» para bloquearlas de nuevo.",
@@ -3216,7 +3217,7 @@
     "Les chiffres seront déverrouillés. Après correction, choisissez « Commencer à résoudre » pour les verrouiller à nouveau.",
     "سيتم إلغاء القفل. بعد تصحيح الشبكة، اختر «ابدأ الحل» لقفل الأرقام المعطاة مجددًا.",
     "I numeri verranno sbloccati. Dopo aver corretto la griglia, scegli «Inizia a risolvere» per bloccarli di nuovo."
-  ],
+  , "Блокування буде знято. Після виправлення вибери «Почати розв’язування», щоб знову заблокувати початкові числа."],
   "Możesz poprawić liczby początkowe.": [
     "You can now correct the starting clues.",
     "Ahora puedes corregir las pistas iniciales.",
@@ -3226,7 +3227,7 @@
     "Vous pouvez maintenant corriger les chiffres initiaux.",
     "يمكنك الآن تصحيح الأرقام المعطاة.",
     "Ora puoi correggere i numeri iniziali."
-  ],
+  , "Можна виправити початкові числа."],
   "Liczby początkowe zablokowane. Miłego rozwiązywania!": [
     "Starting clues locked. Enjoy solving!",
     "Pistas iniciales bloqueadas. ¡Disfruta resolviendo!",
@@ -3236,7 +3237,7 @@
     "Chiffres initiaux verrouillés. Bonne résolution !",
     "تم قفل الأرقام المعطاة. استمتع بالحل!",
     "Numeri iniziali bloccati. Buon divertimento!"
-  ],
+  , "Початкові числа заблоковано. Приємного розв’язування!"],
   "Przywrócisz liczby z punktu restartu i usuniesz kandydatów. Możesz cofnąć restart.": [
     "Restore the restart point and clear candidates. You can undo the restart.",
     "Se restaurará el punto de reinicio y se borrarán los candidatos. Puedes deshacer el reinicio.",
@@ -3246,7 +3247,7 @@
     "Le point de redémarrage sera restauré et les candidats effacés. Vous pouvez annuler le redémarrage.",
     "ستتم استعادة نقطة إعادة البدء ومسح المرشحين. يمكنك التراجع عن إعادة البدء.",
     "Verrà ripristinato il punto di riavvio e cancellati i candidati. Puoi annullare il riavvio."
-  ],
+  , "Буде відновлено числа з точки перезапуску й очищено кандидатів. Перезапуск можна скасувати."],
   "Pracownia": [
     "Workshop",
     "Taller",
@@ -3256,7 +3257,7 @@
     "Atelier",
     "ورشة",
     "Laboratorio"
-  ],
+  , "Майстерня"],
   "Podgląd lokalny": [
     "Local preview",
     "Vista previa local",
@@ -3266,7 +3267,7 @@
     "Aperçu local",
     "معاينة محلية",
     "Anteprima locale"
-  ],
+  , "Локальний перегляд"],
   "Podpowiedź": [
     "Hint",
     "Pista",
@@ -3276,7 +3277,7 @@
     "Indice",
     "تلميح",
     "Suggerimento"
-  ],
+  , "Підказка"],
   "Import planszy": [
     "Import puzzle",
     "Importar cuadrícula",
@@ -3286,7 +3287,7 @@
     "Importer une grille",
     "استيراد اللغز",
     "Importa una griglia"
-  ],
+  , "Імпорт головоломки"],
   "O narzędziach": [
     "About the tools",
     "Acerca de las herramientas",
@@ -3296,7 +3297,7 @@
     "À propos des outils",
     "حول الأدوات",
     "Informazioni sugli strumenti"
-  ],
+  , "Про інструменти"],
   "Forma": [
     "Contour",
     "Forma",
@@ -3306,7 +3307,7 @@
     "Contour",
     "انسياب",
     "Forma"
-  ],
+  , "Форма"],
   "Energia": [
     "Energy",
     "Energía",
@@ -3316,16 +3317,16 @@
     "Énergie",
     "طاقة",
     "Energia"
-  ],
-  "Oznaczaj błędne cyfry": ["Highlight incorrect digits", "Resaltar cifras incorrectas", "Falsche Ziffern markieren", "标记错误数字", "गलत अंक चिह्नित करें", "Signaler les chiffres incorrects", "تمييز الأرقام الخاطئة", "Evidenzia le cifre errate"],
-  "Błędny wpis": ["Incorrect entry", "Entrada incorrecta", "Falscher Eintrag", "输入错误", "गलत प्रविष्टि", "Saisie incorrecte", "إدخال خاطئ", "Inserimento errato"],
-  "Wskazuje błędne cyfry bez ujawniania poprawnej odpowiedzi. Wymaga planszy z jednym rozwiązaniem.": ["Marks incorrect digits without revealing the solution. Requires a uniquely solvable puzzle.", "Marca cifras incorrectas sin revelar la solución. Requiere una solución única.", "Markiert falsche Ziffern, ohne die Lösung zu verraten. Erfordert eine eindeutige Lösung.", "标记错误数字而不显示答案。题目必须有唯一解。", "समाधान दिखाए बिना गलत अंक चिह्नित करता है। पहेली का एक ही समाधान होना चाहिए।", "Signale les chiffres incorrects sans révéler la solution. Nécessite une solution unique.", "يحدد الأرقام الخاطئة دون كشف الحل. يتطلب لغزًا ذا حل وحيد.", "Segnala le cifre errate senza rivelare la soluzione. Richiede una soluzione unica."],
-  "Sprawdzanie wpisów włączone. Błędne cyfry oznaczamy symbolem ×.": ["Entry checking is on. Incorrect digits are marked ×.", "Comprobación activada. Las cifras incorrectas se marcan con ×.", "Prüfung aktiv. Falsche Ziffern sind mit × markiert.", "已启用输入检查。错误数字标有 ×。", "प्रविष्टि जाँच चालू है। गलत अंक × से चिह्नित हैं।", "Vérification activée. Les chiffres incorrects sont marqués ×.", "التحقق مفعّل. الأرقام الخاطئة مميزة بعلامة ×.", "Controllo attivo. Le cifre errate sono contrassegnate con ×."],
-  "Aby sprawdzać wpisy, najpierw wybierz „Rozpocznij rozwiązywanie”.": ["To check entries, first choose “Start solving”.", "Para comprobar entradas, elige primero «Empezar a resolver».", "Wähle zum Prüfen zuerst „Lösen beginnen“.", "要检查输入，请先选择“开始解题”。", "प्रविष्टियाँ जाँचने के लिए पहले “हल करना शुरू करें” चुनें।", "Pour vérifier les saisies, choisissez d’abord « Commencer à résoudre ».", "للتحقق من الإدخالات، اختر أولًا «ابدأ الحل».", "Per controllare gli inserimenti, scegli prima «Inizia a risolvere»."],
-  "Ta plansza ma wiele rozwiązań — sprawdzanie wpisów jest wstrzymane.": ["This puzzle has multiple solutions. Entry checking is paused.", "Esta cuadrícula tiene varias soluciones. Comprobación en pausa.", "Dieses Rätsel hat mehrere Lösungen. Prüfung pausiert.", "此题有多个解，输入检查已暂停。", "इस पहेली के कई समाधान हैं। प्रविष्टि जाँच रुकी हुई है।", "Cette grille a plusieurs solutions. Vérification suspendue.", "لهذا اللغز عدة حلول. التحقق متوقف مؤقتًا.", "Questo schema ha più soluzioni. Controllo sospeso."],
-  "Liczby początkowe nie mają rozwiązania — sprawdzanie wpisów jest wstrzymane.": ["The starting clues have no solution. Entry checking is paused.", "Las cifras iniciales no tienen solución. Comprobación en pausa.", "Die Vorgaben haben keine Lösung. Prüfung pausiert.", "初始数字无解，输入检查已暂停。", "शुरुआती अंकों का कोई समाधान नहीं है। प्रविष्टि जाँच रुकी हुई है।", "Les chiffres de départ n’ont aucune solution. Vérification suspendue.", "لا يوجد حل للأرقام الأولية. التحقق متوقف مؤقتًا.", "Le cifre iniziali non hanno soluzione. Controllo sospeso."],
-  "Nie udało się potwierdzić jednego rozwiązania — sprawdzanie wpisów jest wstrzymane.": ["A unique solution could not be confirmed. Entry checking is paused.", "No se pudo confirmar una solución única. Comprobación en pausa.", "Eine eindeutige Lösung konnte nicht bestätigt werden. Prüfung pausiert.", "无法确认唯一解，输入检查已暂停。", "एकमात्र समाधान की पुष्टि नहीं हो सकी। प्रविष्टि जाँच रुकी हुई है।", "Impossible de confirmer une solution unique. Vérification suspendue.", "تعذر تأكيد وجود حل وحيد. التحقق متوقف مؤقتًا.", "Impossibile confermare una soluzione unica. Controllo sospeso."],
-  "Porcelana": ["Porcelain", "Porcelana", "Porzellan", "瓷白", "पोर्सिलेन", "Porcelaine", "الخزف", "Porcellana"],
+  , "Енергія"],
+  "Oznaczaj błędne cyfry": ["Highlight incorrect digits", "Resaltar cifras incorrectas", "Falsche Ziffern markieren", "标记错误数字", "गलत अंक चिह्नित करें", "Signaler les chiffres incorrects", "تمييز الأرقام الخاطئة", "Evidenzia le cifre errate", "Позначати помилкові цифри"],
+  "Błędny wpis": ["Incorrect entry", "Entrada incorrecta", "Falscher Eintrag", "输入错误", "गलत प्रविष्टि", "Saisie incorrecte", "إدخال خاطئ", "Inserimento errato", "Помилковий запис"],
+  "Wskazuje błędne cyfry bez ujawniania poprawnej odpowiedzi. Wymaga planszy z jednym rozwiązaniem.": ["Marks incorrect digits without revealing the solution. Requires a uniquely solvable puzzle.", "Marca cifras incorrectas sin revelar la solución. Requiere una solución única.", "Markiert falsche Ziffern, ohne die Lösung zu verraten. Erfordert eine eindeutige Lösung.", "标记错误数字而不显示答案。题目必须有唯一解。", "समाधान दिखाए बिना गलत अंक चिह्नित करता है। पहेली का एक ही समाधान होना चाहिए।", "Signale les chiffres incorrects sans révéler la solution. Nécessite une solution unique.", "يحدد الأرقام الخاطئة دون كشف الحل. يتطلب لغزًا ذا حل وحيد.", "Segnala le cifre errate senza rivelare la soluzione. Richiede una soluzione unica.", "Позначає помилкові цифри без розкриття правильної відповіді. Потрібна головоломка з єдиним розв’язком."],
+  "Sprawdzanie wpisów włączone. Błędne cyfry oznaczamy symbolem ×.": ["Entry checking is on. Incorrect digits are marked ×.", "Comprobación activada. Las cifras incorrectas se marcan con ×.", "Prüfung aktiv. Falsche Ziffern sind mit × markiert.", "已启用输入检查。错误数字标有 ×。", "प्रविष्टि जाँच चालू है। गलत अंक × से चिह्नित हैं।", "Vérification activée. Les chiffres incorrects sont marqués ×.", "التحقق مفعّل. الأرقام الخاطئة مميزة بعلامة ×.", "Controllo attivo. Le cifre errate sono contrassegnate con ×.", "Перевірку ввімкнено. Помилкові цифри позначаються символом ×."],
+  "Aby sprawdzać wpisy, najpierw wybierz „Rozpocznij rozwiązywanie”.": ["To check entries, first choose “Start solving”.", "Para comprobar entradas, elige primero «Empezar a resolver».", "Wähle zum Prüfen zuerst „Lösen beginnen“.", "要检查输入，请先选择“开始解题”。", "प्रविष्टियाँ जाँचने के लिए पहले “हल करना शुरू करें” चुनें।", "Pour vérifier les saisies, choisissez d’abord « Commencer à résoudre ».", "للتحقق من الإدخالات، اختر أولًا «ابدأ الحل».", "Per controllare gli inserimenti, scegli prima «Inizia a risolvere».", "Для перевірки спочатку вибери «Почати розв’язування»."],
+  "Ta plansza ma wiele rozwiązań — sprawdzanie wpisów jest wstrzymane.": ["This puzzle has multiple solutions. Entry checking is paused.", "Esta cuadrícula tiene varias soluciones. Comprobación en pausa.", "Dieses Rätsel hat mehrere Lösungen. Prüfung pausiert.", "此题有多个解，输入检查已暂停。", "इस पहेली के कई समाधान हैं। प्रविष्टि जाँच रुकी हुई है।", "Cette grille a plusieurs solutions. Vérification suspendue.", "لهذا اللغز عدة حلول. التحقق متوقف مؤقتًا.", "Questo schema ha più soluzioni. Controllo sospeso.", "Ця головоломка має кілька розв’язків — перевірку призупинено."],
+  "Liczby początkowe nie mają rozwiązania — sprawdzanie wpisów jest wstrzymane.": ["The starting clues have no solution. Entry checking is paused.", "Las cifras iniciales no tienen solución. Comprobación en pausa.", "Die Vorgaben haben keine Lösung. Prüfung pausiert.", "初始数字无解，输入检查已暂停。", "शुरुआती अंकों का कोई समाधान नहीं है। प्रविष्टि जाँच रुकी हुई है।", "Les chiffres de départ n’ont aucune solution. Vérification suspendue.", "لا يوجد حل للأرقام الأولية. التحقق متوقف مؤقتًا.", "Le cifre iniziali non hanno soluzione. Controllo sospeso.", "Початкові числа не мають розв’язку — перевірку призупинено."],
+  "Nie udało się potwierdzić jednego rozwiązania — sprawdzanie wpisów jest wstrzymane.": ["A unique solution could not be confirmed. Entry checking is paused.", "No se pudo confirmar una solución única. Comprobación en pausa.", "Eine eindeutige Lösung konnte nicht bestätigt werden. Prüfung pausiert.", "无法确认唯一解，输入检查已暂停。", "एकमात्र समाधान की पुष्टि नहीं हो सकी। प्रविष्टि जाँच रुकी हुई है।", "Impossible de confirmer une solution unique. Vérification suspendue.", "تعذر تأكيد وجود حل وحيد. التحقق متوقف مؤقتًا.", "Impossibile confermare una soluzione unica. Controllo sospeso.", "Не вдалося підтвердити єдиний розв’язок — перевірку призупинено."],
+  "Porcelana": ["Porcelain", "Porcelana", "Porzellan", "瓷白", "पोर्सिलेन", "Porcelaine", "الخزف", "Porcellana", "Порцеляна"],
   "Mandarynka": [
     "Tangerine",
     "Mandarina",
@@ -3335,7 +3336,7 @@
     "Mandarine",
     "يوسفي",
     "Mandarino"
-  ],
+  , "Мандаринка"],
   "Kontrast": [
     "Contrast",
     "Contraste",
@@ -3345,7 +3346,7 @@
     "Contraste",
     "التباين",
     "Contrasto"
-  ],
+  , "Контраст"],
   "Oblicz kandydatów": [
     "Calculate candidates",
     "Calcular candidatos",
@@ -3355,5 +3356,5 @@
     "Calculer les candidats",
     "حساب المرشحين",
     "Calcola candidati"
-  ]
+  , "Обчислити кандидатів"]
 };root.SudokuLocales=catalog;if(typeof module!=="undefined")module.exports=catalog;})(globalThis);
