@@ -6,7 +6,7 @@ Podgląd deweloperski: http://127.0.0.1:5196/?features=gamification . Obsługiwa
 
 ## Cel dzienny i pucharki
 
-Na komputerze klikalny pasek nad grą pokazuje postęp dzisiaj, liczbę pucharków oraz aktualną setkę. Na telefonie do 640 px pasek jest ukryty; zamiast niego przy liczniku pól jest kompaktowy przycisk 🎯 2/3 · 🏆 1. Oba otwierają ten sam panel. Wyłączony cel pokazuje kreskę, a liczby pucharków powyżej 99 skrót 99+; pełne wartości pozostają w opisie dostępności. Większy tekst może zawinąć wiersz dla czytelności. Po kliknięciu otwiera ustawienia i nagrody. Statystyki oraz kalendarz są w rozwijanych szczegółach.
+Na komputerze klikalny pasek nad grą pokazuje postęp dzisiaj, liczbę pucharków oraz aktualną setkę. Na telefonie do 640 px pasek jest ukryty; zamiast niego przy liczniku pól jest kompaktowy przycisk 🎯 2/3 · 🧩 23/100 · 🏆 1. Oba otwierają ten sam panel. Wyłączony cel pokazuje kreskę, a liczby pucharków powyżej 99 skrót 99+; pełne wartości pozostają w opisie dostępności. Większy tekst może zawinąć wiersz dla czytelności. Po kliknięciu otwiera ustawienia i nagrody. Statystyki oraz kalendarz są w rozwijanych szczegółach.
 
 Domyślny cel: 3 nowe ukończone sudoku dziennie. Presety: 1, 3, 5, własny cel 1–99 albo Bez celu. Liczą się unikalne plansze biblioteki, niezależnie od trudności i użycia pomocy. Wcześniejsze ukończenia bez daty nie są wstecz doliczane do dzisiejszego celu. Powtórne rozwiązanie tej samej planszy nie zwiększa licznika.
 
@@ -39,3 +39,5 @@ W rozwijanych szczegółach jest album 12 plakietek, w trzech kolekcjach po czte
 Odblokowania są zapisywane raz w polu badges, według stałego ID i lokalnej daty. Nie są odbierane przez wyłączenie celu ani cofnięcie ostatniego wpisu. Pomoc nie ogranicza żadnej kolekcji. Dotychczasowe sumy ukończeń mogą odblokować plakietki Setek przy migracji; bez danych poziomu lub dat nie wymyślamy pozostałych osiągnięć. Migracja nie wyświetla lawiny powiadomień. Nowe plakietki są ogłaszane krótkim, znikającym komunikatem bez dialogu; panel gry nie zmienia wysokości.
 
 Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Album jest dostępny tylko po włączeniu flagi i na razie polskojęzyczny. Testy sprawdzają liczbę i unikalność 12 ID, migrację, progi postępu, pomoc, niekolejne dni, zapis po odświeżeniu, jednokrotne nadanie i trwałość daty.
+
+Od 1.21.1 pasek komputerowy ma dwa wskaźniki: dzisiejszy cel i bieżącą setkę (z łącznym wynikiem z 10 000). Mobilny przycisk pokazuje także wynik setki obok celu i pucharków. Pełne wartości są w opisie dostępności; na najwęższych ekranach etykieta stanu planszy może być skrócona, aby nie dodawać wiersza.

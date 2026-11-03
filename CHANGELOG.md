@@ -1,3 +1,7 @@
+# v1.21.1
+
+- W wersji testowej postępów pokazano cel dnia i wynik bieżącej setki jednocześnie: dwa paski na komputerze, kompaktowy licznik na telefonie.
+
 # v1.21.0
 
 - Udostępniono opcjonalny, polskojęzyczny test postępów przez `?features=gamification`. Domyślnie wyłączony; zwykły adres zachowuje standardowy widok.
