@@ -1,3 +1,5 @@
+> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+
 # Energia — osobny kolorowy motyw lokalny
 
 Forma zachowuje ciepłe kolory kości słoniowej, śliwki i terakoty. Energia jest dodatkową opcją, a nie zamiennikiem Formy. Publiczna strona nadal udostępnia wydanie 1.18.0; te dwa warianty nie zostały opublikowane.

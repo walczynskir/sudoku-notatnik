@@ -1,3 +1,5 @@
+> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+
 # Forma — lokalny wariant zaokrąglony
 
 Pracownia została opublikowana jako motyw w wersji 1.18.0. Zgodnie z wyborem właściciela pozostaje przy prostokątnych kontrolkach.

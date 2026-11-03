@@ -3239,6 +3239,7 @@
     "طاقة",
     "Energia"
   ],
+  "Porcelana": ["Porcelain", "Porcelana", "Porzellan", "瓷白", "पोर्सिलेन", "Porcelaine", "الخزف", "Porcellana"],
   "Mandarynka": [
     "Tangerine",
     "Mandarina",

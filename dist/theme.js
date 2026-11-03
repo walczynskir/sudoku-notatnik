@@ -1,16 +1,16 @@
 (function(root){
 'use strict';
-const themes=['sage','ink','contrast','studio','forma','energy','tangerine'],key='sudoku-theme',sizeKey='sudoku-large-text',previousKey='sudoku-previous-theme';
-let current='ink',largeText=false,previousTheme='ink';
-function apply(value){current=themes.includes(value)?value:'ink';document.documentElement.dataset.theme=current;const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content={ink:'#f5f0e5',sage:'#f6f5f0',contrast:'#ffffff',studio:'#ffffff',forma:'#ffffff',energy:'#7134cf',tangerine:'#ffab00'}[current];const select=document.getElementById('theme-select');if(select)select.value=current==='contrast'?previousTheme:current;positionStudioAction();updateContrastControl();return current;}
+const themes=['sage','ink','contrast','studio','forma','energy','tangerine','porcelain'],key='sudoku-theme',sizeKey='sudoku-large-text',previousKey='sudoku-previous-theme';
+let current='porcelain',largeText=false,previousTheme='porcelain';
+function apply(value){current=themes.includes(value)?value:'porcelain';document.documentElement.dataset.theme=current;const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content={ink:'#f5f0e5',sage:'#f6f5f0',contrast:'#ffffff',studio:'#ffffff',forma:'#ffffff',energy:'#7134cf',tangerine:'#ffab00',porcelain:'#f7f6f2'}[current];const select=document.getElementById('theme-select');if(select)select.value=current==='contrast'?previousTheme:current;positionStudioAction();updateContrastControl();return current;}
 function updateContrastControl(){const button=document.getElementById('contrast-toggle');if(button)button.setAttribute('aria-pressed',String(current==='contrast'));}
-function positionStudioAction(){const button=document.getElementById('open-library'),toolbar=document.querySelector('.quick-toolbar'),launch=document.getElementById('play-launch');if(!button||!toolbar||!launch)return;if(['studio','forma','energy','tangerine'].includes(current))toolbar.prepend(button);else launch.append(button);}
+function positionStudioAction(){const button=document.getElementById('open-library'),toolbar=document.querySelector('.quick-toolbar'),launch=document.getElementById('play-launch');if(!button||!toolbar||!launch)return;if(['studio','forma','energy','tangerine','porcelain'].includes(current))toolbar.prepend(button);else launch.append(button);}
 function applySize(value){largeText=value;document.documentElement.dataset.textSize=largeText?'large':'normal';const input=document.getElementById('large-text');if(input)input.checked=largeText;}
-try{current=localStorage.getItem(key)||'ink';}catch{}
+try{current=localStorage.getItem(key)||'porcelain';}catch{}
 try{largeText=localStorage.getItem(sizeKey)==='true';}catch{}
 try{const saved=localStorage.getItem(previousKey);if(themes.includes(saved)&&saved!=='contrast')previousTheme=saved;}catch{}
 // Local preview convenience only; this is not access control.
-try{if(current!=='contrast'&&['localhost','127.0.0.1','[::1]'].includes(root.location?.hostname)&&['forma','energy','tangerine'].includes(new URLSearchParams(root.location.search).get('preview')))current=new URLSearchParams(root.location.search).get('preview');}catch{}
+try{if(current!=='contrast'&&['localhost','127.0.0.1','[::1]'].includes(root.location?.hostname)&&['forma','energy','tangerine','porcelain'].includes(new URLSearchParams(root.location.search).get('preview')))current=new URLSearchParams(root.location.search).get('preview');}catch{}
 if(current!=='contrast'&&themes.includes(current))previousTheme=current;
 apply(current);applySize(largeText);
 const api={themes,get current(){return current;},get largeText(){return largeText;},set(value){if(!themes.includes(value))return false;if(value!=='contrast')previousTheme=value;else if(current!=='contrast')previousTheme=current;apply(value);try{localStorage.setItem(key,current);localStorage.setItem(previousKey,previousTheme);}catch{}return true;},toggleContrast(){return api.set(current==='contrast'?previousTheme:'contrast');},setLargeText(value){if(typeof value!=='boolean')return false;applySize(value);try{localStorage.setItem(sizeKey,String(value));}catch{}return true;}};

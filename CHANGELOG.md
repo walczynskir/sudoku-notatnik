@@ -1,3 +1,11 @@
+# v1.19.0
+
+- Dodano motywy Forma, Energia, Mandarynka i Porcelana. Porcelana jest domyślna dla nowych użytkowników; zapisane wybory pozostają zachowane. Motywy i strona licencji mają tłumaczenia we wszystkich dziewięciu językach.
+- Wysoki kontrast ma osobny przycisk w nagłówku i wraca do poprzedniego motywu po wyłączeniu. Większy tekst pozostaje niezależny.
+- Poprawiono mobilny nagłówek, odstępy, kształt przycisku Kontrast i pozycję rozwijanych menu.
+- Menu Więcej udostępnia obliczanie i czyszczenie kandydatów oraz wypełnianie pojedynczych kandydatów.
+- Uporządkowano listy języków i motywów. Nowe arkusze objęto kontrolą wersji zasobów.
+
 # v1.18.0
 
 - Dodano Pracownię jako opcjonalny motyw: zwarty pasek akcji z Nową grą, płaskie sekcje i prosta typografia. Dotychczasowy motyw domyślny i zapisane wybory pozostają zachowane.

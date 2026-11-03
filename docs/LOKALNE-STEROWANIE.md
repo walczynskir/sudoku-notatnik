@@ -1,3 +1,5 @@
+> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+
 # Lokalne usprawnienia sterowania
 
 Zmiany na gałęzi codex/forma-preview; nie zostały jeszcze opublikowane. Publiczna strona nadal działa w wersji 1.18.0.
@@ -20,8 +22,10 @@ Na telefonie o zwykłym tekście Kontrast i A+ są w górnym wierszu nagłówka.
 
 ## Języki
 
-Dodano tłumaczenia przycisku Kontrast i etykiety Oblicz kandydatów bez ozdobnego znaku. Obecnej kolejności języków jeszcze nie zmieniono. Zasugerowano alfabetyczny porządek nazw łacińskich, następnie pozostałe pisma; wybór języka i negocjacja z przeglądarką pozostają bez zmian.
+Dodano tłumaczenia przycisku Kontrast i etykiety Oblicz kandydatów bez ozdobnego znaku. Kolejność w obu selektorach: Deutsch, English, Español, Français, Italiano, Polski, العربية, हिन्दी, 简体中文. Nazwy łacińskie są alfabetyczne, pozostałe pisma zgrupowano na końcu. Wartości opcji, negocjacja z przeglądarką i kolejność kolumn katalogu tłumaczeń nie zmieniły się.
 
 ## Sprawdzenie
 
 Testy obejmują powrót do motywu po wyłączeniu kontrastu i przeładowaniu, zgodność selektora, działanie bez pamięci lokalnej, niezależność większego tekstu, brak opcji kontrastu w obu listach oraz tłumaczenia. Test kredytów porównuje wynik do odpowiedniego wpisu katalogu, ponieważ poprawny niemiecki Kontrast jest identyczny z polskim słowem. W przeglądarce sprawdzono nagłówek 390/320 px, wykonanie Oblicz kandydatów z Więcej, zamknięcie menu po akcji, przywrócenie Mandarynki i układ większego tekstu.
+
+Mobilny nagłówek używa teraz dwóch rzeczywistych wierszy CSS Grid: nazwa i dostępność, następnie język i motyw. Nie ma absolutnie pozycjonowanej grupy nad selektorem. Większy tekst układa kontrolki w dodatkowe wiersze. Przycisk Kontrast dopasowuje promień do motywu: Szałwia 8 px, Atrament i papier 3 px, Pracownia i kontrast 2 px, pozostałe warianty kapsułka.

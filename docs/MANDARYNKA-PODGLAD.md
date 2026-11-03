@@ -1,3 +1,5 @@
+> Aktualizacja v1.19.0: poniższy opis dokumentuje etap lokalnego podglądu. Motywy i sterowanie zostały zatwierdzone do produkcji. Domyślna jest Porcelana; wcześniejsze preferencje są zachowane. Wszystkie arkusze są objęte skryptem wersjonowania.
+
 # Mandarynka — lokalny pomarańczowy motyw
 
 Mandarynka jest osobnym wariantem inspirowanym pomarańczowo-białym podglądem aplikacji do nawyków dostarczonym przez właściciela. Nie zastępuje Energii ani ciepłej Formy. Nie kopiowano zdjęcia, plików wektorowych ani fontów referencji do aplikacji.

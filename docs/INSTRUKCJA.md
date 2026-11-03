@@ -192,3 +192,9 @@ Plansze biblioteki od razu blokują cyfry początkowe. Są pogrubione i oznaczon
 Na telefonie Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szerokości ekranu. Większy tekst nadal pozwala przewijać samą planszę poziomo, aby zachować duże cyfry i kandydatów.
 
 **Pracownia** (od 1.18.0) oferuje zwarty układ bez wstępu i kart. Nowa gra znajduje się w belce, a wyjaśnienia narzędzi w rozwijanej sekcji O narzędziach. Szczegóły: [Pracownia](PRACOWNIA.md).
+
+## Wygląd od wersji 1.19.0
+
+Nowe urządzenia zaczynają od Porcelany. W nagłówku wybierzesz kolejno: Porcelana, Atrament i papier, Szałwia, Pracownia, Forma, Energia i Mandarynka. Zapisany wybór motywu nie jest nadpisywany. Osobny przycisk Kontrast włącza wysoki kontrast; ponowne użycie przywraca poprzedni motyw. A+ niezależnie powiększa tekst. Ustawienia są pamiętane na urządzeniu i nie zmieniają planszy.
+
+Menu Więcej zawiera także Oblicz kandydatów, Wypełnij pojedynczych kandydatów i Wyczyść kandydatów. Te same operacje są nadal dostępne w panelu narzędzi.
