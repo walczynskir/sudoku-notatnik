@@ -176,3 +176,5 @@ Poprawka mobilnego wysokiego kontrastu usuwa minimum 414 px tylko dla normalnego
 ## Sprawdzanie wpisów (1.20.0)
 
 `Sudoku.createEntryChecker()` tworzy pamięć ostatniej analizy cyfr początkowych. `solutionCount` może opcjonalnie zwrócić pierwsze znalezione rozwiązanie; sprawdzanie używa go wyłącznie po pełnym potwierdzeniu dokładnie jednego rozwiązania (limit dwóch wyników, 200 000 węzłów). Analiza jest ponawiana po zmianie cyfr początkowych, nie po każdym wpisie. Widok dodaje klasę `wrong-entry`, `aria-invalid` i opis błędu. Funkcja nie modyfikuje stanu planszy ani notatek. Testy `entry-check.test.cjs` obejmują błąd bez konfliktu, korektę i usunięcie wpisu, wyłączenie, niezmienność danych, zmianę planszy, brak blokady, wieloznaczność i limit analizy.
+
+Paczki publikacji mają nazwę zależną od identyfikatora przebiegu i numeru próby (`github-pages-${{ github.run_id }}-${{ github.run_attempt }}`). Zapobiega to kolizji artefaktów po ponownym uruchomieniu przerwanego wdrożenia.
