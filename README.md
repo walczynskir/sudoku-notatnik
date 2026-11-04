@@ -75,3 +75,5 @@ Od wersji 1.23.0 dostępne są język ukraiński i niebiesko-żółty motyw Ukra
 Stopka we wszystkich motywach i językach zawiera dobrowolne linki wsparcia: PAH — pomoc Ukrainie oraz OTOZ Animals Ciapkowo w Gdyni — pomoc psom i kotom. Prowadzą do oficjalnych stron w nowej karcie, bez osadzonych płatności, przekazywania danych gry i prowizji aplikacji.
 
 Autorem projektu jest Robert Walczyński (pomysł, rozwój i kierunek projektu). Aplikacja rozwijana z pomocą OpenAI Codex. Informacje te wraz z repozytorium znajdują się na stronie Autorzy i licencje; nie zmieniają zasad licencjonowania.
+
+Testowy podział na sześć poziomów według potwierdzonej ścieżki technik jest opisany w [POZIOMY-PODGLAD.md](docs/POZIOMY-PODGLAD.md). Włączany wyłącznie lokalnie przez `?features=technique-levels`; nie jest wdrożony na rsudoku.pl.

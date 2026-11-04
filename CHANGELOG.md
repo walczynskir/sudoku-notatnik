@@ -1,3 +1,8 @@
+# Podgląd lokalny — poziomy według technik
+
+- Przygotowano sześć poziomów pod lokalną flagą `technique-levels`, domyślnie wyłączoną. Pierwsze cztery wykluczają Wingi, Skyscraper, ryby, prostokąty, kolorowanie i łańcuchy.
+- Ponownie rozwiązano wszystkie 10 000 plansz z ograniczeniami zakresu; indeks zachowuje ID źródłowe. Dodano ograniczenie podpowiedzi, osobny zapis testowy, dziesięć języków i dokumentację. Nie opublikowano na produkcji.
+
 # v1.23.3
 
 - Na stronie Autorzy i licencje wskazano Roberta Walczyńskiego jako autora projektu, wsparcie OpenAI Codex oraz repozytorium GitHub. Opisy dostępne w dziesięciu językach; licencje komponentów pozostają bez zmian.

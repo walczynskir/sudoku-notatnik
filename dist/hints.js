@@ -12,8 +12,11 @@ function* combinations(items,n,start=0,prefix=[]){if(!n){yield prefix;return;}fo
 function elimination(technique,sources,removals,reason){return {kind:'hint',technique,sources,targets:removals.map(r=>r.cell),digits:[...new Set(removals.flatMap(r=>r.digits))].sort(),removals,explanation:reason+' Usuń wyłącznie wskazanych kandydatów: '+removals.map(r=>`${label(r.cell)} → ${r.digits.join(', ')}`).join('; ')+'.'};}
 function* deductions(notes,options={}){
  for(let i=0;i<81;i++)if(notes[i].length===1)yield {kind:'hint',technique:'Jedyny kandydat',sources:[i],targets:[],digits:notes[i],explanation:`Pole ${label(i)} ma tylko jednego dozwolonego kandydata: ${notes[i][0]}. Możesz wpisać tę cyfrę.`};
+ if(options.maxTier<1)return;
  for(const u of units)for(const n of all){const places=u.cells.filter(i=>notes[i].includes(n));if(places.length===1)yield {kind:'hint',technique:'Jedyne miejsce dla cyfry',sources:places,targets:[],digits:[n],explanation:`W ${u.name} cyfra ${n} może znaleźć się tylko w polu: ${label(places[0])}. Możesz wpisać tam ${n}.`};}
+ if(options.maxTier<2)return;
  for(const u of units)for(const n of all){const places=u.cells.filter(i=>notes[i].includes(n));if(places.length<2)continue;for(const v of units){if(u===v||!places.every(i=>v.cells.includes(i)))continue;const removals=v.cells.filter(i=>!u.cells.includes(i)&&notes[i].includes(n)).map(cell=>({cell,digits:[n]}));if(removals.length)yield elimination('Zablokowani kandydaci',places,removals,`W ${u.name} wszystkie miejsca dla cyfry ${n} leżą także w ${v.name}.`);}}
+ if(options.maxTier<3)return;
  // Ranked subsets: pairs before triples, naked before hidden at each size.
  for(const size of [2,3,4]){
   for(const u of units)for(const cells of combinations(u.cells.filter(i=>notes[i].length>=2&&notes[i].length<=size),size)){
@@ -27,11 +30,13 @@ function* deductions(notes,options={}){
    if(removals.length)yield elimination(size===2?'Ukryta para':size===3?'Ukryta trójka':'Ukryta czwórka',cells,removals,`W ${u.name} cyfry ${digits.join(', ')} występują wyłącznie w polach ${cells.map(label).join('; ')}. Pozostaw w tych polach tylko te cyfry.`);
   }
  }
+ if(options.maxTier<4)return;
  yield* fishDeductions(notes,2);
  yield* skyscraperDeductions(notes);
  yield* wingDeductions(notes);
  yield* fishDeductions(notes,3);
  yield* fishDeductions(notes,4);
+ if(options.maxTier<5)return;
  if(options.unique===true||options.isUnique?.())yield* rectangleDeductions(notes);
  yield* coloringDeductions(notes);
  yield* chainDeductions(notes,'X-Chain');
@@ -136,7 +141,7 @@ function* chainDeductions(notes,technique){
  }
 }
 
-function findHint(values,manualNotes){
+function findHint(values,manualNotes,options={}){
  if(S.conflicts(values).some(Boolean))return {kind:'conflict',message:'Najpierw popraw powtarzające się liczby zaznaczone na czerwono.'};
  if(values.every(Boolean))return {kind:'complete',message:'Plansza jest wypełniona poprawnie. Sudoku ukończone!'};
  const notes=values.map((_,i)=>S.candidates(values,i));
@@ -147,7 +152,7 @@ function findHint(values,manualNotes){
  for(let pass=0;pass<730;pass++){
   if(invalid())return {kind:'invalid',message:'W tej planszy brakuje możliwości dla co najmniej jednego pola lub cyfry. Sprawdź wpisane liczby.'};
   let progressed=false;
-  for(const h of deductions(notes,{isUnique:()=>verifiedUnique(values)})){
+  for(const h of deductions(notes,{...options,isUnique:()=>verifiedUnique(values)})){
    if(!h.removals)return {...h,explanation:(prior.size?'W aktualnym układzie: ':'')+h.explanation};
    const pending=h.removals.map(r=>({cell:r.cell,digits:r.digits.filter(n=>!manualNotes||manualNotes[r.cell]?.includes(n))})).filter(r=>r.digits.length);
    if(pending.length){const result=elimination(h.technique,h.sources,pending,h.explanation.split(' Usuń wyłącznie')[0]);if(h.groups){result.groups=h.groups;result.coloringDigit=h.coloringDigit;}if(prior.size)result.explanation='W aktualnym układzie: '+result.explanation;return result;}
