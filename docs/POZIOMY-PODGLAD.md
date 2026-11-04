@@ -25,6 +25,21 @@ Podpowiedzi w podglądzie respektują limit wybranego poziomu także podczas odt
 
 ## Dane i granice testu
 
-Biblioteka testowa zapisuje ukończenia i metadane osobno pod `sudoku-library-technique-preview-v1`. Nie zapisuje wyników do zwykłej biblioteki ani do celów i plakietek. Plansza, kandydaci i historia nadal są zwykłą grą na danym lokalnym adresie, więc wczytanie nowej planszy zachowuje standardowe potwierdzenie i cofanie. Identyfikatory źródłowe nie zmieniają się.
+Biblioteka testowa zapisuje ukończenia i metadane osobno pod `sudoku-library-technique-preview-v1`. Nie zapisuje wyników do zwykłej biblioteki ani do dotychczasowych celów i plakietek. Plansza, kandydaci i historia nadal są zwykłą grą na danym lokalnym adresie, więc wczytanie nowej planszy zachowuje standardowe potwierdzenie i cofanie. Identyfikatory źródłowe nie zmieniają się.
 
 Przed wdrożeniem należy ustalić migrację dotychczasowych czterech odznak poziomów oraz połączenie starych ukończeń z nowymi kategoriami. Nie przeprowadzamy migracji przy samym podglądzie.
+
+## Plakietki samodzielności i dwa motywy
+
+Podgląd ma sześć własnych, trwałych plakietek: po jednej za pierwsze samodzielne ukończenie każdego nowego poziomu. Status widoczny jest przy kafelku poziomu. Szczegóły i warunki motywów są w rozwijanej sekcji „Plakietki i motywy nagrodowe”. Zdobycie plakietki jest ogłaszane krótkim komunikatem bez okna modalnego.
+
+Samodzielnie oznacza brak znalezionej podpowiedzi techniki i brak włączonego oznaczania błędnych wpisów podczas danej próby. Obliczanie i edycja kandydatów oraz rekurencyjne wypełnianie pojedynczych są dozwolone. Flaga użycia pomocy pozostaje po cofnięciu ruchu, wyłączeniu oznaczania, restarcie i odświeżeniu. Świadome wczytanie planszy jako nowej próby rozpoczyna nową historię pomocy; można zdobyć plakietkę przy kolejnym samodzielnym rozwiązaniu. Wyniki sprzed dodania śledzenia nie otrzymują nagród wstecz.
+
+Sesje i plakietki mają osobny klucz `sudoku-technique-achievements-preview-v1`. Motywy testowe korzystają z osobnej preferencji `sudoku-technique-theme-preview`. Zwykłe dane celów i motyw produkcyjny nie są zmieniane.
+
+- Ekstremalny samodzielnie: **Obsydian** — ciemny granat i złote akcenty.
+- Arcymistrzowski samodzielnie: **Korona** — jasna kość słoniowa i złote/brązowe akcenty.
+
+Motywy odblokowują się trwale, nie są włączane automatycznie. Po zdobyciu można wybrać je w sekcji nagród lub w selektorze motywu. Niezależnie dostępne pozostają kontrast i większy tekst. Awaria pamięci lokalnej pozostawia nagrody tylko na sesję z widocznym komunikatem.
+
+Dwa lokalne linki demonstracyjne pozwalają obejrzeć wygląd bez przyznawania plakietek: `?features=technique-levels&preview=obsidian` i `?features=technique-levels&preview=crown`. Są pomocą do oceny podglądu, nie działają jako odblokowanie na produkcji. Cały mechanizm jest lokalny, bez konta i bez ochrony przed ręczną edycją własnego localStorage.
