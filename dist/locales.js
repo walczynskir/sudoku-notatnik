@@ -1,4 +1,6 @@
 (function(root){const catalog={
+  "Arcymistrzowski": ["Grandmaster","Gran maestro","Großmeister","大师","ग्रैंडमास्टर","Grand maître","أستاذ كبير","Grande maestro","Гросмейстерський"],
+  "Szukasz ekstremalnego wyzwania?": ["Looking for an extreme challenge?","¿Buscas un reto extremo?","Lust auf eine extreme Herausforderung?","想挑战极限难度？","अत्यंत कठिन चुनौती चाहिए?","Envie d’un défi extrême ?","هل تبحث عن تحدٍّ استثنائي؟","Cerchi una sfida estrema?","Шукаєш екстремального виклику?"],
   "10 000 sprawdzonych plansz w sześciu poziomach trudności.": ["10,000 verified puzzles across six difficulty levels.","10 000 sudokus verificados en seis niveles de dificultad.","10.000 geprüfte Sudokus in sechs Schwierigkeitsstufen.","10,000 道经验证的题目，分为六个难度等级。","छह कठिनाई स्तरों में 10,000 सत्यापित पहेलियाँ।","10 000 grilles vérifiées sur six niveaux de difficulté.","10,000 لغز متحقق منه في ستة مستويات صعوبة.","10.000 schemi verificati in sei livelli di difficoltà.","10 000 перевірених головоломок на шести рівнях складності."],
   "Na początek": ["Getting started","Para empezar","Zum Einstieg","入门","शुरुआत","Pour commencer","للبداية","Per iniziare","Для початку"],
   "Wymagający": ["Challenging","Exigente","Anspruchsvoll","挑战","चुनौतीपूर्ण","Exigeant","تحدٍّ","Impegnativo","Вимогливий"],

@@ -1,5 +1,7 @@
 # Podgląd lokalny — poziomy według technik
 
+- Nazwy podglądu: Na początek, Łatwy, Wymagający, Zaawansowany oraz rozwijane Ekstremalny i Arcymistrzowski. Usunięto dodatkowy napis „Dla zaawansowanych”.
+
 - Przygotowano sześć poziomów pod lokalną flagą `technique-levels`, domyślnie wyłączoną. Pierwsze cztery wykluczają Wingi, Skyscraper, ryby, prostokąty, kolorowanie i łańcuchy.
 - Ponownie rozwiązano wszystkie 10 000 plansz z ograniczeniami zakresu; indeks zachowuje ID źródłowe. Dodano ograniczenie podpowiedzi, osobny zapis testowy, dziesięć języków i dokumentację. Nie opublikowano na produkcji.
 

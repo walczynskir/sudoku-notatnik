@@ -6,12 +6,12 @@ Podgląd dostępny wyłącznie lokalnie: `http://localhost:5200/?features=techni
 |---|---|---:|
 | Na początek | Jedyny kandydat | 1802 |
 | Łatwy (domyślny) | Jedyne miejsce dla cyfry | 2511 |
-| Średni | Zablokowani kandydaci | 1100 |
-| Wymagający | Nagie i ukryte pary, trójki, czwórki | 710 |
-| Zaawansowany | X/XY/XYZ/W-Wing, Skyscraper, Swordfish, Jellyfish | 1478 |
-| Ekstremalny | Prostokąty, kolorowanie, X/XY/AIC | 2399 |
+| Wymagający | Zablokowani kandydaci | 1100 |
+| Zaawansowany | Nagie i ukryte pary, trójki, czwórki | 710 |
+| Ekstremalny | X/XY/XYZ/W-Wing, Skyscraper, Swordfish, Jellyfish | 1478 |
+| Arcymistrzowski | Prostokąty, kolorowanie, X/XY/AIC | 2399 |
 
-Pierwsze cztery kafelki są widoczne od razu. Dwa ostatnie znajdują się pod „Szukasz większego wyzwania?”. Opisy i nazwy dostępne w dziesięciu językach. Każdy poziom ma oddzielne losowanie i łamigłówkę dnia.
+Pierwsze cztery kafelki są widoczne od razu. Dwa ostatnie znajdują się pod „Szukasz ekstremalnego wyzwania?”. Opisy i nazwy dostępne w dziesięciu językach. Każdy poziom ma oddzielne losowanie i łamigłówkę dnia.
 
 ## Sprawdzanie
 
