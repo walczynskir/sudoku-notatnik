@@ -2,7 +2,7 @@
 
 - Dodano sześć plakietek za samodzielne rozwiązanie oraz dwa motywy nagrodowe: Obsydian za Ekstremalny i Korona za Arcymistrzowski. Pomoc jest zapamiętywana podczas próby, a dane i motywy podglądu pozostają odseparowane od zwykłych statystyk.
 
-- Nazwy podglądu: Na początek, Łatwy, Wymagający, Zaawansowany oraz rozwijane Ekstremalny i Arcymistrzowski. Usunięto dodatkowy napis „Dla zaawansowanych”.
+- Nazwy podglądu: Na początek, Łatwy, Wymagający, Ekspert oraz rozwijane Ekstremalny i Arcymistrzowski. Usunięto dodatkowy napis „Dla zaawansowanych”.
 
 - Przygotowano sześć poziomów pod lokalną flagą `technique-levels`, domyślnie wyłączoną. Pierwsze cztery wykluczają Wingi, Skyscraper, ryby, prostokąty, kolorowanie i łańcuchy.
 - Ponownie rozwiązano wszystkie 10 000 plansz z ograniczeniami zakresu; indeks zachowuje ID źródłowe. Dodano ograniczenie podpowiedzi, osobny zapis testowy, dziesięć języków i dokumentację. Nie opublikowano na produkcji.

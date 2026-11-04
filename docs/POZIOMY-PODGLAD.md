@@ -7,7 +7,7 @@ Podgląd dostępny wyłącznie lokalnie: `http://localhost:5200/?features=techni
 | Na początek | Jedyny kandydat | 1802 |
 | Łatwy (domyślny) | Jedyne miejsce dla cyfry | 2511 |
 | Wymagający | Zablokowani kandydaci | 1100 |
-| Zaawansowany | Nagie i ukryte pary, trójki, czwórki | 710 |
+| Ekspert | Nagie i ukryte pary, trójki, czwórki | 710 |
 | Ekstremalny | X/XY/XYZ/W-Wing, Skyscraper, Swordfish, Jellyfish | 1478 |
 | Arcymistrzowski | Prostokąty, kolorowanie, X/XY/AIC | 2399 |
 

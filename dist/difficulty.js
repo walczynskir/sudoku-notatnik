@@ -5,7 +5,7 @@ const levels=[
  {id:'starter',label:'Na początek',description:'Tylko jedyny kandydat',tier:0},
  {id:'gentle',label:'Łatwy',description:'Także jedyne miejsce dla cyfry',tier:1},
  {id:'regular',label:'Wymagający',description:'Także zablokowani kandydaci',tier:2},
- {id:'demanding',label:'Zaawansowany',description:'Także pary, trójki i czwórki',tier:3},
+ {id:'demanding',label:'Ekspert',description:'Także pary, trójki i czwórki',tier:3},
  {id:'advanced',label:'Ekstremalny',description:'Wingi, Skyscraper i ryby',tier:4},
  {id:'extreme',label:'Arcymistrzowski',description:'Także prostokąty, kolorowanie i łańcuchy',tier:5}
 ];
