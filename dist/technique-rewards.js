@@ -1,14 +1,14 @@
-/* Local-only achievements for unaided technique-level attempts. */
+/* Achievements for unaided technique-level attempts. */
 (function(root){
 'use strict';
-const D=root.SudokuDifficulty||(typeof require==='function'?require('./difficulty.js'):null),key='sudoku-technique-achievements-preview-v1';
+const D=root.SudokuDifficulty||(typeof require==='function'?require('./difficulty.js'):null),key=D?.isPreview(root.location)?'sudoku-technique-achievements-preview-v1':'sudoku-technique-achievements-v1';
 const rewards={advanced:{id:'obsidian',name:'Obsydian'},extreme:{id:'crown',name:'Korona'}};
 function createTracker(saved={}){
  const data={sessions:{},badges:{},...saved};for(const k of ['sessions','badges'])if(!data[k]||typeof data[k]!=='object'||Array.isArray(data[k]))data[k]={};
  return {data,begin(record){if(!D.levels.some(l=>l.id===record.previewLevel))return;data.sessions[record.id]={level:record.previewLevel,help:false};},assist(id){if(data.sessions[id])data.sessions[id].help=true;},finish(record,date=new Date().toISOString().slice(0,10)){const s=data.sessions[record.id];if(!s||s.help||s.level!==record.previewLevel||data.badges[s.level])return null;data.badges[s.level]={date,puzzleId:record.id};return s.level;},earned(level){return Boolean(data.badges[level]);},unlocked(){return Object.entries(rewards).filter(([level])=>data.badges[level]).map(([,r])=>r.id);}};
 }
 const api={createTracker,rewards};root.SudokuTechniqueRewards=api;if(typeof module!=='undefined')module.exports=api;
-if(typeof document==='undefined'||!D.enabled(root.location))return;
+if(typeof document==='undefined'||!D.enabled(root.location)||new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('no-gamification'))return;
 let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}');}catch{}
 const tracker=createTracker(saved);let active=null,panel=null,notice=null,storageOK=true;
 function persist(){try{localStorage.setItem(key,JSON.stringify(tracker.data));}catch{storageOK=false;}paint();}

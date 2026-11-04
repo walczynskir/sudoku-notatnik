@@ -1,6 +1,6 @@
 # Cele, postępy i nagrody — od 1.22.0
 
-Funkcja jest domyślnie dostępna na https://rsudoku.pl/ we wszystkich dziewięciu językach. Flaga `?features=no-gamification` ukrywa cały interfejs postępów, zachowując zapis. Wyłączenie samego celu dziennego jest dostępne w panelu. Stary adres `?features=gamification` nadal działa. Nazwę pliku dokumentacji zachowano dla zgodności wcześniejszych odnośników.
+Funkcja jest domyślnie dostępna na https://rsudoku.pl/ we wszystkich dziesięciu językach. Flaga `?features=no-gamification` ukrywa cały interfejs postępów, zachowując zapis. Wyłączenie samego celu dziennego jest dostępne w panelu. Stary adres `?features=gamification` nadal działa. Nazwę pliku dokumentacji zachowano dla zgodności wcześniejszych odnośników.
 
 Tłumaczone są teksty statyczne, liczniki, nazwy i warunki plakietek, nagrody, powiadomienia, opisy dostępności oraz błędy. Kalendarz używa nazw dni, miesięcy i dat z Intl dla bieżącego języka. Zmiana języka odświeża otwarty panel bez przeładowania i bez zmiany postępów. Arabski używa układu RTL, a kompaktowy przycisk liczbowy zachowuje LTR. Typografia panelu jest spójna z motywem; także natywny element details dziedziczy czcionkę panelu.
 
@@ -45,3 +45,7 @@ Album nie kosztuje pucharków i nie zmienia warunku odblokowania Zorzy. Album je
 Od 1.21.1 pasek komputerowy ma dwa wskaźniki: dzisiejszy cel i bieżącą setkę (z łącznym wynikiem z 10 000). Mobilny przycisk pokazuje także wynik setki obok celu i pucharków. Pełne wartości są w opisie dostępności; na najwęższych ekranach etykieta stanu planszy może być skrócona, aby nie dodawać wiersza.
 
 Zachowano klucz sudoku-progress-preview-v1, aby dotychczasowe testowe postępy nie zniknęły po wydaniu. Nazwa klucza nie oznacza już ograniczenia do wersji testowej.
+
+## Poziomy według technik — 1.24.0
+
+Cele dzienne i kolekcje obejmują sześć nowych poziomów, przy zachowaniu ID i wszystkich ukończeń. Nowe próby zapisują dodatkowo `techniqueLevel`. Cztery stare plakietki poziomów nie są już przyznawane za nowe próby; zdobyte pozostają w albumie jako „Wcześniejsze poziomy”. Sześć nowych plakietek samodzielności oraz Obsydian i Korona mają osobny zapis `sudoku-technique-achievements-v1` i szczegóły przy wyborze gry. Reguły: [Poziomy według technik](POZIOMY-PODGLAD.md).

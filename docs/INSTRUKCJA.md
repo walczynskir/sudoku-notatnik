@@ -5,12 +5,12 @@ Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angiels
 ## Gotowe łamigłówki
 
 1. Kliknij wyróżniony przycisk **Nowa gra** w panelu nad planszą lub wybierz **Wczytaj → Nowa gra**.
-2. W otwartym oknie zaznacz jeden z czterech kafelków: **Łatwy**, **Średni**, **Trudny**, **Ekspert**. Wybrany poziom ma mocno wyróżnione tło; na telefonie kafelki układają się w dwa rzędy.
+2. W otwartym oknie zaznacz poziom: **Na początek**, **Łatwy**, **Wymagający**, **Ekspert**, **Ekstremalny** lub **Arcymistrzowski**. Wybrany poziom ma mocno wyróżnione tło; na telefonie kafelki układają się w dwa rzędy.
 3. Opcjonalnie zaznacz **Pokaż kandydatów od razu**, a potem kliknij **Nowa gra**. Każdy poziom ma 2500 plansz. Notatki można też obliczyć później.
 
 Przycisk nad planszą ma tę samą nazwę i kolor na komputerze i telefonie. Na telefonie podczas gry panel staje się kompaktowy. Dłuższe informacje o bibliotece, ocenach, kandydatach i źródle znajdują się pod przyciskami w rozwijanej sekcji **Jak działa biblioteka?**.
 
-**Łamigłówka dnia** korzysta z zaznaczonego poziomu. Każdy z czterech poziomów ma własną planszę dnia, wspólną dla wszystkich graczy. Plansze zmieniają się o północy UTC i nie zależą od języka ani lokalnego postępu. Ponowne wybranie tego samego poziomu tego dnia otwiera tę samą planszę, nawet jeśli została już ukończona.
+**Łamigłówka dnia** korzysta z zaznaczonego poziomu. Każdy z sześciu poziomów ma własną planszę dnia, wspólną dla wszystkich graczy. Plansze zmieniają się o północy UTC i nie zależą od języka ani lokalnego postępu. Ponowne wybranie tego samego poziomu tego dnia otwiera tę samą planszę, nawet jeśli została już ukończona.
 
 Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
 
@@ -212,3 +212,7 @@ Od 1.20.1 komunikat ukończenia używa palety wybranego motywu, np. bursztynu w 
 ## Cele, plakietki i nagrody (1.22.0)
 
 W zwykłym widoku strony dostępny jest cel dzienny, kolekcje setek, album 12 plakietek i motyw nagrodowy Zorza, we wszystkich dziewięciu językach. Domyślny cel wynosi 3 nowe sudoku dziennie; można go zmienić lub wyłączyć. Na telefonie szczegóły otwiera mały przycisk 🎯 przy liczniku pól. Na komputerze są dwa paski: celu i bieżącej setki. Pomoc nie ogranicza pucharków i plakietek. Zorza odblokowuje się trwale po trzech zrealizowanych celach dnia. Dane są tylko na urządzeniu i nie wchodzą do JSON planszy. Cały interfejs postępów można ukryć adresem ?features=no-gamification. Szczegóły: POSTEPY-PODGLAD.md.
+
+## Poziomy i nagrody samodzielności (1.24.0)
+
+Pierwsze cztery poziomy nie wymagają Wingów, Skyscraperów, ryb ani łańcuchów w sprawdzonej ścieżce rozwiązania. Dwa ostatnie są w domyślnie rozwiniętej sekcji „Szukasz ekstremalnego wyzwania?”. Łatwy jest wyborem początkowym. Przy kafelkach widoczne są plakietki za pierwsze samodzielne rozwiązanie. Podpowiedzi i oznaczanie błędów wykluczają tę plakietkę; kandydaci i wypełnianie pojedynczych są dozwolone. Samodzielny Ekstremalny odblokowuje Obsydian, a Arcymistrzowski — Koronę. Motywy wybierasz sam; nie włączają się automatycznie. Dotychczasowe ukończenia i zdobyte nagrody pozostają zachowane.

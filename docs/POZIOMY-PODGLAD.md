@@ -1,6 +1,6 @@
-# Podgląd poziomów według technik
+# Poziomy według technik — od 1.24.0
 
-Podgląd dostępny wyłącznie lokalnie: `http://localhost:5200/?features=technique-levels`. Bez parametru aplikacja zachowuje cztery dotychczasowe kategorie. Flaga nie działa na rsudoku.pl; brak wdrożenia na produkcję. Gałąź: `codex/technique-levels-preview`.
+Sześć poziomów jest domyślnie dostępnych na rsudoku.pl. Nazwę pliku dokumentacji zachowano dla zgodności odnośników. Lokalny adres `?features=technique-levels` nadal włącza izolowany zapis testowy; na produkcji ten parametr nie zmienia sposobu zapisu.
 
 | Poziom | Zakres narastający | Plansze |
 |---|---|---:|
@@ -21,21 +21,23 @@ Wszystkie 10 000 plansz sklasyfikowano; żadnej nie odrzucono. Kategoria odpowia
 
 `dist/puzzles/technique-levels.json` przechowuje indeks istniejących stabilnych ID i plików partii, bez duplikowania zagadek. Zawiera hash źródłowego manifestu i silnika. `reports/technique-levels.json` przechowuje profil dowodu każdej planszy. Test weryfikuje zgodność indeksu i profili oraz ponownie rozwiązuje próbkę z każdej partii i poziomu pod odpowiednim limitem.
 
-Podpowiedzi w podglądzie respektują limit wybranego poziomu także podczas odtwarzania wcześniejszych eliminacji. Zwykły tryb i własne importy nadal mają pełny zakres technik.
+Podpowiedzi biblioteki respektują limit wybranego poziomu także podczas odtwarzania wcześniejszych eliminacji. Własne importy nadal mają pełny zakres technik.
 
-## Dane i granice testu
+## Zachowanie dotychczasowych postępów
 
-Biblioteka testowa zapisuje ukończenia i metadane osobno pod `sudoku-library-technique-preview-v1`. Nie zapisuje wyników do zwykłej biblioteki ani do dotychczasowych celów i plakietek. Plansza, kandydaci i historia nadal są zwykłą grą na danym lokalnym adresie, więc wczytanie nowej planszy zachowuje standardowe potwierdzenie i cofanie. Identyfikatory źródłowe nie zmieniają się.
+Produkcyjna biblioteka nadal korzysta z `sudoku-library-v1`, a cele, kolekcje i statystyki z `sudoku-progress-preview-v1` (historyczna nazwa klucza). Stabilne ID i ukończenia nie zmieniają się; licznik każdego nowego poziomu zlicza istniejące ID według nowego indeksu. Metadane rozgrywanej planszy są przypisywane do nowego poziomu przy odczycie indeksu, bez zmiany planszy i notatek. Cele dzienne oraz setki obejmują wszystkie nowe poziomy. Powtórne rozwiązanie nadal nie zwiększa sumy ukończeń.
 
-Przed wdrożeniem należy ustalić migrację dotychczasowych czterech odznak poziomów oraz połączenie starych ukończeń z nowymi kategoriami. Nie przeprowadzamy migracji przy samym podglądzie.
+Zdobyte wcześniej cztery plakietki poziomów pozostają w albumie w sekcji „Wcześniejsze poziomy”. Nowe rozgrywki nie przyznają starych plakietek na podstawie źródłowej kategorii. Plakietek samodzielności nie przyznajemy wstecz bez śledzonej próby.
+
+Wyłącznie lokalny jawny podgląd `?features=technique-levels` zapisuje bibliotekę osobno w `sudoku-library-technique-preview-v1`, nagrody w `sudoku-technique-achievements-preview-v1`, a motyw w `sudoku-technique-theme-preview`. Jego ukończenia nie trafiają do zwykłych celów. Testowych nagród nie przenosimy na produkcję. Sama plansza nadal używa lokalnego zapisu gry; standardowe potwierdzenie zastąpienia i cofanie działają bez zmian.
 
 ## Plakietki samodzielności i dwa motywy
 
-Podgląd ma sześć własnych, trwałych plakietek: po jednej za pierwsze samodzielne ukończenie każdego nowego poziomu. Status widoczny jest przy kafelku poziomu. Szczegóły i warunki motywów są w rozwijanej sekcji „Plakietki i motywy nagrodowe”. Zdobycie plakietki jest ogłaszane krótkim komunikatem bez okna modalnego.
+Biblioteka ma sześć własnych, trwałych plakietek: po jednej za pierwsze samodzielne ukończenie każdego nowego poziomu. Status widoczny jest przy kafelku poziomu. Szczegóły i warunki motywów są w rozwijanej sekcji „Plakietki i motywy nagrodowe”. Zdobycie plakietki jest ogłaszane krótkim komunikatem bez okna modalnego.
 
 Samodzielnie oznacza brak znalezionej podpowiedzi techniki i brak włączonego oznaczania błędnych wpisów podczas danej próby. Obliczanie i edycja kandydatów oraz rekurencyjne wypełnianie pojedynczych są dozwolone. Flaga użycia pomocy pozostaje po cofnięciu ruchu, wyłączeniu oznaczania, restarcie i odświeżeniu. Świadome wczytanie planszy jako nowej próby rozpoczyna nową historię pomocy; można zdobyć plakietkę przy kolejnym samodzielnym rozwiązaniu. Wyniki sprzed dodania śledzenia nie otrzymują nagród wstecz.
 
-Sesje i plakietki mają osobny klucz `sudoku-technique-achievements-preview-v1`. Motywy testowe korzystają z osobnej preferencji `sudoku-technique-theme-preview`. Zwykłe dane celów i motyw produkcyjny nie są zmieniane.
+Produkcyjne sesje i plakietki mają klucz `sudoku-technique-achievements-v1`. Zdobyte motywy korzystają ze zwykłej preferencji `sudoku-theme` i działają także na stronie licencji. `?features=no-gamification` ukrywa nagrody i postępy, zachowując zapisane dane; poziomy pozostają dostępne.
 
 - Ekstremalny samodzielnie: **Obsydian** — ciemny granat i złote akcenty.
 - Arcymistrzowski samodzielnie: **Korona** — jasna kość słoniowa i złote/brązowe akcenty.

@@ -1,4 +1,5 @@
 (function(root){const catalog={
+  "Wcześniejsze poziomy": ["Previous levels","Niveles anteriores","Frühere Stufen","以前的难度","पिछले स्तर","Anciens niveaux","المستويات السابقة","Livelli precedenti","Попередні рівні"],
   "Test nowych poziomów. Ukończenia i plakietki są zapisywane osobno.": ["New difficulty preview. Completions and badges are saved separately.","Prueba de nuevos niveles. Las partidas completadas y las insignias se guardan por separado.","Test neuer Stufen. Abschlüsse und Abzeichen werden getrennt gespeichert.","新难度测试。完成记录与徽章单独保存。","नए स्तरों का परीक्षण। पूर्ण पहेलियाँ और बैज अलग सहेजे जाते हैं।","Test des nouveaux niveaux. Les réussites et badges sont enregistrés séparément.","تجربة مستويات جديدة. تُحفظ النتائج والشارات منفصلة.","Anteprima dei nuovi livelli. Completamenti e distintivi sono salvati separatamente.","Тест нових рівнів. Результати та значки зберігаються окремо."],
   "Obsydian": ["Obsidian","Obsidiana","Obsidian","黑曜石","ऑब्सिडियन","Obsidienne","السبج","Ossidiana","Обсидіан"],
   "Korona": ["Crown","Corona","Krone","王冠","मुकुट","Couronne","التاج","Corona","Корона"],

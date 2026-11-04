@@ -1,12 +1,12 @@
 # Biblioteka gotowych sudoku
 
-Od wydania 1.13.0 biblioteka zawiera 10 000 różnych zapisów plansz, po 2500 na poziom łatwy, średni, trudny i ekspert. Nie jest to generator treningowy wersji 2. Plansze są gotowymi danymi statycznymi; ich wczytywanie nie wymaga konta, bazy danych ani zewnętrznego API.
+Biblioteka zawiera 10 000 różnych zapisów plansz. Od 1.24.0 interfejs oferuje sześć poziomów według technik: Na początek (1802), Łatwy (2511), Wymagający (1100), Ekspert (710), Ekstremalny (1478), Arcymistrzowski (2399). Szczegóły walidacji, zakresów technik i zachowania postępów: [Poziomy według technik](POZIOMY-PODGLAD.md). Źródłowy katalog z 1.13.0 nadal przechowuje po 2500 rekordów w czterech kategoriach; nie są to już poziomy widoczne w grze. Nie jest to generator treningowy wersji 2. Plansze są gotowymi danymi statycznymi; ich wczytywanie nie wymaga konta, bazy danych ani zewnętrznego API.
 
 ## Źródło i licencja
 
 Źródło: [Sudoku Exchange Puzzle Bank](https://github.com/grantm/sudoku-exchange-puzzle-bank), rewizja `d8c8ebaee0c08c412cfba96af1923dfa61c83317`. Dane są dedykowane domenie publicznej zgodnie z deklaracją Unlicense. Kopia deklaracji znajduje się w `licenses/sudoku-exchange-LICENSE.txt` i w publikowanym `dist/puzzles/LICENSE.txt`. Kod naszej aplikacji ma odrębny status licencyjny.
 
-Kategorie i oceny SE zachowujemy ze źródła. To nie jest nasza własna uniwersalna skala. Kolejność technik i ścieżka rozwiązywania różnych silników mogą dawać inne wyniki; liczba cyfr początkowych nie jest jedynym miernikiem trudności. Profil zapisuje najtrudniejszą technikę znalezioną na ścieżce naszego silnika, nie dowodzi konieczności tej techniki we wszystkich możliwych ścieżkach.
+Kategorie i oceny SE zachowujemy w danych źródłowych. Interfejs i podpowiedzi korzystają z nowego indeksu `technique-levels.json`. To nie jest nasza własna uniwersalna skala. Kolejność technik i ścieżka rozwiązywania różnych silników mogą dawać inne wyniki; liczba cyfr początkowych nie jest jedynym miernikiem trudności. Profil zapisuje najtrudniejszą technikę znalezioną na ścieżce naszego silnika, nie dowodzi konieczności tej techniki we wszystkich możliwych ścieżkach.
 
 ## Walidacja
 
@@ -20,7 +20,7 @@ Manifest przechowuje wersję i hash silnika użytego do walidacji oraz limity. K
 
 `dist/puzzles/manifest.json` zawiera indeks i hashe SHA-256. Dane są podzielone na partie po 500 rekordów; strona pobiera indeks i tylko potrzebną partię. `dist/library.js` obsługuje wybór, codzienną planszę i postęp. Nie zmienia reguł rozwiązywania.
 
-`tests/library.test.cjs` sprawdza liczebność całego zestawu, brak identycznych plansz i ID, hashe partii, unikalność rozwiązania każdej planszy, format profili oraz ponowny pełny przebieg podpowiedzi dla próbki z każdej partii. Osobno testuje losowanie, deterministyczny wybór dnia, wczytanie codziennej planszy z każdego z czterech poziomów, wybór kafelka i zgodność cyfr początkowych. Profile i liczby kroków dotyczą silnika z momentu importu; nowszy analizator może wybrać inną poprawną ścieżkę.
+`tests/library.test.cjs` sprawdza liczebność całego zestawu, brak identycznych plansz i ID, hashe partii, unikalność rozwiązania każdej planszy, format profili oraz ponowny pełny przebieg podpowiedzi dla próbki z każdej partii. Osobno testuje losowanie, deterministyczny wybór dnia, wczytanie codziennej planszy z każdego z czterech poziomów, wybór kafelka i zgodność cyfr początkowych. `tests/difficulty.test.cjs` weryfikuje nowy indeks, dowody klasyfikacji, limit podpowiedzi oraz wczytanie sześciu codziennych plansz w trybie produkcyjnym i izolowanym. Profile i liczby kroków dotyczą silnika z momentu importu; nowszy analizator może wybrać inną poprawną ścieżkę.
 
 Aby odtworzyć import, przygotuj pliki `easy.txt`, `medium.txt`, `hard.txt`, `diabolical.txt` i `LICENSE.txt` z podanej rewizji w katalogu lokalnym, a potem uruchom:
 

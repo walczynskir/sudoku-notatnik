@@ -1,11 +1,9 @@
-# Podgląd lokalny — poziomy według technik
+# v1.24.0
 
-- Dodano sześć plakietek za samodzielne rozwiązanie oraz dwa motywy nagrodowe: Obsydian za Ekstremalny i Korona za Arcymistrzowski. Pomoc jest zapamiętywana podczas próby, a dane i motywy podglądu pozostają odseparowane od zwykłych statystyk.
-
-- Nazwy podglądu: Na początek, Łatwy, Wymagający, Ekspert oraz rozwijane Ekstremalny i Arcymistrzowski. Usunięto dodatkowy napis „Dla zaawansowanych”.
-
-- Przygotowano sześć poziomów pod lokalną flagą `technique-levels`, domyślnie wyłączoną. Pierwsze cztery wykluczają Wingi, Skyscraper, ryby, prostokąty, kolorowanie i łańcuchy.
-- Ponownie rozwiązano wszystkie 10 000 plansz z ograniczeniami zakresu; indeks zachowuje ID źródłowe. Dodano ograniczenie podpowiedzi, osobny zapis testowy, dziesięć języków i dokumentację. Nie opublikowano na produkcji.
+- Wdrożono sześć poziomów według technik: Na początek, Łatwy, Wymagający, Ekspert, Ekstremalny i Arcymistrzowski. Pierwsze cztery mają sprawdzoną ścieżkę bez Wingów, Skyscraperów, ryb i łańcuchów. Sekcja ekstremalnego wyzwania jest domyślnie rozwinięta.
+- Ponownie rozwiązano wszystkie 10 000 plansz pod limitami technik; podpowiedzi respektują wybrany poziom. Każdy poziom ma własne losowanie i sudoku dnia.
+- Dodano sześć plakietek samodzielności i dwa trwałe motywy: Obsydian za Ekstremalny, Korona za Arcymistrzowski. Kandydaci i wypełnianie pojedynczych są dozwolone; podpowiedzi i oznaczanie błędów wykluczają plakietkę.
+- Zachowano ID, ukończenia, cele dzienne, kolekcje i zdobyte wcześniej plakietki. Nie przyznaje się samodzielności wstecz bez danych. Lokalny jawny podgląd ma osobny zapis. Interfejs i dokumentacja zaktualizowane; teksty dostępne w dziesięciu językach.
 
 # v1.23.3
 
