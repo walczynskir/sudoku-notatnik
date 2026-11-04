@@ -216,3 +216,5 @@ W zwykłym widoku strony dostępny jest cel dzienny, kolekcje setek, album 12 pl
 ## Poziomy i nagrody samodzielności (1.24.0)
 
 Pierwsze cztery poziomy nie wymagają Wingów, Skyscraperów, ryb ani łańcuchów w sprawdzonej ścieżce rozwiązania. Dwa ostatnie są w domyślnie rozwiniętej sekcji „Szukasz ekstremalnego wyzwania?”. Łatwy jest wyborem początkowym. Przy kafelkach widoczne są plakietki za pierwsze samodzielne rozwiązanie. Podpowiedzi i oznaczanie błędów wykluczają tę plakietkę; kandydaci i wypełnianie pojedynczych są dozwolone. Samodzielny Ekstremalny odblokowuje Obsydian, a Arcymistrzowski — Koronę. Motywy wybierasz sam; nie włączają się automatycznie. Dotychczasowe ukończenia i zdobyte nagrody pozostają zachowane.
+
+Obliczanie kandydatów wymaga przynajmniej jednej wpisanej liczby, przynajmniej jednego pustego pola i braku konfliktów w wierszach, kolumnach oraz blokach. Na pustej lub pełnej planszy albo przy konflikcie przycisk i pozycja w menu Więcej są nieaktywne. Nie wymagamy jednego rozwiązania ani minimalnej liczby wskazówek — kandydaci mogą być przydatni także podczas ręcznego układania sudoku.

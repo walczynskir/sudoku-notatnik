@@ -1,3 +1,7 @@
+# v1.24.1
+
+- Obliczanie kandydatów jest wyłączone na pustej lub pełnej planszy oraz przy konfliktach liczb, także w menu Więcej. Zablokowana akcja nie zmienia notatek ani historii. Powody dostępne w dziesięciu językach.
+
 # v1.24.0
 
 - Wdrożono sześć poziomów według technik: Na początek, Łatwy, Wymagający, Ekspert, Ekstremalny i Arcymistrzowski. Pierwsze cztery mają sprawdzoną ścieżkę bez Wingów, Skyscraperów, ryb i łańcuchów. Sekcja ekstremalnego wyzwania jest domyślnie rozwinięta.
