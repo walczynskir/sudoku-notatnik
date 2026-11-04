@@ -11,7 +11,7 @@ const $=id=>document.getElementById(id),dialog=$('library-dialog'),levelSelect=$
 const pickerLevels=preview?previewLevels.map(l=>l.id):levels;
 if(preview){
  const tile=(l,i)=>`<label class="difficulty-choice"><input type="radio" name="library-difficulty" id="library-level-${l.id}" value="${l.id}" ${l.id==='gentle'?'checked':''}><span class="difficulty-tile"><span class="difficulty-bars" aria-hidden="true">${'●'.repeat(i+1)}</span><span>${l.label}</span><small>${l.description}</small></span></label>`;
- const fieldset=dialog.querySelector('.difficulty-picker');fieldset.classList.add('technique-picker');fieldset.innerHTML='<legend>Poziom trudności</legend><div class="difficulty-options">'+previewLevels.slice(0,4).map(tile).join('')+'</div><details class="advanced-levels"><summary>Szukasz ekstremalnego wyzwania?</summary><div class="difficulty-options">'+previewLevels.slice(4).map((l,i)=>tile(l,i+4)).join('')+'</div></details>';
+ const fieldset=dialog.querySelector('.difficulty-picker');fieldset.classList.add('technique-picker');fieldset.innerHTML='<legend>Poziom trudności</legend><div class="difficulty-options">'+previewLevels.slice(0,4).map(tile).join('')+'</div><details class="advanced-levels" open><summary>Szukasz ekstremalnego wyzwania?</summary><div class="difficulty-options">'+previewLevels.slice(4).map((l,i)=>tile(l,i+4)).join('')+'</div></details>';
  levelSelect.value='gentle';
  const promo=document.querySelector('#play-launch p');if(promo)promo.textContent='10 000 sprawdzonych plansz w sześciu poziomach trudności.';
  const badge=document.createElement('p');badge.className='help difficulty-preview-note';badge.textContent='Test nowych poziomów. Ukończenia są zapisywane osobno i nie przyznają plakietek.';fieldset.before(badge);

@@ -11,7 +11,7 @@ Podgląd dostępny wyłącznie lokalnie: `http://localhost:5200/?features=techni
 | Ekstremalny | X/XY/XYZ/W-Wing, Skyscraper, Swordfish, Jellyfish | 1478 |
 | Arcymistrzowski | Prostokąty, kolorowanie, X/XY/AIC | 2399 |
 
-Pierwsze cztery kafelki są widoczne od razu. Dwa ostatnie znajdują się pod „Szukasz ekstremalnego wyzwania?”. Opisy i nazwy dostępne w dziesięciu językach. Każdy poziom ma oddzielne losowanie i łamigłówkę dnia.
+Pierwsze cztery kafelki są widoczne od razu. Dwa ostatnie znajdują się pod „Szukasz ekstremalnego wyzwania?”; sekcja jest domyślnie rozwinięta i można ją zwinąć. Opisy i nazwy dostępne w dziesięciu językach. Każdy poziom ma oddzielne losowanie i łamigłówkę dnia.
 
 ## Sprawdzanie
 
