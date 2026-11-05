@@ -41,7 +41,7 @@ const candidateGuide=[
 const tools=[
  ['Własne sudoku','W menu „Wczytaj” wybierz tekst lub plik JSON, obrazek albo aparat. Po rozpoznaniu zdjęcia sprawdź cyfry przed wczytaniem. Przy ręcznym wpisywaniu zablokuj dane przyciskiem „Rozpocznij rozwiązywanie”.'],
  ['Notatki i zapis','Wpisanie liczby usuwa ją z kandydatów w powiązanych polach. Wypełnianie pojedynczych działa aż do wyczerpania możliwości. „Zapisz” pobiera planszę i notatki do pliku JSON; możesz je później wczytać.'],
- ['Graj po swojemu','W nagłówku zmienisz język, motyw, kontrast i wielkość tekstu. Opcjonalne oznaczanie błędnych cyfr znajdziesz w „Więcej”. Postępy i nagrody są zapisane na tym urządzeniu; samodzielne rozwiązanie wyklucza podpowiedzi techniki i oznaczanie błędów, ale dopuszcza kandydatów oraz wypełnianie pojedynczych.']
+ ['Graj po swojemu','W nagłówku zmienisz język, motyw, kontrast i wielkość tekstu. Opcjonalne oznaczanie błędnych cyfr znajdziesz w preferencjach gry (⚙). Postępy i nagrody są zapisane na tym urządzeniu; samodzielne rozwiązanie wyklucza podpowiedzi techniki i oznaczanie błędów, ale dopuszcza kandydatów oraz wypełnianie pojedynczych.']
 ];
 const givens='530070000600195000098000060800060003400803001700020006060000280000419005000080079';
 let dialog,timer=null,step=0,running=false,revealed=false,started=false,opener;

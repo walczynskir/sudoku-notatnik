@@ -51,5 +51,12 @@
   "Gra i instrukcja",
   "Cel gry",
   "Sterowanie",
-  "Uzupełnij siatkę 9 × 9 tak, aby cyfry 1–9 nie powtarzały się w żadnym wierszu, kolumnie ani bloku 3 × 3."
+  "Uzupełnij siatkę 9 × 9 tak, aby cyfry 1–9 nie powtarzały się w żadnym wierszu, kolumnie ani bloku 3 × 3.",
+  "Preferencje gry",
+  "Włączenie oznaczania liczy się jako pomoc w bieżącej próbie. Wyłączenie nie cofnie tego faktu.",
+  "Dotyczy kolejnych plansz z biblioteki. Nie zmienia obecnych notatek.",
+  "Cel możesz wyłączyć bez utraty postępów i zdobytych nagród.",
+  "Cele są wyłączone dla tego widoku. Postępy pozostają zachowane.",
+  "Nie udało się zapisać ustawień. Działają tylko w tej sesji.",
+  "W nagłówku zmienisz język, motyw, kontrast i wielkość tekstu. Opcjonalne oznaczanie błędnych cyfr znajdziesz w preferencjach gry (⚙). Postępy i nagrody są zapisane na tym urządzeniu; samodzielne rozwiązanie wyklucza podpowiedzi techniki i oznaczanie błędów, ale dopuszcza kandydatów oraz wypełnianie pojedynczych."
 ]

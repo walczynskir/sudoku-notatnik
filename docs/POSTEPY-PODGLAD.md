@@ -49,3 +49,7 @@ Zachowano klucz sudoku-progress-preview-v1, aby dotychczasowe testowe postępy n
 ## Poziomy według technik — 1.24.0
 
 Cele dzienne i kolekcje obejmują sześć nowych poziomów, przy zachowaniu ID i wszystkich ukończeń. Nowe próby zapisują dodatkowo `techniqueLevel`. Cztery stare plakietki poziomów nie są już przyznawane za nowe próby; zdobyte pozostają w albumie jako „Wcześniejsze poziomy”. Sześć nowych plakietek samodzielności oraz Obsydian i Korona mają osobny zapis `sudoku-technique-achievements-v1` i szczegóły przy wyborze gry. Reguły: [Poziomy według technik](POZIOMY-PODGLAD.md).
+
+## Preferencje gry — 1.27.0
+
+Cel dzienny można zmieniać również w ⚙ przy pomocy. Obie kontrolki korzystają z tego samego trackera i zapisu; zmiana jest widoczna przy kolejnym otwarciu drugiego panelu. Bez celu nie usuwa osiągnięć. Opt-out `no-gamification` pozostaje respektowany, a ustawienie celu w preferencjach jest wtedy niedostępne. Przeniesienie oznaczania błędów do preferencji zachowuje dotychczasową, trwałą w obrębie próby flagę pomocy.

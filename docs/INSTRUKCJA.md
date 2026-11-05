@@ -127,7 +127,7 @@ Po poprawnym wypełnieniu wszystkich 81 pól pod planszą pojawia się zielony b
 
 ## Belka szybkich akcji
 
-Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczytaj otwiera także Nową grę oraz import tekstu/pliku JSON, obrazka i aparatu. Zapisz pobiera dotychczasową kopię JSON (nie synchronizuje jej w chmurze). Więcej zawiera czyszczenie kandydatów, restart i nową pustą planszę. Nowa plansza nadal wymaga potwierdzenia. Menu zamyka się po wyborze, kliknięciu poza belką lub Escape. Eksport i nowa plansza pozostają dostępne także niżej jako wyraźne przyciski. Usunięto Wczytaj przykład.
+Nad planszą znajdują się Cofnij, Przywróć, Wczytaj, Zapisz i Więcej. Wczytaj otwiera import tekstu/pliku JSON, obrazka i aparatu; Nowa gra ma osobny przycisk nad panelem. Zapisz pobiera dotychczasową kopię JSON (nie synchronizuje jej w chmurze). Więcej zawiera czyszczenie kandydatów, restart i nową pustą planszę. Nowa plansza nadal wymaga potwierdzenia. Menu zamyka się po wyborze, kliknięciu poza belką lub Escape. Eksport i nowa plansza pozostają dostępne także niżej jako wyraźne przyciski. Usunięto Wczytaj przykład.
 
 OCR automatycznie dopasowuje próg kontrastu dla każdego pola i ponawia słabe odczyty różnymi trybami rozpoznawania. Bursztynowe pola w podglądzie oznaczają niepewny wynik lub wykryty znak bez rozpoznanej cyfry. Sprawdź również pozostałe pola — nawet odczyt z wysoką oceną pewności może być błędny.
 
@@ -201,7 +201,7 @@ Menu Więcej zawiera także Oblicz kandydatów, Wypełnij pojedynczych kandydat�
 
 ## Opcjonalne sprawdzanie błędnych wpisów (1.20.0)
 
-W menu **Więcej → Oznaczaj błędne cyfry** można włączyć porównywanie cyfr z rozwiązaniem. Domyślnie opcja jest wyłączona. Błędny wpis otrzymuje czerwone tło i symbol ×; w wysokim kontraście używa czarnego oznaczenia i falistego podkreślenia. Poprawna cyfra nie jest ujawniana. Wyłączenie usuwa te oznaczenia, ale zwykłe konflikty w wierszu, kolumnie i kwadracie nadal są pokazywane.
+W **⚙ Preferencje gry → Oznaczaj błędne cyfry** można włączyć porównywanie cyfr z rozwiązaniem. Domyślnie opcja jest wyłączona. Błędny wpis otrzymuje czerwone tło i symbol ×; w wysokim kontraście używa czarnego oznaczenia i falistego podkreślenia. Poprawna cyfra nie jest ujawniana. Wyłączenie usuwa te oznaczenia, ale zwykłe konflikty w wierszu, kolumnie i kwadracie nadal są pokazywane.
 
 Sprawdzane są wyłącznie wpisane cyfry poza zablokowanymi liczbami początkowymi. Kandydaci nie są oceniani. Dla planszy ręcznej lub importowanej najpierw wybierz **Rozpocznij rozwiązywanie**. Aplikacja potwierdza jednoznaczność na podstawie samych cyfr początkowych, bez bieżących wpisów i notatek gracza. Przy wielu rozwiązaniach, braku rozwiązania lub przekroczeniu limitu analizy sprawdzanie jest wstrzymane; powód widać pod planszą. Edycja cyfr początkowych także wstrzymuje sprawdzanie.
 
@@ -232,3 +232,13 @@ Od 1.25.1 pomoc zawiera osobną, domyślnie zwiniętą sekcję **Więcej o kandy
 W każdym motywie tuż nad panelem gry jest pasek: **Nowa gra** po lewej, **? Jak grać?** po prawej. Są to przeniesione istniejące przyciski, bez drugiego egzemplarza w nagłówku ani menu Wczytaj. Narzędzia Cofnij, Przywróć, Wczytaj, Zapisz i Więcej pozostają w panelu. Długie tłumaczenia i większy tekst mogą zawinąć przyciski do osobnych wierszy; etykieta pomocy nigdy nie znika. Układ zachowuje strony przycisków również w RTL, a ich treść korzysta z właściwego kierunku języka.
 
 Pomoc: krótki cel → pokaz uruchamiany przez użytkownika → domyślnie zwinięte sekcje Zasady sudoku, Sterowanie, Więcej o kandydatach, Narzędzia i przydatne wskazówki. Zachowano pełną treść poprzedniej instrukcji, siedem objaśnień kandydatów i dwuetapową prezentację podpowiedzi. Zamknięcie lub ukrycie karty zatrzymuje pokaz. Ponowne otwarcie zaczyna od krótkiego celu. Dane rozgrywki i postępów nie zmieniają formatu ani kluczy zapisu.
+
+## Preferencje gry — 1.27.0
+
+Przycisk ⚙ obok „Jak grać?” otwiera trzy preferencje, stosowane od razu:
+
+- **Oznaczaj błędne cyfry**: przeniesiono z menu Więcej, domyślnie wyłączone. Zapis korzysta z dotychczasowego `sudoku-check-entries`. Porównywanie działa przy potwierdzonym jednym rozwiązaniu zablokowanych cyfr początkowych; w pozostałych przypadkach jest wstrzymane. Włączenie liczy się jako pomoc dla bieżącej próby, nawet po późniejszym wyłączeniu. Nie zmienia liczb, notatek ani historii ruchów.
+- **Pokaż kandydatów od razu**: zapamiętywane jako `sudoku-library-notes`. Dotyczy kolejnych plansz biblioteki, nie przelicza notatek obecnej gry ani importów. Ten sam wybór można zmienić w oknie Nowa gra; obie kontrolki są synchronizowane.
+- **Twój cel dzienny**: 1, 3, 5, własny cel 1–99 albo Bez celu. Własną liczbę zatwierdza zakończenie edycji pola. To ten sam cel co w Moich postępach; zapis nadal w `sudoku-progress-preview-v1`. Zmiana lub wyłączenie nie usuwa ukończeń, pucharków ani nagród. `?features=no-gamification` wyłącza kontrolkę celu z wyjaśnieniem, bez włączania postępów na nowo.
+
+Język, motyw, wysoki kontrast i większy tekst pozostają bezpośrednio w nagłówku. Wszystkie treści preferencji są w dziesięciu językach, w tym w układzie RTL. Jeśli zapis w przeglądarce nie jest dostępny, ustawienia działają w pamięci sesji i pojawia się informacja o nieudanym zapisie.

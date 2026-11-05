@@ -24,3 +24,14 @@ html[data-theme] .game-actions .help-open-label{display:inline}
 #help-dialog .help-heading{position:sticky;top:-22px;z-index:3;background:var(--bg);padding-top:8px}
 #help-dialog .help-demo-controls button[hidden],#help-demo[hidden]{display:none}
 @media(max-width:640px){html[data-theme] .game-actions{margin-bottom:12px;gap:8px}html[data-theme] .game-actions button{padding:9px 12px}#help-dialog .help-heading{top:-16px}}
+/* Related preferences join help on the right without hiding either action. */
+html[data-theme] .game-secondary{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin-left:auto;min-width:0;max-width:100%}
+html[data-theme] .game-actions .preferences-open{width:44px;min-width:44px;min-height:44px;padding:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:19px}
+#preferences-dialog{width:min(520px,calc(100% - 24px));max-height:90dvh;padding:22px;overflow:auto;overscroll-behavior:contain;color:var(--ink);font:inherit;line-height:1.6}
+#preferences-dialog .preferences-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}#preferences-dialog h2{font-size:23px;line-height:1.3;margin:0}#preferences-dialog .close{position:static;min-width:44px;min-height:44px;padding:4px 10px;background:var(--bg);color:var(--ink)}
+#preferences-dialog .preference-row{padding:18px 0;border-bottom:1px solid var(--line)}#preferences-dialog label{display:flex;align-items:flex-start;gap:10px;font-weight:600;overflow-wrap:anywhere}#preferences-dialog input[type="checkbox"]{flex:0 0 auto;width:20px;height:20px;margin:2px 0;accent-color:var(--green)}#preferences-dialog .help{margin:8px 0 0}#preferences-dialog select,#preferences-dialog input[type="number"]{width:100%;min-width:0;max-width:100%;min-height:44px;margin-top:10px;padding:8px;font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--contrast-control-radius,8px)}
+#preferences-dialog #preference-custom-label{margin-top:12px}#preferences-dialog [hidden]{display:none}#preferences-dialog form{margin:0}
+[data-text-size="large"] #preferences-dialog{font-size:18px}
+@media(max-width:640px){#preferences-dialog{padding:16px}#preferences-dialog h2{font-size:21px}html[data-theme] .game-secondary{gap:6px}}
+#preferences-dialog h2{min-width:0;overflow-wrap:anywhere}#preferences-dialog .preferences-heading form{flex-shrink:0}#preferences-dialog .preferences-heading{position:sticky;top:-22px;z-index:2;background:var(--bg);padding-top:6px}
+@media(max-width:640px){#preferences-dialog .preferences-heading{top:-16px}}

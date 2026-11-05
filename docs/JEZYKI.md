@@ -29,3 +29,5 @@ Od wersji 1.23.0 ukraiński obejmuje cały katalog interfejsu, lekcje technik, i
 Pomoc „Jak grać?” (1.25.0) obejmuje cel gry, pięć etapów pokazu, sterowanie, opisy narzędzi i etykiety przykładów we wszystkich dziesięciu językach. `tests/help.test.cjs` sprawdza pokrycie katalogu i niezależność pokazu, a `tests/fixtures/help-strings.json` zawiera listę nowych komunikatów.
 
 Od 1.26.0 pasek gry zachowuje pełną etykietę pomocy także na telefonie. „Gra i instrukcja”, „Cel gry”, „Sterowanie” oraz krótki cel są w katalogu wszystkich dziesięciu języków. W RTL tekst przycisków ma kierunek automatyczny, a Nowa gra pozostaje po lewej i pomoc po prawej.
+
+Preferencje gry (1.27.0) mają dziesięć wersji językowych: tytuł i etykieta ⚙, objaśnienia pomocy, zakres kandydatów, cel, informacja o wyłączeniu postępów i błąd zapisu. Współdzielone etykiety i walidacja celu korzystają z istniejącego katalogu.

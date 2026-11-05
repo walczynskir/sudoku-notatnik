@@ -81,3 +81,5 @@ Podział na sześć poziomów według potwierdzonej ścieżki technik oraz plaki
 Od 1.25.0 **? Jak grać?** na pasku nad panelem gry otwiera krótki opis zasad, sterowany pokaz na osobnej planszy i rozwijane objaśnienia narzędzi. Pomoc jest dostępna we wszystkich dziesięciu językach i nie wpływa na grę ani postępy.
 
 Od 1.26.0 stały pasek nad panelem gry zawiera istniejące przyciski **Nowa gra** po lewej i **? Jak grać?** po prawej, również na telefonie. Cofnij, Przywróć, Wczytaj, Zapisz i Więcej pozostają w panelu. Pomoc rozpoczyna krótki cel gry; pokaz jest widoczny dopiero po uruchomieniu, a zasady, sterowanie, kandydaci i narzędzia są rozwijane.
+
+Od 1.27.0 **⚙ Preferencje gry** obok pomocy zbiera oznaczanie błędnych cyfr, zapamiętany wybór kandydatów dla nowych plansz i cel dzienny. Cel i kandydaci są wspólne z dotychczasowymi kontrolkami; język, motyw, kontrast i większy tekst pozostają w nagłówku.

@@ -1,3 +1,9 @@
+# v1.27.0
+
+- Dodano ⚙ Preferencje gry obok pomocy: oznaczanie błędnych cyfr przeniesione z Więcej, kandydaci od razu dla nowych plansz oraz cel dzienny. Język, motyw i dostępność pozostają w nagłówku.
+- Kandydaci są zapamiętywani i synchronizowani z oknem Nowa gra; cel korzysta z istniejącego trackera Moich postępów. Wyłączenie celu zachowuje ukończenia i nagrody, oznaczanie nadal liczy się jako pomoc.
+- Dziesięć języków, RTL, większy tekst, kontrast i obsługa braku dostępu do zapisu. Dodano testy wspólnego zapisu i synchronizacji.
+
 # v1.26.0
 
 - Przeniesiono istniejące przyciski Nowa gra i ? Jak grać? na stały pasek tuż nad panelem gry, we wszystkich motywach. Usunięto pomoc z nagłówka i powtórzenie nowej gry w menu Wczytaj. Pięć narzędzi pozostaje w panelu.
