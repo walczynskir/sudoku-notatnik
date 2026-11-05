@@ -104,7 +104,7 @@
 [data-theme="forma"] button:focus-visible,[data-theme="forma"] a:focus-visible,[data-theme="forma"] summary:focus-visible,[data-theme="forma"] select:focus-visible{outline-color:#b5442d}
 [data-theme="forma"] .credits-page section{background:transparent;border-color:#dfcec4}
 @media(max-width:640px){
- [data-theme="forma"] .quick-toolbar{grid-template-columns:minmax(60px,1.25fr) repeat(5,minmax(0,1fr))}
+ [data-theme="forma"] .quick-toolbar{grid-template-columns:repeat(5,minmax(0,1fr))}
  [data-theme="forma"] .quick-toolbar .toolbar-action{padding-inline:1px}
  [data-theme="forma"] .quick-toolbar .toolbar-action>span:last-child{overflow-wrap:normal;hyphens:none}
  html[lang="pl"][data-theme="forma"]:not([data-text-size="large"]) .quick-toolbar .toolbar-action>span:last-child{white-space:nowrap;font-size:10px;letter-spacing:-.15px}

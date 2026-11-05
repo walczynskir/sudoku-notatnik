@@ -74,7 +74,7 @@
  [data-theme="porcelain"] header{padding:12px 14px;border-radius:0 0 22px 22px}
  [data-theme="porcelain"] main{padding:12px 8px 20px}
  [data-theme="porcelain"] .board-panel{padding:10px;border-radius:20px}
- [data-theme="porcelain"] .quick-toolbar{grid-template-columns:minmax(60px,1.25fr) repeat(5,minmax(0,1fr));margin-bottom:10px;gap:2px}
+ [data-theme="porcelain"] .quick-toolbar{grid-template-columns:repeat(5,minmax(0,1fr));margin-bottom:10px;gap:2px}
  [data-theme="porcelain"] .quick-toolbar .toolbar-action,[data-theme="porcelain"] .quick-toolbar summary{padding-inline:1px}
  html[lang="pl"][data-theme="porcelain"]:not([data-text-size="large"]) .quick-toolbar>button>span:last-child,
  html[lang="pl"][data-theme="porcelain"]:not([data-text-size="large"]) .quick-toolbar summary>span:last-child{white-space:nowrap;font-size:10px;letter-spacing:-.15px}

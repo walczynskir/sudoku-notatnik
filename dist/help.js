@@ -44,10 +44,11 @@ const tools=[
  ['Graj po swojemu','W nagłówku zmienisz język, motyw, kontrast i wielkość tekstu. Opcjonalne oznaczanie błędnych cyfr znajdziesz w „Więcej”. Postępy i nagrody są zapisane na tym urządzeniu; samodzielne rozwiązanie wyklucza podpowiedzi techniki i oznaczanie błędów, ale dopuszcza kandydatów oraz wypełnianie pojedynczych.']
 ];
 const givens='530070000600195000098000060800060003400803001700020006060000280000419005000080079';
-let dialog,timer=null,step=0,running=false,revealed=false,opener;
+let dialog,timer=null,step=0,running=false,revealed=false,started=false,opener;
 const $=selector=>dialog.querySelector(selector);
 function stop(){clearInterval(timer);timer=null;running=false;}
 function draw(){
+ $('#help-demo').hidden=!started;$('#help-prev').hidden=!started;$('#help-next').hidden=!started;
  $('#help-step').textContent=`${step+1} / ${steps.length}`;
  $('#help-step-title').textContent=steps[step][0];$('#help-description').textContent=steps[step][1];
  $('#help-play').textContent=running?'Pauza':'Odtwórz pokaz';$('#help-prev').disabled=step===0;$('#help-next').disabled=step===steps.length-1;
@@ -67,13 +68,15 @@ function draw(){
 }
 function advance(){if(step>=steps.length-1){stop();draw();return;}step++;revealed=false;draw();}
 function open(){
- stop();step=0;revealed=false;opener=document.activeElement;
+ stop();step=0;revealed=false;started=false;opener=document.activeElement;
  if(!dialog){dialog=document.createElement('dialog');dialog.id='help-dialog';dialog.setAttribute('aria-labelledby','help-title');document.body.append(dialog);
- dialog.innerHTML='<div class="help-heading"><h2 id="help-title">Jak grać w sudoku?</h2><button type="button" id="help-close" aria-label="Zamknij">×</button></div><section class="help-overview"><h3>O co chodzi w grze w sudoku?</h3><p>To łamigłówka logiczna, nie rachunkowa. Uzupełniasz siatkę 9 × 9, kierując się wierszami, kolumnami i dziewięcioma blokami. Nie musisz zgadywać — szukaj cyfr, które wynikają z układu planszy.</p></section><p class="help">Pokaz na przykładowej planszy — nie zmienia Twojej gry ani postępów.</p><nav class="help-demo-controls" aria-label="Sterowanie pokazem"><button id="help-prev" type="button">Wstecz</button><button id="help-play" type="button">Odtwórz pokaz</button><button id="help-next" type="button">Dalej</button></nav><p id="help-step" translate="no"></p><h3 id="help-step-title"></h3><p id="help-description" aria-live="polite"></p><div id="help-scene"></div><p id="help-demo-label"></p><button id="help-reveal" class="secondary" type="button">Pokaż pola i wyjaśnienie ruchu</button><p id="help-hint-detail" hidden>W tym przykładzie w środkowym polu pasuje tylko 5. Podpowiedź wskazuje to pole, ale nie wpisuje za Ciebie cyfry.</p><details id="help-candidates" class="help-tools"><summary>Więcej o kandydatach</summary></details><details class="help-tools" id="help-tools"><summary>Narzędzia i przydatne wskazówki</summary></details>';
+ dialog.innerHTML='<div class="help-heading"><h2 id="help-title">Jak grać w sudoku?</h2><button type="button" id="help-close" aria-label="Zamknij">×</button></div><section class="help-overview"><h3>Cel gry</h3><p>Uzupełnij siatkę 9 × 9 tak, aby cyfry 1–9 nie powtarzały się w żadnym wierszu, kolumnie ani bloku 3 × 3.</p></section><p class="help">Pokaz na przykładowej planszy — nie zmienia Twojej gry ani postępów.</p><nav class="help-demo-controls" aria-label="Sterowanie pokazem"><button id="help-prev" type="button" hidden>Wstecz</button><button id="help-play" type="button">Odtwórz pokaz</button><button id="help-next" type="button" hidden>Dalej</button></nav><section id="help-demo" hidden><p id="help-step" translate="no" dir="ltr"></p><h3 id="help-step-title"></h3><p id="help-description" aria-live="polite"></p><div id="help-scene"></div><p id="help-demo-label"></p><button id="help-reveal" class="secondary" type="button">Pokaż pola i wyjaśnienie ruchu</button><p id="help-hint-detail" hidden>W tym przykładzie w środkowym polu pasuje tylko 5. Podpowiedź wskazuje to pole, ale nie wpisuje za Ciebie cyfry.</p></section><details class="help-tools" id="help-rules"><summary>Zasady sudoku</summary><p>To łamigłówka logiczna, nie rachunkowa. Uzupełniasz siatkę 9 × 9, kierując się wierszami, kolumnami i dziewięcioma blokami. Nie musisz zgadywać — szukaj cyfr, które wynikają z układu planszy.</p></details><details class="help-tools" id="help-input"><summary>Sterowanie</summary></details><details id="help-candidates" class="help-tools"><summary>Więcej o kandydatach</summary></details><details class="help-tools" id="help-tools"><summary>Narzędzia i przydatne wskazówki</summary></details>';
+ const rule=document.createElement('p');rule.textContent=steps[0][1];$('#help-rules').append(rule);
+ for(const i of [1,2,3]){const p=document.createElement('p');p.textContent=steps[i][1];$('#help-input').append(p);}
  for(const [title,text]of candidateGuide){const h=document.createElement('h3'),p=document.createElement('p');h.textContent=title;p.textContent=text;$('#help-candidates').append(h,p);}
  for(const [title,text]of tools){const h=document.createElement('h3'),p=document.createElement('p');h.textContent=title;p.textContent=text;$('#help-tools').append(h,p);}
  $('#help-close').onclick=()=>dialog.close();$('#help-prev').onclick=()=>{stop();step=Math.max(0,step-1);revealed=false;draw();};$('#help-next').onclick=()=>{stop();advance();};
- $('#help-play').onclick=()=>{if(running){stop();draw();return;}if(step===steps.length-1){step=0;revealed=false;}running=true;timer=setInterval(advance,7000);draw();};
+ $('#help-play').onclick=()=>{if(running){stop();draw();return;}if(step===steps.length-1){step=0;revealed=false;}started=true;running=true;timer=setInterval(advance,7000);draw();};
  $('#help-reveal').onclick=()=>{revealed=true;draw();};
  dialog.addEventListener('close',()=>{stop();opener?.focus();});
  }

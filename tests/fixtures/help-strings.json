@@ -47,5 +47,9 @@
   "Co jeśli nie został żaden kandydat?",
   "Puste notatki mogą po prostu oznaczać, że ich jeszcze nie uzupełniono. Jeśli jednak prowadzisz pełną listę i usuniesz ostatnią możliwość, sprawdź wpisy oraz ostatnie eliminacje; pomocne jest „Cofnij”. Automatyczne wypełnianie pojedynczych korzysta z Twoich notatek — nie traktuj ręcznie pozostawionej jednej cyfry jako dowodu.",
   "Jak wykorzystać notatki do kolejnego ruchu?",
-  "Najpierw szukaj pól z jedną możliwością. Następnie sprawdzaj, gdzie dana cyfra może wystąpić w wierszu, kolumnie lub bloku. Jeśli ma tylko jedno miejsce, możesz ją tam wpisać, nawet gdy to pole zawiera też inne notatki. Przy trudniejszych układach podpowiedź wyjaśni kolejną technikę."
+  "Najpierw szukaj pól z jedną możliwością. Następnie sprawdzaj, gdzie dana cyfra może wystąpić w wierszu, kolumnie lub bloku. Jeśli ma tylko jedno miejsce, możesz ją tam wpisać, nawet gdy to pole zawiera też inne notatki. Przy trudniejszych układach podpowiedź wyjaśni kolejną technikę.",
+  "Gra i instrukcja",
+  "Cel gry",
+  "Sterowanie",
+  "Uzupełnij siatkę 9 × 9 tak, aby cyfry 1–9 nie powtarzały się w żadnym wierszu, kolumnie ani bloku 3 × 3."
 ]

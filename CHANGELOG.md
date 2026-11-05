@@ -1,3 +1,9 @@
+# v1.26.0
+
+- Przeniesiono istniejące przyciski Nowa gra i ? Jak grać? na stały pasek tuż nad panelem gry, we wszystkich motywach. Usunięto pomoc z nagłówka i powtórzenie nowej gry w menu Wczytaj. Pięć narzędzi pozostaje w panelu.
+- Pełna etykieta pomocy na telefonie, zawijanie długich napisów, większy tekst, kontrast i RTL. Poprawiono siatkę narzędzi po usunięciu szóstej pozycji.
+- Uporządkowano pomoc: krótki cel, pokaz odsłaniany i uruchamiany przez użytkownika, rozwijane zasady, sterowanie, kandydaci i narzędzia. Zachowano poprzednie objaśnienia i dziesięć języków. Zapis gry i postępów bez migracji.
+
 # v1.25.1
 
 - Rozbudowano pomoc o rozwijaną sekcję „Więcej o kandydatach”: znaczenie notatek, wyznaczanie możliwości, ręczna edycja, pojedynczy kandydat i jedyne miejsce, uzasadnianie eliminacji, ponowne obliczanie oraz brak kandydatów. Wszystkie dziesięć języków.

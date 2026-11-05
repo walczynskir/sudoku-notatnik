@@ -1,18 +1,18 @@
 # Instrukcja użytkownika
 
-Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angielski, hiszpański, niemiecki, chiński uproszczony, hindi, francuski, arabski i włoski. Wybór jest pamiętany na urządzeniu; zmiana nie resetuje planszy ani historii. Szczegóły: [Języki](JEZYKI.md).
+Język zmienisz listą z symbolem globu w nagłówku. Dostępne: polski, angielski, hiszpański, niemiecki, chiński uproszczony, hindi, francuski, arabski, włoski i ukraiński. Wybór jest pamiętany na urządzeniu; zmiana nie resetuje planszy ani historii. Szczegóły: [Języki](JEZYKI.md).
 
 ## Gotowe łamigłówki
 
-1. Kliknij wyróżniony przycisk **Nowa gra** w panelu nad planszą lub wybierz **Wczytaj → Nowa gra**.
+1. Kliknij wyróżniony przycisk **Nowa gra** po lewej stronie paska tuż nad panelem gry.
 2. W otwartym oknie zaznacz poziom: **Na początek**, **Łatwy**, **Wymagający**, **Ekspert**, **Ekstremalny** lub **Arcymistrzowski**. Wybrany poziom ma mocno wyróżnione tło; na telefonie kafelki układają się w dwa rzędy.
-3. Opcjonalnie zaznacz **Pokaż kandydatów od razu**, a potem kliknij **Nowa gra**. Każdy poziom ma 2500 plansz. Notatki można też obliczyć później.
+3. Opcjonalnie zaznacz **Pokaż kandydatów od razu**, a potem kliknij **Nowa gra**. Liczebność wybranego poziomu widać przy liczniku ukończeń. Notatki można też obliczyć później.
 
-Przycisk nad planszą ma tę samą nazwę i kolor na komputerze i telefonie. Na telefonie podczas gry panel staje się kompaktowy. Dłuższe informacje o bibliotece, ocenach, kandydatach i źródle znajdują się pod przyciskami w rozwijanej sekcji **Jak działa biblioteka?**.
+Przycisk nad planszą ma tę samą nazwę i kolor na komputerze i telefonie. Po prawej stronie tego samego paska znajdziesz **? Jak grać?**. Oba napisy pozostają widoczne również na telefonie. Dłuższe informacje o bibliotece, ocenach, kandydatach i źródle znajdują się pod przyciskami w rozwijanej sekcji **Jak działa biblioteka?**.
 
 **Łamigłówka dnia** korzysta z zaznaczonego poziomu. Każdy z sześciu poziomów ma własną planszę dnia, wspólną dla wszystkich graczy. Plansze zmieniają się o północy UTC i nie zależą od języka ani lokalnego postępu. Ponowne wybranie tego samego poziomu tego dnia otwiera tę samą planszę, nawet jeśli została już ukończona.
 
-Nad planszą pojawiają się poziom, identyfikator i źródłowa ocena SE. Najtrudniejsza technika nie jest tam ujawniana. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
+Nad planszą pojawiają się poziom i identyfikator. Najtrudniejsza technika nie jest tam ujawniana. Zastąpienie istniejącej planszy wymaga potwierdzenia i daje się cofnąć. Restart wraca do cyfr początkowych wybranej łamigłówki.
 
 Licznik pokazuje liczbę różnych ukończonych plansz na wybranym poziomie. Ponowne ukończenie tej samej nie zwiększa wyniku. Ukończenie wymaga pełnej, poprawnej planszy z zachowaniem cyfr początkowych. Przy losowaniu nowych pomijamy ukończone plansze, dopóki są dostępne inne.
 
@@ -177,7 +177,7 @@ Podświetlenie innych wpisanych cyfr równych wybranej ma w Ink & Paper ciepłe 
 
 ## Większy tekst
 
-W nagłówku obok motywu zaznacz **Większy tekst** (na telefonie: **A+**). To osobne ustawienie: można go używać z każdym z trzech motywów. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
+W nagłówku obok motywu zaznacz **Większy tekst** (na telefonie: **A+**). To osobne ustawienie: można go używać z każdym motywem. Powiększa cyfry, kandydatów, opisy i kontrolki. Zapisuje się jako `sudoku-large-text` w localStorage, także dla strony licencji; nie zmienia gry, historii ani języka.
 
 Na telefonie większa plansza ma własne przewijanie poziome. Belka pozostaje na szerokość ekranu, a klawiatura liczbowa układa się w dwa rzędy. To świadomy wybór czytelności kosztem przewijania. Strzałki na klawiaturze komputera nadal przenoszą zaznaczenie; pola przy prawej krawędzi można odsłonić przewijaniem planszy. Przy braku pamięci lokalnej oba ustawienia działają w bieżącej karcie. Porcelana pozostaje domyślnym motywem, a powiększenie domyślnie jest wyłączone.
 
@@ -211,7 +211,7 @@ Od 1.20.1 komunikat ukończenia używa palety wybranego motywu, np. bursztynu w 
 
 ## Cele, plakietki i nagrody (1.22.0)
 
-W zwykłym widoku strony dostępny jest cel dzienny, kolekcje setek, album 12 plakietek i motyw nagrodowy Zorza, we wszystkich dziewięciu językach. Domyślny cel wynosi 3 nowe sudoku dziennie; można go zmienić lub wyłączyć. Na telefonie szczegóły otwiera mały przycisk 🎯 przy liczniku pól. Na komputerze są dwa paski: celu i bieżącej setki. Pomoc nie ogranicza pucharków i plakietek. Zorza odblokowuje się trwale po trzech zrealizowanych celach dnia. Dane są tylko na urządzeniu i nie wchodzą do JSON planszy. Cały interfejs postępów można ukryć adresem ?features=no-gamification. Szczegóły: POSTEPY-PODGLAD.md.
+W zwykłym widoku strony dostępny jest cel dzienny, kolekcje setek, album 12 plakietek i motyw nagrodowy Zorza, we wszystkich dziesięciu językach. Domyślny cel wynosi 3 nowe sudoku dziennie; można go zmienić lub wyłączyć. Na telefonie szczegóły otwiera mały przycisk 🎯 przy liczniku pól. Na komputerze są dwa paski: celu i bieżącej setki. Pomoc nie ogranicza pucharków i plakietek. Zorza odblokowuje się trwale po trzech zrealizowanych celach dnia. Dane są tylko na urządzeniu i nie wchodzą do JSON planszy. Cały interfejs postępów można ukryć adresem ?features=no-gamification. Szczegóły: POSTEPY-PODGLAD.md.
 
 ## Poziomy i nagrody samodzielności (1.24.0)
 
@@ -221,8 +221,14 @@ Obliczanie kandydatów wymaga przynajmniej jednej wpisanej liczby, przynajmniej 
 
 ## Pomoc w aplikacji — od 1.25.0
 
-Przycisk **? / Jak grać?** w nagłówku otwiera instrukcję wzorowaną na Domino: cel gry i zasady wierszy, kolumn oraz bloków, następnie pięć kroków na osobnej przykładowej planszy. Wstecz i Dalej przełączają etapy; Odtwórz pokaz uruchamia kroki co 7 sekund, Pauza je zatrzymuje. Pokaz początkowo jest zatrzymany. Podpowiedź najpierw pokazuje technikę, a pole i wyjaśnienie dopiero po wybraniu odpowiedniego przycisku.
+Przycisk **? Jak grać?** na pasku nad panelem gry otwiera instrukcję wzorowaną na Domino: cel gry i zasady wierszy, kolumn oraz bloków, następnie pięć kroków na osobnej przykładowej planszy. Wstecz i Dalej przełączają etapy; Odtwórz pokaz uruchamia kroki co 7 sekund, Pauza je zatrzymuje. Pokaz początkowo jest schowany; dopiero wybranie „Odtwórz pokaz” odsłania przykład i uruchamia odtwarzanie. Podpowiedź najpierw pokazuje technikę, a pole i wyjaśnienie dopiero po wybraniu odpowiedniego przycisku.
 
 Rozwijana sekcja opisuje import, aparat, blokadę liczb początkowych, kandydatów, zapis JSON, cofanie, dostępność oraz zasady nagród. Pomoc ma dziesięć wersji językowych i korzysta z bieżącego motywu. Zamknięcie (× lub Esc) zatrzymuje odtwarzanie i wraca do przycisku otwierającego; ukrycie karty również zatrzymuje pokaz. Przykład nie odczytuje ani nie zapisuje planszy użytkownika, nie liczy się jako użycie podpowiedzi i nie zmienia nagród.
 
 Od 1.25.1 pomoc zawiera osobną, domyślnie zwiniętą sekcję **Więcej o kandydatach**. Siedem krótkich części wyjaśnia znaczenie małych cyfr, wyliczanie z wiersza/kolumny/bloku, edycję i aktualizację notatek, szukanie pojedynczego kandydata oraz jedynego miejsca, warunki eliminacji, skutki ponownego obliczania i rozróżnienie pustych notatek od sprzeczności. Podkreśla, że jedna ręcznie pozostawiona cyfra nie jest dowodem, a ponowne obliczenie może odtworzyć logicznie wykluczone możliwości. Treść dostępna w dziesięciu językach; pokaz nadal ma pięć kroków.
+
+## Stały pasek gry i układ pomocy — 1.26.0
+
+W każdym motywie tuż nad panelem gry jest pasek: **Nowa gra** po lewej, **? Jak grać?** po prawej. Są to przeniesione istniejące przyciski, bez drugiego egzemplarza w nagłówku ani menu Wczytaj. Narzędzia Cofnij, Przywróć, Wczytaj, Zapisz i Więcej pozostają w panelu. Długie tłumaczenia i większy tekst mogą zawinąć przyciski do osobnych wierszy; etykieta pomocy nigdy nie znika. Układ zachowuje strony przycisków również w RTL, a ich treść korzysta z właściwego kierunku języka.
+
+Pomoc: krótki cel → pokaz uruchamiany przez użytkownika → domyślnie zwinięte sekcje Zasady sudoku, Sterowanie, Więcej o kandydatach, Narzędzia i przydatne wskazówki. Zachowano pełną treść poprzedniej instrukcji, siedem objaśnień kandydatów i dwuetapową prezentację podpowiedzi. Zamknięcie lub ukrycie karty zatrzymuje pokaz. Ponowne otwarcie zaczyna od krótkiego celu. Dane rozgrywki i postępów nie zmieniają formatu ani kluczy zapisu.

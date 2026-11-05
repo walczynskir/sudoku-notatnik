@@ -27,3 +27,5 @@ Od 1.22.0 przetłumaczono również cele, kolekcje, plakietki i nagrody. Katalog
 Od wersji 1.23.0 ukraiński obejmuje cały katalog interfejsu, lekcje technik, import, dostępność, postępy i licencje. Preferencja przeglądarki `uk` / `uk-UA` wybiera ukraiński, o ile gracz nie zapisał własnego wyboru. W selektorze Українська znajduje się po Polski, przed العربية.
 
 Pomoc „Jak grać?” (1.25.0) obejmuje cel gry, pięć etapów pokazu, sterowanie, opisy narzędzi i etykiety przykładów we wszystkich dziesięciu językach. `tests/help.test.cjs` sprawdza pokrycie katalogu i niezależność pokazu, a `tests/fixtures/help-strings.json` zawiera listę nowych komunikatów.
+
+Od 1.26.0 pasek gry zachowuje pełną etykietę pomocy także na telefonie. „Gra i instrukcja”, „Cel gry”, „Sterowanie” oraz krótki cel są w katalogu wszystkich dziesięciu języków. W RTL tekst przycisków ma kierunek automatyczny, a Nowa gra pozostaje po lewej i pomoc po prawej.
