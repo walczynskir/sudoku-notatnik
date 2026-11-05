@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.27.3 — 2026-11-05
+
+- Wspólny arkusz `dist/shared-game.css` definiuje ikonę i rozmiar przycisku ustawień dla Domino i Sudoku. Plik w Domino jest źródłem. Aktualizacje kopiujemy do `sudoku/dist/shared-game.css` i wydajemy razem z grami, które ładują lokalne kopie.
+
 ## 1.27.2
 
 - Usunięto nadmiarowy znak „?” przed napisem „Jak grać?” w pasku gry.
