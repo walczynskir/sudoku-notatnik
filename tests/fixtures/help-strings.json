@@ -32,5 +32,20 @@
   "Wpisanie liczby usuwa ją z kandydatów w powiązanych polach. Wypełnianie pojedynczych działa aż do wyczerpania możliwości. „Zapisz” pobiera planszę i notatki do pliku JSON; możesz je później wczytać.",
   "Graj po swojemu",
   "W nagłówku zmienisz język, motyw, kontrast i wielkość tekstu. Opcjonalne oznaczanie błędnych cyfr znajdziesz w „Więcej”. Postępy i nagrody są zapisane na tym urządzeniu; samodzielne rozwiązanie wyklucza podpowiedzi techniki i oznaczanie błędów, ale dopuszcza kandydatów oraz wypełnianie pojedynczych.",
-  "W tym przykładzie w środkowym polu pasuje tylko 5. Podpowiedź wskazuje to pole, ale nie wpisuje za Ciebie cyfry."
+  "W tym przykładzie w środkowym polu pasuje tylko 5. Podpowiedź wskazuje to pole, ale nie wpisuje za Ciebie cyfry.",
+  "Więcej o kandydatach",
+  "Co oznaczają małe cyfry?",
+  "Kandydat to cyfra, której jeszcze nie wykluczają znane liczby i wykonane rozumowanie. Notatki nie są wpisanymi odpowiedziami. Jeśli pole ma kandydatów 1, 2 i 4, nie wybieraj dowolnego: dalsze rozumowanie ma ustalić, która cyfra jest właściwa.",
+  "Jak znaleźć kandydatów?",
+  "Zacznij od cyfr 1–9. Skreśl te, które występują już w tym samym wierszu, kolumnie lub bloku 3 × 3. Pozostałe cyfry to podstawowi kandydaci. W przykładzie w pierwszym wierszu i trzeciej kolumnie zostają 1, 2 i 4.",
+  "Jak prowadzić notatki?",
+  "„Oblicz kandydatów” przygotuje pełne podstawowe notatki. Wybierz pole i tryb „Kandydaci”, a następnie dotknij cyfry, aby ją dodać lub usunąć. Wpisanie zwykłej liczby automatycznie usuwa ją z notatek w powiązanych polach. Usunięcie liczby nie odtwarza automatycznie wcześniej skreślonych kandydatów.",
+  "Kiedy wolno skreślić kandydata?",
+  "Usuwaj cyfrę tylko wtedy, gdy potrafisz uzasadnić, że nie może być w tym polu — na podstawie wpisanych liczb lub techniki, np. pary. Nie usuwaj jej dlatego, że inna wygląda bardziej prawdopodobnie. Jeden pozostały kandydat pozwala wpisać liczbę tylko wtedy, gdy lista była kompletna, a wcześniejsze eliminacje poprawne.",
+  "Co robi ponowne obliczenie?",
+  "Ponowne „Oblicz kandydatów” zastępuje wszystkie notatki możliwościami wynikającymi z samych liczb. Może przywrócić kandydatów usuniętych poprawnie zaawansowaną techniką. Nie używaj go po każdej eliminacji. „Wyczyść kandydatów” usuwa notatki, nie liczby; obie operacje możesz cofnąć.",
+  "Co jeśli nie został żaden kandydat?",
+  "Puste notatki mogą po prostu oznaczać, że ich jeszcze nie uzupełniono. Jeśli jednak prowadzisz pełną listę i usuniesz ostatnią możliwość, sprawdź wpisy oraz ostatnie eliminacje; pomocne jest „Cofnij”. Automatyczne wypełnianie pojedynczych korzysta z Twoich notatek — nie traktuj ręcznie pozostawionej jednej cyfry jako dowodu.",
+  "Jak wykorzystać notatki do kolejnego ruchu?",
+  "Najpierw szukaj pól z jedną możliwością. Następnie sprawdzaj, gdzie dana cyfra może wystąpić w wierszu, kolumnie lub bloku. Jeśli ma tylko jedno miejsce, możesz ją tam wpisać, nawet gdy to pole zawiera też inne notatki. Przy trudniejszych układach podpowiedź wyjaśni kolejną technikę."
 ]

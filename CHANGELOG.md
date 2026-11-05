@@ -1,3 +1,7 @@
+# v1.25.1
+
+- Rozbudowano pomoc o rozwijaną sekcję „Więcej o kandydatach”: znaczenie notatek, wyznaczanie możliwości, ręczna edycja, pojedynczy kandydat i jedyne miejsce, uzasadnianie eliminacji, ponowne obliczanie oraz brak kandydatów. Wszystkie dziesięć języków.
+
 # v1.25.0
 
 - Dodano pomoc „Jak grać?” na wzór Domino: cel i zasady sudoku, pięciostopniowy pokaz z przykładową planszą, sterowanie Wstecz/Odtwórz/Pauza/Dalej oraz rozwijane opisy narzędzi.
