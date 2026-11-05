@@ -77,3 +77,5 @@ Stopka we wszystkich motywach i językach zawiera dobrowolne linki wsparcia: PAH
 Autorem projektu jest Robert Walczyński (pomysł, rozwój i kierunek projektu). Aplikacja rozwijana z pomocą OpenAI Codex. Informacje te wraz z repozytorium znajdują się na stronie Autorzy i licencje; nie zmieniają zasad licencjonowania.
 
 Podział na sześć poziomów według potwierdzonej ścieżki technik oraz plakietki samodzielności i nagrody opisano w [POZIOMY-PODGLAD.md](docs/POZIOMY-PODGLAD.md). Domyślnie dostępny od 1.24.0. Jawny lokalny `?features=technique-levels` zachowuje osobny zapis testowy.
+
+Od 1.25.0 **? / Jak grać?** w nagłówku otwiera krótki opis zasad, sterowany pokaz na osobnej planszy i rozwijane objaśnienia narzędzi. Pomoc jest dostępna we wszystkich dziesięciu językach i nie wpływa na grę ani postępy.

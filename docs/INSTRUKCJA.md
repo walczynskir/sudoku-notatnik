@@ -218,3 +218,9 @@ W zwykłym widoku strony dostępny jest cel dzienny, kolekcje setek, album 12 pl
 Pierwsze cztery poziomy nie wymagają Wingów, Skyscraperów, ryb ani łańcuchów w sprawdzonej ścieżce rozwiązania. Dwa ostatnie są w domyślnie rozwiniętej sekcji „Szukasz ekstremalnego wyzwania?”. Łatwy jest wyborem początkowym. Przy kafelkach widoczne są plakietki za pierwsze samodzielne rozwiązanie. Podpowiedzi i oznaczanie błędów wykluczają tę plakietkę; kandydaci i wypełnianie pojedynczych są dozwolone. Samodzielny Ekstremalny odblokowuje Obsydian, a Arcymistrzowski — Koronę. Motywy wybierasz sam; nie włączają się automatycznie. Dotychczasowe ukończenia i zdobyte nagrody pozostają zachowane.
 
 Obliczanie kandydatów wymaga przynajmniej jednej wpisanej liczby, przynajmniej jednego pustego pola i braku konfliktów w wierszach, kolumnach oraz blokach. Na pustej lub pełnej planszy albo przy konflikcie przycisk i pozycja w menu Więcej są nieaktywne. Nie wymagamy jednego rozwiązania ani minimalnej liczby wskazówek — kandydaci mogą być przydatni także podczas ręcznego układania sudoku.
+
+## Pomoc w aplikacji — od 1.25.0
+
+Przycisk **? / Jak grać?** w nagłówku otwiera instrukcję wzorowaną na Domino: cel gry i zasady wierszy, kolumn oraz bloków, następnie pięć kroków na osobnej przykładowej planszy. Wstecz i Dalej przełączają etapy; Odtwórz pokaz uruchamia kroki co 7 sekund, Pauza je zatrzymuje. Pokaz początkowo jest zatrzymany. Podpowiedź najpierw pokazuje technikę, a pole i wyjaśnienie dopiero po wybraniu odpowiedniego przycisku.
+
+Rozwijana sekcja opisuje import, aparat, blokadę liczb początkowych, kandydatów, zapis JSON, cofanie, dostępność oraz zasady nagród. Pomoc ma dziesięć wersji językowych i korzysta z bieżącego motywu. Zamknięcie (× lub Esc) zatrzymuje odtwarzanie i wraca do przycisku otwierającego; ukrycie karty również zatrzymuje pokaz. Przykład nie odczytuje ani nie zapisuje planszy użytkownika, nie liczy się jako użycie podpowiedzi i nie zmienia nagród.

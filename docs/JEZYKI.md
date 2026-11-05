@@ -25,3 +25,5 @@ Strona „Autorzy i licencje” korzysta z tego samego wyboru języka i ma włas
 Od 1.22.0 przetłumaczono również cele, kolekcje, plakietki i nagrody. Katalog obejmuje szablony liczników i opisów dostępności, a nazwy dni i miesięcy oraz daty są formatowane przez Intl dla wybranego języka. Zdarzenie sudoku-language-change odświeża formatowanie panelu bez przeładowania; nie jest emitowane przy każdym przebiegu obserwatora tłumaczeń.
 
 Od wersji 1.23.0 ukraiński obejmuje cały katalog interfejsu, lekcje technik, import, dostępność, postępy i licencje. Preferencja przeglądarki `uk` / `uk-UA` wybiera ukraiński, o ile gracz nie zapisał własnego wyboru. W selektorze Українська znajduje się po Polski, przed العربية.
+
+Pomoc „Jak grać?” (1.25.0) obejmuje cel gry, pięć etapów pokazu, sterowanie, opisy narzędzi i etykiety przykładów we wszystkich dziesięciu językach. `tests/help.test.cjs` sprawdza pokrycie katalogu i niezależność pokazu, a `tests/fixtures/help-strings.json` zawiera listę nowych komunikatów.

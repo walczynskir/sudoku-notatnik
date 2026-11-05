@@ -1,3 +1,9 @@
+# v1.25.0
+
+- Dodano pomoc „Jak grać?” na wzór Domino: cel i zasady sudoku, pięciostopniowy pokaz z przykładową planszą, sterowanie Wstecz/Odtwórz/Pauza/Dalej oraz rozwijane opisy narzędzi.
+- Pokaz jest początkowo zatrzymany; podpowiedź odsłania pole dopiero po kliknięciu. Zamknięcie i ukrycie karty zatrzymują odtwarzanie. Nie zmienia planszy, notatek, pomocy ani postępów gracza.
+- Pomoc dostępna przyciskiem ? w nagłówku, w dziesięciu językach, z obsługą klawiatury, motywów, kontrastu i większego tekstu.
+
 # v1.24.1
 
 - Obliczanie kandydatów jest wyłączone na pustej lub pełnej planszy oraz przy konfliktach liczb, także w menu Więcej. Zablokowana akcja nie zmienia notatek ani historii. Powody dostępne w dziesięciu językach.
