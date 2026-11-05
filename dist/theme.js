@@ -1,10 +1,29 @@
 (function(root){
 'use strict';
 const techniquePreview=['localhost','127.0.0.1','[::1]'].includes(root.location?.hostname)&&new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('technique-levels')===true;
-const themes=['sage','ink','contrast','studio','forma','energy','tangerine','porcelain','ukraine','copper','night-sky'],key=techniquePreview?'sudoku-technique-theme-preview':'sudoku-theme',sizeKey='sudoku-large-text',previousKey=techniquePreview?'sudoku-technique-previous-theme-preview':'sudoku-previous-theme';
+const themes=['sage','ink','contrast','studio','forma','energy','tangerine','porcelain','ukraine'],key=techniquePreview?'sudoku-technique-theme-preview':'sudoku-theme',sizeKey='sudoku-large-text',previousKey=techniquePreview?'sudoku-technique-previous-theme-preview':'sudoku-previous-theme';
 const rewardEnabled=['localhost','127.0.0.1','[::1]','rsudoku.pl','www.rsudoku.pl','walczynskir.github.io'].includes(root.location?.hostname)&&new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('no-gamification')!==true;
 let current='porcelain',largeText=false,previousTheme='porcelain';
-function ensureRewardOption(select){if(!select||typeof select.querySelector!=='function')return;for(const [id,label]of [['aurora','Zorza · nagroda'],['obsidian','Obsydian · nagroda'],['crown','Korona · nagroda']]){if(!themes.includes(id)||select.querySelector(`option[value="${id}"]`))continue;const option=document.createElement('option');option.value=id;option.textContent=label;select.append(option);}}
+const collectionRewards=Object.freeze([
+ Object.freeze({id:'copper',name:'Miedź',goal:3}),
+ Object.freeze({id:'night-sky',name:'Nocne niebo',goal:10})
+]);
+function syncCollectionRewards(total){
+ if(!rewardEnabled)return;
+ for(const {id,goal} of collectionRewards){
+  if(total>=goal&&!themes.includes(id))themes.push(id);
+ }
+ ensureRewardOption(document.getElementById('theme-select'));
+}
+function readProgressIds(key,select){
+ try{return select(JSON.parse(localStorage.getItem(key)||'{}'));}catch{return [];}
+}
+if(rewardEnabled){
+ const legacy=readProgressIds('sudoku-library-v1',saved=>Array.isArray(saved.completed)?saved.completed:[]);
+ const records=readProgressIds('sudoku-progress-preview-v1',saved=>Object.keys(saved.records||{}));
+ syncCollectionRewards(new Set([...legacy,...records]).size);
+}
+function ensureRewardOption(select){if(!select||typeof select.querySelector!=='function')return;for(const [id,label]of [['aurora','Zorza · nagroda'],['obsidian','Obsydian · nagroda'],['crown','Korona · nagroda'],...collectionRewards.map(({id,name})=>[id,name])]){if(!themes.includes(id)||select.querySelector(`option[value="${id}"]`))continue;const option=document.createElement('option');option.value=id;option.textContent=label;select.append(option);}}
 function apply(value){current=themes.includes(value)?value:'porcelain';document.documentElement.dataset.theme=current;const meta=document.querySelector('meta[name="theme-color"]');if(meta&&['copper','night-sky'].includes(current)){const color=root.getComputedStyle?.(document.documentElement).getPropertyValue('--palette-bg').trim();if(color)meta.content=color;}else if(meta)meta.content={ink:'#f5f0e5',sage:'#f6f5f0',contrast:'#ffffff',studio:'#ffffff',forma:'#ffffff',energy:'#7134cf',tangerine:'#ffab00',porcelain:'#f7f6f2',aurora:'#f4f2fa',ukraine:'#0755a1',obsidian:'#131d2b',crown:'#faf6e9'}[current];const select=document.getElementById('theme-select');ensureRewardOption(select);if(select)select.value=current==='contrast'?previousTheme:current;updateContrastControl();return current;}
 function updateContrastControl(){const button=document.getElementById('contrast-toggle');if(button)button.setAttribute('aria-pressed',String(current==='contrast'));}
 function applySize(value){largeText=value;document.documentElement.dataset.textSize=largeText?'large':'normal';const input=document.getElementById('large-text');if(input)input.checked=largeText;}
@@ -18,7 +37,7 @@ try{if(current!=='contrast'&&['localhost','127.0.0.1','[::1]'].includes(root.loc
 try{const demo=new URLSearchParams(root.location?.search||'').get('preview');if(techniquePreview&&['obsidian','crown'].includes(demo)){if(!themes.includes(demo))themes.push(demo);current=demo;}}catch{}
 if(current!=='contrast'&&themes.includes(current))previousTheme=current;
 apply(current);applySize(largeText);
-const api={themes,registerTechniqueTheme(id){if(!rewardEnabled||!['obsidian','crown'].includes(id))return false;if(!themes.includes(id))themes.push(id);ensureRewardOption(document.getElementById('theme-select'));return true;},registerRewardTheme(){if(!rewardEnabled)return false;if(!themes.includes('aurora'))themes.push('aurora');return true;},get current(){return current;},get largeText(){return largeText;},set(value){if(!themes.includes(value))return false;if(value!=='contrast')previousTheme=value;else if(current!=='contrast')previousTheme=current;apply(value);try{localStorage.setItem(key,current);localStorage.setItem(previousKey,previousTheme);}catch{}return true;},toggleContrast(){return api.set(current==='contrast'?previousTheme:'contrast');},setLargeText(value){if(typeof value!=='boolean')return false;applySize(value);try{localStorage.setItem(sizeKey,String(value));}catch{}return true;}};
+const api={themes,collectionRewards,syncCollectionRewards,registerTechniqueTheme(id){if(!rewardEnabled||!['obsidian','crown'].includes(id))return false;if(!themes.includes(id))themes.push(id);ensureRewardOption(document.getElementById('theme-select'));return true;},registerRewardTheme(){if(!rewardEnabled)return false;if(!themes.includes('aurora'))themes.push('aurora');return true;},get current(){return current;},get largeText(){return largeText;},set(value){if(!themes.includes(value))return false;if(value!=='contrast')previousTheme=value;else if(current!=='contrast')previousTheme=current;apply(value);try{localStorage.setItem(key,current);localStorage.setItem(previousKey,previousTheme);}catch{}return true;},toggleContrast(){return api.set(current==='contrast'?previousTheme:'contrast');},setLargeText(value){if(typeof value!=='boolean')return false;applySize(value);try{localStorage.setItem(sizeKey,String(value));}catch{}return true;}};
 root.SudokuTheme=api;if(typeof module!=='undefined')module.exports=api;
 document.addEventListener('DOMContentLoaded',()=>{apply(current);const contrast=document.getElementById('contrast-toggle');if(contrast)contrast.addEventListener('click',()=>api.toggleContrast());const select=document.getElementById('theme-select');if(select){ensureRewardOption(select);select.value=current==='contrast'?previousTheme:current;select.addEventListener('change',()=>api.set(select.value));}const input=document.getElementById('large-text');if(input){input.checked=largeText;input.addEventListener('change',()=>api.setLargeText(input.checked));}});
 })(globalThis);
