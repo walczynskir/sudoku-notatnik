@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.27.2
+
+- Usunięto nadmiarowy znak „?” przed napisem „Jak grać?” w pasku gry.
+
 - Objaśnienia trzech preferencji gry są domyślnie schowane pod klikalnym znakiem ?. Zachowano pełną treść, dziesięć języków i dostępne etykiety oraz stan rozwinięcia. Kliknięcie informacji nie zmienia ustawienia.
 
 # v1.27.0
