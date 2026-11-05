@@ -244,3 +244,5 @@ Przycisk ⚙ obok „Jak grać?” otwiera trzy preferencje, stosowane od razu:
 Język, motyw, wysoki kontrast i większy tekst pozostają bezpośrednio w nagłówku. Wszystkie treści preferencji są w dziesięciu językach, w tym w układzie RTL. Jeśli zapis w przeglądarce nie jest dostępny, ustawienia działają w pamięci sesji i pojawia się informacja o nieudanym zapisie.
 
 Od 1.27.1 dodatkowe objaśnienia każdej preferencji odsłania przycisk **?** obok jej nazwy. Ponowne kliknięcie chowa tekst. Objaśnienie oznaczania zachowuje informację o jednym rozwiązaniu i trwałym zaliczeniu pomocy w bieżącej próbie. Informacje o niedostępności celu, walidacji i błędach zapisu pozostają widoczne niezależnie od objaśnień. Przyciski ? działają klawiaturą i nie przełączają ustawień.
+
+Miedź i Nocne niebo znajdziesz na liście **Wygląd**. W Nocnym niebie jasna ramka oznacza wybrane pole, a podpowiedzi mają niebieskie, fioletowe lub bursztynowe oznaczenia.

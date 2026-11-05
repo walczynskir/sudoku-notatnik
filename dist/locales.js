@@ -3441,6 +3441,8 @@
   "Liczby początkowe nie mają rozwiązania — sprawdzanie wpisów jest wstrzymane.": ["The starting clues have no solution. Entry checking is paused.", "Las cifras iniciales no tienen solución. Comprobación en pausa.", "Die Vorgaben haben keine Lösung. Prüfung pausiert.", "初始数字无解，输入检查已暂停。", "शुरुआती अंकों का कोई समाधान नहीं है। प्रविष्टि जाँच रुकी हुई है।", "Les chiffres de départ n’ont aucune solution. Vérification suspendue.", "لا يوجد حل للأرقام الأولية. التحقق متوقف مؤقتًا.", "Le cifre iniziali non hanno soluzione. Controllo sospeso.", "Початкові числа не мають розв’язку — перевірку призупинено."],
   "Nie udało się potwierdzić jednego rozwiązania — sprawdzanie wpisów jest wstrzymane.": ["A unique solution could not be confirmed. Entry checking is paused.", "No se pudo confirmar una solución única. Comprobación en pausa.", "Eine eindeutige Lösung konnte nicht bestätigt werden. Prüfung pausiert.", "无法确认唯一解，输入检查已暂停。", "एकमात्र समाधान की पुष्टि नहीं हो सकी। प्रविष्टि जाँच रुकी हुई है।", "Impossible de confirmer une solution unique. Vérification suspendue.", "تعذر تأكيد وجود حل وحيد. التحقق متوقف مؤقتًا.", "Impossibile confermare una soluzione unica. Controllo sospeso.", "Не вдалося підтвердити єдиний розв’язок — перевірку призупинено."],
   "Porcelana": ["Porcelain", "Porcelana", "Porzellan", "瓷白", "पोर्सिलेन", "Porcelaine", "الخزف", "Porcellana", "Порцеляна"],
+  "Miedź": ["Copper", "Cobre", "Kupfer", "铜色", "तांबा", "Cuivre", "نحاس", "Rame", "Мідь"],
+  "Nocne niebo": ["Night sky", "Cielo nocturno", "Nachthimmel", "夜空", "रात का आसमान", "Ciel nocturne", "سماء الليل", "Cielo notturno", "Нічне небо"],
   "Mandarynka": [
     "Tangerine",
     "Mandarina",

@@ -1,0 +1,91 @@
+/* Map the shared colors onto Sudoku. Board feedback belongs to Sudoku. */
+:root:is([data-theme="copper"], [data-theme="night-sky"]) {
+  --bg: var(--palette-bg);
+  --ink: var(--palette-ink);
+  --muted: var(--palette-muted);
+  --line: var(--palette-line);
+  --green: var(--palette-accent);
+  --accent: var(--palette-wash);
+  --contrast-control-radius: 999px;
+  --hint-a-bg: #dceefb;
+  --hint-a-ink: #15537d;
+  --hint-b-bg: #f0e2fa;
+  --hint-b-ink: #71358c;
+  --hint-target-bg: #fff1ca;
+  --hint-target-ink: #855108;
+  --error-bg: #ffe3df;
+  --error-ink: #9c2d22;
+  --selection: var(--ink);
+  --block-line: var(--ink);
+}
+:root[data-theme="night-sky"] {
+  color-scheme: dark;
+  --hint-a-bg: #183e57;
+  --hint-a-ink: #91daff;
+  --hint-b-bg: #4b315d;
+  --hint-b-ink: #edbdff;
+  --hint-target-bg: #53401f;
+  --hint-target-ink: #ffd47e;
+  --error-bg: #532a36;
+  --error-ink: #ffb4ba;
+  --selection: #ffffff;
+  --block-line: #a0adcf;
+}
+:is([data-theme="copper"], [data-theme="night-sky"]) {
+  & :is(.card, dialog, .toolbar-dropdown, .credits-page section) {
+    background: var(--palette-paper);
+    border-color: var(--line);
+  }
+  & :is(.quick-toolbar, .segmented, .solved-banner, #board-state, #hint-guide, #my-progress, .difficulty-tile) {
+    background: var(--accent);
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  & :is(button:not(.cell), summary, select, textarea, input[type="number"]) {
+    background-color: var(--palette-paper);
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  & #review-grid input { background: var(--palette-paper); color: var(--ink); border-color: var(--line); }
+  & :is(button:not(.cell), .quick-toolbar summary) {
+    border-radius: var(--contrast-control-radius);
+  }
+  & :is(button.primary, .toolbar-save, .segmented .active, .difficulty-choice input:checked + .difficulty-tile) {
+    background: var(--palette-primary-bg);
+    color: var(--palette-primary-ink);
+    border-color: var(--palette-primary-bg);
+  }
+  & .badge-card.earned { background: var(--palette-paper); }
+  & #review-grid input.ocr-uncertain { background: var(--hint-target-bg); box-shadow: inset 0 0 0 2px var(--hint-target-ink); }
+  & .difficulty-choice input:checked + .difficulty-tile .difficulty-bars { color: inherit; }
+  & :is(.help, .eyebrow, .brand-sub, .board-bottom, #status, .notes, footer) { color: var(--muted); }
+  & :is(.error, .cell.conflict) { color: var(--error-ink); }
+  & :is(button, a, summary, select, input):focus-visible { outline-color: var(--green); }
+  & .board, & .board.solved { border-color: var(--block-line); box-shadow: none; }
+  & .cell { background: var(--palette-paper); border-color: var(--line); color: var(--ink); }
+  & .cell:nth-child(3n) { border-right-color: var(--block-line); }
+  & .cell:is(:nth-child(n+19):nth-child(-n+27), :nth-child(n+46):nth-child(-n+54)) {
+    border-bottom-color: var(--block-line);
+  }
+  & .cell.peer { background: var(--bg); }
+  & .cell.same { background: var(--accent); }
+  & .cell.selected { background: var(--accent); box-shadow: none; }
+  & .cell:is(.conflict, .wrong-entry) { background: var(--error-bg); color: var(--error-ink); }
+  & .cell.wrong-entry::after { color: var(--error-ink); }
+  & .cell:is(.hint-source, .hint-color-a) {
+    background: var(--hint-a-bg);
+    box-shadow: inset 0 0 0 2px var(--hint-a-ink);
+  }
+  & .cell.hint-color-b {
+    background: var(--hint-b-bg);
+    outline: 2px dashed var(--hint-b-ink);
+    outline-offset: -3px;
+  }
+  & .cell.hint-target { box-shadow: inset 0 0 0 2px var(--hint-target-ink); }
+  & .cell.hint-target:not(.hint-color-a, .hint-color-b) { background: var(--hint-target-bg); }
+  & .cell.selected { outline: 2px solid var(--selection); outline-offset: -5px; }
+  & .cell .colored-candidate { color: var(--hint-a-ink); }
+  & .cell.hint-color-b .colored-candidate { color: var(--hint-b-ink); }
+  & .blue { background: var(--selection); }
+}
+[data-theme="night-sky"] .notes { font-weight: 600; }
