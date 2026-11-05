@@ -1,3 +1,7 @@
+# v1.27.1
+
+- Objaśnienia trzech preferencji gry są domyślnie schowane pod klikalnym znakiem ?. Zachowano pełną treść, dziesięć języków i dostępne etykiety oraz stan rozwinięcia. Kliknięcie informacji nie zmienia ustawienia.
+
 # v1.27.0
 
 - Dodano ⚙ Preferencje gry obok pomocy: oznaczanie błędnych cyfr przeniesione z Więcej, kandydaci od razu dla nowych plansz oraz cel dzienny. Język, motyw i dostępność pozostają w nagłówku.

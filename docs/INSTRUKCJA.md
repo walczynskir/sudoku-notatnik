@@ -242,3 +242,5 @@ Przycisk ⚙ obok „Jak grać?” otwiera trzy preferencje, stosowane od razu:
 - **Twój cel dzienny**: 1, 3, 5, własny cel 1–99 albo Bez celu. Własną liczbę zatwierdza zakończenie edycji pola. To ten sam cel co w Moich postępach; zapis nadal w `sudoku-progress-preview-v1`. Zmiana lub wyłączenie nie usuwa ukończeń, pucharków ani nagród. `?features=no-gamification` wyłącza kontrolkę celu z wyjaśnieniem, bez włączania postępów na nowo.
 
 Język, motyw, wysoki kontrast i większy tekst pozostają bezpośrednio w nagłówku. Wszystkie treści preferencji są w dziesięciu językach, w tym w układzie RTL. Jeśli zapis w przeglądarce nie jest dostępny, ustawienia działają w pamięci sesji i pojawia się informacja o nieudanym zapisie.
+
+Od 1.27.1 dodatkowe objaśnienia każdej preferencji odsłania przycisk **?** obok jej nazwy. Ponowne kliknięcie chowa tekst. Objaśnienie oznaczania zachowuje informację o jednym rozwiązaniu i trwałym zaliczeniu pomocy w bieżącej próbie. Informacje o niedostępności celu, walidacji i błędach zapisu pozostają widoczne niezależnie od objaśnień. Przyciski ? działają klawiaturą i nie przełączają ustawień.

@@ -12,5 +12,6 @@ $('preference-goal').onchange=()=>{if($('preference-goal').value==='custom'){sho
 $('preference-custom').onchange=()=>{const value=Number($('preference-custom').value);if(value<1){$('preference-goal-error').textContent='Wpisz liczbę całkowitą od 1 do 99.';return;}setGoal(value);};
 document.addEventListener('sudoku-library-notes-change',()=>{$('preference-notes').checked=root.SudokuLibrary?.getAutoNotes?.()===true;});
 document.addEventListener('sudoku-goal-change',()=>{if(dialog.open)syncGoal();});
+for(const button of document.querySelectorAll('.preference-info'))button.onclick=()=>{const expanded=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!expanded));$(button.getAttribute('aria-controls')).hidden=expanded;};
 dialog.addEventListener('close',()=>opener?.focus());
 })(globalThis);
