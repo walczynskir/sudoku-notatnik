@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.28.3 — 2026-11-08
+
+- Ujednolicono palety motywów z pozostałymi grami Games Chest. Wzmocniono obramowania przycisków w Atramencie i papierze oraz Porcelanie.
+
 ## 1.28.2 — 2026-11-08
 
 - Usunięto pętlę odświeżania tłumaczeń i stopki Games Chest, która zawieszała stronę.

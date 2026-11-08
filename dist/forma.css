@@ -41,7 +41,7 @@
 }
 
 /* Ivory, plum and terracotta: a warmer identity for the rounded layout. */
-:root[data-theme="forma"]{--bg:#fff8ef;--ink:#342837;--muted:#73626c;--green:#b5442d;--line:#dfcec4;--accent:#f3e3d7;--forma-paper:#fffdf9;--forma-plum:#432c46;--forma-terra:#b5442d}
+:root[data-theme="forma"]{--bg:var(--palette-bg);--ink:var(--palette-ink);--muted:var(--palette-muted);--green:var(--palette-accent);--line:var(--palette-line);--accent:var(--palette-wash);--forma-paper:var(--palette-paper);--forma-plum:#432c46;--forma-terra:#b5442d}
 [data-theme="forma"] body{background:var(--bg);color:var(--ink)}
 [data-theme="forma"] header{border-color:#dfcec4}
 [data-theme="forma"] .brand,[data-theme="forma"] .logo{color:#432c46}
