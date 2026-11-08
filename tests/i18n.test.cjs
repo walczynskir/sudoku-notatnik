@@ -47,3 +47,30 @@ test('progress interface, rewards and badge conditions are translated in every s
 test('progress counters and accessibility descriptions preserve every numeric value',()=>{const samples=['Dzisiaj: 2 z 3 sudoku','Setka 2: 23/100','23 / 100 · Ukończone kolekcje: 1 · Łącznie 123 / 10 000','Zdobyte: 3 / 12','3 · Bez podpowiedzi','Ukończono 2 z 3. Pucharek czeka na realizację celu.','🏆 Cel zrealizowany! Ukończono dzisiaj: 3. Zdobyte puchary: 7.','Dzisiaj: 2 z 3 sudoku. Setka 2: 23 ze 100. Łącznie 123 z 10 000. Zdobyte puchary: 7. Otwórz moje postępy'];for(const text of samples)for(const lang of langs){const t=I.text(text,lang);assert.notEqual(t,text,`${lang}: ${text}`);assert(!/[ąćęłńśźż]/i.test(t),`${lang}: ${t}`);assert.deepEqual((t.match(/\d+/g)||[]).sort(),(text.match(/\d+/g)||[]).sort(),`${lang}: ${t}`);}});
 
 test("Ukrainian browser detection and coordinates",()=>{assert.equal(I.resolveLanguage(["uk-UA"]),"uk");assert.equal(I.text("wiersz 3, kolumna 8","uk"),"рядок 3, стовпець 8");assert.equal(I.text("Nowa gra","uk"),"Нова гра");});
+
+test('footer mutations do not rewrite an unchanged document language',()=>{
+ const writes=[];
+ const pending=[];
+ let observeBody;
+ const values={lang:'pl',dir:'ltr'};
+ const html=new Proxy(values,{set(target,key,value){writes.push(key);target[key]=value;return true;}});
+ const select={addEventListener(){}};
+ const document={
+  documentElement:html,body:{},getElementById:()=>select,
+  createTreeWalker:()=>({nextNode:()=>null}),querySelectorAll:()=>[],
+  querySelector:()=>null,dispatchEvent(){}
+ };
+ const context={
+  document,navigator:{languages:['pl']},NodeFilter:{SHOW_TEXT:4},
+  Event:class{},localStorage:{getItem:()=>null,setItem(){}},
+  MutationObserver:class{constructor(callback){observeBody=callback; }observe(){}},
+  queueMicrotask:callback=>pending.push(callback)
+ };
+ vm.runInNewContext(fs.readFileSync(require.resolve('../dist/i18n.js'),'utf8'),context);
+ context.SudokuI18n.setLanguage('ar');
+ assert.deepEqual(values,{lang:'ar',dir:'rtl'});
+ assert.deepEqual(writes,['lang','dir']);
+ observeBody();
+ pending.shift()();
+ assert.deepEqual(writes,['lang','dir']);
+});

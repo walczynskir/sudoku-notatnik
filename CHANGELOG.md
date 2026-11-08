@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.28.2 — 2026-11-08
+
+- Usunięto pętlę odświeżania tłumaczeń i stopki Games Chest, która zawieszała stronę.
+
 ## 1.28.1 — 2026-11-05
 
 - Miedź po 3, Nocne niebo po 10 różnych ukończonych planszach z biblioteki. Moje postępy pokazują stan obu nagród.

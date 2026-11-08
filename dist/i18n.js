@@ -41,7 +41,10 @@ function translateElement(el){
  for(const attr of ['aria-label','title','placeholder']){if(!el.hasAttribute(attr))continue;const value=el.getAttribute(attr),old=stored[attr],source=old&&old.translated===value?old.source:value,translated=text(source);stored[attr]={source,translated};if(value!==translated)el.setAttribute(attr,translated);}
 }
 function apply(){
- document.documentElement.lang=language;document.documentElement.dir=language==='ar'?'rtl':'ltr';
+ const html=document.documentElement;
+ const direction=language==='ar'?'rtl':'ltr';
+ if(html.lang!==language)html.lang=language;
+ if(html.dir!==direction)html.dir=direction;
  const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode())translateNode(node);
  document.querySelectorAll('[aria-label],[title],[placeholder]').forEach(translateElement);
  const meta=document.querySelector('meta[name="description"]');if(meta){const key='Trener Sudoku: rozwiązuj sudoku krok po kroku. Kandydaci, import zdjęć i wyjaśnienia technik — od par po skrzydła i ryby.';meta.content=text(key);}
