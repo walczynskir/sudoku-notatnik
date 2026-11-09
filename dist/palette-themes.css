@@ -90,12 +90,25 @@
 }
 [data-theme="night-sky"] .notes { font-weight: 600; }
 
-/* Use the board surface and digit color to distinguish the three levels of focus. */
+/* Shade the board surface with the theme's accent, independently of digit color. */
+[data-theme] .cell {
+  --cell-shade: var(--green);
+  --cell-peer-paper: 83%;
+  --cell-match-paper: 68%;
+}
+[data-theme="ink"] .cell {
+  --cell-shade: color-mix(in oklab, var(--wash) 52%, black);
+}
+:is([data-theme="night-sky"], [data-theme="obsidian"]) .cell {
+  --cell-shade: color-mix(in srgb, var(--cell-paper) 12%, black);
+  --cell-peer-paper: 74%;
+  --cell-match-paper: 48%;
+}
 [data-theme] .cell:where(:not(.conflict, .wrong-entry, .hint-source, .hint-target, .hint-color-a, .hint-color-b)).peer {
-  background-color: color-mix(in srgb, var(--cell-paper) 86%, currentColor);
+  background-color: color-mix(in oklab, var(--cell-paper) var(--cell-peer-paper), var(--cell-shade));
 }
 [data-theme] .cell:where(:not(.conflict, .wrong-entry, .hint-source, .hint-target, .hint-color-a, .hint-color-b)):is(.same, .selected) {
-  background-color: color-mix(in srgb, var(--cell-paper) 72%, currentColor);
+  background-color: color-mix(in oklab, var(--cell-paper) var(--cell-match-paper), var(--cell-shade));
 }
 [data-theme] .cell:where(:not(.conflict, .wrong-entry, .hint-source, .hint-target, .hint-color-a, .hint-color-b)).selected {
   box-shadow: inset 0 0 0 3px currentColor;
