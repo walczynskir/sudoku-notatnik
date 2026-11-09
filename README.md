@@ -84,4 +84,4 @@ Od 1.26.0 stały pasek nad panelem gry zawiera istniejące przyciski **Nowa gra*
 
 Od 1.27.0 **⚙ Preferencje gry** obok pomocy zbiera oznaczanie błędnych cyfr, zapamiętany wybór kandydatów dla nowych plansz i cel dzienny. Cel i kandydaci są wspólne z dotychczasowymi kontrolkami; język, motyw, kontrast i większy tekst pozostają w nagłówku.
 
-Palety Miedzi i Nocnego nieba pochodzą z `domino/dist/shared-palettes.css`. Aktualizując je, skopiuj ten plik bez zmian do `dist/shared-palettes.css`. Arkusz `dist/palette-themes.css` przypisuje wspólne kolory elementom Sudoku.
+Źródłem wspólnych palet jest `dist/shared-palettes.css` w Sudoku. Po zmianie skopiuj arkusz bez zmian do katalogów `dist/` Domino i Ośmiu Asów. Sudoku przypisuje wspólne kolory własnym elementom w arkuszach motywów.
