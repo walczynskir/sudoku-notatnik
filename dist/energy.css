@@ -24,7 +24,7 @@
 [data-theme="energy"] .board-top{margin-bottom:10px;color:#6a607a}
 [data-theme="energy"] #board-state{background:#f0e9fc;color:#5a3980;padding:4px 9px;border-radius:999px;font-weight:600}
 [data-theme="energy"] .board{background:var(--palette-paper);border-color:#392453;box-shadow:none}
-[data-theme="energy"] .cell{background:var(--palette-paper);color:#302441;border-color:#ddd5e8}
+[data-theme="energy"] .cell{--cell-paper:var(--palette-paper);background:var(--cell-paper);color:#302441;border-color:#ddd5e8}
 [data-theme="energy"] .cell:nth-child(3n){border-right-color:#392453}
 [data-theme="energy"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="energy"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#392453}
 [data-theme="energy"] .cell.peer{background:#f6f2fc}

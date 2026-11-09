@@ -24,7 +24,7 @@
 [data-theme="porcelain"] .board-top{margin-bottom:10px;color:#657182}
 [data-theme="porcelain"] #board-state{background:#edf2f7;color:#365b80;padding:4px 9px;border-radius:999px;font-weight:600}
 [data-theme="porcelain"] .board{background:var(--paper);border-color:#24364b;box-shadow:none}
-[data-theme="porcelain"] .cell{background:var(--paper);color:#24364b;border-color:#d4dce4}
+[data-theme="porcelain"] .cell{--cell-paper:var(--paper);background:var(--cell-paper);color:#24364b;border-color:#d4dce4}
 [data-theme="porcelain"] .cell:nth-child(3n){border-right-color:#24364b}
 [data-theme="porcelain"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="porcelain"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#24364b}
 [data-theme="porcelain"] .cell.peer{background:color-mix(in srgb,var(--paper) 55%,var(--wash))}

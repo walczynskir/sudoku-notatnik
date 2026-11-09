@@ -20,7 +20,7 @@
 [data-theme="ink"] .keypad button{background:#eee7da;border-color:#cfc5b4;color:var(--ink)}
 [data-theme="ink"] .keypad button.digit-complete{background:#dce5ed;color:var(--green);border-color:#afc0cd}
 [data-theme="ink"] .board{border-color:#293541;box-shadow:none;background:var(--paper)}
-[data-theme="ink"] .cell{background:var(--paper);color:var(--ink);border-color:#d1c9b9;border-radius:0;font-family:'DM Sans',sans-serif}
+[data-theme="ink"] .cell{--cell-paper:var(--paper);background:var(--cell-paper);color:var(--ink);border-color:#d1c9b9;border-radius:0;font-family:'DM Sans',sans-serif}
 [data-theme="ink"] .cell:nth-child(3n){border-right-color:#293541}
 [data-theme="ink"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="ink"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#293541}
 [data-theme="ink"] .cell.peer{background:color-mix(in srgb,var(--paper) 55%,var(--wash))}
@@ -95,7 +95,7 @@
 [data-theme="contrast"] .keypad button.digit-complete:disabled{background:#eee;color:#444;border-color:#777;opacity:1}
 [data-theme="contrast"] .keypad button.digit-complete::after{color:#111}
 [data-theme="contrast"] .board{background:#fff;border:3px solid #111;box-shadow:none}
-[data-theme="contrast"] .cell{background:#fff;color:#111;border-color:#777;font-family:Arial,sans-serif;font-weight:700;font-size:clamp(24px,3vw,34px);border-radius:0}
+[data-theme="contrast"] .cell{--cell-paper:#fff;background:var(--cell-paper);color:#111;border-color:#777;font-family:Arial,sans-serif;font-weight:700;font-size:clamp(24px,3vw,34px);border-radius:0}
 [data-theme="contrast"] .cell:nth-child(3n){border-right:3px solid #111}[data-theme="contrast"] .cell:nth-child(9n){border-right:0}
 [data-theme="contrast"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="contrast"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom:3px solid #111}
 [data-theme="contrast"] .cell.peer{background:#f0f0f0}[data-theme="contrast"] .cell.same{background:#dedede}
@@ -202,7 +202,8 @@ header .header-preferences .language-picker{margin:0;min-width:0}
   --accent: var(--palette-wash);
   --paper: var(--palette-paper);
 }
-:where([data-theme="sage"]) :is(.card, .cell, dialog) { background-color: var(--paper); }
+:where([data-theme="sage"]) :is(.card, dialog) { background-color: var(--paper); }
+:where([data-theme="sage"]) .cell { --cell-paper: var(--paper); }
 [data-theme="ink"] :is(header, .quick-toolbar, .game-actions) :is(button:not(.primary), summary, select):not(:disabled) {
   border-color: var(--palette-control-line);
 }

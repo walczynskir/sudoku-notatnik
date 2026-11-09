@@ -24,7 +24,7 @@
 [data-theme="ukraine"] .board-top{margin-bottom:10px;color:var(--palette-muted)}
 [data-theme="ukraine"] #board-state{background:#edf2f7;color:var(--palette-accent);padding:4px 9px;border-radius:999px;font-weight:600}
 [data-theme="ukraine"] .board{background:var(--palette-paper);border-color:var(--palette-ink);box-shadow:none}
-[data-theme="ukraine"] .cell{background:var(--palette-paper);color:var(--palette-ink);border-color:#d4dce4}
+[data-theme="ukraine"] .cell{--cell-paper:var(--palette-paper);background:var(--cell-paper);color:var(--palette-ink);border-color:#d4dce4}
 [data-theme="ukraine"] .cell:nth-child(3n){border-right-color:var(--palette-ink)}
 [data-theme="ukraine"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="ukraine"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:var(--palette-ink)}
 [data-theme="ukraine"] .cell.peer{background:#f3f4f5}

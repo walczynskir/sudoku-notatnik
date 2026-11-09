@@ -24,7 +24,7 @@
 [data-theme="obsidian"] .board-top{margin-bottom:10px;color:#b5bdc8}
 [data-theme="obsidian"] #board-state{background:#263449;color:#d2ac67;padding:4px 9px;border-radius:999px;font-weight:600}
 [data-theme="obsidian"] .board{background:#1d2a3c;border-color:#f0e9dc;box-shadow:none}
-[data-theme="obsidian"] .cell{background:#1d2a3c;color:#f0e9dc;border-color:#405069}
+[data-theme="obsidian"] .cell{--cell-paper:#1d2a3c;background:var(--cell-paper);color:#f0e9dc;border-color:#405069}
 [data-theme="obsidian"] .cell:nth-child(3n){border-right-color:#f0e9dc}
 [data-theme="obsidian"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="obsidian"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#f0e9dc}
 [data-theme="obsidian"] .cell.peer{background:#243247}
@@ -119,7 +119,7 @@
 [data-theme="crown"] .board-top{margin-bottom:10px;color:#72634d}
 [data-theme="crown"] #board-state{background:#f4e9ce;color:#8b661e;padding:4px 9px;border-radius:999px;font-weight:600}
 [data-theme="crown"] .board{background:#fff;border-color:#342c24;box-shadow:none}
-[data-theme="crown"] .cell{background:#fff;color:#342c24;border-color:#e1d4b5}
+[data-theme="crown"] .cell{--cell-paper:#fff;background:var(--cell-paper);color:#342c24;border-color:#e1d4b5}
 [data-theme="crown"] .cell:nth-child(3n){border-right-color:#342c24}
 [data-theme="crown"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="crown"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#342c24}
 [data-theme="crown"] .cell.peer{background:#f7f1e5}

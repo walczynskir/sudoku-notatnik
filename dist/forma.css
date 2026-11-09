@@ -60,7 +60,7 @@
 [data-theme="forma"] .secondary{background:#fffdf9;border-color:#d7c3bc;color:#432c46}
 [data-theme="forma"] #board-state,[data-theme="forma"] .board-top,[data-theme="forma"] .help,[data-theme="forma"] .text-button,[data-theme="forma"] #status,[data-theme="forma"] .studio-help,[data-theme="forma"] footer,[data-theme="forma"] .library-context #library-current{color:#73626c}
 [data-theme="forma"] .board{background:#fffdf9;border-color:#432c46}
-[data-theme="forma"] .cell{background:#fffdf9;color:#342837;border-color:#dcccc5}
+[data-theme="forma"] .cell{--cell-paper:#fffdf9;background:var(--cell-paper);color:#342837;border-color:#dcccc5}
 [data-theme="forma"] .cell:nth-child(3n){border-right-color:#432c46}
 [data-theme="forma"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="forma"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#432c46}
 [data-theme="forma"] .cell.peer{background:#f7eee5}

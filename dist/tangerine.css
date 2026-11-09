@@ -24,7 +24,7 @@
 [data-theme="tangerine"] .board-top{margin-bottom:10px;color:#70695f}
 [data-theme="tangerine"] #board-state{background:#fff1d2;color:#795318;padding:4px 9px;border-radius:999px;font-weight:600}
 [data-theme="tangerine"] .board{background:var(--palette-paper);border-color:#493a20;box-shadow:none}
-[data-theme="tangerine"] .cell{background:var(--palette-paper);color:#30291f;border-color:#e0d9cd}
+[data-theme="tangerine"] .cell{--cell-paper:var(--palette-paper);background:var(--cell-paper);color:#30291f;border-color:#e0d9cd}
 [data-theme="tangerine"] .cell:nth-child(3n){border-right-color:#493a20}
 [data-theme="tangerine"] .cell:nth-child(n+19):nth-child(-n+27),[data-theme="tangerine"] .cell:nth-child(n+46):nth-child(-n+54){border-bottom-color:#493a20}
 [data-theme="tangerine"] .cell.peer{background:#faf6ed}
