@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.28.9 — 2026-11-10
+
+- Ujednolicono wersjonowanie i dodano publiczną informację o wersji.
+
 ## 1.28.3 — 2026-11-08
 
 - Ujednolicono palety motywów z pozostałymi grami Games Chest. Wzmocniono obramowania przycisków w Atramencie i papierze oraz Porcelanie.

@@ -34,3 +34,7 @@
 - Zachowaj wspólny identyfikator witryny Umami Games Chest i tag `sudoku` dla `rsudoku.pl`.
 - Jeśli aktualizacja gry wymaga zmiany wpisu katalogowego, przekaż konkretną zmianę w wątku Games Chest.
 - Po publikacji sprawdź https://rsudoku.pl/ i podaj commit źródłowy.
+
+## Wydania
+
+Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `scripts/release-version.mjs` przed każdą publikacją.
