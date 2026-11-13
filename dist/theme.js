@@ -3,7 +3,8 @@
 const techniquePreview=['localhost','127.0.0.1','[::1]'].includes(root.location?.hostname)&&new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('technique-levels')===true;
 const themes=['sage','ink','contrast','studio','forma','energy','tangerine','porcelain','ukraine'],key=techniquePreview?'sudoku-technique-theme-preview':'sudoku-theme',sizeKey='sudoku-large-text',previousKey=techniquePreview?'sudoku-technique-previous-theme-preview':'sudoku-previous-theme';
 const rewardEnabled=['localhost','127.0.0.1','[::1]','rsudoku.pl','www.rsudoku.pl','walczynskir.github.io'].includes(root.location?.hostname)&&new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('no-gamification')!==true;
-let current='porcelain',largeText=false,previousTheme='porcelain';
+const defaultTheme='sage';
+let current=defaultTheme,largeText=false,previousTheme=defaultTheme;
 const collectionRewards=Object.freeze([
  Object.freeze({id:'copper',name:'Miedź',goal:3}),
  Object.freeze({id:'night-sky',name:'Nocne niebo',goal:10})
@@ -24,12 +25,12 @@ if(rewardEnabled){
  syncCollectionRewards(new Set([...legacy,...records]).size);
 }
 function ensureRewardOption(select){if(!select||typeof select.querySelector!=='function')return;for(const [id,label]of [['aurora','Zorza · nagroda'],['obsidian','Obsydian · nagroda'],['crown','Korona · nagroda'],...collectionRewards.map(({id,name})=>[id,name])]){if(!themes.includes(id)||select.querySelector(`option[value="${id}"]`))continue;const option=document.createElement('option');option.value=id;option.textContent=label;select.append(option);}}
-function apply(value){current=themes.includes(value)?value:'porcelain';document.documentElement.dataset.theme=current;const meta=document.querySelector('meta[name="theme-color"]');if(meta&&['copper','night-sky'].includes(current)){const color=root.getComputedStyle?.(document.documentElement).getPropertyValue('--palette-bg').trim();if(color)meta.content=color;}else if(meta)meta.content={ink:'#f5f0e5',sage:'#f6f5f0',contrast:'#ffffff',studio:'#ffffff',forma:'#ffffff',energy:'#7134cf',tangerine:'#ffab00',porcelain:'#f7f6f2',aurora:'#f4f2fa',ukraine:'#0755a1',obsidian:'#131d2b',crown:'#faf6e9'}[current];const select=document.getElementById('theme-select');ensureRewardOption(select);if(select)select.value=current==='contrast'?previousTheme:current;updateContrastControl();return current;}
+function apply(value){current=themes.includes(value)?value:defaultTheme;document.documentElement.dataset.theme=current;const meta=document.querySelector('meta[name="theme-color"]');if(meta&&['copper','night-sky'].includes(current)){const color=root.getComputedStyle?.(document.documentElement).getPropertyValue('--palette-bg').trim();if(color)meta.content=color;}else if(meta)meta.content={ink:'#f5f0e5',sage:'#f6f5f0',contrast:'#ffffff',studio:'#ffffff',forma:'#ffffff',energy:'#7134cf',tangerine:'#ffab00',porcelain:'#ede2ce',aurora:'#f4f2fa',ukraine:'#0755a1',obsidian:'#131d2b',crown:'#faf6e9'}[current];const select=document.getElementById('theme-select');ensureRewardOption(select);if(select)select.value=current==='contrast'?previousTheme:current;updateContrastControl();return current;}
 function updateContrastControl(){const button=document.getElementById('contrast-toggle');if(button)button.setAttribute('aria-pressed',String(current==='contrast'));}
 function applySize(value){largeText=value;document.documentElement.dataset.textSize=largeText?'large':'normal';const input=document.getElementById('large-text');if(input)input.checked=largeText;}
 try{if(rewardEnabled&&JSON.parse(localStorage.getItem('sudoku-progress-preview-v1')||'{}').unlockedThemes?.includes('aurora'))themes.push('aurora');}catch{}
 try{if(rewardEnabled){const badges=JSON.parse(localStorage.getItem(techniquePreview?'sudoku-technique-achievements-preview-v1':'sudoku-technique-achievements-v1')||'{}').badges||{};if(badges.advanced)themes.push('obsidian');if(badges.extreme)themes.push('crown');}}catch{}
-try{current=localStorage.getItem(key)||(techniquePreview?localStorage.getItem('sudoku-theme'):null)||'porcelain';}catch{}
+try{current=localStorage.getItem(key)||(techniquePreview?localStorage.getItem('sudoku-theme'):null)||defaultTheme;}catch{}
 try{largeText=localStorage.getItem(sizeKey)==='true';}catch{}
 try{const saved=localStorage.getItem(previousKey);if(themes.includes(saved)&&saved!=='contrast')previousTheme=saved;}catch{}
 // Local preview convenience only; this is not access control.

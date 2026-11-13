@@ -3252,16 +3252,7 @@
     "قد يتطلب التمرير على الهاتف.",
     "Sul telefono potrebbe richiedere lo scorrimento."
   , "На телефоні може знадобитися прокручування."],
-  "Szałwia": [
-    "Sage",
-    "Salvia",
-    "Salbei",
-    "鼠尾草",
-    "सेज",
-    "Sauge",
-    "المريمية",
-    "Salvia"
-  , "Шавлія"],
+  "Klasyczny": ["Classic", "Clásico", "Klassisch", "经典", "क्लासिक", "Classique", "كلاسيكي", "Classico", "Класичний"],
   "Atrament i papier": [
     "Ink & Paper",
     "Tinta y papel",

@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.28.10 — 2026-11-13
+
+- Klasyczny (dawna Szałwia) jest domyślnym motywem. Porcelana ma zaakceptowaną beżową planszę i tło. Zapisane wybory motywów są zachowane.
+
 ## 1.28.9 — 2026-11-10
 
 - Ujednolicono wersjonowanie i dodano publiczną informację o wersji.

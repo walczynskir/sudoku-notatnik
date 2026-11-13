@@ -96,3 +96,23 @@
 [data-theme="porcelain"] :is(header, .quick-toolbar, .game-actions) :is(button:not(.primary), summary, select):not(:disabled) {
   border-color: var(--palette-control-line);
 }
+
+html[data-theme="porcelain"] body {
+  background: #ede2ce;
+}
+html[data-theme="porcelain"] .board-panel,
+html[data-theme="porcelain"] .card {
+  background: #f2e9d8;
+}
+html[data-theme="porcelain"] .cell {
+  --cell-paper: #f8f0de;
+  --cell-shade: #786248;
+  color: #302820;
+}
+html[data-theme="porcelain"] .board,
+html[data-theme="porcelain"] .cell:nth-child(3n) {
+  border-right-color: #5b4937;
+}
+html[data-theme="porcelain"] .board {
+  border-color: #5b4937;
+}

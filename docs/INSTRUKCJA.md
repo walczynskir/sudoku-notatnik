@@ -163,13 +163,13 @@ Odnośnik w stopce otwiera informacje o zewnętrznych bibliotekach, fontach i da
 
 Wybierz **Wygląd** obok selektora języka w nagłówku. **Wysoki kontrast** ma białe tło, czarne cyfry, mocną siatkę i żółte zaznaczenie. Grupy podpowiedzi nadal mają różne tła i ramki; `!` oznacza konflikt, a `−` cel eliminacji. Przy zwykłym tekście plansza mieści się na szerokość telefonu; przewijanie poziome jest dostępne w trybie większego tekstu.
 
-**Szałwia** zachowuje dotychczasową zieloną paletę. **Atrament i papier** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są tłumaczone na wybrany język interfejsu; po polsku to Szałwia, Atrament i papier, Wysoki kontrast oraz Pracownia.
+**Klasyczny** zachowuje dotychczasową zieloną paletę. **Atrament i papier** używa kremowego papieru, granatu, ciemnej siatki, szeryfowych nagłówków i bardziej płaskich kontrolek. Nazwy motywów są tłumaczone na wybrany język interfejsu; po polsku to Szałwia, Atrament i papier, Wysoki kontrast oraz Pracownia.
 
 Wybór zapisuje się jako `sudoku-theme` w localStorage, dla danej przeglądarki i adresu strony. Nie jest eksportowany w pliku JSON. Działa także na stronie autorów i licencji. Zmiana wyglądu nie resetuje planszy, notatek, podpowiedzi, historii ani postępu. Bez dostępnej pamięci lokalnej można zmienić motyw w otwartej karcie; po przeładowaniu wróci Ink & Paper.
 
 W obu motywach gruba ramka wskazuje wybrane pole, grupa A pozostaje niebieska, grupa B fioletowa z przerywaną ramką, eliminacje mają bursztynową/pomarańczową ramkę, a konflikty są czerwone.
 
-Od 1.19.0 domyślnym motywem jest Porcelana (wcześniej: Ink & Paper). Zapisany wybór Sage nie jest nadpisywany; można go nadal wybrać w nagłówku obok języka. Oznaczenie ukończenia dopasowane do motywu, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
+Motyw Klasyczny zastępuje nazwę Szałwia i zachowuje jej paletę oraz identyfikator zapisu. Oznaczenie ukończenia dopasowane do motywu, czerwone konflikty i kolorowa siatka pomocnicza aparatu zachowują znaczenie funkcjonalne.
 
 W Ink & Paper wybrane pole ma neutralne szare tło i ciemną atramentową ramkę. Jeśli należy też do podpowiedzi, zachowuje błękitne lub fioletowe tło dowodu, a mocna atramentowa ramka oznacza wybór. Dla wybranego celu eliminacji widoczne są obie ramki: pomarańczowa i wewnętrzna atramentowa.
 
@@ -195,7 +195,7 @@ Na telefonie Wysoki kontrast ze zwykłym tekstem dopasowuje planszę do szeroko�
 
 ## Wygląd od wersji 1.19.0
 
-Nowe urządzenia zaczynają od Porcelany. W nagłówku wybierzesz kolejno: Porcelana, Atrament i papier, Szałwia, Pracownia, Forma, Energia i Mandarynka. Zapisany wybór motywu nie jest nadpisywany. Osobny przycisk Kontrast włącza wysoki kontrast; ponowne użycie przywraca poprzedni motyw. A+ niezależnie powiększa tekst. Ustawienia są pamiętane na urządzeniu i nie zmieniają planszy.
+Nowe urządzenia zaczynają od motywu Klasyczny. Porcelana jest osobnym, beżowym wariantem dostępnym w menu wyglądu. Zapisany wybór motywu nie jest nadpisywany. Osobny przycisk Kontrast włącza wysoki kontrast; ponowne użycie przywraca poprzedni motyw. A+ niezależnie powiększa tekst. Ustawienia są pamiętane na urządzeniu i nie zmieniają planszy.
 
 Menu Więcej zawiera także Oblicz kandydatów, Wypełnij pojedynczych kandydatów i Wyczyść kandydatów. Te same operacje są nadal dostępne w panelu narzędzi.
 
