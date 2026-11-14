@@ -246,3 +246,13 @@ Język, motyw, wysoki kontrast i większy tekst pozostają bezpośrednio w nagł
 Od 1.27.1 dodatkowe objaśnienia każdej preferencji odsłania przycisk **?** obok jej nazwy. Ponowne kliknięcie chowa tekst. Objaśnienie oznaczania zachowuje informację o jednym rozwiązaniu i trwałym zaliczeniu pomocy w bieżącej próbie. Informacje o niedostępności celu, walidacji i błędach zapisu pozostają widoczne niezależnie od objaśnień. Przyciski ? działają klawiaturą i nie przełączają ustawień.
 
 Miedź odblokujesz po 3, a Nocne niebo po 10 różnych ukończonych planszach z biblioteki. Liczą się wcześniejsze ukończenia i gry z pomocą na każdym poziomie. Stan nagród sprawdzisz w **Moich postępach**, a odblokowane motywy znajdziesz też na liście **Wygląd**. W Nocnym niebie jasna ramka oznacza wybrane pole, a podpowiedzi mają niebieskie, fioletowe lub bursztynowe oznaczenia.
+
+
+## Instalacja na telefonie
+
+- **Android:** otwórz https://rsudoku.pl/ w Chrome. W menu wybierz „Zainstaluj aplikację” lub „Dodaj do ekranu głównego”.
+- **iPhone:** otwórz https://rsudoku.pl/ w Safari. W menu udostępniania wybierz „Dodaj do ekranu początkowego”. Jeśli widzisz opcję „Otwórz jako aplikację internetową”, włącz ją i stuknij „Dodaj”.
+
+Pierwsze otwarcie z internetem pobiera pliki gry i bibliotekę. Potem możesz rozwiązywać plansze i korzystać z podpowiedzi offline. Rozpoznawanie cyfr ze zdjęcia wymaga pobrania silnika OCR. Zapis planszy i ustawienia należą do przeglądarki lub zainstalowanej aplikacji. Aby przenieść planszę, użyj eksportu i importu JSON.
+
+Po aktualizacji zamknij wszystkie otwarte okna Sudoku i uruchom grę ponownie, aby przeglądarka mogła przełączyć się na nową wersję.

@@ -40,6 +40,16 @@ if (index !== updatedIndex) {
   write(indexPath, updatedIndex);
 }
 
+const workerPath = dist + 'sw.js';
+if (has(workerPath)) {
+  const worker = read(workerPath);
+  const cacheVersion = /(const cacheName = cachePrefix \+ ')[^']+(')/;
+  if (!cacheVersion.test(worker)) throw new Error('Brak wersji pamięci offline.');
+  const updatedWorker = worker.replace(cacheVersion, `$1${version}$2`);
+  if (checking && worker !== updatedWorker) throw new Error('Wersja pamięci offline różni się od VERSION.');
+  if (!checking && worker !== updatedWorker) write(workerPath, updatedWorker);
+}
+
 const manifest = dist + 'version.json';
 if (checking) {
   if (JSON.parse(read(manifest)).version !== version) {

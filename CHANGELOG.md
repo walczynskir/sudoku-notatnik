@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.29.0 — 2026-11-14
+
+- Instalacja Trenera Sudoku z przeglądarki na Androidzie i iPhonie. Po pobraniu plików plansza, podpowiedzi i biblioteka działają offline.
+
 ## 1.28.10 — 2026-11-13
 
 - Klasyczny (dawna Szałwia) jest domyślnym motywem. Porcelana ma zaakceptowaną beżową planszę i tło. Zapisane wybory motywów są zachowane.
