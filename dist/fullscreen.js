@@ -22,7 +22,9 @@
 
     shortcuts.hidden = root.dataset.textSize === 'large';
     if (!shortcuts.hidden) {
-      const requiredHeight = entry.offsetHeight + (landscape ? 0 : boardWidth + 12);
+      // Use some of the board’s width before hiding useful controls on shorter screens.
+      const minimumBoard = Math.min(boardWidth, Math.max(270, boardWidth * 0.80));
+      const requiredHeight = entry.offsetHeight + (landscape ? 0 : minimumBoard + 12);
       shortcuts.hidden = requiredHeight > availableHeight;
     }
 

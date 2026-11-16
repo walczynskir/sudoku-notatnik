@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.31.1 — 2026-11-16
+
+- Na telefonie pełny ekran mieści skróty pod klawiaturą dzięki ciaśniejszemu układowi.
+- Przyciski losowania i łamigłówki dnia pozostają widoczne podczas przewijania poziomów. Wyjaśniono, jak zdobyć plakietkę.
 ## 1.31.0
 
 - Na pełnym ekranie, gdy jest miejsce pod klawiaturą, dostępne są skróty „Oblicz kandydatów” i „Podpowiedz technikę”.

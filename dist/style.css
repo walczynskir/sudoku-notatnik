@@ -137,3 +137,34 @@ html[data-text-size="large"] .support-causes .support-note{font-size:14px}
 .technique-picker .difficulty-tile{width:100%;height:100%}
 .advanced-levels .difficulty-options{grid-template-columns:repeat(2,minmax(0,1fr))}
 .difficulty-tile small{font-size:11px;line-height:1.4;font-weight:400;display:block}
+
+#library-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  max-height: min(92vh, 92dvh);
+  overflow: hidden;
+}
+.library-heading, .library-footer { flex: none; }
+.library-heading > p { margin: 0 0 8px; }
+.library-scroll { min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+#library-dialog .library-footer {
+  border-block-start: 1px solid var(--line);
+  padding-block-start: 8px;
+}
+#library-dialog .library-footer .library-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+}
+#library-dialog .library-footer button {
+  min-height: 44px;
+  padding-inline: 6px;
+  overflow-wrap: anywhere;
+}
+#library-dialog #library-status { margin: 4px 0 0; }
+#library-dialog #library-status:empty { display: none; }
+@media (max-width: 640px) {
+  #library-dialog { padding: 14px; }
+  #library-dialog .difficulty-picker { margin-block-start: 6px; }
+}

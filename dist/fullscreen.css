@@ -68,3 +68,12 @@ html[data-theme] .sudoku-fullscreen #entry-controls .keypad {
   padding: 6px;
   overflow-wrap: anywhere;
 }
+
+@media (max-width: 640px) and (orientation: portrait) {
+  html[data-theme]:not([data-text-size="large"]) .sudoku-fullscreen #entry-controls .keypad {
+    margin-block: 6px;
+  }
+  html[data-theme]:not([data-text-size="large"]) .sudoku-fullscreen #entry-controls #mode-help {
+    display: none;
+  }
+}
