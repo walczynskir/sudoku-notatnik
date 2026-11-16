@@ -1,0 +1,58 @@
+#fullscreen .fullscreen-icon { display: none; }
+@media (max-width: 640px) {
+  #fullscreen .fullscreen-label { display: none; }
+  #fullscreen .fullscreen-icon { display: inline; font-size: 20px; }
+  html[data-theme] #fullscreen { min-width: 44px; padding-inline: 6px; }
+}
+.sudoku-fullscreen :is(body > header, main > .intro, main > #my-progress, main > footer, .workspace > aside, .board-bottom, #entry-check-status, #status, #my-progress-mobile) {
+  display: none;
+}
+html[data-theme] .sudoku-fullscreen main {
+  max-width: none;
+  padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right))
+    max(8px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+}
+html[data-theme] .sudoku-fullscreen .workspace {
+  display: block;
+  max-width: min(100%, max(320px, var(--fullscreen-board-size, 560px)));
+  margin-inline: auto;
+}
+html[data-theme] .sudoku-fullscreen :is(.board-panel, .board-scroll, #mobile-entry-slot) {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  position: static;
+}
+html[data-theme] .sudoku-fullscreen .board-panel { padding: 0; background: transparent; border: 0; }
+html[data-theme] .sudoku-fullscreen .game-actions { margin-bottom: 6px; gap: 4px; }
+html[data-theme] .sudoku-fullscreen .game-secondary { gap: 4px; }
+html[data-theme] .sudoku-fullscreen .quick-toolbar { margin-bottom: 6px; }
+html[data-theme] .sudoku-fullscreen .board {
+  width: min(100%, var(--fullscreen-board-size, 560px));
+  margin-inline: auto;
+}
+html[data-theme]:not([data-text-size="large"]) .sudoku-fullscreen .board { min-width: 0; }
+html[data-text-size="large"] .sudoku-fullscreen .board-scroll { overflow-x: auto; }
+html[data-theme] .sudoku-fullscreen #entry-controls .keypad {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+.sudoku-fullscreen #fullscreen-hint #hint-result {
+  padding: 8px 12px;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.sudoku-fullscreen #hint-name { margin-block: 4px 8px; }
+@media (orientation: landscape) and (max-height: 600px) {
+  html[data-theme] .sudoku-fullscreen .workspace { max-width: 760px; }
+  html[data-theme] .sudoku-fullscreen .board-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4px 12px;
+    align-items: start;
+  }
+  .sudoku-fullscreen .board-panel > :not(.board-scroll, #mobile-entry-slot, #fullscreen-hint) { grid-column: 1 / -1; }
+  .sudoku-fullscreen #fullscreen-hint { grid-column: 2; }
+  html[data-theme] .sudoku-fullscreen #entry-controls .keypad { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.30.0 — 2026-11-16
+
+- Dodano pełny ekran z planszą i klawiaturą oraz polecenie „Podpowiedz technikę” w menu „Więcej”.
+
 ## 1.29.1 — 2026-11-16
 
 - Klasyczny używa stałych zielonych wypełnień dla aktywnego obszaru i pasujących cyfr.

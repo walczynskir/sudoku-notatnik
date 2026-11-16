@@ -256,3 +256,10 @@ Miedź odblokujesz po 3, a Nocne niebo po 10 różnych ukończonych planszach z 
 Pierwsze otwarcie z internetem pobiera pliki gry i bibliotekę. Potem możesz rozwiązywać plansze i korzystać z podpowiedzi offline. Rozpoznawanie cyfr ze zdjęcia wymaga pobrania silnika OCR. Zapis planszy i ustawienia należą do przeglądarki lub zainstalowanej aplikacji. Aby przenieść planszę, użyj eksportu i importu JSON.
 
 Po aktualizacji zamknij wszystkie otwarte okna Sudoku i uruchom grę ponownie, aby przeglądarka mogła przełączyć się na nową wersję.
+
+
+## Pełny ekran
+
+Przycisk **Pełny ekran** na pasku gry (⛶ na telefonie) otwiera widok z planszą i klawiaturą. Na ustawieniu A+ lub niskim ekranie część widoku można przewinąć. W orientacji poziomej klawiatura mieści się obok planszy. Ten sam przycisk przywraca zwykły widok.
+
+Wybierz **Więcej → Podpowiedz technikę**, aby zobaczyć nazwę techniki obok planszy. **Pokaż pola** odsłania zaznaczenia i opis ruchu.

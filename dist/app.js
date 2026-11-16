@@ -70,7 +70,7 @@ render();
 const phoneLayout=window.matchMedia('(max-width: 640px)');
 function positionEntryControls(){
  const entry=$('entry-controls');
- if(phoneLayout.matches){$('mobile-entry-slot').append(entry);}
+ if(phoneLayout.matches||document.body.classList.contains('sudoku-fullscreen')){$('mobile-entry-slot').append(entry);}
  else{$('desktop-entry-slot').append(entry);}
 }
 phoneLayout.addEventListener('change',positionEntryControls);
@@ -79,6 +79,6 @@ positionEntryControls();
 const toolbarMenus=[...document.querySelectorAll('.toolbar-menu')];
 function closeToolbarMenus(){toolbarMenus.forEach(menu=>menu.open=false);}
 for(const menu of toolbarMenus)menu.addEventListener('toggle',()=>{if(menu.open)toolbarMenus.filter(other=>other!==menu).forEach(other=>other.open=false);});
-document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>{closeToolbarMenus();$(button.dataset.action).click();}));
+document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>{closeToolbarMenus();$(button.dataset.action).click();if(button.dataset.action==='hint-technique'){$('hint-name').focus();}}));
 document.addEventListener('click',event=>{if(!event.target.closest('.quick-toolbar'))closeToolbarMenus();});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=toolbarMenus.find(menu=>menu.open);if(open){closeToolbarMenus();open.querySelector('summary').focus();}}});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=toolbarMenus.find(menu=>menu.open);if(open){event.preventDefault();closeToolbarMenus();open.querySelector('summary').focus();}}});

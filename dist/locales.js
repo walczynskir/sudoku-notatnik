@@ -652,6 +652,9 @@
     "كيف تعمل؟",
     "Come funziona?"
   , "Як це працює?"],
+  "Pełny ekran": ["Full screen", "Pantalla completa", "Vollbild", "全屏", "पूर्ण स्क्रीन", "Plein écran", "ملء الشاشة", "Schermo intero", "На весь екран"],
+  "Wyjdź z pełnego ekranu": ["Exit full screen", "Salir de pantalla completa", "Vollbild beenden", "退出全屏", "पूर्ण स्क्रीन से बाहर निकलें", "Quitter le plein écran", "الخروج من ملء الشاشة", "Esci da schermo intero", "Вийти з повноекранного режиму"],
+  "Pokaż pola": ["Show cells", "Mostrar casillas", "Felder anzeigen", "显示格子", "खाने दिखाएँ", "Afficher les cases", "أظهر الخانات", "Mostra le celle", "Показати клітинки"],
   "Pokaż pola i wyjaśnienie ruchu": [
     "Show cells and explain the move",
     "Mostrar casillas y explicar el paso",
