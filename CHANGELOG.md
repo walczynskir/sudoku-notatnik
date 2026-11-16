@@ -1,5 +1,8 @@
 # v1.27.1
 
+## 1.31.3
+
+- Przycisk ustawień korzysta ze wspólnej ikony Games Chest, także w trybie wymuszonych kolorów i offline.
 ## 1.31.2 — 2026-11-16
 
 - Skróty pod klawiaturą pełnoekranową zajmują całą szerokość wiersza na telefonie.

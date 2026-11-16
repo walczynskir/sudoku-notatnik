@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.31.2';
+const cacheName = cachePrefix + '1.31.3';
 const scope = self.registration.scope;
 const assetNames = [
   "accessibility.css",
@@ -83,6 +83,7 @@ const assetNames = [
   "puzzles/medium-4.json",
   "puzzles/medium-5.json",
   "puzzles/technique-levels.json",
+  "settings-gear.svg",
   "shared-game.css",
   "shared-palettes.css",
   "shared-victory.css",
