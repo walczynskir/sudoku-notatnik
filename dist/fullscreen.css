@@ -58,6 +58,7 @@ html[data-theme] .sudoku-fullscreen #entry-controls .keypad {
 }
 
 .sudoku-fullscreen #fullscreen-shortcuts:not([hidden]) {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 6px;
@@ -66,7 +67,8 @@ html[data-theme] .sudoku-fullscreen #entry-controls .keypad {
 .sudoku-fullscreen #fullscreen-shortcuts button {
   min-height: 44px;
   padding: 6px;
-  overflow-wrap: anywhere;
+  font-size: 13px;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 640px) and (orientation: portrait) {

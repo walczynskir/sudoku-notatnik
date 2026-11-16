@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.31.1';
+const cacheName = cachePrefix + '1.31.2';
 const scope = self.registration.scope;
 const assetNames = [
   "accessibility.css",

@@ -1,5 +1,8 @@
 # v1.27.1
 
+## 1.31.2 — 2026-11-16
+
+- Skróty pod klawiaturą pełnoekranową zajmują całą szerokość wiersza na telefonie.
 ## 1.31.1 — 2026-11-16
 
 - Na telefonie pełny ekran mieści skróty pod klawiaturą dzięki ciaśniejszemu układowi.
