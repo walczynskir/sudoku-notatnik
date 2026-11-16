@@ -1,5 +1,9 @@
 # v1.27.1
 
+## 1.29.1 — 2026-11-16
+
+- Klasyczny używa stałych zielonych wypełnień dla aktywnego obszaru i pasujących cyfr.
+
 ## 1.29.0 — 2026-11-14
 
 - Instalacja Trenera Sudoku z przeglądarki na Androidzie i iPhonie. Po pobraniu plików plansza, podpowiedzi i biblioteka działają offline.
