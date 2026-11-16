@@ -1,5 +1,8 @@
 # v1.27.1
 
+## 1.31.0
+
+- Na pełnym ekranie, gdy jest miejsce pod klawiaturą, dostępne są skróty „Oblicz kandydatów” i „Podpowiedz technikę”.
 ## 1.30.1 — 2026-11-16
 
 - W menu „Więcej” podpowiedź techniki znajduje się po narzędziach kandydatów, a akcje dotyczące całej planszy są pod separatorem.

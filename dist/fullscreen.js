@@ -4,6 +4,7 @@
   const panel = document.querySelector('.board-panel');
   const boardScroll = panel.querySelector('.board-scroll');
   const entry = document.getElementById('entry-controls');
+  const shortcuts = document.getElementById('fullscreen-shortcuts');
   const hintResult = document.getElementById('hint-result');
   const hintReveal = document.getElementById('hint-reveal');
   const compact = () => document.body.classList.contains('sudoku-fullscreen');
@@ -12,10 +13,21 @@
   function fitBoard() {
     if (!compact()) return;
     const main = document.querySelector('main');
-    const bottomPadding = parseFloat(getComputedStyle(main).paddingBottom);
+    const padding = getComputedStyle(main);
     const landscape = matchMedia('(orientation: landscape) and (max-height: 600px)').matches;
+    const availableHeight = innerHeight - (boardScroll.getBoundingClientRect().top + scrollY) -
+      parseFloat(padding.paddingBottom);
+    const boardWidth = Math.min(560, main.clientWidth -
+      parseFloat(padding.paddingLeft) - parseFloat(padding.paddingRight));
+
+    shortcuts.hidden = root.dataset.textSize === 'large';
+    if (!shortcuts.hidden) {
+      const requiredHeight = entry.offsetHeight + (landscape ? 0 : boardWidth + 12);
+      shortcuts.hidden = requiredHeight > availableHeight;
+    }
+
     const controlsHeight = landscape ? 0 : entry.offsetHeight + 12;
-    const available = innerHeight - (boardScroll.getBoundingClientRect().top + scrollY) - bottomPadding - controlsHeight;
+    const available = availableHeight - controlsHeight;
     panel.style.setProperty('--fullscreen-board-size', Math.max(270, Math.floor(available)) + 'px');
   }
 
@@ -33,7 +45,10 @@
     button.setAttribute('aria-pressed', String(open));
     window.scrollTo(0, open ? 0 : previousScroll);
     if (open) fitBoard();
-    else panel.style.removeProperty('--fullscreen-board-size');
+    else {
+      shortcuts.hidden = true;
+      panel.style.removeProperty('--fullscreen-board-size');
+    }
   }
 
   button.addEventListener('click', async () => {

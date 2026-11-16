@@ -29,3 +29,8 @@ Dodano tłumaczenia przycisku Kontrast i etykiety Oblicz kandydatów bez ozdobne
 Testy obejmują powrót do motywu po wyłączeniu kontrastu i przeładowaniu, zgodność selektora, działanie bez pamięci lokalnej, niezależność większego tekstu, brak opcji kontrastu w obu listach oraz tłumaczenia. Test kredytów porównuje wynik do odpowiedniego wpisu katalogu, ponieważ poprawny niemiecki Kontrast jest identyczny z polskim słowem. W przeglądarce sprawdzono nagłówek 390/320 px, wykonanie Oblicz kandydatów z Więcej, zamknięcie menu po akcji, przywrócenie Mandarynki i układ większego tekstu.
 
 Mobilny nagłówek używa teraz dwóch rzeczywistych wierszy CSS Grid: nazwa i dostępność, następnie język i motyw. Nie ma absolutnie pozycjonowanej grupy nad selektorem. Większy tekst układa kontrolki w dodatkowe wiersze. Przycisk Kontrast dopasowuje promień do motywu: Szałwia 8 px, Atrament i papier 3 px, Pracownia i kontrast 2 px, pozostałe warianty kapsułka.
+
+W trybie pełnoekranowym pod przyciskiem „Wyczyść wybrane pole” pojawiają się
+skróty „Oblicz kandydatów” i „Podpowiedz technikę”, jeśli mieszczą się obok
+planszy i klawiatury lub pod nimi. Przy małej wysokości i w trybie większego
+tekstu obie akcje są dostępne w menu „Więcej”.

@@ -56,3 +56,15 @@ html[data-theme] .sudoku-fullscreen #entry-controls .keypad {
   .sudoku-fullscreen #fullscreen-hint { grid-column: 2; }
   html[data-theme] .sudoku-fullscreen #entry-controls .keypad { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+.sudoku-fullscreen #fullscreen-shortcuts:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-block-start: 6px;
+}
+.sudoku-fullscreen #fullscreen-shortcuts button {
+  min-height: 44px;
+  padding: 6px;
+  overflow-wrap: anywhere;
+}
