@@ -1,5 +1,8 @@
 # v1.27.1
 
+## 1.30.1 — 2026-11-16
+
+- W menu „Więcej” podpowiedź techniki znajduje się po narzędziach kandydatów, a akcje dotyczące całej planszy są pod separatorem.
 ## 1.30.0 — 2026-11-16
 
 - Dodano pełny ekran z planszą i klawiaturą oraz polecenie „Podpowiedz technikę” w menu „Więcej”.
