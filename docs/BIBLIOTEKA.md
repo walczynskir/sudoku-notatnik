@@ -40,3 +40,24 @@ Klucz `sudoku-library-v1` w localStorage zawiera ID ukończonych plansz i ostatn
 Każdy identyfikator ukończonej planszy jest liczony tylko raz, także po ponownym rozwiązaniu. Postęp nie korzysta z cookies. Wyczyszczenie danych witryny usuwa zapis. Postępy nie synchronizują się między urządzeniami, profilami przeglądarki ani adresami. Eksport JSON przenosi liczby i kandydatów, nie listę ukończonych i nie metadane biblioteki. Brak dostępu do localStorage nie blokuje gry. Przy błędzie pobierania lub zamknięciu okna przed końcem wczytywania dotychczasowa plansza pozostaje nienaruszona. Zastąpienie istniejącej planszy wymaga potwierdzenia.
 
 Od wersji 1.14.4 każdy poziom trudności ma osobną łamigłówkę dnia. Wybierz poziom, a potem „Łamigłówka dnia”. Wybór planszy zależy od daty UTC i zbioru danego poziomu, nie od lokalnego postępu. Zmiana następuje o północy UTC; dotychczasowy wybór dla poziomu średniego pozostaje zgodny.
+
+## Ukończenia i powtórki
+
+Biblioteka zachowuje zbiór identyfikatorów ukończonych łamigłówek.
+Licznik poziomu obejmuje tylko identyfikatory obecne w jego katalogu.
+Losowanie preferuje nieukończone plansze i pomija bieżącą, gdy ma alternatywę.
+Po ukończeniu wszystkich plansz poziomu okno wyboru wyjaśnia, że losowanie
+rozpoczyna powtórki. Ponowne rozwiązanie nie zwiększa liczby unikalnych ukończeń.
+Łamigłówka dnia jest wspólna dla daty i poziomu i może być już ukończona.
+
+Wybór nowej planszy zapisujemy dopiero po zaakceptowaniu zastąpienia bieżącej.
+Anulowanie zachowuje planszę, historię i sesję. Nowa plansza oraz potwierdzony
+restart czyszczą Cofnij i Przywróć. Restart rozpoczyna nową sesję rozwiązywania,
+z zachowaniem ukończeń, nagród i daty łamigłówki dnia. Sudoku nie liczy przegranych.
+Odświeżenie odtwarza bieżącą planszę i zapisany postęp.
+
+Lokalna weryfikacja punktu 5 backlogu, 17 listopada 2026, obejmuje
+testy biblioteki oraz tests/results-browser.cjs (Chrome, 390 i 1280 px,
+anulowanie, restart, nowe granice historii, wznowienie, komunikat i RTL).
+Skrypt przeglądarkowy uruchamia się z PLAYWRIGHT_PATH wskazującym instalację
+Playwright. Zmianę zatwierdzono po lokalnym podglądzie i przygotowano do wydania 1.31.4.

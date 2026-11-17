@@ -1,5 +1,11 @@
 # v1.27.1
 
+## 1.31.4 — 2026-11-17
+
+- Nowa plansza i restart rozpoczynają nową historię cofania, zachowując ukończenia.
+- Wybór planszy jest zapisywany po potwierdzeniu. Anulowanie zachowuje dotychczasową sesję.
+- Biblioteka informuje o powtórkach po ukończeniu poziomu we wszystkich językach.
+
 ## 1.31.3
 
 - Przycisk ustawień korzysta ze wspólnej ikony Games Chest, także w trybie wymuszonych kolorów i offline.

@@ -25,8 +25,49 @@ test('closing the picker during a delayed puzzle load never replaces the existin
 for(const level of L.levels)test('daily button loads the chosen difficulty: '+level,async()=>{
  const vm=require('node:vm'),source=fs.readFileSync(require.resolve('../dist/library.js'),'utf8'),elements=new Map(),handlers={},requests=[];let loaded=null,saved=null;
  class FixedDate extends Date{constructor(...args){super(...(args.length?args:['2026-11-01T12:00:00Z']));}}
- const c={save(){},render(){},Sudoku:S,initial:{values:Array(81).fill(0)},state:{values:Array(81).fill(0)},Date:FixedDate,URL,document:{baseURI:'http://localhost/',getElementById(id){if(!elements.has(id))elements.set(id,{value:'medium',checked:false,open:false,classList:{toggle(){}},addEventListener(name,fn){handlers[name]=fn;},showModal(){this.open=true;},close(){this.open=false;handlers.close?.();}});return elements.get(id);}},localStorage:{getItem:()=>null,setItem(k,v){saved=JSON.parse(v);}},replace(board){loaded=board;},fetch:async url=>{const file=path.basename(url.pathname);requests.push(file);return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(base,file),'utf8'))};}};
+ const c={save(){},render(){},Sudoku:S,initial:{values:Array(81).fill(0)},state:{values:Array(81).fill(0)},Date:FixedDate,URL,document:{baseURI:'http://localhost/',getElementById(id){if(!elements.has(id))elements.set(id,{value:'medium',checked:false,open:false,classList:{toggle(){}},addEventListener(name,fn){handlers[name]=fn;},showModal(){this.open=true;},close(){this.open=false;handlers.close?.();}});return elements.get(id);}},localStorage:{getItem:()=>null,setItem(k,v){saved=JSON.parse(v);}},replace(board,label,accept){loaded=board;accept();},fetch:async url=>{const file=path.basename(url.pathname);requests.push(file);return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(base,file),'utf8'))};}};
  vm.createContext(c);vm.runInContext(source,c);await elements.get('open-library').onclick();const radio=elements.get('library-level-'+level);radio.value=level;radio.checked=true;radio.onchange();await elements.get('library-daily').onclick();
  const ids=manifest.levels[level].chunks.flatMap(c=>c.ids),expectedId=L.dailyId(ids,'2026-11-01'),chunk=manifest.levels[level].chunks.find(c=>c.ids.includes(expectedId)),record=JSON.parse(fs.readFileSync(path.join(base,chunk.file),'utf8')).find(r=>r.id===expectedId);
  assert(loaded);assert.equal(loaded.values.join(''),record.givens);assert.equal(saved.recent[0].level,level);assert.equal(saved.recent[0].id,expectedId);assert.deepEqual(requests,['manifest.json',chunk.file]);
+});
+
+test('level progress intersects unique catalog IDs and ignores legacy foreign IDs',()=>{
+ const completed=new Set(['a','b','legacy']);
+ assert.deepEqual(L.levelProgress(['a','b','b'],completed),{count:2,total:2,exhausted:true});
+ assert.deepEqual(L.levelProgress(['a','c'],completed),{count:1,total:2,exhausted:false});
+ assert.deepEqual(L.levelProgress([],completed),{count:0,total:0,exhausted:false});
+ assert.equal(L.chooseId(['a','b'],completed,()=>0,'a'),'b');
+ assert.equal(L.chooseId(['a'],completed,()=>0,'a'),'a');
+});
+
+test('pending replacement does not change library storage and commits once on acceptance',async()=>{
+ const vm=require('node:vm'),source=fs.readFileSync(require.resolve('../dist/library.js'),'utf8');
+ const elements=new Map(),handlers={},storage={},begun=[];
+ let accept;
+ const c={save(){},render(){},Sudoku:S,initial:{values:Array(81).fill(0)},state:{values:Array(81).fill(0)},
+ document:{baseURI:'http://localhost/',getElementById(id){
+  if(!elements.has(id))elements.set(id,{value:'easy',checked:false,open:false,classList:{toggle(){}},
+   addEventListener(name,fn){handlers[name]=fn;},showModal(){this.open=true;},close(){this.open=false;handlers.close?.();}});
+  return elements.get(id);
+ }},
+ localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>storage[k]=v},
+ URL,replace(board,label,fn){accept=fn;},
+ SudokuProgress:{begin:r=>begun.push(r.id),onBoard(){}},
+ fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(base,path.basename(url.pathname)),'utf8'))})};
+ vm.createContext(c);vm.runInContext(source,c);
+ await elements.get('open-library').onclick();
+ await elements.get('library-start').onclick();
+ assert.equal(storage['sudoku-library-v1'],undefined);
+ assert.equal(begun.length,0);
+ // Cancellation leaves the old save and its counters intact.
+ await elements.get('open-library').onclick();
+ await elements.get('library-start').onclick();
+ accept();accept();
+ assert.equal(begun.length,1);
+ const saved=JSON.parse(storage['sudoku-library-v1']);
+ assert.equal(saved.recent.length,1);assert.deepEqual(saved.completed,[]);
+ // Restore an old save, complete it twice, and restore again.
+ storage['sudoku-library-v1']=JSON.stringify({...saved,completed:[saved.recent[0].id,saved.recent[0].id]});
+ vm.runInContext(source,c);
+ assert.equal(c.SudokuLibrary.levelProgress([saved.recent[0].id],new Set(JSON.parse(storage['sudoku-library-v1']).completed)).count,1);
 });
