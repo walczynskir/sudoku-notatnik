@@ -1,5 +1,11 @@
 # Historia wydań
 
+## 1.32.1 — 2026-11-18
+
+- Wspólny układ ustawień Games Chest z przewijaną treścią i zamykaniem wyłącznie przez × lub Escape.
+- Etykiety momentu zastosowania i opisy ⓘ we wszystkich językach.
+- Ponowienie nieudanego zapisu zachowuje bieżącą planszę i osiągnięcia.
+
 ## 1.32.0 — 2026-11-18
 
 - Wspólny adaptacyjny pasek Games Chest: Nowa gra po lewej, historia i pozostałe sterowanie po prawej.

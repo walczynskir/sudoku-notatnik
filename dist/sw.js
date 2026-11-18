@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.32.0';
+const cacheName = cachePrefix + '1.32.1';
 const scope = self.registration.scope;
 const assetNames = [
   "accessibility.css",
@@ -15,6 +15,10 @@ const assetNames = [
   "forma.css",
   "games-chest-menu.css",
   "games-chest-menu.js",
+  "shared-settings.css",
+  "settings-strings.js",
+  "settings-sudoku.css",
+  "settings-sudoku.js",
   "toolbar.css",
   "toolbar.js",
   "fullscreen.css",

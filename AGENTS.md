@@ -48,3 +48,9 @@ Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `s
 - W pasku gry pokazuj przetłumaczoną etykietę „Nowa gra”, gdy przyciski mieszczą się w jednym wierszu. Gdy brakuje miejsca, użyj „+” z pełną przetłumaczoną nazwą dostępną. Dobieraj wariant do dostępnego miejsca, uwzględniając A+, język i pełny ekran. Etykiety „Cofnij” i „Przywróć” pokazuj, gdy mieszczą się w dostępnym miejscu, także w poziomie i pełnym ekranie. Ikony stosuj w ciasnym układzie. Pasek w pełnym ekranie wyrównuj względem stołu i uwzględniaj bezpieczne odstępy od obu krawędzi oraz safe-area.
 
 - Cofnij/Przywróć jest domyślnie wyłączone poza Sudoku; w Sudoku jest domyślnie włączone. Zachowuj zapisany wybór. Wyłączenie ukrywa oba przyciski; włączenie pokazuje oba stale, nieaktywne przy braku historii. Ustawienie ma przetłumaczoną nazwę „Cofnij i Przywróć” oraz opis.
+
+## Wspólne ustawienia Games Chest
+
+- Stosuj zaakceptowany układ z Ośmiu Asów (`shared-settings.css`, `settings-strings.js`): nagłówek, przewijana treść i grupy opcji. Zachowuj własne opcje gry, ich klucze i moment zastosowania.
+- Zamykaj okno wyłącznie przyciskiem × w prawym górnym rogu z pełną przetłumaczoną nazwą dostępną i celem minimum 44 × 44 px; bez dolnego przycisku Zamknij. Escape zamyka okno i przywraca fokus do przycisku ustawień.
+- Zapisuj poprawne wartości automatycznie. Pokazuj błąd zapisu i umożliwiaj ponowienie. Opisy pod ⓘ i etykiety przy opcjach wyjaśniają moment zastosowania. Zamykanie zachowuje zmiany. Eksport/import to osobny zakres.
