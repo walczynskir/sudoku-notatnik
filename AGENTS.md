@@ -38,3 +38,13 @@
 ## Wydania
 
 Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `scripts/release-version.mjs` przed każdą publikacją.
+
+## Wspólny pasek przycisków gry
+
+
+- W pionie i poziomie umieszczaj „Nowa gra” po lewej, a „Cofnij” i „Przywróć” w grupie przycisków po prawej, obok pełnego ekranu, pomocy i ustawień. Wszystkie te przyciski mają znajdować się w jednej linii. Cofanie i przywracanie są przysunięte do prawej grupy. Na wąskim ekranie stosuj ikony z przetłumaczonymi nazwami dostępnymi.
+- Układ obejmuje także Garibaldkę w poziomie. Przymierz go na rzeczywistej planszy, z A+ i pełnym ekranem, przed przeniesieniem do pozostałych gier. Szczegóły gęstości i rozmiarów wymagają weryfikacji podglądu.
+- Przełącznik wysokiego kontrastu ma widoczną etykietę „Kontrast” (z odpowiednim tłumaczeniem). Pełną nazwę „Wysoki kontrast” zachowaj jako przetłumaczoną nazwę dostępną. Aktualizuj aria-pressed. W nagłówku zapewnij miejsce na nazwę gry, Kontrast i A+ bez nakładania i obcinania, także na wąskim ekranie oraz przy powiększonym tekście.
+- W pasku gry pokazuj przetłumaczoną etykietę „Nowa gra”, gdy przyciski mieszczą się w jednym wierszu. Gdy brakuje miejsca, użyj „+” z pełną przetłumaczoną nazwą dostępną. Dobieraj wariant do dostępnego miejsca, uwzględniając A+, język i pełny ekran. Etykiety „Cofnij” i „Przywróć” pokazuj, gdy mieszczą się w dostępnym miejscu, także w poziomie i pełnym ekranie. Ikony stosuj w ciasnym układzie. Pasek w pełnym ekranie wyrównuj względem stołu i uwzględniaj bezpieczne odstępy od obu krawędzi oraz safe-area.
+
+- Cofnij/Przywróć jest domyślnie wyłączone poza Sudoku; w Sudoku jest domyślnie włączone. Zachowuj zapisany wybór. Wyłączenie ukrywa oba przyciski; włączenie pokazuje oba stale, nieaktywne przy braku historii. Ustawienie ma przetłumaczoną nazwę „Cofnij i Przywróć” oraz opis.

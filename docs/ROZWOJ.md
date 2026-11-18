@@ -78,7 +78,7 @@ Repozytorium: https://github.com/walczynskir/sudoku-notatnik (publiczne).
 
 Strona docelowa: https://rsudoku.pl/ (publiczna, GitHub Pages).
 
-Starsza kopia Sites: https://sudoku-notatnik-rw.deluxemonk1.chatgpt.site/ — oddzielna publikacja, może zawierać starszy kod.
+Kopia Sites: https://sudoku-notatnik-rw.walczynskir.chatgpt.site/ — oddzielna publikacja. Wydanie 1.32.0 synchronizuje ją z kodem GitHub Pages.
 
 GitHub Pages: https://walczynskir.github.io/sudoku-notatnik/.
 

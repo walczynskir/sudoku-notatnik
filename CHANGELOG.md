@@ -1,4 +1,10 @@
-# v1.27.1
+# Historia wydań
+
+## 1.32.0 — 2026-11-18
+
+- Wspólny adaptacyjny pasek Games Chest: Nowa gra po lewej, historia i pozostałe sterowanie po prawej.
+- Preferencja Cofnij i Przywróć zachowuje wybór; wyłączenie ukrywa przyciski bez usuwania historii.
+- Dopasowanie etykiet do dostępnego miejsca, A+, RTL i bezpiecznych odstępów pełnego ekranu.
 
 ## 1.31.4 — 2026-11-17
 
