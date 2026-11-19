@@ -22,11 +22,11 @@
  let queued=false;
  function fit(){
   queued=false;
-  bar.classList.remove('toolbar-compact','toolbar-icons','toolbar-new-icon');
+  bar.classList.remove('toolbar-compact','toolbar-icons','toolbar-new-icon','toolbar-picker-icon','toolbar-overflow');
   const css=getComputedStyle(bar);
   const available=bar.clientWidth-parseFloat(css.paddingLeft)-parseFloat(css.paddingRight);
   const required=()=>Math.ceil(document.getElementById('open-library').getBoundingClientRect().width+bar.querySelector('.game-secondary').getBoundingClientRect().width+parseFloat(css.columnGap));
-  for(const mode of ['toolbar-compact','toolbar-icons','toolbar-new-icon']) if(required()>available)bar.classList.add(mode);
+  for(const mode of ['toolbar-compact','toolbar-icons','toolbar-new-icon','toolbar-picker-icon','toolbar-overflow']) if(required()>available)bar.classList.add(mode);
  }
  const schedule=()=>{if(!queued){queued=true;requestAnimationFrame(fit)}};
  new ResizeObserver(schedule).observe(bar);

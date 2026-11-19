@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.33.0';
+const cacheName = cachePrefix + '1.34.0';
 const scope = self.registration.scope;
 const assetNames = [
   "backup-recovery.js",
@@ -23,6 +23,12 @@ const assetNames = [
   "favicon.svg",
   "forma.css",
   "games-chest-menu.css",
+  "games-chest/games.json",
+  "games-chest/sudoku-logo.svg",
+  "games-chest/domino-logo.svg",
+  "games-chest/eightaces-icon.png",
+  "games-chest/garibaldka-icon.png",
+  "games-chest/gomoku-icon.png",
   "games-chest-menu.js",
   "shared-settings.css",
   "settings-strings.js",

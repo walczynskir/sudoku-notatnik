@@ -5,8 +5,8 @@ html[data-theme] #play-launch button{display:inline-flex;align-items:center;just
 html[data-theme] #play-launch #open-preferences{display:inline-grid;place-items:center;width:44px;height:44px;padding:0}
 #play-launch .toolbar-icon{display:none;font:24px/1 system-ui,sans-serif}
 #play-launch button:disabled{opacity:.45}
-html[data-theme] #play-launch.toolbar-compact :is(#fullscreen,#open-help),html[data-theme] #play-launch.toolbar-icons .game-secondary button,html[data-theme] #play-launch.toolbar-new-icon #open-library{width:44px;height:44px;padding:0}
-#play-launch.toolbar-compact :is(.fullscreen-label,.help-open-label),#play-launch.toolbar-icons .game-secondary .toolbar-label,#play-launch.toolbar-new-icon #open-library .toolbar-label{display:none}
+html[data-theme] #play-launch.toolbar-compact :is(#fullscreen,#open-help),html[data-theme] #play-launch.toolbar-icons .game-secondary button:not(#game-picker-button),html[data-theme] #play-launch.toolbar-new-icon #open-library{width:44px;height:44px;padding:0}
+#play-launch.toolbar-compact :is(.fullscreen-label,.help-open-label),#play-launch.toolbar-icons .game-secondary :not(#game-picker-button) > .toolbar-label,#play-launch.toolbar-new-icon #open-library .toolbar-label{display:none}
 #play-launch.toolbar-compact :is(.fullscreen-icon,#open-help .toolbar-icon),#play-launch.toolbar-icons .game-secondary .toolbar-icon,#play-launch.toolbar-new-icon #open-library .toolbar-icon{display:inline}
 #play-launch:not(.toolbar-compact) #fullscreen .fullscreen-label{display:inline}
 #play-launch:not(.toolbar-compact) #fullscreen .fullscreen-icon{display:none}

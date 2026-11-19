@@ -16,32 +16,52 @@ test('the release retains the Games Chest link and the Sudoku analytics tag', ()
 });
 
 test('recent games omit Sudoku and render at most three localized same-tab links', async () => {
-  const heading = {};
-  const allGames = {};
-  const icons = { links: [], replaceChildren() { this.links = []; }, append(link) { this.links.push(link); } };
-  const recent = { querySelector: selector => selector === 'span' ? heading : icons };
-  const menu = { querySelector: selector => selector === '.recent-games' ? recent : allGames };
+  function element() {
+    const children = [];
+    const selectors = new Map();
+    return {
+      children,
+      querySelector(selector) {
+        if (!selectors.has(selector)) selectors.set(selector, element());
+        return selectors.get(selector);
+      },
+      replaceChildren(...items) { children.splice(0, children.length, ...items); },
+      append(item) { children.push(item); },
+      setAttribute() {},
+      addEventListener() {},
+      dispatchEvent() {}
+    };
+  }
+  const nodes = element();
   const document = {
-    currentScript: { dataset: { game: 'sudoku' } },
+    currentScript: { src: 'https://rsudoku.pl/games-chest-menu.js', dataset: { game: 'sudoku' } },
     documentElement: { lang: 'pl' },
-    querySelector: () => menu,
-    createElement: () => ({ append(icon) { this.icon = icon; } })
+    querySelector: nodes.querySelector,
+    createElement: element
   };
-  const ids = ['sudoku', 'domino', 'eight-aces', 'other'];
+  const ids = ['sudoku', 'domino', 'eight-aces', 'garibaldka', 'piec-w-rzedzie'];
   const catalog = ids.map(id => ({
     id, url: 'https://games-chest.com/' + id, icon: id + '.svg', en: id, pl: 'Gra ' + id
   }));
   vm.runInNewContext(readFileSync(require.resolve('../dist/games-chest-menu.js'), 'utf8'), {
-    document, URL, URLSearchParams, location: { search: '?gc-recent=' + ids.join(',') },
+    document, URL, URLSearchParams, Event, performance,
+    location: { search: '?gc-recent=' + ids.join(',') },
     MutationObserver: class { observe() {} },
     fetch: async () => ({ ok: true, json: async () => catalog })
   });
   await new Promise(resolve => setImmediate(resolve));
-  assert.equal(allGames.textContent, 'Wszystkie gry');
-  assert.equal(recent.hidden, false);
-  assert.deepEqual(icons.links.map(link => new URL(link.href).pathname), ['/domino', '/eight-aces', '/other']);
-  for (const link of icons.links) {
+  const menu = document.querySelector('.games-chest-menu');
+  const footer = menu.querySelector('.recent-games');
+  const links = footer.querySelector('.recent-games-icons').children;
+  assert.equal(menu.querySelector('.all-games').textContent, 'Wszystkie gry');
+  assert.equal(footer.hidden, false);
+  assert.deepEqual(links.map(link => new URL(link.href).pathname), ['/domino', '/eight-aces', '/garibaldka']);
+  for (const link of links) {
     assert.equal(link.target, undefined);
-    assert.equal(link.icon.alt, 'Gra ' + new URL(link.href).pathname.slice(1));
+    assert.equal(link.children[0].alt, 'Gra ' + new URL(link.href).pathname.slice(1));
   }
+  const picker = document.querySelector('#game-picker');
+  const remaining = picker.querySelector('#game-picker-list').children;
+  assert.equal(remaining.length, 1);
+  assert.equal(new URL(remaining[0].children[0].href).pathname, '/piec-w-rzedzie');
 });

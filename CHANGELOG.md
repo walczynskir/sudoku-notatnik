@@ -1,3 +1,7 @@
+# 1.34.0 — 2026-11-19
+
+- „Inne gry” na pasku rozgrywki, także w pełnym ekranie. Wybór otwiera grę w tej samej karcie i zachowuje bieżący zapis.
+
 # Historia wydań
 
 ## 1.33.0 — 2026-11-19
