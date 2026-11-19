@@ -1,5 +1,6 @@
 /* Shared settings presentation; Sudoku keeps its existing controllers and keys. */
 (() => {
+ const localStorage=globalThis.SudokuBackupStorage?.storage||globalThis.localStorage;
  const dialog=document.getElementById('preferences-dialog');
  const get=id=>document.getElementById(id);
  const error=get('settings-save-error');

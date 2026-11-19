@@ -54,3 +54,17 @@ Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `s
 - Stosuj zaakceptowany układ z Ośmiu Asów (`shared-settings.css`, `settings-strings.js`): nagłówek, przewijana treść i grupy opcji. Zachowuj własne opcje gry, ich klucze i moment zastosowania.
 - Zamykaj okno wyłącznie przyciskiem × w prawym górnym rogu z pełną przetłumaczoną nazwą dostępną i celem minimum 44 × 44 px; bez dolnego przycisku Zamknij. Escape zamyka okno i przywraca fokus do przycisku ustawień.
 - Zapisuj poprawne wartości automatycznie. Pokazuj błąd zapisu i umożliwiaj ponowienie. Opisy pod ⓘ i etykiety przy opcjach wyjaśniają moment zastosowania. Zamykanie zachowuje zmiany. Eksport/import to osobny zakres.
+
+## Kopia konfiguracji i postępów
+
+- Udostępniaj eksport i import kopii konfiguracji oraz trwałego postępu gry do pliku, do odtworzenia po reinstalacji lub przeniesienia na inne urządzenie. Kopia obejmuje język, motyw, dostępność, opcje gry, statystyki, osiągnięcia, odblokowane motywy oraz identyfikatory ukończonych łamigłówek Sudoku i postęp poziomów.
+- Bieżąca partia i historia jej ruchów pozostają w lokalnym automatycznym zapisie. Kopia przenośna obejmuje trwały dorobek i konfigurację. Import zachowuje bieżącą partię urządzenia docelowego; opcje nowej partii obowiązują od kolejnej gry.
+- Plik oznacz identyfikatorem gry i wersją formatu. Zweryfikuj całość przed zastosowaniem. Czytelnie obsłuż błąd odczytu, zapisu, obcą grę i nieobsługiwaną wersję. Pokaż zakres importowanych danych przed potwierdzeniem. Zasady łączenia określa sekcja „Odtwarzanie konfiguracji i dorobku z kopii”.
+- Eksport i import konfiguracji oraz osiągnięć są docelowym zakresem wspólnej kopii. Istniejące formaty pełnych zapisów uwzględnij przy projektowaniu zgodności, aby zachować możliwość odtworzenia wcześniejszego dorobku.
+
+## Odtwarzanie konfiguracji i dorobku z kopii
+
+- Po potwierdzonym imporcie przyjmuj konfigurację z pliku. Łącz trwały dorobek z istniejącym na urządzeniu, zachowując lokalne osiągnięcia i odblokowania. Wyniki deduplikuj według identyfikatorów partii, a ukończone łamigłówki Sudoku według ich identyfikatorów. Ponowny import tej samej kopii nie zwiększa liczników.
+- Przy konflikcie tego samego identyfikatora wyniku zachowaj wpis urządzenia docelowego. Odblokowane motywy łącz jako zbiór. Bieżąca partia i historia ruchów urządzenia docelowego pozostają zachowane wraz z aktywnymi regułami.
+- Dla dawnych liczników bez identyfikatorów zachowuj wyższą wartość zamiast sumowania. Przed potwierdzeniem wyjaśnij ograniczenie odtwarzania takich danych. Wyliczenia z rozpoznawalnych rekordów i dawnych liczników muszą uwzględniać istniejącą migrację, aby ograniczyć podwójne naliczanie.
+- Wzorcem jest kopia konfiguracji i postępów Ośmiu Asów: `pasjans/dist/shared-progress-backup.js` oraz adapter `progress-backup.js`, opisane w `pasjans/docs/PROGRESS-BACKUP-PREVIEW.md`. Gry używają wspólnej obwiedni formatu i własnych adapterów rzeczywistych danych dorobku.

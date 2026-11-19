@@ -1,5 +1,6 @@
 (function(root){
 'use strict';
+const localStorage=root.SudokuBackupStorage?.storage||root.localStorage;
 const preview=root.SudokuDifficulty?.enabled(root.location)===true,previewLevels=root.SudokuDifficulty?.levels||[],isolated=root.SudokuDifficulty?.isPreview(root.location)===true,storageKey=isolated?'sudoku-library-technique-preview-v1':'sudoku-library-v1';
 const levels=['easy','medium','hard','expert'],labels={easy:'Łatwy',medium:'Średni',hard:'Trudny',expert:'Ekspert'};
 function dailyId(ids,date=new Date().toISOString().slice(0,10)){if(!ids.length)return null;let hash=2166136261;for(const c of 'sudoku-exchange-v1:'+date)hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;return ids[hash%ids.length];}
@@ -33,6 +34,8 @@ function selectedLevel(){return preview?(levelInputs.find(input=>input.checked)?
 for(const input of levelInputs)input.onchange=()=>{if(input.checked){levelSelect.value=input.value;countLabel();}};
 const completed=new Set(),recent=new Map(),cache=new Map();let manifestPromise,manifest=null,epoch=0,current=null;
 try{const saved=JSON.parse(localStorage.getItem(storageKey)||'{}');for(const id of saved.completed||[])if(/^[a-f0-9]{16}$/.test(id))completed.add(id);for(const record of saved.recent||[])if(/^[a-f0-9]{16}$/.test(record.id)&&/^[0-9]{81}$/.test(record.givens)&&levels.includes(record.level)&&Number.isFinite(record.rating))recent.set(record.givens,record);}catch{}
+api.backupData=()=>({completed:[...completed],recent:[...recent.values()]});
+api.restoreBackup=ids=>{completed.clear();for(const id of ids)completed.add(id);countLabel();};
 function persist(){try{localStorage.setItem(storageKey,JSON.stringify({completed:[...completed],recent:[...recent.values()].slice(-1000)}));}catch{status.textContent='Postęp nie może być zapisany na tym urządzeniu. Nadal możesz grać.';}}
 function countLabel(){if(!manifest)return;const progress=levelProgress(manifest.levels[selectedLevel()].chunks.flatMap(c=>c.ids),completed);$('library-progress').textContent=`Ukończone na tym urządzeniu: ${progress.count} / ${progress.total}`;const repeat=$('library-repeat');repeat.hidden=!progress.exhausted;repeat.textContent=progress.exhausted?'Poziom ukończony. Losowanie wybierze powtórkę. Łamigłówka dnia może być powtórką.':'';}
 async function json(file){const response=await fetch(new URL('puzzles/'+file,document.baseURI));if(!response.ok)throw Error('library-fetch');return response.json();}

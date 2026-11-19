@@ -1,0 +1,13 @@
+#backup-confirm{--paper:var(--bg);--wash:var(--accent);font:inherit;line-height:1.5;color:var(--ink);background:var(--bg)}
+#backup-confirm .settings-header{box-sizing:border-box;direction:ltr}
+#backup-confirm .settings-heading h2{font-size:22px;min-width:0;overflow-wrap:anywhere}
+[dir="rtl"] #backup-confirm .settings-heading h2{direction:rtl}
+#backup-confirm button{min-height:44px;border-radius:var(--contrast-control-radius,8px)}
+#backup-confirm #backup-dismiss{border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+#backup-confirm .settings-body p{margin:0 0 14px}
+#backup-summary p,#backup-configuration p{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-block:6px;border-bottom:1px solid var(--line)}
+:is(#backup-confirm,#preferences-dialog) .settings-backup-actions{display:flex;gap:8px;flex-wrap:wrap}
+:is(#backup-confirm,#preferences-dialog) .settings-backup-actions button{flex:1 1 140px;padding:10px;font:inherit;overflow-wrap:anywhere}
+#backup-confirm [hidden]{display:none}
+[data-text-size="large"] #backup-confirm{font-size:18px}
+#backup-status:empty,#backup-error:empty{display:none}

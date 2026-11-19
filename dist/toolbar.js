@@ -1,5 +1,6 @@
 /* Fit translated labels to actual space, following Garibaldka fitToolbar. */
 (() => {
+ const localStorage=globalThis.SudokuBackupStorage?.storage||globalThis.localStorage;
  const bar=document.getElementById('play-launch');
  const preference=document.getElementById('preference-history');
  let showHistory=true;
@@ -17,6 +18,7 @@
  // The preference disables shortcut activation as well as hiding its controls.
  for(const id of ['undo','redo'])document.getElementById(id).addEventListener('click',event=>{if(!showHistory){event.preventDefault();event.stopImmediatePropagation();}},true);
 
+ globalThis.SudokuHistoryPreference={get:()=>showHistory,restore(value){showHistory=value;applyHistory();}};
  let queued=false;
  function fit(){
   queued=false;

@@ -1,7 +1,16 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.32.1';
+const cacheName = cachePrefix + '1.33.0';
 const scope = self.registration.scope;
 const assetNames = [
+  "backup-recovery.js",
+  "shared-preferences.js",
+  "shared-progress-backup.js",
+  "progress-backup.js",
+  "preferences-strings.js",
+  "backup-strings.js",
+  "backup-ui.js",
+  "backup.css",
+
   "accessibility.css",
   "app.js",
   "apple-touch-icon.png",

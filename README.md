@@ -85,3 +85,7 @@ Od 1.26.0 stały pasek nad panelem gry zawiera istniejące przyciski **Nowa gra*
 Od 1.27.0 **⚙ Preferencje gry** obok pomocy zbiera oznaczanie błędnych cyfr, zapamiętany wybór kandydatów dla nowych plansz i cel dzienny. Cel i kandydaci są wspólne z dotychczasowymi kontrolkami; język, motyw, kontrast i większy tekst pozostają w nagłówku.
 
 Źródłem wspólnych palet jest `dist/shared-palettes.css` w Sudoku. Po zmianie skopiuj arkusz bez zmian do katalogów `dist/` Domino i Ośmiu Asów. Sudoku przypisuje wspólne kolory własnym elementom w arkuszach motywów.
+
+## Kopia konfiguracji i postępów
+
+W ustawieniach wybierz **Eksportuj kopię**, aby przenieść konfigurację, ukończone sudoku, cele, plakietki i odblokowane motywy na inne urządzenie. **Importuj kopię** pokazuje zakres przed zatwierdzeniem i łączy dorobek bez duplikatów. Bieżąca plansza i historia pozostają na urządzeniu. Dotychczasowy przycisk Zapisz nadal pobiera planszę i kandydatów. Szczegóły: [Kopia konfiguracji i postępów](docs/KOPIA-POSTEPOW.md).

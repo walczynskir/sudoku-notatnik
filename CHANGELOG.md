@@ -1,5 +1,12 @@
 # Historia wydań
 
+## 1.33.0 — 2026-11-19
+
+- Kopia konfiguracji i trwałego dorobku w ustawieniach: eksport, podgląd zakresu i potwierdzany import we wszystkich językach.
+- Łączenie ukończeń po ID, lokalne rekordy w konfliktach, zachowanie odblokowań oraz idempotentny ponowny import.
+- Aktywna plansza, historia i sesje pozostają lokalne. Opcja oznaczania błędów z kopii obowiązuje od kolejnej próby.
+- Trwały dziennik odzyskuje przerwany import przed odczytem trackerów i blokuje zwykłe zapisy przy nieskutecznym odzyskiwaniu.
+
 ## 1.32.1 — 2026-11-18
 
 - Wspólny układ ustawień Games Chest z przewijaną treścią i zamykaniem wyłącznie przez × lub Escape.

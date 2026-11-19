@@ -1,5 +1,6 @@
 (function(root){
 'use strict';
+const localStorage=root.SudokuBackupStorage?.storage||root.localStorage;
 const techniquePreview=['localhost','127.0.0.1','[::1]'].includes(root.location?.hostname)&&new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('technique-levels')===true;
 const themes=['sage','ink','contrast','studio','forma','energy','tangerine','porcelain','ukraine'],key=techniquePreview?'sudoku-technique-theme-preview':'sudoku-theme',sizeKey='sudoku-large-text',previousKey=techniquePreview?'sudoku-technique-previous-theme-preview':'sudoku-previous-theme';
 const rewardEnabled=['localhost','127.0.0.1','[::1]','rsudoku.pl','www.rsudoku.pl','walczynskir.github.io'].includes(root.location?.hostname)&&new URLSearchParams(root.location?.search||'').get('features')?.split(',').includes('no-gamification')!==true;
@@ -16,6 +17,7 @@ function syncCollectionRewards(total){
  }
  ensureRewardOption(document.getElementById('theme-select'));
 }
+if(rewardEnabled){try{for(const id of JSON.parse(localStorage.getItem('sudoku-unlocked-themes-v1')||'[]'))if(['aurora','obsidian','crown','copper','night-sky'].includes(id)&&!themes.includes(id))themes.push(id);}catch{}}
 function readProgressIds(key,select){
  try{return select(JSON.parse(localStorage.getItem(key)||'{}'));}catch{return [];}
 }
@@ -38,7 +40,7 @@ try{if(current!=='contrast'&&['localhost','127.0.0.1','[::1]'].includes(root.loc
 try{const demo=new URLSearchParams(root.location?.search||'').get('preview');if(techniquePreview&&['obsidian','crown'].includes(demo)){if(!themes.includes(demo))themes.push(demo);current=demo;}}catch{}
 if(current!=='contrast'&&themes.includes(current))previousTheme=current;
 apply(current);applySize(largeText);
-const api={themes,collectionRewards,syncCollectionRewards,registerTechniqueTheme(id){if(!rewardEnabled||!['obsidian','crown'].includes(id))return false;if(!themes.includes(id))themes.push(id);ensureRewardOption(document.getElementById('theme-select'));return true;},registerRewardTheme(){if(!rewardEnabled)return false;if(!themes.includes('aurora'))themes.push('aurora');return true;},get current(){return current;},get largeText(){return largeText;},set(value){if(!themes.includes(value))return false;if(value!=='contrast')previousTheme=value;else if(current!=='contrast')previousTheme=current;apply(value);try{localStorage.setItem(key,current);localStorage.setItem(previousKey,previousTheme);}catch{}return true;},toggleContrast(){return api.set(current==='contrast'?previousTheme:'contrast');},setLargeText(value){if(typeof value!=='boolean')return false;applySize(value);try{localStorage.setItem(sizeKey,String(value));}catch{}return true;}};
+const api={themes,collectionRewards,get rewardsEnabled(){return rewardEnabled;},get baseTheme(){return current==='contrast'?previousTheme:current;},restoreUnlocks(ids){if(rewardEnabled)for(const id of ids)if(['aurora','obsidian','crown','copper','night-sky'].includes(id)&&!themes.includes(id))themes.push(id);ensureRewardOption(document.getElementById('theme-select'));},syncCollectionRewards,registerTechniqueTheme(id){if(!rewardEnabled||!['obsidian','crown'].includes(id))return false;if(!themes.includes(id))themes.push(id);ensureRewardOption(document.getElementById('theme-select'));return true;},registerRewardTheme(){if(!rewardEnabled)return false;if(!themes.includes('aurora'))themes.push('aurora');return true;},get current(){return current;},get largeText(){return largeText;},set(value){if(!themes.includes(value))return false;if(value!=='contrast')previousTheme=value;else if(current!=='contrast')previousTheme=current;apply(value);try{localStorage.setItem(key,current);localStorage.setItem(previousKey,previousTheme);}catch{}return true;},toggleContrast(){return api.set(current==='contrast'?previousTheme:'contrast');},setLargeText(value){if(typeof value!=='boolean')return false;applySize(value);try{localStorage.setItem(sizeKey,String(value));}catch{}return true;}};
 root.SudokuTheme=api;if(typeof module!=='undefined')module.exports=api;
 document.addEventListener('DOMContentLoaded',()=>{apply(current);const contrast=document.getElementById('contrast-toggle');if(contrast)contrast.addEventListener('click',()=>api.toggleContrast());const select=document.getElementById('theme-select');if(select){ensureRewardOption(select);select.value=current==='contrast'?previousTheme:current;select.addEventListener('change',()=>api.set(select.value));}const input=document.getElementById('large-text');if(input){input.checked=largeText;input.addEventListener('change',()=>api.setLargeText(input.checked));}});
 })(globalThis);

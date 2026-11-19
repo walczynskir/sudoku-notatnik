@@ -1,5 +1,6 @@
 (function(root){
 'use strict';
+const localStorage=root.SudokuBackupStorage?.storage||root.localStorage;
 const raw=root.SudokuLocales||(typeof require==='function'?require('./locales.js'):{});
 const languages=['pl','en','es','de','zh-Hans','hi','fr','ar','it','uk'],normalize=s=>s.replace(/\s+/gu,' ').trim();
 const catalog=new Map(Object.entries(raw).map(([key,v])=>[normalize(key),v]));

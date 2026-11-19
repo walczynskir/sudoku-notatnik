@@ -1,6 +1,7 @@
 /* Achievements for unaided technique-level attempts. */
 (function(root){
 'use strict';
+const localStorage=root.SudokuBackupStorage?.storage||root.localStorage;
 const D=root.SudokuDifficulty||(typeof require==='function'?require('./difficulty.js'):null),key=D?.isPreview(root.location)?'sudoku-technique-achievements-preview-v1':'sudoku-technique-achievements-v1';
 const rewards={advanced:{id:'obsidian',name:'Obsydian'},extreme:{id:'crown',name:'Korona'}};
 function createTracker(saved={}){
@@ -22,6 +23,8 @@ api.bind=()=>{const picker=document.querySelector('.technique-picker');if(!picke
  const legend=document.createElement('p');legend.className='library-badge-explanation';legend.textContent='Plakietkę otrzymasz za pierwsze rozwiązanie na danym poziomie bez podpowiedzi i oznaczania błędów.';picker.before(legend);
  panel=document.createElement('details');panel.className='technique-rewards';panel.innerHTML='<summary>Plakietki i motywy nagrodowe</summary><p class="technique-earned-count"></p><p class="help">Plakietkę zdobywasz za pierwsze samodzielne rozwiązanie na danym poziomie. Podpowiedzi techniki i oznaczanie błędów wykluczają zaliczenie. Kandydaci i wypełnianie pojedynczych są dozwolone.</p><div class="technique-reward-grid">'+Object.entries(rewards).map(([level,r])=>`<section data-technique-reward="${level}"><div class="technique-swatch ${r.id}" aria-hidden="true"></div><strong>${r.name}</strong><p class="technique-reward-state"></p><button type="button" class="secondary" disabled>${r.id==='obsidian'?'Wybierz motyw Obsydian':'Wybierz motyw Korona'}</button></section>`).join('')+'</div><p class="help technique-storage-warning" hidden>Nie udało się zapisać nagród. Są dostępne tylko w tej sesji.</p>';picker.after(panel);for(const [level,r]of Object.entries(rewards))panel.querySelector(`[data-technique-reward="${level}"] button`).onclick=()=>{if(tracker.earned(level)){register();root.SudokuTheme?.set(r.id);}};
  notice=document.createElement('p');notice.className='badge-toast';notice.setAttribute('role','status');notice.hidden=true;document.body.append(notice);paint();};
+api.backupData=()=>structuredClone(tracker.data);
+api.restoreBackup=badges=>{tracker.data.badges=structuredClone(badges);paint();};
 api.begin=record=>{tracker.begin(record);persist();};
 api.assist=()=>{if(active){tracker.assist(active.id);persist();}};
 api.onBoard=(record,solved,{errors=false}={})=>{active=record||null;if(!record)return;if(errors)tracker.assist(record.id);const awarded=solved?tracker.finish(record):null;persist();if(awarded&&notice){notice.textContent='🏅 Plakietka samodzielności: '+D.levels.find(l=>l.id===awarded).label;notice.hidden=false;clearTimeout(api.toastTimer);api.toastTimer=setTimeout(()=>{notice.hidden=true;},6000);}};
