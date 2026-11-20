@@ -1,3 +1,7 @@
+# 1.35.3 — Zerowanie statystyk
+
+- Przycisk „Wyzeruj statystyki” w oknie postępów ustawia lokalny punkt odniesienia, zachowując bieżącą grę, wyniki źródłowe i nagrody.
+
 # 1.35.2 — Nagłówek Sudoku
 
 - Zaakceptowana nazwa „Sudoku (krok po kroku)” w nagłówku. Na telefonie krótszy dopisek mieści się pod nazwą, obok Kontrastu i A+.
