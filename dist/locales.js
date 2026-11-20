@@ -210,6 +210,7 @@
     "تعارض الأرقام",
     "Conflitto di cifre"
   , "Конфлікт чисел"],
+  "(krok po kroku)": ["(step by step)", "(paso a paso)", "(Schritt für Schritt)", "（循序渐进）", "(कदम दर कदम)", "(pas à pas)", "(خطوة بخطوة)", "(passo dopo passo)", "(крок за кроком)"],
   "Trener Sudoku — krok po kroku": [
     "Sudoku Trainer — step by step",
     "Entrenador de Sudoku — paso a paso",

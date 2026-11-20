@@ -1,3 +1,7 @@
+# 1.35.2 — Nagłówek Sudoku
+
+- Zaakceptowana nazwa „Sudoku (krok po kroku)” w nagłówku. Na telefonie krótszy dopisek mieści się pod nazwą, obok Kontrastu i A+.
+
 # 1.35.1 — Okno postępów
 
 - Ujednolicono wygląd nagłówka, przycisku zamykania i układu podsumowania „Moje postępy”.
