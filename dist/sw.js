@@ -1,7 +1,8 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.35.0';
+const cacheName = cachePrefix + '1.35.1';
 const scope = self.registration.scope;
 const assetNames = [
+  "progress-summary.css",
   "backup-recovery.js",
   "shared-preferences.js",
   "shared-progress-backup.js",

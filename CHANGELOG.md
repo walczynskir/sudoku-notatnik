@@ -1,3 +1,7 @@
+# 1.35.1 — Okno postępów
+
+- Ujednolicono wygląd nagłówka, przycisku zamykania i układu podsumowania „Moje postępy”.
+
 # 1.35.0 — Moje postępy
 
 - Pasek nad rozgrywką pokazuje cel dzienny i postęp kolekcji w dwóch wyrównanych kolumnach. Cały pasek otwiera dotychczasowe podsumowanie i znika w pełnym ekranie.

@@ -1,4 +1,4 @@
-#progress-dialog{width:min(560px,calc(100vw - 24px));max-height:90svh;overflow:auto}
+#progress-dialog { --progress-summary-width: 560px; }
 #progress-dialog .progress-total{font-size:16px;font-weight:600;line-height:1.5;margin:16px 0 10px;color:var(--ink)}
 .progress-stats{display:grid;gap:0;padding:0;border:0;border-radius:0;font-size:14px;font-weight:400;line-height:1.5}
 .progress-stats>div{padding:8px 0;border-bottom:1px solid var(--line)}
@@ -40,8 +40,7 @@ html[data-text-size="large"] #progress-dialog .badge-card strong{font-size:16px}
 
 html[data-text-size="large"] #progress-dialog :is(.progress-total,.progress-stats){font-size:18px}
 
-html[data-theme] #my-progress, #progress-dialog .close { min-block-size: 44px; }
-#progress-dialog .close { min-inline-size: 44px; }
+html[data-theme] #my-progress { min-block-size: 44px; }
 html[data-theme] body.sudoku-fullscreen #my-progress { display: none; }
 
 #my-progress { font-family: var(--progress-font); font-variant-numeric: tabular-nums; }
