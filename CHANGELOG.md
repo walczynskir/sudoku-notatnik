@@ -1,3 +1,7 @@
+# 1.35.0 — Moje postępy
+
+- Pasek nad rozgrywką pokazuje cel dzienny i postęp kolekcji w dwóch wyrównanych kolumnach. Cały pasek otwiera dotychczasowe podsumowanie i znika w pełnym ekranie.
+
 # 1.34.0 — 2026-11-19
 
 - „Inne gry” na pasku rozgrywki, także w pełnym ekranie. Wybór otwiera grę w tej samej karcie i zachowuje bieżący zapis.

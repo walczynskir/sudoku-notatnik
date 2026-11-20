@@ -4,7 +4,7 @@
   #fullscreen .fullscreen-icon { display: inline; font-size: 20px; }
   html[data-theme] #fullscreen { min-width: 44px; padding-inline: 6px; }
 }
-.sudoku-fullscreen :is(body > header, main > .intro, main > #my-progress, main > footer, .workspace > aside, .board-bottom, #entry-check-status, #status, #my-progress-mobile) {
+.sudoku-fullscreen :is(body > header, main > .intro, main > #my-progress, main > footer, .workspace > aside, .board-bottom, #entry-check-status, #status) {
   display: none;
 }
 html[data-theme] .sudoku-fullscreen main {
