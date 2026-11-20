@@ -12,6 +12,23 @@ html[data-theme] #play-launch.toolbar-compact :is(#fullscreen,#open-help),html[d
 #play-launch:not(.toolbar-compact) #fullscreen .fullscreen-icon{display:none}
 html[data-theme] .quick-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}
 html[data-theme] .sudoku-fullscreen #play-launch{box-sizing:border-box;width:100%;padding:8px 16px;margin-inline:0}
-@media(max-width:360px){html[data-theme] .sudoku-fullscreen #play-launch{padding-inline:8px}}
 
 html[data-theme] #play-launch button[hidden]{display:none}
+
+/* Keep seven 44px controls inside the 320px viewport. */
+@media (max-width: 360px) {
+  html[data-theme] #play-launch,
+  html[data-theme] #play-launch .game-secondary { gap: 1px; }
+  html[data-theme] #play-launch {
+    width: calc(100% + 20px);
+    margin-inline: -10px;
+  }
+  html[data-theme] .sudoku-fullscreen #play-launch {
+    --toolbar-space-left: max(0px, calc(6px - env(safe-area-inset-left)));
+    --toolbar-space-right: max(0px, calc(6px - env(safe-area-inset-right)));
+    width: calc(100% + var(--toolbar-space-left) + var(--toolbar-space-right));
+    margin-left: calc(-1 * var(--toolbar-space-left));
+    margin-right: calc(-1 * var(--toolbar-space-right));
+    padding-inline: 0;
+  }
+}

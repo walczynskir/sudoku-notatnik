@@ -1,3 +1,8 @@
+# 1.35.4 — Poprawki językowe
+
+- Selektor „Inne gry” pokazuje lokalne nazwy Garibaldki i Ośmiu Asów zgodne z katalogiem.
+- Przy 320 px pasek rozgrywki mieści siedem przycisków o wymiarach co najmniej 44 × 44 px.
+
 # 1.35.3 — Zerowanie statystyk
 
 - Przycisk „Wyzeruj statystyki” w oknie postępów ustawia lokalny punkt odniesienia, zachowując bieżącą grę, wyniki źródłowe i nagrody.
