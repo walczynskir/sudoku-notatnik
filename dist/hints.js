@@ -11,7 +11,7 @@ const allCells=Array.from({length:81},(_,i)=>i);
 function* combinations(items,n,start=0,prefix=[]){if(!n){yield prefix;return;}for(let i=start;i<=items.length-n;i++)yield* combinations(items,n-1,i+1,[...prefix,items[i]]);}
 function elimination(technique,sources,removals,reason){return {kind:'hint',technique,sources,targets:removals.map(r=>r.cell),digits:[...new Set(removals.flatMap(r=>r.digits))].sort(),removals,explanation:reason+' Usuń wyłącznie wskazanych kandydatów: '+removals.map(r=>`${label(r.cell)} → ${r.digits.join(', ')}`).join('; ')+'.'};}
 function* deductions(notes,options={}){
- for(let i=0;i<81;i++)if(notes[i].length===1)yield {kind:'hint',technique:'Jedyny kandydat',sources:[i],targets:[],digits:notes[i],explanation:`Pole ${label(i)} ma tylko jednego dozwolonego kandydata: ${notes[i][0]}. Możesz wpisać tę cyfrę.`};
+ for(let i=0;i<81;i++)if(notes[i].length===1)yield {kind:'hint',technique:'Jedyny kandydat',sources:[i],targets:[],digits:notes[i],explanation:`W tym polu (${label(i)}) została tylko jedna możliwa cyfra: ${notes[i][0]}. Możesz ją wpisać.`};
  if(options.maxTier<1)return;
  for(const u of units)for(const n of all){const places=u.cells.filter(i=>notes[i].includes(n));if(places.length===1)yield {kind:'hint',technique:'Jedyne miejsce dla cyfry',sources:places,targets:[],digits:[n],explanation:`W ${u.name} cyfra ${n} może znaleźć się tylko w polu: ${label(places[0])}. Możesz wpisać tam ${n}.`};}
  if(options.maxTier<2)return;

@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.35.5';
+const cacheName = cachePrefix + '1.35.6';
 const scope = self.registration.scope;
 const assetNames = [
   "statistics-reset.js",

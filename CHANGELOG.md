@@ -1,3 +1,7 @@
+# 1.35.6 — Komunikaty gry
+
+- Wygładzono opis techniki „Jedyny kandydat” w czterech językach.
+
 # 1.35.5 — Komunikaty rozgrywki
 
 - Potwierdzenie zerowania statystyk otwiera się w tłumaczonym oknie gry.

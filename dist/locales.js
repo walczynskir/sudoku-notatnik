@@ -2164,15 +2164,15 @@
     "الجناحين",
     "le due ali"
   , "двох крил"],
-  "Pole {0} ma tylko jednego dozwolonego kandydata: {1}. Możesz wpisać tę cyfrę.": [
+  "W tym polu ({0}) została tylko jedna możliwa cyfra: {1}. Możesz ją wpisać.": [
     "The cell at {0} has only one allowed candidate: {1}. Enter this digit.",
-    "La casilla {0} solo tiene un candidato permitido: {1}. Puedes introducirlo.",
+    "En esta casilla ({0}) solo cabe una cifra: {1}. Puedes introducirlo.",
     "Das Feld in {0} hat nur einen zulässigen Kandidaten: {1}. Trage diese Zahl ein.",
     "格子 {0} 仅剩一个可用候选数：{1}。可以填入该数。",
     "खाना {0} में केवल एक मान्य उम्मीदवार है: {1}। यह अंक भर सकते हैं।",
-    "La case {0} n’a qu’un candidat autorisé : {1}. Vous pouvez le saisir.",
+    "Dans cette case ({0}), un seul chiffre est possible : {1}. Vous pouvez le saisir.",
     "الخانة {0} لها مرشح ممكن واحد: {1}. يمكنك إدخاله.",
-    "La cella {0} ha un solo candidato ammesso: {1}. Puoi inserirlo."
+    "In questa cella ({0}) è possibile inserire un solo numero: {1}. Puoi inserirlo."
   , "Клітинка {0} має лише одного дозволеного кандидата: {1}. Можна вписати цю цифру."],
   "W {0} cyfra {1} może znaleźć się tylko w polu: {2}. Możesz wpisać tam {3}.": [
     "In {0}, digit {1} can only go in cell {2}. Enter {3} there.",
