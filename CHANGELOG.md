@@ -1,3 +1,7 @@
+# 1.35.5 — Komunikaty rozgrywki
+
+- Potwierdzenie zerowania statystyk otwiera się w tłumaczonym oknie gry.
+
 # 1.35.4 — Poprawki językowe
 
 - Selektor „Inne gry” pokazuje lokalne nazwy Garibaldki i Ośmiu Asów zgodne z katalogiem.

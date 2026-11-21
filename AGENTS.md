@@ -1,5 +1,7 @@
 # Wspólne zasady gier
 
+- Nie używaj przeglądarkowych `alert()`, `confirm()` ani `prompt()`. Potwierdzenia i pytania pokazuj w dostępnych, tłumaczonych oknach aplikacji, a krótkie komunikaty o wyniku umieszczaj przy akcji, której dotyczą. Okna obsługuj klawiaturą, w tym klawiszem Escape, i po zamknięciu przywracaj fokus do elementu, który je otworzył.
+
 - Nową grę umieszczaj w osobnym katalogu i prowadź w osobnym repozytorium, na wzór Domino. Utrzymuj samodzielny katalog publikacyjny `dist/`. W projekcie gry zapisz odwołanie do tych zasad lub przenieś je do jego `AGENTS.md`, aby obowiązywały również po osobnym sklonowaniu.
 - Przed projektowaniem interfejsu obejrzyj bieżące wersje Sudoku i Domino. Domino jest wzorcem rozmieszczenia wspólnych elementów w nowej grze, a Sudoku punktem odniesienia dla wyglądu i dostępności. Zachowaj wspólny styl nagłówka, przycisków, paska gry, ustawień i pomocy. Dopasuj planszę i sterowanie do mechaniki gry.
 - Zacznij od wspólnych stylów `shared-game.css` i `shared-palettes.css`. Korzystaj z ich palet i zmiennych również na planszy. Zachowaj nazwy i wygląd wspólnych motywów oraz działanie wysokiego kontrastu i powiększonego tekstu.
