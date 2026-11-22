@@ -1,3 +1,7 @@
+# 1.35.10 — 2026-11-22
+
+- Dopasowano dolny wiersz stopki do telefonów.
+
 # 1.35.9 — 2026-11-22
 
 - Ujednolicono stopkę Games Chest. Katalog jest dostępny z okna „Inne gry”.

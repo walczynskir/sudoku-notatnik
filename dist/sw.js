@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.35.9';
+const cacheName = cachePrefix + '1.35.10';
 const scope = self.registration.scope;
 const assetNames = [
   "shared-footer.css",
