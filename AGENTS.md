@@ -75,3 +75,5 @@ Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `s
 - W każdej sekcji ustawień umieszczaj najczęściej używane opcje na początku, a rzadziej używane niżej. Sekcję kopii konfiguracji i postępów umieszczaj na końcu ustawień.
 
 - W oknie „Inne gry” pokazuj siatkę zaokrąglonych ikon z podpisami poniżej. Ikona i podpis są jednym celem dotykowym. Link „Wszystkie gry” umieszczaj osobno pod siatką.
+
+- Od sekcji „Dobra gra może zrobić coś dobrego” używaj wspólnej stopki wzorowanej na Garibaldce. Zachowaj odnośniki do organizacji, autorów i licencji, numer wersji oraz komunikat o zapisie, gdy gra go wyświetla. Katalog „Wszystkie gry” otwieraj z okna „Inne gry”.

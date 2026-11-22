@@ -1,3 +1,7 @@
+# 1.35.9 — 2026-11-22
+
+- Ujednolicono stopkę Games Chest. Katalog jest dostępny z okna „Inne gry”.
+
 # 1.35.8 — 2026-11-22
 
 - Odnośnik do Gomoku kieruje na gomoku.games-chest.com.

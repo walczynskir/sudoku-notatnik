@@ -5,10 +5,13 @@ const vm = require('node:vm');
 
 const html = readFileSync(require.resolve('../dist/index.html'), 'utf8');
 
-test('the release retains the Games Chest link and the Sudoku analytics tag', () => {
-  const link = html.match(/<a\b[^>]*class="all-games"[^>]*>/)?.[0];
+test('the game picker retains the Games Chest link and the Sudoku analytics tag', () => {
+  const picker = html.match(/<dialog id="game-picker"[^>]*>[\s\S]*?<\/dialog>/)?.[0];
+  const link = picker.match(/<a\b[^>]*class="all-games game-picker-link"[^>]*>/)?.[0];
   assert.match(link, /href="https:\/\/games-chest\.com\/"/);
   assert.doesNotMatch(link, /target="_blank"/);
+  const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
+  assert.doesNotMatch(footer, /class="all-games"/);
   const tracker = html.match(/<script\b[^>]*src="https:\/\/cloud\.umami\.is\/script\.js"[^>]*>/)?.[0];
   assert.match(tracker, /data-website-id="a4d24ffd-fa55-44e7-8c3b-dc5a5e42a2f2"/);
   assert.match(tracker, /data-tag="sudoku"/);
@@ -53,7 +56,6 @@ test('recent games omit Sudoku and render at most three localized same-tab links
   const menu = document.querySelector('.games-chest-menu');
   const footer = menu.querySelector('.recent-games');
   const links = footer.querySelector('.recent-games-icons').children;
-  assert.equal(menu.querySelector('.all-games').textContent, 'Wszystkie gry');
   assert.equal(footer.hidden, false);
   assert.deepEqual(links.map(link => new URL(link.href).pathname), ['/domino', '/eight-aces', '/garibaldka']);
   for (const link of links) {
@@ -61,6 +63,7 @@ test('recent games omit Sudoku and render at most three localized same-tab links
     assert.equal(link.children[0].alt, 'Gra ' + new URL(link.href).pathname.slice(1));
   }
   const picker = document.querySelector('#game-picker');
+  assert.equal(picker.querySelector('.all-games').textContent, 'Wszystkie gry');
   const remaining = picker.querySelector('#game-picker-list').children;
   assert.equal(remaining.length, 1);
   assert.equal(new URL(remaining[0].children[0].href).pathname, '/piec-w-rzedzie');
