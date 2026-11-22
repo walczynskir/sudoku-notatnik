@@ -1,7 +1,9 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.35.6';
+const cacheName = cachePrefix + '1.35.7';
 const scope = self.registration.scope;
 const assetNames = [
+  "games-chest/domino-icon.png",
+
   "statistics-reset.js",
   "progress-summary.css",
   "backup-recovery.js",

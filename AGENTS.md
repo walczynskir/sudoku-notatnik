@@ -72,3 +72,6 @@ Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `s
 - Wzorcem jest kopia konfiguracji i postępów Ośmiu Asów: `pasjans/dist/shared-progress-backup.js` oraz adapter `progress-backup.js`, opisane w `pasjans/docs/PROGRESS-BACKUP-PREVIEW.md`. Gry używają wspólnej obwiedni formatu i własnych adapterów rzeczywistych danych dorobku.
 
 - W pasku rozgrywki udostępniaj „Inne gry” zgodnie z zaakceptowanym wzorcem Domino. Utrzymuj przycisk w pełnym ekranie, dopasowuj tekst do miejsca i zachowuj tłumaczoną nazwę ikony. Okno pokazuje ikony i nazwy pozostałych gier, maksymalnie trzy ostatnio otwierane na początku oraz link „Wszystkie gry”. Linki otwieraj w tej samej karcie, z możliwością wznowienia partii po powrocie.
+- W każdej sekcji ustawień umieszczaj najczęściej używane opcje na początku, a rzadziej używane niżej. Sekcję kopii konfiguracji i postępów umieszczaj na końcu ustawień.
+
+- W oknie „Inne gry” pokazuj siatkę zaokrąglonych ikon z podpisami poniżej. Ikona i podpis są jednym celem dotykowym. Link „Wszystkie gry” umieszczaj osobno pod siatką.
