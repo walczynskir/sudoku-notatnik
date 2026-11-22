@@ -22,10 +22,7 @@ function save(){
   message(errorMessage);
  }
  const note=$('save-note');
- note.dataset.saved=String(saved);
- $('save-note-success').hidden=!saved;
- $('save-note-error').hidden=saved;
- note.hidden=false;
+ note.hidden=saved;
 }
 function change(fn){clearHint();history.push(JSON.stringify({state,initial}));future=[];fn();save();render();}
 function confirmAction(title,description,action){$('confirm-title').textContent=title;$('confirm-description').textContent=description;pendingConfirm=action;$('confirm-dialog').showModal();}

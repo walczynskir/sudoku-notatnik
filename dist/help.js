@@ -78,6 +78,11 @@ function open(){
  $('#help-close').onclick=()=>dialog.close();$('#help-prev').onclick=()=>{stop();step=Math.max(0,step-1);revealed=false;draw();};$('#help-next').onclick=()=>{stop();advance();};
  $('#help-play').onclick=()=>{if(running){stop();draw();return;}if(step===steps.length-1){step=0;revealed=false;}started=true;running=true;timer=setInterval(advance,7000);draw();};
  $('#help-reveal').onclick=()=>{revealed=true;draw();};
+ const saveHelp=document.createElement('p');
+ saveHelp.setAttribute('data-save-help','');
+ saveHelp.setAttribute('translate','no');
+ dialog.append(saveHelp);
+ globalThis.renderGameSaveHelp?.(dialog);
  dialog.addEventListener('close',()=>{stop();opener?.focus();});
  }
  dialog.showModal();dialog.scrollTop=0;draw();

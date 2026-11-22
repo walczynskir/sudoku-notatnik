@@ -1,3 +1,7 @@
+# 1.35.12 — 2026-11-22
+
+- Stopka informuje o zapisie tylko w razie błędu. Pomoc wyjaśnia, jak wznowić automatycznie zapisaną partię.
+
 # 1.35.11 — 2026-11-22
 
 - Stopka pokazuje stan automatycznego zapisu planszy i punktu restartu.
