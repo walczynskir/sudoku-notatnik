@@ -1,3 +1,7 @@
+# 1.35.14 — 2026-11-22
+
+- Wyrównano odnośniki do organizacji do lewej strony, a numer wersji do prawej.
+
 # 1.35.13 — 2026-11-22
 
 - Sekcja „Ostatnio otwierane” jest dostępna w oknie „Inne gry”.
