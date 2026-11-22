@@ -1,3 +1,7 @@
+# 1.35.11 — 2026-11-22
+
+- Stopka pokazuje stan automatycznego zapisu planszy i punktu restartu.
+
 # 1.35.10 — 2026-11-22
 
 - Dopasowano dolny wiersz stopki do telefonów.

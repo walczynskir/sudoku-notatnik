@@ -11,7 +11,22 @@ let initial=empty(),state=empty(),selected=0,mode='value',history=[],future=[],p
 try{const saved=sudokuStorage.getItem('sudoku-notatnik-v1');if(saved)state=Sudoku.validate(JSON.parse(saved));}catch{}
 try{const saved=sudokuStorage.getItem('sudoku-notatnik-initial-v1');initial=saved?Sudoku.validate(JSON.parse(saved)):Sudoku.validate({values:state.values});}catch{initial=empty();}
 function message(text){$('status').textContent=text;}
-function save(){try{sudokuStorage.setItem('sudoku-notatnik-v1',JSON.stringify(state));sudokuStorage.setItem('sudoku-notatnik-initial-v1',JSON.stringify(initial));}catch{message('Nie udało się zapisać na urządzeniu. Możesz pobrać planszę do pliku.');}}
+function save(){
+ const errorMessage='Nie udało się zapisać na urządzeniu. Możesz pobrać planszę do pliku.';
+ let saved=true;
+ try{
+  sudokuStorage.setItem('sudoku-notatnik-v1',JSON.stringify(state));
+  sudokuStorage.setItem('sudoku-notatnik-initial-v1',JSON.stringify(initial));
+ }catch{
+  saved=false;
+  message(errorMessage);
+ }
+ const note=$('save-note');
+ note.dataset.saved=String(saved);
+ $('save-note-success').hidden=!saved;
+ $('save-note-error').hidden=saved;
+ note.hidden=false;
+}
 function change(fn){clearHint();history.push(JSON.stringify({state,initial}));future=[];fn();save();render();}
 function confirmAction(title,description,action){$('confirm-title').textContent=title;$('confirm-description').textContent=description;pendingConfirm=action;$('confirm-dialog').showModal();}
 $('confirm-dialog').addEventListener('close',()=>{pendingConfirm=null;});
@@ -70,6 +85,7 @@ function loadEngine(){if(!enginePromise)enginePromise=new Promise((resolve,rejec
 $('image-dialog').addEventListener('cancel',e=>{if(ocrBusy)e.preventDefault();});
 $('recognize').onclick=async()=>{if(!photo||ocrBusy)return;ocrBusy=true;$('recognize').disabled=true;$('apply-image').hidden=true;$('ocr-review').hidden=true;document.querySelectorAll('#image-dialog input,#image-dialog .close,#retake-photo,#rotate-photo-left,#rotate-photo-right,#reset-photo-angle').forEach(e=>e.disabled=true);let worker,fallbackWorker,fallbackPromise;try{$('ocr-status').textContent='Przygotowuję rozpoznawanie cyfr… Pierwsze uruchomienie może potrwać chwilę.';const T=await loadEngine();worker=await T.createWorker('eng');await worker.setParameters({tessedit_char_whitelist:'123456789',tessedit_pageseg_mode:'10',user_defined_dpi:'300'});const region=crop(),values=Array(81).fill(0),uncertain=new Set();for(let i=0;i<81;i++){$('ocr-status').textContent=`Rozpoznawanie pola ${i+1} z 81…`;const prepared=SudokuOCR.prepareCell(photo,region,i);if(prepared){const result=await SudokuOCR.recognizeCell(worker,prepared,async()=>{if(!fallbackPromise)fallbackPromise=T.createWorker('eng',0,{legacyCore:true,legacyLang:true,cachePath:'sudoku-ocr-legacy-v1'}).then(w=>{fallbackWorker=w;return w;});return fallbackPromise;});values[i]=result.digit;if(result.uncertain)uncertain.add(i);}}$('review-grid').replaceChildren();values.forEach((v,i)=>{const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.maxLength=1;input.value=v||'';if(uncertain.has(i)){input.classList.add('ocr-uncertain');input.title='Niepewny odczyt — sprawdź z obrazkiem';}input.setAttribute('aria-label',`Wiersz ${Math.floor(i/9)+1}, kolumna ${i%9+1}`);input.oninput=()=>input.value=Sudoku.normalizeDigits(input.value).replace(/[^1-9]/g,'').slice(0,1);$('review-grid').append(input);});showImageReview();$('ocr-status').textContent=`Rozpoznano ${values.filter(Boolean).length} cyfr. Sprawdź wynik z obrazkiem. Pola z niepewnym odczytem (${uncertain.size}) mają bursztynowe tło.`;}catch(err){$('ocr-status').textContent='Rozpoznawanie nie powiodło się. '+err.message;}finally{if(worker)await worker.terminate();if(fallbackWorker)await fallbackWorker.terminate();ocrBusy=false;$('recognize').disabled=false;document.querySelectorAll('#image-dialog input,#image-dialog .close,#retake-photo,#rotate-photo-left,#rotate-photo-right,#reset-photo-angle').forEach(e=>e.disabled=false);}};
 $('apply-image').onclick=()=>{const data=empty();data.values=[...$('review-grid').children].map(x=>Number(x.value)||0);$('image-dialog').close();replace(data,'Wczytano sprawdzoną planszę z obrazka.');};
+save();
 render();
 
 // Keep a single set of editing controls; relocate it next to the board on phones.
