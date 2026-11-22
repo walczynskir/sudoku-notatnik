@@ -1,3 +1,7 @@
+# 1.35.15 — 2026-11-22
+
+- Dodano Kierki z ikoną gry do okna „Inne gry”.
+
 # 1.35.14 — 2026-11-22
 
 - Wyrównano odnośniki do organizacji do lewej strony, a numer wersji do prawej.
