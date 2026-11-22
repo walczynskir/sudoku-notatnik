@@ -43,6 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
+      actions: read
       contents: read
       pages: write
       id-token: write
@@ -59,6 +60,20 @@ jobs:
         with:
           path: dist
           name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Poczekaj na gotowość pakietu
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          for attempt in {1..12}; do
+            if gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=$ARTIFACT_NAME" \
+              --jq '.artifacts[] | select(.expired == false) | .name' | grep -Fxq "$ARTIFACT_NAME"; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::GitHub Pages artifact is not available yet."
+          exit 1
       - name: Opublikuj stronę
         id: deployment
         uses: actions/deploy-pages@v4
