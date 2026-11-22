@@ -1,3 +1,7 @@
+# 1.35.8 — 2026-11-22
+
+- Odnośnik do Gomoku kieruje na gomoku.games-chest.com.
+
 # 1.35.7 — 2026-11-22
 
 - Odświeżono menu „Inne gry”. Pokazuje siatkę zaokrąglonych ikon z nazwami pod spodem.
