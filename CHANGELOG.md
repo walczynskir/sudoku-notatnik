@@ -1,3 +1,7 @@
+# 1.35.13 — 2026-11-22
+
+- Sekcja „Ostatnio otwierane” jest dostępna w oknie „Inne gry”.
+
 # 1.35.12 — 2026-11-22
 
 - Stopka informuje o zapisie tylko w razie błędu. Pomoc wyjaśnia, jak wznowić automatycznie zapisaną partię.
