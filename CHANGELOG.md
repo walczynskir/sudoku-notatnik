@@ -1,3 +1,7 @@
+# 1.35.20 — 2026-11-23
+
+- Dodano przycisk „Zainstaluj grę” pod nagłówkiem i instrukcję instalacji w Safari na iPhonie.
+
 # 1.35.19 — 2026-11-23
 
 - Pasek aktualizacji pod nagłówkiem ma kontrastowe tło i wyraźny przycisk dopasowane do motywu.
