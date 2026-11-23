@@ -1,3 +1,7 @@
+# 1.35.16 — 2026-11-23
+
+- Przycisk pełnego ekranu w zainstalowanej aplikacji powiększa planszę bez komunikatu o wyjściu z pełnego ekranu przeglądarki.
+
 # 1.35.15 — 2026-11-22
 
 - Dodano Kierki z ikoną gry do okna „Inne gry”.

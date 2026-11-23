@@ -62,6 +62,7 @@
       return;
     }
     setLayout(true);
+    if (matchMedia('(display-mode: standalone)').matches || navigator.standalone === true) return;
     try { await root.requestFullscreen?.(); } catch {
       // The compact layout also works when the browser disallows native fullscreen.
     }
