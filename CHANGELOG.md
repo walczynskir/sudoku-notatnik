@@ -1,3 +1,7 @@
+# 1.35.17 — 2026-11-23
+
+- Kafelki w „Innych grach” wypełniają kolejne rzędy. Ostatnio otwierane gry pojawiają się na początku.
+
 # 1.35.16 — 2026-11-23
 
 - Przycisk pełnego ekranu w zainstalowanej aplikacji powiększa planszę bez komunikatu o wyjściu z pełnego ekranu przeglądarki.
