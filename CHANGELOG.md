@@ -1,3 +1,7 @@
+# 1.35.19 — 2026-11-23
+
+- Pasek aktualizacji pod nagłówkiem ma kontrastowe tło i wyraźny przycisk dopasowane do motywu.
+
 # 1.35.18 — 2026-11-23
 
 - Stopka informuje o dostępnej aktualizacji i pozwala odświeżyć grę.
