@@ -18,7 +18,7 @@ test('the game picker retains the Games Chest link and the Sudoku analytics tag'
   assert.match(tracker, /data-domains="rsudoku\.pl"/);
 });
 
-test('recent games omit Sudoku and render at most three localized same-tab links', async () => {
+test('one picker grid omits Sudoku and puts recent games first', async () => {
   function element() {
     const children = [];
     const selectors = new Map();
@@ -42,28 +42,24 @@ test('recent games omit Sudoku and render at most three localized same-tab links
     querySelector: nodes.querySelector,
     createElement: element
   };
-  const ids = ['sudoku', 'domino', 'eight-aces', 'garibaldka', 'piec-w-rzedzie'];
+  const ids = ['sudoku', 'domino', 'eight-aces', 'garibaldka', 'piec-w-rzedzie', 'kierki'];
   const catalog = ids.map(id => ({
     id, url: 'https://games-chest.com/' + id, icon: id + '.svg', en: id, pl: 'Gra ' + id
   }));
   vm.runInNewContext(readFileSync(require.resolve('../dist/games-chest-menu.js'), 'utf8'), {
     document, URL, URLSearchParams, Event, performance,
-    location: { search: '?gc-recent=' + ids.join(',') },
+    location: { search: '?gc-recent=sudoku,piec-w-rzedzie,garibaldka' },
     MutationObserver: class { observe() {} },
     fetch: async () => ({ ok: true, json: async () => catalog })
   });
   await new Promise(resolve => setImmediate(resolve));
   const picker = document.querySelector('#game-picker');
-  const recent = picker.querySelector('#game-picker-recent');
-  const links = recent.querySelector('ul').children.map(item => item.children[0]);
-  assert.equal(recent.hidden, false);
-  assert.deepEqual(links.map(link => new URL(link.href).pathname), ['/domino', '/eight-aces', '/garibaldka']);
+  const links = picker.querySelector('#game-picker-list').children.map(item => item.children[0]);
+  assert.deepEqual(links.map(link => new URL(link.href).pathname),
+    ['/piec-w-rzedzie', '/garibaldka', '/domino', '/eight-aces', '/kierki']);
   for (const link of links) {
     assert.equal(link.target, undefined);
     assert.equal(link.children[1].textContent, 'Gra ' + new URL(link.href).pathname.slice(1));
   }
   assert.equal(picker.querySelector('.all-games').textContent, 'Wszystkie gry');
-  const remaining = picker.querySelector('#game-picker-list').children;
-  assert.equal(remaining.length, 1);
-  assert.equal(new URL(remaining[0].children[0].href).pathname, '/piec-w-rzedzie');
 });
