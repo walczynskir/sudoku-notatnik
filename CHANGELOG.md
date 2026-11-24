@@ -1,3 +1,7 @@
+# 1.35.21 — 2026-11-24
+
+- Dodano ilustrowane kroki instalacji w Safari na Macu i iPhonie we wszystkich dziesięciu językach.
+
 # 1.35.20 — 2026-11-23
 
 - Dodano przycisk „Zainstaluj grę” pod nagłówkiem i instrukcję instalacji w Safari na iPhonie.
