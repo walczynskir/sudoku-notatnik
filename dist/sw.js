@@ -1,7 +1,8 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.35.23';
+const cacheName = cachePrefix + '1.35.24';
 const scope = self.registration.scope;
 const assetNames = [
+  "shared-theme-components.css",
   "game-update.js",
   "game-install.js",
   "shared-footer.css",

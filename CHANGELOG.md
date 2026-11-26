@@ -1,5 +1,9 @@
 # 1.35.23 — 2026-11-26
 
+## 1.35.24
+
+- Wspólny arkusz Games Chest dla motywów, nagłówka, głównej akcji i powierzchni gry.
+
 - Pomoc opisuje wznowienie partii po ponownym otwarciu gry na tym samym urządzeniu.
 
 # 1.35.22 — 2026-11-26
