@@ -42,7 +42,7 @@
   const config=$('backup-configuration');config.replaceChildren();
   const add=(label,value)=>{const row=document.createElement('p'),name=document.createElement('span'),v=document.createElement('b');name.textContent=label;v.textContent=value;row.append(name,v);config.append(row);};
   add('🌐',document.querySelector(`#language-select option[value="${p.preferences.language}"]`).textContent);
-  add(SudokuI18n.text('Wygląd'),SudokuI18n.text(({sage:'Klasyczny',ink:'Atrament i papier',studio:'Pracownia',forma:'Forma',energy:'Energia',tangerine:'Mandarynka',porcelain:'Porcelana',ukraine:'Ukraina',aurora:'Zorza',obsidian:'Obsydian',crown:'Korona',copper:'Miedź','night-sky':'Nocne niebo'})[p.preferences.theme]||p.preferences.theme));
+  add(SudokuI18n.text('Wygląd'),SudokuI18n.text(({sage:'Klasyczny',ink:'Atrament i papier',studio:'Pracownia',forma:'Forma',energy:'Energia',tangerine:'Mandarynka',porcelain:'Porcelana',ukraine:'Ukraina',aurora:'Zorza',obsidian:'Obsydian',crown:'Korona',copper:'Miedź i patyna','night-sky':'Nocne niebo'})[p.preferences.theme]||p.preferences.theme));
   for(const [label,key]of [['Większy tekst','large'],['Wysoki kontrast','contrast'],['Cofnij i Przywróć','showHistory'],['Oznaczaj błędne cyfry','checkEntries'],['Pokaż kandydatów od razu','autoNotes']])add(SudokuI18n.text(label),p.preferences[key]?'✓':'—');
   add(SudokuI18n.text('Twój cel dzienny'),String(p.preferences.dailyTarget));
   $('backup-config-label').textContent=SudokuI18n.text('Preferencje gry');

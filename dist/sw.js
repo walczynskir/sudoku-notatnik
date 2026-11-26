@@ -1,5 +1,5 @@
 const cachePrefix = 'sudoku-offline-';
-const cacheName = cachePrefix + '1.35.21';
+const cacheName = cachePrefix + '1.35.22';
 const scope = self.registration.scope;
 const assetNames = [
   "game-update.js",

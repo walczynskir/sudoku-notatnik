@@ -1,3 +1,7 @@
+# 1.35.22 — 2026-11-26
+
+- Ujednolicono nazwę motywu „Miedź i patyna”.
+
 # 1.35.21 — 2026-11-24
 
 - Dodano ilustrowane kroki instalacji w Safari na Macu i iPhonie we wszystkich dziesięciu językach.

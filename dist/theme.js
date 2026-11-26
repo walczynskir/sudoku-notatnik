@@ -7,7 +7,7 @@ const rewardEnabled=['localhost','127.0.0.1','[::1]','rsudoku.pl','www.rsudoku.p
 const defaultTheme='sage';
 let current=defaultTheme,largeText=false,previousTheme=defaultTheme;
 const collectionRewards=Object.freeze([
- Object.freeze({id:'copper',name:'Miedź',goal:3}),
+ Object.freeze({id:'copper',name:'Miedź i patyna',goal:3}),
  Object.freeze({id:'night-sky',name:'Nocne niebo',goal:10})
 ]);
 function syncCollectionRewards(total){
