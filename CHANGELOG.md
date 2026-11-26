@@ -1,3 +1,7 @@
+# 1.35.23 — 2026-11-26
+
+- Pomoc opisuje wznowienie partii po ponownym otwarciu gry na tym samym urządzeniu.
+
 # 1.35.22 — 2026-11-26
 
 - Ujednolicono nazwę motywu „Miedź i patyna”.

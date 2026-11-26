@@ -76,6 +76,6 @@ Stosuj [wspólne zasady wersjonowania Games Chest](docs/RELEASES.md) i skrypt `s
 
 - W oknie „Inne gry” pokazuj siatkę zaokrąglonych ikon z podpisami poniżej. Ikona i podpis są jednym celem dotykowym. Link „Wszystkie gry” umieszczaj osobno pod siatką.
 
-- Od sekcji „Dobra gra może zrobić coś dobrego” używaj wspólnej stopki wzorowanej na Garibaldce. Zachowaj odnośniki do organizacji, autorów i licencji, numer wersji oraz komunikat w razie błędu zapisu. W Pomocy wyjaśnij, że partię można wznowić w tej samej przeglądarce na tym samym urządzeniu. Sekcję „Ostatnio otwierane” i link „Wszystkie gry” umieszczaj w oknie „Inne gry”.
+- Od sekcji „Dobra gra może zrobić coś dobrego” używaj wspólnej stopki wzorowanej na Garibaldce. Zachowaj odnośniki do organizacji, autorów i licencji, numer wersji oraz komunikat w razie błędu zapisu. W pomocy opisz wznowienie partii po ponownym otwarciu gry na tym samym urządzeniu. Mów o grze lub aplikacji, a nazwę przeglądarki podawaj wtedy, gdy instrukcja dotyczy jej funkcji, np. instalacji w Safari. Sekcję „Ostatnio otwierane” i link „Wszystkie gry” umieszczaj w oknie „Inne gry”.
 
 - Po uruchomieniu gry jako zainstalowanej aplikacji przycisk pełnego ekranu powiększa samą planszę bez wywoływania przeglądarkowego Fullscreen API.
